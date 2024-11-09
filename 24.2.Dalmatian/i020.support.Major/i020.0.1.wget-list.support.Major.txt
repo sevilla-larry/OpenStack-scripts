@@ -1,0 +1,2 @@
+# 01 python_openstackclient-7.1.3 2024-10-08 15:09 1.1M
+https://tarballs.opendev.org/openstack/python-openstackclient/python_openstackclient-7.1.3-py3-none-any.whl
