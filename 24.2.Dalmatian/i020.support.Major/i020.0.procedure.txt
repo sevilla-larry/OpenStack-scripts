@@ -1,0 +1,104 @@
+A. Preparation
+
+  A.01. ( Assumming LfS is already running )
+
+        ###
+
+        rm -v /sources
+
+        ###
+
+        # (a) VM & VB
+
+            mkdir -v /mnt/Src/blfs.{src,log}
+
+            chmod -v a+wt /mnt/Src/blfs.{src,log}
+
+            ln -sfv /mnt/Src/blfs.src /sources
+
+            ln -sfv /mnt/Src/blfs.log /var/log/blfs
+
+        # (b) PC
+
+            mkdir -pv /usr/src/blfs
+
+            mkdir -pv /var/log/blfs
+
+            chmod -v a+wt /usr/src/blfs
+
+            chmod -v a+wt /var/log/blfs
+
+            ln -sfv /usr/src/blfs /sources
+
+        ###
+
+        cd /sources
+
+        ###
+
+  A.02. Copy all script files
+
+        copy all script files from the following to /sources
+
+            1. i010.support.minor
+            2. i020.support.Major
+
+  A.03. Download packages
+
+        ###
+
+        wget --input-file=i010.1.wget-list.support.minor.txt    --continue --directory-prefix=/sources
+        wget --input-file=i020.1.wget-list.support.Major.txt    --continue --directory-prefix=/sources
+
+        # md5sum -c md5sums.txt
+
+        ###
+
+  A.04. Setting Up the Environment
+        ( Note: change the MAKEFLAGS based on the number of threads )
+
+        ###
+
+        export LFSLOG=/var/log/blfs
+
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        ###
+
+B.  Generate OpenStack - Support Apps
+
+  B.01. Checking Environment
+
+        ###
+
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
+
+        ###
+
+        ( display )
+        root [ /sources ]#
+
+  B.03. Support Applications
+
+        ###
+
+        # bash i020.8.all.support.apps.sh
+
+        ###
+
+C.  Generate OpenStack - ???
+
+  C.01. [BLFS 24] Graphical Environments - Xorg - Part 1
+
+        ###
+
+        ###
