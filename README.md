@@ -1,11 +1,14 @@
 # OpenStack-scripts
 # Continuation of BLfS-Scripts (server portion)
+# https://www.openstack.org/
 #
 # Author: Sevilla, Larry
 #  eMail: sevilla.larry.prg@gmail.com
 #
-# based on tarball sources from:
-# https://www.openstack.org/
+# Guide based on:
+# https://docs.openstack.org/install-guide/index.html
+#
+# Source code based on tarballs from:
 # https://tarballs.opendev.org/openstack/
 #
 #
