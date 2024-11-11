@@ -1,2 +1,5 @@
-# 01 cpython-3.13.0
-https://github.com/python/cpython/archive/refs/tags/v3.13.0.tar.gz
+# Erlang 26.2.5.5
+https://github.com/erlang/otp/releases/download/OTP-26.2.5.5/otp_src_26.2.5.5.tar.gz
+
+# Elixir 1.16.3
+https://github.com/elixir-lang/elixir/archive/refs/tags/v1.16.3.tar.gz
