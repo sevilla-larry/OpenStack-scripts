@@ -147,3 +147,6 @@ C.  Generate OpenStack Environment
         cd /sources
 
         bash i020.9.2.2.PyMySQL.sh
+
+###
+
