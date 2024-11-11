@@ -117,9 +117,32 @@ C.  Generate OpenStack Environment - Python OpenStackClient
 
         ###
 
-        bash i020.9.2.1.MariaDB.sh
-        bash i020.9.2.2.PyMySQL.sh
+        bash i020.5.2.1.MariaDB.sh
+
+        cd /mnt/Src/lfs.src/blfs-bootscripts-20240416       # VM/VB
+        make install-mysql
+        #reboot
 
         ###
 
+        mysql_secure_installation
+
+            current password                            <blank>
+            Switch to unix_socket authentication        n
+            set root password?                          Y
+            New Password                                openstack
+            Remove anonymous user?                      Y
+            Disallow root login remotely?               n
+            Remove test database and access to it?      Y
+            Reload privilege tables now?                Y
+
+        ###
+
+    C.02.2 PyMySQL App
+
+        cd /sources
+
+        bash i020.9.2.2.PyMySQL.sh
+
 ###
+
