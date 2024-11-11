@@ -1,9 +1,7 @@
-# i020.9.1.python_openstackclient-7.1.3.sh
-#
-# https://docs.openstack.org/install-guide/environment-packages-ubuntu.html#client-installation
+# i010.9.1.simplejson-3.19.3.sh
 #
 
-export PKG="python_openstackclient-7.1.3-py3-none-any.whl"
+export PKG="simplejson-3.19.3-py3-none-any.whl"
 export PKGLOG_DIR=$LFSLOG/020.1
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log

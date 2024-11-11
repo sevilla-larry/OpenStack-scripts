@@ -3,3 +3,6 @@ https://tarballs.opendev.org/openstack/python-openstackclient/python_openstackcl
 
 # 02 PyMySQL
 https://github.com/PyMySQL/PyMySQL/releases/tag/v1.1.1
+
+# 03 RabbitMQ-4.0.3
+https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.0.3/rabbitmq-server-4.0.3.tar.xz
