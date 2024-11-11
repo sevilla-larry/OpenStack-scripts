@@ -9,9 +9,9 @@ export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
 
-echo "Python Install ..."
-echo "Python Install ..." >> $LFSLOG_PROCESS
-echo "Python Install ..." >> $PKGLOG_ERROR
+echo "Pip3 Install ..."
+echo "Pip3 Install ..." >> $LFSLOG_PROCESS
+echo "Pip3 Install ..." >> $PKGLOG_ERROR
 
 pip3 install $PKG > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 

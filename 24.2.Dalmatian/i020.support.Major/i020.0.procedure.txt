@@ -123,3 +123,16 @@ C.  Generate OpenStack Environment
         bash i020.9.2.2.PyMySQL.sh
 
         ###
+
+        mysql_secure_installation
+
+            current password                            <blank>
+            Switch to unix_socket authentication        n
+            set root password?                          Y
+            New Password                                openstack
+            Remove anonymous user?                      Y
+            Disallow root login remotely?               n
+            Remove test database and access to it?      Y
+            Reload privilege tables now?                Y
+
+        ###
