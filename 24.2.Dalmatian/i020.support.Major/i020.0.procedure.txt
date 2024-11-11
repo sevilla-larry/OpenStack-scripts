@@ -105,9 +105,7 @@ B.  Generate OpenStack - Support Apps
 
         ###
 
-C.  Generate OpenStack Environment
-
-  C.01. Python OpenStackClient
+C.  Generate OpenStack Environment - Python OpenStackClient
 
         ###
 
@@ -115,11 +113,54 @@ C.  Generate OpenStack Environment
 
         ###
 
-  C.02. MariaDB
+D.    MariaDB
+
+  D.01. Installation
 
         ###
 
         bash i020.9.2.1.MariaDB.sh
-        bash i020.9.2.2.PyMySQL.sh
+
+  D.02. bootscript
 
         ###
+
+        cd /mnt/Src/lfs.src/blfs-bootscripts-20240416       # VM/VB
+        cd /usr/src/lfs/blfs-bootscripts-20240416           # PC
+
+        make install-mysql
+
+        reboot
+
+        ###
+
+  D.03. Configuration for Remote Access
+
+        # https://mariadb.com/kb/en/configuring-mariadb-for-remote-client-access/
+        #
+        # /etc/mysql/my.cnf
+        #
+        #    #skip-networking
+
+        # on server as root
+
+        # mariadb -u root -pMariaDB
+
+        #    CREATE USER 'root'@'<remote-ip-address>' identified by 'MariaDB';
+        #    GRANT ALL PRIVILEGES ON *.* TO 'root'@'<remote-ip-address>';
+        #    exit;
+
+        ###
+
+        # on remote client
+        #
+        # mariadb -h <remote-ip-address> -u <user> -p<password>
+        #
+
+        # mariadb -h <remote-ip-address> -u root -pMariaDB
+
+        ###
+
+  D.04. PyMySQL
+
+        # bash i020.9.2.2.PyMySQL.sh
