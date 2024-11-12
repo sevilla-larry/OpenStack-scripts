@@ -104,12 +104,12 @@ B.  Generate OpenStack - Controller Server
 
         ###
 
-        bash i000.11.Controller.sh
+        bash i000.1.11.1.support.apps.sh
         # includes Python OpenStack Client
 
         ###
 
-C.  Generate OpenStack 
+C.  SQL Database
 
   C.01. MariaDB
 
@@ -145,7 +145,14 @@ C.  Generate OpenStack
 
         cd /sources
 
-        bash i020.5.2.2.PyMySQL.sh
+        bash i020.5.2.2.sh      # PyMySQL
 
 ###
 
+C.  Message Queue
+
+  C.01. RabbitMQ Support Apps
+
+        bash i010.4.11.sh
+
+  C.02. RabbitMQ Main App

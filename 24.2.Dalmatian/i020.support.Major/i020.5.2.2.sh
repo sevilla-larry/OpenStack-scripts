@@ -1,4 +1,4 @@
-# i020.5.2.2.PyMySQL.sh
+# i020.5.2.2.sh
 #
 # Build PyMySQL
 #
