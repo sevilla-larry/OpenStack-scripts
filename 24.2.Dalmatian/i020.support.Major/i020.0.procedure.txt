@@ -74,6 +74,8 @@ A. Preparation
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
 
+        export LANG=C
+
         ###
 
 B.  Generate OpenStack - Support Apps
