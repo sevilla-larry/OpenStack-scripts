@@ -1,3 +1,6 @@
+# simplejson-3.19.3
+https://files.pythonhosted.org/packages/0d/e7/f9fafbd4f39793a20cc52e77bbd766f7384312526d402c382928dc7667f6/simplejson-3.19.3-py3-none-any.whl
+
 # Erlang 26.2.5.5
 https://github.com/erlang/otp/releases/download/OTP-26.2.5.5/otp_src_26.2.5.5.tar.gz
 

@@ -22,6 +22,20 @@ echo "." >> $LFSLOG_PROCESS
 echo "."
 echo "."
 
+###
+
+echo "i010.9.2.Erlang-26.2.5.5"
+echo "i010.9.2.Erlang-26.2.5.5" >> $LFSLOG_PROCESS
+
+time { bash i010.9.2.Erlang-26.2.5.5.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+
+echo "." >> $LFSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset LFSLOG_PROCESS
