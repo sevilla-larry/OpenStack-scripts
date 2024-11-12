@@ -1,0 +1,29 @@
+A. Qemu/KVM
+
+    Connection Details / Virtual Networks
+
+    1. default / NAT
+       internet access
+       192.168.122.0/24 DHCP enabled
+
+    2. Isolated
+       Management Network
+       10.0.0.0/24      DHCP disabled
+
+    3. Open
+       Provider Network
+       used for direct access (ssh) of VMs from Host
+       203.0.113.0/24   DHCP disabled
+
+
+    Each VM should have 3 virtual NICs:
+
+    1. enp1s0   Isolated
+    2. enp10s0  NAT
+    3. enp11s0  Open
+
+    During startup, the read sequence will be:
+
+    1. ifconfig.enp10s0  NAT
+    2. ifconfig.enp11s0  Open
+    3. ifconfig.enp1s0   Isolated
