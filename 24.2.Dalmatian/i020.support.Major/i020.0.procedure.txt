@@ -74,7 +74,7 @@ A. Preparation
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
 
-        export LANG=C
+        export LANG=C.UTF-8
 
         ###
 
