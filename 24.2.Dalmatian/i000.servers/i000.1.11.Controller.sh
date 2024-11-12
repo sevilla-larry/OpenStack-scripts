@@ -6,7 +6,7 @@
 #
 
 # Python OpenStackClient
-bash i020.9.1.python_openstackclient-7.1.3.sh
+bash i020.5.1.sh
 
-# MariaDB
-bash i020.9.2.1.MariaDB.sh
+# b10 common support apps
+bash i020.4.BLfS.support.apps.sh
