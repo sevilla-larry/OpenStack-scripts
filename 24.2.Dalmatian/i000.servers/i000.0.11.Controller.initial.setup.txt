@@ -1,0 +1,8 @@
+A. Preparation
+
+	for VMs/VBs, Server should have 3 networks
+
+	a. update /etc/hostname
+	b. update /etc/sysconfig/rc.site (hostname)
+	c. update networks with the ff:
+

@@ -103,7 +103,9 @@ B.  Generate OpenStack - Support Apps
 
         ###
 
-        # bash i020.4.all.support.apps.sh
+        bash i020.4.1.BLfS.support.apps.sh
+
+        # bash i010 support apps
 
         ###
 
@@ -144,7 +146,7 @@ C.  Generate OpenStack Environment - Python OpenStackClient
 
         cd /sources
 
-        bash i020.9.2.2.PyMySQL.sh
+        bash i020.5.2.2.PyMySQL.sh
 
 ###
 
