@@ -12,7 +12,7 @@ A. Preparation
 
             mkdir -v /mnt/Src/blfs.{src,log}
 
-            chmod -v a+wt /mnt/Src/blfs.{src,log}
+            chmod -vR a+wt /mnt/Src/blfs.{src,log}
 
             ln -sfv /mnt/Src/blfs.src /sources
 
@@ -24,9 +24,9 @@ A. Preparation
 
             mkdir -pv /var/log/blfs
 
-            chmod -v a+wt /usr/src/blfs
+            chmod -vR a+wt /usr/src/blfs
 
-            chmod -v a+wt /var/log/blfs
+            chmod -vR a+wt /var/log/blfs
 
             ln -sfv /usr/src/blfs /sources
 
@@ -75,6 +75,8 @@ A. Preparation
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
 
+        export LANG=C.UTF-8
+
         ###
 
 B.  Generate OpenStack - Controller Server
@@ -102,6 +104,55 @@ B.  Generate OpenStack - Controller Server
 
         ###
 
-        bash i000.11.Controller.sh
+        bash i000.1.11.1.support.apps.sh
+        # includes Python OpenStack Client
 
         ###
+
+C.  SQL Database
+
+  C.01. MariaDB
+
+    C.01.1 main App
+
+        ###
+
+        #bash i020.5.2.1.MariaDB.sh
+        bash c11.03.9.main.app.sh       # MariaDB
+
+        cd /mnt/Src/lfs.src/blfs-bootscripts-20240416       # VM/VB
+        cd /usr/src/lfs/blfs-bootscripts-20240416           # PC
+
+        make install-mysql
+        #reboot
+
+        ###
+
+        mysql_secure_installation
+
+            current password                            <blank>
+            Switch to unix_socket authentication        n
+            set root password?                          Y
+            New Password                                openstack
+            Remove anonymous user?                      Y
+            Disallow root login remotely?               n
+            Remove test database and access to it?      Y
+            Reload privilege tables now?                Y
+
+        ###
+
+    C.01.2 PyMySQL App
+
+        cd /sources
+
+        bash i020.5.2.2.sh      # PyMySQL
+
+###
+
+C.  Message Queue
+
+  C.01. RabbitMQ Support Apps
+
+        bash i010.4.11.sh
+
+  C.02. RabbitMQ Main App

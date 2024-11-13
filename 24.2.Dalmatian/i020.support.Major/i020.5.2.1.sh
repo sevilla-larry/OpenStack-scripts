@@ -6,4 +6,4 @@
 #
 
 # MariaDB
-bash c11.03.9.main.app.sh
+# bash c11.03.9.main.app.sh
