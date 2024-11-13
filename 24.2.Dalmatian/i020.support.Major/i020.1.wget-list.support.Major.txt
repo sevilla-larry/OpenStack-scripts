@@ -1,8 +1,14 @@
-# 01 python_openstackclient-7.1.3 2024-10-08 15:09 1.1M
+# 01 python_openstackclient-7.1.3
 https://tarballs.opendev.org/openstack/python-openstackclient/python_openstackclient-7.1.3-py3-none-any.whl
 
-# 02 PyMySQL
+# 02 PyMySQL-1.1.1
 https://files.pythonhosted.org/packages/0c/94/e4181a1f6286f545507528c78016e00065ea913276888db2262507693ce5/PyMySQL-1.1.1-py3-none-any.whl
 
 # 03 RabbitMQ-4.0.3
 https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.0.3/rabbitmq-server-4.0.3.tar.xz
+
+# 04.1 MemCached-1.6.32
+https://memcached.org/files/memcached-1.6.32.tar.gz
+
+# 04.2 python-memcached-1.62
+https://files.pythonhosted.org/packages/8f/1b/3b15a37831ae34a264d7d5b71f3ae9fe74a81251453a3ec2135e76888ef1/python_memcached-1.62-py2.py3-none-any.whl
