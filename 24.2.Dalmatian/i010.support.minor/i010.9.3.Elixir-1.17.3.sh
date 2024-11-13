@@ -38,14 +38,12 @@ echo "3. Copy Install ..."
 echo "3. Copy Install ..." >> $LFSLOG_PROCESS
 echo "3. Copy Install ..." >> $PKGLOG_ERROR
 
-cp -v	bin/elixir	/usr/bin	\
+mkdir /opt/elixir
+
+cp -vr {bin,lib} /opt/elixir	\
 		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v	bin/elixirc	/usr/bin	\
-		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v	bin/iex		/usr/bin	\
-		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v	bin/mix		/usr/bin	\
-		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+
+pathprepend /opt/elixir/bin           PATH
 
 
 cd ..
