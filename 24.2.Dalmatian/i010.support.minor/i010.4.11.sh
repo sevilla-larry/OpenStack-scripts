@@ -38,10 +38,10 @@ echo "."
 
 ###
 
-echo "i010.9.3.Elixir-1.17.3"
-echo "i010.9.3.Elixir-1.17.3" >> $LFSLOG_PROCESS
+echo "i010.9.3.Elixir-1.16.3"
+echo "i010.9.3.Elixir-1.16.3" >> $LFSLOG_PROCESS
 
-time { bash i010.9.3.Elixir-1.17.3.sh ; }
+time { bash i010.9.3.Elixir-1.16.3.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
