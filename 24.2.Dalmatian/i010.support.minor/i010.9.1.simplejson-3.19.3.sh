@@ -2,7 +2,7 @@
 #
 
 export PKG="simplejson-3.19.3-py3-none-any.whl"
-export PKGLOG_DIR=$LFSLOG/020.1
+export PKGLOG_DIR=$LFSLOG/010.1
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
