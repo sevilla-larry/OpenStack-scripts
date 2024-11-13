@@ -1,4 +1,4 @@
-# i010.9.3.Elixir-1.16.3.sh
+# i010.9.3.Elixir-1.17.3.sh
 #
 
 #
@@ -8,7 +8,7 @@
 #
 #
 
-export PKG="elixir-1.16.3"
+export PKG="elixir-1.17.3"
 export PKGLOG_DIR=$LFSLOG/010.3
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
@@ -40,7 +40,11 @@ echo "3. Copy Install ..." >> $PKGLOG_ERROR
 
 cp -v	bin/elixir	/usr/bin	\
 		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+cp -v	bin/elixirc	/usr/bin	\
+		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 cp -v	bin/iex		/usr/bin	\
+		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+cp -v	bin/mix		/usr/bin	\
 		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 
