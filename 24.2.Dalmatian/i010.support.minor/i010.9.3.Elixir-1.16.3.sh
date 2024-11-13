@@ -2,9 +2,15 @@
 #
 
 #
+# Dependencies Required:
+#
+#				i010.2	 Erlang-26.2.5.5
+#
+
+#
 # Required by:
 #
-#               RabbitMQ
+#				i020.9.3 RabbitMQ-4.0.3
 #
 #
 

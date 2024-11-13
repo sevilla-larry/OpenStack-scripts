@@ -4,10 +4,11 @@
 #
 # Dependencies Required:
 #
-#               a.08.52 Python-3.13.0		(no SQLite)
-#				i010.1	simplejson-3.19.3
-#				i010.2	Erlang-26.2.5.5
-#				i010.3	Elixir-1.16.3
+#				i010.1	  simplejson-3.19.3
+#				i010.2	  Erlang-26.2.5.5
+#				i010.3	  Elixir-1.16.3
+#				b10.09.74 libxslt-1.1.42
+#				b10.49.06 xmlto-0.0.29
 #
 
 export PKG="rabbitmq-server-4.0.3"

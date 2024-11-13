@@ -4,9 +4,8 @@
 #
 # Required by:
 #
-#               Elixir
-#               RabbitMQ
-#
+#				i020.9.3 RabbitMQ-4.0.3
+#               i010.9.3.Elixir-1.16.3.sh
 #
 
 export PKG="otp_src_26.2.5.5"

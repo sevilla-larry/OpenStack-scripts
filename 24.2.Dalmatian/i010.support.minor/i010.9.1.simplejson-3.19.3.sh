@@ -1,6 +1,13 @@
 # i010.9.1.simplejson-3.19.3.sh
 #
 
+#
+# Required by:
+#
+#				i020.9.3 RabbitMQ-4.0.3
+#
+#
+
 export PKG="simplejson-3.19.3-py3-none-any.whl"
 export PKGLOG_DIR=$LFSLOG/010.1
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log

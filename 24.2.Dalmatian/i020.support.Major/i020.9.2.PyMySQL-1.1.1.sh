@@ -19,8 +19,6 @@ echo "Pip3 Install ..." >> $PKGLOG_ERROR
 
 pip3 install $PKG > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-#python3 -m pip install $PKG > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-
 
 unset LFSLOG_PROCESS
 unset PKGLOG_INSTALL
