@@ -40,14 +40,25 @@ echo "2. Make Build ..." >> $LFSLOG_PROCESS
 echo "2. Make Build ..." >> $PKGLOG_ERROR
 make > $PKGLOG_BUILD 2>> $PKGLOG_ERROR
 
-echo "3. Copy Install ..."
-echo "3. Copy Install ..." >> $LFSLOG_PROCESS
-echo "3. Copy Install ..." >> $PKGLOG_ERROR
+echo "3. Make Install ..."
+echo "3. Make Install ..." >> $LFSLOG_PROCESS
+echo "3. Make Install ..." >> $PKGLOG_ERROR
+# initially install to a temporary directory
+make install DESTDIR=/tmp/elixir				\
+		> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-mkdir /opt/elixir
-
-cp -vr {bin,lib} /opt/elixir	\
+# move the needed directory to /opt
+mv -v /tmp/elixir/usr/local/lib/elixir			\
+		/opt/elixir								\
 		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+
+# move the Man pages to /share/man/man1
+mv -v /tmp/elixir/usr/local/share/man/man1/*	\
+		/usr/share/man/man1						\
+		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+
+# remove the temporary directory
+rm -rfv /tmp/elixir
 
 pathprepend /opt/elixir/bin PATH
 
