@@ -53,6 +53,12 @@ make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 cat > /etc/memcached.conf << "EOF"    2>> $PKGLOG_ERROR
 # Begin /etc/memcached.conf
 
+# Specify which IP address to listen on.
+# The default is to listen on all IP addresses
+# This parameter is one of the only security measures that memcached has,
+# so make sure # it's listening on a firewalled interface.
+-l 10.0.0.11
+
 # End /etc/memcached.conf
 EOF
 
