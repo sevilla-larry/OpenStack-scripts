@@ -193,14 +193,14 @@ D.  Message Queue
 
 E.  Identity service
 
+    E.01. MemCached & python-memcached 
+
         ###
 
-        # MemCached & python-memcached 
         bash i020.5.4.sh
 
         ###
 
-        # test
+    E.02. Test
 
         echo "stats settings" | ncat 10.0.0.11 11211
-
