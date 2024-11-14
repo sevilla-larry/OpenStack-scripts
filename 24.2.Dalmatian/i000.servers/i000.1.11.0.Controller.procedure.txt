@@ -142,7 +142,7 @@ C.  SQL Database
 
         ###
 
-    C.01.2 PyMySQL App
+  C.02 PyMySQL App
 
         cd /sources
 
@@ -150,27 +150,27 @@ C.  SQL Database
 
 ###
 
-C.  Message Queue
+D.  Message Queue
 
-  C.01. RabbitMQ Support Apps
+  D.01. RabbitMQ Support Apps
 
         # simplejson, Erlang, Elixir
         bash i010.4.11.sh
 
-        pathprepend /opt/elixir/bin PATH
+        # pathprepend /opt/elixir/bin PATH
 
-  C.02. RabbitMQ Main App
+  D.02. RabbitMQ Main App
 
         # RabbitMQ
         bash i020.5.3.sh
+         
+        # pathprepend /opt/rabbitmq/sbin PATH
 
-        pathprepend /opt/rabbitmq/sbin PATH
-
-  C.03. RabbitMQ - run server in background
+  D.03. RabbitMQ - run server in background
 
         rabbitmq-server -detached
 
-  C.04. RabbitMQ Configurations
+  D.04. RabbitMQ Configurations
 
         #                    user      password
         rabbitmqctl add_user openstack openstack
