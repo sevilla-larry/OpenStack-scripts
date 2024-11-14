@@ -176,3 +176,13 @@ D.  Message Queue
         rabbitmqctl add_user openstack openstack
 
         rabbitmqctl set_permissions openstack ".*" ".*" ".*"
+
+###
+
+E.  Identity service
+
+    E.01.   MemCached
+
+        bash i020.9.4.1.MemCached-1.6.32.sh
+
+    E.02.   python-memcached 
