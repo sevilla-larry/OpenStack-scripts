@@ -203,4 +203,8 @@ E.  Identity service
 
     E.02. Test
 
+        ###
+
         echo "stats settings" | ncat 10.0.0.11 11211
+
+        ###
