@@ -50,6 +50,20 @@ echo "." >> $LFSLOG_PROCESS
 echo "."
 echo "."
 
+###
+
+echo "i010.9.4.build-1.2.2.post1"
+echo "i010.9.4.build-1.2.2.post1" >> $LFSLOG_PROCESS
+
+time { bash i010.9.4.build-1.2.2.post1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+
+echo "." >> $LFSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset LFSLOG_PROCESS

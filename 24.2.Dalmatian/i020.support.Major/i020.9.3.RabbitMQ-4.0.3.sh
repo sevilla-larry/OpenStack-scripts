@@ -40,19 +40,22 @@ make > $PKGLOG_BUILD 2>> $PKGLOG_ERROR
 echo "3. Make Install ..."
 echo "3. Make Install ..." >> $LFSLOG_PROCESS
 echo "3. Make Install ..." >> $PKGLOG_ERROR
-# initially install to a temporary directory
-make install DESTDIR=/tmp/rmq	\
+make install DESTDIR=/usr						\
 		> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
+# initially install to a temporary directory
+#make install DESTDIR=/tmp/rmq	\
+#		> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+
 # move the needed directory to /opt
-mv -v /tmp/rmq/usr/local/lib/erlang/lib/rabbitmq-server-4.0.3	\
-	/	opt/rabbitmq	\
-		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+#mv -v /tmp/rmq/usr/local/lib/erlang/lib/rabbitmq-server-4.0.3	\
+#	/	opt/rabbitmq	\
+#		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # remove the temporary directory
-rm -rfv /tmp/rmq
+#rm -rfv /tmp/rmq
 
-pathprepend /opt/rabbitmq/sbin PATH
+#pathprepend /opt/rabbitmq/sbin PATH
 
 
 cd ..
