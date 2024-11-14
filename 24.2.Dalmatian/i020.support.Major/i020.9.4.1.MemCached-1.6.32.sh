@@ -50,6 +50,12 @@ echo "5. Make Install ..." >> $LFSLOG_PROCESS
 echo "5. Make Install ..." >> $PKGLOG_ERROR
 make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
+cat > /etc/memcached.conf << "EOF"    2>> $PKGLOG_ERROR
+# Begin /etc/memcached.conf
+
+# End /etc/memcached.conf
+EOF
+
 
 cd ..
 rm -rf $PKG

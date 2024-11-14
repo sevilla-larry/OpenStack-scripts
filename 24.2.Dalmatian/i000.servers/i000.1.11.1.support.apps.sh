@@ -1,8 +1,4 @@
-# i000.11.Controller.sh
-#
-# Build Controller server
-#
-#
+# i000.1.11.1.support.apps.sh
 #
 
 # Python OpenStackClient
