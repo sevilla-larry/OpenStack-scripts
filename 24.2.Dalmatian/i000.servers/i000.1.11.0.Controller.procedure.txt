@@ -199,3 +199,8 @@ E.  Identity service
         bash i020.5.4.sh
 
         ###
+
+        # test
+
+        echo "stats settings" | ncat 10.0.0.11 11211
+
