@@ -126,7 +126,7 @@ C.  SQL Database
         cd /usr/src/lfs/blfs-bootscripts-20240416           # PC
 
         make install-mysql
-        #reboot
+        reboot
 
         ###
 
@@ -146,6 +146,11 @@ C.  SQL Database
     C.02. PyMySQL App
 
         ###
+
+        export LFSLOG=/var/log/blfs
+
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
 
         cd /sources
 
