@@ -179,7 +179,7 @@ D.  Message Queue
         bash i020.5.3.sh
          
         ###
-        # pathprepend /opt/rabbitmq/sbin PATH
+        pathprepend /opt/rabbitmq/sbin PATH
 
     D.03. RabbitMQ - run server in background
 

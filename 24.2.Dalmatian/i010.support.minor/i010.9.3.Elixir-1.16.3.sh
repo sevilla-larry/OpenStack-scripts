@@ -68,8 +68,6 @@ pathprepend /opt/elixir/bin			PATH
 # End /etc/profile.d/rustc.sh
 EOF
 
-pathprepend /opt/elixir/bin			PATH
-
 
 cd ..
 rm -rf $PKG
