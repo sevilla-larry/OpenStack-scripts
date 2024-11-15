@@ -214,6 +214,10 @@ E.  Identity service
 
         ###
 
+        exit    # to user
+
+        memcached -d
+
         echo "stats settings" | ncat 10.0.0.11 11211
 
         ###
