@@ -163,7 +163,7 @@ D.  Message Queue
         bash i010.4.11.sh
 
         ###
-        # pathprepend /opt/elixir/bin PATH
+        pathprepend /opt/elixir/bin PATH
 
     D.02. RabbitMQ Main App
 
