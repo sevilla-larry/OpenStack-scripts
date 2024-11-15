@@ -45,7 +45,7 @@ make install DESTDIR=/tmp/rmq	\
 		> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # move the needed directory to /opt
-mv -v /tmp/rmq/usr/local/lib/erlang/lib/rabbitmq-server-4.0.3	\
+mv -v /tmp/rmq/usr/local/lib/erlang/lib/rabbitmq_server-4.0.3	\
 		/opt/rabbitmq	\
 		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
