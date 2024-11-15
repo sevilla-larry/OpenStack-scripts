@@ -160,7 +160,8 @@ D.  Message Queue
         ###
 
         # simplejson, Erlang, Elixir, build
-        bash i010.4.11.sh
+        # bash i010.4.11.sh 
+        # already included in the support apps
 
         ###
         pathprepend /opt/elixir/bin PATH

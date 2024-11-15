@@ -60,7 +60,15 @@ mv -v /tmp/elixir/usr/local/share/man/man1/*	\
 # remove the temporary directory
 rm -rfv /tmp/elixir
 
-pathprepend /opt/elixir/bin PATH
+cat > /etc/profile.d/rustc.sh << "EOF"  2>> $PKGLOG_ERROR
+# Begin /etc/profile.d/rustc.sh
+
+pathprepend /opt/elixir/bin			PATH
+
+# End /etc/profile.d/rustc.sh
+EOF
+
+pathprepend /opt/elixir/bin			PATH
 
 
 cd ..
