@@ -47,3 +47,25 @@
 # i3xx Add-Ons to Services
 # i4xx Integration Enablers
 #
+
+#
+# Process
+#
+# if App is available in BLfS,
+#
+#	source - build, install
+#
+# elseif Python App in PyPi
+#
+#	whl download - pip3 install
+#
+# elseif App has available generic unix AMD64 binary
+#
+#	binary download - install
+#
+# else
+#
+#	source - build, install
+#
+# endif
+#
