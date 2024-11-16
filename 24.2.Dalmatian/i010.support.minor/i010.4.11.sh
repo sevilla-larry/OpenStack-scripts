@@ -10,17 +10,17 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i010.9.1.simplejson-3.19.3"
-echo "i010.9.1.simplejson-3.19.3" >> $LFSLOG_PROCESS
+# echo "i010.9.1.simplejson-3.19.3"
+# echo "i010.9.1.simplejson-3.19.3" >> $LFSLOG_PROCESS
 
-time { bash i010.9.1.simplejson-3.19.3.sh ; }
+# time { bash i010.9.1.simplejson-3.19.3.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
-echo "." >> $LFSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $LFSLOG_PROCESS
+# echo "."
+# echo "."
 
 ###
 
@@ -38,17 +38,17 @@ echo "."
 
 ###
 
-echo "i010.9.3.Elixir-1.16.3"
-echo "i010.9.3.Elixir-1.16.3" >> $LFSLOG_PROCESS
+# echo "i010.9.3.Elixir-1.16.3"
+# echo "i010.9.3.Elixir-1.16.3" >> $LFSLOG_PROCESS
 
-time { bash i010.9.3.Elixir-1.16.3.sh ; }
+# time { bash i010.9.3.Elixir-1.16.3.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
-echo "." >> $LFSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $LFSLOG_PROCESS
+# echo "."
+# echo "."
 
 ###
 

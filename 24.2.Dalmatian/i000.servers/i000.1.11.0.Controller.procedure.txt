@@ -179,7 +179,7 @@ D.  Message Queue
         bash i020.5.3.sh
          
         ###
-        pathprepend /opt/rabbitmq/sbin PATH
+        pathprepend /usr/local/rabbitmq_4.0.3/sbin PATH
 
     D.03. RabbitMQ - run server in background
 
@@ -221,3 +221,18 @@ E.  Identity service
         echo "stats settings" | ncat 10.0.0.11 11211
 
         ###
+
+F.  Distributed Realiable key-value store
+
+    F.01. Etcd Installation
+
+        ###
+
+        bash i020.5.5.sh
+
+        ###
+
+    F.02. Etcd Configuration
+
+    F.03. Server Start
+

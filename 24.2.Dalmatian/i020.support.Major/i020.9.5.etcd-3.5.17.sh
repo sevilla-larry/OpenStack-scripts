@@ -1,21 +1,11 @@
-# i020.9.3.RabbitMQ-4.0.3.sh (binary Install)
+# i020.9.5.etcd-3.5.17.sh (binary Install)
 #
-# https://docs.openstack.org/install-guide/environment-messaging.html
+# https://docs.openstack.org/install-guide/environment-etcd.html
 #
-# Notes: https://www.rabbitmq.com/docs/install-generic-unix
-#
-
-#
-# Dependencies Required:
-#
-#				i010.1	  simplejson-3.19.3	???
-#				i010.2	  Erlang-26.2.5.5
-#				i010.3	  Elixir-1.16.3		???
-#				b10.09.74 libxslt-1.1.42	???
-#				b10.49.06 xmlto-0.0.29		???
+# Notes: https://etcd.io/docs/v3.5/install/
 #
 
-export PKG="rabbitmq-server-generic-unix-4.0.3"
+export PKG="etcd-v3.5.17-linux-amd64"
 export PKGDEST="/usr/local"
 export PKGLOG_DIR=$LFSLOG/020.2
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
@@ -31,13 +21,13 @@ echo "Extract/Install tar..." >> $LFSLOG_PROCESS
 echo "Extract/Install tar..." >> $PKGLOG_ERROR
 tar -xvf -C $PKGDEST $PKG.tar.xz  > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 
-cat > /etc/profile.d/rabbitmq.sh << "EOF"  2>> $PKGLOG_ERROR
+#cat > /etc/profile.d/rabbitmq.sh << "EOF"  2>> $PKGLOG_ERROR
 # Begin /etc/profile.d/rabbitmq.sh
-
-pathprepend $PKGDEST/rabbitmq_4.0.3/sbin			PATH
-
+#
+#pathprepend $PKGDEST/sbin			PATH
+#
 # End /etc/profile.d/rabbitmq.sh
-EOF
+#EOF
 
 
 unset LFSLOG_PROCESS
