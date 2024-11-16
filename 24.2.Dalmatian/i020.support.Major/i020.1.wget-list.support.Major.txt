@@ -4,8 +4,9 @@ https://tarballs.opendev.org/openstack/python-openstackclient/python_openstackcl
 # 02 PyMySQL-1.1.1                  (Python module)
 https://files.pythonhosted.org/packages/0c/94/e4181a1f6286f545507528c78016e00065ea913276888db2262507693ce5/PyMySQL-1.1.1-py3-none-any.whl
 
-# 03 RabbitMQ-4.0.3
-https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.0.3/rabbitmq-server-4.0.3.tar.xz
+# 03 RabbitMQ-4.0.3					(generic unix binary)
+https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.0.3/rabbitmq-server-generic-unix-4.0.3.tar.xz
+#https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.0.3/rabbitmq-server-4.0.3.tar.xz
 
 # 04.1 MemCached-1.6.32
 https://memcached.org/files/memcached-1.6.32.tar.gz

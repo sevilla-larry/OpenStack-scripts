@@ -1,21 +1,20 @@
-# i010.9.3.Elixir-1.16.3.sh
+# i020.9.3.RabbitMQ-4.0.3.sh (source build)
+#
+# https://docs.openstack.org/install-guide/environment-messaging.html
 #
 
 #
 # Dependencies Required:
 #
-#				i010.2	 Erlang-26.2.5.5
+#				i010.1	  simplejson-3.19.3
+#				i010.2	  Erlang-26.2.5.5
+#				i010.3	  Elixir-1.16.3
+#				b10.09.74 libxslt-1.1.42
+#				b10.49.06 xmlto-0.0.29
 #
 
-#
-# Required by:
-#
-#				i020.9.3 RabbitMQ-4.0.3 (source build)
-#
-#
-
-export PKG="elixir-1.16.3"
-export PKGLOG_DIR=$LFSLOG/010.3
+export PKG="rabbitmq-server-4.0.3"
+export PKGLOG_DIR=$LFSLOG/020.3
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 #export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -31,7 +30,7 @@ mkdir $PKGLOG_DIR
 echo "1. Extract tar..."
 echo "1. Extract tar..." >> $LFSLOG_PROCESS
 echo "1. Extract tar..." >> $PKGLOG_ERROR
-tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
+tar xvf $PKG.tar.xz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
@@ -44,28 +43,23 @@ echo "3. Make Install ..."
 echo "3. Make Install ..." >> $LFSLOG_PROCESS
 echo "3. Make Install ..." >> $PKGLOG_ERROR
 # initially install to a temporary directory
-make install DESTDIR=/tmp/elixir				\
+make install DESTDIR=/tmp/rmq	\
 		> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # move the needed directory to /opt
-mv -v /tmp/elixir/usr/local/lib/elixir			\
-		/opt/elixir								\
-		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-
-# move the Man pages to /share/man/man1
-mv -v /tmp/elixir/usr/local/share/man/man1/*	\
-		/usr/share/man/man1						\
+mv -v /tmp/rmq/usr/local/lib/erlang/lib/rabbitmq_server-4.0.3	\
+		/opt/rabbitmq	\
 		>> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # remove the temporary directory
-rm -rfv /tmp/elixir
+rm -rfv /tmp/rmq
 
-cat > /etc/profile.d/rustc.sh << "EOF"  2>> $PKGLOG_ERROR
-# Begin /etc/profile.d/rustc.sh
+cat > /etc/profile.d/rabbitmq.sh << "EOF"  2>> $PKGLOG_ERROR
+# Begin /etc/profile.d/rabbitmq.sh
 
-pathprepend /opt/elixir/bin			PATH
+pathprepend /opt/rabbitmq/sbin			PATH
 
-# End /etc/profile.d/rustc.sh
+# End /etc/profile.d/rabbitmq.sh
 EOF
 
 
