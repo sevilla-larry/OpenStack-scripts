@@ -29,12 +29,12 @@ mkdir $PKGLOG_DIR
 echo "Extract/Install tar..."
 echo "Extract/Install tar..." >> $LFSLOG_PROCESS
 echo "Extract/Install tar..." >> $PKGLOG_ERROR
-tar -xvf -C $PKGDEST $PKG.tar.xz  > $PKGLOG_TAR 2>> $PKGLOG_ERROR
+tar xvf $PKG.tar.xz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 
 cat > /etc/profile.d/rabbitmq.sh << "EOF"  2>> $PKGLOG_ERROR
 # Begin /etc/profile.d/rabbitmq.sh
 
-pathprepend $PKGDEST/rabbitmq_4.0.3/sbin			PATH
+pathprepend $PKGDEST/rabbitmq_server-4.0.3/sbin			PATH
 
 # End /etc/profile.d/rabbitmq.sh
 EOF
