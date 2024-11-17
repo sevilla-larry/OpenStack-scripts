@@ -25,6 +25,43 @@ tar xvf $PKG.tar.xz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 ln -sv $PKGDEST/$PKG/etcd* /usr/bin \
         > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
+cat > /etc/etcd.conf.yml << "EOF"  2>> $PKGLOG_ERROR
+# Begin /etc/etcd.conf.yml
+
+# This is the configuration file for the etcd server.
+
+# Human-readable name for this member.
+name: 'VM11Controller'
+
+# Path to the data directory.
+data-dir: /var/lib/etcd
+
+# Initial cluster configuration for bootstrapping.
+initial-cluster: 'VM11Controller=http://10.0.0.11:2380'
+
+# Initial cluster token for the etcd cluster during bootstrap.
+initial-cluster-token: 'etcd-cluster-01'
+
+# Initial cluster state ('new' or 'existing').
+initial-cluster-state: 'new'
+
+# List of this member's peer URLs to advertise to the rest of the cluster.
+# The URLs needed to be a comma-separated list.
+initial-advertise-peer-urls: http://10.0.0.11:2380
+
+# List of this member's client URLs to advertise to the public.
+# The URLs needed to be a comma-separated list.
+advertise-client-urls: http://10.0.0.11:2379
+
+# List of comma separated URLs to listen on for peer traffic.
+listen-peer-urls: http://10.0.0.11:2380
+
+# List of comma separated URLs to listen on for client traffic.
+listen-client-urls: http://10.0.0.11:2379
+
+# End /etc/etcd.conf.yml
+EOF
+
 
 unset LFSLOG_PROCESS
 unset PKGLOG_INSTALL
