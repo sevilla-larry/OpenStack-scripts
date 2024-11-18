@@ -24,6 +24,20 @@ echo "." >> $LFSLOG_PROCESS
 echo "."
 echo "."
 
+###
+
+echo "i020.9.3.4.RabbitMQ.rc.d"
+echo "i020.9.3.4.RabbitMQ.rc.d" >> $LFSLOG_PROCESS
+
+time { bash i020.9.3.4.RabbitMQ.rc.d.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+
+echo "." >> $LFSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset LFSLOG_PROCESS

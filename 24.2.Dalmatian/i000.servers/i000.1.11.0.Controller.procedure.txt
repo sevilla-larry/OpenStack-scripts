@@ -74,7 +74,6 @@ A.  Preparation
         ###
 
         export LFSLOG=/var/log/blfs
-
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
 
@@ -148,7 +147,6 @@ C.  SQL Database
         ###
 
         export LFSLOG=/var/log/blfs
-
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
 
@@ -177,15 +175,17 @@ D.  Message Queue
 
         # RabbitMQ
         bash i020.5.3.sh
-         
+
+        reboot
+
         ###
-        pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
 
     D.03. RabbitMQ - run server in background
 
         ###
 
-        rabbitmq-server -detached
+        pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
+        #rabbitmq-server -detached
 
         ###
 
@@ -206,7 +206,15 @@ E.  Identity service
 
         ###
 
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        cd /sources
+
         bash i020.5.4.sh
+
+        reboot
 
         ###
 
@@ -214,9 +222,9 @@ E.  Identity service
 
         ###
 
-        exit    # to user
+        # exit    # to user
 
-        memcached -d
+        # memcached -d
 
         echo "stats settings" | ncat 10.0.0.11 11211
 
@@ -228,14 +236,21 @@ F.  Distributed Realiable key-value store
 
         ###
 
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        cd /sources
+
         bash i020.5.5.sh
+
+        reboot
 
         ###
 
     F.02. Etcd Configuration
 
         # https://gist.github.com/congleetea/584de6db5cd6678a42c48fdb13d2a050
-        export ETCD_CONFIG_FILE=/etc/etcd.conf.yml
+        # export ETCD_CONFIG_FILE=/etc/etcd.conf.yml
 
     F.03. Server Start
-
