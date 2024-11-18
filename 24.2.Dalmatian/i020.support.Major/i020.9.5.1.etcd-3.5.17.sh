@@ -7,7 +7,7 @@
 
 export PKG="etcd-v3.5.17-linux-amd64"
 export PKGDEST="/usr/local"
-export PKGLOG_DIR=$LFSLOG/020.2
+export PKGLOG_DIR=$LFSLOG/020.5
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log

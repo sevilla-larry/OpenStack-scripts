@@ -12,10 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i020.9.2.PyMySQL-1.1.1"
-echo "i020.9.2.PyMySQL-1.1.1" >> $LFSLOG_PROCESS
+echo "i020.9.2.2.PyMySQL-1.1.1"
+echo "i020.9.2.2.PyMySQL-1.1.1" >> $LFSLOG_PROCESS
 
-time { bash i020.9.2.PyMySQL-1.1.1.sh ; }
+time { bash i020.9.2.2.PyMySQL-1.1.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
