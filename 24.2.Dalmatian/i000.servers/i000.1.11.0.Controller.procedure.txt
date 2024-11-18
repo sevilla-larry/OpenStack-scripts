@@ -234,6 +234,7 @@ F.  Distributed Realiable key-value store
 
     F.02. Etcd Configuration
 
+        # https://gist.github.com/congleetea/584de6db5cd6678a42c48fdb13d2a050
         export ETCD_CONFIG_FILE=/etc/etcd.conf.yml
 
     F.03. Server Start

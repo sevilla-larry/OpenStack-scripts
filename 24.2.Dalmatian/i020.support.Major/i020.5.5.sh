@@ -12,10 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i020.9.5.etcd-3.5.17"
-echo "i020.9.5.etcd-3.5.17" >> $LFSLOG_PROCESS
+echo "i020.9.5.1.etcd-3.5.17"
+echo "i020.9.5.1.etcd-3.5.17" >> $LFSLOG_PROCESS
 
-time { bash i020.9.5.etcd-3.5.17.sh ; }
+time { bash i020.9.5.1.etcd-3.5.17.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

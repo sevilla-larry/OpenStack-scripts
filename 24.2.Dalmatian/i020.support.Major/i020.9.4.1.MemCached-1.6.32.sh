@@ -1,4 +1,4 @@
-# i020.9.4.1.MemCached-1.6.32.sh
+# i020.9.4.1.MemCacheD-1.6.32.sh
 #
 
 #

@@ -12,10 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i020.9.4.1.MemCached-1.6.32"
-echo "i020.9.4.1.MemCached-1.6.32" >> $LFSLOG_PROCESS
+echo "i020.9.4.1.MemCacheD-1.6.32"
+echo "i020.9.4.1.MemCacheD-1.6.32" >> $LFSLOG_PROCESS
 
-time { bash i020.9.4.1.MemCached-1.6.32.sh ; }
+time { bash i020.9.4.1.MemCacheD-1.6.32.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

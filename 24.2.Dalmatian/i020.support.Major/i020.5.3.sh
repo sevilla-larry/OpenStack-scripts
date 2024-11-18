@@ -12,10 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i020.9.3.RabbitMQ-4.0.3"
-echo "i020.9.3.RabbitMQ-4.0.3" >> $LFSLOG_PROCESS
+echo "i020.9.3.1.RabbitMQ-4.0.3"
+echo "i020.9.3.1.RabbitMQ-4.0.3" >> $LFSLOG_PROCESS
 
-time { bash i020.9.3.RabbitMQ-4.0.3.sh ; }
+time { bash i020.9.3.1.RabbitMQ-4.0.3.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
