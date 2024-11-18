@@ -20,9 +20,9 @@ echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $LFSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
-   cp -v $INITDFILESRC $INITDFILEDST   \
+   cp -v $INITDFILESRC $INITDFILEDST      \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-   chmod -v ${MODE} $INITDFILEDST
+   chmod -v ${MODE} $INITDFILEDST         \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc0.d/K09rabbitmq  \
