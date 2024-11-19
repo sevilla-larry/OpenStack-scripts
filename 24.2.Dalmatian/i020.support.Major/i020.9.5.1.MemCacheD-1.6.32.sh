@@ -28,6 +28,15 @@ tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
+groupadd memcached      \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+useradd -c "MemCacheD"  \
+        -g memcached    \
+        -d /dev/null    \
+        -s /bin/false   \
+        memcached       \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
 echo "2. Configure ..."
 echo "2. Configure ..." >> $LFSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR

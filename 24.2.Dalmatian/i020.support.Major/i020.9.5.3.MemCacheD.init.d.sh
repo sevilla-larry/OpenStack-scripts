@@ -31,7 +31,13 @@ case "$1" in
    start)
       log_info_msg "Starting MemCacheD Server..."
 
-      start_daemon /usr/bin/memcached
+      install -dm755 -o memcached -g memcached /run/memcached
+
+      if ! pidofproc memcached >/dev/null; then
+          su - memcached -c '/usr/bin/memcached'
+      fi
+
+      #start_daemon /usr/bin/memcached
       evaluate_retval
       ;;
 
