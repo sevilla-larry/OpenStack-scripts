@@ -71,6 +71,13 @@ cat > /etc/memcached.conf << "EOF"    2>> $PKGLOG_ERROR
 # End /etc/memcached.conf
 EOF
 
+install -v -dm700 /srv/memcached                                \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+install -v -dm755 /run/memcached                                \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+chown -Rv memcached:memcached /srv/memcached /run/memcached     \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
 
 cd ..
 rm -rf $PKG
