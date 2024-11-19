@@ -34,7 +34,7 @@ case "$1" in
       install -dm755 -o memcached -g memcached /run/memcached
 
       if ! pidofproc memcached >/dev/null; then
-          su - memcached -c '/usr/bin/memcached'
+          su - memcached -c '/usr/bin/memcached -d'
           #or# /usr/bin/memcached -d -u memcached
       fi
 
