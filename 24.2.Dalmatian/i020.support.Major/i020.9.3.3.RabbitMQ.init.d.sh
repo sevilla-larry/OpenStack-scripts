@@ -31,7 +31,7 @@ case "$1" in
    start)
       log_info_msg "Starting RabbitMQ Server..."
 
-      start_daemon /usr/local/rabbitmq_server-4.0.3/sbin/rabbitmq-server
+      start_daemon /usr/local/rabbitmq_server-4.0.3/sbin/rabbitmq-server -detached
       evaluate_retval
       ;;
 
