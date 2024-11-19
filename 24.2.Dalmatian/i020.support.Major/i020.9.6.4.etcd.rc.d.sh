@@ -15,6 +15,8 @@ CONFMODE=644
 CURRDIR=`pwd`
 INITDFILESRC=$CURRDIR/i020.9.6.3.etcd.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/etcd
+INITDFILEREL=../init.d/etcd
+
 
 echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $LFSLOG_PROCESS
@@ -25,19 +27,21 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
    chmod -v ${MODE} $INITDFILEDST         \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc0.d/K07etcd  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K07etcd  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc1.d/K07etcd  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K07etcd  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc2.d/S93etcd  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S93etcd  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc3.d/S93etcd  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S93etcd  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc4.d/S93etcd  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S93etcd  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc5.d/S93etcd  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S93etcd  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc6.d/K07etcd  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K07etcd  \
+         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
 
 unset LFSLOG_PROCESS
 unset PKGLOG_INITD
