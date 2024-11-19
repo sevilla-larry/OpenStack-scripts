@@ -1,8 +1,8 @@
-# i020.5.3.sh
+# i020.5.6.sh
 #
-# Install RabbitMQ
+# Install Etcd
 #
-# https://docs.openstack.org/install-guide/environment-messaging.html
+# https://docs.openstack.org/install-guide/environment-etcd.html
 #
 
 export LFSLOG_PROCESS=$LFSLOG/process.log
@@ -12,10 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i020.9.3.1.RabbitMQ-4.0.3"
-echo "i020.9.3.1.RabbitMQ-4.0.3" >> $LFSLOG_PROCESS
+echo "i020.9.6.1.etcd-3.5.17"
+echo "i020.9.6.1.etcd-3.5.17" >> $LFSLOG_PROCESS
 
-time { bash i020.9.3.1.RabbitMQ-4.0.3.sh ; }
+time { bash i020.9.6.1.etcd-3.5.17.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
@@ -26,10 +26,10 @@ echo "."
 
 ###
 
-echo "i020.9.3.4.RabbitMQ.rc.d"
-echo "i020.9.3.4.RabbitMQ.rc.d" >> $LFSLOG_PROCESS
+echo "i020.9.6.4.etcd.rc.d"
+echo "i020.9.6.4.etcd.rc.d" >> $LFSLOG_PROCESS
 
-time { bash i020.9.3.4.RabbitMQ.rc.d.sh ; }
+time { bash i020.9.6.4.etcd.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

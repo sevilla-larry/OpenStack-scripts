@@ -1,10 +1,13 @@
-# i020.9.4.2.python_memcached-1.62.sh
+# i020.9.3.2.mod-wsgi-5.0.1.sh
 #
-# https://docs.openstack.org/install-guide/environment-memcached.html
+# https://docs.openstack.org/keystone/2024.2/install/
+# https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
+#
+# will download Python App online
 #
 
-export PKG="python_memcached-1.62-py2.py3-none-any.whl"
-export PKGLOG_DIR=$LFSLOG/020.4.2
+export PKG="mod-wsgi"
+export PKGLOG_DIR=$LFSLOG/020.3
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export LFSLOG_PROCESS=$LFSLOG/process.log

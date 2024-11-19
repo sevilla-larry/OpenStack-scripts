@@ -1,4 +1,4 @@
-# i020.9.3.RabbitMQ-4.0.3.sh (binary Install)
+# i020.9.4.RabbitMQ-4.0.3.sh (binary Install)
 #
 # https://docs.openstack.org/install-guide/environment-messaging.html
 #
@@ -17,7 +17,7 @@
 
 export PKG="rabbitmq-server-generic-unix-4.0.3"
 export PKGDEST="/usr/local"
-export PKGLOG_DIR=$LFSLOG/020.3
+export PKGLOG_DIR=$LFSLOG/020.4
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export LFSLOG_PROCESS=$LFSLOG/process.log

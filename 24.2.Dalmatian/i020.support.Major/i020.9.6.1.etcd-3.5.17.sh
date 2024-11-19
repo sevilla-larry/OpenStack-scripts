@@ -1,4 +1,4 @@
-# i020.9.5.etcd-3.5.17.sh (binary Install)
+# i020.9.6.etcd-3.5.17.sh (binary Install)
 #
 # https://docs.openstack.org/install-guide/environment-etcd.html
 #
@@ -7,12 +7,12 @@
 
 export PKG="etcd-v3.5.17-linux-amd64"
 export PKGDEST="/usr/local"
-export PKGLOG_DIR=$LFSLOG/020.5
+export PKGLOG_DIR=$LFSLOG/020.6
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
-export YMLFILE=`pwd`/i020.9.5.2.etcd.conf.yml
+export YMLFILE=`pwd`/i020.9.6.2.etcd.conf.yml
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR

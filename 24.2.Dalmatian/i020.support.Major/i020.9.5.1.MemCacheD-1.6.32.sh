@@ -1,4 +1,4 @@
-# i020.9.4.1.MemCacheD-1.6.32.sh
+# i020.9.5.1.MemCacheD-1.6.32.sh
 #
 
 #
@@ -8,7 +8,7 @@
 #
 
 export PKG="memcached-1.6.32"
-export PKGLOG_DIR=$LFSLOG/020.4.1
+export PKGLOG_DIR=$LFSLOG/020.5.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

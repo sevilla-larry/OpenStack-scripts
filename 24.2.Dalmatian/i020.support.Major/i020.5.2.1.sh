@@ -1,4 +1,4 @@
-# i020.5.2.1.MariaDB.sh
+# i020.5.2.1.sh
 #
 # Build MariaDB from BLfS
 #

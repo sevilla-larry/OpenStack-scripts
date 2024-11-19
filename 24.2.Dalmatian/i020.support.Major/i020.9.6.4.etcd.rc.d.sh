@@ -1,6 +1,6 @@
-# i020.9.5.4.etcd.rc.d.sh
+# i020.9.6.4.etcd.rc.d.sh
 
-export PKGLOG_DIR=$LFSLOG/020.5
+export PKGLOG_DIR=$LFSLOG/020.6
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
@@ -13,7 +13,7 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i020.9.5.3.etcd.init.d.sh
+INITDFILESRC=$CURRDIR/i020.9.6.3.etcd.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/etcd
 
 echo "Install Init.d/rc.d ..."

@@ -1,6 +1,6 @@
-# i020.9.3.4.RabbitMQ.rc.d.sh
+# i020.9.5.4.MemCacheD.rc.d.sh
 
-export PKGLOG_DIR=$LFSLOG/020.3
+export PKGLOG_DIR=$LFSLOG/020.5.1
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
@@ -13,8 +13,8 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i020.9.3.3.RabbitMQ.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/rabbitmq
+INITDFILESRC=$CURRDIR/i020.9.5.3.MemCacheD.init.d.sh
+INITDFILEDST=${EXTDIR}/rc.d/init.d/memcached
 
 echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $LFSLOG_PROCESS
@@ -25,19 +25,19 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
    chmod -v ${MODE} $INITDFILEDST         \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc0.d/K09rabbitmq  \
+	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc0.d/K08memcached  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc1.d/K09rabbitmq  \
+	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc1.d/K08memcached  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc2.d/S91rabbitmq  \
+	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc2.d/S92memcached  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc3.d/S91rabbitmq  \
+	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc3.d/S92memcached  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc4.d/S91rabbitmq  \
+	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc4.d/S92memcached  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc5.d/S91rabbitmq  \
+	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc5.d/S92memcached  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc6.d/K09rabbitmq  \
+	ln -vsf  $INITDFILEDST ${EXTDIR}/rc.d/rc6.d/K08memcached  \
 
 unset LFSLOG_PROCESS
 unset PKGLOG_INITD

@@ -156,9 +156,37 @@ C.  SQL Database
 
         ###
 
-D.  Message Queue
+D.  Apache with mod_wsgi
 
-    D.01. RabbitMQ Support Apps
+    D.01 Support
+
+        ###
+
+        # Apr & Apr-util
+        bash c13.03.sh
+
+        ###
+
+    D.02 Main App
+
+        ###
+
+        #bash i020.5.3.1.sh
+        bash c13.03.9.main.app.sh
+
+        ###
+
+    D.03 mod-wsgi
+
+        ###
+
+        bash i020.5.3.2.sh
+
+        ###
+
+E.  Message Queue
+
+    E.01. RabbitMQ Support Apps
 
         ###
 
@@ -170,18 +198,18 @@ D.  Message Queue
         ###
         # pathprepend /opt/elixir/bin PATH
 
-    D.02. RabbitMQ Main App
+    E.02. RabbitMQ Main App
 
         ###
 
         # RabbitMQ
-        bash i020.5.3.sh
+        bash i020.5.4.sh
 
         reboot
 
         ###
 
-    D.03. RabbitMQ - run server in background
+    E.03. RabbitMQ - run server in background
 
         ###
 
@@ -190,7 +218,7 @@ D.  Message Queue
 
         ###
 
-    D.04. RabbitMQ Configurations
+    E.04. RabbitMQ Configurations
 
         ###
 
@@ -201,39 +229,9 @@ D.  Message Queue
 
         ###
 
-E.  Identity service
+F.  Cache tokens of Identity service authentication
 
-    E.01. MemCached & python-memcached 
-
-        ###
-
-        export LFSLOG=/var/log/blfs
-        export MAKEFLAGS="-j$(nproc)"
-        export NPROC="$(nproc)"
-
-        cd /sources
-
-        bash i020.5.4.sh
-
-        reboot
-
-        ###
-
-    E.02. Test
-
-        ###
-
-        # exit    # to user
-
-        # memcached -d
-
-        echo "stats settings" | ncat 10.0.0.11 11211
-
-        ###
-
-F.  Distributed Realiable key-value store
-
-    F.01. Etcd Installation
+    F.01. MemCached & python-memcached 
 
         ###
 
@@ -249,9 +247,39 @@ F.  Distributed Realiable key-value store
 
         ###
 
-    F.02. Etcd Configuration
+    F.02. Test
+
+        ###
+
+        # exit    # to user
+
+        # memcached -d
+
+        echo "stats settings" | ncat 10.0.0.11 11211
+
+        ###
+
+G.  Distributed Realiable key-value store
+
+    G.01. Etcd Installation
+
+        ###
+
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        cd /sources
+
+        bash i020.5.5.sh
+
+        reboot
+
+        ###
+
+    G.02. Etcd Configuration
 
         # https://gist.github.com/congleetea/584de6db5cd6678a42c48fdb13d2a050
-        # export ETCD_CONFIG_FILE=/etc/etcd.conf.yml
+        # export ETCD_CONFIG_FILE=/etc/etcd.conG.yml
 
-    F.03. Server Start
+    G.03. Server Start
