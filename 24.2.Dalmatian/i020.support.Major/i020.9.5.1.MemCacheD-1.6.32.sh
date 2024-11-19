@@ -33,9 +33,9 @@ groupadd memcached              \
 useradd -c "MemCacheD"          \
         -g memcached            \
         -d /srv/memcached       \
-        -s /bin/false           \
         memcached               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+#        -s /bin/false           \
 
 echo "2. Configure ..."
 echo "2. Configure ..." >> $LFSLOG_PROCESS
