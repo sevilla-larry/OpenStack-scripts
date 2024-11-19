@@ -188,6 +188,14 @@ D.  Apache with mod_wsgi
 
         ###
 
+        ###
+
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        cd /sources
+
         bash i020.5.3.2.sh
 
         ###
