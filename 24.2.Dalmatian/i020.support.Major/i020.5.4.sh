@@ -26,17 +26,17 @@ echo "."
 
 ###
 
-echo "i020.9.4.4.RabbitMQ.rc.d"
-echo "i020.9.4.4.RabbitMQ.rc.d" >> $LFSLOG_PROCESS
+#echo "i020.9.4.4.RabbitMQ.rc.d"
+#echo "i020.9.4.4.RabbitMQ.rc.d" >> $LFSLOG_PROCESS
 
-time { bash i020.9.4.4.RabbitMQ.rc.d.sh ; }
+#time { bash i020.9.4.4.RabbitMQ.rc.d.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+#date +"%Y/%b/%d %H:%M"
+#date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
-echo "." >> $LFSLOG_PROCESS
-echo "."
-echo "."
+#echo "." >> $LFSLOG_PROCESS
+#echo "."
+#echo "."
 
 #####
 
