@@ -28,13 +28,13 @@ tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
-groupadd memcached      \
+groupadd memcached              \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-useradd -c "MemCacheD"  \
-        -g memcached    \
-        -d /dev/null    \
-        -s /bin/false   \
-        memcached       \
+useradd -c "MemCacheD"          \
+        -g memcached            \
+        -d /srv/memcached       \
+        -s /bin/false           \
+        memcached               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 echo "2. Configure ..."
