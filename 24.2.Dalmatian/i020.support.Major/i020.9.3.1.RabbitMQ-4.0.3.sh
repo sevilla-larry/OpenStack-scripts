@@ -34,7 +34,8 @@ tar xvf $PKG.tar.xz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cat > /etc/profile.d/rabbitmq.sh << "EOF"  2>> $PKGLOG_ERROR
 # Begin /etc/profile.d/rabbitmq.sh
 
-pathprepend $PKGDEST/rabbitmq_server-4.0.3/sbin			PATH
+export RABBITMQ_HOME=$PKGDEST/rabbitmq_server-4.0.3
+pathprepend $RABBITMQ_HOME/sbin						PATH
 
 # End /etc/profile.d/rabbitmq.sh
 EOF
