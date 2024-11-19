@@ -20,11 +20,14 @@ export PKGDEST="/usr/local"
 export PKGLOG_DIR=$LFSLOG/020.4
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
+export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
 
+
+export RABBITMQ_HOME=/usr/local/rabbitmq_server-4.0.3
 
 echo "Extract/Install tar..."
 echo "Extract/Install tar..." >> $LFSLOG_PROCESS
@@ -40,8 +43,16 @@ pathprepend $RABBITMQ_HOME/sbin						PATH
 # End /etc/profile.d/rabbitmq.sh
 EOF
 
+ln -vsf $RABBITMQ_HOME/etc/rabbitmq /etc/rabbitmq           \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+ln -vsf $RABBITMQ_HOME/var/lib/rabbitmq /var/lib/rabbitmq   \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+ln -vsf $RABBITMQ_HOME/var/log/rabbitmq /var/log/rabbitmq   \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
 
 unset LFSLOG_PROCESS
+unset PKGLOG_OTHERS
 unset PKGLOG_TAR
 unset PKGLOG_ERROR
 unset PKGLOG_DIR PKG
