@@ -26,6 +26,11 @@ echo "."
 
 ###
 
+#
+# Note:
+#
+# FAILED using init.d/rc.d to start-up
+#
 #echo "i020.9.4.4.RabbitMQ.rc.d"
 #echo "i020.9.4.4.RabbitMQ.rc.d" >> $LFSLOG_PROCESS
 

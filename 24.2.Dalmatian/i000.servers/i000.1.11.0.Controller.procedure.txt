@@ -221,7 +221,7 @@ E.  Message Queue
         # RabbitMQ
         bash i020.5.4.sh
 
-        reboot
+        #reboot
 
         ###
 
@@ -230,7 +230,7 @@ E.  Message Queue
         ###
 
         pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
-        #rabbitmq-server -detached
+        rabbitmq-server -detached
 
         ###
 
@@ -251,11 +251,11 @@ F.  Cache tokens of Identity service authentication
 
         ###
 
-        export LFSLOG=/var/log/blfs
-        export MAKEFLAGS="-j$(nproc)"
-        export NPROC="$(nproc)"
+        # export LFSLOG=/var/log/blfs
+        # export MAKEFLAGS="-j$(nproc)"
+        # export NPROC="$(nproc)"
 
-        cd /sources
+        # cd /sources
 
         bash i020.5.5.sh
 
