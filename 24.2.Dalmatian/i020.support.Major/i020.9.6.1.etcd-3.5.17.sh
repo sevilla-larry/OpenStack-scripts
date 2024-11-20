@@ -11,6 +11,7 @@ export PKGLOG_DIR=$LFSLOG/020.6
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
+export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
 export CONFYMLFILE1=`pwd`/i020.9.6.2.etcd.conf.yml
 export CONFYMLFILE2=/etc/etcd.conf.yml
@@ -52,6 +53,7 @@ chown -Rv etcd:etcd     /var/lib/etcd   \
 
 unset CONFYMLFILE1 CONFYMLFILE2
 unset LFSLOG_PROCESS
+unset PKGLOG_OTHERS
 unset PKGLOG_INSTALL
 unset PKGLOG_TAR
 unset PKGLOG_ERROR
