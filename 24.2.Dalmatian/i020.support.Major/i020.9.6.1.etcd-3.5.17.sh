@@ -19,6 +19,14 @@ rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
 
 
+groupadd etcd               \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+useradd -c "etcd"           \
+        -g etcd             \
+        -d /var/lib/etcd    \
+        etcd                \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
 echo "Extract/Install tar..."
 echo "Extract/Install tar..." >> $LFSLOG_PROCESS
 echo "Extract/Install tar..." >> $PKGLOG_ERROR
@@ -30,6 +38,14 @@ ln -sv $PKGDEST/$PKG/etcd* /usr/bin \
 cp -v $CONFYMLFILE1 $CONFYMLFILE2 \
         > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
+install -v -dm700 /var/lib/etcd             \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+install -v -dm755 /run/etcd                 \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+chown -Rv etcd:etcd /var/lib/etcd /run/etcd \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+chmod -Rv a+rw /var/lib/etcd                \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 unset CONFYMLFILE1 CONFYMLFILE2
