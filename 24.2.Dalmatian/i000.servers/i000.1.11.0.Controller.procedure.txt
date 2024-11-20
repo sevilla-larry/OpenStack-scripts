@@ -287,7 +287,7 @@ G.  Distributed Realiable key-value store
 
         cd /sources
 
-        bash i020.5.5.sh
+        bash i020.5.6.sh
 
         reboot
 
