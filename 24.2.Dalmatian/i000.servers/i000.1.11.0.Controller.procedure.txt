@@ -292,10 +292,3 @@ G.  Distributed Realiable key-value store
         reboot
 
         ###
-
-    G.02. Etcd Configuration
-
-        # https://gist.github.com/congleetea/584de6db5cd6678a42c48fdb13d2a050
-        # export ETCD_CONFIG_FILE=/etc/etcd.conG.yml
-
-    G.03. Server Start
