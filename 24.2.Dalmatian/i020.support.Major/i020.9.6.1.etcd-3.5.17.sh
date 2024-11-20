@@ -22,7 +22,7 @@ mkdir $PKGLOG_DIR
 echo "Extract/Install tar..."
 echo "Extract/Install tar..." >> $LFSLOG_PROCESS
 echo "Extract/Install tar..." >> $PKGLOG_ERROR
-tar xvf $PKG.tar.xz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
+tar xvf $PKG.tar.gz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 
 ln -sv $PKGDEST/$PKG/etcd* /usr/bin \
         > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
