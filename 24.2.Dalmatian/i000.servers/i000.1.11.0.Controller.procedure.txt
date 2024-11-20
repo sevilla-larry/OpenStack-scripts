@@ -144,7 +144,7 @@ E.  Support Apps - Major - Configuration 2
 
     E.01. MariaDB
 
-        ###
+        ### as root
 
         mysql_secure_installation
 
@@ -161,6 +161,8 @@ E.  Support Apps - Major - Configuration 2
 
     E.03. RabbitMQ
     
+        ### as root
+
         E.03.01. run server in background
 
             ###
