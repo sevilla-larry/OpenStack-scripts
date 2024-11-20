@@ -1,22 +1,29 @@
-# i000.1.11.2.support.apps.sh
+# i000.1.11.1.support.apps.sh
 #
 
-# MariaDB
-#bash i020.5.2.1.sh
-bash c11.03.9.main.app.sh       # MariaDB
-bash i020.5.2.2.sh				# PyMySQL
+# Python OpenStackClient
+bash i020.5.1.sh
 
-# Apache
-bash c13.03.sh					# Apr & Apr-util
-#bash i020.5.3.1.sh
-bash c13.03.9.main.app.sh		# Apache
-bash i020.5.3.2.sh				# mod-wsgi
+# Common to all
+bash b10.03.0.sh
 
-# RabbitMQ
-bash i020.5.4.sh				# RabbitMQ
+# Common to MariaDB & Apache
+bash b10.03.6.sh
 
-# MemCacheD
-bash i020.5.5.sh				# MemCacheD
+# MariaDB support
+bash b10.03.1.sh
 
-# EtcD
-bash i020.5.6.sh				# EtcD
+# Common to PostgreSQL, ProFTPD & RabbitMQ
+bash b10.03.5.sh
+
+# PostgreSQL & RabbitMQ support
+bash b10.03.2.sh
+
+# ProFTPD & Nmap support
+bash b10.03.4.sh
+
+# support apps for Controller
+bash i010.4.11.sh
+
+# Nmap + deps
+bash b01.03.1.sh
