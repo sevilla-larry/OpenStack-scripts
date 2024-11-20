@@ -82,7 +82,7 @@ A.  Preparation
 
         ###
 
-B.  Generate OpenStack - Controller Server
+B.  Support Applications - minor
 
     B.01. Checking Environment
 
@@ -104,7 +104,7 @@ B.  Generate OpenStack - Controller Server
         ( display )
         root [ /sources ]#
 
-    B.03. Support Applications
+    B.03. Generate Applications - minor
 
         ###
 
@@ -113,20 +113,36 @@ B.  Generate OpenStack - Controller Server
 
         ###
 
-C.  SQL Database
-
-    C.01. MariaDB App
+C.  Support Applications - Major
 
         ###
 
-        #bash i020.5.2.1.MariaDB.sh
-        bash c11.03.9.main.app.sh       # MariaDB
+        # MariaDB, Apache, RabbitMQ, MemCacheD, EtcD
+        bash i000.1.11.2.support.apps.sh
+
+        ###
+
+D.  Support Apps - Major - Configuration 1 - BLfS bootscripts
+
+        ###
 
         cd /mnt/Src/lfs.src/blfs-bootscripts-20240416       # VM/VB
         cd /usr/src/lfs/blfs-bootscripts-20240416           # PC
 
-        make install-mysql
+        ###
+
+        make install-mysql      # MariaDB
+        make install-httpd      # Apache
+
+        ###
+
         reboot
+
+        ###
+
+E.  Support Apps - Major - Configuration 2
+
+    E.01. MariaDB
 
         ###
 
@@ -143,152 +159,32 @@ C.  SQL Database
 
         ###
 
-    C.02. PyMySQL App
+    E.03. RabbitMQ
+    
+        E.03.01. run server in background
+
+            ###
+
+            pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
+            rabbitmq-server -detached
+
+            ###
+
+        E.03.02. User Configurations
+
+            ###
+
+            #                    user      password
+            rabbitmqctl add_user openstack openstack
+
+            rabbitmqctl set_permissions openstack ".*" ".*" ".*"
+
+            ###
+
+F.  Support Apps - MemCacheD Testing
 
         ###
-
-        export LFSLOG=/var/log/blfs
-        export MAKEFLAGS="-j$(nproc)"
-        export NPROC="$(nproc)"
-
-        cd /sources
-
-        bash i020.5.2.2.sh      # PyMySQL
-
-        ###
-
-D.  Apache with mod_wsgi
-
-    D.01 Support
-
-        ###
-
-        # Apr & Apr-util
-        bash c13.03.sh
-
-        ###
-
-    D.02 Main App
-
-        ###
-
-        #bash i020.5.3.1.sh
-        bash c13.03.9.main.app.sh
-
-        cd /mnt/Src/lfs.src/blfs-bootscripts-20240416       # VM/VB
-        cd /usr/src/lfs/blfs-bootscripts-20240416           # PC
-
-        make install-httpd
-
-        reboot
-
-        ###
-
-    D.03 mod-wsgi
-
-        ###
-
-        ###
-
-        export LFSLOG=/var/log/blfs
-        export MAKEFLAGS="-j$(nproc)"
-        export NPROC="$(nproc)"
-
-        cd /sources
-
-        bash i020.5.3.2.sh
-
-        ###
-
-E.  Message Queue
-
-    E.01. RabbitMQ Support Apps
-
-        ###
-
-        #??? simplejson, Erlang, Elixir, build
-        # Erlang, build
-        # bash i010.4.11.sh 
-        # already included in the support apps
-
-        ###
-        # pathprepend /opt/elixir/bin PATH
-
-    E.02. RabbitMQ Main App
-
-        ###
-
-        # RabbitMQ
-        bash i020.5.4.sh
-
-        #reboot
-
-        ###
-
-    E.03. RabbitMQ - run server in background
-
-        ###
-
-        pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
-        rabbitmq-server -detached
-
-        ###
-
-    E.04. RabbitMQ Configurations
-
-        ###
-
-        #                    user      password
-        rabbitmqctl add_user openstack openstack
-
-        rabbitmqctl set_permissions openstack ".*" ".*" ".*"
-
-        ###
-
-F.  Cache tokens of Identity service authentication
-
-    F.01. MemCached & python-memcached 
-
-        ###
-
-        # export LFSLOG=/var/log/blfs
-        # export MAKEFLAGS="-j$(nproc)"
-        # export NPROC="$(nproc)"
-
-        # cd /sources
-
-        bash i020.5.5.sh
-
-        reboot
-
-        ###
-
-    F.02. Test
-
-        ###
-
-        # exit    # to user
-
-        # memcached -d
 
         echo "stats settings" | ncat 10.0.0.11 11211
-
-        ###
-
-G.  Distributed Realiable key-value store
-
-    G.01. Etcd Installation
-
-        ###
-
-        export LFSLOG=/var/log/blfs
-        export MAKEFLAGS="-j$(nproc)"
-        export NPROC="$(nproc)"
-
-        cd /sources
-
-        bash i020.5.6.sh
-
-        reboot
 
         ###
