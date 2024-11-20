@@ -38,13 +38,15 @@ ln -sv $PKGDEST/$PKG/etcd* /usr/bin \
 cp -v $CONFYMLFILE1 $CONFYMLFILE2 \
         > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -dm700 /var/lib/etcd             \
+install -v -dm775 /var/lib/etcd         \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-install -v -dm755 /run/etcd                 \
+install -v -dm777 /var/log/etcd         \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-chown -Rv etcd:etcd /var/lib/etcd /run/etcd \
+install -v -dm775 /run/etcd             \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-chmod -Rv a+rw /var/lib/etcd                \
+chown -Rv etcd:etcd     /var/lib/etcd   \
+                        /var/log/etcd   \
+                        /run/etcd       \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 

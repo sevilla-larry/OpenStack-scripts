@@ -31,4 +31,18 @@ listen-peer-urls: http://10.0.0.11:2380
 # List of comma separated URLs to listen on for client traffic.
 listen-client-urls: http://10.0.0.11:2379
 
+#####
+#
+# Logging
+#
+#####
+# Enable debug-level logging for etcd.
+#log-level: debug
+log-level: info
+
+logger: zap
+
+# Specify 'stdout' or 'stderr' to skip journald logging even when running under systemd.
+log-outputs: [stderr]
+
 # End /etc/etcd.conf.yml

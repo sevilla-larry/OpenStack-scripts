@@ -12,14 +12,15 @@
 
 #DAEMON=/usr/bin/etcd
 CONF=/etc/etcd.conf.yml
-DAEMON_OPTS="--config-file $CONF"
+LOGFILE=/var/log/etcd/etcd.log
+DAEMON_OPTS="--config-file $CONF 2>> $LOGFILE"
 
 case "$1" in
 
    start)
       log_info_msg "Starting etcd server..."
 
-      start_daemon /usr/bin/etcd $DAEMON_OPTS
+      start_daemon su - etcd -c '/usr/bin/etcd $DAEMON_OPTS'
       evaluate_retval
     ;;
 
