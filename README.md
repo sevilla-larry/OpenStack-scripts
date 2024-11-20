@@ -5,6 +5,8 @@
 # Author: Sevilla, Larry
 #  eMail: sevilla.larry.prg@gmail.com
 #
+# Started: 2024/Nov
+#
 # Guide based on:
 # https://docs.openstack.org/install-guide/index.html
 #
