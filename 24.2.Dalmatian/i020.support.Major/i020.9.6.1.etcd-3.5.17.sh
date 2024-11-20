@@ -12,7 +12,8 @@ export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
-export YMLFILE=`pwd`/i020.9.6.2.etcd.conf.yml
+export CONFYMLFILE1=`pwd`/i020.9.6.2.etcd.conf.yml
+export CONFYMLFILE2=/etc/etcd.conf.yml
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -26,12 +27,12 @@ tar xvf $PKG.tar.xz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 ln -sv $PKGDEST/$PKG/etcd* /usr/bin \
         > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-cp -v $YMLFILE /etc \
+cp -v $CONFYMLFILE1 $CONFYMLFILE2 \
         > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 
 
-unset YMLFILE
+unset CONFYMLFILE1 CONFYMLFILE2
 unset LFSLOG_PROCESS
 unset PKGLOG_INSTALL
 unset PKGLOG_TAR
