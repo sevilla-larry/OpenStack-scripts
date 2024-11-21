@@ -190,3 +190,37 @@ F.  Support Apps - MemCacheD Testing
         echo "stats settings" | ncat 10.0.0.11 11211
 
         ###
+
+G.  KeyStone
+
+    G.01. KeyStone database
+
+        ###
+
+        mysql
+
+        ### display:
+        #
+        # MariaDB [(none)]
+        #
+
+        GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost'    \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%'            \
+            IDENTIFIED BY 'openstack';
+
+        exit;
+
+        #
+        #
+        # end MariaDB
+        #
+        ###
+
+    G.02. KeyStone install
+
+        ###
+
+        bash i151.9.1.KeyStone-26.0.0.sh
+
+        ###
