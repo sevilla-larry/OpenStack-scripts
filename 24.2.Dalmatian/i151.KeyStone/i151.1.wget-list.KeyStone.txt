@@ -2,3 +2,4 @@
 
 # i151 KeyStone-26.0.0
 https://tarballs.openstack.org/keystone/keystone-26.0.0.tar.gz
+https://docs.openstack.org/keystone/latest/_static/keystone.conf.sample

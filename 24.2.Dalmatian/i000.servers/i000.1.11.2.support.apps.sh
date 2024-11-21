@@ -2,8 +2,8 @@
 #
 
 # MariaDB
-#bash i020.5.2.1.sh
-bash c11.03.9.main.app.sh       # MariaDB
+bash i020.5.2.1.sh              # MariaDB & OpenStack's MariaDB configuration
+# bash c11.03.9.main.app.sh       # MariaDB
 bash i020.5.2.2.sh				# PyMySQL
 
 # Apache

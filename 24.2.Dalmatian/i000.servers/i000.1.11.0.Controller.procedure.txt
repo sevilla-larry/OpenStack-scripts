@@ -204,6 +204,11 @@ G.  KeyStone
         # MariaDB [(none)]
         #
 
+      # GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost'    \
+      #     IDENTIFIED BY 'KEYSTONE_DBPASS';
+      # GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%'            \
+      #     IDENTIFIED BY 'KEYSTONE_DBPASS';
+
         GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost'    \
             IDENTIFIED BY 'openstack';
         GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%'            \
@@ -224,3 +229,20 @@ G.  KeyStone
         bash i151.9.1.KeyStone-26.0.0.sh
 
         ###
+
+    G.03. KeyStone configuration
+
+        ### edit /etc/keystone/keystone.conf
+
+        [database]
+      # connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
+        connection = mysql+pymysql://keystone:openstack@controller/keystone
+
+        [token]
+        provider = fernet
+
+        ###
+
+    G.04. Populate Identiy service database
+    
+        
