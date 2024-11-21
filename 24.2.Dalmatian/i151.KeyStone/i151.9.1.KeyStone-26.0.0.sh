@@ -21,6 +21,16 @@ tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
+groupadd -g 127 keystone        \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+useradd -c "keystone"           \
+        -g keystone             \
+        -d /var/lib/keystone    \
+        -s /usr/sbin/nologin    \
+        -u 127                  \
+        keystone                \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
 echo "2. Pip3 Install ..."
 echo "2. Pip3 Install ..." >> $LFSLOG_PROCESS
 echo "2. Pip3 Install ..." >> $PKGLOG_ERROR
@@ -28,10 +38,14 @@ pip3 install . > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 install -v -d -m755 /etc/keystone               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-
+install -v -d -m664 /var/log/keystone           \
+        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 cp -v   ../keystone.conf.sample                 \
         /etc/keystone/keystone.conf             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+chown -vR keystone:keystone /etc/keystone       \
+                        /var/log/keystone       \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd ..

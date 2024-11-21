@@ -8,6 +8,7 @@ export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
 
+export CONFFILE0=/etc/mysql/my.cnf
 export CONFFILE1=i020.9.2.4.MariaDB.OpenStack.cnf
 export CONFDIR=/etc/mysql/mariadb.conf.d/
 export CONFFILE2=99-openstack.cnf
@@ -19,6 +20,21 @@ mkdir $PKGLOG_DIR
 echo "Install Configuration ..."
 echo "Install Configuration ..." >> $LFSLOG_PROCESS
 echo "Install Configuration ..." >> $PKGLOG_ERROR
+
+# include files under /etc/mysql/mariadb.conf.d/
+cat >> $CONFFILE0 << "EOF"  2>> $PKGLOG_ERROR
+
+
+###
+#
+# Import all .cnf files from configuration directory
+#
+!includedir /etc/mysql/mariadb.conf.d/
+#
+#
+###
+
+EOF
 
 install -v -d -m755 $CONFDIR                    \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR

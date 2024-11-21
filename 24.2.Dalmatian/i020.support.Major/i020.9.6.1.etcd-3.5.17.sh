@@ -20,12 +20,14 @@ rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
 
 
-groupadd etcd               \
+groupadd -g 125 etcd            \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-useradd -c "etcd"           \
-        -g etcd             \
-        -d /var/lib/etcd    \
-        etcd                \
+useradd -c "etcd"               \
+        -g etcd                 \
+        -d /var/lib/etcd        \
+        -s /usr/sbin/nologin    \
+        -u 125                  \
+        etcd                    \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 echo "Extract/Install tar..."

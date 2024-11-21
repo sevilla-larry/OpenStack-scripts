@@ -27,6 +27,19 @@ rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
 
 
+echo "   Create the user and group..."
+echo "   Create the user and group..." >> $LFSLOG_PROCESS
+echo "   Create the user and group..." >> $PKGLOG_ERROR
+groupadd -g 123 rabbitmq    \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+useradd -c "rabbitmq Server"    \
+        -d /var/lib/rabbitmq    \
+        -g rabbitmq             \
+        -s /usr/sbin/nologin    \
+        -u 123                  \
+        rabbitmq                \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
 export RABBITMQ_HOME=/usr/local/rabbitmq_server-4.0.3
 
 echo "Extract/Install tar..."
@@ -43,11 +56,13 @@ pathprepend $RABBITMQ_HOME/sbin						PATH
 # End /etc/profile.d/rabbitmq.sh
 EOF
 
-ln -vsf $RABBITMQ_HOME/etc/rabbitmq /etc/rabbitmq           \
+chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME                      \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-ln -vsf $RABBITMQ_HOME/var/lib/rabbitmq /var/lib/rabbitmq   \
+ln -vsf $RABBITMQ_HOME/etc/rabbitmq /etc/rabbitmq               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-ln -vsf $RABBITMQ_HOME/var/log/rabbitmq /var/log/rabbitmq   \
+ln -vsf $RABBITMQ_HOME/var/lib/rabbitmq /var/lib/rabbitmq       \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+ln -vsf $RABBITMQ_HOME/var/log/rabbitmq /var/log/rabbitmq       \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
