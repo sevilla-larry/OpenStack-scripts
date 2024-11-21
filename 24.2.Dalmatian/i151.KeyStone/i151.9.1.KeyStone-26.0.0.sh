@@ -38,7 +38,7 @@ pip3 install . > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 install -v -d -m755 /etc/keystone               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m664 /var/log/keystone           \
+install -v -d -m755 /var/log/keystone           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 cp -v   ../keystone.conf.sample                 \
         /etc/keystone/keystone.conf             \
