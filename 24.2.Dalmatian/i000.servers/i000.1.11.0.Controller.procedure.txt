@@ -159,7 +159,7 @@ D.  Support Apps - Major - Configuration 1
         collation-server = utf8_general_ci
         character-set-server = utf8
 
-    D.03. Add mod_wsgi to Apache HTTPD
+    D.03. Activate some modules & add mod_wsgi to Apache HTTPD
 
         ###
 
@@ -170,6 +170,10 @@ D.  Support Apps - Major - Configuration 1
         #
         # /etc/httpd/httpd.conf
         #
+
+        ### ??????????????
+        # other modules
+        ###
 
         reboot
 
