@@ -139,6 +139,7 @@ D.  Support Apps - Major - Configuration 1
 
         make install-mysql      # MariaDB
         make install-httpd      # Apache
+        make install-iptables   # iptables
 
     D.02. MariaDB configuration
 
