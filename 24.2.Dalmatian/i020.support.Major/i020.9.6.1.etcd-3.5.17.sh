@@ -25,7 +25,7 @@ groupadd -g 125 etcd            \
 useradd -c "etcd"               \
         -g etcd                 \
         -d /var/lib/etcd        \
-        -s /usr/sbin/nologin    \
+        -s /bin/false           \
         -u 125                  \
         etcd                    \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR

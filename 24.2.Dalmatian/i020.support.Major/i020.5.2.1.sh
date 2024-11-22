@@ -7,4 +7,4 @@
 
 # MariaDB
 bash c11.03.9.main.app.sh                   # MariaDB
-bash i020.9.2.3.MariaDB.OpenStack.cnf.sh    # OpenStack's MariaDB configuration
+#bash i020.9.2.3.MariaDB.OpenStack.cnf.sh    # OpenStack's MariaDB configuration
