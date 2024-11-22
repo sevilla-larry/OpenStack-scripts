@@ -35,7 +35,7 @@ groupadd -g 123 rabbitmq    \
 useradd -c "rabbitmq Server"    \
         -d /var/lib/rabbitmq    \
         -g rabbitmq             \
-        -s /usr/sbin/nologin    \
+        -s /bin/false           \
         -u 123                  \
         rabbitmq                \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR

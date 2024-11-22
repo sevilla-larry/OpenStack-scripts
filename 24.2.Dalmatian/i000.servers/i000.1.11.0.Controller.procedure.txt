@@ -159,9 +159,23 @@ D.  Support Apps - Major - Configuration 1
         collation-server = utf8_general_ci
         character-set-server = utf8
 
+    D.03. Add mod_wsgi to Apache HTTPD
+
+        ###
+
+        # Copy the output of:
+        mod_wsgi-express module-config
+
+        # and Paste into:
+        #
+        # /etc/httpd/httpd.conf
+        #
+
         reboot
 
         ###
+
+
 
 E.  Support Apps - Major - Configuration 2
 
@@ -179,6 +193,14 @@ E.  Support Apps - Major - Configuration 2
             Disallow root login remotely?               n
             Remove test database and access to it?      Y
             Reload privilege tables now?                Y
+
+        ###
+
+    E.02. Check if mod_wsgi is included in Apache
+
+        ###
+
+        apachectl -t -D DUMP_MODULES       # check if wsgi is running
 
         ###
 
@@ -252,6 +274,8 @@ G.  KeyStone
 
         ###
 
+        install first/last bcrypt 4.0.1
+
         bash i151.9.1.KeyStone-26.0.0.sh
 
         ###
@@ -265,7 +289,7 @@ G.  KeyStone
 
         [database]
       # connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
-        connection = mysql+pymysql://keystone:openstack@VM11Controller/keystone
+        connection = mysql+pymysql://keystone:openstack@vm11controller/keystone
 
         [token]
         provider = fernet
@@ -294,9 +318,43 @@ G.  KeyStone
         ###
 
       # keystone-manage bootstrap --bootstrap-password ADMIN_PASS \
+      #     --bootstrap-admin-url http://controller:5000/v3/ \
+      #     --bootstrap-internal-url http://controller:5000/v3/ \
+      #     --bootstrap-public-url http://controller:5000/v3/ \
+      #     --bootstrap-region-id RegionOne
         keystone-manage bootstrap --bootstrap-password openstack \
-            --bootstrap-admin-url http://VM11Controller:5000/v3/ \
-            --bootstrap-internal-url http://VM11Controller:5000/v3/ \
-            --bootstrap-public-url http://VM11Controller:5000/v3/ \
+            --bootstrap-admin-url http://vm11controller:5000/v3/ \
+            --bootstrap-internal-url http://vm11controller:5000/v3/ \
+            --bootstrap-public-url http://vm11controller:5000/v3/ \
             --bootstrap-region-id RegionOne
+        ###
+
+H.  Apache HTTP server configuration
+
+        ###
+
+        # Edit /etc/httpd/httpd.conf
+
+        ServerName vm11controller
+
+        apachectl -k restart
+
+        ###
+
+
+I.  Configure the administrative account by setting the proper environmental variables
+
+        ### as user
+
+
+        export OS_USERNAME=admin
+      # export OS_PASSWORD=ADMIN_PASS
+        export OS_PASSWORD=openstack
+        export OS_PROJECT_NAME=admin
+        export OS_USER_DOMAIN_NAME=Default
+        export OS_PROJECT_DOMAIN_NAME=Default
+      # export OS_AUTH_URL=http://controller:5000/v3
+        export OS_AUTH_URL=http://vm11controller:5000/v3
+        export OS_IDENTITY_API_VERSION=3
+
         ###
