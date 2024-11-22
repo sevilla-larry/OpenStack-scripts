@@ -82,6 +82,10 @@ A.  Preparation
 
         ###
 
+    A.05. /etc/hosts
+
+        10.0.0.11   controller
+
 B.  Support Applications - minor
 
     B.01. Checking Environment

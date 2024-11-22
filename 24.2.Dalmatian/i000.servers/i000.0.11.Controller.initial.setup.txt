@@ -1,7 +1,7 @@
 A. Preparation
 
-	a. update /etc/hostname							VM11Controller
-	b. update /etc/sysconfig/rc.site (hostname)		VM11Controller
+	a. update /etc/hostname							controller
+	b. update /etc/sysconfig/rc.site (hostname)		controller
 	c. update networks with the ff:
 
 		1. ifconfig.enp10s0		### NAT
@@ -31,3 +31,9 @@ A. Preparation
 			PREFIX=24
 			BROADCAST=10.0.0.255
 
+	d. update /etc/hosts
+
+		10.0.0.11	controller
+		10.0.0.31	compute1
+		10.0.0.41	block1
+		
