@@ -56,6 +56,10 @@ pathprepend $RABBITMQ_HOME/sbin						PATH
 # End /etc/profile.d/rabbitmq.sh
 EOF
 
+install -v -dm777 $RABBITMQ_HOME/var/log/rabbitmq               \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+install -v -dm775 $RABBITMQ_HOME/var/lib/rabbitmq               \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME                      \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 ln -vsf $RABBITMQ_HOME/etc/rabbitmq /etc/rabbitmq               \

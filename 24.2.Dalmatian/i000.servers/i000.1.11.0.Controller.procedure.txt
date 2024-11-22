@@ -139,13 +139,13 @@ D.  Support Apps - Major - Configuration 1
 
         make install-mysql      # MariaDB
         make install-httpd      # Apache
-        make install-iptables   # iptables
+#        make install-iptables   # iptables
 
     D.02. MariaDB configuration
 
         ##### as root
 
-        ### edit /etc/mysql/my.sql, add:
+        ### edit /etc/mysql/my.cnf, add:
 
         !includedir /etc/mysql/mariadb.conf.d/
 
@@ -176,8 +176,19 @@ D.  Support Apps - Major - Configuration 1
         # /etc/httpd/httpd.conf
         #
 
-        ### ??????????????
-        # other modules
+        ###
+        # other Modules to be Loaded
+        ###
+
+        watchdog
+        logio
+        deflate
+        negotiation
+
+        # Modules to be UnLoaded
+
+        authz_groupfile
+
         ###
 
         reboot
