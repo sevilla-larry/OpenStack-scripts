@@ -26,22 +26,19 @@ echo "."
 
 ###
 
+# FAILED
 #
-# Note:
+# echo "i020.9.4.4.RabbitMQ.rc.d"
+# echo "i020.9.4.4.RabbitMQ.rc.d" >> $LFSLOG_PROCESS
 #
-# FAILED using init.d/rc.d to start-up
+# time { bash i020.9.4.4.RabbitMQ.rc.d.sh ; }
 #
-#echo "i020.9.4.4.RabbitMQ.rc.d"
-#echo "i020.9.4.4.RabbitMQ.rc.d" >> $LFSLOG_PROCESS
-
-#time { bash i020.9.4.4.RabbitMQ.rc.d.sh ; }
-
-#date +"%Y/%b/%d %H:%M"
-#date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
-
-#echo "." >> $LFSLOG_PROCESS
-#echo "."
-#echo "."
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+#
+# echo "." >> $LFSLOG_PROCESS
+# echo "."
+# echo "."
 
 #####
 

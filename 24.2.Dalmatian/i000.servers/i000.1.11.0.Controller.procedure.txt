@@ -226,22 +226,20 @@ E.  Support Apps - Major - Configuration 2
 
         ###
 
-    E.03. RabbitMQ
+    E.03. RabbitMQ User Configurations
     
-        ### as root
-
-        E.03.01. run server in background
-
-            ###
+            ### as root
 
             pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
-            su - rabbitmq -c 'rabbitmq-server -detached'
 
-            ###
+            #
+            # FAILED
+            #   su - rabbitmq -c 'rabbitmq-server -detached'
+            #
 
-        E.03.02. User Configurations
+            rabbitmq-server -detached 
 
-            ###
+            rabbitmqctl start_app
 
             #                    user      password
             rabbitmqctl add_user openstack openstack
