@@ -178,6 +178,8 @@ D.  Support Apps - Major - Configuration 1
         # /etc/httpd/httpd.conf
         #
 
+        ServerName controller
+
         ###
         # other Modules to be Loaded
         ###
@@ -191,13 +193,13 @@ D.  Support Apps - Major - Configuration 1
 
         authz_groupfile
 
+        # apachectl -k restart
+
         ###
 
         reboot
 
         ###
-
-
 
 E.  Support Apps - Major - Configuration 2
 
@@ -256,9 +258,20 @@ F.  Support Apps - MemCacheD Testing
 
         ###
 
-G.  KeyStone
+G.  Check Port is Accepting msgs
 
-    G.01. KeyStone database
+    iptables -S
+
+    nc -w5 -z -v 10.0.0.11 5000
+    # should be "succeeded!"
+
+    lsof -i:5000
+
+    curl -i http://10.0.0.11:5000/v3
+
+H.  KeyStone
+
+    H.01. KeyStone database
 
         ###
 
@@ -290,7 +303,7 @@ G.  KeyStone
         #
         ###
 
-    G.02. KeyStone install
+    H.02. KeyStone install
 
         ###
 
@@ -300,7 +313,7 @@ G.  KeyStone
 
         ###
 
-    G.03. KeyStone configuration
+    H.03. KeyStone configuration
 
         ### edit /etc/keystone/keystone.conf
 
@@ -309,14 +322,14 @@ G.  KeyStone
 
         [database]
       # connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
-        connection = mysql+pymysql://keystone:openstack@vm11controller/keystone
+        connection = mysql+pymysql://keystone:openstack@controller/keystone
 
         [token]
         provider = fernet
 
         ###
 
-    G.04. Populate the Identity service database
+    H.04. Populate the Identity service database
 
         ###
 
@@ -324,7 +337,7 @@ G.  KeyStone
     
         ###
 
-    G.05. Initialize Fernet key repositories
+    H.05. Initialize Fernet key repositories
 
         ###
 
@@ -333,7 +346,7 @@ G.  KeyStone
 
         ###
 
-    G.06. Bootstrap the Identity service
+    H.06. Bootstrap the Identity service
 
         ###
 
@@ -343,29 +356,15 @@ G.  KeyStone
       #     --bootstrap-public-url http://controller:5000/v3/ \
       #     --bootstrap-region-id RegionOne
         keystone-manage bootstrap --bootstrap-password openstack \
-            --bootstrap-admin-url http://vm11controller:5000/v3/ \
-            --bootstrap-internal-url http://vm11controller:5000/v3/ \
-            --bootstrap-public-url http://vm11controller:5000/v3/ \
+            --bootstrap-admin-url http://controller:5000/v3/ \
+            --bootstrap-internal-url http://controller:5000/v3/ \
+            --bootstrap-public-url http://controller:5000/v3/ \
             --bootstrap-region-id RegionOne
         ###
-
-H.  Apache HTTP server configuration
-
-        ###
-
-        # Edit /etc/httpd/httpd.conf
-
-        ServerName vm11controller
-
-        apachectl -k restart
-
-        ###
-
 
 I.  Configure the administrative account by setting the proper environmental variables
 
         ### as user
-
 
         export OS_USERNAME=admin
       # export OS_PASSWORD=ADMIN_PASS
@@ -373,8 +372,7 @@ I.  Configure the administrative account by setting the proper environmental var
         export OS_PROJECT_NAME=admin
         export OS_USER_DOMAIN_NAME=Default
         export OS_PROJECT_DOMAIN_NAME=Default
-      # export OS_AUTH_URL=http://controller:5000/v3
-        export OS_AUTH_URL=http://vm11controller:5000/v3
+        export OS_AUTH_URL=http://controller:5000/v3
         export OS_IDENTITY_API_VERSION=3
 
         ###
