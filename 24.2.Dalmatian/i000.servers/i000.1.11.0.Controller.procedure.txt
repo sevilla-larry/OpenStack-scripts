@@ -140,7 +140,7 @@ D.  Support Apps - Major - Configuration 1
 
         mkdir /etc/mysql/mariadb.conf.d
 
-        ### add/create file 99-openstack.cnf under /etc/mysql/mariadb.conf.d
+        ### add/create file /etc/mysql/mariadb.conf.d/99-openstack.cnf
 
         [mysqld]
         bind-address = 10.0.0.11
