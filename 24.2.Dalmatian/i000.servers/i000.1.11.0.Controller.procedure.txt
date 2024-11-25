@@ -82,9 +82,9 @@ A.  Preparation
 
         ###
 
-    A.05. /etc/hosts
+    A.05. check /etc/hosts
 
-        10.0.0.11   controller
+        # 10.0.0.11   localhost.controller    controller
 
 B.  Support Applications - minor
 
