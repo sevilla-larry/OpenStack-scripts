@@ -33,7 +33,7 @@ A. Preparation
 
 	d. update /etc/hosts
 
-		10.0.0.11	controller
-		10.0.0.31	compute1
-		10.0.0.41	block1
+		10.0.0.11	localhost.controller	controller
+		10.0.0.31	localhost.compute1		compute1
+		10.0.0.41	localhost.block1		block1
 		
