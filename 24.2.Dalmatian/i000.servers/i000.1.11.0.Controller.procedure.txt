@@ -258,20 +258,9 @@ F.  Support Apps - MemCacheD Testing
 
         ###
 
-G.  Check Port is Accepting msgs
+G.  KeyStone
 
-    iptables -S
-
-    nc -w5 -z -v 10.0.0.11 5000
-    # should be "succeeded!"
-
-    lsof -i:5000
-
-    curl -i http://10.0.0.11:5000/v3
-
-H.  KeyStone
-
-    H.01. KeyStone database
+    G.01. KeyStone database
 
         ###
 
@@ -303,7 +292,7 @@ H.  KeyStone
         #
         ###
 
-    H.02. KeyStone install
+    G.02. KeyStone install
 
         ###
 
@@ -313,7 +302,18 @@ H.  KeyStone
 
         ###
 
-    H.03. KeyStone configuration
+    G.03. Check Port is Accepting msgs
+
+        iptables -S
+
+        nc -w5 -z -v 10.0.0.11 5000
+        # should be "succeeded!"
+
+        lsof -i:5000
+
+        curl -i http://10.0.0.11:5000/v3
+
+    G.04. KeyStone configuration
 
         ### edit /etc/keystone/keystone.conf
 
@@ -329,7 +329,7 @@ H.  KeyStone
 
         ###
 
-    H.04. Populate the Identity service database
+    G.05. Populate the Identity service database
 
         ###
 
@@ -337,7 +337,7 @@ H.  KeyStone
     
         ###
 
-    H.05. Initialize Fernet key repositories
+    G.06. Initialize Fernet key repositories
 
         ###
 
@@ -346,7 +346,7 @@ H.  KeyStone
 
         ###
 
-    H.06. Bootstrap the Identity service
+    G.07. Bootstrap the Identity service
 
         ###
 
@@ -362,7 +362,7 @@ H.  KeyStone
             --bootstrap-region-id RegionOne
         ###
 
-I.  Configure the administrative account by setting the proper environmental variables
+H.  Configure the administrative account by setting the proper environmental variables
 
         ### as user
 
