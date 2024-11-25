@@ -47,15 +47,6 @@ echo "Extract/Install tar..." >> $LFSLOG_PROCESS
 echo "Extract/Install tar..." >> $PKGLOG_ERROR
 tar xvf $PKG.tar.xz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 
-cat > /etc/profile.d/rabbitmq.sh << "EOF"  2>> $PKGLOG_ERROR
-# Begin /etc/profile.d/rabbitmq.sh
-
-export RABBITMQ_HOME=/usr/local/rabbitmq_server-4.0.3
-pathprepend $RABBITMQ_HOME/sbin						PATH
-
-# End /etc/profile.d/rabbitmq.sh
-EOF
-
 install -v -dm777 $RABBITMQ_HOME/var/log/rabbitmq               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 install -v -dm775 $RABBITMQ_HOME/var/lib/rabbitmq               \

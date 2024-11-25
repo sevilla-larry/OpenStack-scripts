@@ -19,7 +19,9 @@ Listen 5000
     ErrorLog /var/log/httpd/keystone.log
     CustomLog /var/log/httpd/keystone_access.log combined
 
-    <Directory /usr/bin>
+    #<Directory /usr/bin>
+    #<Directory /usr>
+    <Directory /usr/lib/python3.13>
         <IfVersion >= 2.4>
             Require all granted
         </IfVersion>
