@@ -10,7 +10,7 @@ def application(environ, start_response):
     output += u'sys.version = %s\n' % repr(sys.version)
     output += u'sys.prefix = %s\n' % repr(sys.prefix)
     output += u'sys.path = %s\n' % repr(sys.path)
-    output += u'mod_wsgi.process_group = %s' % repr(environ['mod_wsgi.process_g>
+    output += u'mod_wsgi.process_group = %s\n' % repr(environ['mod_wsgi.process_group'])
 
     response_headers = [('Content-type', 'text/plain'),
                         ('Content-Length', str(len(output)))]
