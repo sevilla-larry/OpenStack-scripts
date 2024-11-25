@@ -30,13 +30,13 @@ mkdir $PKGLOG_DIR
 echo "   Create the user and group..."
 echo "   Create the user and group..." >> $LFSLOG_PROCESS
 echo "   Create the user and group..." >> $PKGLOG_ERROR
-groupadd -g 123 rabbitmq    \
+groupadd -g 121 rabbitmq    \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 useradd -c "rabbitmq Server"    \
         -d /var/lib/rabbitmq    \
         -g rabbitmq             \
         -s /bin/false           \
-        -u 123                  \
+        -u 121                  \
         rabbitmq                \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 

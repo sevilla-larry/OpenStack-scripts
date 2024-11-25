@@ -28,13 +28,13 @@ tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
-groupadd -g 124 memcached       \
+groupadd -g 441 memcached       \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 useradd -c "MemCacheD"          \
         -g memcached            \
         -d /srv/memcached       \
         -s /bin/false           \
-        -u 124                  \
+        -u 441                  \
         memcached               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
