@@ -128,20 +128,7 @@ C.  Support Applications - Major
 
 D.  Support Apps - Major - Configuration 1
 
-    D.01. BLfS bootscripts
-
-        ###
-
-        cd /mnt/Src/lfs.src/blfs-bootscripts-20240416       # VM/VB
-        cd /usr/src/lfs/blfs-bootscripts-20240416           # PC
-
-        ###
-
-        make install-mysql      # MariaDB
-        make install-httpd      # Apache
-#        make install-iptables   # iptables
-
-    D.02. MariaDB configuration
+    D.01. MariaDB configuration
 
         ##### as root
 
@@ -166,7 +153,7 @@ D.  Support Apps - Major - Configuration 1
 
         ###
 
-    D.03. Activate some modules & add mod_wsgi to Apache HTTPD
+    D.02. Activate some modules & add mod_wsgi to Apache HTTPD
 
         ###
 
@@ -196,6 +183,19 @@ D.  Support Apps - Major - Configuration 1
         # apachectl -k restart
 
         ###
+
+    D.03. BLfS bootscripts
+
+        ###
+
+        cd /mnt/Src/lfs.src/blfs-bootscripts-20240416       # VM/VB
+        cd /usr/src/lfs/blfs-bootscripts-20240416           # PC
+
+        ###
+
+        make install-mysql      # MariaDB
+        make install-httpd      # Apache
+#        make install-iptables   # iptables
 
         reboot
 
