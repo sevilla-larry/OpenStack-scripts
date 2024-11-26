@@ -302,7 +302,7 @@ G.  KeyStone
 
         ###
 
-    G.04. KeyStone configuration
+    G.03. KeyStone configuration
 
         ### edit /etc/keystone/keystone.conf
 
@@ -317,6 +317,14 @@ G.  KeyStone
         provider = fernet
 
         ###
+
+    G.04. Remove/exclude wsgi-test.conf
+
+        ### edit /etc/httpd/httpd.conf
+        ###
+        ### remove or exclude
+
+        #Include /etc/httpd/extra/wsgi-test.conf
 
         reboot
 
@@ -358,20 +366,51 @@ G.  KeyStone
             --bootstrap-region-id RegionOne
         ###
 
-    G.03. Check Port is Accepting msgs
+    G.03. Check some things
 
         iptables -S
 
-        nc -w5 -z -v 10.0.0.11 5000
-        # should be "succeeded!"
+            -P INPUT ACCEPT
+            -P FORWARD ACCEPT
+            -P OUTPUT ACCEPT
+
+
+        nc -w5 -z -v controller 5000
+        #ncat -w5 -z -v 10.0.0.11 5000
+
+            Ncat: Version 7.95 ( https://nmap.org/ncat )
+            Ncat: Connected to 10.0.0.11:5000.
+            Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
+
 
         lsof -i:5000
 
-        curl -i http://10.0.0.11:5000/v3
+            COMMAND  PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            httpd    766   root 8u  IPv6   6448      0t0  TCP *:commplex-main (LISTEN)
+            httpd   2435 apache 8u  IPv6   6448      0t0  TCP *:commplex-main (LISTEN)
+            httpd   2436 apache 8u  IPv6   6448      0t0  TCP *:commplex-main (LISTEN)
+            httpd   2437 apache 8u  IPv6   6448      0t0  TCP *:commplex-main (LISTEN)
+
+        curl -i http://controller:5000/v3
+        #curl -i http://10.0.0.11:5000/v3
+
+            HTTP/1.1 200 OK
+            Date: Tue, 26 Nov 2024 06:30:49 GMT
+            Server: Apache/2.4.62 (Unix) mod_wsgi/5.0.2 Python/3.13
+            Content-Length: 249
+            Vary: X-Auth-Token
+            x-openstack-request-id: req-36ff6cdc-1d3b-4bf3-9d2f-b378a9be4372
+            Content-Type: application/json
+
+            {"version":
+             {"id": "v3.14", "status": "stable", "updated": "2020-04-07T00:00:00Z",
+              "links": [{"rel": "self", "href": "http://10.0.0.11:5000/v3/"}],
+              "media-types": [{"base": "application/json",
+                               "type": "application/vnd.openstack.identity-v3+json"}]}}
 
 H.  Configure the administrative account by setting the proper environmental variables
 
-        ### as user
+        ###
 
         export OS_USERNAME=admin
       # export OS_PASSWORD=ADMIN_PASS
