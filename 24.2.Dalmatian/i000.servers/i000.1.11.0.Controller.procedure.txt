@@ -374,14 +374,12 @@ G.  KeyStone
             -P FORWARD ACCEPT
             -P OUTPUT ACCEPT
 
-
         nc -w5 -z -v controller 5000
         #ncat -w5 -z -v 10.0.0.11 5000
 
             Ncat: Version 7.95 ( https://nmap.org/ncat )
             Ncat: Connected to 10.0.0.11:5000.
             Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
-
 
         lsof -i:5000
 
