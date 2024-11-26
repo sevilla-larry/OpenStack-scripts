@@ -33,6 +33,8 @@ case "$1" in
 
       #start_daemon /usr/local/rabbitmq_server-4.0.3/sbin/rabbitmq-server -detached
       /usr/local/rabbitmq_server-4.0.3/sbin/rabbitmq-server -detached
+      sleep 1
+      /usr/local/rabbitmq_server-4.0.3/sbin/rabbitmqctl start_app
       evaluate_retval
       ;;
 
