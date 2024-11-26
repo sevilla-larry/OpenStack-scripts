@@ -1,10 +1,10 @@
-# i151.9.1.KeyStone-26.0.0.sh
+# i151.9.2.KeyStone-26.0.0.sh
 #
 # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
 #
 
 export PKG="keystone-26.0.0"
-export PKGLOG_DIR=$LFSLOG/151.1
+export PKGLOG_DIR=$LFSLOG/151.2
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
@@ -49,6 +49,30 @@ chown -vR keystone:keystone /etc/keystone       \
                         /var/lib/keystone       \
                         /var/log/keystone       \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+export APACHE_CONF_DIR=/etc/httpd/
+export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
+export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
+
+export KEYSTONE_CONF_FOR_APACHE_SRC=$PWD/i151.9.3.KeyStone.conf.for.Apache.txt
+export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone
+
+cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \
+        $KEYSTONE_CONF_FOR_APACHE_DST   \
+        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+
+chown -v apache:apache $KEYSTONE_CONF_FOR_APACHE_DST    \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+cat >> $APACHE_CONF_FILE << "EOF"  2>> $PKGLOG_ERROR
+
+# add wsgi KeyStone configuration file
+Include /etc/httpd/extra/keystone.conf
+EOF
+
+unset APACHE_CONF_DIR
+unset APACHE_CONF_FILE
+unset APACHE_CONF_EXTRA_DIR
 
 
 cd ..

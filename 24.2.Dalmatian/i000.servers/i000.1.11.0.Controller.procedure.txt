@@ -296,22 +296,11 @@ G.  KeyStone
 
         ###
 
-        install first/last bcrypt 4.0.1
-
-        bash i151.9.1.KeyStone-26.0.0.sh
+        bash i151.5.11.sh
+        #install first/last bcrypt 4.0.1
+        #bash i151.9.1.KeyStone-26.0.0.sh
 
         ###
-
-    G.03. Check Port is Accepting msgs
-
-        iptables -S
-
-        nc -w5 -z -v 10.0.0.11 5000
-        # should be "succeeded!"
-
-        lsof -i:5000
-
-        curl -i http://10.0.0.11:5000/v3
 
     G.04. KeyStone configuration
 
@@ -326,6 +315,13 @@ G.  KeyStone
 
         [token]
         provider = fernet
+
+        ###
+
+        reboot
+
+        ### or restart Apache
+        # apachectl -k restart
 
         ###
 
@@ -361,6 +357,17 @@ G.  KeyStone
             --bootstrap-public-url http://controller:5000/v3/ \
             --bootstrap-region-id RegionOne
         ###
+
+    G.03. Check Port is Accepting msgs
+
+        iptables -S
+
+        nc -w5 -z -v 10.0.0.11 5000
+        # should be "succeeded!"
+
+        lsof -i:5000
+
+        curl -i http://10.0.0.11:5000/v3
 
 H.  Configure the administrative account by setting the proper environmental variables
 

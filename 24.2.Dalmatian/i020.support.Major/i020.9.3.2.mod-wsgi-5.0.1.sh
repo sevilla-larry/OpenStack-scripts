@@ -40,7 +40,6 @@ chown -v apache:apache $WSGI_TEST_PYTH_DST $WSGI_TEST_CONF_DST  \
 
 cat >> $APACHE_CONF_FILE << "EOF"  2>> $PKGLOG_ERROR
 
-
 # add wsgi test configuration file
 Include /etc/httpd/extra/wsgi-test.conf
 EOF
