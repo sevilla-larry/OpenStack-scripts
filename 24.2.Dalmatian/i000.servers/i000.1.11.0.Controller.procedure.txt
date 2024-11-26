@@ -228,7 +228,15 @@ E.  Support Apps - Major - Configuration 2
 
         ###
 
-    E.03. RabbitMQ User Configurations
+    E.03. check MemCacheD
+
+            ###
+
+            echo "stats settings" | ncat 10.0.0.11 11211
+
+            ###
+
+F.  RabbitMQ
     
             ### as root
 
@@ -249,14 +257,6 @@ E.  Support Apps - Major - Configuration 2
             rabbitmqctl set_permissions openstack ".*" ".*" ".*"
 
             ###
-
-F.  Support Apps - MemCacheD Testing
-
-        ###
-
-        echo "stats settings" | ncat 10.0.0.11 11211
-
-        ###
 
 G.  KeyStone
 
