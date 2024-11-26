@@ -10,6 +10,7 @@ export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export LFSLOG_PROCESS=$LFSLOG/process.log
+export SOURCES_DIR=$PWD
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -54,7 +55,7 @@ export APACHE_CONF_DIR=/etc/httpd/
 export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
 export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
 
-export KEYSTONE_CONF_FOR_APACHE_SRC=$PWD/i151.9.3.KeyStone.conf.for.Apache.txt
+export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES_DIR/i151.9.3.KeyStone.conf.for.Apache.txt
 export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone
 
 cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \
@@ -77,6 +78,7 @@ unset APACHE_CONF_EXTRA_DIR
 
 cd ..
 rm -rf $PKG
+unset SOURCES_DIR
 unset LFSLOG_PROCESS
 unset PKGLOG_OTHERS
 unset PKGLOG_INSTALL
