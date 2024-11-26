@@ -406,12 +406,17 @@ G.  KeyStone
             --bootstrap-region-id RegionOne
         ###
 
-H.  Configure the administrative account by setting the proper environmental variables
+H.  Create a domain, projects, users, roles
 
-        ###
+    $$$ as user
+
+    H.01. Configure the administrative account
+            by setting the proper environmental variables
+
+        $$$
 
         export OS_USERNAME=admin
-      # export OS_PASSWORD=ADMIN_PASS
+        # export OS_PASSWORD=ADMIN_PASS
         export OS_PASSWORD=openstack
         export OS_PROJECT_NAME=admin
         export OS_USER_DOMAIN_NAME=Default
@@ -419,4 +424,81 @@ H.  Configure the administrative account by setting the proper environmental var
         export OS_AUTH_URL=http://controller:5000/v3
         export OS_IDENTITY_API_VERSION=3
 
-        ###
+        $$$ Formal way to create a new domain
+        $openstack domain create --description "An Example Domain" example
+
+        $$$ Create the service project
+        openstack project create --domain default \
+            --description "Service Project" service
+
+        $$$ Create demo project
+        openstack project create --domain default \
+            --description "Demo Project" demo
+
+        $$$ Create myuser
+        openstack user create --domain default \
+            --password openstack user
+
+        $$$ Create myrole
+        #openstack role create role
+        openstack role create user
+
+        $$$ Add myrole to myproject and myuser
+        #openstack role add --project demo --user demo role
+        openstack role add --project demo --user demo user
+
+    H.02 Verify Operation
+
+        $$$
+        openstack domain list
+
+        $$$ unset some environmental variables
+        unset OS_AUTH_URL OS_PASSWORD
+
+        $$$ request an authentication token for admin user in admin project
+        openstack --os-auth-url http://controller:5000/v3 \
+            --os-project-domain-name Default --os-user-domain-name Default \
+            --os-project-name admin --os-username admin token issue
+
+        $$$ request an authentication token for myuser in myproject
+        openstack --os-auth-url http://controller:5000/v3 \
+            --os-project-domain-name Default --os-user-domain-name Default \
+            --os-project-name demo --os-username demo token issue
+
+I.  Create OpenStack client environment scripts
+
+    I.01. Create scripts
+
+        $$$ create admin-openrc file (in user home directory)
+            export OS_PROJECT_DOMAIN_NAME=Default
+            export OS_USER_DOMAIN_NAME=Default
+            export OS_PROJECT_NAME=admin
+            export OS_USERNAME=admin
+            export OS_PASSWORD=openstack
+            export OS_AUTH_URL=http://controller:5000/v3
+            export OS_IDENTITY_API_VERSION=3
+            export OS_IMAGE_API_VERSION=2
+
+        $$$ create demo-openrc file (in user home directory)
+            export OS_PROJECT_DOMAIN_NAME=Default
+            export OS_USER_DOMAIN_NAME=Default
+            export OS_PROJECT_NAME=myproject
+            export OS_USERNAME=myuser
+            export OS_PASSWORD=openstack
+            export OS_AUTH_URL=http://controller:5000/v3
+            export OS_IDENTITY_API_VERSION=3
+            export OS_IMAGE_API_VERSION=2
+
+    I.02 Verify Operation
+
+        $$$
+        . admin-openrc
+        openstack domain list
+
+        $$$ request an authentication token for admin user in admin project
+        . admin-openrc
+        openstack token issue
+
+        $$$ request an authentication token for myuser in myproject
+        . demo-openrc
+        openstack token issue
