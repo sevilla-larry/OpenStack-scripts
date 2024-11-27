@@ -258,7 +258,7 @@ F.  RabbitMQ
 
             ###
 
-G.  KeyStone
+G.  KeyStone - Identity service
 
     G.01. KeyStone database
 
@@ -297,7 +297,7 @@ G.  KeyStone
         ###
 
         bash i151.5.11.sh
-        #install first/last bcrypt 4.0.1
+        #install first bcrypt 4.0.1
         #bash i151.9.1.KeyStone-26.0.0.sh
 
         ###
@@ -317,6 +317,9 @@ G.  KeyStone
         provider = fernet
 
         ###
+
+        ### KeyStone Configuration
+        # https://docs.openstack.org/keystone/2024.2/configuration/index.html
 
     G.04. Remove/exclude wsgi-test.conf
 
@@ -427,25 +430,25 @@ H.  Create a domain, projects, users, roles
         $$$ Formal way to create a new domain
         $openstack domain create --description "An Example Domain" example
 
-        $$$ Create the service project
+        $$$ Create the "service" project on "default" domain
         openstack project create --domain default \
             --description "Service Project" service
 
-        $$$ Create demo project
+        $$$ Create "demo" project on "default" domain
         openstack project create --domain default \
             --description "Demo Project" demo
 
-        $$$ Create myuser
+        $$$ Create "demo" user on "default" domain
         openstack user create --domain default \
-            --password openstack user
+            --password openstack demo
 
-        $$$ Create myrole
+        $$$ Create "demo" role
         #openstack role create role
-        openstack role create user
+        openstack role create demo
 
-        $$$ Add myrole to myproject and myuser
-        #openstack role add --project demo --user demo role
-        openstack role add --project demo --user demo user
+        $$$ Add "demo" role to "demo" project and "demo" user
+        openstack role add --project demo --user demo demo
+        $$$ Note: no output
 
     H.02 Verify Operation
 
@@ -502,3 +505,206 @@ I.  Create OpenStack client environment scripts
         $$$ request an authentication token for myuser in myproject
         . demo-openrc
         openstack token issue
+
+J.  Glance - Image Service
+
+    J.01. Glance database
+
+        ###
+
+        mysql
+        # or # mariadb
+
+        ### display:
+        #
+        # MariaDB [(none)]
+        #
+
+        CREATE DATABASE glance;
+
+      # GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' \
+      #     IDENTIFIED BY 'GLANCE_DBPASS';
+      # GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' \
+      #     IDENTIFIED BY 'GLANCE_DBPASS';
+
+        GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' \
+            IDENTIFIED BY 'openstack';
+
+        exit;
+
+        #
+        #
+        # end MariaDB
+        #
+        ###
+
+    J.02. Create the service credentials
+
+        $$$ as user
+        . admin-openrc
+
+        $$$ create the "glance" user on "default" domain
+        openstack user create --domain default  \
+            --password openstack glance
+
+        $$$ Add the "admin" role to the "glance" user and "service" project:
+        openstack role add --project service --user glance admin
+        $$$ Note: no display
+
+        $$$ Create the glance service entity "image"
+        openstack service create --name glance \
+            --description "OpenStack Image" image
+
+        $$$ Create the "image" service API endpoints:
+        openstack endpoint create --region RegionOne \
+          image public http://controller:9292
+        $$$ note set ENDPOINT_ID=id
+        openstack endpoint create --region RegionOne \
+          image internal http://controller:9292
+        openstack endpoint create --region RegionOne \
+          image admin http://controller:9292
+
+        $$$ Register quota limits (optional):
+        $$$ none
+        $$$ https://docs.openstack.org/oslo.limit/latest/user/usage.html#configuration
+
+    J.03. Glance install
+
+        ###
+
+        bash i153.5.11.sh
+
+        ###
+
+    J.04. Glance configuration
+
+        ### edit /etc/glance/glance-api.conf
+
+        [database]
+      # connection = mysql+pymysql://glance:GLANCE_DBPASS@controller/glance
+        connection = mysql+pymysql://glance:openstack@controller/glance
+
+        #
+        # configure Identity service access
+        #
+        # Note: Comment out or remove any other options
+        # in the [keystone_authtoken] section
+        #
+        [keystone_authtoken]
+      # ...
+        www_authenticate_uri  = http://controller:5000
+        auth_url = http://controller:5000
+        memcached_servers = controller:11211
+        auth_type = password
+        project_domain_name = default
+        user_domain_name = default
+        project_name = service
+        username = glance
+      # password = GLANCE_PASS
+        password = openstack
+
+        [paste_deploy]
+      # ...
+        flavor = keystone
+
+        #
+        # Note: For deployment, use OpenStack Object Storage - Swift
+        #
+        # For simplicity, this configuration stores images on the local file system
+        # configure the local file system store and location of image files
+        #
+        [DEFAULT]
+        # ...
+        enabled_backends=fs:file
+
+        [glance_store]
+        # ...
+        default_backend = fs
+
+        [fs]
+        filesystem_store_datadir = /var/lib/glance/images/
+
+        # configure access to keystone
+        [oslo_limit]
+        auth_url = http://controller:5000
+        auth_type = password
+        user_domain_id = default
+        username = glance
+        system_scope = all
+      # password = GLANCE_PASS
+        password = openstack
+        endpoint_id = ENDPOINT_ID
+        region_name = RegionOne
+      # see notes below on ENDPOINT_ID
+
+        ###
+
+        # https://docs.openstack.org/oslo.limit/latest/user/usage.html#configuration
+        # if quotas where SET
+        [DEFAULT]
+      # use_keystone_limits = True
+        # if NO quotas
+        use_keystone_limits = False
+
+        ### end /etc/glance/glance-api.conf
+
+        ### Glance Configuration
+        # https://docs.openstack.org/glance/2024.2/configuration/index.html
+
+        $$$ Note: To list endpoints
+        openstack endpoint list --service glance --region RegionOne
+
+    J.05. Glance reader access
+
+        $$$    
+        $$$ Make sure that the glance account has reader access
+        $$$ to system-scope resources (like limits)
+        $$$
+
+        openstack role add --user glance --user-domain default --system all reader
+
+    J.06. Populate the Image service database:
+
+        ###
+
+        su -s /bin/sh -c "glance-manage db_sync" glance
+
+        ###
+
+    J.07. Restart Glance
+
+        reboot?
+
+    J.08. Verify Operation
+
+        $$$
+
+        . admin-openrc
+
+        wget http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img
+        $$$ or other cloud image
+
+        $$$ Upload the image to the Image service using
+        $$$ the QCOW2 (QEMU Copy On Write 2) disk format,
+        $$$ bare container format,
+        $$$ and public visibility
+        $$$ so all projects can access it:
+        glance image-create --name "cirros" \
+            --file cirros-0.4.0-x86_64-disk.img \
+            --disk-format qcow2 --container-format bare \
+            --visibility=public
+
+        ### For information about the glance parameters,
+        ### see Image service (glance) command-line client
+        ### https://docs.openstack.org/python-glanceclient/latest/cli/details.html
+        ### in the OpenStack User Guide
+
+        ### For information about disk and container formats for images,
+        ### see Disk and container formats for images
+        ### https://docs.openstack.org/image-guide/image-formats.html
+        ### in the OpenStack Virtual Machine Image Guide.
+
+        $$$ Confirm upload of the image and validate attributes
+        glance image-list
