@@ -20,7 +20,7 @@
 # i010 OpenStack Support Minor
 # i020 OpenStack Support Major
 #
-# i1xx OpenStack Services
+# i100 OpenStack Services
 # i11x  Compute
 # i111   Nova				Compute
 # i12x  Hardware LifeCycle

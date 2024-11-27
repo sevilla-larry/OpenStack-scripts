@@ -256,6 +256,12 @@ F.  RabbitMQ
 
             rabbitmqctl set_permissions openstack ".*" ".*" ".*"
 
+            ### to check
+
+            rabbitmqctl list_users
+
+            rabbitmqctl list_permissions
+
             ###
 
 G.  KeyStone - Identity service
