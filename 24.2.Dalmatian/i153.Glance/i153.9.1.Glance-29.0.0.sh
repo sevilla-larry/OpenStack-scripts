@@ -22,14 +22,14 @@ tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
-groupadd -g 127 keystone        \
+groupadd -g 443 glance        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-useradd -c "keystone"           \
-        -g keystone             \
-        -d /var/lib/keystone    \
+useradd -c "glance"           \
+        -g glance             \
+        -d /var/lib/glance    \
         -s /usr/sbin/nologin    \
-        -u 127                  \
-        keystone                \
+        -u 443                  \
+        glance                \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 echo "2. Pip3 Install ..."
@@ -37,43 +37,19 @@ echo "2. Pip3 Install ..." >> $LFSLOG_PROCESS
 echo "2. Pip3 Install ..." >> $PKGLOG_ERROR
 pip3 install . > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/keystone               \
+install -v -d -m755 /etc/glance               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/keystone           \
+install -v -d -m777 /var/lib/glance           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/log/keystone           \
+install -v -d -m777 /var/log/glance           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   ../keystone.conf.sample                 \
-        /etc/keystone/keystone.conf             \
+cp -v   ../glance-api.conf.sample                 \
+        /etc/glance/glance-api .conf             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR keystone:keystone /etc/keystone       \
-                        /var/lib/keystone       \
-                        /var/log/keystone       \
+chown -vR glance:glance /etc/glance       \
+                        /var/lib/glance       \
+                        /var/log/glance       \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
-export APACHE_CONF_DIR=/etc/httpd/
-export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
-export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
-
-export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES_DIR/i151.9.3.KeyStone.conf.for.Apache.txt
-export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone.conf
-
-cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \
-        $KEYSTONE_CONF_FOR_APACHE_DST   \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-
-chown -v apache:apache $KEYSTONE_CONF_FOR_APACHE_DST    \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
-cat >> $APACHE_CONF_FILE << "EOF"  2>> $PKGLOG_ERROR
-
-# add wsgi KeyStone configuration file
-Include /etc/httpd/extra/keystone.conf
-EOF
-
-unset APACHE_CONF_DIR
-unset APACHE_CONF_FILE
-unset APACHE_CONF_EXTRA_DIR
 
 
 cd ..

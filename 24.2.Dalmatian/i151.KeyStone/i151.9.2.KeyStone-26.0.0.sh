@@ -22,13 +22,13 @@ tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
-groupadd -g 127 keystone        \
+groupadd -g 445 keystone        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 useradd -c "keystone"           \
         -g keystone             \
         -d /var/lib/keystone    \
         -s /usr/sbin/nologin    \
-        -u 127                  \
+        -u 445                  \
         keystone                \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
