@@ -1,0 +1,12 @@
+# i151 Identity Service
+
+# i151 KeyStone-26.0.0
+https://tarballs.opendev.org/openstack/keystone/keystone-26.0.0.tar.gz
+https://docs.openstack.org/keystone/2024.2/_static/keystone.conf.sample
+
+
+# i153 Image Service
+
+# i153 Glance-29.0.0
+https://tarballs.opendev.org/openstack/glance/glance-29.0.0.tar.gz
+https://docs.openstack.org/glance/2024.2/_static/glance-api.conf.sample

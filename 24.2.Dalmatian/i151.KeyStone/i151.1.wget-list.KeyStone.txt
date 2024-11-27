@@ -1,5 +1,0 @@
-# Identity Service
-
-# i151 KeyStone-26.0.0
-https://tarballs.opendev.org/openstack/keystone/keystone-26.0.0.tar.gz
-https://docs.openstack.org/keystone/2024.2/_static/keystone.conf.sample

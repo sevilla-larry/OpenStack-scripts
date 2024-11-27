@@ -1,5 +1,0 @@
-# Image Service
-
-# i153 Glance-29.0.0
-https://tarballs.opendev.org/openstack/glance/glance-29.0.0.tar.gz
-https://docs.openstack.org/glance/2024.2/_static/glance-api.conf.sample
