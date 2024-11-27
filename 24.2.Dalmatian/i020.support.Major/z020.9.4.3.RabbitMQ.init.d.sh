@@ -6,7 +6,8 @@
 #
 # Author      : Sevilla, Larry - sevilla.larry.prg@gmail.com
 #
-
+#       Note  : NOT executed due to message below
+#
 # Version     : OS 24.2
 #
 
@@ -37,6 +38,14 @@ case "$1" in
       /usr/local/rabbitmq_server-4.0.3/sbin/rabbitmqctl start_app
       evaluate_retval
       ;;
+      #
+      # Note giving msg:
+      # warning: the VM is running with native name encoding of latin1
+      #          which may cause Elixir to malfunction as it expects utf8.
+      # Please ensure your locale is set to UTF-8
+      #          (which can be verified by running "locale" in your shell)
+      #     or set the ELIXIR_ERL_OPTIONS="+fnu" environment variable
+      #
 
    stop)
       log_info_msg "Stopping RabbitMQ Server..."
