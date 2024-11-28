@@ -43,12 +43,13 @@ A.  Preparation
             1. i000.servers
             2. i010.support.minor
             3. i020.support.Major
+            4. i100.OS.Services
 
             # BLfS
-            4. b01.OpenStack.support
-            5. b10.common.Xorg.and.servers
-            6. c11.MariaDB
-
+            5. b01.OpenStack.support
+            6. b10.common.Xorg.and.servers
+            7. c11.MariaDB
+            8. c13.Apache
 
     A.03. Download packages
 
