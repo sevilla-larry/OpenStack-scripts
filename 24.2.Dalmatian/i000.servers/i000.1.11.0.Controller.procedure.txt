@@ -504,11 +504,11 @@ I.  Create OpenStack client environment scripts
         . admin-openrc
         openstack domain list
 
-        $$$ request an authentication token for admin user in admin project
+        $$$ request an authentication token for "admin" user in "admin" project
         . admin-openrc
         openstack token issue
 
-        $$$ request an authentication token for myuser in myproject
+        $$$ request an authentication token for "demo" user in "demo" project
         . demo-openrc
         openstack token issue
 
