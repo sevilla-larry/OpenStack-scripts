@@ -9,6 +9,9 @@ date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
+ 
+#
+# RabbitMQ is Binary Installed, simplejson is for Source building
 
 # echo "i010.9.1.simplejson-3.19.3"
 # echo "i010.9.1.simplejson-3.19.3" >> $LFSLOG_PROCESS
@@ -36,7 +39,9 @@ echo "." >> $LFSLOG_PROCESS
 echo "."
 echo "."
 
-###
+### 
+#
+# RabbitMQ is Binary Installed, Exlixir is for Source building
 
 # echo "i010.9.3.Elixir-1.16.3"
 # echo "i010.9.3.Elixir-1.16.3" >> $LFSLOG_PROCESS
@@ -64,7 +69,20 @@ echo "." >> $LFSLOG_PROCESS
 echo "."
 echo "."
 
+###
+
+echo "i010.9.5.sshpass-1.10"
+echo "i010.9.5.sshpass-1.10" >> $LFSLOG_PROCESS
+
+time { bash i010.9.5.sshpass-1.10.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+
+echo "." >> $LFSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset LFSLOG_PROCESS
-

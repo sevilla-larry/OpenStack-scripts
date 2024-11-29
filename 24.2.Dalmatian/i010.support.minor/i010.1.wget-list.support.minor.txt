@@ -12,8 +12,8 @@ https://github.com/erlang/otp/releases/download/OTP-26.2.5.5/otp_src_26.2.5.5.ta
 # 04 build 1.2.2.post1  (Python module)
 https://files.pythonhosted.org/packages/84/c2/80633736cd183ee4a62107413def345f7e6e3c01563dbca1417363cf957e/build-1.2.2.post1-py3-none-any.whl
 
-# 05 qemu-ga 9.1.2
---content-disposition https://github.com/qemu/qemu/archive/refs/tags/v9.1.2.tar.gz
+# 05 sshpass-1.10
+https://sourceforge.net/projects/sshpass/files/sshpass/1.10/sshpass-1.10.tar.gz
 
-# 06 sshpass-1.10
---content-disposition https://sourceforge.net/projects/sshpass/files/sshpass/1.10/sshpass-1.10.tar.gz/download
+##99 qemu-ga 9.1.2
+##--content-disposition https://github.com/qemu/qemu/archive/refs/tags/v9.1.2.tar.gz

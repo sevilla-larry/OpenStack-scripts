@@ -267,6 +267,10 @@ F.  RabbitMQ
 
 G.  KeyStone - Identity service
 
+    # ubuntu install, automatically created /etc/apache2/keystone.conf
+    # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
+    # https://docs.openstack.org/keystone/2024.2/install/keystone-install-obs.html
+
     G.01. KeyStone database
 
         ###
@@ -327,23 +331,9 @@ G.  KeyStone - Identity service
 
         ### KeyStone Configuration
         # https://docs.openstack.org/keystone/2024.2/configuration/index.html
+        # https://docs.openstack.org/keystone/2024.2/configuration/samples/index.html
 
-    G.04. Remove/exclude wsgi-test.conf
-
-        ### edit /etc/httpd/httpd.conf
-        ###
-        ### remove or exclude
-
-        #Include /etc/httpd/extra/wsgi-test.conf
-
-        reboot
-
-        ### or restart Apache
-        # apachectl -k restart
-
-        ###
-
-    G.05. Populate the Identity service database
+    G.04. Populate the Identity service database
 
         ###
 
@@ -351,7 +341,7 @@ G.  KeyStone - Identity service
     
         ###
 
-    G.06. Initialize Fernet key repositories
+    G.05. Initialize Fernet key repositories
 
         ###
 
@@ -360,7 +350,7 @@ G.  KeyStone - Identity service
 
         ###
 
-    G.07. Check some things
+    G.06. Check some things
 
         iptables -S
 
@@ -400,7 +390,7 @@ G.  KeyStone - Identity service
               "media-types": [{"base": "application/json",
                                "type": "application/vnd.openstack.identity-v3+json"}]}}
 
-    G.08. Bootstrap the Identity service
+    G.07. Bootstrap the Identity service
 
         ###
 
@@ -415,6 +405,59 @@ G.  KeyStone - Identity service
             --bootstrap-public-url http://controller:5000/v3/ \
             --bootstrap-region-id RegionOne
         ###
+
+    G.08. Remove/exclude wsgi-test.conf
+
+        ### edit /etc/httpd/httpd.conf
+
+        ### remove/exclude test, add wsgi-keystone app
+        #Include /etc/httpd/extra/wsgi-test.conf
+        Include /etc/httpd/extra/wsgi-keystone.conf
+
+        # Verify
+        ServerName controller
+
+        ### Create the /etc/httpd/extra/wsgi-keystone.conf
+
+        Listen 5000
+
+        <VirtualHost *:5000>
+            WSGIDaemonProcess keystone-public processes=5 threads=1 user=keystone group=keystone display-name=%{GROUP}
+            WSGIProcessGroup keystone-public
+            WSGIScriptAlias / /usr/bin/keystone-wsgi-public
+            WSGIApplicationGroup %{GLOBAL}
+            WSGIPassAuthorization On
+            ErrorLogFormat "%{cu}t %M"
+            ErrorLog /var/log/httpd/keystone.log
+            CustomLog /var/log/httpd/keystone_access.log combined
+
+            #<Directory /usr/bin>
+            <Directory /usr>
+                Require all granted
+            </Directory>
+        </VirtualHost>
+
+        Alias /identity /usr/bin/keystone-wsgi-public
+        <Location /identity>
+            SetHandler wsgi-script
+            Options +ExecCGI
+
+            WSGIProcessGroup keystone-public
+            WSGIApplicationGroup %{GLOBAL}
+            WSGIPassAuthorization On
+        </Location>
+
+        ### end of /etc/httpd/extra/wsgi-keystone.conf
+
+
+
+        reboot
+
+        ### or restart Apache
+        # apachectl -k restart
+
+        ###
+
 
 H.  Create a domain, projects, users, roles
 
@@ -630,8 +673,13 @@ J.  Glance - Image Service
         # ...
         default_backend = fs
 
+        # OpenStack - Ubuntu installation documentation
         [fs]
         filesystem_store_datadir = /var/lib/glance/images/
+
+        # Alternative based on sample configuration
+        [file]
+        filesystem_store_datadir = /var/lib/glance/images
 
         # configure access to keystone
         [oslo_limit]
@@ -671,6 +719,7 @@ J.  Glance - Image Service
         $$$
 
         openstack role add --user glance --user-domain default --system all reader
+        $$$ Note: no display
 
     J.06. Populate the Image service database:
 

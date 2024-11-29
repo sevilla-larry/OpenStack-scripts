@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#				i020.9.3 RabbitMQ-4.0.3
+#				i020.9.3 RabbitMQ-4.0.3 (source build)
 #
 #
 
