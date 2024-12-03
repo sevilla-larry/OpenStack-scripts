@@ -24,10 +24,38 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 ###
  
-echo "i010.9.02.cryptography-44.0.0"
-echo "i010.9.02.cryptography-44.0.0" >> $OSLOG_PROCESS
+echo "i010.9.02.pycparser-2.21"
+echo "i010.9.02.pycparser-2.21" >> $OSLOG_PROCESS
 
-time { bash i010.9.02.cryptography-44.0.0.sh ; }
+time { bash i010.9.02.pycparser-2.21.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i010.9.03.cffi-1.16.0"
+echo "i010.9.03.cffi-1.16.0" >> $OSLOG_PROCESS
+
+time { bash i010.9.03.cffi-1.16.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i010.9.04.cryptography-42.0.8"
+echo "i010.9.04.cryptography-42.0.8" >> $OSLOG_PROCESS
+
+time { bash i010.9.04.cryptography-42.0.8.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

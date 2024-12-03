@@ -4,7 +4,8 @@
 #
 # Dependecies Required:
 #
-#               i010.9.1 pbr-6.1.0
+#               i010.9.01 pbr-6.1.0
+#               i010.9.04 cryptography-42.0.8
 #
 
 #

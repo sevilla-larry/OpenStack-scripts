@@ -1,9 +1,15 @@
 # 01 pbr-6.1.0
 06361b83d178fb62dcd1b4ba9a9b418c pbr-6.1.0.tar.gz
 
-# 02 cryptography-43.0.3
-e0669c198e0aecdcd68a2adef030f5a6 cryptography-43.0.3.tar.gz
-24904331bdf7a1dd6c04af9b02899a2a cryptography-44.0.0.tar.gz
+# 02 pycparser-2.21
+48f7d743bf018f7bb2ffc5fb976d1492 pycparser-2.21.tar.gz
+
+# 03 cffi-1.16.0
+0bcaed453da3004d0bea103038345c1e cffi-1.16.0.tar.gz
+
+# 04 cryptography-42.0.8
+413eb813be4922f055ae84ddfcd5a017 cryptography-42.0.8.tar.gz
+
 
 
 # 04 build 1.2.1

@@ -1,14 +1,14 @@
-# i010.9.1.pbr-6.1.0.sh
+# i010.9.02.pycparser-2.21.sh
 #
 
 #
 # Required by:
 #
-#               i020.9.1.python-openstackclient-7.1.3.sh
+#               i010.9.03 cffi-1.16.0.sh
 #
 
-export PKG="pbr-6.1.0"
-export PKGLOG_DIR=$OSLOG/010.01
+export PKG="pycparser-2.21"
+export PKGLOG_DIR=$OSLOG/010.02
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,13 +43,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                pbr                     \
+                pycparser               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..
