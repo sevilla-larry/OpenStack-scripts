@@ -1,4 +1,4 @@
-# i010.9.1.pbr-6.1.0.sh
+# i010.9.02.cryptography-43.0.3.sh
 #
 
 #
@@ -7,8 +7,8 @@
 #               i020.9.1.python-openstackclient-7.1.3.sh
 #
 
-export PKG="pbr-6.1.0"
-export PKGLOG_DIR=$OSLOG/010.1
+export PKG="cryptography-43.0.3"
+export PKGLOG_DIR=$OSLOG/010.2
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                pbr                     \
+                cryptography            \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

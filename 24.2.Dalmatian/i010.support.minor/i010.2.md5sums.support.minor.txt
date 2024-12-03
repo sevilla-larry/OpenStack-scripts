@@ -1,6 +1,11 @@
 # 01 pbr-6.1.0
 06361b83d178fb62dcd1b4ba9a9b418c pbr-6.1.0.tar.gz
 
+# 02 cryptography-43.0.3
+e0669c198e0aecdcd68a2adef030f5a6 cryptography-43.0.3.tar.gz
+
+
+
 # 04 build 1.2.1
 9675d7b278f4533b9b75701e6e87390b build-1.2.1.tar.gz
 
