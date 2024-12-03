@@ -3,7 +3,7 @@
 
 # 02 cryptography-43.0.3
 e0669c198e0aecdcd68a2adef030f5a6 cryptography-43.0.3.tar.gz
-
+24904331bdf7a1dd6c04af9b02899a2a cryptography-44.0.0.tar.gz
 
 
 # 04 build 1.2.1

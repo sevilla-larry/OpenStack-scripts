@@ -1,4 +1,4 @@
-# i010.9.02.cryptography-43.0.3.sh
+# i010.9.02.cryptography-44.0.0.sh
 #
 
 #
@@ -7,7 +7,7 @@
 #               i020.9.1.python-openstackclient-7.1.3.sh
 #
 
-export PKG="cryptography-43.0.3"
+export PKG="cryptography-44.0.0"
 export PKGLOG_DIR=$OSLOG/010.2
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
