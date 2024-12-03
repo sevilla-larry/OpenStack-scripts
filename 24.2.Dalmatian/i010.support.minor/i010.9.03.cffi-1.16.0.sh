@@ -14,7 +14,7 @@
 #
 
 export PKG="cffi-1.16.0"
-export PKGLOG_DIR=$OSLOG/010.3
+export PKGLOG_DIR=$OSLOG/010.03
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

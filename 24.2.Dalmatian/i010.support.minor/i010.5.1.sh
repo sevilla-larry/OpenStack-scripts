@@ -24,31 +24,31 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 ###
  
-echo "i010.9.02.pycparser-2.21"
-echo "i010.9.02.pycparser-2.21" >> $OSLOG_PROCESS
+# echo "i010.9.02.pycparser-2.21"
+# echo "i010.9.02.pycparser-2.21" >> $OSLOG_PROCESS
 
-time { bash i010.9.02.pycparser-2.21.sh ; }
+# time { bash i010.9.02.pycparser-2.21.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
-###
+# ###
  
-echo "i010.9.03.cffi-1.16.0"
-echo "i010.9.03.cffi-1.16.0" >> $OSLOG_PROCESS
+# echo "i010.9.03.cffi-1.16.0"
+# echo "i010.9.03.cffi-1.16.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.03.cffi-1.16.0.sh ; }
+# time { bash i010.9.03.cffi-1.16.0.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 ###
  
