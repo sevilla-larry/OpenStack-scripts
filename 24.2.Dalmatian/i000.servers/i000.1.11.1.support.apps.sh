@@ -28,6 +28,9 @@ bash b30.03.1.sh
 # support apps for OpenStack, Python Modules & Dependecies
 bash b30.03.2.sh
 
+# Python OpenStackClient support
+# bash i010.5.1.sh
+
 # Python OpenStackClient
 # bash i020.5.1.sh
 

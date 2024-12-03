@@ -1,4 +1,10 @@
-# i020.9.1.python_openstackclient-7.1.3.sh
+# i020.9.1.python-openstackclient-7.1.3.sh
+#
+
+#
+# Dependecies Required:
+#
+#               i010.9.1 pbr-6.1.0
 #
 
 #
@@ -7,7 +13,7 @@
 #               openstack
 #
 
-export PKG="python_openstackclient-7.1.3"
+export PKG="python-openstackclient-7.1.3"
 export PKGLOG_DIR=$OSLOG/020.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -46,10 +52,10 @@ pip3 install    --no-index              \
                 python_openstackclient  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-#echo "4. pyTest ..."
-#echo "4. pyTest ..." >> $OSLOG_PROCESS
-#echo "4. pyTest ..." >> $PKGLOG_ERROR
-#pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

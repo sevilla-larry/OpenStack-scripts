@@ -12,10 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i020.9.1.python_openstackclient-7.1.3"
-echo "i020.9.1.python_openstackclient-7.1.3" >> $OSLOG_PROCESS
+echo "i020.9.1.python-openstackclient-7.1.3"
+echo "i020.9.1.python-openstackclient-7.1.3" >> $OSLOG_PROCESS
 
-time { bash i020.9.1.python_openstackclient-7.1.3.sh ; }
+time { bash i020.9.1.python-openstackclient-7.1.3.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
