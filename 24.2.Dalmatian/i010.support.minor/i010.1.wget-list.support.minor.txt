@@ -10,6 +10,9 @@ https://files.pythonhosted.org/packages/68/ce/95b0bae7968c65473e1298efb042e10caf
 # 04 cryptography-42.0.8
 https://files.pythonhosted.org/packages/93/a7/1498799a2ea06148463a9a2c10ab2f6a921a74fb19e231b27dc412a748e2/cryptography-42.0.8.tar.gz
 
+# 05 cliff-4.7.0
+https://tarballs.opendev.org/openstack/cliff/cliff-4.7.0.tar.gz
+
 
 # 02 Erlang 26.2.5.5
 https://github.com/erlang/otp/releases/download/OTP-26.2.5.5/otp_src_26.2.5.5.tar.gz

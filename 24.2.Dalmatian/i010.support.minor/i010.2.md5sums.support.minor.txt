@@ -10,6 +10,8 @@
 # 04 cryptography-42.0.8
 413eb813be4922f055ae84ddfcd5a017 cryptography-42.0.8.tar.gz
 
+# 05 cliff-4.7.0
+f2f7cf512ffd8a1a0ba82481fde7056b cliff-4.7.0.tar.gz
 
 
 # 04 build 1.2.1
