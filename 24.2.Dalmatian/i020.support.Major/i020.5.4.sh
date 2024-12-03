@@ -5,22 +5,22 @@
 # https://docs.openstack.org/install-guide/environment-messaging.html
 #
 
-export LFSLOG_PROCESS=$LFSLOG/process.log
+export OSLOG_PROCESS=$OSLOG/process.log
 
 date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
 echo "i020.9.4.1.RabbitMQ-4.0.3"
-echo "i020.9.4.1.RabbitMQ-4.0.3" >> $LFSLOG_PROCESS
+echo "i020.9.4.1.RabbitMQ-4.0.3" >> $OSLOG_PROCESS
 
 time { bash i020.9.4.1.RabbitMQ-4.0.3.sh ; }
 
 date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $LFSLOG_PROCESS
+echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
@@ -29,17 +29,17 @@ echo "."
 # FAILED
 #
 # echo "i020.9.4.4.RabbitMQ.rc.d"
-# echo "i020.9.4.4.RabbitMQ.rc.d" >> $LFSLOG_PROCESS
+# echo "i020.9.4.4.RabbitMQ.rc.d" >> $OSLOG_PROCESS
 #
 # time { bash i020.9.4.4.RabbitMQ.rc.d.sh ; }
 #
 # date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 #
-# echo "." >> $LFSLOG_PROCESS
+# echo "." >> $OSLOG_PROCESS
 # echo "."
 # echo "."
 
 #####
 
-unset LFSLOG_PROCESS
+unset OSLOG_PROCESS

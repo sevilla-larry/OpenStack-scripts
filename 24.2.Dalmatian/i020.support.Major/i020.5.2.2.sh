@@ -5,25 +5,25 @@
 # https://docs.openstack.org/install-guide/environment-sql-database.html
 #
 
-export LFSLOG_PROCESS=$LFSLOG/process.log
+export OSLOG_PROCESS=$OSLOG/process.log
 
 date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
 echo "i020.9.2.2.PyMySQL-1.1.1"
-echo "i020.9.2.2.PyMySQL-1.1.1" >> $LFSLOG_PROCESS
+echo "i020.9.2.2.PyMySQL-1.1.1" >> $OSLOG_PROCESS
 
 time { bash i020.9.2.2.PyMySQL-1.1.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $LFSLOG_PROCESS
+echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
 #####
 
-unset LFSLOG_PROCESS
+unset OSLOG_PROCESS

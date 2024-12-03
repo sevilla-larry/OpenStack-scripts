@@ -1,0 +1,5 @@
+# 01 simplejson-3.19.3  (Python module)
+#a198e17c5dcc426ff83ec4a02190eae5 simplejson-3.19.3.tar.gz
+
+# 04 build 1.2.1
+9675d7b278f4533b9b75701e6e87390b build-1.2.1.tar.gz

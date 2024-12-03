@@ -10,25 +10,28 @@ A.  Preparation
 
         # (a) VM & VB
 
-            mkdir -v /mnt/Src/blfs.{src,log}
+            mkdir -v /mnt/Src/blfs.log
+            mkdir -v /mnt/Src/os.{src,log}
 
-            chmod -vR a+wt /mnt/Src/blfs.{src,log}
+            chmod -vR a+wt /mnt/Src/blfs.log
+            chmod -vR a+wt /mnt/Src/os.{src,log}
 
-            ln -sfv /mnt/Src/blfs.src /sources
+            ln -sfv /mnt/Src/os.src /sources
 
             ln -sfv /mnt/Src/blfs.log /var/log/blfs
+            ln -sfv /mnt/Src/os.log /var/log/os
 
         # (b) PC
 
-            mkdir -pv /usr/src/blfs
+            mkdir -pv /usr/src/os
 
-            mkdir -pv /var/log/blfs
+            mkdir -pv /var/log/{blfs,os}
 
-            chmod -vR a+wt /usr/src/blfs
+            chmod -vR a+wt /usr/src/os
 
-            chmod -vR a+wt /var/log/blfs
+            chmod -vR a+wt /var/log/{blfs,os}
 
-            ln -sfv /usr/src/blfs /sources
+            ln -sfv /usr/src/os /sources
 
         ###
 
@@ -75,6 +78,7 @@ A.  Preparation
 
         ###
 
+        export OSLOG=/var/log/os
         export LFSLOG=/var/log/blfs
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
@@ -93,6 +97,7 @@ B.  Support Applications - minor
 
         ###
 
+        echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
