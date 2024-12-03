@@ -49,8 +49,8 @@ A.  Preparation
             4. i100.OS.Services
 
             # BLfS
-            5. b01.OpenStack.support
-            6. b10.common.Xorg.and.servers
+            5. b10.common.Xorg.and.servers
+            6. b30.OpenStack.support
             7. c11.MariaDB
             8. c13.Apache
 
@@ -61,15 +61,18 @@ A.  Preparation
         wget --input-file=i010.1.wget-list.support.minor.txt                --continue --directory-prefix=/sources
         wget --input-file=i020.1.wget-list.support.Major.txt                --continue --directory-prefix=/sources
 
-        wget --input-file=b01.01.wget-list-sysv.OpenStack.support.txt       --continue --directory-prefix=/sources
         wget --input-file=b10.01.wget-list-sysv.common.Xorg.and.servers.txt --continue --directory-prefix=/sources
+        wget --input-file=b30.01.wget-list-sysv.OpenStack.support.txt       --continue --directory-prefix=/sources
         wget --input-file=c11.01.wget-list-sysv.MariaDB.txt                 --continue --directory-prefix=/sources
+        wget --input-file=c13.01.wget-list-sysv.Apache.txt                  --continue --directory-prefix=/sources
 
         # md5sum -c md5sums.txt
-        md5sum -c b01.02.md5sums.OpenStack.support.txt
         md5sum -c b10.02.md5sums.common.Xorg.and.servers.txt
+        md5sum -c b30.02.md5sums.OpenStack.support.txt
         md5sum -c c11.02.md5sums.MariaDB.txt
         md5sum -c c13.02.md5sums.Apache.txt
+        md5sum -c i010.2.md5sums.support.minor.txt
+        md5sum -c i020.2.md5sums.support.Major.txt
 
         ###
 

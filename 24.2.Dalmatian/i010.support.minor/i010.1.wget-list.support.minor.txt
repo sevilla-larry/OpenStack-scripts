@@ -14,7 +14,6 @@ https://github.com/erlang/otp/releases/download/OTP-26.2.5.5/otp_src_26.2.5.5.ta
 #https://files.pythonhosted.org/packages/84/c2/80633736cd183ee4a62107413def345f7e6e3c01563dbca1417363cf957e/build-1.2.2.post1-py3-none-any.whl
 # 04 build 1.2.1
 https://files.pythonhosted.org/packages/ce/9e/2d725d2f7729c6e79ca62aeb926492abbc06e25910dd30139d60a68bcb19/build-1.2.1.tar.gz
-9675d7b278f4533b9b75701e6e87390b
 
 # 05 sshpass-1.10
 https://sourceforge.net/projects/sshpass/files/sshpass/1.10/sshpass-1.10.tar.gz
