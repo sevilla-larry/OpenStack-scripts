@@ -1,14 +1,13 @@
-
-# i010.9.05.cliff-4.7.0.sh
+# i010.9.05.autopage-0.5.2.sh
 #
 
 #
 # Required by:
 #
-#               i020.9.1.python-openstackclient-7.1.3.sh
+#               i010.9.07 cliff-4.7.0.sh
 #
 
-export PKG="cliff-4.7.0"
+export PKG="autopage-0.5.2"
 export PKGLOG_DIR=$OSLOG/010.05
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -44,13 +43,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                cliff                   \
+                autopage                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

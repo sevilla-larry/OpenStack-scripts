@@ -10,7 +10,13 @@ https://files.pythonhosted.org/packages/68/ce/95b0bae7968c65473e1298efb042e10caf
 # 04 cryptography-42.0.8
 https://files.pythonhosted.org/packages/93/a7/1498799a2ea06148463a9a2c10ab2f6a921a74fb19e231b27dc412a748e2/cryptography-42.0.8.tar.gz
 
-# 05 cliff-4.7.0
+# 05 autopage-0.5.2
+https://files.pythonhosted.org/packages/9f/9e/559b0cfdba9f3ed6744d8cbcdbda58880d3695c43c053a31773cefcedde3/autopage-0.5.2.tar.gz
+
+# 06 cmd2-2.4.3
+https://files.pythonhosted.org/packages/13/04/b85213575a7bf31cbf1d699cc7d5500d8ca8e52cbd1f3569a753a5376d5c/cmd2-2.4.3.tar.gz
+
+# 07 cliff-4.7.0
 https://tarballs.opendev.org/openstack/cliff/cliff-4.7.0.tar.gz
 
 
