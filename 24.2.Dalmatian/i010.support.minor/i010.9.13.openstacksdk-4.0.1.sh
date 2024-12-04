@@ -1,13 +1,4 @@
-# i010.9.11.cliff-4.7.0.sh
-#
-
-#
-# Dependencies Required:
-#
-#               i010.9.05 autopage-0.5.2
-#               i010.9.08 cmd2-2.4.3
-#               i010.9.09 prettytable-3.11.0
-#               i010.9.10 stevedore-5.3.0
+# i010.9.13.openstacksdk-4.0.1.sh
 #
 
 #
@@ -16,8 +7,8 @@
 #               i020.9.1 python-openstackclient-7.1.3
 #
 
-export PKG="cliff-4.7.0"
-export PKGLOG_DIR=$OSLOG/010.11
+export PKG="openstacksdk-4.0.1"
+export PKGLOG_DIR=$OSLOG/010.13
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -52,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                cliff                   \
+                openstacksdk            \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

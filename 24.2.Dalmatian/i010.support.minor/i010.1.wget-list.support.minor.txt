@@ -32,6 +32,13 @@ f9117028291767cb5dfe665e3845c5ac
 # 11 cliff-4.7.0
 https://tarballs.opendev.org/openstack/cliff/cliff-4.7.0.tar.gz
 
+# 12 iso8601-2.1.0
+https://files.pythonhosted.org/packages/6c/0c/f37b6a241f0759b7653ffa7213889d89ad49a2b76eb2ddf3b57b2738c347/iso8601-2.1.0-py3-none-any.whl
+e3b1014d767f5178e4704b2f6b4e9562
+# 13 openstacksdk-4.0.1
+https://tarballs.opendev.org/openstack/openstacksdk/openstacksdk-4.0.1.tar.gz
+90af9da354a4389d487a0165919af72f
+
 
 # 02 Erlang 26.2.5.5
 https://github.com/erlang/otp/releases/download/OTP-26.2.5.5/otp_src_26.2.5.5.tar.gz

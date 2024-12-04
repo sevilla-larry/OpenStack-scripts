@@ -1,14 +1,14 @@
-# i010.9.1.simplejson-3.19.3.sh
+# i010.9.12.iso8601-2.1.0.sh
 #
 
 #
 # Required by:
 #
-#				i020.9.3 RabbitMQ-4.0.3 (source build)
+#               i020.9.1 python-openstackclient-7.1.3
 #
 
-export PKG="simplejson-3.19.3-py3-none-any.whl"
-export PKGLOG_DIR=$OSLOG/010.1
+export PKG="iso8601-2.1.0-py3-none-any.whl"
+export PKGLOG_DIR=$OSLOG/010.12
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
