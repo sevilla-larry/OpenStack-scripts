@@ -2,7 +2,7 @@
 #
 
 #
-# Dependecies Required:
+# Dependencies Required:
 #
 #               i010.9.02 pycparser-2.21
 #

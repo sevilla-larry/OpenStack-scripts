@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i010.9.07 cliff-4.7.0.sh
+#               i010.9.07 cliff-4.7.0
 #
 
 export PKG="autopage-0.5.2"

@@ -1,20 +1,20 @@
-# i010.9.06.cmd2-2.4.3.sh
+# i010.9.10.stevedore-5.3.0.sh
 #
 
 #
-# Dependecies Required:
+# Dependencies Required:
 #
-#               b30.13.24.02 Attrs-24.2.0
+#               i010.9.01 pbr-6.1.0
 #
 
 #
 # Required by:
 #
-#               i010.9.07 cliff-4.7.0.sh
+#               i010.9.07 cliff-4.7.0
 #
 
-export PKG="cmd2-2.4.3"
-export PKGLOG_DIR=$OSLOG/010.06
+export PKG="stevedore-5.3.0"
+export PKGLOG_DIR=$OSLOG/010.10
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -49,7 +49,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                cmd2                    \
+                stevedore               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

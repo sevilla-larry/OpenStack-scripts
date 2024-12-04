@@ -13,10 +13,22 @@
 # 05 autopage-0.5.2
 57936e4a9d379fe4a60eb617d8cdce33 autopage-0.5.2.tar.gz
 
-# 06 cmd2-2.4.3
+# 06 pyperclip-1.9.0
+43f9e69bf948139055683d28080787f4 pyperclip-1.9.0.tar.gz
+
+# 07 wcwidth-0.2.13
+5ce8dd9e6993dae268142feb1e605cd8 wcwidth-0.2.13.tar.gz
+
+# 08 cmd2-2.4.3
 b2c8691ef6300c2c72c697b846c6be1e cmd2-2.4.3.tar.gz
 
-# 07 cliff-4.7.0
+# 09 prettytable-3.11.0
+fbec4419c46b035b6e792bef327eef3c prettytable-3.11.0.tar.gz
+
+# 10 stevedore-5.3.0
+f9117028291767cb5dfe665e3845c5ac stevedore-5.3.0.tar.gz
+
+# 11 cliff-4.7.0
 f2f7cf512ffd8a1a0ba82481fde7056b cliff-4.7.0.tar.gz
 
 

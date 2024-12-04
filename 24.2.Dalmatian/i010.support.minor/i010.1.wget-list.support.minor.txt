@@ -13,10 +13,23 @@ https://files.pythonhosted.org/packages/93/a7/1498799a2ea06148463a9a2c10ab2f6a92
 # 05 autopage-0.5.2
 https://files.pythonhosted.org/packages/9f/9e/559b0cfdba9f3ed6744d8cbcdbda58880d3695c43c053a31773cefcedde3/autopage-0.5.2.tar.gz
 
-# 06 cmd2-2.4.3
+# 06 pyperclip-1.9.0
+https://files.pythonhosted.org/packages/30/23/2f0a3efc4d6a32f3b63cdff36cd398d9701d26cda58e3ab97ac79fb5e60d/pyperclip-1.9.0.tar.gz
+
+# 07 wcwidth-0.2.13
+https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz
+
+# 08 cmd2-2.4.3
 https://files.pythonhosted.org/packages/13/04/b85213575a7bf31cbf1d699cc7d5500d8ca8e52cbd1f3569a753a5376d5c/cmd2-2.4.3.tar.gz
 
-# 07 cliff-4.7.0
+# 09 prettytable-3.11.0
+https://files.pythonhosted.org/packages/28/57/0a642bec16d5736b9baaac7e830bedccd10341dc2858075c34d5aec5c8b6/prettytable-3.11.0.tar.gz
+
+# 10 stevedore-5.3.0
+https://tarballs.opendev.org/openstack/stevedore/stevedore-5.3.0.tar.gz
+f9117028291767cb5dfe665e3845c5ac
+
+# 11 cliff-4.7.0
 https://tarballs.opendev.org/openstack/cliff/cliff-4.7.0.tar.gz
 
 

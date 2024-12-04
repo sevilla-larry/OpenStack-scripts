@@ -2,15 +2,15 @@
 #
 
 #
-# Dependecies Required:
+# Dependencies Required:
 #
-#               i010.9.03 cffi-1.16.0.sh
+#               i010.9.03 cffi-1.16.0
 #
 
 #
 # Required by:
 #
-#               i020.9.1.python-openstackclient-7.1.3.sh
+#               i020.9.1 python-openstackclient-7.1.3
 #
 
 export PKG="cryptography-42.0.8"

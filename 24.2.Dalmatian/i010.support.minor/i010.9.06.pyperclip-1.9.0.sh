@@ -1,14 +1,14 @@
-# i010.9.02.pycparser-2.21.sh
+# i010.9.06.pyperclip-1.9.0.sh
 #
 
 #
 # Required by:
 #
-#               i010.9.03 cffi-1.16.0
+#               i010.9.08 cmd2-2.4.3
 #
 
-export PKG="pycparser-2.21"
-export PKGLOG_DIR=$OSLOG/010.02
+export PKG="pyperclip-1.9.0"
+export PKGLOG_DIR=$OSLOG/010.06
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,13 +43,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                pycparser               \
+                pyperclip               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

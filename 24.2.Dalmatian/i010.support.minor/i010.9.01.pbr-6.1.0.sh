@@ -4,7 +4,8 @@
 #
 # Required by:
 #
-#               i020.9.1.python-openstackclient-7.1.3.sh
+#               i010.9.10 stevedore-5.3.0
+#               i020.9.1  python-openstackclient-7.1.3
 #
 
 export PKG="pbr-6.1.0"

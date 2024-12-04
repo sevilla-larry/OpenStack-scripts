@@ -1,14 +1,22 @@
-# i010.9.07.cliff-4.7.0.sh
+# i010.9.08.cmd2-2.4.3.sh
+#
+
+#
+# Dependencies Required:
+#
+#               b30.13.24.02 Attrs-24.2.0
+#               i010.9.06 pyperclip-1.9.0
+#               i010.9.07 wcwidth-0.2.13
 #
 
 #
 # Required by:
 #
-#               i020.9.1.python-openstackclient-7.1.3.sh
+#               i010.9.07 cliff-4.7.0
 #
 
-export PKG="cliff-4.7.0"
-export PKGLOG_DIR=$OSLOG/010.07
+export PKG="cmd2-2.4.3"
+export PKGLOG_DIR=$OSLOG/010.08
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +51,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                cliff                   \
+                cmd2                    \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

@@ -1,14 +1,14 @@
-# i010.9.02.pycparser-2.21.sh
+# i010.9.09.prettytable-3.11.0.sh
 #
 
 #
 # Required by:
 #
-#               i010.9.03 cffi-1.16.0
+#               i010.9.07 cliff-4.7.0
 #
 
-export PKG="pycparser-2.21"
-export PKGLOG_DIR=$OSLOG/010.02
+export PKG="prettytable-3.11.0"
+export PKGLOG_DIR=$OSLOG/010.09
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                pycparser               \
+                prettytable             \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."
