@@ -99,26 +99,28 @@ bda38291e705ce8329a2d49128f072fa tzdata-2024.2.tar.gz
 # 41 rfc3986-2.0.0
 bbf20302bf26bc771e88cc775fbde3bc rfc3986-2.0.0.tar.gz
 
-# [42-43] allowance for future dependencies of oslo.config
+# [42-44] allowance for future dependencies of oslo.config
 
-# 44 oslo.config-9.6.0
+# 45 oslo.config-9.6.0
 a2da4f48c568c5a4972aff4be035092f oslo.config-9.6.0.tar.gz
 # 621ddd3c13b6e3ab5ca293341c973fd1 oslo.config-9.6.0-py3-none-any.whl   # alternate, if error
 
-# 45 msgpack-1.1.0
+# 46 msgpack-1.1.0
 e5769d4ab610491ac561c84fde4cf4a7 msgpack-1.1.0.tar.gz
 
-# [46-47] allowance for future dependencies of oslo.serialization
+# [47-49] allowance for future dependencies of oslo.serialization
 
-# 48 oslo.serialization-5.5.0
+# 50 oslo.serialization-5.5.0
 fa388acbd1c9819cb96eb2a48b2b59c7 oslo.serialization-5.5.0.tar.gz
 
-# [49] allowance for future dependencies of python-keystoneclient
+# [51-59] allowance for future dependencies of python-keystoneclient
 
-# 50 python-keystoneclient-5.5.0
+# 60 python-keystoneclient-5.5.0
 a3a8ced9ae50dc3b2990231c37f3e228 python-keystoneclient-5.5.0.tar.gz
 
-# 60 python-cinderclient-9.6.0
+# [61-64] allowance for future dependencies of python-cinderclient
+
+# 65 python-cinderclient-9.6.0
 e9f12ae2884ab2f0a2b43f1936742fa2 python-cinderclient-9.6.0.tar.gz
 
 

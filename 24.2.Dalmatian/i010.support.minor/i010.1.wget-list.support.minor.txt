@@ -99,28 +99,30 @@ https://tarballs.opendev.org/openstack/osc-lib/osc-lib-3.1.0.tar.gz
 # 41 rfc3986-2.0.0
 https://files.pythonhosted.org/packages/85/40/1520d68bfa07ab5a6f065a186815fb6610c86fe957bc065754e47f7b0840/rfc3986-2.0.0.tar.gz
 
-# [42-43] allowance for future dependencies of oslo.config
+# [42-44] allowance for future dependencies of oslo.config
 
-# 44 oslo.config-9.6.0
+# 45 oslo.config-9.6.0
 https://tarballs.opendev.org/openstack/oslo.config/oslo.config-9.6.0.tar.gz
 # https://tarballs.opendev.org/openstack/oslo.config/oslo.config-9.6.0-py3-none-any.whl     # alternate if error
 
 #####
 
-# 45 msgpack-1.1.0
+# 46 msgpack-1.1.0
 https://files.pythonhosted.org/packages/cb/d0/7555686ae7ff5731205df1012ede15dd9d927f6227ea151e901c7406af4f/msgpack-1.1.0.tar.gz
 
-# [46-47] allowance for future dependencies of oslo.serialization
+# [47-49] allowance for future dependencies of oslo.serialization
 
-# 48 oslo.serialization-5.5.0
+# 50 oslo.serialization-5.5.0
 https://tarballs.opendev.org/openstack/oslo.serialization/oslo.serialization-5.5.0.tar.gz
 
-# [49] allowance for future dependencies of python-keystoneclient
+# [51-59] allowance for future dependencies of python-keystoneclient
 
-# 50 python-keystoneclient-5.5.0
+# 60 python-keystoneclient-5.5.0
 https://tarballs.opendev.org/openstack/python-keystoneclient/python-keystoneclient-5.5.0.tar.gz
 
-# 60 python-cinderclient-9.6.0
+# [61-64] allowance for future dependencies of python-cinderclient
+
+# 65 python-cinderclient-9.6.0
 https://tarballs.opendev.org/openstack/python-cinderclient/python-cinderclient-9.6.0.tar.gz
 
 ##########
