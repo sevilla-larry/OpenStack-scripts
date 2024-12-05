@@ -1,32 +1,14 @@
-# i010.9.20.openstacksdk-4.0.1.sh
-#
-
-#
-# Dependencies Required:
-#
-#               i010.9.04 cryptography-42.0.8
-#               i010.9.13 decorator-5.1.1
-#               i010.9.14 dogpile.cache-1.3.3
-#               i010.9.12 iso8601-2.1.0
-#               i010.9.15 jmespath-1.0.1
-#               i010.9.17 jsonpatch-1.33
-#               i010.9.19 keystoneauth1-5.8.0
-#               i010.9.20 netifaces-0.11.0
-#               i010.9.18 os-service-types-1.7.0
-#               i010.9.01 pbr-6.1.0
-#               i010.9.21 platformdirs-4.3.6
-#               b30.13.23 28 PyYAML-6.0.2
-#               i010.9.22 requestsexceptions-1.4.0
+# i010.9.35.pyparsing-3.1.4.sh
 #
 
 #
 # Required by:
 #
-#               i020.9.1 python-openstackclient-7.1.3
+#               i010.9.39 oslo.utils-7.3.0
 #
 
-export PKG="openstacksdk-4.0.1"
-export PKGLOG_DIR=$OSLOG/010.30
+export PKG="pyparsing-3.1.4"
+export PKGLOG_DIR=$OSLOG/010.35
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -61,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                openstacksdk            \
+                pyparsing               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
