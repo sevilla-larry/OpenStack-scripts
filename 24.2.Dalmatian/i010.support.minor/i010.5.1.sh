@@ -178,10 +178,10 @@ echo "."
 
 ###
  
-echo "i010.9.13.openstacksdk-4.0.1"
-echo "i010.9.13.openstacksdk-4.0.1" >> $OSLOG_PROCESS
+echo "i010.9.30.openstacksdk-4.0.1"
+echo "i010.9.30.openstacksdk-4.0.1" >> $OSLOG_PROCESS
 
-time { bash i010.9.13.openstacksdk-4.0.1.sh ; }
+time { bash i010.9.30.openstacksdk-4.0.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
