@@ -2,6 +2,12 @@
 #
 
 #
+# Dependencies Required:
+#
+#               i010.9.07 wcwidth-0.2.13
+#
+
+#
 # Required by:
 #
 #               i010.9.07 cliff-4.7.0

@@ -34,10 +34,92 @@ f2f7cf512ffd8a1a0ba82481fde7056b cliff-4.7.0.tar.gz
 # 12 iso8601-2.1.0
 e3b1014d767f5178e4704b2f6b4e9562 iso8601-2.1.0-py3-none-any.whl
 
-# 13 openstacksdk-4.0.1
+# 13 decorator-5.1.1
+a6b34700dcac8a4bb04efd55e99626c1 decorator-5.1.1.tar.gz
+
+# 14 dogpile.cache-1.3.3
+b457cc3878850b16da75d3393fb68177 dogpile.cache-1.3.3.tar.gz
+
+# 15 jmespath-1.0.1
+2dd28beb22d698f58fe2281bfe5fe3a3 jmespath-1.0.1.tar.gz
+
+# 16 jsonpointer-3.0.0
+9a0b3e940bbd65f544f41018a904991f jsonpointer-3.0.0.tar.gz
+
+# 17 jsonpatch-1.33
+ed3e8eaa5cce105ad02509d185f0889f jsonpatch-1.33.tar.gz
+
+# 18 os-service-types-1.7.0
+4a5bc8a60dfb3e98f5e5f975b173c04d os-service-types-1.7.0.tar.gz
+
+# 19 keystoneauth1-5.8.0
+ff119764cf7bd9d44fcb9c5f0a8fac7e keystoneauth1-5.8.0.tar.gz
+
+# 20 netifaces-0.11.0
+3146dcb3297dd018ae5eb9a52b440419 netifaces-0.11.0.tar.gz
+
+# 21 platformdirs-4.3.6
+9f63e7b2b462ee13ee2bf857f2839926 platformdirs-4.3.6.tar.gz
+
+# 22 requestsexceptions-1.4.0
+f43b246ccd7d5b618e6f0dc946a6c3f3 requestsexceptions-1.4.0.tar.gz
+
+# [23-29]  allowance for future dependencies of openstacksdk
+
+# 30 openstacksdk-4.0.1
 90af9da354a4389d487a0165919af72f openstacksdk-4.0.1.tar.gz
 
+####################
 
+# 31 oslo.i18n-6.4.0
+e846f3f7c0ff411bf3e049718140d4e0 oslo.i18n-6.4.0.tar.gz
+
+# 32 netaddr-1.3.0
+b0307617f8f3aa73bbcfadac52d91df7 netaddr-1.3.0.tar.gz
+
+# 33 wrapt-1.16.0
+3e370b4bc08f7dcc518cf8895673b19c wrapt-1.16.0.tar.gz
+
+# 34 debtcollector-3.0.0
+399a20e47b0aec6c3007beb7cc7e017a debtcollector-3.0.0.tar.gz
+
+# 35 tzdata-2024.2
+bda38291e705ce8329a2d49128f072fa tzdata-2024.2.tar.gz
+
+# [36-38]  allowance for future dependencies of oslo.utils and osc-lib
+
+# 39 oslo.utils-7.3.0
+1dd4678e5edbc064417f6fc2d880bf29 oslo.utils-7.3.0.tar.gz
+
+# 40 osc-lib-3.1.0
+62509f72b5d68233e86812d45f9daf0f osc-lib-3.1.0.tar.gz
+
+##########
+
+# 41 rfc3986-2.0.0
+bbf20302bf26bc771e88cc775fbde3bc rfc3986-2.0.0.tar.gz
+
+# [42-43] allowance for future dependencies of oslo.config
+
+# 44 oslo.config-9.6.0
+a2da4f48c568c5a4972aff4be035092f oslo.config-9.6.0.tar.gz
+# 621ddd3c13b6e3ab5ca293341c973fd1 oslo.config-9.6.0-py3-none-any.whl   # alternate, if error
+
+# 45 msgpack-1.1.0
+e5769d4ab610491ac561c84fde4cf4a7 msgpack-1.1.0.tar.gz
+
+# [46-47] allowance for future dependencies of oslo.serialization
+
+# 48 oslo.serialization-5.5.0
+fa388acbd1c9819cb96eb2a48b2b59c7 oslo.serialization-5.5.0.tar.gz
+
+# [49] allowance for future dependencies of python-keystoneclient
+
+# 50 python-keystoneclient-5.5.0
+a3a8ced9ae50dc3b2990231c37f3e228 python-keystoneclient-5.5.0.tar.gz
+
+
+# 60 python-cinderclient-9.6.0
 
 
 

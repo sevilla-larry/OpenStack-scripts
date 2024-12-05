@@ -11,6 +11,11 @@
 # Required by:
 #
 #               i010.9.07 cliff-4.7.0
+#               i010.9.14 dogpile.cache-1.3.3
+#               i010.9.19 keystoneauth1-5.8.0
+#               i010.9.40 osc-lib-3.1.0
+#               i010.9.45 oslo.config-9.6.0
+#               i010.9.50 python-keystoneclient-5.5.0
 #
 
 export PKG="stevedore-5.3.0"

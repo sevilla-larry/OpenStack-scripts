@@ -10,6 +10,7 @@
 #
 # Required by:
 #
+#               i010.9.30 openstacksdk-4.0.1
 #               i020.9.1 python-openstackclient-7.1.3
 #
 

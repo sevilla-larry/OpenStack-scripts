@@ -8,11 +8,13 @@
 #               i010.9.08 cmd2-2.4.3
 #               i010.9.09 prettytable-3.11.0
 #               i010.9.10 stevedore-5.3.0
+#               b30.13.23 28 PyYAML-6.0.2
 #
 
 #
 # Required by:
 #
+#               i010.9.31 osc-lib-3.1.0
 #               i020.9.1 python-openstackclient-7.1.3
 #
 
