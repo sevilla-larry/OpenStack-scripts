@@ -120,11 +120,10 @@ https://tarballs.opendev.org/openstack/oslo.serialization/oslo.serialization-5.5
 # 50 python-keystoneclient-5.5.0
 https://tarballs.opendev.org/openstack/python-keystoneclient/python-keystoneclient-5.5.0.tar.gz
 
-##########
-
 # 60 python-cinderclient-9.6.0
 https://tarballs.opendev.org/openstack/python-cinderclient/python-cinderclient-9.6.0.tar.gz
 
+##########
 
 # 02 Erlang 26.2.5.5
 https://github.com/erlang/otp/releases/download/OTP-26.2.5.5/otp_src_26.2.5.5.tar.gz

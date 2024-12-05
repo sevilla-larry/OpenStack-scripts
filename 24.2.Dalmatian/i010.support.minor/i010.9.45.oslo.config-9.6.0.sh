@@ -1,21 +1,26 @@
-# i020.9.1.python-openstackclient-7.1.3.sh
+# i010.9.45.oslo.config-9.6.0.sh
 #
 
 #
-# Dependecies Required:
+# Dependencies Required:
 #
-#               i010.9.01 pbr-6.1.0
-#               i010.9.04 cryptography-42.0.8
+#               i010.9.34 debtcollector-3.0.0
+#               i010.9.32 netaddr-1.3.0
+#               i010.9.10 stevedore-5.3.0
+#               i010.9.31 oslo.i18n-6.4.0
+#               i010.9.41 rfc3986-2.0.0
+#               b30.13.23 28 PyYAML-6.0.2
+#               b30.13.23.30 Requests-2.32.3
 #
 
 #
 # Required by:
 #
-#               openstack
+#               i010.9.60 python-keystoneclient-5.5.0
 #
 
-export PKG="python-openstackclient-7.1.3"
-export PKGLOG_DIR=$OSLOG/020.1
+export PKG="oslo.config-9.6.0"
+export PKGLOG_DIR=$OSLOG/010.45
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -50,7 +55,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python_openstackclient  \
+                oslo.config             \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

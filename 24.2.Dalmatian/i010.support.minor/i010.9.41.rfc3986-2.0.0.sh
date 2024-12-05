@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i010.9.44 oslo.config-9.6.0
+#               i010.9.45 oslo.config-9.6.0
 #
 
 export PKG="rfc3986-2.0.0"

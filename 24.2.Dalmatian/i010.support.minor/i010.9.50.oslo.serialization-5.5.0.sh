@@ -1,28 +1,22 @@
-# i010.9.50.python-keystoneclient-5.5.0.sh
+# i010.9.50.oslo.serialization-5.5.0.sh
 #
 
 #
 # Dependencies Required:
 #
 #               i010.9.01 pbr-6.1.0
-#               i010.9.34 debtcollector-3.0.0
-#               i010.9.19 keystoneauth1-5.8.0
-#               i010.9.44.oslo.config-9.6.0
-#               i010.9.31 oslo.i18n-6.4.0
-#               i010.9.48 oslo.serialization-5.5.0
+#               i010.9.46 msgpack-1.1.0
 #               i010.9.39 oslo.utils-7.3.0
-#               b30.13.23.30 Requests-2.32.3
-#               i010.9.10 stevedore-5.3.0
-#               b10.13.23.15 Packaging-24.1
+#               i010.9.35 tzdata-2024.2
 #
 
 #
 # Required by:
 #
-#               i020.9.1  python-openstackclient-7.1.3
+#               i010.9.60 python-keystoneclient-5.5.0
 #
 
-export PKG="python-keystoneclient-5.5.0"
+export PKG="oslo.serialization-5.5.0"
 export PKGLOG_DIR=$OSLOG/010.50
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -58,7 +52,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python-keystoneclient   \
+                oslo.serialization      \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

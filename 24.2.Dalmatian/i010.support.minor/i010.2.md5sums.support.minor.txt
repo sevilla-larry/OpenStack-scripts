@@ -118,8 +118,8 @@ fa388acbd1c9819cb96eb2a48b2b59c7 oslo.serialization-5.5.0.tar.gz
 # 50 python-keystoneclient-5.5.0
 a3a8ced9ae50dc3b2990231c37f3e228 python-keystoneclient-5.5.0.tar.gz
 
-
 # 60 python-cinderclient-9.6.0
+e9f12ae2884ab2f0a2b43f1936742fa2 python-cinderclient-9.6.0.tar.gz
 
 
 
