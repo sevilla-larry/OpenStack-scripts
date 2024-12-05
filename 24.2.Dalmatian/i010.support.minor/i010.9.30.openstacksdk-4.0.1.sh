@@ -1,4 +1,4 @@
-# i010.9.13.openstacksdk-4.0.1.sh
+# i010.9.20.openstacksdk-4.0.1.sh
 #
 
 #
@@ -8,7 +8,7 @@
 #
 
 export PKG="openstacksdk-4.0.1"
-export PKGLOG_DIR=$OSLOG/010.13
+export PKGLOG_DIR=$OSLOG/010.20
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
