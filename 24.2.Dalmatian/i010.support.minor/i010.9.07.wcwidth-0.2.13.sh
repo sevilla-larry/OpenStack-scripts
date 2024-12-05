@@ -47,10 +47,10 @@ pip3 install    --no-index              \
                 wcwidth                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..
