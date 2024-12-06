@@ -514,10 +514,10 @@ echo "."
 
 ###
 
-echo "i010.9.65.python-cinderclient-9.6.0"
-echo "i010.9.65.python-cinderclient-9.6.0" >> $OSLOG_PROCESS
+echo "i010.9.70.python-cinderclient-9.6.0"
+echo "i010.9.70.python-cinderclient-9.6.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.65.python-cinderclient-9.6.0.sh ; }
+time { bash i010.9.70.python-cinderclient-9.6.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

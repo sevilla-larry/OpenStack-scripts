@@ -9,7 +9,7 @@
 #               i010.9.10 stevedore-5.3.0
 #               i010.9.31 oslo.i18n-6.4.0
 #               i010.9.41 rfc3986-2.0.0
-#               b30.13.23 28 PyYAML-6.0.2
+#               b30.13.23.28 PyYAML-6.0.2
 #               b30.13.23.30 Requests-2.32.3
 #
 
@@ -58,10 +58,10 @@ pip3 install    --no-index              \
                 oslo.config             \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

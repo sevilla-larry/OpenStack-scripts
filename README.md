@@ -5,7 +5,11 @@
 # Author: Sevilla, Larry
 #  eMail: sevilla.larry.prg@gmail.com
 #
-# Started: 2024/Nov
+# Started: 2024/Nov 
+#          2024/Dec/06
+#               finished Python-OpenStackClient
+#                           and Support Python Apps
+#                               from Sources
 #
 # Guide based on:
 # https://docs.openstack.org/install-guide/index.html
@@ -13,13 +17,17 @@
 # Source code based on tarballs from:
 # https://tarballs.opendev.org/openstack/
 #
+# and many Python Apps from:
+# https://pypi.org/
+#   for .tar.gz and .whl files, including md5sum checks
+#
 #
 # Groupings ( numbering based on: )
 # https://www.openstack.org/software/project-navigator/openstack-components#openstack-services
 #
 # i010 OpenStack Support Minor
 # i020 OpenStack Support Major
-# i030 OpenStack Oslo packages
+# i030 OpenStack Oslo packages, (not included in the Minor group)
 #
 # i100 OpenStack Services
 # i11x  Compute
@@ -60,9 +68,15 @@
 #
 # elseif Python App in PyPi
 #
-#	whl download - pip3 install
+#   build & install from .tar.gz, and (optionally) test
 #
-# elseif App has available generic unix AMD64 binary
+#   if there is error
+#
+#       install from .whl   (big chance will be successful)
+#
+#   endif
+#
+# elseif App (not Python) has available generic unix AMD64 binary
 #
 #	binary download - install
 #

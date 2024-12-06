@@ -10,7 +10,8 @@
 #
 # Required by:
 #
-#               i010.9.07 cliff-4.7.0
+#               i010.9.11 cliff-4.7.0
+#               i010.9.70 python-cinderclient-9.6.0
 #
 
 export PKG="prettytable-3.11.0"

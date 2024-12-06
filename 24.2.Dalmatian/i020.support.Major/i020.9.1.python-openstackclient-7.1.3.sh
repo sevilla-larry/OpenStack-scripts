@@ -6,12 +6,15 @@
 #
 #               i010.9.01 pbr-6.1.0
 #               i010.9.04 cryptography-42.0.8
-#
-
-#
-# Required by:
-#
-#               openstack
+#               i010.9.11 cliff-4.7.0
+#               i010.9.12 iso8601-2.1.0
+#               i010.9.30 openstacksdk-4.0.1
+#               i010.9.40 osc-lib-3.1.0
+#               i010.9.31 oslo.i18n-6.4.0
+#               i010.9.60 python-keystoneclient-5.5.0
+#               i010.9.70 python-cinderclient-9.6.0
+#               b30.13.23.30 Requests-2.32.3
+#               i010.9.10 stevedore-5.3.0
 #
 
 export PKG="python-openstackclient-7.1.3"

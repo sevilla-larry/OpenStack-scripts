@@ -10,7 +10,7 @@
 #               i010.9.19 keystoneauth1-5.8.0
 #               i010.9.30 openstacksdk-4.0.1
 #               i010.9.39 oslo.utils-7.3.0
-#               i020.9.1 python-openstackclient-7.1.3
+#               i020.9.1  python-openstackclient-7.1.3
 #
 
 export PKG="iso8601-2.1.0-py3-none-any.whl"

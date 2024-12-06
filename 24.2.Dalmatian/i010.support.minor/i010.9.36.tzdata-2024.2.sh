@@ -5,6 +5,7 @@
 # Required by:
 #
 #               i010.9.39 oslo.utils-7.3.0
+#               i010.9.50 oslo.serialization-5.5.0
 #
 
 export PKG="tzdata-2024.2"

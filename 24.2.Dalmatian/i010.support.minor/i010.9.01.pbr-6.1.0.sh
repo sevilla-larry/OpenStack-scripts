@@ -10,7 +10,9 @@
 #               i010.9.30 openstacksdk-4.0.1
 #               i010.9.31 oslo.i18n-6.4.0
 #               i010.9.40 osc-lib-3.1.0
-#               i010.9.50 python-keystoneclient-5.5.0
+#               i010.9.50 oslo.serialization-5.5.0
+#               i010.9.60 python-keystoneclient-5.5.0
+#               i010.9.70 python-cinderclient-9.6.0
 #               i020.9.1  python-openstackclient-7.1.3
 #
 

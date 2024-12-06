@@ -1,4 +1,4 @@
-# i010.9.20.openstacksdk-4.0.1.sh
+# i010.9.30.openstacksdk-4.0.1.sh
 #
 
 #
@@ -22,7 +22,7 @@
 #
 # Required by:
 #
-#               i020.9.1 python-openstackclient-7.1.3
+#               i020.9.1  python-openstackclient-7.1.3
 #
 
 export PKG="openstacksdk-4.0.1"

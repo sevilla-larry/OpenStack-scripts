@@ -17,6 +17,7 @@
 #               i010.9.30 openstacksdk-4.0.1
 #               i010.9.40 osc-lib-3.1.0
 #               i010.9.50 python-keystoneclient-5.5.0
+#               i010.9.70 python-cinderclient-9.6.0
 #
 
 export PKG="keystoneauth1-5.8.0"

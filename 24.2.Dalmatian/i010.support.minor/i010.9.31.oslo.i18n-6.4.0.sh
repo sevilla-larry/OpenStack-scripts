@@ -13,7 +13,9 @@
 #               i010.9.39 oslo.utils-7.3.0
 #               i010.9.40 osc-lib-3.1.0
 #               i010.9.45.oslo.config-9.6.0
-#               i010.9.50 python-keystoneclient-5.5.0
+#               i010.9.60 python-keystoneclient-5.5.0
+#               i010.9.70 python-cinderclient-9.6.0
+#               i020.9.1  python-openstackclient-7.1.3
 #
 
 export PKG="oslo.i18n-6.4.0"

@@ -17,8 +17,8 @@
 #
 # Required by:
 #
-#               i010.9.40 osc-lib-3.1.0
 #               i010.9.50 python-keystoneclient-5.5.0
+#               i020.9.1  python-openstackclient-7.1.3
 #
 
 export PKG="osc-lib-3.1.0"

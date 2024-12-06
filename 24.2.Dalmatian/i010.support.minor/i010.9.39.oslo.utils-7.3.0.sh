@@ -12,14 +12,16 @@
 #               i010.9.35 pyparsing-3.1.4
 #               b10.13.23.15 Packaging-24.1
 #               i010.9.36 tzdata-2024.2
-#               b30.13.23 28 PyYAML-6.0.2
+#               b30.13.23.28 PyYAML-6.0.2
 #
 
 #
 # Required by:
 #
 #               i010.9.40 osc-lib-3.1.0
-#               i010.9.50 python-keystoneclient-5.5.0
+#               i010.9.50 oslo.serialization-5.5.0
+#               i010.9.60 python-keystoneclient-5.5.0
+#               i010.9.70 python-cinderclient-9.6.0
 #
 
 export PKG="oslo.utils-7.3.0"

@@ -69,19 +69,21 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
-###
+# ###
+#       Note: Already included in LfS 12.2
+# ###
 
-echo "i010.9.5.sshpass-1.10"
-echo "i010.9.5.sshpass-1.10" >> $OSLOG_PROCESS
+# echo "i010.9.5.sshpass-1.10"
+# echo "i010.9.5.sshpass-1.10" >> $OSLOG_PROCESS
 
-time { bash i010.9.5.sshpass-1.10.sh ; }
+# time { bash i010.9.5.sshpass-1.10.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 #####
 
