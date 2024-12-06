@@ -32,8 +32,10 @@ f9117028291767cb5dfe665e3845c5ac stevedore-5.3.0.tar.gz
 f2f7cf512ffd8a1a0ba82481fde7056b cliff-4.7.0.tar.gz
 
 # 12 iso8601-2.1.0
-#6e33910eba87066b3be7fcf3d59d16b5 iso8601-2.1.0.tar.gz              # giving ERRORs
-e3b1014d767f5178e4704b2f6b4e9562 iso8601-2.1.0-py3-none-any.whl     # alternative
+# giving ERRORs
+#6e33910eba87066b3be7fcf3d59d16b5 iso8601-2.1.0.tar.gz
+# alternative
+e3b1014d767f5178e4704b2f6b4e9562 iso8601-2.1.0-py3-none-any.whl
 
 # 13 decorator-5.1.1
 a6b34700dcac8a4bb04efd55e99626c1 decorator-5.1.1.tar.gz
