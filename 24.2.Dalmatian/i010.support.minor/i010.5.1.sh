@@ -458,24 +458,10 @@ echo "."
 
 ###
 
-echo "i010.9.44.oslo.config-9.6.0"
-echo "i010.9.44.oslo.config-9.6.0" >> $OSLOG_PROCESS
+echo "i010.9.45.oslo.config-9.6.0"
+echo "i010.9.45.oslo.config-9.6.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.44.oslo.config-9.6.0.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i010.9.45.msgpack-1.1.0"
-echo "i010.9.45.msgpack-1.1.0" >> $OSLOG_PROCESS
-
-time { bash i010.9.45.msgpack-1.1.0.sh ; }
+time { bash i010.9.45.oslo.config-9.6.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -486,24 +472,10 @@ echo "."
 
 ###
 
-echo "i010.9.48.oslo.serialization-5.5.0"
-echo "i010.9.48.oslo.serialization-5.5.0" >> $OSLOG_PROCESS
+echo "i010.9.46.msgpack-1.1.0"
+echo "i010.9.46.msgpack-1.1.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.48.oslo.serialization-5.5.0.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i010.9.50.python-keystoneclient-5.5.0"
-echo "i010.9.50.python-keystoneclient-5.5.0" >> $OSLOG_PROCESS
-
-time { bash i010.9.50.python-keystoneclient-5.5.0.sh ; }
+time { bash i010.9.46.msgpack-1.1.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -514,10 +486,38 @@ echo "."
 
 ###
 
-echo "i010.9.30.openstacksdk-4.0.1"
-echo "i010.9.30.openstacksdk-4.0.1" >> $OSLOG_PROCESS
+echo "i010.9.50.oslo.serialization-5.5.0"
+echo "i010.9.50.oslo.serialization-5.5.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.30.openstacksdk-4.0.1.sh ; }
+time { bash i010.9.50.oslo.serialization-5.5.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i010.9.60.python-keystoneclient-5.5.0"
+echo "i010.9.60.python-keystoneclient-5.5.0" >> $OSLOG_PROCESS
+
+time { bash i010.9.60.python-keystoneclient-5.5.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i010.9.65.python-cinderclient-9.6.0"
+echo "i010.9.65.python-cinderclient-9.6.0" >> $OSLOG_PROCESS
+
+time { bash i010.9.65.python-cinderclient-9.6.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
