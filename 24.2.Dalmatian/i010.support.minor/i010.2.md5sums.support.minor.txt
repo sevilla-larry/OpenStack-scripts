@@ -86,10 +86,13 @@ b0307617f8f3aa73bbcfadac52d91df7 netaddr-1.3.0.tar.gz
 # 34 debtcollector-3.0.0
 399a20e47b0aec6c3007beb7cc7e017a debtcollector-3.0.0.tar.gz
 
-# 35 tzdata-2024.2
+# 35 pyparsing-3.1.4
+92160532cc2c2f289e5f35d87ce0ed0d pyparsing-3.1.4.tar.gz
+
+# 36 tzdata-2024.2
 bda38291e705ce8329a2d49128f072fa tzdata-2024.2.tar.gz
 
-# [36-38]  allowance for future dependencies of oslo.utils and osc-lib
+# [37-38]  allowance for future dependencies of oslo.utils and osc-lib
 
 # 39 oslo.utils-7.3.0
 1dd4678e5edbc064417f6fc2d880bf29 oslo.utils-7.3.0.tar.gz

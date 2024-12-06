@@ -85,10 +85,13 @@ https://files.pythonhosted.org/packages/95/4c/063a912e20bcef7124e0df97282a8af3ff
 # 34 debtcollector-3.0.0
 https://tarballs.opendev.org/openstack/debtcollector/debtcollector-3.0.0.tar.gz
 
-# 35 tzdata-2024.2
+# 35 pyparsing-3.1.4
+https://files.pythonhosted.org/packages/83/08/13f3bce01b2061f2bbd582c9df82723de943784cf719a35ac886c652043a/pyparsing-3.1.4.tar.gz
+
+# 36 tzdata-2024.2
 https://files.pythonhosted.org/packages/e1/34/943888654477a574a86a98e9896bae89c7aa15078ec29f490fef2f1e5384/tzdata-2024.2.tar.gz
 
-# [36-38]  allowance for future dependencies of oslo.utils and osc-lib
+# [37-38]  allowance for future dependencies of oslo.utils and osc-lib
 
 # 39 oslo.utils-7.3.0
 https://tarballs.opendev.org/openstack/oslo.utils/oslo.utils-7.3.0.tar.gz
