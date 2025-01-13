@@ -23,10 +23,15 @@ bash b10.03.4.sh
 bash b10.03.8.sh
 bash b10.03.9.sh
 
+# Note intentionally EXcluded
+# b10.03.03 - SQLite
+
+
 # support apps for OpenStack, Nmap + deps, lsof & iptables
 bash b30.03.1.sh
 # support apps for OpenStack, Python Modules & Dependecies
 bash b30.03.2.sh
+
 
 # Python OpenStackClient support
 bash i010.5.1.sh
