@@ -1,15 +1,15 @@
-# i010.9.2.Erlang-26.2.5.5.sh
+# i010.9.92.Erlang-26.2.5.5.sh
 #
 
 #
 # Required by:
 #
 #				i020.9.3 RabbitMQ-4.0.3
-#               i010.9.3.Elixir-1.16.3.sh
+#                               i010.9.3.Elixir-1.16.3.sh (not installed)
 #
 
 export PKG="otp_src_26.2.5.5"
-export PKGLOG_DIR=$OSLOG/010.2
+export PKGLOG_DIR=$OSLOG/010.92
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

@@ -27,10 +27,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 ###
 
-echo "i010.9.2.Erlang-26.2.5.5"
-echo "i010.9.2.Erlang-26.2.5.5" >> $OSLOG_PROCESS
+echo "i010.9.92.Erlang-26.2.5.5"
+echo "i010.9.92.Erlang-26.2.5.5" >> $OSLOG_PROCESS
 
-time { bash i010.9.2.Erlang-26.2.5.5.sh ; }
+time { bash i010.9.92.Erlang-26.2.5.5.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -57,10 +57,10 @@ echo "."
 
 ###
 
-echo "i010.9.4.build-1.2.2.post1"
-echo "i010.9.4.build-1.2.2.post1" >> $OSLOG_PROCESS
+echo "i010.9.94.build-1.2.2.post1"
+echo "i010.9.94.build-1.2.2.post1" >> $OSLOG_PROCESS
 
-time { bash i010.9.4.build-1.2.2.post1.sh ; }
+time { bash i010.9.94.build-1.2.2.post1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

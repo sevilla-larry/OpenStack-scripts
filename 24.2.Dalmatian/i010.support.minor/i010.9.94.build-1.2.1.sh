@@ -1,4 +1,4 @@
-# i010.9.4.build-1.2.1.sh
+# i010.9.94.build-1.2.1.sh
 #
 
 #
@@ -8,7 +8,7 @@
 #
 
 export PKG="build-1.2.1"
-export PKGLOG_DIR=$OSLOG/010.4
+export PKGLOG_DIR=$OSLOG/010.94
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

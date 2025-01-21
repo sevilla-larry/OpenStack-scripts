@@ -39,4 +39,4 @@ bash i010.5.1.sh
 bash i020.5.1.sh
 
 # support apps for Controller
-# bash i010.5.11.sh
+bash i010.5.11.sh
