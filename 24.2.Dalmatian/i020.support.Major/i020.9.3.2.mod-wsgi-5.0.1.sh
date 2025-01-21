@@ -7,10 +7,10 @@
 #
 
 export PKG="mod-wsgi"
-export PKGLOG_DIR=$LFSLOG/020.3
+export PKGLOG_DIR=$OSLOG/020.3
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
-export LFSLOG_PROCESS=$LFSLOG/process.log
+export OSLOG_PROCESS=$OSLOG/process.log
 
 export APACHE_DATA_DIR=/srv/www
 export APACHE_CONF_DIR=/etc/httpd/
@@ -26,7 +26,7 @@ mkdir $PKGLOG_DIR
 
 
 echo "Pip3 Install ..."
-echo "Pip3 Install ..." >> $LFSLOG_PROCESS
+echo "Pip3 Install ..." >> $OSLOG_PROCESS
 echo "Pip3 Install ..." >> $PKGLOG_ERROR
 
 pip3 install $PKG > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
@@ -55,7 +55,7 @@ unset APACHE_CONF_DIR
 unset APACHE_CONF_FILE
 unset APACHE_CONF_EXTRA_DIR
 
-unset LFSLOG_PROCESS
+unset OSLOG_PROCESS
 unset PKGLOG_INSTALL
 unset PKGLOG_ERROR
 unset PKGLOG_DIR PKG

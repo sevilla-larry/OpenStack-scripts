@@ -17,18 +17,18 @@
 
 export PKG="rabbitmq-server-generic-unix-4.0.3"
 export PKGDEST="/usr/local"
-export PKGLOG_DIR=$LFSLOG/020.4
+export PKGLOG_DIR=$OSLOG/020.4
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
-export LFSLOG_PROCESS=$LFSLOG/process.log
+export OSLOG_PROCESS=$OSLOG/process.log
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
 
 
 echo "   Create the user and group..."
-echo "   Create the user and group..." >> $LFSLOG_PROCESS
+echo "   Create the user and group..." >> $OSLOG_PROCESS
 echo "   Create the user and group..." >> $PKGLOG_ERROR
 groupadd -g 121 rabbitmq    \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
@@ -43,7 +43,7 @@ useradd -c "rabbitmq Server"    \
 export RABBITMQ_HOME=/usr/local/rabbitmq_server-4.0.3
 
 echo "Extract/Install tar..."
-echo "Extract/Install tar..." >> $LFSLOG_PROCESS
+echo "Extract/Install tar..." >> $OSLOG_PROCESS
 echo "Extract/Install tar..." >> $PKGLOG_ERROR
 tar xvf $PKG.tar.xz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 
@@ -61,7 +61,7 @@ ln -vsf $RABBITMQ_HOME/var/log/rabbitmq /var/log/rabbitmq       \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
-unset LFSLOG_PROCESS
+unset OSLOG_PROCESS
 unset PKGLOG_OTHERS
 unset PKGLOG_TAR
 unset PKGLOG_ERROR
