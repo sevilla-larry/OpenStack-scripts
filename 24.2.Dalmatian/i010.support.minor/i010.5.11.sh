@@ -57,17 +57,17 @@ echo "."
 
 ###
 
-echo "i010.9.94.build-1.2.2.post1"
-echo "i010.9.94.build-1.2.2.post1" >> $OSLOG_PROCESS
+# echo "i010.9.94.build-1.2.1"
+# echo "i010.9.94.build-1.2.1" >> $OSLOG_PROCESS
 
-time { bash i010.9.94.build-1.2.2.post1.sh ; }
+# time { bash i010.9.94.build-1.2.1.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 # ###
 #       Note: Already included in LfS 12.2
