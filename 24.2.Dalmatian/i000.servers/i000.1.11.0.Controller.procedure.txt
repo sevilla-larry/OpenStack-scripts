@@ -315,6 +315,8 @@ G.  KeyStone - Identity service
 
         ###
 
+        cd /sources
+
         bash i151.5.11.sh
         #install first bcrypt 4.0.1
         #bash i151.9.1.KeyStone-26.0.0.sh
