@@ -1,9 +1,9 @@
 # i020.9.6.4.etcd.rc.d.sh
 
-export PKGLOG_DIR=$LFSLOG/020.6
+export PKGLOG_DIR=$OSLOG/020.6
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
-export LFSLOG_PROCESS=$LFSLOG/process.log
+export OSLOG_PROCESS=$OSLOG/process.log
 
 SHELL=/bin/bash
 ETCDIR=/etc
@@ -19,7 +19,7 @@ INITDFILEREL=../init.d/etcd
 
 
 echo "Install Init.d/rc.d ..."
-echo "Install Init.d/rc.d ..." >> $LFSLOG_PROCESS
+echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
       cp -v $INITDFILESRC $INITDFILEDST      \
@@ -43,7 +43,7 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
             >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 
-unset LFSLOG_PROCESS
+unset OSLOG_PROCESS
 unset PKGLOG_INITD
 unset PKGLOG_ERROR
 unset PKGLOG_DIR
