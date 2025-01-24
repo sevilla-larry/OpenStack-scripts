@@ -104,7 +104,8 @@ B.  Support Applications - minor
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
-        echo $LANG            # C.UTF-8
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
 
         echo $SHELL           # /bin/bash
         ls -l /bin/sh         # bash
