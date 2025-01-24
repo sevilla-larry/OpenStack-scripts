@@ -1,0 +1,20 @@
+# i151 Identity Service
+
+# 151.1 bcrypt-4.0.1
+# a98a2232a8e2af6980000a31ef14d48d bcrypt-4.0.1.tar.gz
+
+# 151.2 KeyStone-26.0.0
+#   keystone-26.0.0.tar.gz
+#   keystone.conf.sample
+
+
+# 153 Image Service
+
+# 153 Glance-29.0.0
+#   glance-29.0.0.tar.gz
+# included in "etc" subdirectory
+#   glance-api.conf.sample
+#   glance-scrubber.conf.sample
+#   glance-manage.conf.sample
+#   glance-cache.conf.sample
+#   glance.policy.yaml.sample
