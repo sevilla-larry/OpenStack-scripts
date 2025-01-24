@@ -14,7 +14,8 @@
 #               i020.9.1 python-openstackclient-7.1.3
 #
 
-export PKG="cryptography-42.0.8"
+#export PKG="cryptography-42.0.8"
+export PKG="cryptography-3.4.8"
 export PKGLOG_DIR=$OSLOG/010.04
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

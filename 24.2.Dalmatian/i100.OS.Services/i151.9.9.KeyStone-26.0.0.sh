@@ -1,10 +1,10 @@
-# i151.9.2.KeyStone-26.0.0.sh
+# i151.9.9.KeyStone-26.0.0.sh
 #
 # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
 #
 
 export PKG="keystone-26.0.0"
-export PKGLOG_DIR=$LFSLOG/151.2
+export PKGLOG_DIR=$LFSLOG/151.9
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log

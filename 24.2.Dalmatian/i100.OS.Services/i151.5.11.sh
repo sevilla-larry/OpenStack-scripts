@@ -24,10 +24,10 @@ echo "."
 
 ###
 
-echo "i151.9.2.KeyStone-26.0.0"
-echo "i151.9.2.KeyStone-26.0.0" >> $LFSLOG_PROCESS
+echo "i151.9.9.KeyStone-26.0.0"
+echo "i151.9.9.KeyStone-26.0.0" >> $LFSLOG_PROCESS
 
-time { bash i151.9.2.KeyStone-26.0.0.sh ; }
+time { bash i151.9.9.KeyStone-26.0.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

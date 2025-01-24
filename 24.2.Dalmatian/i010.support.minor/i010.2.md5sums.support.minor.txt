@@ -7,8 +7,9 @@
 # 03 cffi-1.16.0
 0bcaed453da3004d0bea103038345c1e cffi-1.16.0.tar.gz
 
-# 04 cryptography-42.0.8
-413eb813be4922f055ae84ddfcd5a017 cryptography-42.0.8.tar.gz
+# 04 cryptography-3.4.8
+e8b3e233556690acdc026b432a57c3fa cryptography-3.4.8.tar.gz
+#413eb813be4922f055ae84ddfcd5a017 cryptography-42.0.8.tar.gz
 
 # 05 autopage-0.5.2
 57936e4a9d379fe4a60eb617d8cdce33 autopage-0.5.2.tar.gz
