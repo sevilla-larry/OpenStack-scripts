@@ -51,29 +51,33 @@ chown -vR keystone:keystone /etc/keystone       \
                         /var/log/keystone       \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-# export APACHE_CONF_DIR=/etc/httpd/
-# export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
-# export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
 
-# export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES_DIR/i151.9.3.KeyStone.conf.for.Apache.txt
-# export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone.conf
+export APACHE_CONF_DIR=/etc/httpd/
+export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
+export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
 
-# cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \
-#         $KEYSTONE_CONF_FOR_APACHE_DST   \
-#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES_DIR/i151.9.9.KeyStone.conf.for.Apache.txt
+export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone.conf
 
-# chown -v apache:apache $KEYSTONE_CONF_FOR_APACHE_DST    \
-#     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \
+        $KEYSTONE_CONF_FOR_APACHE_DST   \
+        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# cat >> $APACHE_CONF_FILE << "EOF"  2>> $PKGLOG_ERROR
+chown -v apache:apache $KEYSTONE_CONF_FOR_APACHE_DST    \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-# # add wsgi KeyStone configuration file
-# Include /etc/httpd/extra/keystone.conf
-# EOF
+cat >> $APACHE_CONF_FILE << "EOF"  2>> $PKGLOG_ERROR
 
-# unset APACHE_CONF_DIR
-# unset APACHE_CONF_FILE
-# unset APACHE_CONF_EXTRA_DIR
+# add wsgi KeyStone configuration file
+Include /etc/httpd/extra/keystone.conf
+EOF
+
+unset APACHE_CONF_DIR
+unset APACHE_CONF_FILE
+unset APACHE_CONF_EXTRA_DIR
+
+unset KEYSTONE_CONF_FOR_APACHE_SRC
+unset KEYSTONE_CONF_FOR_APACHE_DST
 
 
 cd ..

@@ -240,37 +240,37 @@ E.  Support Apps - Major - Configuration 2
 
     E.03. check MemCacheD
 
-            ###
+        ###
 
-            echo "stats settings" | ncat 10.0.0.11 11211
+        echo "stats settings" | ncat 10.0.0.11 11211
 
-            ###
+        ###
 
 F.  RabbitMQ
-    
-            ### as root
 
-            pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
+        ### as root
 
-            #
-            # FAILED
-            #   su - rabbitmq -c 'rabbitmq-server -detached'
-            #
+        pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
 
-            rabbitmq-server -detached 
+        #
+        # FAILED
+        #   su - rabbitmq -c 'rabbitmq-server -detached'
+        #
 
-            rabbitmqctl start_app
+        rabbitmq-server -detached 
 
-            #                    user      password
-            rabbitmqctl add_user openstack openstack
+        rabbitmqctl start_app
 
-            rabbitmqctl set_permissions openstack ".*" ".*" ".*"
+        #                    user      password
+        rabbitmqctl add_user openstack openstack
 
-            ### to check
+        rabbitmqctl set_permissions openstack ".*" ".*" ".*"
 
-            rabbitmqctl list_users
+        ### to check
 
-            rabbitmqctl list_permissions
+        rabbitmqctl list_users
+
+        rabbitmqctl list_permissions
 
             ###
 
@@ -315,6 +315,22 @@ G.  KeyStone - Identity service
     G.02. KeyStone install
 
         ###
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
 
         cd /sources
 
@@ -378,6 +394,12 @@ G.  KeyStone - Identity service
 
         lsof -i:5000
 
+            COMMAND PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            httpd   804   root 6u  IPv6   3279      0t0  TCP *:hfcs-manager (LISTEN)
+            httpd   807 apache 6u  IPv6   3279      0t0  TCP *:hfcs-manager (LISTEN)
+            httpd   808 apache 6u  IPv6   3279      0t0  TCP *:hfcs-manager (LISTEN)
+            httpd   809 apache 6u  IPv6   3279      0t0  TCP *:hfcs-manager (LISTEN)
+
             COMMAND  PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
             httpd    766   root 8u  IPv6   6448      0t0  TCP *:commplex-main (LISTEN)
             httpd   2435 apache 8u  IPv6   6448      0t0  TCP *:commplex-main (LISTEN)
@@ -386,6 +408,17 @@ G.  KeyStone - Identity service
 
         curl -i http://controller:5000/v3
         #curl -i http://10.0.0.11:5000/v3
+
+            HTTP/1.1 200 OK
+            Date: Sat, 25 Jan 2025 00:04:16 GMT
+            Server: Apache/2.4.62 (Unix) mod_wsgi/5.0.2 Python/3.11
+            Content-Length: 248
+            Content-Type: text/plain
+
+            sys.version = '3.11.10 (main, Jan 16 2025, 06:54:35) [GCC 14.2.0]'
+            sys.prefix = '/usr'
+            sys.path = ['/usr/lib/python311.zip', '/usr/lib/python3.11', '/usr/lib/python3.11/lib-dynload', '/usr/lib/python3.11/site-packages']
+            mod_wsgi.process_group = ''
 
             HTTP/1.1 200 OK
             Date: Tue, 26 Nov 2024 06:30:49 GMT
