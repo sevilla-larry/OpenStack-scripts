@@ -14,7 +14,7 @@
 #
 
 export PKG="rabbitmq-server-4.0.3"
-export PKGLOG_DIR=$LFSLOG/020.3
+export PKGLOG_DIR=$OSLOG/020.3
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 #export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -22,25 +22,25 @@ export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 #export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
-export LFSLOG_PROCESS=$LFSLOG/process.log
+export OSLOG_PROCESS=$OSLOG/process.log
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
 
 echo "1. Extract tar..."
-echo "1. Extract tar..." >> $LFSLOG_PROCESS
+echo "1. Extract tar..." >> $OSLOG_PROCESS
 echo "1. Extract tar..." >> $PKGLOG_ERROR
 tar xvf $PKG.tar.xz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
 echo "2. Make Build ..."
-echo "2. Make Build ..." >> $LFSLOG_PROCESS
+echo "2. Make Build ..." >> $OSLOG_PROCESS
 echo "2. Make Build ..." >> $PKGLOG_ERROR
 make > $PKGLOG_BUILD 2>> $PKGLOG_ERROR
 
 echo "3. Make Install ..."
-echo "3. Make Install ..." >> $LFSLOG_PROCESS
+echo "3. Make Install ..." >> $OSLOG_PROCESS
 echo "3. Make Install ..." >> $PKGLOG_ERROR
 # initially install to a temporary directory
 make install DESTDIR=/tmp/rmq	\
@@ -65,7 +65,7 @@ EOF
 
 cd ..
 rm -rf $PKG
-unset LFSLOG_PROCESS
+unset OSLOG_PROCESS
 #unset PKGLOG_OTHERS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 #PKGLOG_CONFIG

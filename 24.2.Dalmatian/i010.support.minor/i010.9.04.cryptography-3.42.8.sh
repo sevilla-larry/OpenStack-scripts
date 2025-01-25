@@ -1,10 +1,8 @@
-# i020.9.2.PyMySQL-1.1.1.sh
-#
-# https://docs.openstack.org/install-guide/environment-sql-database.html
+# i010.9.04.cryptography-3.42.8.sh
 #
 
-export PKG="PyMySQL-1.1.1-py3-none-any.whl"
-export PKGLOG_DIR=$OSLOG/020.2
+export PKG="cryptography==3.42.8"
+export PKGLOG_DIR=$OSLOG/010.04
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
