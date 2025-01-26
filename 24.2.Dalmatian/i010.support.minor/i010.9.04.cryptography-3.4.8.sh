@@ -1,7 +1,7 @@
-# i010.9.04.cryptography-3.42.8.sh
+# i010.9.04.cryptography-3.4.8.sh
 #
 
-export PKG="cryptography==3.42.8"
+export PKG="cryptography==3.4.8"
 export PKGLOG_DIR=$OSLOG/010.04
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
