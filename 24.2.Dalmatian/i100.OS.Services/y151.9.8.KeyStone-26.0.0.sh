@@ -4,7 +4,7 @@
 #
 
 export PKG="keystone-26.0.0"
-export PKGLOG_DIR=$OSLOG/151.8
+export PKGLOG_DIR=$OSLOG/251.8
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log

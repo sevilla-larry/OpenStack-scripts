@@ -27,7 +27,8 @@
 #
 # i010 OpenStack Support Minor
 # i020 OpenStack Support Major
-# i030 OpenStack Oslo packages, (not included in the Minor group)
+# i030 OpenStack Oslo  packages (not included in the Minor group)
+# i040 OpenStack other packages
 #
 # i100 OpenStack Services
 # i11x  Compute
