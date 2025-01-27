@@ -1,0 +1,23 @@
+# support apps - Oslo support
+
+
+# 01 python-dateutil-2.9.0.post0
+81cb6aad924ef40ebfd3d62eaebe47c6 python-dateutil-2.9.0.post0.tar.gz
+
+# 02 fasteners-0.19
+e957e11c2e00629e44166e1d2881798e fasteners-0.19.tar.gz
+
+# 03 WebOb-1.8.7
+10191c69fa5a2c00f3b9abfb8937b415 WebOb-1.8.7.tar.gz
+
+# 04 dnspython-2.6.1
+ad29d0392621fb107e0eac4beed79ce5 dnspython-2.6.1.tar.gz
+
+# 05 greenlet-3.0.3
+170495b0af3b63ca40ca637dd6e5c6ef greenlet-3.0.3.tar.gz
+
+# 06 eventlet-0.36.1
+47eb406444cb5e071aa4f30f1d7eb7cb eventlet-0.36.1.tar.gz
+
+# ?? futurist-3.0.0
+cd171597ea297afc0ef98b2f8b96081b futurist-3.0.0.tar.gz

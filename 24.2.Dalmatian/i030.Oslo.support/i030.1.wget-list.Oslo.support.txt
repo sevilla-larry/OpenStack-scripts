@@ -1,0 +1,23 @@
+# support apps - Oslo support
+
+
+# 01 python-dateutil-2.9.0.post0
+https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz
+
+# 02 fasteners-0.19
+https://files.pythonhosted.org/packages/5f/d4/e834d929be54bfadb1f3e3b931c38e956aaa3b235a46a3c764c26c774902/fasteners-0.19.tar.gz
+
+# 03 WebOb-1.8.7
+https://files.pythonhosted.org/packages/c7/45/ee5f034fb4ebe3236fa49e5a4fcbc54444dd22ecf33079cf56f9606d479d/WebOb-1.8.7.tar.gz
+
+# 04 dnspython-2.6.1
+https://files.pythonhosted.org/packages/37/7d/c871f55054e403fdfd6b8f65fd6d1c4e147ed100d3e9f9ba1fe695403939/dnspython-2.6.1.tar.gz
+
+# 05 greenlet-3.0.3
+https://files.pythonhosted.org/packages/17/14/3bddb1298b9a6786539ac609ba4b7c9c0842e12aa73aaa4d8d73ec8f8185/greenlet-3.0.3.tar.gz
+
+# 06 eventlet-0.36.1
+https://files.pythonhosted.org/packages/1b/df/f441947eef23192c9f179e46868ee8510a6f7b6627b76b88f07692f9c706/eventlet-0.36.1.tar.gz
+
+# ?? futurist-3.0.0
+https://files.pythonhosted.org/packages/4c/24/864408313afba48440ee3a560e1a70b62b39e6c0dfeddea9506699e6e606/futurist-3.0.0.tar.gz

@@ -1,0 +1,37 @@
+# support apps - Oslo
+
+
+# 01 oslo.context-5.6.0
+2bbf7900e6932102f6964acfb3f015be oslo.context-5.6.0.tar.gz
+
+# 02 oslo.log-6.1.2
+5d26e88c7c7e7ef412d419e1dbb5e18b oslo.log-6.1.2.tar.gz
+
+# 03 oslo.cache-3.8.0
+a89596207dac25dadc0f9df6c7b3970c oslo.cache-3.8.0.tar.gz
+
+# 04 oslo.concurrency-6.1.0
+edfdf16c0feb012e243ce082291e8e8e oslo.concurrency-6.1.0.tar.gz
+
+# 05 oslo.service-3.5.0
+0353631e9fbf97528811fb8cae94b3aa oslo.service-3.5.0.tar.gz
+
+# 06 oslo.middleware-6.2.0
+8bafecafcfb8fae058f1e732611c4f3f oslo.middleware-6.2.0.tar.gz
+
+# 07 oslo.metrics-0.9.0
+92ed67cda1ea8b000781d7c2285b4840 oslo.metrics-0.9.0.tar.gz
+
+# 08 oslo.messaging-14.9.1
+d272ab9e36d502addf7cd98e207c18a2 oslo.messaging-14.9.1.tar.gz
+
+# 05 oslo.db-16.0.0
+2b1cd7d1e2fb2503379eeafccdecbf12 oslo.db-16.0.0.tar.gz
+
+# 06 oslo.middleware-6.2.0
+
+# 07 oslo.policy-4.4.0
+7e15587f773e8a632362886e036adf5d oslo.policy-4.4.0.tar.gz
+
+# 08 oslo.upgradecheck-2.4.0
+8bce58a385b16626fbdcba30852495e8 oslo.upgradecheck-2.4.0.tar.gz

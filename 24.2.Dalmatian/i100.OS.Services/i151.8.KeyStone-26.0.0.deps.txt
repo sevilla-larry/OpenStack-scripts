@@ -1,520 +1,196 @@
-KeyStone-26.0.0
+##########
 
-# Requirements lower bounds listed here are our best effort to keep them up to
-# date but we do not test them so no guarantee of having them all correct. If
-# you find any incorrect lower bounds, let us know or propose a fix.
+A:  i040.9.01 oslo.context-5.6.0                    oslo.context>=2.21.0 # Apache-2.0       NO test
 
-# The order of packages is significant, because pip processes them in the order
-# of appearance. Changing the order has an impact on the overall integration
-# process, which may cause wedges in the gate later.
+D:
+    i010.9.01 pbr-6.1.0                             pbr>=2.0.0 # Apache-2.0
+    i010.9.34 debtcollector-3.0.0                   debtcollector>=1.2.0 # Apache-2.0
 
-pbr!=2.1.0,>=2.0.0 # Apache-2.0                     6.1.0
-WebOb>=1.7.1 # MIT                                          1.8.9
-Flask!=0.11,>=1.0.2  # BSD                                  3.1.0
-Flask-RESTful>=0.3.5  # BSD                                 0.3.5
-cryptography>=2.7 # BSD/Apache-2.0                  3.4.8
-SQLAlchemy>=1.4.0 # MIT                                     2.0.37
-stevedore>=1.20.0 # Apache-2.0                      5.3.0
-passlib>=1.7.0 # BSD                                        1.7.4
-python-keystoneclient>=3.8.0 # Apache-2.0           5.5.0
-keystonemiddleware>=7.0.0 # Apache-2.0                      10.8.0
-bcrypt>=3.1.3 # Apache-2.0                          4.0.1
-scrypt>=0.8.0 # BSD                                         0.8.27
-oslo.cache>=1.26.0 # Apache-2.0                             3.9.0
-oslo.config>=6.8.0 # Apache-2.0                     9.6.0
-oslo.context>=2.22.0 # Apache-2.0                           5.7.0
-oslo.messaging>=5.29.0 # Apache-2.0                         16.0.0
-oslo.db>=6.0.0 # Apache-2.0                                 17.1.0
-oslo.i18n>=3.15.3 # Apache-2.0                      6.4.0
-oslo.log>=3.44.0 # Apache-2.0                               7.0.0
-oslo.middleware>=3.31.0 # Apache-2.0                        6.3.0
-oslo.policy>=3.10.0 # Apache-2.0                            4.5.0
-oslo.serialization!=2.19.1,>=2.18.0 # Apache-2.0    5.5.0
-oslo.upgradecheck>=1.3.0 # Apache-2.0                       2.4.0
-oslo.utils>=3.33.0 # Apache-2.0                     7.3.0
-oauthlib>=0.6.2 # BSD                                       3.2.2
-pysaml2>=5.0.0                                              7.5.0
-PyJWT>=1.6.1 # MIT                                          2.10.1
-dogpile.cache>=1.0.2 # BSD                          1.3.3
-jsonschema>=3.2.0 # MIT                                     4.23.0
-pycadf!=2.0.0,>=1.1.0 # Apache-2.0                          4.0.0
-msgpack>=0.5.0 # Apache-2.0                         1.1.0
-osprofiler>=1.4.0 # Apache-2.0                              4.2.0
+B:  i040.9.02 oslo.log-6.1.2                        oslo.log>=4.2.1 # Apache-2.0
 
+#####
 
+A:  i030.9.01 python-dateutil-2.9.0.post0           python-dateutil>=2.7.0 # BSD            NO test
 
+D:  b30.13.23.33 six-1.16.0
 
+B:  i040.9.02 oslo.log-6.1.2                        oslo.log>=4.2.1 # Apache-2.0
 
+###
 
+A:  i040.9.02 oslo.log-6.1.2                        oslo.log>=4.2.1 # Apache-2.0            NO test
 
+D:
+    i010.9.01 pbr-6.1.0                             pbr>=3.1.1 # Apache-2.0
+    i010.9.45 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
+    i040.9.01 oslo.context-5.6.0                    oslo.context>=2.21.0 # Apache-2.0
+    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.20.0 # Apache-2.0
+    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.36.0 # Apache-2.0
+    i010.9.50 oslo.serialization-5.5.0              oslo.serialization>=2.25.0 # Apache-2.0
+    i030.9.01 python-dateutil-2.9.0.post0           python-dateutil>=2.7.0 # BSD
 
+B:  i040.9.03 oslo.cache-3.8.0                      oslo.cache>=1.26.0 # Apache-2.0
 
+#####
 
+A:  i040.9.03 oslo.cache-3.8.0                      oslo.cache>=1.26.0 # Apache-2.0             NO test
 
-python-openstackclient-7.1.3
+D:
+    i010.9.14 dogpile.cache-1.3.3                   dogpile.cache>=1.3.1 # BSD
+    i010.9.45 oslo.config-9.6.0                     oslo.config>=8.1.0 # Apache-2.0
+    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=5.0.0 # Apache-2.0
+    i040.9.02 oslo.log-6.1.2                        oslo.log>=4.2.1 # Apache-2.0
+    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=4.2.0 # Apache-2.0
 
-# Requirements lower bounds listed here are our best effort to keep them up to
-# date but we do not test them so no guarantee of having them all correct. If
-# you find any incorrect lower bounds, let us know or propose a fix.
+B:  i151.9.1 KeyStone-26.0.0
 
-pbr!=2.1.0,>=2.0.0 # Apache-2.0
+##########
 
-cryptography>=2.7 # BSD/Apache-2.0
-cliff>=3.5.0 # Apache-2.0
-iso8601>=0.1.11 # MIT
-openstacksdk>=3.3.0 # Apache-2.0
-osc-lib>=2.3.0 # Apache-2.0
-oslo.i18n>=3.15.3 # Apache-2.0
-python-keystoneclient>=3.22.0 # Apache-2.0
-python-cinderclient>=3.3.0 # Apache-2.0
-requests>=2.27.0 # Apache-2.0
-stevedore>=2.0.1 # Apache-2.0
+A:  i030.9.02 fasteners-0.19                        fasteners>=0.7.0 # Apache-2.0               with Test
+
+B:  i040.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=3.25.0 # Apache-2.0
+
+###
+
+A:  i040.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=3.25.0 # Apache-2.0
+
+D:
+    i010.9.01 pbr-6.1.0                             pbr>=2.0.0 # Apache-2.0
+    i010.9.45 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
+    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
+    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.33.0 # Apache-2.0
+    i030.9.02 fasteners-0.19                        fasteners>=0.7.0 # Apache-2.0               with Test
+
+B:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+
+#####
+
+A:  i030.9.03 WebOb-1.8.7                           WebOb>=1.7.1 # MIT                          with Test
+
+B:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+
+###
+
+A:  i030.9.04 dnspython-2.6.1                       dnspython>=1.15.0                           with Test
+
+B:  i030.9.06 eventlet-0.36.1                       eventlet>=0.25.2 # MIT
+
+###
+
+A:  i030.9.05 greenlet-3.0.3                        greenlet>=0.4.15 # MIT                      NO test
+
+B:
+    i030.9.06 eventlet-0.36.1                       eventlet>=0.25.2 # MIT
+    i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+
+###
+
+A:  i030.9.06 eventlet-0.36.1                       eventlet>=0.25.2 # MIT                      with Test
+
+D:
+    i030.9.04 dnspython-2.6.1                       dnspython>=1.15.0
+    i030.9.05 greenlet-3.0.3                        greenlet>=1.0
+
+B:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+
+#####
+
+A:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+
+D:
+    i030.9.03 WebOb-1.8.7                           WebOb>=1.7.1 # MIT                          with Test
+    i010.9.34 debtcollector-3.0.0                   debtcollector>=1.2.0 # Apache 2.0
+    i030.9.06 eventlet-0.36.1                       eventlet>=0.25.2 # MIT
+    i030.9.05 greenlet-3.0.3                        greenlet>=0.4.15 # MIT
+    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.40.2 # Apache-2.0
+    i040.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=3.25.0 # Apache-2.0
+    i010.9.45 oslo.config-9.6.0                     oslo.config>=5.1.0 # Apache-2.0
+    i040.9.02 oslo.log-6.1.2                        oslo.log>=3.36.0 # Apache-2.0
+    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
+    PasteDeploy>=1.5.0 # MIT
+    Routes>=2.3.1 # MIT
+    Paste>=2.0.2 # MIT
+    Yappi>=1.0 # MIT
+
+B:  oslo.messaging    
+
+#####
+
+oslo.messaging-14.9.1
+
+pbr>=2.0.0 # Apache-2.0
+
+futurist>=1.2.0 # Apache-2.0
+oslo.config>=5.2.0 # Apache-2.0
+oslo.context>=5.3.0 # Apache-2.0
+oslo.log>=3.36.0 # Apache-2.0
+oslo.utils>=3.37.0 # Apache-2.0
+oslo.serialization>=2.18.0 # Apache-2.0
+oslo.service>=1.24.0 # Apache-2.0
+stevedore>=1.20.0 # Apache-2.0
+debtcollector>=1.2.0 # Apache-2.0
+
+# for jsonutils
+cachetools>=2.0.0 # MIT License
+
+WebOb>=1.7.1 # MIT
+
+# for the routing notifier
+PyYAML>=3.13 # MIT
+
+# rabbit driver is the default
+# we set the amqp version to ensure heartbeat works
+amqp>=2.5.2 # BSD
+kombu>=4.6.6 # BSD
+
+# middleware
+oslo.middleware>=3.31.0 # Apache-2.0
+
+# metrics
+oslo.metrics>=0.2.1 # Apache-2.0
 
 ###############
 
-A:  i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0                 No test
-
-B:
-    i010.9.10 stevedore-5.3.0               stevedore>=2.0.1 # Apache-2.0
-    i010.9.18 os-service-types-1.7.0        os-service-types>=1.2.0  # Apache-2.0
-    i010.9.19 keystoneauth1-5.8.0           keystoneauth1>=3.18.0 # Apache-2.0
-    i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0               oslo.i18n>=3.15.3 # Apache-2.0
-    i010.9.40 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0
-    i010.9.50 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0
-    i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-    i010.9.70 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
-    i020.9.1  python-openstackclient-7.1.3
-
-##########
-
-A:  i010.9.02 pycparser-2.21                pycparser                                       with test
-
-B:  i010.9.03 cffi-1.16.0                   cffi>=1.12
-
-#####
-
-A:  i010.9.03 cffi-1.16.0                   cffi>=1.12                                      with test
-
-D:  i010.9.02 pycparser-2.21                pycparser
-
-B:  i010.9.04 cryptography-42.0.8           cryptography>=2.7 # BSD/Apache-2.0
-
-#####
-
-A:  i010.9.04 cryptography-42.0.8           cryptography>=2.7 # BSD/Apache-2.0              No test
-
-D:  i010.9.03 cffi-1.16.0                   cffi>=1.12
-
-B:
-    i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-    i020.9.1  python-openstackclient-7.1.3
-
-##########
-
-A:  i010.9.05 autopage-0.5.2                autopage>=0.4.0 # Apache 2.0                    No test
-
-B:  i010.9.11.cliff-4.7.0                   cliff>=3.5.0 # Apache-2.0
-
-##########
-
-A:  i010.9.06 pyperclip-1.9.0               pyperclip >= 1.6                                No test
-
-B:  i010.9.08 cmd2-2.4.3                    cmd2>=1.0.0 # MIT
-
-#####
-
-A:  i010.9.07 wcwidth-0.2.13                wcwidth >= 0.1.7                                No test
-
-B:
-    i010.9.08 cmd2-2.4.3                    cmd2>=1.0.0 # MIT
-    i010.9.09 prettytable-3.11.0            PrettyTable>=0.7.2 # BSD                        with test
-
-#####
-
-A:  i010.9.08 cmd2-2.4.3                    cmd2>=1.0.0 # MIT                               with test
-
-D:
-    b30.13.24.02 Attrs-24.2.0               attrs >= 16.3.0
-    i010.9.06 pyperclip-1.9.0               pyperclip >= 1.6
-    i010.9.07 wcwidth-0.2.13                wcwidth >= 0.1.7
-
-B:  i010.9.11.cliff-4.7.0                   cliff>=3.5.0 # Apache-2.0
-
-##########
-
-A:  i010.9.09 prettytable-3.11.0            PrettyTable>=0.7.2 # BSD                        No test
-
-D:  i010.9.07 wcwidth-0.2.13                wcwidth >= 0.1.7
-
-B:
-    i010.9.11.cliff-4.7.0                   cliff>=3.5.0 # Apache-2.0
-    i010.9.70 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
-
-#####
-
-A:  i010.9.10 stevedore-5.3.0               stevedore>=2.0.1 # Apache-2.0                   No test
-
-D:  i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-
-B:
-    i010.9.11.cliff-4.7.0                   cliff>=3.5.0 # Apache-2.0
-    i010.9.14 dogpile.cache-1.3.3           dogpile.cache>=0.6.5 # BSD
-    i010.9.19 keystoneauth1-5.8.0           keystoneauth1>=3.18.0 # Apache-2.0
-    i010.9.40 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0
-    i010.9.45 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
-    i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-    i010.9.70 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
-    i020.9.1  python-openstackclient-7.1.3
-
-#####
-
-A:  i010.9.11.cliff-4.7.0                   cliff>=3.5.0 # Apache-2.0                       No test
-
-D:
-    i010.9.05 autopage-0.5.2                autopage>=0.4.0 # Apache 2.0
-    importlib_metadata>=4.4;python_version<"3.10" # Apache-2.0
-    i010.9.08 cmd2-2.4.3                    cmd2>=1.0.0 # MIT
-    i010.9.09 prettytable-3.11.0            PrettyTable>=0.7.2 # BSD
-    i010.9.10 stevedore-5.3.0               stevedore>=2.0.1 # Apache-2.0
-    b30.13.23.28 PyYAML-6.0.2               PyYAML>=3.12 # MIT
-
-B:
-    i010.9.31 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0
-    i020.9.1  python-openstackclient-7.1.3
-
-##########
-
-A:  i010.9.12 iso8601-2.1.0                 iso8601>=0.1.11 # MIT                           No test
-
-B:
-    i010.9.19 keystoneauth1-5.8.0           keystoneauth1>=3.18.0 # Apache-2.0
-    i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-    i020.9.1  python-openstackclient-7.1.3
-
-#####
-
-A:  i010.9.13 decorator-5.1.1               decorator>=4.4.1 # BSD                          0 test
-
-B:
-    i010.9.14 dogpile.cache-1.3.3           dogpile.cache>=0.6.5 # BSD
-    i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-
-####
-
-A:  i010.9.14 dogpile.cache-1.3.3           dogpile.cache>=0.6.5 # BSD                      with test
-
-D:
-    i010.9.13 decorator-5.1.1               decorator>=4.4.1 # BSD
-    i010.9.10 stevedore-5.3.0               stevedore>=2.0.1 # Apache-2.0
-
-B:  i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-
-#####
-
-A:  i010.9.15 jmespath-1.0.1                jmespath>=0.9.0 # MIT
-
-B:  i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-
-#####
-
-A:  i010.9.16 jsonpointer-3.0.0             jsonpointer>=1.9                                        0 test
-
-B:  i010.9.17 jsonpatch-1.33                jsonpatch!=1.20,>=1.16 # BSD
-
-#####
-
-A:  i010.9.17 jsonpatch-1.33                jsonpatch!=1.20,>=1.16 # BSD                            0 test
-
-D:  i010.9.16 jsonpointer-3.0.0             jsonpointer>=1.9
-
-B:  i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-
-##########
-
-A:  i010.9.18 os-service-types-1.7.0        os-service-types>=1.2.0  # Apache-2.0                   No test
-
-D:  i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-
-B:
-    i010.9.19 keystoneauth1-5.8.0           keystoneauth1>=3.18.0 # Apache-2.0
-    i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-
-#####
-
-A:  i010.9.19 keystoneauth1-5.8.0           keystoneauth1>=3.18.0 # Apache-2.0                              No test
-
-D:
-    i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-    i010.9.12 iso8601-2.1.0                 iso8601>=0.1.11 # MIT
-    b30.13.23.30 Requests-2.32.3            requests>=2.14.2 # Apache-2.0
-    i010.9.10 stevedore-5.3.0               stevedore>=2.0.1 # Apache-2.0
-    i010.9.18 os-service-types-1.7.0        os-service-types>=1.2.0  # Apache-2.0
-
-B:
-    i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-    i010.9.40 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0
-    i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-    i010.9.70 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
-
-#####
-
-A:  i010.9.20 netifaces-0.11.0              netifaces>=0.10.4 # MIT                                         0 test
-
-B:
-    i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-
-#####
-
-A:  i010.9.21 platformdirs-4.3.6            platformdirs>=3 # MIT License                                   No test
-
-B:  i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-
-#####
-
-A:  i010.9.22 requestsexceptions-1.4.0      requestsexceptions>=1.2.0 # Apache-2.0                          0 test
-
-B:  i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-
-#####
-
-    i010.9.[23-29]  allowance for future dependencies of openstacksdk
-
-#####
-
-A:  i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0                                No test
-
-D:  
-    i010.9.04 cryptography-42.0.8           cryptography>=2.7 # BSD/Apache-2.0
-    i010.9.13 decorator-5.1.1               decorator>=4.4.1 # BSD
-    i010.9.14 dogpile.cache-1.3.3           dogpile.cache>=0.6.5 # BSD
-    i010.9.12 iso8601-2.1.0                 iso8601>=0.1.11 # MIT
-    i010.9.15 jmespath-1.0.1                jmespath>=0.9.0 # MIT
-    i010.9.17 jsonpatch-1.33                jsonpatch!=1.20,>=1.16 # BSD
-    i010.9.19 keystoneauth1-5.8.0           keystoneauth1>=3.18.0 # Apache-2.0
-    i010.9.20 netifaces-0.11.0              netifaces>=0.10.4 # MIT
-    i010.9.18 os-service-types-1.7.0        os-service-types>=1.7.0 # Apache-2.0
-    i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-    i010.9.21 platformdirs-4.3.6            platformdirs>=3 # MIT License
-    b30.13.23.28 PyYAML-6.0.2               PyYAML>=3.13 # MIT
-    i010.9.22 requestsexceptions-1.4.0      requestsexceptions>=1.2.0 # Apache-2.0
-    
-B:  i020.9.1  python-openstackclient-7.1.3
-
-###############
-
-A:  i010.9.31 oslo.i18n-6.4.0               oslo.i18n>=3.15.3 # Apache-2.0                                  No test
-
-D:  i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-
-B:
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-    i010.9.40 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0
-    i010.9.45.oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
-    i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-    i010.9.70 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
-    i020.9.1  python-openstackclient-7.1.3
-
-#####
-
-A:  i010.9.32 netaddr-1.3.0                 netaddr>=0.10.0 # BSD                                           with tests
-
-B:
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-    i010.9.45 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
-
-#####
-
-A:  i010.9.33 wrapt-1.16.0                  wrapt>=1.7.0 # BSD License                                      with test
-
-B:  i010.9.34 debtcollector-3.0.0           debtcollector>=1.2.0 # Apache-2.0
-
-#####
-
-A:  i010.9.34 debtcollector-3.0.0           debtcollector>=1.2.0 # Apache-2.0                               No test
-
-D:  i010.9.33 wrapt-1.16.0                  wrapt>=1.7.0 # BSD License
-
-B:
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-    i010.9.45 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
-    i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-
-#####
-
-A:  i010.9.35 pyparsing-3.1.4               pyparsing>=2.1.0 # MIT                                          No test
-
-B:  i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-
-#####
-
-A:  i010.9.36 tzdata-2024.2                 tzdata>=2022.4;python_version>="3.9" # MIT                      with test
-
-B:
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-    i010.9.50 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0                         No test
-
-#####
-
-    i010.9.[37-38]  allowance for future dependencies of oslo.utils and osc-lib
-
-#####
-
-A:  i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0                                 No test
-
-D:
-    # NOTE(dhellmann): Because oslo.utils is used by the client libraries,
-    # we do not want to add a lot of dependencies to it. If you find that
-    # adding a new feature to oslo.utils means adding a new dependency,
-    # that is a likely indicator that the feature belongs somewhere else.
-
-    i010.9.12 iso8601-2.1.0                 iso8601>=0.1.11 # MIT
-    i010.9.31 oslo.i18n-6.4.0               oslo.i18n>=3.15.3 # Apache-2.0
-    #@! pytz>=2013.6;python_version<"3.9" # MIT
-    i010.9.32 netaddr-1.3.0                 netaddr>=0.10.0 # BSD
-    i010.9.20 netifaces-0.11.0              netifaces>=0.10.4 # MIT
-    i010.9.34 debtcollector-3.0.0           debtcollector>=1.2.0 # Apache-2.0
-    i010.9.35 pyparsing-3.1.4               pyparsing>=2.1.0 # MIT
-    b10.13.23.15 Packaging-24.1             packaging>=20.4 # BSD
-    i010.9.36 tzdata-2024.2                 tzdata>=2022.4;python_version>="3.9" # MIT
-    b30.13.23.28 PyYAML-6.0.2               PyYAML>=3.13 # MIT
-
-B:
-    i010.9.40 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0
-    i010.9.50 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0
-    i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-    i010.9.70 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
-
-#####
-
-A:  i010.9.40 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0                                     No test
-
-D:
-    # The order of packages is significant, because pip processes them in the order
-    # of appearance. Changing the order has an impact on the overall integration
-    # process, which may cause wedges in the gate later.
-
-    i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-
-    i010.9.11.cliff-4.7.0                   cliff>=3.2.0 # Apache-2.0
-    i010.9.19 keystoneauth1-5.8.0           keystoneauth1>=3.14.0 # Apache-2.0
-    i010.9.30 openstacksdk-4.0.1            openstacksdk>=0.15.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0               oslo.i18n>=3.15.3 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-    b30.13.23.30 Requests-2.32.3            requests>=2.14.2 # Apache-2.0
-    i010.9.10 stevedore-5.3.0               stevedore>=1.20.0 # Apache-2.0
-
-B:
-    i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-    i020.9.1  python-openstackclient-7.1.3
-
-###############
-
-A:  i010.9.41 rfc3986-2.0.0                 rfc3986>=1.2.0 # Apache-2.0                                     with test
-
-B:  i010.9.45 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
-
-#####
-
-A:  i010.9.45 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0                                 ???
-
-D:
-    i010.9.34 debtcollector-3.0.0           debtcollector>=1.2.0 # Apache-2.0
-    i010.9.32 netaddr-1.3.0                 netaddr>=0.10.0 # BSD
-    i010.9.10 stevedore-5.3.0               stevedore>=1.20.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0               oslo.i18n>=3.15.3 # Apache-2.0
-    i010.9.41 rfc3986-2.0.0                 rfc3986>=1.2.0 # Apache-2.0
-    b30.13.23.28 PyYAML-6.0.2               PyYAML>=5.1 # MIT
-    b30.13.23.30 Requests-2.32.3            requests>=2.18.0 # Apache-2.0
-
-B:  i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-
-#####
-
-A:  i010.9.46 msgpack-1.1.0                 msgpack>=0.5.2 # Apache-2.0                                     with test
-
-B:  i010.9.50 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0
-
-#####
-
-A:  i010.9.50 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0                         No test
-
-D:
-    # NOTE(harlowja): Because oslo.serialization is used by the client libraries,
-    # we do not want to add a lot of dependencies to it. If you find that
-    # adding a new feature to oslo.serialization means adding a new dependency,
-    # that is a likely indicator that the feature belongs somewhere else.
-
-    i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-    i010.9.46 msgpack-1.1.0                 msgpack>=0.5.2 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-    pytz>=2013.6;python_version<"3.9" # MIT
-    i010.9.36 tzdata-2024.2                 tzdata>=2022.4;python_version>="3.9" # MIT
-
-B:  i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-
-#####
-
-A:  i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0                      No test
+A:  i151.9.1 KeyStone-26.0.0
 
 D:
     # Requirements lower bounds listed here are our best effort to keep them up to
     # date but we do not test them so no guarantee of having them all correct. If
     # you find any incorrect lower bounds, let us know or propose a fix.
 
-    i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-
-    i010.9.34 debtcollector-3.0.0           debtcollector>=1.2.0 # Apache-2.0
-    i010.9.19 keystoneauth1-5.8.0           keystoneauth1>=3.4.0 # Apache-2.0
-    i010.9.45 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0               oslo.i18n>=3.15.3 # Apache-2.0
-    i010.9.50 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-    b30.13.23.30 Requests-2.32.3            requests>=2.14.2 # Apache-2.0
-    i010.9.10 stevedore-5.3.0               stevedore>=1.20.0 # Apache-2.0
-    b10.13.23.15 Packaging-24.1             packaging>=20.4 # BSD
-
-B:  i020.9.1  python-openstackclient-7.1.3
-
-############### 
-
-A:  i010.9.70 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0                         No test
-
-D:
     # The order of packages is significant, because pip processes them in the order
     # of appearance. Changing the order has an impact on the overall integration
     # process, which may cause wedges in the gate later.
 
-    i010.9.01 pbr-6.1.0                     pbr>=5.5.0 # Apache-2.0
-    i010.9.09 prettytable-3.11.0            PrettyTable>=0.7.2 # BSD
-    i010.9.19 keystoneauth1-5.8.0           keystoneauth1>=5.0.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0               oslo.i18n>=5.0.1 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0              oslo.utils>=4.8.0 # Apache-2.0
-    b30.13.23.30 Requests-2.32.3            requests>=2.25.1 # Apache-2.0
-    i010.9.10 stevedore-5.3.0               stevedore>=3.3.0 # Apache-2.0
-
-B:  i020.9.1  python-openstackclient-7.1.3
-
-###############
-
-A:  i020.9.1  python-openstackclient-7.1.3                                                                  No test
-
-D:
-    # Requirements lower bounds listed here are our best effort to keep them up to
-    # date but we do not test them so no guarantee of having them all correct. If
-    # you find any incorrect lower bounds, let us know or propose a fix.
-
-    i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-
-    i010.9.04 cryptography-42.0.8           cryptography>=2.7 # BSD/Apache-2.0
-    i010.9.11 cliff-4.7.0                   cliff>=3.5.0 # Apache-2.0
-    i010.9.12 iso8601-2.1.0                 iso8601>=0.1.11 # MIT
-    i010.9.30 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
-    i010.9.40 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0               oslo.i18n>=3.15.3 # Apache-2.0
-    i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
-    i010.9.70 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
-    b30.13.23.30 Requests-2.32.3            requests>=2.27.0 # Apache-2.0
-    i010.9.10 stevedore-5.3.0               stevedore>=2.0.1 # Apache-2.0
+    pbr!=2.1.0,>=2.0.0 # Apache-2.0                     6.1.0
+    WebOb>=1.7.1 # MIT                                          1.8.9
+    Flask!=0.11,>=1.0.2  # BSD                                  3.1.0
+    Flask-RESTful>=0.3.5  # BSD                                 0.3.5
+    cryptography>=2.7 # BSD/Apache-2.0                  3.4.8
+    SQLAlchemy>=1.4.0 # MIT                                     2.0.37
+    stevedore>=1.20.0 # Apache-2.0                      5.3.0
+    passlib>=1.7.0 # BSD                                        1.7.4
+    python-keystoneclient>=3.8.0 # Apache-2.0           5.5.0
+    keystonemiddleware>=7.0.0 # Apache-2.0                      10.8.0
+    bcrypt>=3.1.3 # Apache-2.0                          4.0.1
+    scrypt>=0.8.0 # BSD                                         0.8.27
+    oslo.cache>=1.26.0 # Apache-2.0                             3.8.0               NO test
+    i010.9.45 oslo.config-9.6.0                         oslo.config>=6.8.0 # Apache-2.0
+    oslo.context>=2.22.0 # Apache-2.0                           5.6.0               NO test
+    oslo.messaging>=5.29.0 # Apache-2.0                         14.9.1
+    oslo.db>=6.0.0 # Apache-2.0                                 16.0.0
+    i010.9.31 oslo.i18n-6.4.0                           oslo.i18n>=3.15.3 # Apache-2.0
+    oslo.log>=3.44.0 # Apache-2.0                               6.1.2               NO test
+    oslo.middleware>=3.31.0 # Apache-2.0                        6.2.0
+    oslo.policy>=3.10.0 # Apache-2.0                            4.4.0
+    i010.9.50 oslo.serialization-5.5.0                  oslo.serialization!=2.19.1,>=2.18.0 # Apache-2.0
+    oslo.upgradecheck>=1.3.0 # Apache-2.0                       2.4.0
+    i010.9.39 oslo.utils-7.3.0                          oslo.utils>=3.33.0 # Apache-2.0
+    oauthlib>=0.6.2 # BSD                                       3.2.2
+    pysaml2>=5.0.0                                              7.5.0
+    PyJWT>=1.6.1 # MIT                                          2.10.1
+    dogpile.cache>=1.0.2 # BSD                          1.3.3
+    jsonschema>=3.2.0 # MIT                                     4.23.0
+    pycadf!=2.0.0,>=1.1.0 # Apache-2.0                          4.0.0
+    msgpack>=0.5.0 # Apache-2.0                         1.1.0
+    osprofiler>=1.4.0 # Apache-2.0                              4.2.0
