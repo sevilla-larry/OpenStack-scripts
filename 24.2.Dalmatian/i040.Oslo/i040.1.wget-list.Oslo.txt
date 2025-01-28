@@ -28,8 +28,8 @@ https://tarballs.opendev.org/openstack/oslo.messaging/oslo.messaging-14.9.1.tar.
 # 09 oslo.db-16.0.0
 https://tarballs.opendev.org/openstack/oslo.db/oslo.db-16.0.0.tar.gz
 
-# ?? oslo.policy-4.4.0
+# 10 oslo.policy-4.4.0
 https://tarballs.opendev.org/openstack/oslo.policy/oslo.policy-4.4.0.tar.gz
 
-# ?? oslo.upgradecheck-2.4.0
+# 11 oslo.upgradecheck-2.4.0
 https://tarballs.opendev.org/openstack/oslo.upgradecheck/oslo.upgradecheck-2.4.0.tar.gz
