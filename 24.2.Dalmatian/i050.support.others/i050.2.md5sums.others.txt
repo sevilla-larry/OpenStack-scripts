@@ -1,4 +1,53 @@
-# support - others
+# support apps - others
 
 
-# 01 
+# 01 werkzeug-3.0.6
+0d13f3dbe9b08aecdebe3d9b61cc58aa werkzeug-3.0.6.tar.gz
+
+# 02 itsdangerous-2.1.2
+c1bc730ddf53b8374eaa823f24eb6438 itsdangerous-2.1.2.tar.gz
+
+# 03 click-8.1.8
+b52ee8e6c33d88a2b4626e6a6002245d click-8.1.8.tar.gz
+
+# 04 blinker-1.8.2
+ce2f9fb3bc0c0000db11f012f5f5afda blinker-1.8.2.tar.gz
+
+# 05 flask-3.0.3
+4658b022a07f6d8df51ef24c717fe162 flask-3.0.3.tar.gz
+
+# 06 aniso8601-9.0.1
+89b25ea9fd70b8facaf189aed43afcf8 aniso8601-9.0.1.tar.gz
+
+# 07 pytz-2024.2
+efcb554763a36b3e18acee074f44d1a5 pytz-2024.2.tar.gz
+
+# 08 Flask-RESTful-0.3.10
+2a1f17e91c526a03bf721e178d8fce94 Flask-RESTful-0.3.10.tar.gz
+
+# 03 passlib-1.7.4
+3a229cbd00dfb33e99885b43325e0591 passlib-1.7.4.tar.gz
+
+# 04 keystonemiddleware-10.7.1
+984b0759a97c6711cce0aed21ba569ed keystonemiddleware-10.7.1.tar.gz
+
+# 05 scrypt-0.8.27   if err try .24
+51eb4f332dd5a8241704b7c8b662f837 scrypt-0.8.27.tar.gz
+
+# 06 oauthlib-3.2.2
+2f7b898cc1af8c1409cc329e8843ea8f oauthlib-3.2.2.tar.gz
+
+# 07 pysaml2-7.5.0
+0bb713a1c56acd4615b5bcae48e09113 pysaml2-7.5.0.tar.gz
+
+# 08 PyJWT-2.9.0
+88c9dbeb3e6302c7db813195e202420a pyjwt-2.9.0.tar.gz
+
+# 09 jsonschema-4.23.0
+a2cb5fee4da011118708ab275b34f30b jsonschema-4.23.0.tar.gz
+
+# 10 pycadf-3.1.1
+af685f444aefdec58859d1c2419ba011 pycadf-3.1.1.tar.gz
+
+# 11 osprofiler-4.2.0
+e1e6db90f3bdc3ea36761777b1e3e049 osprofiler-4.2.0.tar.gz
