@@ -1,14 +1,21 @@
-# i040.9.03.oslo.cache-3.8.0.sh
+# i040.9.09.oslo.db-16.0.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i010.9.14 dogpile.cache-1.3.3
-#               i010.9.45 oslo.config-9.6.0
+#               i010.9.01 pbr-6.1.0
+#               i030.9.22 alembic-1.13.3
+#               i010.9.34 debtcollector-3.0.0
 #               i010.9.31 oslo.i18n-6.4.0
-#               i040.9.02 oslo.log-6.1.2
+#               i010.9.45 oslo.config-9.6.0
 #               i010.9.39 oslo.utils-7.3.0
+#               i030.9.21 sqlalchemy-2.0.37
+#               i010.9.10 stevedore-5.3.0
+#               # these are used by downstream libraries that require
+#               # oslo.db as one of their test requirements - do not remove!
+#               i030.9.23 testresources-2.0.1
+#               i030.9.25 testscenarios-0.5.0
 #
 
 #
@@ -17,8 +24,8 @@
 #               i151.9.1 KeyStone-26.0.0
 #
 
-export PKG="oslo.cache-3.8.0"
-export PKGLOG_DIR=$OSLOG/040.03
+export PKG="oslo.db-16.0.0"
+export PKGLOG_DIR=$OSLOG/040.09
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -53,7 +60,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.cache                \
+                oslo.db                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

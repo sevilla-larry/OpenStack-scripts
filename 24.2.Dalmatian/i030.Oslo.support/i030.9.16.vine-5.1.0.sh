@@ -1,14 +1,14 @@
-# i010.9.46.msgpack-1.1.0.sh
+# i030.9.16.vine-5.1.0.sh
 #
 
 #
 # Required by:
 #
-#               i010.9.50 oslo.serialization-5.5.0
+#               i030.9.17 amqp-5.2.0
 #
 
-export PKG="msgpack-1.1.0"
-export PKGLOG_DIR=$OSLOG/010.46
+export PKG="vine-5.1.0"
+export PKGLOG_DIR=$OSLOG/030.16
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                msgpack                 \
+                vine                    \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

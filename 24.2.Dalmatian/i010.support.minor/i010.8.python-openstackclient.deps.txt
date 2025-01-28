@@ -380,9 +380,10 @@ B:  i010.9.60 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apac
 
 #####
 
-A:  i010.9.46 msgpack-1.1.0                 msgpack>=0.5.2 # Apache-2.0                                     with test
+      b30....
+# A:  i010.9.46 msgpack-1.1.0                 msgpack>=0.5.2 # Apache-2.0                                     with test
 
-B:  i010.9.50 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0
+# B:  i010.9.50 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0
 
 #####
 
@@ -395,7 +396,7 @@ D:
     # that is a likely indicator that the feature belongs somewhere else.
 
     i010.9.01 pbr-6.1.0                     pbr!=2.1.0,>=2.0.0 # Apache-2.0
-    i010.9.46 msgpack-1.1.0                 msgpack>=0.5.2 # Apache-2.0
+    b30.13.24.17 Msgpack-1.0.8              msgpack>=0.5.2 # Apache-2.0
     i010.9.39 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
     pytz>=2013.6;python_version<"3.9" # MIT
     i010.9.36 tzdata-2024.2                 tzdata>=2022.4;python_version>="3.9" # MIT

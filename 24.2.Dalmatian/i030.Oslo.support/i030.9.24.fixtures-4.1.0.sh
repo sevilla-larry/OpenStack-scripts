@@ -1,24 +1,14 @@
-# i040.9.03.oslo.cache-3.8.0.sh
-#
-
-#
-# Dependencies Required:
-#
-#               i010.9.14 dogpile.cache-1.3.3
-#               i010.9.45 oslo.config-9.6.0
-#               i010.9.31 oslo.i18n-6.4.0
-#               i040.9.02 oslo.log-6.1.2
-#               i010.9.39 oslo.utils-7.3.0
+# i030.9.24.fixtures-4.1.0.sh
 #
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i030.9.25 testtools-2.7.2
 #
 
-export PKG="oslo.cache-3.8.0"
-export PKGLOG_DIR=$OSLOG/040.03
+export PKG="fixtures-4.1.0"
+export PKGLOG_DIR=$OSLOG/030.24
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -53,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.cache                \
+                fixtures                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

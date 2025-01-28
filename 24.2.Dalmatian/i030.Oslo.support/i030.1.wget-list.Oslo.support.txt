@@ -19,5 +19,64 @@ https://files.pythonhosted.org/packages/17/14/3bddb1298b9a6786539ac609ba4b7c9c08
 # 06 eventlet-0.36.1
 https://files.pythonhosted.org/packages/1b/df/f441947eef23192c9f179e46868ee8510a6f7b6627b76b88f07692f9c706/eventlet-0.36.1.tar.gz
 
-# ?? futurist-3.0.0
+# 07 PasteDeploy-3.1.0
+https://files.pythonhosted.org/packages/e3/97/0c4a613ec96a54d21daa7e089178263915554320402e89b4e319436a63cb/PasteDeploy-3.1.0.tar.gz
+
+# 08 repoze.lru-0.7
+https://files.pythonhosted.org/packages/12/bc/595a77c4b5e204847fdf19268314ef59c85193a9dc9f83630fc459c0fee5/repoze.lru-0.7.tar.gz
+
+# 09 Routes-2.5.1
+https://files.pythonhosted.org/packages/62/01/1504b710f68840f4152d460a4ffbc6b8265485b636235ddd72a8dfe686ae/Routes-2.5.1.tar.gz
+
+# 10 paste-3.10.1
+https://files.pythonhosted.org/packages/d7/1c/6bc9040bf9b4cfc9334f66d2738f952384c106c48882adf6097fed3da966/paste-3.10.1.tar.gz
+
+# 11 yappi-1.6.0
+https://files.pythonhosted.org/packages/21/73/edfceb363d73be11701a50b003f12acb01d7fefc6a22859f3fd030686e50/yappi-1.6.0.tar.gz
+
+# 12 statsd-4.0.1
+https://files.pythonhosted.org/packages/27/29/05e9f50946f4cf2ed182726c60d9c0ae523bb3f180588c574dd9746de557/statsd-4.0.1.tar.gz
+
+# 13 bcrypt-4.2.0 trial     4.0.1 working
+https://files.pythonhosted.org/packages/e4/7e/d95e7d96d4828e965891af92e43b52a4cd3395dc1c1ef4ee62748d0471d0/bcrypt-4.2.0.tar.gz
+# https://files.pythonhosted.org/packages/8c/ae/3af7d006aacf513975fd1948a6b4d6f8b4a307f8a244e1a3d3774b297aad/bcrypt-4.0.1.tar.gz
+# 151.1 bcrypt-4.0.1 NOT viable,too many dependencies
+
+# 14 futurist-3.0.0
 https://files.pythonhosted.org/packages/4c/24/864408313afba48440ee3a560e1a70b62b39e6c0dfeddea9506699e6e606/futurist-3.0.0.tar.gz
+
+# 15 cachetools-5.5.1   if err .0
+https://files.pythonhosted.org/packages/d9/74/57df1ab0ce6bc5f6fa868e08de20df8ac58f9c44330c7671ad922d2bbeae/cachetools-5.5.1.tar.gz
+
+# 16 vine-5.1.0
+https://files.pythonhosted.org/packages/bd/e4/d07b5f29d283596b9727dd5275ccbceb63c44a1a82aa9e4bfd20426762ac/vine-5.1.0.tar.gz
+
+# 17 amqp-5.2.0
+https://files.pythonhosted.org/packages/32/2c/6eb09fbdeb3c060b37bd33f8873832897a83e7a428afe01aad333fc405ec/amqp-5.2.0.tar.gz
+
+# 18 kombu-5.4.2
+https://files.pythonhosted.org/packages/38/4d/b93fcb353d279839cc35d0012bee805ed0cf61c07587916bfc35dbfddaf1/kombu-5.4.2.tar.gz
+
+# 19 prometheus_client-0.20.0
+https://files.pythonhosted.org/packages/3d/39/3be07741a33356127c4fe633768ee450422c1231c6d34b951fee1458308d/prometheus_client-0.20.0.tar.gz
+
+# 20 typing_extensions-4.12.2
+https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz
+
+# 21 sqlalchemy-2.0.37  (latest)    if err .31
+https://files.pythonhosted.org/packages/3b/20/93ea2518df4d7a14ebe9ace9ab8bb92aaf7df0072b9007644de74172b06c/sqlalchemy-2.0.37.tar.gz
+
+# 22 alembic-1.13.3     if err .2
+https://files.pythonhosted.org/packages/94/a2/840c3b84382dce8624bc2f0ee67567fc74c32478d0c5a5aea981518c91c3/alembic-1.13.3.tar.gz
+
+# 23 testresources-2.0.1
+https://files.pythonhosted.org/packages/9d/57/8e3986cd95a80dd23195f599befa023eb85d031d2d870c47124fa5ccbf06/testresources-2.0.1.tar.gz
+
+# 24 fixtures-4.1.0
+https://files.pythonhosted.org/packages/5e/4c/3c3faee9f554d753ee428bef3a5e8176995cffbf0b5ad3f1d6c272ab2148/fixtures-4.1.0.tar.gz
+
+# 25 testtools-2.7.2    if err try 1.7.1
+https://files.pythonhosted.org/packages/6a/05/a543317ac62cf72e98dc40de5ab117ef14508f36352ed715cb3cd3fe1bbb/testtools-2.7.2.tar.gz
+
+# 26 testscenarios-0.5.0
+https://files.pythonhosted.org/packages/f0/de/b0b5b98c0f38fd7086d082c47fcb455eedd39a044abe7c595f5f40cd6eed/testscenarios-0.5.0.tar.gz

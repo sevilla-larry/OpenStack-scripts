@@ -25,7 +25,7 @@ https://tarballs.opendev.org/openstack/oslo.metrics/oslo.metrics-0.9.0.tar.gz
 # 08 oslo.messaging-14.9.1
 https://tarballs.opendev.org/openstack/oslo.messaging/oslo.messaging-14.9.1.tar.gz
 
-# ?? oslo.db-16.0.0
+# 09 oslo.db-16.0.0
 https://tarballs.opendev.org/openstack/oslo.db/oslo.db-16.0.0.tar.gz
 
 # ?? oslo.policy-4.4.0

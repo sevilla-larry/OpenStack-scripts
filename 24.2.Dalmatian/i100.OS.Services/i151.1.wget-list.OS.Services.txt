@@ -1,8 +1,5 @@
 # i151 Identity Service
 
-# 151.1 bcrypt-4.0.1 NOT viable,too many dependencies
-# https://files.pythonhosted.org/packages/8c/ae/3af7d006aacf513975fd1948a6b4d6f8b4a307f8a244e1a3d3774b297aad/bcrypt-4.0.1.tar.gz
-
 # 151.2 KeyStone-26.0.0
 https://tarballs.opendev.org/openstack/keystone/keystone-26.0.0.tar.gz
 https://docs.openstack.org/keystone/2024.2/_static/keystone.conf.sample

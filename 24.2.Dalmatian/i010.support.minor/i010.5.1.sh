@@ -470,19 +470,19 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
-###
+### b30.13.24.17 Msgpack-1.0.8
 
-echo "i010.9.46.msgpack-1.1.0"
-echo "i010.9.46.msgpack-1.1.0" >> $OSLOG_PROCESS
+# echo "i010.9.46.msgpack-1.1.0"
+# echo "i010.9.46.msgpack-1.1.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.46.msgpack-1.1.0.sh ; }
+# time { bash i010.9.46.msgpack-1.1.0.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 ###
 

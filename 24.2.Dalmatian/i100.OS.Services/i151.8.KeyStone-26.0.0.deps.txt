@@ -52,14 +52,14 @@ B:  i040.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=3.25.0 # A
 
 ###
 
-A:  i040.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=3.25.0 # Apache-2.0
+A:  i040.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=3.25.0 # Apache-2.0       NO test
 
 D:
     i010.9.01 pbr-6.1.0                             pbr>=2.0.0 # Apache-2.0
     i010.9.45 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
     i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
     i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.33.0 # Apache-2.0
-    i030.9.02 fasteners-0.19                        fasteners>=0.7.0 # Apache-2.0               with Test
+    i030.9.02 fasteners-0.19                        fasteners>=0.7.0 # Apache-2.0
 
 B:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
 
@@ -95,7 +95,41 @@ B:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apach
 
 #####
 
-A:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+A:  i030.9.07 PasteDeploy-3.1.0                     PasteDeploy>=1.5.0 # MIT                    NO test
+
+B:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+
+###
+
+A:  i030.9.08 repoze.lru-0.7                        repoze.lru>=0.3                             NO test
+
+B:  i030.9.09 Routes-2.5.1                          Routes>=2.3.1 # MIT
+
+###
+
+A:  i030.9.09 Routes-2.5.1                          Routes>=2.3.1 # MIT                         with Test
+
+D:  i030.9.08 repoze.lru-0.7                        repoze.lru>=0.3
+
+B:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+
+###
+
+A:  i030.9.10 paste-3.10.1                          Paste>=2.0.2 # MIT                          with Test
+
+D:  a.08.55   Setuptools-72.2.0.sh
+
+B:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+
+###
+
+A:  i030.9.11 yappi-1.6.0                           Yappi>=1.0 # MIT                            NO test
+
+B:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+
+###
+
+A:  i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0           NO test
 
 D:
     i030.9.03 WebOb-1.8.7                           WebOb>=1.7.1 # MIT                          with Test
@@ -107,47 +141,226 @@ D:
     i010.9.45 oslo.config-9.6.0                     oslo.config>=5.1.0 # Apache-2.0
     i040.9.02 oslo.log-6.1.2                        oslo.log>=3.36.0 # Apache-2.0
     i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
-    PasteDeploy>=1.5.0 # MIT
-    Routes>=2.3.1 # MIT
-    Paste>=2.0.2 # MIT
-    Yappi>=1.0 # MIT
+    i030.9.07 PasteDeploy-3.1.0                     PasteDeploy>=1.5.0 # MIT
+    i030.9.09 Routes-2.5.1                          Routes>=2.3.1 # MIT
+    i030.9.10 paste-3.10.1                          Paste>=2.0.2 # MIT
+    i030.9.11 yappi-1.6.0                           Yappi>=1.0 # MIT
 
-B:  oslo.messaging    
+B:  i040.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0
+
+##########
+
+A:  i030.9.12 statsd-4.0.1                          statsd>=3.2.1 # MIT                         NO test
+
+B:  i040.9.06 oslo.middleware-6.2.0                 oslo.middleware>=3.31.0 # Apache-2.0
+
+###
+
+A:  i030.9.13 bcrypt-4.2.0 trial 4.0.1 working      bcrypt>=3.1.3 # Apache-2.0                  NO test
+
+B:  i040.9.06 oslo.middleware-6.2.0                 oslo.middleware>=3.31.0 # Apache-2.0
+
+###
+
+A:  i040.9.06 oslo.middleware-6.2.0                 oslo.middleware>=3.31.0 # Apache-2.0        NO test
+
+D:
+    i010.9.01 pbr-6.1.0                             pbr>=2.0.0 # Apache-2.0
+    a.08.75   Jinja2-3.1.4                          Jinja2>=2.10 # BSD License (3 clause)
+    i010.9.45 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
+    i040.9.01 oslo.context-5.6.0                    oslo.context>=2.19.2 # Apache-2.0
+    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
+    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.33.0 # Apache-2.0
+    i010.9.10 stevedore-5.3.0                       stevedore>=1.20.0 # Apache-2.0
+    i030.9.03 WebOb-1.8.7                           WebOb>=1.8.0 # MIT
+    i010.9.34 debtcollector-3.0.0                   debtcollector>=1.2.0 # Apache-2.0
+    i030.9.12 statsd-4.0.1                          statsd>=3.2.1 # MIT
+    i030.9.13 bcrypt-4.2.0       trial              bcrypt>=3.1.3 # Apache-2.0  4.0.1 working
+
+B:
+B:  i040.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0
+    i151.9.1 KeyStone-26.0.0
 
 #####
 
-oslo.messaging-14.9.1
+A:  i030.9.14 futurist-3.0.0                        futurist>=1.2.0 # Apache-2.0                NO test
 
-pbr>=2.0.0 # Apache-2.0
+B:  i040.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0
 
-futurist>=1.2.0 # Apache-2.0
-oslo.config>=5.2.0 # Apache-2.0
-oslo.context>=5.3.0 # Apache-2.0
-oslo.log>=3.36.0 # Apache-2.0
-oslo.utils>=3.37.0 # Apache-2.0
-oslo.serialization>=2.18.0 # Apache-2.0
-oslo.service>=1.24.0 # Apache-2.0
-stevedore>=1.20.0 # Apache-2.0
-debtcollector>=1.2.0 # Apache-2.0
+###
 
-# for jsonutils
-cachetools>=2.0.0 # MIT License
+A:  i030.9.15 cachetools-5.5.1                      cachetools>=2.0.0 # MIT License             with Test
 
-WebOb>=1.7.1 # MIT
+B:  i040.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0
 
-# for the routing notifier
-PyYAML>=3.13 # MIT
+###
 
-# rabbit driver is the default
-# we set the amqp version to ensure heartbeat works
-amqp>=2.5.2 # BSD
-kombu>=4.6.6 # BSD
+A:  i030.9.16 vine-5.1.0                            vine<6.0.0,>=5.0.0                          with Test
 
-# middleware
-oslo.middleware>=3.31.0 # Apache-2.0
+B:  i030.9.17 amqp-5.2.0                            amqp>=2.5.2 # BSD
 
-# metrics
-oslo.metrics>=0.2.1 # Apache-2.0
+###
+
+A:  i030.9.17 amqp-5.2.0                            amqp>=2.5.2 # BSD                           with Test
+
+D:  i030.9.16 vine-5.1.0                            vine<6.0.0,>=5.0.0                          with Test
+
+B:  i040.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0
+
+#####
+
+A:  i030.9.18 kombu-5.4.2                           kombu>=4.6.6 # BSD                          with Test
+
+D:
+    i030.9.17 amqp-5.2.0                            amqp>=5.1.1,<6.0.0
+    i030.9.16 vine-5.1.0                            vine==5.1.0
+    i010.9.36 tzdata-2024.2                         tzdata; python_version>="3.9"
+
+B:  i040.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0
+
+#####
+
+A:  i030.9.19 prometheus_client-0.20.0              prometheus-client>=0.6.0                    with Test
+
+B:  i040.9.07 oslo.metrics-0.9.0                    oslo.metrics>=0.2.1 # Apache-2.0
+
+###
+
+A:  i040.9.07 oslo.metrics-0.9.0                    oslo.metrics>=0.2.1 # Apache-2.0            NO test
+
+D:
+    i010.9.01 pbr-6.1.0                             pbr>=3.1.1 # Apache-2.0
+
+    # General
+    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.41.0
+    i040.9.02 oslo.log-6.1.2                        oslo.log>=3.44.0
+    i010.9.45 oslo.config-9.6.0                     oslo.config>=6.9.0
+
+    # Metrics Exporter
+    i030.9.19 prometheus_client-0.20.0              prometheus-client>=0.6.0
+
+B:  i040.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0
+
+#########
+
+A:  i040.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0         NO test
+
+D:
+    i010.9.01 pbr-6.1.0                             pbr>=2.0.0 # Apache-2.0
+
+    i030.9.14 futurist-3.0.0                        futurist>=1.2.0 # Apache-2.0
+    i010.9.45 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
+    i040.9.01 oslo.context-5.6.0                    oslo.context>=5.3.0 # Apache-2.0
+    i040.9.02 oslo.log-6.1.2                        oslo.log>=3.36.0 # Apache-2.0
+    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.37.0 # Apache-2.0
+    i010.9.50 oslo.serialization-5.5.0              oslo.serialization>=2.18.0 # Apache-2.0
+    i040.9.05 oslo.service-3.5.0                    oslo.service>=1.24.0 # Apache-2.0
+    i010.9.10 stevedore-5.3.0                       stevedore>=1.20.0 # Apache-2.0
+    i010.9.34 debtcollector-3.0.0                   debtcollector>=1.2.0 # Apache-2.0
+
+    # for jsonutils
+    i030.9.15 cachetools-5.5.1                      cachetools>=2.0.0 # MIT License
+
+    i030.9.03 WebOb-1.8.7                           WebOb>=1.7.1 # MIT
+
+    # for the routing notifier
+    b30.13.23.28 PyYAML-6.0.2                       PyYAML>=3.13 # MIT
+
+    # rabbit driver is the default
+    # we set the amqp version to ensure heartbeat works
+    i030.9.17 amqp-5.2.0                            amqp>=2.5.2 # BSD
+    i030.9.18 kombu-5.4.2                           kombu>=4.6.6 # BSD
+
+    # middleware
+    i040.9.06 oslo.middleware-6.2.0                 oslo.middleware>=3.31.0 # Apache-2.0
+
+    # metrics
+    i040.9.07 oslo.metrics-0.9.0                    oslo.metrics>=0.2.1 # Apache-2.0
+
+B:  i151.9.1 KeyStone-26.0.0
+
+##########
+
+A:  i030.9.20 typing_extensions-4.12.2              typing-extensions>=4.6.0                    with Test
+
+B:
+    i030.9.21 sqlalchemy-2.0.37                     SQLAlchemy>=1.3.0
+    i030.9.22 alembic-1.13.3                        alembic>=0.9.6 # MIT
+
+#####
+
+A:  i030.9.21 sqlalchemy-2.0.37                     SQLAlchemy>=1.3.0                           NO test
+
+D:
+    i030.9.05 greenlet-3.0.3                        greenlet!=0.4.17
+    i030.9.20 typing_extensions-4.12.2              typing-extensions>=4.6.0
+
+B:
+    i030.9.22 alembic-1.13.3                        alembic>=0.9.6 # MIT
+    i040.9.09 oslo.db-16.0.0                        oslo.db>=6.0.0 # Apache-2.0
+
+#####
+
+A:  i030.9.22 alembic-1.13.3                        alembic>=0.9.6 # MIT                        NO test
+
+D:
+    i030.9.21 sqlalchemy-2.0.37                     SQLAlchemy>=1.3.0
+    b10.13.23.13 Mako-1.3.5                         Mako
+    i030.9.20 typing_extensions-4.12.2              typing-extensions>=4
+
+B:  i040.9.09 oslo.db-16.0.0                        oslo.db>=6.0.0 # Apache-2.0
+
+#####
+
+A:  i030.9.23 testresources-2.0.1                   testresources>=2.0.0 # Apache-2.0/BSD       NO test
+
+D:  i010.9.01 pbr-6.1.0                             pbr>=1.8
+
+B:  i040.9.09 oslo.db-16.0.0                        oslo.db>=6.0.0 # Apache-2.0
+
+#####
+
+A:  i030.9.24 fixtures-4.1.0                        fixtures>=2.0                               NO test
+
+B:  i030.9.25 testtools-2.7.2                       testtools
+
+###
+
+A:  i030.9.25 testtools-2.7.2                       testtools                                   NO test
+
+D:  i030.9.24 fixtures-4.1.0                        fixtures>=2.0
+
+B:  i030.9.25 testscenarios-0.5.0                   testscenarios>=0.4 # Apache-2.0/BSD
+
+###
+
+A:  i030.9.25 testscenarios-0.5.0                   testscenarios>=0.4 # Apache-2.0/BSD         with Test
+
+D:
+    i010.9.01 pbr-6.1.0                             pbr >= 0.11
+    i030.9.25 testtools-2.7.2                       testtools
+
+B:  i040.9.09 oslo.db-16.0.0                        oslo.db>=6.0.0 # Apache-2.0
+
+#####
+
+A:  i040.9.09 oslo.db-16.0.0                        oslo.db>=6.0.0 # Apache-2.0                 NO test
+
+D:
+    i010.9.01 pbr-6.1.0                             pbr>=2.0.0 # Apache-2.0
+    i030.9.22 alembic-1.13.3                        alembic>=0.9.6 # MIT
+    i010.9.34 debtcollector-3.0.0                   debtcollector>=1.2.0 # Apache-2.0
+    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
+    i010.9.45 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
+    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.33.0 # Apache-2.0
+    i030.9.21 sqlalchemy-2.0.37                     SQLAlchemy>=1.4.0 # MIT
+    i010.9.10 stevedore-5.3.0                       stevedore>=1.20.0 # Apache-2.0
+    # these are used by downstream libraries that require
+    # oslo.db as one of their test requirements - do not remove!
+    i030.9.23 testresources-2.0.1                   testresources>=2.0.0 # Apache-2.0/BSD
+    i030.9.25 testscenarios-0.5.0                   testscenarios>=0.4 # Apache-2.0/BSD
+
+B:  i151.9.1 KeyStone-26.0.0
 
 ###############
 
@@ -162,35 +375,35 @@ D:
     # of appearance. Changing the order has an impact on the overall integration
     # process, which may cause wedges in the gate later.
 
-    pbr!=2.1.0,>=2.0.0 # Apache-2.0                     6.1.0
-    WebOb>=1.7.1 # MIT                                          1.8.9
+    i010.9.01 pbr-6.1.0                             pbr!=2.1.0,>=2.0.0 # Apache-2.0
+    i030.9.03 WebOb-1.8.7                           WebOb>=1.7.1 # MIT
     Flask!=0.11,>=1.0.2  # BSD                                  3.1.0
     Flask-RESTful>=0.3.5  # BSD                                 0.3.5
-    cryptography>=2.7 # BSD/Apache-2.0                  3.4.8
+    i010.9.04 cryptography-42.0.8                   cryptography>=2.7 # BSD/Apache-2.0
     SQLAlchemy>=1.4.0 # MIT                                     2.0.37
-    stevedore>=1.20.0 # Apache-2.0                      5.3.0
+    i010.9.10 stevedore-5.3.0                       stevedore>=1.20.0 # Apache-2.0
     passlib>=1.7.0 # BSD                                        1.7.4
-    python-keystoneclient>=3.8.0 # Apache-2.0           5.5.0
+    i010.9.60 python-keystoneclient-5.5.0           python-keystoneclient>=3.8.0 # Apache-2.0
     keystonemiddleware>=7.0.0 # Apache-2.0                      10.8.0
-    bcrypt>=3.1.3 # Apache-2.0                          4.0.1
+    i030.9.13 bcrypt-4.2.0 trial 4.0.1 working      bcrypt>=3.1.3 # Apache-2.0
     scrypt>=0.8.0 # BSD                                         0.8.27
-    oslo.cache>=1.26.0 # Apache-2.0                             3.8.0               NO test
-    i010.9.45 oslo.config-9.6.0                         oslo.config>=6.8.0 # Apache-2.0
-    oslo.context>=2.22.0 # Apache-2.0                           5.6.0               NO test
-    oslo.messaging>=5.29.0 # Apache-2.0                         14.9.1
-    oslo.db>=6.0.0 # Apache-2.0                                 16.0.0
-    i010.9.31 oslo.i18n-6.4.0                           oslo.i18n>=3.15.3 # Apache-2.0
-    oslo.log>=3.44.0 # Apache-2.0                               6.1.2               NO test
-    oslo.middleware>=3.31.0 # Apache-2.0                        6.2.0
+    i040.9.03 oslo.cache-3.8.0                      oslo.cache>=1.26.0 # Apache-2.0
+    i010.9.45 oslo.config-9.6.0                     oslo.config>=6.8.0 # Apache-2.0
+    i040.9.01 oslo.context-5.6.0                    oslo.context>=2.22.0 # Apache-2.0
+    i040.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0
+    i040.9.09 oslo.db-16.0.0                        oslo.db>=6.0.0 # Apache-2.0
+    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
+    i040.9.02 oslo.log-6.1.2                        oslo.log>=3.44.0 # Apache-2.0
+    i040.9.06 oslo.middleware-6.2.0                 oslo.middleware>=3.31.0 # Apache-2.0
     oslo.policy>=3.10.0 # Apache-2.0                            4.4.0
-    i010.9.50 oslo.serialization-5.5.0                  oslo.serialization!=2.19.1,>=2.18.0 # Apache-2.0
+    i010.9.50 oslo.serialization-5.5.0              oslo.serialization!=2.19.1,>=2.18.0 # Apache-2.0
     oslo.upgradecheck>=1.3.0 # Apache-2.0                       2.4.0
-    i010.9.39 oslo.utils-7.3.0                          oslo.utils>=3.33.0 # Apache-2.0
+    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.33.0 # Apache-2.0
     oauthlib>=0.6.2 # BSD                                       3.2.2
     pysaml2>=5.0.0                                              7.5.0
     PyJWT>=1.6.1 # MIT                                          2.10.1
-    dogpile.cache>=1.0.2 # BSD                          1.3.3
+    i010.9.14 dogpile.cache-1.3.3                   dogpile.cache>=1.0.2 # BSD
     jsonschema>=3.2.0 # MIT                                     4.23.0
     pycadf!=2.0.0,>=1.1.0 # Apache-2.0                          4.0.0
-    msgpack>=0.5.0 # Apache-2.0                         1.1.0
+    b30.13.24.17 Msgpack-1.0.8                      msgpack>=0.5.0 # Apache-2.0
     osprofiler>=1.4.0 # Apache-2.0                              4.2.0
