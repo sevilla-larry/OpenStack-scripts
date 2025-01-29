@@ -9,3 +9,16 @@
 # 02 PyMySQL-1.1.1                  (Python module)
 66e1b2c679250e0ae9ae037444de950a pymysql-1.1.1.tar.gz
 # PyMySQL-1.1.1-py3-none-any.whl
+
+# 03 mod_wsgi-5.0.2
+76333e184e230f3610a4a13256589da9 mod_wsgi-5.0.2.tar.gz
+
+
+
+
+
+
+
+
+# 05.2 python-memcached-1.62        (Python module)
+390ddff32f7ee1ae7166b3486c44de9f python-memcached-1.62.tar.gz

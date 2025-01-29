@@ -10,16 +10,20 @@ https://tarballs.opendev.org/openstack/python-openstackclient/python-openstackcl
 https://files.pythonhosted.org/packages/b3/8f/ce59b5e5ed4ce8512f879ff1fa5ab699d211ae2495f1adaa5fbba2a1eada/pymysql-1.1.1.tar.gz
 #https://files.pythonhosted.org/packages/0c/94/e4181a1f6286f545507528c78016e00065ea913276888db2262507693ce5/PyMySQL-1.1.1-py3-none-any.whl
 
-# 03 RabbitMQ-4.0.3					(generic unix binary)
+# 03 mod_wsgi-5.0.2
+https://files.pythonhosted.org/packages/ca/4d/275853efa4d2a4efe1614aa0df06295e71f2082cebccc4d40d0f0a551c24/mod_wsgi-5.0.2.tar.gz
+
+# 04 RabbitMQ-4.0.3					(generic unix binary)
 https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.0.3/rabbitmq-server-generic-unix-4.0.3.tar.xz
 #https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.0.3/rabbitmq-server-4.0.3.tar.xz
 
-# 04.1 MemCached-1.6.32
+# 05.1 MemCached-1.6.32
 https://memcached.org/files/memcached-1.6.32.tar.gz
 
-# 04.2 python-memcached-1.62        (Python module)
-https://files.pythonhosted.org/packages/8f/1b/3b15a37831ae34a264d7d5b71f3ae9fe74a81251453a3ec2135e76888ef1/python_memcached-1.62-py2.py3-none-any.whl
+# 05.2 python-memcached-1.62        (Python module)
+https://files.pythonhosted.org/packages/e8/3c/204e5c6087efc85b52a68edce8678d44eb28718f5f145e036c277beb467c/python-memcached-1.62.tar.gz
+#https://files.pythonhosted.org/packages/8f/1b/3b15a37831ae34a264d7d5b71f3ae9fe74a81251453a3ec2135e76888ef1/python_memcached-1.62-py2.py3-none-any.whl
 
-# 05 Etcd-v3.5.17					(amd64 binary)
+# 06 Etcd-v3.5.17					(amd64 binary)
 https://github.com/etcd-io/etcd/releases/download/v3.5.17/etcd-v3.5.17-linux-amd64.tar.gz
 #--content-disposition https://github.com/etcd-io/etcd/archive/refs/tags/v3.5.17.tar.gz
