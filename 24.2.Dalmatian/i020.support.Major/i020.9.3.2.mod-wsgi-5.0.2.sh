@@ -1,4 +1,4 @@
-# i020.9.3.2.mod-wsgi-5.0.1.sh
+# i020.9.3.2.mod-wsgi-5.0.2.sh
 #
 # https://docs.openstack.org/keystone/2024.2/install/
 # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
@@ -6,7 +6,7 @@
 # will download Python App online
 #
 
-export PKG="mod-wsgi==5.0.1"
+export PKG="mod-wsgi==5.0.2"
 export PKGLOG_DIR=$OSLOG/020.3
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log

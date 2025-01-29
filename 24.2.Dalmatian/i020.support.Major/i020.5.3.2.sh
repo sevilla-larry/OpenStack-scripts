@@ -12,10 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i020.9.3.2.mod-wsgi-5.0.1"
-echo "i020.9.3.2.mod-wsgi-5.0.1" >> $OSLOG_PROCESS
+echo "i020.9.3.2.mod-wsgi-5.0.2"
+echo "i020.9.3.2.mod-wsgi-5.0.2" >> $OSLOG_PROCESS
 
-time { bash i020.9.3.2.mod-wsgi-5.0.1.sh ; }
+time { bash i020.9.3.2.mod-wsgi-5.0.2.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
