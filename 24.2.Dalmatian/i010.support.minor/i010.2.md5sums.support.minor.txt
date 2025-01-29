@@ -11,7 +11,8 @@
 0bcaed453da3004d0bea103038345c1e cffi-1.16.0.tar.gz
 
 # 04 cryptography-43.0.3          3.4.8
-e0669c198e0aecdcd68a2adef030f5a6 cryptography-43.0.3.tar.gz
+29b9a531187b47ee0651d97b2e50f226 cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl
+#e0669c198e0aecdcd68a2adef030f5a6 cryptography-43.0.3.tar.gz
 #e8b3e233556690acdc026b432a57c3fa cryptography-3.4.8.tar.gz
 
 # 05 autopage-0.5.2

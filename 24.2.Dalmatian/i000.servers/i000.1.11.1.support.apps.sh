@@ -33,10 +33,10 @@ bash b30.03.1.sh
 bash b30.03.2.sh
 
 
-# # Python OpenStackClient support
-# bash i010.5.1.sh
-# # Python OpenStackClient
-# bash i020.5.1.sh
+# Python OpenStackClient support
+bash i010.5.1.sh
+# Python OpenStackClient
+bash i020.5.1.sh
 
-# # support apps for Controller
-# bash i010.5.11.sh
+# support apps for Controller
+bash i010.5.11.sh

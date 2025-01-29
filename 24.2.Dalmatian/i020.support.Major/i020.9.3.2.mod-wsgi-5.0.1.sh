@@ -6,7 +6,7 @@
 # will download Python App online
 #
 
-export PKG="mod-wsgi"
+export PKG="mod-wsgi==5.0.1"
 export PKGLOG_DIR=$OSLOG/020.3
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
