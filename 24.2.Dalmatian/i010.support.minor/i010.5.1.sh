@@ -52,10 +52,15 @@ echo "."
 
 ###
  
-echo "i010.9.04.cryptography-3.4.8"
-echo "i010.9.04.cryptography-3.4.8" >> $OSLOG_PROCESS
+# echo "i010.9.04.cryptography-3.4.8"
+# echo "i010.9.04.cryptography-3.4.8" >> $OSLOG_PROCESS
 
-time { bash i010.9.04.cryptography-3.4.8.sh ; }
+# time { bash i010.9.04.cryptography-3.4.8.sh ; }
+
+echo "i010.9.04.cryptography-43.0.3"
+echo "i010.9.04.cryptography-43.0.3" >> $OSLOG_PROCESS
+
+time { bash i010.9.04.cryptography-43.0.3.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
