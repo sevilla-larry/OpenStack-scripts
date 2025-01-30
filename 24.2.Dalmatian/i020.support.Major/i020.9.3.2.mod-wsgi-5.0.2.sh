@@ -1,7 +1,7 @@
 # i020.9.3.2.mod-wsgi-5.0.2.sh
 #
 
-export PKG="mod-wsgi-5.0.2"
+export PKG="mod_wsgi-5.0.2"
 export PKGLOG_DIR=$OSLOG/020.3
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
