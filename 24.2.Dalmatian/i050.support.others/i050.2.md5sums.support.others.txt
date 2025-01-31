@@ -43,8 +43,20 @@ af685f444aefdec58859d1c2419ba011 pycadf-3.1.1.tar.gz
 # 13 oauthlib-3.2.2
 2f7b898cc1af8c1409cc329e8843ea8f oauthlib-3.2.2.tar.gz
 
+# 14 defusedxml-0.7.1
+a50e7f21aa60a741efe6b1b658dfb3f8 defusedxml-0.7.1.tar.gz
 
-# 07 pysaml2-7.5.0
+# 15 pyOpenSSL-23.3.0
+4c4f6f9e1c731b8ee7adcd9fbeccec62 pyOpenSSL-23.3.0.tar.gz
+
+# 16 elementpath-4.2.1
+612e5f58c8751df3e127ffe081663dd1 elementpath-4.2.1.tar.gz
+
+# 17 xmlschema-3.0.2
+ec11900d160f537244b8309a5385c3d3 xmlschema-3.0.2.tar.gz
+
+
+# 18 pysaml2-7.5.0
 0bb713a1c56acd4615b5bcae48e09113 pysaml2-7.5.0.tar.gz
 
 # 09 jsonschema-4.23.0

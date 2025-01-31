@@ -43,8 +43,20 @@ https://files.pythonhosted.org/packages/0f/ad/496eca399cf3ceaa4b2c9b238a7630efcd
 # 13 oauthlib-3.2.2
 https://files.pythonhosted.org/packages/6d/fa/fbf4001037904031639e6bfbfc02badfc7e12f137a8afa254df6c4c8a670/oauthlib-3.2.2.tar.gz
 
+# 14 defusedxml-0.7.1
+https://files.pythonhosted.org/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c984ebd9c2a06e2b8a4dc7331c72/defusedxml-0.7.1.tar.gz
 
-# 07 pysaml2-7.5.0
+# 15 pyOpenSSL-23.3.0
+https://files.pythonhosted.org/packages/bf/a0/e667c3c43b65a188cc3041fa00c50655315b93be45182b2c94d185a2610e/pyOpenSSL-23.3.0.tar.gz
+
+# 16 elementpath-4.2.1
+https://files.pythonhosted.org/packages/d7/8a/b609fea9b3a16e73bfdfb8ea0a60c2ffc7539b099dc6208bb82c487483bd/elementpath-4.2.1.tar.gz
+
+# 17 xmlschema-3.0.2
+https://files.pythonhosted.org/packages/ab/9d/584d6da2c7eddd67a3b7ce3ae19e679dd2815bf5df825155dd6a373f054c/xmlschema-3.0.2.tar.gz
+
+
+# 18 pysaml2-7.5.0
 https://files.pythonhosted.org/packages/76/02/e8ecb5d1574a2add1431c8ec16dff137610f30580a7c1d6205929b3db3ee/pysaml2-7.5.0.tar.gz
 
 # 09 jsonschema-4.23.0

@@ -190,6 +190,62 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+ 
+echo "i050.9.14.defusedxml-0.7.1"
+echo "i050.9.14.defusedxml-0.7.1" >> $OSLOG_PROCESS
+
+time { bash i050.9.14.defusedxml-0.7.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.15.pyOpenSSL-23.3.0"
+echo "i050.9.15.pyOpenSSL-23.3.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.15.pyOpenSSL-23.3.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.16.elementpath-4.2.1"
+echo "i050.9.16.elementpath-4.2.1" >> $OSLOG_PROCESS
+
+time { bash i050.9.16.elementpath-4.2.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.17.xmlschema-3.0.2.sh"
+echo "i050.9.17.xmlschema-3.0.2.sh" >> $OSLOG_PROCESS
+
+time { bash i050.9.17.xmlschema-3.0.2.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset OSLOG_PROCESS
