@@ -1,4 +1,4 @@
-# i050.9.01.werkzeug-3.0.6.sh
+# i050.9.01.Werkzeug-3.0.6.sh
 #
 
 #
@@ -49,7 +49,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                werkzeug                \
+                Werkzeug                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

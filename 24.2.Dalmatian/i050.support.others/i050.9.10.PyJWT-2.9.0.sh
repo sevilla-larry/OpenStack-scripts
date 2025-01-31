@@ -7,7 +7,7 @@
 #               i050.9.12 keystonemiddleware-10.7.
 #
 
-export PKG="PyJWT-2.9.0"
+export PKG="pyjwt-2.9.0"
 export PKGLOG_DIR=$OSLOG/050.10
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

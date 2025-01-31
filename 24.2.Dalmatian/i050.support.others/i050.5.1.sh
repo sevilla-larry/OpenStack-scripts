@@ -10,10 +10,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
  
-echo "i050.9.01.werkzeug-3.0.6"
-echo "i050.9.01.werkzeug-3.0.6" >> $OSLOG_PROCESS
+echo "i050.9.01.Werkzeug-3.0.6"
+echo "i050.9.01.Werkzeug-3.0.6" >> $OSLOG_PROCESS
 
-time { bash i050.9.01.werkzeug-3.0.6.sh ; }
+time { bash i050.9.01.Werkzeug-3.0.6.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

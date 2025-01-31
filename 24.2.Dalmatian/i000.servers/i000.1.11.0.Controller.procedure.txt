@@ -73,6 +73,9 @@ A.  Preparation
         md5sum -c c13.02.md5sums.Apache.txt
         md5sum -c i010.2.md5sums.support.minor.txt
         md5sum -c i020.2.md5sums.support.Major.txt
+        md5sum -c i030.2.md5sums.Oslo.support.txt
+        md5sum -c i040.2.md5sums.Oslo.txt
+        md5sum -c i050.2.md5sums.support.others.txt
 
         ###
 
@@ -256,7 +259,6 @@ F.  RabbitMQ
         # FAILED
         #   su - rabbitmq -c 'rabbitmq-server -detached'
         #
-
         rabbitmq-server -detached 
 
         rabbitmqctl start_app
@@ -276,11 +278,34 @@ F.  RabbitMQ
 
 G.  KeyStone - Identity service
 
+    G.01. KeyStone support apps
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
+
+        bash i000.1.11.3.support.apps.sh
+        ### check logs
+
     # ubuntu install, automatically created /etc/apache2/keystone.conf
     # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
     # https://docs.openstack.org/keystone/2024.2/install/keystone-install-obs.html
 
-    G.01. KeyStone database
+    G.02. KeyStone database
 
         ###
 
@@ -312,30 +337,9 @@ G.  KeyStone - Identity service
         #
         ###
 
-    G.02. KeyStone install
+    G.03. KeyStone install
 
         ###
-
-        export OSLOG=/var/log/os
-        export LFSLOG=/var/log/blfs
-        export MAKEFLAGS="-j$(nproc)"
-        export NPROC="$(nproc)"
-
-        echo $OSLOG           # /var/log/os
-        echo $LFSLOG          # /var/log/blfs
-        echo $MAKEFLAGS       # -j$(nproc)
-        echo $NPROC           # $(nproc)
-        echo $LANG            # en_US.UTF-8
-        echo $LC_ALL          # C.utf8
-
-        echo $SHELL           # /bin/bash
-        ls -l /bin/sh         # bash
-        ls -l /usr/bin/awk    # gawk
-
-        cd /sources
-
-        bash i000.1.11.3.support.apps.sh
-        ### check logs
 
         #bash i151.5.11.sh
         #install first bcrypt 4.0.1
@@ -343,7 +347,7 @@ G.  KeyStone - Identity service
 
         ###
 
-    G.03. KeyStone configuration
+    G.04. KeyStone configuration
 
         ### edit /etc/keystone/keystone.conf
 
@@ -370,7 +374,7 @@ G.  KeyStone - Identity service
 
         ###
 
-    G.04. Populate the Identity service database
+    G.05. Populate the Identity service database
 
         export OSLOG=/var/log/os
         export LFSLOG=/var/log/blfs
@@ -396,7 +400,7 @@ G.  KeyStone - Identity service
     
         ###
 
-    G.05. Initialize Fernet key repositories
+    G.06. Initialize Fernet key repositories
 
         ###
 
@@ -405,7 +409,7 @@ G.  KeyStone - Identity service
 
         ###
 
-    G.06. Check some things
+    G.07. Check some things
 
         iptables -S
 
@@ -445,7 +449,7 @@ G.  KeyStone - Identity service
               "media-types": [{"base": "application/json",
                                "type": "application/vnd.openstack.identity-v3+json"}]}}
 
-    G.07. Bootstrap the Identity service
+    G.08. Bootstrap the Identity service
 
         ###
 
@@ -462,7 +466,7 @@ G.  KeyStone - Identity service
         ###
 
 #
-#    G.08. Remove/exclude wsgi-test.conf
+#    G.??. Remove/exclude wsgi-test.conf
 #
 #        ### edit /etc/httpd/httpd.conf
 #
