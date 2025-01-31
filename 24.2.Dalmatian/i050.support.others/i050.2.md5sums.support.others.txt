@@ -55,9 +55,9 @@ a50e7f21aa60a741efe6b1b658dfb3f8 defusedxml-0.7.1.tar.gz
 # 17 xmlschema-2.5.1
 6da79e5709eb7de805e9dbc50de040ca xmlschema-2.5.1.tar.gz
 
-
 # 18 pysaml2-7.5.0
-0bb713a1c56acd4615b5bcae48e09113 pysaml2-7.5.0.tar.gz
+812ea63e08b5a786f0b1aae51b0fe50e pysaml2-7.5.0-py3-none-any.whl
+#0bb713a1c56acd4615b5bcae48e09113 pysaml2-7.5.0.tar.gz
 
 # 09 jsonschema-4.23.0
 a2cb5fee4da011118708ab275b34f30b jsonschema-4.23.0.tar.gz
