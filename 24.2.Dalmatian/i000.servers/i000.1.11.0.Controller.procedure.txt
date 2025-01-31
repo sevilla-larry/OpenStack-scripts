@@ -185,8 +185,8 @@ D.  Support Apps - Major - Configuration 1
         ###
 
         watchdog
-        logio
         deflate
+        logio
         negotiation
 
         # Modules to be UnLoaded
