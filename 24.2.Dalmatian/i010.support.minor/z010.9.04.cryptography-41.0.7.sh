@@ -1,4 +1,4 @@
-# i010.9.04.cryptography-43.0.3.sh
+# i010.9.04.cryptography-41.0.7.sh
 #
 # This module is giving ERRORs
 #
@@ -19,7 +19,7 @@
 #
 
 #export PKG="cryptography-3.4.8"
-export PKG="cryptography-43.0.3"
+export PKG="cryptography-41.0.7"
 export PKGLOG_DIR=$OSLOG/010.04
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

@@ -1,4 +1,4 @@
-# i010.9.04.cryptography-43.0.3.sh
+# i010.9.04.cryptography-41.0.7.sh
 #
 # Note: (alternative) .whl install
 # since the source build is giving ERRORs
@@ -15,9 +15,10 @@
 #
 #               i010.9.30 openstacksdk-4.0.1
 #               i020.9.1 python-openstackclient-7.1.3
+#               i050.9.15 pyOpenSSL-23.3.0.sh
 #
 
-export PKG="cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl"
+export PKG="cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl"
 export PKGLOG_DIR=$OSLOG/010.04
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log

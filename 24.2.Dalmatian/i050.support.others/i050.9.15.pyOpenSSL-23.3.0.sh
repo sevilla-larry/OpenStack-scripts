@@ -4,7 +4,7 @@
 #
 # Dependencies Required:
 #
-#               i010.9.04 cryptography-42.0.8
+#               i010.9.04 cryptography-41.0.7
 #
 
 #
