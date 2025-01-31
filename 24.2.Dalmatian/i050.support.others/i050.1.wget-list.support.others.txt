@@ -49,8 +49,8 @@ https://files.pythonhosted.org/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c9
 # 15 pyOpenSSL-23.3.0
 https://files.pythonhosted.org/packages/bf/a0/e667c3c43b65a188cc3041fa00c50655315b93be45182b2c94d185a2610e/pyOpenSSL-23.3.0.tar.gz
 
-# 16 elementpath-4.2.1
-https://files.pythonhosted.org/packages/d7/8a/b609fea9b3a16e73bfdfb8ea0a60c2ffc7539b099dc6208bb82c487483bd/elementpath-4.2.1.tar.gz
+# 16 elementpath-4.3.0
+https://files.pythonhosted.org/packages/0e/64/fac664e754c4f1e6448201f557864f09f4cb61040da509013c89fddfd60f/elementpath-4.3.0.tar.gz
 
 # 17 xmlschema-3.0.2
 https://files.pythonhosted.org/packages/ab/9d/584d6da2c7eddd67a3b7ce3ae19e679dd2815bf5df825155dd6a373f054c/xmlschema-3.0.2.tar.gz

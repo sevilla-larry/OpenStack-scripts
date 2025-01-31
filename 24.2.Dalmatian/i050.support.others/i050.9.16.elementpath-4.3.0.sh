@@ -1,4 +1,4 @@
-# i050.9.16.elementpath-4.2.1.sh
+# i050.9.16.elementpath-4.3.0.sh
 #
 
 #
@@ -7,7 +7,7 @@
 #               i050.9.17 xmlschema-3.0.2
 #
 
-export PKG="elementpath-4.2.1"
+export PKG="elementpath-4.3.0"
 export PKGLOG_DIR=$OSLOG/050.16
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
