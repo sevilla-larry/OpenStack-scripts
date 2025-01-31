@@ -536,15 +536,15 @@ B:  pysaml2>=5.0.0                                              7.5.0
 
 #####
 
-A:  i050.9.16 elementpath-4.2.1                     elementpath<5.0.0,>=4.3.0                   with Test
+A:  i050.9.16 elementpath-4.1.5                     elementpath>=4.1.5                          with Test
 
-B:  i050.9.17 xmlschema-3.0.2                       xmlschema (>=2,<3)
+B:  i050.9.17 xmlschema-2.5.1                       xmlschema (>=2,<3)
 
 ###
 
-A:  i050.9.17 xmlschema-3.0.2                       xmlschema (>=2,<3)                          with Test
+A:  i050.9.17 xmlschema-2.5.1                       xmlschema (>=2,<3)                          with Test
 
-D:  i050.9.16 elementpath-4.2.1                     elementpath<5.0.0,>=4.3.0
+D:  i050.9.16 elementpath-4.1.5                     elementpath<5.0.0,>=4.1.5
 
 B:  pysaml2>=5.0.0                                              7.5.0
 

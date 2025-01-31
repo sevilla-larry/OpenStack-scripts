@@ -49,11 +49,11 @@ a50e7f21aa60a741efe6b1b658dfb3f8 defusedxml-0.7.1.tar.gz
 # 15 pyOpenSSL-23.3.0
 4c4f6f9e1c731b8ee7adcd9fbeccec62 pyOpenSSL-23.3.0.tar.gz
 
-# 16 elementpath-4.3.0
-ddd5816433607213604746b60481307b elementpath-4.3.0.tar.gz
+# 16 elementpath-4.1.5
+8e00373aecd92734d5b1d7fa0335be23 elementpath-4.1.5.tar.gz
 
-# 17 xmlschema-3.0.2
-ec11900d160f537244b8309a5385c3d3 xmlschema-3.0.2.tar.gz
+# 17 xmlschema-2.5.1
+6da79e5709eb7de805e9dbc50de040ca xmlschema-2.5.1.tar.gz
 
 
 # 18 pysaml2-7.5.0

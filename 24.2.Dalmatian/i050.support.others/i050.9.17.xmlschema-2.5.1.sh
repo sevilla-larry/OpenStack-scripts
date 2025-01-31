@@ -1,14 +1,20 @@
-# i050.9.16.elementpath-4.3.0.sh
+# i050.9.17.xmlschema-2.5.1.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i050.9.16 elementpath-4.2.1
 #
 
 #
 # Required by:
 #
-#               i050.9.17 xmlschema-3.0.2
+#               i050.9.18 pysaml2-7.5.0
 #
 
-export PKG="elementpath-4.3.0"
-export PKGLOG_DIR=$OSLOG/050.16
+export PKG="xmlschema-2.5.1"
+export PKGLOG_DIR=$OSLOG/050.17
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +49,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                elementpath             \
+                xmlschema               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

@@ -220,10 +220,10 @@ echo "."
 
 ###
  
-echo "i050.9.16.elementpath-4.3.0"
-echo "i050.9.16.elementpath-4.3.0" >> $OSLOG_PROCESS
+echo "i050.9.16.elementpath-4.1.5"
+echo "i050.9.16.elementpath-4.1.5" >> $OSLOG_PROCESS
 
-time { bash i050.9.16.elementpath-4.3.0.sh ; }
+time { bash i050.9.16.elementpath-4.1.5.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -234,10 +234,10 @@ echo "."
 
 ###
  
-echo "i050.9.17.xmlschema-3.0.2.sh"
-echo "i050.9.17.xmlschema-3.0.2.sh" >> $OSLOG_PROCESS
+echo "i050.9.17.xmlschema-2.5.1.sh"
+echo "i050.9.17.xmlschema-2.5.1.sh" >> $OSLOG_PROCESS
 
-time { bash i050.9.17.xmlschema-3.0.2.sh ; }
+time { bash i050.9.17.xmlschema-2.5.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
