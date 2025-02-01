@@ -3,43 +3,6 @@
 # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
 #
 
-#
-# Dependencies Required:
-#
-#               i010.9.01 pbr-6.1.0
-#               i030.9.03 WebOb-1.8.7
-#               i050.9.05 flask-3.0.3
-#               i050.9.08 Flask-RESTful-0.3.10
-#               i010.9.04 cryptography-42.0.8
-#               i030.9.21 sqlalchemy-2.0.37
-#               i010.9.10 stevedore-5.3.0
-#               i050.9.09 passlib-1.7.4
-#               i010.9.60 python-keystoneclient-5.5.0
-#               i050.9.12 keystonemiddleware-10.7.1
-#               i030.9.13 bcrypt-4.2.0
-#               i050.9.13 scrypt-0.8.27
-#               i040.9.03 oslo.cache-3.8.0
-#               i010.9.45 oslo.config-9.6.0
-#               i040.9.01 oslo.context-5.6.0
-#               i040.9.08 oslo.messaging-14.9.1
-#               i040.9.09 oslo.db-16.0.0
-#               i010.9.31 oslo.i18n-6.4.0
-#               i040.9.02 oslo.log-6.1.2
-#               i040.9.06 oslo.middleware-6.2.0
-#               i040.9.10 oslo.policy-4.4.0
-#               i010.9.50 oslo.serialization-5.5.0
-#               i040.9.11 oslo.upgradecheck-2.4.0
-#               i010.9.39 oslo.utils-7.3.0
-#               i050.9.14 oauthlib-3.2.2
-#               i050.9.18 pysaml2-7.5.0
-#               i050.9.11 PyJWT-2.9.0
-#               i010.9.14 dogpile.cache-1.3.3
-#               i050.9.22 jsonschema-4.23.0
-#               i050.9.10 pycadf-3.1.1
-#               b30.13.24.17 Msgpack-1.0.8
-#               i050.9.23 osprofiler-4.2.0
-#
-
 export PKG="keystone-26.0.0"
 export PKGLOG_DIR=$OSLOG/151
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
@@ -69,25 +32,10 @@ useradd -c "keystone"           \
         keystone                \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-echo "2. pip3 Build ..."
-echo "2. pip3 Build ..." >> $OSLOG_PROCESS
-echo "2. pip3 Build ..." >> $PKGLOG_ERROR
-pip3 wheel  -w dist                 \
-            --no-cache-dir          \
-            --no-build-isolation    \
-            --no-deps               \
-            $PWD                    \
-            > $PKGLOG_BUILD 2>> $PKGLOG_ERROR
-
-echo "3. pip3 Install ..."
-echo "3. pip3 Install ..." >> $OSLOG_PROCESS
-echo "3. pip3 Install ..." >> $PKGLOG_ERROR
-pip3 install    --no-index              \
-                --no-user               \
-                --find-links dist       \
-                --no-cache-dir          \
-                keystone                \
-                > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+echo "2. Pip3 Install ..."
+echo "2. Pip3 Install ..." >> $OSLOG_PROCESS
+echo "2. Pip3 Install ..." >> $PKGLOG_ERROR
+pip3 install . > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 install -v -d -m755 /etc/keystone               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
