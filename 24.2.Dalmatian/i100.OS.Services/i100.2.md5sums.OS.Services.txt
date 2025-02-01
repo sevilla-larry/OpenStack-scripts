@@ -1,10 +1,7 @@
-# i151 Identity Service
+# i100 OpenStack Services
 
-# 151.1 bcrypt-4.0.1
-# a98a2232a8e2af6980000a31ef14d48d bcrypt-4.0.1.tar.gz
-
-# 151.2 KeyStone-26.0.0
-#   keystone-26.0.0.tar.gz
+# 151 KeyStone-26.0.0
+d225b4d3d7332068984a43340f8ce327 keystone-26.0.0.tar.gz
 #   keystone.conf.sample
 
 

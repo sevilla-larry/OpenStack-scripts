@@ -76,6 +76,7 @@ A.  Preparation
         md5sum -c i030.2.md5sums.Oslo.support.txt
         md5sum -c i040.2.md5sums.Oslo.txt
         md5sum -c i050.2.md5sums.support.others.txt
+        md5sum -c i100.2.md5sums.OS.Services.txt
 
         ###
 
