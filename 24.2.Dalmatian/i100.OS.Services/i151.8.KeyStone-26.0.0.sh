@@ -43,6 +43,7 @@
 export PKG="keystone-26.0.0"
 export PKGLOG_DIR=$OSLOG/151
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
+export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
@@ -137,6 +138,6 @@ rm -rf $PKG
 unset SOURCES_DIR
 unset OSLOG_PROCESS
 unset PKGLOG_OTHERS
-unset PKGLOG_INSTALL
+unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_ERROR PKGLOG_TAR
 unset PKGLOG_DIR PKG
