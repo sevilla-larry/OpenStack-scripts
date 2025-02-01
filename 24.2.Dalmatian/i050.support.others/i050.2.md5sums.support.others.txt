@@ -59,8 +59,18 @@ a50e7f21aa60a741efe6b1b658dfb3f8 defusedxml-0.7.1.tar.gz
 812ea63e08b5a786f0b1aae51b0fe50e pysaml2-7.5.0-py3-none-any.whl
 #0bb713a1c56acd4615b5bcae48e09113 pysaml2-7.5.0.tar.gz
 
-# 09 jsonschema-4.23.0
+# 19 rpds_py-0.22.3
+6035fa10b2b05b46d81fd886b30e75cc rpds_py-0.22.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+#461d6f4e753bfd1f26627f5520294b88 rpds_py-0.22.3.tar.gz
+
+# 20 referencing-0.32.1
+d1a0a4ae03ebba4b86b22bfb825f150b referencing-0.32.1.tar.gz
+
+# 21 jsonschema_specifications-2023.12.1
+de730f6937d1e3660a2d835c4f93f31b jsonschema_specifications-2023.12.1.tar.gz
+
+# 22 jsonschema-4.23.0
 a2cb5fee4da011118708ab275b34f30b jsonschema-4.23.0.tar.gz
 
-# 11 osprofiler-4.2.0
+# 23 osprofiler-4.2.0
 e1e6db90f3bdc3ea36761777b1e3e049 osprofiler-4.2.0.tar.gz

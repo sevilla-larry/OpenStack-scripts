@@ -246,6 +246,90 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+ 
+echo "i050.9.18.pysaml2-7.5.0"
+echo "i050.9.18.pysaml2-7.5.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.18.pysaml2-7.5.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.19.rpds_py-0.22.3"
+echo "i050.9.19.rpds_py-0.22.3" >> $OSLOG_PROCESS
+
+time { bash i050.9.19.rpds_py-0.22.3.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.20.referencing-0.32.1"
+echo "i050.9.20.referencing-0.32.1" >> $OSLOG_PROCESS
+
+time { bash i050.9.20.referencing-0.32.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.21.jsonschema_specifications-2023.12.1"
+echo "i050.9.21.jsonschema_specifications-2023.12.1" >> $OSLOG_PROCESS
+
+time { bash i050.9.21.jsonschema_specifications-2023.12.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.22.jsonschema-4.23.0"
+echo "i050.9.22.jsonschema-4.23.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.22.jsonschema-4.23.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.23.osprofiler-4.2.0"
+echo "i050.9.23.osprofiler-4.2.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.23.osprofiler-4.2.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset OSLOG_PROCESS
