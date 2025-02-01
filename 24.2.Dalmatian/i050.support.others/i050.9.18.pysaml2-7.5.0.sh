@@ -23,7 +23,7 @@
 #
 
 export PKG="pysaml2-7.5.0-py3-none-any.whl"
-export PKGLOG_DIR=$OSLOG/010.18
+export PKGLOG_DIR=$OSLOG/050.18
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log

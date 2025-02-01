@@ -4,7 +4,7 @@
 #
 
 export PKG="keystone-26.0.0"
-export PKGLOG_DIR=$OSLOG/251.8
+export PKGLOG_DIR=$OSLOG/151
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
@@ -56,7 +56,7 @@ export APACHE_CONF_DIR=/etc/httpd/
 export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
 export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
 
-export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES_DIR/i151.9.9.KeyStone.conf.for.Apache.txt
+export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES_DIR/i151.9.KeyStone.conf.for.Apache.txt
 export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone.conf
 
 cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \

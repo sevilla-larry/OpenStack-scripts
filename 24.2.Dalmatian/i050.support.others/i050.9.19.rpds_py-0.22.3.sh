@@ -12,7 +12,7 @@
 #
 
 export PKG="rpds_py-0.22.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
-export PKGLOG_DIR=$OSLOG/010.19
+export PKGLOG_DIR=$OSLOG/050.19
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
