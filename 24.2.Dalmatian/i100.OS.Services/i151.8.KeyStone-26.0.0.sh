@@ -105,7 +105,7 @@ chown -vR keystone:keystone /etc/keystone       \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
-export APACHE_CONF_DIR=/etc/httpd/
+export APACHE_CONF_DIR=/etc/httpd
 export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
 export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
 

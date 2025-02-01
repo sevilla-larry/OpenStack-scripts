@@ -37,8 +37,11 @@ c295bad0304f0cab1372ffed3297480c yappi-1.6.0.tar.gz
 # 12 statsd-4.0.1
 33f9f58c5687cd87977e8b27f5d60e42 statsd-4.0.1.tar.gz
 
-# 13 bcrypt-4.2.0 trial     4.0.1 working
-0f84413ae0378bace440df5c9b317bc6 bcrypt-4.2.0.tar.gz
+# 13 bcrypt-4.2.1 trial     4.0.1 working
+04825a138ed1aabf499d7a5fbf35fcf6 bcrypt-4.2.1.tar.gz
+#0f84413ae0378bace440df5c9b317bc6 bcrypt-4.2.0.tar.gz err on keystone manage
+#
+#
 
 # 14 futurist-3.0.0
 cd171597ea297afc0ef98b2f8b96081b futurist-3.0.0.tar.gz
