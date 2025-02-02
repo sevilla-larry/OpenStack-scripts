@@ -37,7 +37,8 @@ c295bad0304f0cab1372ffed3297480c yappi-1.6.0.tar.gz
 # 12 statsd-4.0.1
 33f9f58c5687cd87977e8b27f5d60e42 statsd-4.0.1.tar.gz
 
-# 13 bcrypt-4.1.3 trial     Note: 4.0.1 working   Note: 4.2.x err No module named 'bcrypt._bcrpt'
+# 13 bcrypt-4.1.3 trial     Note: 4.0.1 working
+#Note: 4.2.x err executing keystone-manage db_sync  msg: No module named 'bcrypt._bcrpt'
 30617ec75d7867f586948842030621db bcrypt-4.1.3.tar.gz
 #bcrypt-4.0.1.tar.gz
 # 151.1 bcrypt-4.0.1 NOT viable,too many dependencies
