@@ -12,7 +12,7 @@
 #
 
 export PKG="bcrypt-4.1.3-cp39-abi3-manylinux_2_28_x86_64.whl"
-export PKGLOG_DIR=$OSLOG/050.18
+export PKGLOG_DIR=$OSLOG/030.13
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log

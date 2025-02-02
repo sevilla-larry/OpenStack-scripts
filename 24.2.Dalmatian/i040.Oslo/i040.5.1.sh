@@ -162,6 +162,34 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+ 
+echo "i040.9.12.oslo.limit-2.5.0"
+echo "i040.9.12.oslo.limit-2.5.0" >> $OSLOG_PROCESS
+
+time { bash i040.9.12.oslo.limit-2.5.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i040.9.13.oslo.reports-3.4.0"
+echo "i040.9.13.oslo.reports-3.4.0" >> $OSLOG_PROCESS
+
+time { bash i040.9.13.oslo.reports-3.4.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset OSLOG_PROCESS

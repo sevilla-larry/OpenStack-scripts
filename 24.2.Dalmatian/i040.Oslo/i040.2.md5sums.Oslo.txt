@@ -33,3 +33,9 @@ d272ab9e36d502addf7cd98e207c18a2 oslo.messaging-14.9.1.tar.gz
 
 # 11 oslo.upgradecheck-2.4.0
 8bce58a385b16626fbdcba30852495e8 oslo.upgradecheck-2.4.0.tar.gz
+
+# 12 oslo.limit-2.5.0
+32fe84e8dfd646d49e03f2873fafd616 oslo.limit-2.5.0.tar.gz
+
+# 13 oslo.reports-3.4.0
+c9fd64620d1952de85dc7848f634ab36 oslo.reports-3.4.0.tar.gz

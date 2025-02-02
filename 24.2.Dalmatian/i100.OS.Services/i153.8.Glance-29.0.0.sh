@@ -1,11 +1,12 @@
-# i153.9.8.Glance-29.0.0.sh
+# i153.8.Glance-29.0.0.sh
 #
 # https://docs.openstack.org/glance/2024.2/install/install-ubuntu.html
 #
 
 export PKG="glance-29.0.0"
-export PKGLOG_DIR=$OSLOG/253.8
+export PKGLOG_DIR=$OSLOG/253
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
+export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
@@ -32,10 +33,25 @@ useradd -c "glance"           \
         glance                \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-echo "2. Pip3 Install ..."
-echo "2. Pip3 Install ..." >> $OSLOG_PROCESS
-echo "2. Pip3 Install ..." >> $PKGLOG_ERROR
-pip3 install . > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+echo "2. pip3 Build ..."
+echo "2. pip3 Build ..." >> $OSLOG_PROCESS
+echo "2. pip3 Build ..." >> $PKGLOG_ERROR
+pip3 wheel  -w dist                 \
+            --no-cache-dir          \
+            --no-build-isolation    \
+            --no-deps               \
+            $PWD                    \
+            > $PKGLOG_BUILD 2>> $PKGLOG_ERROR
+
+echo "3. pip3 Install ..."
+echo "3. pip3 Install ..." >> $OSLOG_PROCESS
+echo "3. pip3 Install ..." >> $PKGLOG_ERROR
+pip3 install    --no-index              \
+                --no-user               \
+                --find-links dist       \
+                --no-cache-dir          \
+                glance                  \
+                > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 install -v -d -m755 /etc/glance               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
@@ -57,6 +73,6 @@ rm -rf $PKG
 unset SOURCES_DIR
 unset OSLOG_PROCESS
 unset PKGLOG_OTHERS
-unset PKGLOG_INSTALL
+unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_ERROR PKGLOG_TAR
 unset PKGLOG_DIR PKG

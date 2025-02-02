@@ -618,11 +618,11 @@ D:
     b30.13.23.30 Requests-2.32.3                    requests>=2.14.2 # Apache-2.0
     i030.9.03 WebOb-1.8.7                           WebOb>=1.7.1 # MIT
 
-B:  i151.9.1 KeyStone-26.0.0
+B:  i151.8 KeyStone-26.0.0.sh
 
 ###############
 
-A:  i151.9.1 KeyStone-26.0.0                                                                    NO test
+A:  i151.8 KeyStone-26.0.0.sh
 
 D:
     # Requirements lower bounds listed here are our best effort to keep them up to

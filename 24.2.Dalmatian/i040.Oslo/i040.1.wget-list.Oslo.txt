@@ -33,3 +33,9 @@ https://tarballs.opendev.org/openstack/oslo.policy/oslo.policy-4.4.0.tar.gz
 
 # 11 oslo.upgradecheck-2.4.0
 https://tarballs.opendev.org/openstack/oslo.upgradecheck/oslo.upgradecheck-2.4.0.tar.gz
+
+# 12 oslo.limit-2.5.0
+https://tarballs.opendev.org/openstack/oslo.limit/oslo.limit-2.5.0.tar.gz
+
+# 13 oslo.reports-3.4.0
+https://tarballs.opendev.org/openstack/oslo.reports/oslo.reports-3.4.0.tar.gz
