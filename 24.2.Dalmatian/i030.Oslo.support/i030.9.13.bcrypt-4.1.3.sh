@@ -1,4 +1,4 @@
-# i030.9.13.bcrypt-4.2.1.sh
+# i030.9.13.bcrypt-4.1.3.sh
 #
 
 #
@@ -8,7 +8,7 @@
 #               i151.8    KeyStone-26.0.0
 #
 
-export PKG="bcrypt-4.2.1"
+export PKG="bcrypt-4.1.3"
 export PKGLOG_DIR=$OSLOG/030.13
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
