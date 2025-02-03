@@ -19,8 +19,8 @@
 #               i153.8 Glance-29.0.0
 #
 
-export PKG="oslo.limit-2.5.0"
-export PKGLOG_DIR=$OSLOG/040.12
+export PKG="oslo.reports-3.4.0"
+export PKGLOG_DIR=$OSLOG/040.13
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -55,7 +55,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.limit              \
+                oslo.reports            \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
