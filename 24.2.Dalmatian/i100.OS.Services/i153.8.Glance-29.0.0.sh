@@ -4,7 +4,7 @@
 #
 
 export PKG="glance-29.0.0"
-export PKGLOG_DIR=$OSLOG/253
+export PKGLOG_DIR=$OSLOG/153
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
@@ -59,10 +59,10 @@ install -v -d -m777 /var/lib/glance           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/log/glance           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   ../glance-api.conf.sample                 \
-        /etc/glance/glance-api.conf             \
+cp -v   etc/glance-api.conf                   \
+        /etc/glance/glance-api.conf           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR glance:glance /etc/glance       \
+chown -vR glance:glance /etc/glance           \
                         /var/lib/glance       \
                         /var/log/glance       \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
