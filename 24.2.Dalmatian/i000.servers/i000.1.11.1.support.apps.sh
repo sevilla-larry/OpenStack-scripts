@@ -26,7 +26,7 @@ bash b10.03.9.sh
 # ***** Note intentionally EXcluded *****
 # but seems needed by Glance
 # SQLite then Python
-bash b10.03.3
+bash b10.03.3.sh
 bash g11.03.3.py.3.11.sh
 
 # support apps for OpenStack, Nmap + deps, lsof & iptables
