@@ -57,6 +57,8 @@ install -v -d -m755 /etc/glance               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/lib/glance           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+install -v -d -m777 /var/lib/glance/images    \
+        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/log/glance           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 cp -v   etc/glance-api.conf                   \

@@ -435,7 +435,7 @@ G.  KeyStone - Identity service
         #curl -i http://10.0.0.11:5000/v3
 
             HTTP/1.1 200 OK
-            Date: Tue, 26 Nov 2024 06:30:49 GMT
+            Date: Tue, dd Mmm YYYY HH:MM:SS GMT
             Server: Apache/2.4.62 (Unix) mod_wsgi/5.0.2 Python/3.11
             Content-Length: 250
             Vary: X-Auth-Token
@@ -730,7 +730,7 @@ J.  Glance - Image Service
             user_domain_name = default
             project_name = service
             username = glance
-        # password = GLANCE_PASS
+          # password = GLANCE_PASS
             password = openstack
 
         [paste_deploy]
@@ -799,7 +799,11 @@ J.  Glance - Image Service
         openstack role add --user glance --user-domain default --system all reader
         $$$ Note: no display
 
-    J.06. Populate the Image service database:
+    J.06. Restart Glance
+
+        reboot
+
+    J.07. Populate the Image service database:
 
         ###
 
@@ -807,17 +811,14 @@ J.  Glance - Image Service
 
         ###
 
-    J.07. Restart Glance
-
-        reboot?
-
     J.08. Verify Operation
 
         $$$
 
         . admin-openrc
 
-        wget http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img
+      # wget http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img
+        wget http://download.cirros-cloud.net/0.6.3/cirros-0.6.3-x86_64-disk.img
         $$$ or other cloud image
 
         $$$ Upload the image to the Image service using
@@ -825,10 +826,15 @@ J.  Glance - Image Service
         $$$ bare container format,
         $$$ and public visibility
         $$$ so all projects can access it:
-        glance image-create --name "cirros" \
-            --file cirros-0.4.0-x86_64-disk.img \
+#        glance image-create --name "cirros" \
+#            --file cirros-0.6.3-x86_64-disk.img \
+#            --disk-format qcow2 --container-format bare \
+#            --visibility=public
+        openstack image create  \
+            --file cirros-0.6.3-x86_64-disk.img \
             --disk-format qcow2 --container-format bare \
-            --visibility=public
+            --public                                    \
+            cirros
 
         ### For information about the glance parameters,
         ### see Image service (glance) command-line client
