@@ -118,7 +118,7 @@ a2da4f48c568c5a4972aff4be035092f oslo.config-9.6.0.tar.gz
 # 41 oslo.serialization-5.5.0
 fa388acbd1c9819cb96eb2a48b2b59c7 oslo.serialization-5.5.0.tar.gz
 
-# 42 warlock 2.0.1
+# 42 warlock-2.0.1
 #78aa9050a11f1599d2b2ebb6def6b411 warlock-2.0.1.tar.gz
 efa855b264bc05f429d63208237ac491 warlock-2.0.1-py3-none-any.whl
 
