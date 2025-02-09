@@ -1,4 +1,4 @@
-# i010.9.41.rfc3986-2.0.0.sh
+# i010.9.39.rfc3986-2.0.0.sh
 #
 
 #
@@ -8,7 +8,7 @@
 #
 
 export PKG="rfc3986-2.0.0"
-export PKGLOG_DIR=$OSLOG/010.41
+export PKGLOG_DIR=$OSLOG/010.39
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

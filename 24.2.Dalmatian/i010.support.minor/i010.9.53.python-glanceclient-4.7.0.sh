@@ -1,31 +1,22 @@
-# i010.9.39.oslo.utils-7.3.0.sh
+# i010.9.53.python-glanceclient-4.7.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i010.9.12 iso8601-2.1.0
+#               i010.9.01 pbr-6.1.0
+#               i010.9.09 prettytable-3.11.0
+#               i010.9.19 keystoneauth1-5.8.0
+#               b30.13.23.30 Requests-2.32.3
+#               i010.9.42 warlock 2.0.1                         
+#               i010.9.39 oslo.utils-7.3.0
 #               i010.9.31 oslo.i18n-6.4.0
-#               i010.9.32 netaddr-1.3.0
-#               i010.9.20 netifaces-0.11.0
-#               i010.9.34 debtcollector-3.0.0
-#               i010.9.35 pyparsing-3.1.4
-#               b10.13.23.15 Packaging-24.1
-#               i010.9.36 tzdata-2024.2
-#               b30.13.23.28 PyYAML-6.0.2
+#               i010.9.33 wrapt-1.16.0                          
+#               i050.9.15 pyOpenSSL-23.3.0                      
 #
 
-#
-# Required by:
-#
-#               i010.9.40 osc-lib-3.1.0
-#               i010.9.50 oslo.serialization-5.5.0
-#               i010.9.60 python-keystoneclient-5.5.0
-#               i010.9.70 python-cinderclient-9.6.0
-#
-
-export PKG="oslo.utils-7.3.0"
-export PKGLOG_DIR=$OSLOG/010.39
+export PKG="python-glanceclient-4.7.0"
+export PKGLOG_DIR=$OSLOG/010.53
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -60,13 +51,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.utils              \
+                python-glanceclient     \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

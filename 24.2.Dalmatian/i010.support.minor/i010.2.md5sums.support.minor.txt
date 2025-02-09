@@ -99,48 +99,42 @@ b0307617f8f3aa73bbcfadac52d91df7 netaddr-1.3.0.tar.gz
 # 36 tzdata-2024.2
 bda38291e705ce8329a2d49128f072fa tzdata-2024.2.tar.gz
 
-# [37-38]  allowance for future dependencies of oslo.utils and osc-lib
-
-# 39 oslo.utils-7.3.0
+# 37 oslo.utils-7.3.0
 1dd4678e5edbc064417f6fc2d880bf29 oslo.utils-7.3.0.tar.gz
 
-# 40 osc-lib-3.1.0
+# 38 osc-lib-3.1.0
 62509f72b5d68233e86812d45f9daf0f osc-lib-3.1.0.tar.gz
 
-##########
-
-# 41 rfc3986-2.0.0
+# 39 rfc3986-2.0.0
 bbf20302bf26bc771e88cc775fbde3bc rfc3986-2.0.0.tar.gz
 
-# [42-44] allowance for future dependencies of oslo.config
-
-# 45 oslo.config-9.6.0
+# 40 oslo.config-9.6.0
 a2da4f48c568c5a4972aff4be035092f oslo.config-9.6.0.tar.gz
 # 621ddd3c13b6e3ab5ca293341c973fd1 oslo.config-9.6.0-py3-none-any.whl   # alternate, if error
 
 ## 46 msgpack-1.1.0
 #e5769d4ab610491ac561c84fde4cf4a7 msgpack-1.1.0.tar.gz
 
-# [47-49] allowance for future dependencies of oslo.serialization
-
-# 50 oslo.serialization-5.5.0
+# 41 oslo.serialization-5.5.0
 fa388acbd1c9819cb96eb2a48b2b59c7 oslo.serialization-5.5.0.tar.gz
 
-# [51-59] allowance for future dependencies of python-keystoneclient
+# 42 warlock 2.0.1
+#78aa9050a11f1599d2b2ebb6def6b411 warlock-2.0.1.tar.gz
+efa855b264bc05f429d63208237ac491 warlock-2.0.1-py3-none-any.whl
 
-# 60 python-keystoneclient-5.5.0
+# [43-49] allowance for future dependencies
+
+# 51 python-keystoneclient-5.5.0
 a3a8ced9ae50dc3b2990231c37f3e228 python-keystoneclient-5.5.0.tar.gz
 
-# [61-64] allowance for future dependencies of python-cinderclient
-
-# 65 python-cinderclient-9.6.0
+# 52 python-cinderclient-9.6.0
 e9f12ae2884ab2f0a2b43f1936742fa2 python-cinderclient-9.6.0.tar.gz
 
-
-
+# 53 python-glanceclient-4.7.0
+acb3ce6cbf614c82f6c074d66a8ab6a6 python-glanceclient-4.7.0.tar.gz
 
 # 04 build 1.2.1
-9675d7b278f4533b9b75701e6e87390b build-1.2.1.tar.gz
+#9675d7b278f4533b9b75701e6e87390b build-1.2.1.tar.gz
 
 # 01 simplejson-3.19.3  (Python module)
 #a198e17c5dcc426ff83ec4a02190eae5 simplejson-3.19.3.tar.gz

@@ -1,4 +1,4 @@
-# i010.9.70.python-cinderclient-9.6.0.sh
+# i010.9.52.python-cinderclient-9.6.0.sh
 #
 
 #
@@ -20,7 +20,7 @@
 #
 
 export PKG="python-cinderclient-9.6.0"
-export PKGLOG_DIR=$OSLOG/010.65
+export PKGLOG_DIR=$OSLOG/010.52
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

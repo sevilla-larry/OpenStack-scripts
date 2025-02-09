@@ -826,15 +826,10 @@ J.  Glance - Image Service
         $$$ bare container format,
         $$$ and public visibility
         $$$ so all projects can access it:
-#        glance image-create --name "cirros" \
-#            --file cirros-0.6.3-x86_64-disk.img \
-#            --disk-format qcow2 --container-format bare \
-#            --visibility=public
-        openstack image create  \
+        glance image-create --name "cirros" \
             --file cirros-0.6.3-x86_64-disk.img \
             --disk-format qcow2 --container-format bare \
-            --public                                    \
-            cirros
+            --visibility=public
 
         ### For information about the glance parameters,
         ### see Image service (glance) command-line client

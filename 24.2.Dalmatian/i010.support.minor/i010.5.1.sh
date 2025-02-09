@@ -9,7 +9,7 @@ date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
- 
+
 echo "i010.9.01.pbr-6.1.0"
 echo "i010.9.01.pbr-6.1.0" >> $OSLOG_PROCESS
 
@@ -426,24 +426,10 @@ echo "."
 
 ###
 
-echo "i010.9.39.oslo.utils-7.3.0"
-echo "i010.9.39.oslo.utils-7.3.0" >> $OSLOG_PROCESS
+echo "i010.9.37.oslo.utils-7.3.0"
+echo "i010.9.37.oslo.utils-7.3.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.39.oslo.utils-7.3.0.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i010.9.40.osc-lib-3.1.0"
-echo "i010.9.40.osc-lib-3.1.0" >> $OSLOG_PROCESS
-
-time { bash i010.9.40.osc-lib-3.1.0.sh ; }
+time { bash i010.9.37.oslo.utils-7.3.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -454,10 +440,10 @@ echo "."
 
 ###
 
-echo "i010.9.41.rfc3986-2.0.0"
-echo "i010.9.41.rfc3986-2.0.0" >> $OSLOG_PROCESS
+echo "i010.9.38.osc-lib-3.1.0"
+echo "i010.9.38.osc-lib-3.1.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.41.rfc3986-2.0.0.sh ; }
+time { bash i010.9.38.osc-lib-3.1.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -468,10 +454,24 @@ echo "."
 
 ###
 
-echo "i010.9.45.oslo.config-9.6.0"
-echo "i010.9.45.oslo.config-9.6.0" >> $OSLOG_PROCESS
+echo "i010.9.39.rfc3986-2.0.0"
+echo "i010.9.39.rfc3986-2.0.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.45.oslo.config-9.6.0.sh ; }
+time { bash i010.9.39.rfc3986-2.0.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i010.9.40.oslo.config-9.6.0"
+echo "i010.9.40.oslo.config-9.6.0" >> $OSLOG_PROCESS
+
+time { bash i010.9.40.oslo.config-9.6.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -496,24 +496,10 @@ echo "."
 
 ###
 
-echo "i010.9.50.oslo.serialization-5.5.0"
-echo "i010.9.50.oslo.serialization-5.5.0" >> $OSLOG_PROCESS
+echo "i010.9.41.oslo.serialization-5.5.0"
+echo "i010.9.41.oslo.serialization-5.5.0" >> $OSLOG_PROCESS
 
-time { bash i010.9.50.oslo.serialization-5.5.0.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i010.9.60.python-keystoneclient-5.5.0"
-echo "i010.9.60.python-keystoneclient-5.5.0" >> $OSLOG_PROCESS
-
-time { bash i010.9.60.python-keystoneclient-5.5.0.sh ; }
+time { bash i010.9.41.oslo.serialization-5.5.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -524,10 +510,52 @@ echo "."
 
 ###
 
-echo "i010.9.70.python-cinderclient-9.6.0"
-echo "i010.9.70.python-cinderclient-9.6.0" >> $OSLOG_PROCESS
+echo "i010.9.42.warlock 2.0.1"
+echo "i010.9.42.warlock 2.0.1" >> $OSLOG_PROCESS
 
-time { bash i010.9.70.python-cinderclient-9.6.0.sh ; }
+time { bash i010.9.42.warlock 2.0.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i010.9.51.python-keystoneclient-5.5.0"
+echo "i010.9.51.python-keystoneclient-5.5.0" >> $OSLOG_PROCESS
+
+time { bash i010.9.51.python-keystoneclient-5.5.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i010.9.52.python-cinderclient-9.6.0"
+echo "i010.9.52.python-cinderclient-9.6.0" >> $OSLOG_PROCESS
+
+time { bash i010.9.52.python-cinderclient-9.6.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i010.9.53.python-glanceclient-4.7.0"
+echo "i010.9.53.python-glanceclient-4.7.0" >> $OSLOG_PROCESS
+
+time { bash i010.9.53.python-glanceclient-4.7.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

@@ -42,7 +42,6 @@ https://tarballs.opendev.org/openstack/cliff/cliff-4.7.0.tar.gz
 #https://files.pythonhosted.org/packages/b9/f3/ef59cee614d5e0accf6fd0cbba025b93b272e626ca89fb70a3e9187c5d15/iso8601-2.1.0.tar.gz            # giving ERRORs
 https://files.pythonhosted.org/packages/6c/0c/f37b6a241f0759b7653ffa7213889d89ad49a2b76eb2ddf3b57b2738c347/iso8601-2.1.0-py3-none-any.whl   # alternative
 
-
 # 13 decorator-5.1.1
 https://files.pythonhosted.org/packages/66/0c/8d907af351aa16b42caae42f9d6aa37b900c67308052d10fdce809f8d952/decorator-5.1.1.tar.gz
 
@@ -98,44 +97,39 @@ https://files.pythonhosted.org/packages/83/08/13f3bce01b2061f2bbd582c9df82723de9
 # 36 tzdata-2024.2
 https://files.pythonhosted.org/packages/e1/34/943888654477a574a86a98e9896bae89c7aa15078ec29f490fef2f1e5384/tzdata-2024.2.tar.gz
 
-# [37-38]  allowance for future dependencies of oslo.utils and osc-lib
-
-# 39 oslo.utils-7.3.0
+# 37 oslo.utils-7.3.0
 https://tarballs.opendev.org/openstack/oslo.utils/oslo.utils-7.3.0.tar.gz
 
-# 40 osc-lib-3.1.0
+# 38 osc-lib-3.1.0
 https://tarballs.opendev.org/openstack/osc-lib/osc-lib-3.1.0.tar.gz
 
-##########
-
-# 41 rfc3986-2.0.0
+# 39 rfc3986-2.0.0
 https://files.pythonhosted.org/packages/85/40/1520d68bfa07ab5a6f065a186815fb6610c86fe957bc065754e47f7b0840/rfc3986-2.0.0.tar.gz
 
-# [42-44] allowance for future dependencies of oslo.config
-
-# 45 oslo.config-9.6.0
+# 40 oslo.config-9.6.0
 https://tarballs.opendev.org/openstack/oslo.config/oslo.config-9.6.0.tar.gz
 # https://tarballs.opendev.org/openstack/oslo.config/oslo.config-9.6.0-py3-none-any.whl     # alternate if error
-
-#####
 
 ## 46 msgpack-1.1.0
 #https://files.pythonhosted.org/packages/cb/d0/7555686ae7ff5731205df1012ede15dd9d927f6227ea151e901c7406af4f/msgpack-1.1.0.tar.gz
 
-# [47-49] allowance for future dependencies of oslo.serialization
-
-# 50 oslo.serialization-5.5.0
+# 41 oslo.serialization-5.5.0
 https://tarballs.opendev.org/openstack/oslo.serialization/oslo.serialization-5.5.0.tar.gz
 
-# [51-59] allowance for future dependencies of python-keystoneclient
+# 42 warlock 2.0.1
+#https://files.pythonhosted.org/packages/de/cf/ba9ac96d09b797c377e2c12c0eb6b19565f3b2a2efb55932d319e319b622/warlock-2.0.1.tar.gz
+https://files.pythonhosted.org/packages/a6/e1/aa7cbdb16396c1d6a734dd22b4436319daa0e4d203218f0b11cb20f37374/warlock-2.0.1-py3-none-any.whl
 
-# 60 python-keystoneclient-5.5.0
+# [43-49] allowance for future dependencies
+
+# 51 python-keystoneclient-5.5.0
 https://tarballs.opendev.org/openstack/python-keystoneclient/python-keystoneclient-5.5.0.tar.gz
 
-# [61-64] allowance for future dependencies of python-cinderclient
-
-# 65 python-cinderclient-9.6.0
+# 52 python-cinderclient-9.6.0
 https://tarballs.opendev.org/openstack/python-cinderclient/python-cinderclient-9.6.0.tar.gz
+
+# 53 python-glanceclient-4.7.0
+https://tarballs.opendev.org/openstack/python-glanceclient/python-glanceclient-4.7.0.tar.gz
 
 ##########
 
@@ -151,10 +145,10 @@ https://github.com/erlang/otp/releases/download/OTP-26.2.5.5/otp_src_26.2.5.5.ta
 #https://files.pythonhosted.org/packages/84/c2/80633736cd183ee4a62107413def345f7e6e3c01563dbca1417363cf957e/build-1.2.2.post1-py3-none-any.whl
 
 # 04 build 1.2.1
-https://files.pythonhosted.org/packages/ce/9e/2d725d2f7729c6e79ca62aeb926492abbc06e25910dd30139d60a68bcb19/build-1.2.1.tar.gz
+#https://files.pythonhosted.org/packages/ce/9e/2d725d2f7729c6e79ca62aeb926492abbc06e25910dd30139d60a68bcb19/build-1.2.1.tar.gz
 
 # 05 sshpass-1.10
-https://sourceforge.net/projects/sshpass/files/sshpass/1.10/sshpass-1.10.tar.gz
+#https://sourceforge.net/projects/sshpass/files/sshpass/1.10/sshpass-1.10.tar.gz
 
 ##99 qemu-ga 9.1.2
 ##--content-disposition https://github.com/qemu/qemu/archive/refs/tags/v9.1.2.tar.gz
