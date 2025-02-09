@@ -510,10 +510,10 @@ echo "."
 
 ###
 
-echo "i010.9.42.warlock 2.0.1"
-echo "i010.9.42.warlock 2.0.1" >> $OSLOG_PROCESS
+echo "i010.9.42.warlock-2.0.1"
+echo "i010.9.42.warlock-2.0.1" >> $OSLOG_PROCESS
 
-time { bash i010.9.42.warlock 2.0.1.sh ; }
+time { bash i010.9.42.warlock-2.0.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
