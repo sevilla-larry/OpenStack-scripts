@@ -120,7 +120,10 @@ https://tarballs.opendev.org/openstack/oslo.serialization/oslo.serialization-5.5
 #https://files.pythonhosted.org/packages/de/cf/ba9ac96d09b797c377e2c12c0eb6b19565f3b2a2efb55932d319e319b622/warlock-2.0.1.tar.gz
 https://files.pythonhosted.org/packages/a6/e1/aa7cbdb16396c1d6a734dd22b4436319daa0e4d203218f0b11cb20f37374/warlock-2.0.1-py3-none-any.whl
 
-# [43-49] allowance for future dependencies
+# 43 pyOpenSSL-23.3.0
+https://files.pythonhosted.org/packages/bf/a0/e667c3c43b65a188cc3041fa00c50655315b93be45182b2c94d185a2610e/pyOpenSSL-23.3.0.tar.gz
+
+# [44-49] allowance for future dependencies
 
 # 51 python-keystoneclient-5.5.0
 https://tarballs.opendev.org/openstack/python-keystoneclient/python-keystoneclient-5.5.0.tar.gz

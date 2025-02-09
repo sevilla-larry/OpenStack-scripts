@@ -524,6 +524,20 @@ echo "."
 
 ###
 
+echo "i010.9.43.pyOpenSSL-23.3.0"
+echo "i010.9.43.pyOpenSSL-23.3.0" >> $OSLOG_PROCESS
+
+time { bash i010.9.43.pyOpenSSL-23.3.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 echo "i010.9.51.python-keystoneclient-5.5.0"
 echo "i010.9.51.python-keystoneclient-5.5.0" >> $OSLOG_PROCESS
 

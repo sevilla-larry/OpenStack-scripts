@@ -533,6 +533,7 @@ A:  i050.9.15 pyOpenSSL-23.3.0                      pyopenssl                   
 D:  i010.9.04 cryptography-42.0.8                   cryptography<42,>=41.0.5
 
 B:  i050.9.18 pysaml2-7.5.0                         pysaml2>=5.0.0
+    i010.9.53 python-glanceclient-4.7.0.sh
 
 #####
 

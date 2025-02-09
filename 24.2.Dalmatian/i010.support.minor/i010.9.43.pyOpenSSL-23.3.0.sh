@@ -1,4 +1,4 @@
-# i050.9.15.pyOpenSSL-23.3.0.sh
+# i010.9.43.pyOpenSSL-23.3.0.sh
 #
 
 #
@@ -14,7 +14,7 @@
 #
 
 export PKG="pyOpenSSL-23.3.0"
-export PKGLOG_DIR=$OSLOG/050.15
+export PKGLOG_DIR=$OSLOG/010.43
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

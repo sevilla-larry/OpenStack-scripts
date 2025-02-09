@@ -204,19 +204,19 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
-###
+### to i010.9.43
  
-echo "i050.9.15.pyOpenSSL-23.3.0"
-echo "i050.9.15.pyOpenSSL-23.3.0" >> $OSLOG_PROCESS
+# echo "i050.9.15.pyOpenSSL-23.3.0"
+# echo "i050.9.15.pyOpenSSL-23.3.0" >> $OSLOG_PROCESS
 
-time { bash i050.9.15.pyOpenSSL-23.3.0.sh ; }
+# time { bash i050.9.15.pyOpenSSL-23.3.0.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 ###
  
