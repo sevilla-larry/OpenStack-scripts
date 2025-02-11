@@ -781,6 +781,8 @@ J.  Glance - Image Service
         # if NO quotas
         use_keystone_limits = False
 
+        log_file = /var/log/glance/api.log
+
         ### end /etc/glance/glance-api.conf
 
         ### Glance Configuration
@@ -803,7 +805,24 @@ J.  Glance - Image Service
 
         reboot
 
-    J.07. Populate the Image service database:
+    J.07. Check some things
+
+        iptables -S
+
+            -P INPUT ACCEPT
+            -P FORWARD ACCEPT
+            -P OUTPUT ACCEPT
+
+        nc -w5 -z -v controller 9292
+
+
+        lsof -i:9292
+
+
+        curl -i http://controller:9292
+
+
+    J.08. Populate the Image service database:
 
         ###
 
@@ -811,7 +830,7 @@ J.  Glance - Image Service
 
         ###
 
-    J.08. Verify Operation
+    J.09. Verify Operation
 
         $$$
 

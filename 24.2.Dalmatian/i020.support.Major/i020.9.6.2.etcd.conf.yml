@@ -3,13 +3,13 @@
 # This is the configuration file for the etcd server.
 
 # Human-readable name for this member.
-name: 'VM11Controller'
+name: 'controller'
 
 # Path to the data directory.
 data-dir: /var/lib/etcd
 
 # Initial cluster configuration for bootstrapping.
-initial-cluster: 'VM11Controller=http://10.0.0.11:2380'
+initial-cluster: 'controller=http://10.0.0.11:2380'
 
 # Initial cluster token for the etcd cluster during bootstrap.
 initial-cluster-token: 'etcd-cluster-01'
