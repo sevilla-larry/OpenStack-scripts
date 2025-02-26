@@ -29,16 +29,16 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K08memcached  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K08memcached  \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S92memcached  \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+	#  ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K08memcached  \
+      #     >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+	#  ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S92memcached  \
+      #     >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S92memcached  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S92memcached  \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S92memcached  \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S92memcached  \
+      #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S92memcached  \
+      #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K08memcached  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 

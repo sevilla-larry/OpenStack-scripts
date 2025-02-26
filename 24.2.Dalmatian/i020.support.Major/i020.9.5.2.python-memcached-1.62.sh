@@ -1,7 +1,7 @@
-# i020.9.5.2.python_memcached-1.62.sh
+# i020.9.5.2.python-memcached-1.62.sh
 #
 
-export PKG="python_memcached-1.62"
+export PKG="python-memcached-1.62"
 export PKGLOG_DIR=$OSLOG/020.5.2
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

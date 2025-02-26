@@ -1,69 +1,130 @@
 #!/bin/sh
-########################################################################
-# Begin memcached
-#
-# Description : Start MemCacheD Daemon
-#
-# Author      : Sevilla, Larry - sevilla.larry.prg@gmail.com
-#
+# Begin /etc/init.d/memcached
+# Description: Memcached 1.6.32 Daemon for OpenStack
 
-# Version     : OS 24.2
-#
+NAME="memcached"
+DAEMON="/usr/bin/memcached"
+#OPTIONS updated from prev  -l  0.0.0.0
+OPTIONS="-u memcached -m 64 -l 10.0.0.11 -p 11211"  # 64MB, all interfaces
+PIDFILE="/var/run/memcached/$NAME.pid"
+LOGFILE="/var/log/memcached/$NAME.log"
 
-########################################################################
+start() {
+    echo "Starting $NAME..."
+    if [ -f "$PIDFILE" ]; then
+        echo "$NAME already running."
+        return 1
+    fi
+    su -s /bin/sh memcached -c "$DAEMON $OPTIONS > $LOGFILE 2>&1 & echo \$! > $PIDFILE"
+    [ $? -eq 0 ] && echo "OK" || echo "FAILED"
+}
 
-### BEGIN INIT INFO
-# Provides:             memcached
-# ??? Required-Start:      $network
-# ??? Should-Start:        networkmanager wicd
-# ??? Required-Stop:       $network
-# ??? Should-Stop:         networkmanager wicd
-# Default-Start:        2 3 4 5
-# Default-Stop:         0 1 6
-# Short-Description:    Starts MemCacheD server.
-# Description:          Starts MemCacheD.
-# Provided-By:          Sevilla, Larry
-### END INIT INFO
+stop() {
+    echo "Stopping $NAME..."
+    if [ ! -f "$PIDFILE" ]; then
+        echo "$NAME is not running."
+        return 1
+    fi
+    kill $(cat "$PIDFILE")
+    [ $? -eq 0 ] && rm -f "$PIDFILE" && echo "OK" || echo "FAILED"
+}
 
-. /lib/lsb/init-functions
+status() {
+    if [ -f "$PIDFILE" ]; then
+        PID=$(cat "$PIDFILE")
+        if ps p $PID > /dev/null 2>&1; then
+            echo "$NAME is running (PID: $PID)."
+            return 0
+        else
+            echo "$NAME PID file exists but process is not running."
+            return 1
+        fi
+    else
+        echo "$NAME is not running."
+        return 3
+    fi
+}
 
 case "$1" in
-   start)
-      log_info_msg "Starting MemCacheD Server..."
-
-      install -dm755 -o memcached -g memcached /run/memcached
-
-      if ! pidofproc memcached >/dev/null; then
-         # FAILED
-         # su - memcached -c '/usr/bin/memcached -d'
-         /usr/bin/memcached -d -u memcached
-      fi
-
-      # FAILED
-      #start_daemon /usr/bin/memcached -u memcached
-      evaluate_retval
-      ;;
-
-   stop)
-      log_info_msg "Stopping MemCacheD Server..."
-      killproc /usr/bin/memcached
-      evaluate_retval
-      ;;
-
-   restart)
-      $0 stop
-      sleep 1
-      $0 start
-      ;;
-
-   status)
-      statusproc /usr/bin/memcached
-      ;;
-
-   *)
-      echo "Usage: $0 {start|stop|restart|status}"
-      exit 1
-      ;;
+    start) start;;
+    stop) stop;;
+    restart) stop; sleep 2; start;;
+    status) status;;
+    *) echo "Usage: $0 {start|stop|restart|status}"; exit 1;;
 esac
-
+exit $?
 # End /etc/init.d/memcached
+
+
+
+
+
+# #!/bin/sh
+# ########################################################################
+# # Begin memcached
+# #
+# # Description : Start MemCacheD Daemon
+# #
+# # Author      : Sevilla, Larry - sevilla.larry.prg@gmail.com
+# #
+
+# # Version     : OS 24.2
+# #
+
+# ########################################################################
+
+# ### BEGIN INIT INFO
+# # Provides:             memcached
+# # ??? Required-Start:      $network
+# # ??? Should-Start:        networkmanager wicd
+# # ??? Required-Stop:       $network
+# # ??? Should-Stop:         networkmanager wicd
+# # Default-Start:        2 3 4 5
+# # Default-Stop:         0 1 6
+# # Short-Description:    Starts MemCacheD server.
+# # Description:          Starts MemCacheD.
+# # Provided-By:          Sevilla, Larry
+# ### END INIT INFO
+
+# . /lib/lsb/init-functions
+
+# case "$1" in
+#    start)
+#       log_info_msg "Starting MemCacheD Server..."
+
+#       install -dm755 -o memcached -g memcached /run/memcached
+
+#       if ! pidofproc memcached >/dev/null; then
+#          # FAILED
+#          # su - memcached -c '/usr/bin/memcached -d'
+#          /usr/bin/memcached -d -u memcached
+#       fi
+
+#       # FAILED
+#       #start_daemon /usr/bin/memcached -u memcached
+#       evaluate_retval
+#       ;;
+
+#    stop)
+#       log_info_msg "Stopping MemCacheD Server..."
+#       killproc /usr/bin/memcached
+#       evaluate_retval
+#       ;;
+
+#    restart)
+#       $0 stop
+#       sleep 1
+#       $0 start
+#       ;;
+
+#    status)
+#       statusproc /usr/bin/memcached
+#       ;;
+
+#    *)
+#       echo "Usage: $0 {start|stop|restart|status}"
+#       exit 1
+#       ;;
+# esac
+
+# # End /etc/init.d/memcached

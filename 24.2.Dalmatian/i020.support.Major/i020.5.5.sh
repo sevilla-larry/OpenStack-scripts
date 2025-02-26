@@ -26,10 +26,10 @@ echo "."
 
 ###
 
-echo "i020.9.5.2.python_memcached-1.62"
-echo "i020.9.5.2.python_memcached-1.62" >> $OSLOG_PROCESS
+echo "i020.9.5.2.python-memcached-1.62"
+echo "i020.9.5.2.python-memcached-1.62" >> $OSLOG_PROCESS
 
-time { bash i020.9.5.2.python_memcached-1.62.sh ; }
+time { bash i020.9.5.2.python-memcached-1.62.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

@@ -32,7 +32,7 @@ groupadd -g 441 memcached       \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 useradd -c "MemCacheD"          \
         -g memcached            \
-        -d /srv/memcached       \
+        -d /var/lib/memcached   \
         -s /bin/false           \
         -u 441                  \
         memcached               \
@@ -41,8 +41,9 @@ useradd -c "MemCacheD"          \
 echo "2. Configure ..."
 echo "2. Configure ..." >> $OSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR
-./configure --prefix=/usr       \
-            --sysconfdir=/etc   \
+./configure --prefix=/usr           \
+            --with-libevent=/usr    \
+            --sysconfdir=/etc       \
              > $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
 
 echo "3. Make Build ..."
@@ -72,11 +73,18 @@ cat > /etc/memcached.conf << "EOF"    2>> $PKGLOG_ERROR
 # End /etc/memcached.conf
 EOF
 
-install -v -dm700 /srv/memcached                                \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-install -v -dm755 /run/memcached                                \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-chown -Rv memcached:memcached /srv/memcached /run/memcached     \
+#install -v -dm700 /var/lib/memcached                             \
+#    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# install -v -dm755 /run/memcached                                \
+#     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+mkdir -pv   /var/lib/memcached  \
+            /var/run/memcached  \
+            /var/log/memcached  \
+     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+chown -Rv memcached:memcached   /var/lib/memcached  \
+                                /var/run/memcached  \
+                                /var/log/memcached  \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 

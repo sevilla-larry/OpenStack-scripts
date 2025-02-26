@@ -4,7 +4,7 @@
 #
 
 export PKG="glance-29.0.0"
-export PKGLOG_DIR=$OSLOG/153
+export PKGLOG_DIR=$OSLOG/153.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
@@ -23,15 +23,16 @@ tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
-groupadd -g 443 glance        \
+groupadd -g 443 glance          \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-useradd -c "glance"           \
-        -g glance             \
-        -d /var/lib/glance    \
-        -s /usr/sbin/nologin    \
+useradd -c "glance"             \
+        -g glance               \
+        -s /bin/false           \
+        -d /var/lib/glance      \
         -u 443                  \
-        glance                \
+        glance                  \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+#        -s /usr/sbin/nologin    \
 
 echo "2. pip3 Build ..."
 echo "2. pip3 Build ..." >> $OSLOG_PROCESS
@@ -53,20 +54,25 @@ pip3 install    --no-index              \
                 glance                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/glance               \
+install -v -d -m755 /etc/glance                 \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/glance           \
+install -v -d -m777 /var/lib/glance             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/glance/images    \
+install -v -d -m777 /var/lib/glance/images      \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/log/glance           \
+install -v -d -m777 /var/log/glance             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   etc/glance-api.conf                   \
-        /etc/glance/glance-api.conf           \
+cp -v   etc/glance-api.conf                     \
+        /etc/glance/glance-api.conf             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR glance:glance /etc/glance           \
-                        /var/lib/glance       \
-                        /var/log/glance       \
+cp -v   etc/glance-api-paste.ini                \
+        /etc/glance/glance-api-paste.ini        \
+        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+chown -vR glance:glance /etc/glance             \
+                        /var/lib/glance         \
+                        /var/log/glance         \
+    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+chmod 640 /etc/glance/*                         \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
