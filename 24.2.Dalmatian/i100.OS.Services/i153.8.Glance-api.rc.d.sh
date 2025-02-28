@@ -1,9 +1,12 @@
-i153.8.Glance-api.rc.d.sh
+# i153.8.Glance-api.rc.d.sh
 
 export PKGLOG_DIR=$OSLOG/153.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+
+rm -r $PKGLOG_DIR 2> /dev/null
+mkdir $PKGLOG_DIR
 
 SHELL=/bin/bash
 ETCDIR=/etc
