@@ -49,7 +49,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                os-resource-classes-1.1.0   \
+                os-resource-classes     \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
