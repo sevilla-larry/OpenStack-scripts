@@ -554,6 +554,48 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+ 
+echo "i050.9.40.os-resource-classes-1.1.0"
+echo "i050.9.40.os-resource-classes-1.1.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.40.os-resource-classes-1.1.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.41.os-traits-3.1.0"
+echo "i050.9.41.os-traits-3.1.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.41.os-traits-3.1.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.42.microversion-parse-2.0.0"
+echo "i050.9.42.microversion-parse-2.0.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.42.microversion-parse-2.0.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset OSLOG_PROCESS

@@ -788,10 +788,10 @@ J.  Glance - Image Service
         ### Glance Configuration
         # https://docs.openstack.org/glance/2024.2/configuration/index.html
 
+    J.05. Endpoint list and reader access
+
         $$$ Note: To list endpoints
         openstack endpoint list --service glance --region RegionOne
-
-    J.05. Glance reader access
 
         $$$    
         $$$ Make sure that the glance account has reader access
@@ -928,3 +928,234 @@ J.  Glance - Image Service
 
         $$$ Confirm upload of the image and validate attributes
         glance image-list
+
+K.  Placement - Placement Service
+
+    K.01. Placement database
+
+        ###
+
+        mysql
+        # or # mariadb
+
+        ### display:
+        #
+        # MariaDB [(none)]
+        #
+
+        CREATE DATABASE placement;
+
+      # GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'localhost' \
+      #     IDENTIFIED BY 'placement_DBPASS';
+      # GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'%' \
+      #     IDENTIFIED BY 'placement_DBPASS';
+
+        GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'%' \
+            IDENTIFIED BY 'openstack';
+
+        exit;
+
+        #
+        #
+        # end MariaDB
+        #
+        ###
+
+    K.02. Create the service credentials
+
+        $$$ as user
+        . admin-openrc
+
+        $$$ create the "placement" user on "default" domain
+        openstack user create --domain default  \
+            --password openstack placement
+
+        $$$ Add the "admin" role to the "placement" user and "service" project:
+        openstack role add --project service --user placement admin
+        $$$ Note: no display
+
+        $$$ Create the placement service entity "Placement"
+        openstack service create --name placement \
+            --description "Placement API" placement
+
+        $$$ Create the "Placement" service API endpoints:
+        openstack endpoint create --region RegionOne \
+          image public http://controller:8778
+        openstack endpoint create --region RegionOne \
+          image internal http://controller:8778
+        openstack endpoint create --region RegionOne \
+          image admin http://controller:8778
+
+    K.03. Placement install
+
+        ###
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
+
+        ###
+
+        bash i152.1.sh      # Placement
+
+        ###
+
+    K.04. Placement configuration
+
+        ### edit /etc/placement/placement.conf
+
+        [placement_database]
+      # connection = mysql+pymysql://placement:PLACEMENT_DBPASS@controller/placement
+        connection = mysql+pymysql://placement:openstack@controller/placement
+
+        [api]
+        auth_strategy = keystone
+
+        # Note: Comment out or remove any other options
+        # in the [keystone_authtoken] section
+        #
+        [keystone_authtoken]
+      # ...
+        www_authenticate_uri  = http://controller:5000
+            auth_url = http://controller:5000
+        memcached_servers = controller:11211
+        auth_type = password
+            project_domain_name = default
+            user_domain_name = default
+            project_name = service
+            username = placement
+          # password = PLACEMENT_PASS
+            password = openstack
+
+        [DEFAULT]
+        log_file = /var/log/placement/placement.log
+
+        ### end /etc/placement/placement-api.conf
+
+        ### Placement Configuration
+        # https://docs.openstack.org/placement/2024.2/configuration/sample-config.html
+
+    K.05. Restart Placement
+
+        reboot
+
+    K.06. Check some things
+
+        iptables -S
+
+            -P INPUT ACCEPT
+            -P FORWARD ACCEPT
+            -P OUTPUT ACCEPT
+
+        nc -w5 -z -v controller 8778
+
+            Ncat: Version 7.95 ( https://nmap.org/ncat )
+            Ncat: Connected to 10.0.0.11:8778.
+            Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
+
+        lsof -i:8778
+
+            COMMAND    PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+
+        curl -i http://controller:8778
+
+            HTTP/1.1 200 OK
+            Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
+            Server: Apache/2.4.62 (Unix) mod_wsgi/5.0.2 Python/3.11
+            Content-Length: 250
+            Vary: X-Auth-Token
+            x-openstack-request-id: req-........-....-....-....-............
+            Content-Type: application/json
+
+            {"version":
+             {"id": "v3.14", "status": "stable", "updated": "2020-04-07T00:00:00Z",
+              "links": [{"rel": "self", "href": "http://controller:5000/v3/"}],
+              "media-types": [{"base": "application/json",
+                               "type": "application/vnd.openstack.identity-v3+json"}]}}
+
+            HTTP/1.1 300 Multiple Choices
+            Content-Type: application/json
+            Content-Length: 1698
+            Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
+
+            {"versions":
+             [{"id": "v2.15", "status": "SUPPORTED",
+              "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+               {"id": "v2.13", "status": "SUPPORTED",
+                "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                 {"id": "v2.12", "status": "SUPPORTED",
+                  "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                   {"id": "v2.11", "status": "SUPPORTED",
+                    "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                     {"id": "v2.10", "status": "SUPPORTED",
+                      "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                       {"id": "v2.9", "status": "SUPPORTED",
+                        "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                         {"id": "v2.8", "status": "SUPPORTED",
+                          "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                           {"id": "v2.17", "status": "CURRENT",
+                            "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                             {"id": "v2.7", "status": "SUPPORTED",
+                              "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                               {"id": "v2.6", "status": "SUPPORTED",
+                                "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                 {"id": "v2.5", "status": "SUPPORTED",
+                                  "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                   {"id": "v2.4", "status": "SUPPORTED",
+                                    "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                     {"id": "v2.3", "status": "SUPPORTED",
+                                      "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                       {"id": "v2.2", "status": "SUPPORTED",
+                                        "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                         {"id": "v2.1", "status": "SUPPORTED",
+                                          "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                           {"id": "v2.0", "status": "SUPPORTED",
+                                            "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]}]}
+
+
+    K.07. Populate the Placement database:
+
+        ###
+
+        su -s /bin/sh -c "placement-manage db sync" placement
+
+        ###
+
+    K.08. Verify Operation
+
+        $$$
+        . admin-openrc
+
+        $$$ Perform status checks to make sure everything is in order
+        placement-status upgrade check
+
+        $$$ List available resource classes and traits
+        openstack --os-placement-api-version 1.2    \
+            resource class list --sort-column name
+        openstack --os-placement-api-version 1.6    \
+            trait list --sort-column name

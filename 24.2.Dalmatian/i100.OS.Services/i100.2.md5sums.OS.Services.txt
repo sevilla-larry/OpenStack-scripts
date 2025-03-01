@@ -4,14 +4,12 @@
 d225b4d3d7332068984a43340f8ce327 keystone-26.0.0.tar.gz
 #   keystone.conf.sample
 
-
-# 153 Image Service
-
 # 153 Glance-29.0.0
 7adfcc51db68a8861db44c83ddcc1a5a glance-29.0.0.tar.gz
-# included in "etc" subdirectory
-#   glance-api.conf.sample
-#   glance-scrubber.conf.sample
-#   glance-manage.conf.sample
-#   glance-cache.conf.sample
-#   glance.policy.yaml.sample
+
+# 152.3 Placement-12.0.0
+5ea25fdd8f9ce69e5d385296fab6ed46 openstack-placement-12.0.0.tar.gz
+#   placement.conf.sample
+
+# 152.5 osc-placement-4.5.0
+c131a8ad6aeab907f290f2672cde887c osc-placement-4.5.0.tar.gz

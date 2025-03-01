@@ -122,3 +122,12 @@ c90171b9c3e124169d97b5c6026ba66c cursive-0.2.3.tar.gz
 
 # 39 os-win-5.9.0
 fad432cf40fef0f7d0c396f6df1994a8 os-win-5.9.0.tar.gz
+
+# 40 os-resource-classes-1.1.0
+3d9a25ddcd68b5d1fdec0981271b896e os-resource-classes-1.1.0.tar.gz
+
+# 41 os-traits-3.1.0
+fe780821e3f994f222547d2ebd28ccc5 os-traits-3.1.0.tar.gz
+
+# 42 microversion_parse-2.0.0
+9037af30e555f95c2083bdbb7a0e92cf microversion_parse-2.0.0.tar.gz

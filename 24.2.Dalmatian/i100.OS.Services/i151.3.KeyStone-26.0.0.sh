@@ -1,4 +1,4 @@
-# i151.9.9.KeyStone-26.0.0.sh
+# i151.9.3.KeyStone-26.0.0.sh
 #
 # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
 #
@@ -109,7 +109,7 @@ export APACHE_CONF_DIR=/etc/httpd
 export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
 export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
 
-export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES_DIR/i151.9.KeyStone.conf.for.Apache.txt
+export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES_DIR/i151.6.KeyStone.conf.for.Apache.txt
 export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone.conf
 
 cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \

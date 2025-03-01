@@ -4,14 +4,12 @@
 https://tarballs.opendev.org/openstack/keystone/keystone-26.0.0.tar.gz
 https://docs.openstack.org/keystone/2024.2/_static/keystone.conf.sample
 
-
-# 153 Image Service
-
 # 153 Glance-29.0.0
 https://tarballs.opendev.org/openstack/glance/glance-29.0.0.tar.gz
-# included in "etc" subdirectory
-#https://docs.openstack.org/glance/2024.2/_static/glance-api.conf.sample
-#https://docs.openstack.org/glance/2024.2/_static/glance-scrubber.conf.sample
-#https://docs.openstack.org/glance/2024.2/_static/glance-manage.conf.sample
-#https://docs.openstack.org/glance/2024.2/_static/glance-cache.conf.sample
-#https://docs.openstack.org/glance/2024.2/_downloads/10e0c2d6ce5ff97524dfced4094f4d15/glance.policy.yaml.sample
+
+# 152.3 Placement-12.0.0
+https://tarballs.opendev.org/openstack/placement/openstack-placement-12.0.0.tar.gz
+https://docs.openstack.org/placement/2024.2/_static/placement.conf.sample
+
+# 152.5 osc-placement-4.5.0
+https://tarballs.opendev.org/openstack/osc-placement/osc-placement-4.5.0.tar.gz

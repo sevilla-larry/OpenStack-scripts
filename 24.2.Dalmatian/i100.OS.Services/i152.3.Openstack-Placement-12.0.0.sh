@@ -1,12 +1,14 @@
-# i153.8.Glance-29.0.0.sh
+# i152.3.Openstack-Placement-12.0.0.sh
 #
-# https://docs.openstack.org/glance/2024.2/install/install-ubuntu.html
+# https://docs.openstack.org/placement/2024.2/install/install-ubuntu.html
+# https://docs.openstack.org/placement/2024.2/install/from-pypi.html
 #
 
-export PKG="glance-29.0.0"
-export PKGLOG_DIR=$OSLOG/153.1
+export PKG="openstack-placement-12.0.0"
+export PKGLOG_DIR=$OSLOG/152.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
+export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
@@ -23,14 +25,14 @@ tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
-groupadd -g 443 glance          \
+groupadd -g 448 placement       \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-useradd -c "glance"             \
-        -g glance               \
+useradd -c "placement"          \
+        -g placement            \
         -s /bin/false           \
-        -d /var/lib/glance      \
-        -u 443                  \
-        glance                  \
+        -d /var/lib/placement   \
+        -u 448                  \
+        placement               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 #        -s /usr/sbin/nologin    \
 
@@ -51,28 +53,28 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                glance                  \
+                openstack-placement     \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/glance                 \
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+
+install -v -d -m755 /etc/placement              \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/glance             \
+install -v -d -m777 /var/lib/placement          \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/glance/images      \
+install -v -d -m777 /var/log/placement          \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/log/glance             \
+cp -v   ../placement.conf.sample                \
+        /etc/placement/placement.conf           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   etc/glance-api.conf                     \
-        /etc/glance/glance-api.conf             \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   etc/glance-api-paste.ini                \
-        /etc/glance/glance-api-paste.ini        \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR glance:glance /etc/glance             \
-                        /var/lib/glance         \
-                        /var/log/glance         \
+chown -vR placement:placement /etc/placement    \
+                        /var/lib/placement      \
+                        /var/log/placement      \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-chmod 640 /etc/glance/*                         \
+chmod 640 /etc/placement/*                      \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
@@ -82,5 +84,6 @@ unset SOURCES_DIR
 unset OSLOG_PROCESS
 unset PKGLOG_OTHERS
 unset PKGLOG_INSTALL PKGLOG_BUILD
+unset PKGLOG_CHECK
 unset PKGLOG_ERROR PKGLOG_TAR
 unset PKGLOG_DIR PKG

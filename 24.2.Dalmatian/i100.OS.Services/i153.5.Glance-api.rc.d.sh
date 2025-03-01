@@ -1,4 +1,4 @@
-# i153.8.Glance-api.rc.d.sh
+# i153.5.Glance-api.rc.d.sh
 
 export PKGLOG_DIR=$OSLOG/153.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
@@ -16,7 +16,7 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i153.8.Glance-api.init.d.sh
+INITDFILESRC=$CURRDIR/i153.4.Glance-api.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/glance-api
 INITDFILEREL=../init.d/glance-api
 
