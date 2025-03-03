@@ -21,7 +21,9 @@ start() {
         echo "$NAME already running."
         return 1
     fi
-    su -s /bin/sh placement -c "$DAEMON --config-file=$CONFIG > $LOGFILE 2>&1 & echo \$! > $PIDFILE"
+    #su -s /bin/sh placement -c "$DAEMON --config-file=$CONFIG > $LOGFILE 2>&1 & echo \$! > $PIDFILE"
+    #default code gives error
+    su -s /bin/sh placement -c "$DAEMON --port 8778 --host 10.0.0.11 > $LOGFILE 2>&1 & echo \$! > $PIDFILE"
     [ $? -eq 0 ] && echo "OK" || echo "FAILED"
 }
 

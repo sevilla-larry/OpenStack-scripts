@@ -982,11 +982,11 @@ K.  Placement - Placement Service
 
         $$$ Create the "Placement" service API endpoints:
         openstack endpoint create --region RegionOne \
-          image public http://controller:8778
+          placement public http://controller:8778
         openstack endpoint create --region RegionOne \
-          image internal http://controller:8778
+          placement internal http://controller:8778
         openstack endpoint create --region RegionOne \
-          image admin http://controller:8778
+          placement admin http://controller:8778
 
     K.03. Placement install
 
@@ -1051,11 +1051,19 @@ K.  Placement - Placement Service
         ### Placement Configuration
         # https://docs.openstack.org/placement/2024.2/configuration/sample-config.html
 
-    K.05. Restart Placement
+    K.05. Populate the Placement database:
+
+        ###
+
+        su -s /bin/sh -c "placement-manage db sync" placement
+
+        ###
+
+    K.06. Restart Placement
 
         reboot
 
-    K.06. Check some things
+    K.07. Check some things
 
         iptables -S
 
@@ -1136,15 +1144,6 @@ K.  Placement - Placement Service
                                           "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
                                            {"id": "v2.0", "status": "SUPPORTED",
                                             "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]}]}
-
-
-    K.07. Populate the Placement database:
-
-        ###
-
-        su -s /bin/sh -c "placement-manage db sync" placement
-
-        ###
 
     K.08. Verify Operation
 

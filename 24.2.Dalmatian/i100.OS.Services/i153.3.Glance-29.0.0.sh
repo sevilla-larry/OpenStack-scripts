@@ -72,8 +72,8 @@ chown -vR glance:glance /etc/glance             \
                         /var/lib/glance         \
                         /var/log/glance         \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-chmod 640 /etc/glance/*                         \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# chmod 640 /etc/glance/*                         \
+#     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd ..

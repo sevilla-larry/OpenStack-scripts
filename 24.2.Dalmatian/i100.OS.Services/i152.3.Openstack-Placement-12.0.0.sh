@@ -74,8 +74,8 @@ chown -vR placement:placement /etc/placement    \
                         /var/lib/placement      \
                         /var/log/placement      \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-chmod 640 /etc/placement/*                      \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# chmod 640 /etc/placement/*                      \
+#     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd ..
