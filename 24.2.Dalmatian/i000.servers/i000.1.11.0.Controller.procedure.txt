@@ -1046,7 +1046,7 @@ K.  Placement - Placement Service
         [DEFAULT]
         log_file = /var/log/placement/placement.log
 
-        ### end /etc/placement/placement-api.conf
+        ### end /etc/placement/placement.conf
 
         ### Placement Configuration
         # https://docs.openstack.org/placement/2024.2/configuration/sample-config.html
@@ -1079,71 +1079,26 @@ K.  Placement - Placement Service
 
         lsof -i:8778
 
-            COMMAND    PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            COMMAND    PID      USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            placement pppp placement 5u  IPv4   nnnn      0t0  TCP controller.localdomain:uec (LISTEN)
 
         curl -i http://controller:8778
 
-            HTTP/1.1 200 OK
+            HTTP/1.0 200 OK
             Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
-            Server: Apache/2.4.62 (Unix) mod_wsgi/5.0.2 Python/3.11
-            Content-Length: 250
-            Vary: X-Auth-Token
+            Server: WSGIServer/0.2 CPython/3.11.10
+            Content-Length: 136
+            Content-Type: application/json
+            openstack-api-version: placement 1.0
+            vary: openstack-api-version
             x-openstack-request-id: req-........-....-....-....-............
-            Content-Type: application/json
-
-            {"version":
-             {"id": "v3.14", "status": "stable", "updated": "2020-04-07T00:00:00Z",
-              "links": [{"rel": "self", "href": "http://controller:5000/v3/"}],
-              "media-types": [{"base": "application/json",
-                               "type": "application/vnd.openstack.identity-v3+json"}]}}
-
-            HTTP/1.1 300 Multiple Choices
-            Content-Type: application/json
-            Content-Length: 1698
-            Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
 
             {"versions":
-             [{"id": "v2.15", "status": "SUPPORTED",
-              "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-               {"id": "v2.13", "status": "SUPPORTED",
-                "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                 {"id": "v2.12", "status": "SUPPORTED",
-                  "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                   {"id": "v2.11", "status": "SUPPORTED",
-                    "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                     {"id": "v2.10", "status": "SUPPORTED",
-                      "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                       {"id": "v2.9", "status": "SUPPORTED",
-                        "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                         {"id": "v2.8", "status": "SUPPORTED",
-                          "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                           {"id": "v2.17", "status": "CURRENT",
-                            "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                             {"id": "v2.7", "status": "SUPPORTED",
-                              "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                               {"id": "v2.6", "status": "SUPPORTED",
-                                "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                 {"id": "v2.5", "status": "SUPPORTED",
-                                  "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                   {"id": "v2.4", "status": "SUPPORTED",
-                                    "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                     {"id": "v2.3", "status": "SUPPORTED",
-                                      "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                       {"id": "v2.2", "status": "SUPPORTED",
-                                        "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                         {"id": "v2.1", "status": "SUPPORTED",
-                                          "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                           {"id": "v2.0", "status": "SUPPORTED",
-                                            "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]}]}
+             [{"id": "v1.0",
+              "max_version": "1.39",
+               "min_version": "1.0",
+                "status": "CURRENT",
+                 "links": [{"rel": "self", "href": ""}]}]}
 
     K.08. Verify Operation
 
