@@ -39,3 +39,12 @@ d272ab9e36d502addf7cd98e207c18a2 oslo.messaging-14.9.1.tar.gz
 
 # 13 oslo.reports-3.4.0
 c9fd64620d1952de85dc7848f634ab36 oslo.reports-3.4.0.tar.gz
+
+# 14 oslo.rootwrap-7.3.0
+cd8fddc762736c05a4d580e310ecc42a oslo.rootwrap-7.3.0.tar.gz
+
+# 15 oslo.privsep-3.4.0
+d2a818392a4b1edec2aba0175d492675 oslo.privsep-3.4.0.tar.gz
+
+# 16 oslo.versionedobjects-3.4.0
+f6500468a5d99bf7ba4e9292a463a5ec oslo.versionedobjects-3.4.0.tar.gz

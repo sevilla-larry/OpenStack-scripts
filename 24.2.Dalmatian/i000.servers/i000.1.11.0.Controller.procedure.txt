@@ -1113,3 +1113,68 @@ K.  Placement - Placement Service
             resource class list --sort-column name
         openstack --os-placement-api-version 1.6    \
             trait list --sort-column name
+
+L.  Nova - Compute Service
+
+    K.01. Nova databases
+
+        ###
+
+        mysql
+        # or # mariadb
+
+        ### display:
+        #
+        # MariaDB [(none)]
+        #
+
+        CREATE DATABASE nova_api;
+        CREATE DATABASE nova;
+        CREATE DATABASE nova_cell0;
+
+        GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'%' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'%' \
+            IDENTIFIED BY 'openstack';
+
+        exit;
+
+        #
+        #
+        # end MariaDB
+        #
+        ###
+
+    K.02. Create the service credentials
+
+        $$$ as user
+        . admin-openrc
+
+        $$$ create the "nova" user on "default" domain
+        openstack user create --domain default  \
+            --password openstack nova
+
+        $$$ Add the "admin" role to the "nova" user and "service" project:
+        openstack role add --project service --user nova admin
+        $$$ Note: no display
+
+        $$$ Create the placement service entity "Compute"
+        openstack service create --name nova \
+            --description "Openstack Compute" compute
+
+        $$$ Create the "Compute" service endpoints:
+        openstack endpoint create --region RegionOne \
+          compute public http://controller:8774/v2.1
+        openstack endpoint create --region RegionOne \
+          compute internal http://controller:8774/v2.1
+        openstack endpoint create --region RegionOne \
+          compute admin http://controller:8774/v2.1
+

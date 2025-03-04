@@ -134,3 +134,27 @@ https://tarballs.opendev.org/openstack/microversion-parse/microversion_parse-2.0
 
 ## 43 pylibyaml-0.1.0
 #https://files.pythonhosted.org/packages/c9/1a/3ae773a0d4cc0b787d1b7307786c666de0729df2c4159ec964e8ba45d06d/pylibyaml-0.1.0.tar.gz
+
+# 44 os-client-config-2.1.0
+https://tarballs.opendev.org/openstack/os-client-config/os-client-config-2.1.0.tar.gz
+
+# 45 python-neutronclient-11.3.1
+https://tarballs.opendev.org/openstack/python-neutronclient/python-neutronclient-11.3.1.tar.gz
+
+# 46 os_brick-6.9.1
+https://tarballs.opendev.org/openstack/os-brick/os_brick-6.9.1.tar.gz
+
+# 47 sortedcontainers-2.4.0
+https://files.pythonhosted.org/packages/e8/c4/ba2f8066cceb6f23394729afe52f3bf7adec04bf9ed2c820b39e19299111/sortedcontainers-2.4.0.tar.gz
+
+# 48 ovs-3.3.4
+https://files.pythonhosted.org/packages/c7/36/85460b4bab7c85ca6c60f0c3bb1aa6f0b25bf6798f100aed597bb5c3b883/ovs-3.3.4.tar.gz
+
+# 49 ovsdbapp-2.8.0
+https://tarballs.opendev.org/openstack/ovsdbapp/ovsdbapp-2.8.0.tar.gz
+
+# 50 pyroute2-0.7.12
+https://files.pythonhosted.org/packages/39/16/323b947c34530436658331e2cf393b72ebcbd923a75154a7efb28feefd5d/pyroute2-0.7.12.tar.gz
+
+# 51 os_vif-3.7.0
+https://tarballs.opendev.org/openstack/os-vif/os_vif-3.7.0.tar.gz

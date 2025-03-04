@@ -1,5 +1,8 @@
 # i100 OpenStack Services
 
+# 111 nova-30.0.0
+https://tarballs.opendev.org/openstack/nova/nova-30.0.0.tar.gz
+
 # 151 KeyStone-26.0.0
 https://tarballs.opendev.org/openstack/keystone/keystone-26.0.0.tar.gz
 https://docs.openstack.org/keystone/2024.2/_static/keystone.conf.sample

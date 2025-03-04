@@ -1,5 +1,8 @@
 # i100 OpenStack Services
 
+# 111 nova-30.0.0
+ce648ed8161ef7cd44fa96b868ce124d nova-30.0.0.tar.gz
+
 # 151 KeyStone-26.0.0
 d225b4d3d7332068984a43340f8ce327 keystone-26.0.0.tar.gz
 #   keystone.conf.sample

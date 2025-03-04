@@ -82,3 +82,15 @@ https://files.pythonhosted.org/packages/6a/05/a543317ac62cf72e98dc40de5ab117ef14
 
 # 26 testscenarios-0.5.0
 https://files.pythonhosted.org/packages/f0/de/b0b5b98c0f38fd7086d082c47fcb455eedd39a044abe7c595f5f40cd6eed/testscenarios-0.5.0.tar.gz
+
+## 27 lxml-5.3.1
+#https://files.pythonhosted.org/packages/ef/f6/c15ca8e5646e937c148e147244817672cf920b56ac0bf2cc1512ae674be8/lxml-5.3.1.tar.gz
+
+# 28 PyNaCl-1.5.0
+https://files.pythonhosted.org/packages/a7/22/27582568be639dfe22ddb3902225f91f2f17ceff88ce80e4db396c8986da/PyNaCl-1.5.0.tar.gz
+
+# 29 paramiko-3.5.1
+https://files.pythonhosted.org/packages/7d/15/ad6ce226e8138315f2451c2aeea985bf35ee910afb477bae7477dc3a8f3b/paramiko-3.5.1.tar.gz
+
+# 30 websockify-0.12.0
+https://files.pythonhosted.org/packages/5f/db/3c25340b9c100e3e84684e508cc9ed8dd355afe06fad677ded6b5f7d1ceb/websockify-0.12.0.tar.gz

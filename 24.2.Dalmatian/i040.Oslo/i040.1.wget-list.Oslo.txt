@@ -39,3 +39,12 @@ https://tarballs.opendev.org/openstack/oslo.limit/oslo.limit-2.5.0.tar.gz
 
 # 13 oslo.reports-3.4.0
 https://tarballs.opendev.org/openstack/oslo.reports/oslo.reports-3.4.0.tar.gz
+
+# 14 oslo.rootwrap-7.3.0
+https://tarballs.opendev.org/openstack/oslo.rootwrap/oslo.rootwrap-7.3.0.tar.gz
+
+# 15 oslo.privsep-3.4.0
+https://tarballs.opendev.org/openstack/oslo.privsep/oslo.privsep-3.4.0.tar.gz
+
+# 16 oslo.versionedobjects-3.4.0
+https://tarballs.opendev.org/openstack/oslo.versionedobjects/oslo.versionedobjects-3.4.0.tar.gz
