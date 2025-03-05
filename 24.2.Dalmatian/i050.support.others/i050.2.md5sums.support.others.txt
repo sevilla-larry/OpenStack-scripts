@@ -158,3 +158,9 @@ b1dc176249c9a7973874999a2c6f54c8 python-neutronclient-11.3.1.tar.gz
 
 # 51 os_vif-3.7.0
 032373bbc3f97732a6f3dcb4cf3f9940 os_vif-3.7.0.tar.gz
+
+# 52 voluptuous-0.15.2
+d963b2b4f3f2c6489e85f32605418964 voluptuous-0.15.2.tar.gz
+
+# 53 tooz-6.3.0
+5f3f8a1a540c46b1d1ea17cb0899d3b5 tooz-6.3.0.tar.gz

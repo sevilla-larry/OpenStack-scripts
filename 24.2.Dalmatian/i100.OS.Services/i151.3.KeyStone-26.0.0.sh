@@ -99,6 +99,9 @@ install -v -d -m777 /var/log/keystone           \
 cp -v   ../keystone.conf.sample                 \
         /etc/keystone/keystone.conf             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+cp -v   etc/logging.conf.sample                 \
+        /etc/keystone/logging.conf             \
+        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 chown -vR keystone:keystone /etc/keystone       \
                         /var/lib/keystone       \
                         /var/log/keystone       \

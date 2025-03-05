@@ -158,3 +158,9 @@ https://files.pythonhosted.org/packages/39/16/323b947c34530436658331e2cf393b72eb
 
 # 51 os_vif-3.7.0
 https://tarballs.opendev.org/openstack/os-vif/os_vif-3.7.0.tar.gz
+
+# 52 voluptuous-0.15.2
+https://files.pythonhosted.org/packages/91/af/a54ce0fb6f1d867e0b9f0efe5f082a691f51ccf705188fca67a3ecefd7f4/voluptuous-0.15.2.tar.gz
+
+# 53 tooz-6.3.0
+https://tarballs.opendev.org/openstack/tooz/tooz-6.3.0.tar.gz
