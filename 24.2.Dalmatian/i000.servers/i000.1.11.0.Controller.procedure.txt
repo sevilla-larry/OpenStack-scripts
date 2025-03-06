@@ -58,13 +58,18 @@ A.  Preparation
 
         ###
 
-        wget --input-file=i010.1.wget-list.support.minor.txt                --continue --directory-prefix=/sources
-        wget --input-file=i020.1.wget-list.support.Major.txt                --continue --directory-prefix=/sources
-
         wget --input-file=b10.01.wget-list-sysv.common.Xorg.and.servers.txt --continue --directory-prefix=/sources
         wget --input-file=b30.01.wget-list-sysv.OpenStack.support.txt       --continue --directory-prefix=/sources
         wget --input-file=c11.01.wget-list-sysv.MariaDB.txt                 --continue --directory-prefix=/sources
         wget --input-file=c13.01.wget-list-sysv.Apache.txt                  --continue --directory-prefix=/sources
+
+        wget --input-file=i010.1.wget-list.support.minor.txt                --continue --directory-prefix=/sources
+        wget --input-file=i020.1.wget-list.support.Major.txt                --continue --directory-prefix=/sources
+        wget --input-file=i030.2.wget-list.Oslo.OS.support.txt              --continue --directory-prefix=/sources
+        wget --input-file=i040.2.wget-list.Oslo.txt                         --continue --directory-prefix=/sources
+        wget --input-file=i050.2.wget-list.OS.subServices.txt               --continue --directory-prefix=/sources
+        wget --input-file=i060.2.wget-list.support.others.txt               --continue --directory-prefix=/sources
+        wget --input-file=i100.2.wget-list.OS.Services.txt                  --continue --directory-prefix=/sources
 
         # md5sum -c md5sums.txt
         md5sum -c b10.02.md5sums.common.Xorg.and.servers.txt
@@ -74,9 +79,10 @@ A.  Preparation
         md5sum -c g11.02.md5sums.common.Xfce.Gnome.apps.support.txt
         md5sum -c i010.2.md5sums.support.minor.txt
         md5sum -c i020.2.md5sums.support.Major.txt
-        md5sum -c i030.2.md5sums.Oslo.support.txt
+        md5sum -c i030.2.md5sums.Oslo.OS.support.txt
         md5sum -c i040.2.md5sums.Oslo.txt
-        md5sum -c i050.2.md5sums.support.others.txt
+        md5sum -c i050.2.md5sums.OS.subServices.txt
+        md5sum -c i060.2.md5sums.support.others.txt
         md5sum -c i100.2.md5sums.OS.Services.txt
 
         ###

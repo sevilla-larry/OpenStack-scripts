@@ -1,0 +1,117 @@
+# support apps - others
+
+
+# 01 werkzeug-3.0.6
+0d13f3dbe9b08aecdebe3d9b61cc58aa werkzeug-3.0.6.tar.gz
+
+# 02 itsdangerous-2.1.2
+c1bc730ddf53b8374eaa823f24eb6438 itsdangerous-2.1.2.tar.gz
+
+# 03 click-8.1.8
+b52ee8e6c33d88a2b4626e6a6002245d click-8.1.8.tar.gz
+
+# 04 blinker-1.8.2
+ce2f9fb3bc0c0000db11f012f5f5afda blinker-1.8.2.tar.gz
+
+# 05 flask-3.0.3
+4658b022a07f6d8df51ef24c717fe162 flask-3.0.3.tar.gz
+
+# 06 aniso8601-9.0.1
+89b25ea9fd70b8facaf189aed43afcf8 aniso8601-9.0.1.tar.gz
+
+## pytz-2024.2
+#efcb554763a36b3e18acee074f44d1a5 pytz-2024.2.tar.gz
+
+# 07 Flask-RESTful-0.3.10
+2a1f17e91c526a03bf721e178d8fce94 Flask-RESTful-0.3.10.tar.gz
+
+# 08 passlib-1.7.4
+3a229cbd00dfb33e99885b43325e0591 passlib-1.7.4.tar.gz
+
+# 09 scrypt-0.8.27   if err try .24
+51eb4f332dd5a8241704b7c8b662f837 scrypt-0.8.27.tar.gz
+
+# 10 oauthlib-3.2.2
+2f7b898cc1af8c1409cc329e8843ea8f oauthlib-3.2.2.tar.gz
+
+# 11 defusedxml-0.7.1
+a50e7f21aa60a741efe6b1b658dfb3f8 defusedxml-0.7.1.tar.gz
+
+# pyOpenSSL-23.3.0 ---> i010.43
+# 4c4f6f9e1c731b8ee7adcd9fbeccec62 pyOpenSSL-23.3.0.tar.gz
+
+# 12 elementpath-4.1.5
+8e00373aecd92734d5b1d7fa0335be23 elementpath-4.1.5.tar.gz
+
+# 13 xmlschema-2.5.1
+6da79e5709eb7de805e9dbc50de040ca xmlschema-2.5.1.tar.gz
+
+# 14 pysaml2-7.5.0
+812ea63e08b5a786f0b1aae51b0fe50e pysaml2-7.5.0-py3-none-any.whl
+#0bb713a1c56acd4615b5bcae48e09113 pysaml2-7.5.0.tar.gz
+
+# 15 httplib2-0.22.0
+7ca0a2bfd95ba4ab4b6e28804cdb94ed httplib2-0.22.0.tar.gz
+
+# 16 simplegeneric-0.8.1
+f9c1fab00fd981be588fc32759f474e3 simplegeneric-0.8.1.zip
+
+# 17 zipp-3.20.2
+50100dc2db79da430006d70422c625b1 zipp-3.20.2.tar.gz
+
+# 18 importlib_metadata-8.5.0
+9bb42414dd82839d7694332868f2420a importlib_metadata-8.5.0.tar.gz
+
+# 19 WSME-0.12.1
+90d07765ce30dfbb7ef6ae20fb2136ba WSME-0.12.1.tar.gz
+
+# 20 retrying-1.3.4
+60ec4690e80e903117b91bc74a220116 retrying-1.3.4.tar.gz
+
+
+
+
+
+
+## 99 pylibyaml-0.1.0
+#825ea77151d7e91e3d5f2143712ece50 pylibyaml-0.1.0.tar.gz
+
+# 47 sortedcontainers-2.4.0
+50eeb6cb739568b590b28f9a3f445c78 sortedcontainers-2.4.0.tar.gz
+
+# 48 ovs-3.3.4
+9f6e54fb1e1d3b6abbba60da15b725bc ovs-3.3.4.tar.gz
+
+# 49 ovsdbapp-2.8.0
+1ec85d2c4670b2cfc57edcddc7887666 ovsdbapp-2.8.0.tar.gz
+
+# 50 pyroute2-0.7.12
+04e3b1a6550840c2eaa75da16b83f62b pyroute2-0.7.12.tar.gz
+
+# 51 os_vif-3.7.0
+032373bbc3f97732a6f3dcb4cf3f9940 os_vif-3.7.0.tar.gz
+
+# 52 voluptuous-0.15.2
+d963b2b4f3f2c6489e85f32605418964 voluptuous-0.15.2.tar.gz
+
+# 53 tooz-6.3.0
+5f3f8a1a540c46b1d1ea17cb0899d3b5 tooz-6.3.0.tar.gz
+
+# 54 PyNaCl-1.5.0
+93989045e25f1111452cfdf5e021814d PyNaCl-1.5.0.tar.gz
+
+# 55 paramiko-3.5.1
+b8af8e2ab2b82825b1487ee1547be693 paramiko-3.5.1.tar.gz
+
+# 56 numpy-2.1.3
+# 11096358375945114577a0c82b2c6038 numpy-2.1.3.tar.gz
+55f14ca7b55554d4a043369ae5f1837f numpy-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+
+# 57 jwcrypto-1.5.6
+1e4e957c883f41fc54d57c970512385e jwcrypto-1.5.6.tar.gz
+
+# 58 redis-5.2.1
+6e57c67eab7537b789c7a0f4a3068510 redis-5.2.1.tar.gz
+
+# 59 websockify-0.12.0
+f09e10b8206913c82030fa8abcd31ffc websockify-0.12.0.tar.gz

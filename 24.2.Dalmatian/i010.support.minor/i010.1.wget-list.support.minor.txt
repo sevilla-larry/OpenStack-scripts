@@ -140,7 +140,7 @@ https://tarballs.opendev.org/openstack/python-glanceclient/python-glanceclient-4
 https://github.com/erlang/otp/releases/download/OTP-26.2.5.5/otp_src_26.2.5.5.tar.gz
 
 # 03 Elixir 1.16.3
---content-disposition https://github.com/elixir-lang/elixir/archive/refs/tags/v1.16.3.tar.gz
+#--content-disposition https://github.com/elixir-lang/elixir/archive/refs/tags/v1.16.3.tar.gz
 # Elixir 1.17.3
 #--content-disposition https://github.com/elixir-lang/elixir/archive/refs/tags/v1.17.3.tar.gz
 
