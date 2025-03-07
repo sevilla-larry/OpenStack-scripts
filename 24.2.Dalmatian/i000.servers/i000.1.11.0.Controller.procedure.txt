@@ -284,9 +284,7 @@ F.  RabbitMQ
 
             ###
 
-G.  KeyStone - Identity service
-
-    G.01. KeyStone support apps
+G.  OpenStack Services Support Apps
 
         export OSLOG=/var/log/os
         export LFSLOG=/var/log/blfs
@@ -308,11 +306,14 @@ G.  KeyStone - Identity service
 
         bash i000.1.11.3.support.apps.sh
 
+
+H.  KeyStone - Identity service
+
     # ubuntu install, automatically created /etc/apache2/keystone.conf
     # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
     # https://docs.openstack.org/keystone/2024.2/install/keystone-install-obs.html
 
-    G.02. KeyStone database
+    H.01. KeyStone database
 
         ###
 
@@ -344,7 +345,7 @@ G.  KeyStone - Identity service
         #
         ###
 
-    G.03. KeyStone install
+    H.02. KeyStone install
 
         ###
 
@@ -352,7 +353,7 @@ G.  KeyStone - Identity service
 
         ###
 
-    G.04. KeyStone configuration
+    H.03. KeyStone configuration
 
         ### edit /etc/keystone/keystone.conf
 
@@ -379,25 +380,7 @@ G.  KeyStone - Identity service
 
         ###
 
-    G.05. Populate the Identity service database
-
-#        export OSLOG=/var/log/os
-#        export LFSLOG=/var/log/blfs
-#        export MAKEFLAGS="-j$(nproc)"
-#        export NPROC="$(nproc)"
-#
-#        echo $OSLOG           # /var/log/os
-#        echo $LFSLOG          # /var/log/blfs
-#        echo $MAKEFLAGS       # -j$(nproc)
-#        echo $NPROC           # $(nproc)
-#        echo $LANG            # en_US.UTF-8
-#        echo $LC_ALL          # C.utf8
-#
-#        echo $SHELL           # /bin/bash
-#        ls -l /bin/sh         # bash
-#        ls -l /usr/bin/awk    # gawk
-#
-#        cd /sources
+    H.04. Populate the Identity service database
 
         ###
 
@@ -405,7 +388,7 @@ G.  KeyStone - Identity service
     
         ###
 
-    G.06. Initialize Fernet key repositories
+    H.05. Initialize Fernet key repositories
 
         ###
 
@@ -414,7 +397,7 @@ G.  KeyStone - Identity service
 
         ###
 
-    G.07. Check some things
+    H.06. Check some things
 
         iptables -S
 
@@ -454,7 +437,7 @@ G.  KeyStone - Identity service
               "media-types": [{"base": "application/json",
                                "type": "application/vnd.openstack.identity-v3+json"}]}}
 
-    G.08. Bootstrap the Identity service
+    H.07. Bootstrap the Identity service
 
         ###
 
@@ -471,7 +454,7 @@ G.  KeyStone - Identity service
         ###
 
 #
-#    G.??. Remove/exclude wsgi-test.conf
+#    H.??. Remove/exclude wsgi-test.conf
 #
 #        ### edit /etc/httpd/httpd.conf
 #
@@ -523,11 +506,11 @@ G.  KeyStone - Identity service
         ###
 
 
-H.  Create a domain, projects, users, roles
+I.  Create a domain, projects, users, roles
 
     $$$ as user
 
-    H.01. Configure the administrative account
+    I.01. Configure the administrative account
             by setting the proper environmental variables
 
         $$$
@@ -564,7 +547,7 @@ H.  Create a domain, projects, users, roles
         openstack role add --project demo --user demo demo
         $$$ Note: no output
 
-    H.02 Verify Operation
+    I.02 Verify Operation
 
         $$$
         openstack domain list
@@ -582,9 +565,9 @@ H.  Create a domain, projects, users, roles
             --os-project-domain-name Default --os-user-domain-name Default \
             --os-project-name demo --os-username demo token issue
 
-I.  Create OpenStack client environment scripts
+J.  Create OpenStack client environment scripts
 
-    I.01. Create scripts
+    J.01. Create scripts
 
         $$$ create admin-openrc file (in user home directory)
             export OS_PROJECT_DOMAIN_NAME=Default
@@ -606,7 +589,7 @@ I.  Create OpenStack client environment scripts
             export OS_IDENTITY_API_VERSION=3
             export OS_IMAGE_API_VERSION=2
 
-    I.02 Verify Operation
+    J.02 Verify Operation
 
         $$$
         . admin-openrc
@@ -620,9 +603,9 @@ I.  Create OpenStack client environment scripts
         . demo-openrc
         openstack token issue
 
-J.  Glance - Image Service
+K.  Glance - Image Service
 
-    J.01. Glance database
+    K.01. Glance database
 
         ###
 
@@ -654,7 +637,7 @@ J.  Glance - Image Service
         #
         ###
 
-    J.02. Create the service credentials
+    K.02. Create the service credentials
 
         $$$ as user
         . admin-openrc
@@ -684,7 +667,7 @@ J.  Glance - Image Service
         $$$ none
         $$$ https://docs.openstack.org/oslo.limit/latest/user/usage.html#configuration
 
-    J.03. Glance install
+    K.03. Glance install
 
         ###
 
@@ -712,7 +695,7 @@ J.  Glance - Image Service
 
         ###
 
-    J.04. Glance configuration
+    K.04. Glance configuration
 
         ### edit /etc/glance/glance-api.conf
 
@@ -794,7 +777,7 @@ J.  Glance - Image Service
         ### Glance Configuration
         # https://docs.openstack.org/glance/2024.2/configuration/index.html
 
-    J.05. Endpoint list and reader access
+    K.05. Endpoint list and reader access
 
         $$$ Note: To list endpoints
         openstack endpoint list --service glance --region RegionOne
@@ -807,11 +790,11 @@ J.  Glance - Image Service
         openstack role add --user glance --user-domain default --system all reader
         $$$ Note: no display
 
-    J.06. Restart Glance
+    K.06. Restart Glance
 
         reboot
 
-    J.07. Check some things
+    K.07. Check some things
 
         iptables -S
 
@@ -894,7 +877,7 @@ J.  Glance - Image Service
                                             "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]}]}
 
 
-    J.08. Populate the Image service database:
+    K.08. Populate the Image service database:
 
         ###
 
@@ -902,7 +885,7 @@ J.  Glance - Image Service
 
         ###
 
-    J.09. Verify Operation
+    K.09. Verify Operation
 
         $$$
 
@@ -935,9 +918,9 @@ J.  Glance - Image Service
         $$$ Confirm upload of the image and validate attributes
         glance image-list
 
-K.  Placement - Placement Service
+L.  Placement - Placement Service
 
-    K.01. Placement database
+    L.01. Placement database
 
         ###
 
@@ -969,7 +952,7 @@ K.  Placement - Placement Service
         #
         ###
 
-    K.02. Create the service credentials
+    L.02. Create the service credentials
 
         $$$ as user
         . admin-openrc
@@ -994,7 +977,7 @@ K.  Placement - Placement Service
         openstack endpoint create --region RegionOne \
           placement admin http://controller:8778
 
-    K.03. Placement install
+    L.03. Placement install
 
         ###
 
@@ -1022,7 +1005,7 @@ K.  Placement - Placement Service
 
         ###
 
-    K.04. Placement configuration
+    L.04. Placement configuration
 
         ### edit /etc/placement/placement.conf
 
@@ -1057,7 +1040,7 @@ K.  Placement - Placement Service
         ### Placement Configuration
         # https://docs.openstack.org/placement/2024.2/configuration/sample-config.html
 
-    K.05. Populate the Placement database:
+    L.05. Populate the Placement database:
 
         ###
 
@@ -1065,11 +1048,11 @@ K.  Placement - Placement Service
 
         ###
 
-    K.06. Restart Placement
+    L.06. Restart Placement
 
         reboot
 
-    K.07. Check some things
+    L.07. Check some things
 
         iptables -S
 
@@ -1106,7 +1089,7 @@ K.  Placement - Placement Service
                 "status": "CURRENT",
                  "links": [{"rel": "self", "href": ""}]}]}
 
-    K.08. Verify Operation
+    L.08. Verify Operation
 
         $$$
         . admin-openrc
@@ -1120,9 +1103,9 @@ K.  Placement - Placement Service
         openstack --os-placement-api-version 1.6    \
             trait list --sort-column name
 
-L.  Nova - Compute Service
+M.  Nova - Compute Service
 
-    K.01. Nova databases
+    M.01. Nova databases
 
         ###
 
@@ -1159,7 +1142,7 @@ L.  Nova - Compute Service
         #
         ###
 
-    K.02. Create the service credentials
+    M.02. Create the service credentials
 
         $$$ as user
         . admin-openrc
