@@ -68,50 +68,25 @@ https://files.pythonhosted.org/packages/52/4f/04ddd9a3340142e68a60b9158bbe39b347
 # 20 retrying-1.3.4
 https://files.pythonhosted.org/packages/ce/70/15ce8551d65b324e18c5aa6ef6998880f21ead51ebe5ed743c0950d7d9dd/retrying-1.3.4.tar.gz
 
+# 21 PyNaCl-1.5.0
+https://files.pythonhosted.org/packages/a7/22/27582568be639dfe22ddb3902225f91f2f17ceff88ce80e4db396c8986da/PyNaCl-1.5.0.tar.gz
 
+# 22 paramiko-3.5.1
+https://files.pythonhosted.org/packages/7d/15/ad6ce226e8138315f2451c2aeea985bf35ee910afb477bae7477dc3a8f3b/paramiko-3.5.1.tar.gz
 
+# 23 numpy-2.1.3
+# https://files.pythonhosted.org/packages/25/ca/1166b75c21abd1da445b97bf1fa2f14f423c6cfb4fc7c4ef31dccf9f6a94/numpy-2.1.3.tar.gz
+https://files.pythonhosted.org/packages/7a/f0/80811e836484262b236c684a75dfc4ba0424bc670e765afaa911468d9f39/numpy-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
 
+# 24 jwcrypto-1.5.6
+https://files.pythonhosted.org/packages/e1/db/870e5d5fb311b0bcf049630b5ba3abca2d339fd5e13ba175b4c13b456d08/jwcrypto-1.5.6.tar.gz
+
+# 25 redis-5.2.1
+https://files.pythonhosted.org/packages/47/da/d283a37303a995cd36f8b92db85135153dc4f7a8e4441aa827721b442cfb/redis-5.2.1.tar.gz
+
+# 26 websockify-0.12.0
+https://files.pythonhosted.org/packages/5f/db/3c25340b9c100e3e84684e508cc9ed8dd355afe06fad677ded6b5f7d1ceb/websockify-0.12.0.tar.gz
 
 
 ## 99 pylibyaml-0.1.0
 #https://files.pythonhosted.org/packages/c9/1a/3ae773a0d4cc0b787d1b7307786c666de0729df2c4159ec964e8ba45d06d/pylibyaml-0.1.0.tar.gz
-
-# 47 sortedcontainers-2.4.0
-https://files.pythonhosted.org/packages/e8/c4/ba2f8066cceb6f23394729afe52f3bf7adec04bf9ed2c820b39e19299111/sortedcontainers-2.4.0.tar.gz
-
-# 48 ovs-3.3.4
-https://files.pythonhosted.org/packages/c7/36/85460b4bab7c85ca6c60f0c3bb1aa6f0b25bf6798f100aed597bb5c3b883/ovs-3.3.4.tar.gz
-
-# 49 ovsdbapp-2.8.0
-https://tarballs.opendev.org/openstack/ovsdbapp/ovsdbapp-2.8.0.tar.gz
-
-# 50 pyroute2-0.7.12
-https://files.pythonhosted.org/packages/39/16/323b947c34530436658331e2cf393b72ebcbd923a75154a7efb28feefd5d/pyroute2-0.7.12.tar.gz
-
-# 51 os_vif-3.7.0
-https://tarballs.opendev.org/openstack/os-vif/os_vif-3.7.0.tar.gz
-
-# 52 voluptuous-0.15.2
-https://files.pythonhosted.org/packages/91/af/a54ce0fb6f1d867e0b9f0efe5f082a691f51ccf705188fca67a3ecefd7f4/voluptuous-0.15.2.tar.gz
-
-# 53 tooz-6.3.0
-https://tarballs.opendev.org/openstack/tooz/tooz-6.3.0.tar.gz
-
-# 54 PyNaCl-1.5.0
-https://files.pythonhosted.org/packages/a7/22/27582568be639dfe22ddb3902225f91f2f17ceff88ce80e4db396c8986da/PyNaCl-1.5.0.tar.gz
-
-# 55 paramiko-3.5.1
-https://files.pythonhosted.org/packages/7d/15/ad6ce226e8138315f2451c2aeea985bf35ee910afb477bae7477dc3a8f3b/paramiko-3.5.1.tar.gz
-
-# 56 numpy-2.1.3
-# https://files.pythonhosted.org/packages/25/ca/1166b75c21abd1da445b97bf1fa2f14f423c6cfb4fc7c4ef31dccf9f6a94/numpy-2.1.3.tar.gz
-https://files.pythonhosted.org/packages/7a/f0/80811e836484262b236c684a75dfc4ba0424bc670e765afaa911468d9f39/numpy-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-
-# 57 jwcrypto-1.5.6
-https://files.pythonhosted.org/packages/e1/db/870e5d5fb311b0bcf049630b5ba3abca2d339fd5e13ba175b4c13b456d08/jwcrypto-1.5.6.tar.gz
-
-# 58 redis-5.2.1
-https://files.pythonhosted.org/packages/47/da/d283a37303a995cd36f8b92db85135153dc4f7a8e4441aa827721b442cfb/redis-5.2.1.tar.gz
-
-# 59 websockify-0.12.0
-https://files.pythonhosted.org/packages/5f/db/3c25340b9c100e3e84684e508cc9ed8dd355afe06fad677ded6b5f7d1ceb/websockify-0.12.0.tar.gz

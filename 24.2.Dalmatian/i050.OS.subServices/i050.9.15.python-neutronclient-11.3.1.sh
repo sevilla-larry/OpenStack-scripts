@@ -1,14 +1,14 @@
-# i030.9.33.tenacity-9.0.0.sh
+# i050.9.15.python-neutronclient-11.3.1.sh
 #
 
 #
 # Required by:
 #
-#               i050.9.05 taskflow-5.9.1
+#               i111.8 Nova-30.0.0
 #
 
-export PKG="tenacity-9.0.0"
-export PKGLOG_DIR=$OSLOG/030.33
+export PKG="python-neutronclient-11.3.1"
+export PKGLOG_DIR=$OSLOG/050.15
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                tenacity                \
+                python-neutronclient    \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

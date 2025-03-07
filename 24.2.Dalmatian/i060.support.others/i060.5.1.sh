@@ -302,6 +302,90 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+ 
+echo "i060.9.21.PyNaCl-1.5.0"
+echo "i060.9.21.PyNaCl-1.5.0" >> $OSLOG_PROCESS
+
+time { bash i060.9.21.PyNaCl-1.5.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i060.9.22.paramiko-3.5.1"
+echo "i060.9.22.paramiko-3.5.1" >> $OSLOG_PROCESS
+
+time { bash i060.9.22.paramiko-3.5.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i060.9.23.numpy-2.1.3"
+echo "i060.9.23.numpy-2.1.3" >> $OSLOG_PROCESS
+
+time { bash i060.9.23.numpy-2.1.3.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i060.9.24.jwcrypto-1.5.6"
+echo "i060.9.24.jwcrypto-1.5.6" >> $OSLOG_PROCESS
+
+time { bash i060.9.24.jwcrypto-1.5.6.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i060.9.25.redis-5.2.1"
+echo "i060.9.25.redis-5.2.1" >> $OSLOG_PROCESS
+
+time { bash i060.9.25.redis-5.2.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i060.9.26.websockify-0.12.0"
+echo "i060.9.26.websockify-0.12.0" >> $OSLOG_PROCESS
+
+time { bash i060.9.26.websockify-0.12.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 # ###
  
 # echo "i060.9.??.pylibyaml-0.1.0"

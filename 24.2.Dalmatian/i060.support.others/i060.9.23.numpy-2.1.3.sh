@@ -1,4 +1,4 @@
-# i050.9.56.numpy-2.1.3.sh
+# i060.9.23.numpy-2.1.3.sh
 #
 # Note: (alternative) .whl install
 # since the source build is giving ERRORs
@@ -7,11 +7,11 @@
 #
 # Required by:
 #
-#               i050.9.59 websockify-0.12.0
+#               i060.9.26 websockify-0.12.0
 #
 
 export PKG="numpy-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
-export PKGLOG_DIR=$OSLOG/050.56
+export PKGLOG_DIR=$OSLOG/060.23
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log

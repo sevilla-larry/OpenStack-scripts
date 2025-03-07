@@ -1,23 +1,14 @@
-# i050.9.59.websockify-0.12.0.sh
-#
-
-#
-# Dependencies Required:
-#
-#               i050.9.56 numpy-2.1.3
-#               b30.13.23.30 Requests-2.32.3
-#               i050.9.57 jwcrypto-1.5.6
-#               i050.9.58 redis-5.2.1
+# i030.9.37.pyroute2-0.7.1.sh
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i050.9.18 os_vif-3.7.0
 #
 
-export PKG="websockify-0.12.0"
-export PKGLOG_DIR=$OSLOG/050.59
+export PKG="pyroute2-0.7.1"
+export PKGLOG_DIR=$OSLOG/030.37
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -52,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                websockify              \
+                pyroute2                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

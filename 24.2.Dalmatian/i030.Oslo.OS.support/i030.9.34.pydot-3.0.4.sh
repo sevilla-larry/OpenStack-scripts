@@ -14,7 +14,7 @@
 #
 
 export PKG="pydot-3.0.4"
-export PKGLOG_DIR=$OSLOG/050.34
+export PKGLOG_DIR=$OSLOG/030.34
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

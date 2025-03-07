@@ -1,14 +1,21 @@
-# i050.9.58.redis-5.2.1.sh
+# i060.9.24.jwcrypto-1.5.6.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i010.9.04 cryptography-41.0.7
+#               i030.9.20 typing_extensions-4.12.2
 #
 
 #
 # Required by:
 #
-#               i050.9.59 websockify-0.12.0
+#               i060.9.26 websockify-0.12.0
 #
 
-export PKG="redis-5.2.1"
-export PKGLOG_DIR=$OSLOG/050.58
+export PKG="jwcrypto-1.5.6"
+export PKGLOG_DIR=$OSLOG/060.24
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +50,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                redis                   \
+                jwcrypto                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

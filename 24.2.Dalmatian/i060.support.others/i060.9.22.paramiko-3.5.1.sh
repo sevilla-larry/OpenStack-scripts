@@ -1,14 +1,22 @@
-# i030.9.33.tenacity-9.0.0.sh
+# i060.9.22.paramiko-3.5.1.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i030.9.13 bcrypt-4.1.3
+#               i010.9.04 cryptography-41.0.7
+#               i060.9.21 PyNaCl-1.5.0
 #
 
 #
 # Required by:
 #
-#               i050.9.05 taskflow-5.9.1
+#               i111.8 Nova-30.0.0
 #
 
-export PKG="tenacity-9.0.0"
-export PKGLOG_DIR=$OSLOG/030.33
+export PKG="paramiko-3.5.1"
+export PKGLOG_DIR=$OSLOG/060.22
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,13 +51,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                tenacity                \
+                paramiko                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

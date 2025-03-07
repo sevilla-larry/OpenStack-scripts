@@ -1,14 +1,20 @@
-# i030.9.33.tenacity-9.0.0.sh
+# i030.9.36.ovs-3.3.4.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i030.9.35 sortedcontainers-2.4.0
 #
 
 #
 # Required by:
 #
-#               i050.9.05 taskflow-5.9.1
+#               i050.9.17 ovsdbapp-2.8.0
 #
 
-export PKG="tenacity-9.0.0"
-export PKGLOG_DIR=$OSLOG/030.33
+export PKG="ovs-3.3.4"
+export PKGLOG_DIR=$OSLOG/030.36
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,13 +49,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                tenacity                \
+                ovs                     \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

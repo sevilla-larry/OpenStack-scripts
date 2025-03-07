@@ -1,14 +1,14 @@
-# i050.9.54.PyNaCl-1.5.0.sh
+# i060.9.21.PyNaCl-1.5.0.sh
 #
 
 #
 # Required by:
 #
-#               i050.9.55 paramiko-3.5.1
+#               i060.9.22 paramiko-3.5.1
 #
 
 export PKG="PyNaCl-1.5.0"
-export PKGLOG_DIR=$OSLOG/050.54
+export PKGLOG_DIR=$OSLOG/060.21
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

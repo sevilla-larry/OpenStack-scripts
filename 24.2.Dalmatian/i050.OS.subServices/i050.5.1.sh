@@ -190,6 +190,90 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+ 
+echo "i050.9.14.os-client-config-2.1.0"
+echo "i050.9.14.os-client-config-2.1.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.14.os-client-config-2.1.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.15.python-neutronclient-11.3.1"
+echo "i050.9.15.python-neutronclient-11.3.1" >> $OSLOG_PROCESS
+
+time { bash i050.9.15.python-neutronclient-11.3.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.16.os_brick-6.9.1"
+echo "i050.9.16.os_brick-6.9.1" >> $OSLOG_PROCESS
+
+time { bash i050.9.16.os_brick-6.9.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.17.ovsdbapp-2.8.0"
+echo "i050.9.17.ovsdbapp-2.8.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.17.ovsdbapp-2.8.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.18.os_vif-3.7.0"
+echo "i050.9.18.os_vif-3.7.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.18.os_vif-3.7.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i050.9.19.tooz-6.3.0"
+echo "i050.9.19.tooz-6.3.0" >> $OSLOG_PROCESS
+
+time { bash i050.9.19.tooz-6.3.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset OSLOG_PROCESS

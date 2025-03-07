@@ -484,6 +484,76 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+ 
+echo "i030.9.35.sortedcontainers-2.4.0"
+echo "i030.9.35.sortedcontainers-2.4.0" >> $OSLOG_PROCESS
+
+time { bash i030.9.35.sortedcontainers-2.4.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i030.9.35.sortedcontainers-2.4.0"
+echo "i030.9.35.sortedcontainers-2.4.0" >> $OSLOG_PROCESS
+
+time { bash i030.9.35.sortedcontainers-2.4.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+ 
+echo "i030.9.36.ovs-3.3.4"
+echo "i030.9.36.ovs-3.3.4" >> $OSLOG_PROCESS
+
+time { bash i030.9.36.ovs-3.3.4.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i030.9.37.pyroute2-0.7.1"
+echo "i030.9.37.pyroute2-0.7.1" >> $OSLOG_PROCESS
+
+time { bash i030.9.37.pyroute2-0.7.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i030.9.38.voluptuous-0.15.2"
+echo "i030.9.38.voluptuous-0.15.2" >> $OSLOG_PROCESS
+
+time { bash i030.9.38.voluptuous-0.15.2.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset OSLOG_PROCESS

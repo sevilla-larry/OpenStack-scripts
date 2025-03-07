@@ -1,22 +1,23 @@
-# i050.9.55.paramiko-3.5.1.sh
+# i050.9.17.ovsdbapp-2.8.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i030.9.13 bcrypt-4.1.3
-#               i010.9.04 cryptography-41.0.7
-#               i050.9.54 PyNaCl-1.5.0
+#               i030.9.24 fixtures-4.1.0
+#               i010.9.32 netaddr-1.3.0
+#               i030.9.36 ovs-3.3.4
+#               i010.9.01 pbr-6.1.0
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i050.9.18 os_vif-3.7.0
 #
 
-export PKG="paramiko-3.5.1"
-export PKGLOG_DIR=$OSLOG/050.55
+export PKG="ovsdbapp-2.8.0"
+export PKGLOG_DIR=$OSLOG/050.17
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -51,7 +52,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                paramiko                \
+                ovsdbapp                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

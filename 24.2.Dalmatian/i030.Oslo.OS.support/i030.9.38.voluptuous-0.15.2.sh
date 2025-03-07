@@ -1,21 +1,14 @@
-# i050.9.57.jwcrypto-1.5.6.sh
-#
-
-#
-# Dependencies Required:
-#
-#               i010.9.04 cryptography-41.0.7
-#               i030.9.20 typing_extensions-4.12.2
+# i030.9.38.voluptuous-0.15.2.sh
 #
 
 #
 # Required by:
 #
-#               i050.9.59 websockify-0.12.0
+#               i050.9.19 tooz-6.3.0
 #
 
-export PKG="jwcrypto-1.5.6"
-export PKGLOG_DIR=$OSLOG/050.57
+export PKG="voluptuous-0.15.2"
+export PKGLOG_DIR=$OSLOG/030.38
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -50,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                jwcrypto                \
+                voluptuous              \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."
