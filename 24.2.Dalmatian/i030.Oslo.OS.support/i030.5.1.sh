@@ -528,10 +528,10 @@ echo "."
 
 ###
 
-echo "i030.9.37.pyroute2-0.7.1"
-echo "i030.9.37.pyroute2-0.7.1" >> $OSLOG_PROCESS
+echo "i030.9.37.pyroute2-0.7.12"
+echo "i030.9.37.pyroute2-0.7.12" >> $OSLOG_PROCESS
 
-time { bash i030.9.37.pyroute2-0.7.1.sh ; }
+time { bash i030.9.37.pyroute2-0.7.12.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

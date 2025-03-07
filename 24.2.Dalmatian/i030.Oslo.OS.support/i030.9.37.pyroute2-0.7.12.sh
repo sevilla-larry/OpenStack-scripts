@@ -1,4 +1,4 @@
-# i030.9.37.pyroute2-0.7.1.sh
+# i030.9.37.pyroute2-0.7.12.sh
 #
 
 #
@@ -7,7 +7,7 @@
 #               i050.9.18 os_vif-3.7.0
 #
 
-export PKG="pyroute2-0.7.1"
+export PKG="pyroute2-0.7.12"
 export PKGLOG_DIR=$OSLOG/030.37
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
