@@ -1,9 +1,12 @@
-# i020.9.4.4.RabbitMQ.rc.d.sh
+# i020.9.4.5.RabbitMQ.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/020.4
+export PKGLOG_DIR=$OSLOG/020.4.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+
+rm -r $PKGLOG_DIR 2> /dev/null
+mkdir $PKGLOG_DIR
 
 SHELL=/bin/bash
 ETCDIR=/etc
@@ -13,7 +16,7 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i020.9.4.3.RabbitMQ.init.d.sh
+INITDFILESRC=$CURRDIR/i020.9.4.4.RabbitMQ.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/rabbitmq
 INITDFILEREL=../init.d/rabbitmq
 
@@ -29,16 +32,16 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K09rabbitmq  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K09rabbitmq  \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S91rabbitmq  \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K09rabbitmq  \
+      #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S91rabbitmq  \
+      #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S91rabbitmq  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S91rabbitmq  \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S91rabbitmq  \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S91rabbitmq  \
+      #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S91rabbitmq  \
+      #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K09rabbitmq  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 

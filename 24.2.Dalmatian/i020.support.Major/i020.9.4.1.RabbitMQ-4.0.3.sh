@@ -9,15 +9,15 @@
 # Dependencies Required:
 #
 #				i010.1	  simplejson-3.19.3	???
-#				i010.2	  Erlang-26.2.5.5
-#				i010.3	  Elixir-1.16.3
+#				i010.92	  Erlang-26.2.5.5
+#				i010.93	  Elixir-1.16.3
 #				b10.09.74 libxslt-1.1.42	???
 #				b10.49.06 xmlto-0.0.29		???
 #
 
 export PKG="rabbitmq-server-generic-unix-4.0.3"
 export PKGDEST="/usr/local"
-export PKGLOG_DIR=$OSLOG/020.4
+export PKGLOG_DIR=$OSLOG/020.4.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
@@ -52,6 +52,8 @@ install -v -dm777 $RABBITMQ_HOME/var/log/rabbitmq               \
 install -v -dm775 $RABBITMQ_HOME/var/lib/rabbitmq               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME                      \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+ln -vsf $RABBITMQ_HOME/sbin/* /usr/local/sbin                   \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 ln -vsf $RABBITMQ_HOME/etc/rabbitmq /etc/rabbitmq               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR

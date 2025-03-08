@@ -26,19 +26,17 @@ echo "."
 
 ###
 
-# FAILED
-#
-# echo "i020.9.4.4.RabbitMQ.rc.d"
-# echo "i020.9.4.4.RabbitMQ.rc.d" >> $OSLOG_PROCESS
-#
-# time { bash i020.9.4.4.RabbitMQ.rc.d.sh ; }
-#
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-#
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "i020.9.4.5.RabbitMQ.rc.d"
+echo "i020.9.4.5.RabbitMQ.rc.d" >> $OSLOG_PROCESS
+
+time { bash i020.9.4.5.RabbitMQ.rc.d.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
 #####
 

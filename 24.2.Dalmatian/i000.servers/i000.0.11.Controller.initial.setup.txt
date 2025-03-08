@@ -31,9 +31,15 @@ A. Preparation
 			PREFIX=24
 			BROADCAST=10.0.0.255
 
+	e. update /etc/profile
+
+        pathprepend /usr/local/bin PATH
+        pathprepend /usr/local/sbin PATH
+
+		source /etc/profile
+
 	d. update /etc/hosts
 
 		10.0.0.11	controller.localdomain	controller
 		10.0.0.31	compute1.localdomain	compute1
 		10.0.0.41	block1.localdomain		block1
-		
