@@ -26,9 +26,9 @@ start() {
     # FAILED
     # su - $RABBITMQ_USER -c "$RABBITMQ_SERVER -detached"
     $RABBITMQ_SERVER -detached
-    sleep 2
+    sleep 5
     $RABBITMQ_CTL start_app
-    sleep 2  # Give it time to start
+    sleep 5  # Give it time to start
     if $RABBITMQ_CTL status > /dev/null 2>&1; then
         echo "OK"
         return 0

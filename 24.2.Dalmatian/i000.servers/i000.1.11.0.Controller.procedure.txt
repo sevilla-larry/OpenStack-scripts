@@ -261,7 +261,7 @@ F.  RabbitMQ
 
         ### as root
 
-        pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
+        # pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
 
         #
         # FAILED
