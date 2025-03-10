@@ -300,6 +300,7 @@ G.  OpenStack Services Support Apps
         export LFSLOG=/var/log/blfs
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
+        export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
 
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
