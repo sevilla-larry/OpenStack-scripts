@@ -134,7 +134,6 @@ B.  Support Applications - minor
         ###
 
         bash i000.1.11.1.support.apps.sh
-        # includes Python OpenStack Client
 
         ###
 
@@ -142,6 +141,7 @@ C.  Support Applications - Major
 
         ###
 
+        # Python OpenStack Client
         # MariaDB, Apache, RabbitMQ, MemCacheD, EtcD
         bash i000.1.11.2.support.apps.sh
 
@@ -267,9 +267,19 @@ F.  RabbitMQ
         # FAILED
         #   su - rabbitmq -c 'rabbitmq-server -detached'
         #
-        rabbitmq-server -detached 
+        # rabbitmq-server -detached 
+        #
+        # rabbitmqctl start_app
 
-        rabbitmqctl start_app
+        export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
+
+        cp -v /var/lib/rabbitmq/.erlang.cookie /home/user
+        cp -v /var/lib/rabbitmq/.erlang.cookie /root
+
+        chmod 600 /home/user/.erlang.cookie
+        chmod 600 /root/.erlang.cookie
+
+        chown user:user /home/user/.erlang.cookie
 
         #                    user      password
         rabbitmqctl add_user openstack openstack

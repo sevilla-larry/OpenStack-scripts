@@ -16,7 +16,9 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i020.9.4.4.RabbitMQ.init.d.sh
+ENVFILESRC=$CURRDIR/i020.9.4.2.RabbitMQ.env.conf
+ENVFILEDST=${EXTDIR}/rabbitmq
+INITDFILESRC=$CURRDIR/i020.9.4.3.RabbitMQ.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/rabbitmq
 INITDFILEREL=../init.d/rabbitmq
 
@@ -25,9 +27,11 @@ echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
-   cp -v $INITDFILESRC $INITDFILEDST      \
+      cp -v $ENVFILESRC $ENVFILEDST          \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-   chmod -v ${MODE} $INITDFILEDST         \
+      cp -v $INITDFILESRC $INITDFILEDST      \
+         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+      chmod -v ${MODE} $ENVFILEDST $INITDFILEDST                  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K09rabbitmq  \

@@ -1,6 +1,9 @@
 # i000.1.11.2.support.apps.sh
 #
 
+# Python OpenStackClient
+bash i020.5.1.sh
+
 # MariaDB
 bash i020.5.2.1.sh              # MariaDB & OpenStack's MariaDB configuration
 # bash c11.03.9.main.app.sh       # MariaDB

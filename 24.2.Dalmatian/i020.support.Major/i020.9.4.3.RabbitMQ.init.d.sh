@@ -38,6 +38,8 @@
 # RABBITMQ_SBIN=$RABBITMQ_HOME/sbin
 RABBITMQ_SBIN=/usr/local/sbin
 PIDFILE=/var/run/rabbitmq.pid
+export HOME=/var/lib/rabbitmq  # Enforce cookie location
+export RABBITMQ_ERLANG_COOKIE="OPENSTACK"  # Optional: enforce specific cookie
 
 case "$1" in
    start)
