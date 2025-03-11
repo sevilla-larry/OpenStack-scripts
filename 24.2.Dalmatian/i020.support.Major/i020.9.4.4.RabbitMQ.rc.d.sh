@@ -15,7 +15,7 @@ EXTDIR=${DESTDIR}${ETCDIR}
 MODE=754
 DIRMODE=755
 CONFMODE=644
-COOKIEMODE=444
+COOKIEMODE=400
 CURRDIR=`pwd`
 ENVFILESRC=$CURRDIR/i020.9.4.2.RabbitMQ-env.conf.txt
 ENVFILEDST=${ETCDIR}/rabbitmq/rabbitmq-env.conf
@@ -32,14 +32,16 @@ echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
-      cp -v $ENVFILESRC $ENVFILEDST             \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
       cp -v $INITDFILESRC $INITDFILEDST         \
+         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+      cp -v $ENVFILESRC $ENVFILEDST             \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
       cp -v $COOKIESRC $COOKIEDST1              \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-      cp -v $COOKIESRC $COOKIEDST2              \
-         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+      # cp -v $COOKIESRC $COOKIEDST2              \
+      ln -vsf $COOKIEDST1 $COOKIEDST2           \
+          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
       chmod -v ${MODE} $INITDFILEDST            \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
       chmod -v ${CONFMODE} $ENVFILEDST          \
@@ -48,6 +50,9 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
       chmod -v ${COOKIEMODE} $COOKIEDST2        \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
+chown -vR rabbitmq:rabbitmq $ENVFILEDST $COOKIEDST1         \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K09rabbitmq  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
