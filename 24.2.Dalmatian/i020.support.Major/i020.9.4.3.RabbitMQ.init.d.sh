@@ -46,7 +46,7 @@ case "$1" in
       log_info_msg "Starting RabbitMQ server..."
       start_daemon $RABBITMQ_SBIN/rabbitmq-server -detached
       sleep 5
-      $RABBBITMQ_SBIN/rabbitmqctl start_app
+      $RABBITMQ_SBIN/rabbitmqctl start_app
       sleep 5
       evaluate_retval
       ;;
