@@ -26,6 +26,7 @@ COOKIEFILE=.erlang.cookie
 COOKIESRC=$CURRDIR/i020.9.4.5.RabbitMQ${COOKIEFILE}.txt
 COOKIEDST1=/var/lib/rabbitmq/$COOKIEFILE
 COOKIEDST2=/root/$COOKIEFILE
+RABBITMQ_HOME=/usr/local/rabbitmq_server-4.0.3
 
 
 echo "Install Init.d/rc.d ..."
@@ -51,8 +52,9 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
       chmod -v ${COOKIEMODE} $COOKIEDST2        \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-chown -vR rabbitmq:rabbitmq $ENVFILEDST $COOKIEDST1         \
+chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+#$ENVFILEDST $COOKIEDST1         \
 
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K09rabbitmq  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
