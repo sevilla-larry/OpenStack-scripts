@@ -192,14 +192,14 @@ D.  Support Apps - Major - Configuration 1
         # other Modules to be Loaded
         ###
 
-        watchdog
-        deflate
-        logio
-        negotiation
+        # watchdog
+        # deflate
+        # logio
+        # negotiation
 
         # Modules to be UnLoaded
 
-        authz_groupfile
+        # authz_groupfile
 
         # apachectl -k restart
 

@@ -53,7 +53,7 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+        >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 #$ENVFILEDST $COOKIEDST1         \
 
 	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K09rabbitmq  \
