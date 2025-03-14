@@ -52,7 +52,7 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
       chmod -v ${COOKIEMODE} $COOKIEDST2        \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME
+chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME      \
         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 #$ENVFILEDST $COOKIEDST1         \
 
