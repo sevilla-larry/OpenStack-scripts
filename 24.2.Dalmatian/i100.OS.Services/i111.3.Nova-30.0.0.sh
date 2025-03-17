@@ -63,8 +63,8 @@ install -v -d -m777 /var/log/nova               \
 cp -v   ../nova.conf.sample                     \
         /etc/nova/nova.conf                     \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   etc/nova/nova-api-paste.ini             \
-        /etc/nova/nova-api-paste.ini            \
+cp -v   etc/nova/api-paste.ini                  \
+        /etc/nova/api-paste.ini                 \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 chown -vR nova:nova /etc/nova                   \
                 /var/lib/nova                   \
