@@ -56,19 +56,19 @@ chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME      \
         >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 #$ENVFILEDST $COOKIEDST1         \
 
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K09rabbitmq  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K16rabbitmq  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K09rabbitmq  \
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K16rabbitmq  \
       #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S91rabbitmq  \
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S84rabbitmq  \
       #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S91rabbitmq  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S84rabbitmq  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S91rabbitmq  \
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S84rabbitmq  \
       #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S91rabbitmq  \
+	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S84rabbitmq  \
       #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K09rabbitmq  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K16rabbitmq  \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

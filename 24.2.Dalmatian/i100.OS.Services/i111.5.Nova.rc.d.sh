@@ -1,6 +1,6 @@
-# i020.9.5.4.MemCacheD.rc.d.sh
+# i111.5.Nova.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/020.5.3
+export PKGLOG_DIR=$OSLOG/111.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,9 +16,9 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i020.9.5.3.MemCacheD.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/memcached
-INITDFILEREL=../init.d/memcached
+INITDFILESRC=$CURRDIR/i111.4.Nova.init.d.sh
+INITDFILEDST=${EXTDIR}/rc.d/init.d/nova
+INITDFILEREL=../init.d/nova
 
 
 echo "Install Init.d/rc.d ..."
@@ -30,19 +30,11 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
    chmod -v ${MODE} $INITDFILEDST         \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K15memcached  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K06nova   \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	#  ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K15memcached  \
-      #     >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	#  ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S85memcached  \
-      #     >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S85memcached  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S94nova   \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S85memcached  \
-      #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	# ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S85memcached  \
-      #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K15memcached  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K06nova   \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

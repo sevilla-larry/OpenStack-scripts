@@ -17,8 +17,8 @@ DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
 INITDFILESRC=$CURRDIR/i153.4.Glance-api.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/glance-api
-INITDFILEREL=../init.d/glance-api
+INITDFILEDST=${EXTDIR}/rc.d/init.d/glance
+INITDFILEREL=../init.d/glance
 
 
 echo "Install Init.d/rc.d ..."
@@ -30,11 +30,11 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
    chmod -v ${MODE} $INITDFILEDST         \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K05glance-api  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K08glance \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S95glance-api  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S92glance \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K05glance-api  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K08glance \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

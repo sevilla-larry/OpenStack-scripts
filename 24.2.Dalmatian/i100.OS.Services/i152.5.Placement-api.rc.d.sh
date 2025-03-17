@@ -17,8 +17,8 @@ DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
 INITDFILESRC=$CURRDIR/i152.4.Placement-api.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/placement-api
-INITDFILEREL=../init.d/placement-api
+INITDFILEDST=${EXTDIR}/rc.d/init.d/placement
+INITDFILEREL=../init.d/placement
 
 
 echo "Install Init.d/rc.d ..."
@@ -30,11 +30,11 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
    chmod -v ${MODE} $INITDFILEDST         \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K04placement-api  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K07placement    \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S96placement-api  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S92placement    \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K04placement-api  \
+	ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K07placement    \
          >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 
