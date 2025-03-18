@@ -22,13 +22,13 @@ echo "2. Install ..."
 echo "2. Install ..." >> $OSLOG_PROCESS
 echo "2. Install ..." >> $PKGLOG_ERROR
 
-mkdir -vp /usr/share/novnc                                  \
+mkdir -vp /usr/share/novnc                                        \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -vr *.html core/ utils/ vnc.js ui.js /usr/share/novnc/   \
+cp -vr *.html app/ core/ utils/ vnc.js ui.js /usr/share/novnc/    \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR nova:nova /usr/share/novnc                        \
+chown -vR nova:nova /usr/share/novnc                              \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chmod -vR 755 /usr/share/novnc                              \
+chmod -vR 755 /usr/share/novnc                                    \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 

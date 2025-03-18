@@ -1,0 +1,121 @@
+# Python OpenStack Oslo support Apps - 2
+
+
+# 01 python-dateutil-2.9.0.post0
+81cb6aad924ef40ebfd3d62eaebe47c6 python-dateutil-2.9.0.post0.tar.gz
+
+# 02 fasteners-0.19
+e957e11c2e00629e44166e1d2881798e fasteners-0.19.tar.gz
+
+# 03 WebOb-1.8.7
+10191c69fa5a2c00f3b9abfb8937b415 WebOb-1.8.7.tar.gz
+
+# 04 dnspython-2.6.1
+ad29d0392621fb107e0eac4beed79ce5 dnspython-2.6.1.tar.gz
+
+# 05 greenlet-3.0.3
+170495b0af3b63ca40ca637dd6e5c6ef greenlet-3.0.3.tar.gz
+
+# 06 eventlet-0.36.1
+47eb406444cb5e071aa4f30f1d7eb7cb eventlet-0.36.1.tar.gz
+
+# 07 PasteDeploy-3.1.0
+9eab40afbb5e3d5ee17a23785543c8cd PasteDeploy-3.1.0.tar.gz
+
+# 08 repoze.lru-0.7
+c08cc030387e0b1fc53c5c7d964b35e2 repoze.lru-0.7.tar.gz
+
+# 09 Routes-2.5.1
+8f1fab1924e00d11b14719a469a3e0a2 Routes-2.5.1.tar.gz
+
+# 10 paste-3.10.1
+7d59952c9e108d8d381944b40e90e47a paste-3.10.1.tar.gz
+
+# 11 yappi-1.6.0
+c295bad0304f0cab1372ffed3297480c yappi-1.6.0.tar.gz
+
+# 12 statsd-4.0.1
+33f9f58c5687cd87977e8b27f5d60e42 statsd-4.0.1.tar.gz
+
+# 13 bcrypt-4.1.3 trial     Note: 4.0.1 working
+#Note: 4.2.x err executing keystone-manage db_sync  msg: No module named 'bcrypt._bcrpt'
+a2023c38e52997576d91b18d7b052847 bcrypt-4.1.3-cp39-abi3-manylinux_2_28_x86_64.whl
+#30617ec75d7867f586948842030621db bcrypt-4.1.3.tar.gz
+#bcrypt-4.0.1.tar.gz
+# 151.1 bcrypt-4.0.1 NOT viable,too many dependencies
+
+# 14 futurist-3.0.0
+cd171597ea297afc0ef98b2f8b96081b futurist-3.0.0.tar.gz
+
+# 15 cachetools-5.5.1   if err .0
+a9855be6d00255c175529d91f1c4003f cachetools-5.5.1.tar.gz
+
+# 16 vine-5.1.0
+eb53f54bbe9b6b4d65f072972cea0fcd vine-5.1.0.tar.gz
+
+# 17 amqp-5.2.0
+bd24760edbc5e4bfd58370b5d44c0f7e amqp-5.2.0.tar.gz
+
+# 18 kombu-5.4.2
+115f555f67568d9680c84e1d57b01e3a kombu-5.4.2.tar.gz
+
+# 19 prometheus_client-0.20.0
+588a54582e693aef27fc8dd354399465 prometheus_client-0.20.0.tar.gz
+
+# 20 typing_extensions-4.12.2
+cf64c2313f5fa5eb04c1deb3fc93abe9 typing_extensions-4.12.2.tar.gz
+
+# 21 sqlalchemy-2.0.37  (latest)    if err .31
+b7b1514b01796c1b98d7b7ddd2b2c79a sqlalchemy-2.0.37.tar.gz
+
+# 22 alembic-1.13.3     if err .2
+c56a6402b0601a8c2d844a08928d752f alembic-1.13.3.tar.gz
+
+# 23 testresources-2.0.1
+8873ab443db5569528964f524228a2d7 testresources-2.0.1.tar.gz
+
+# 24 fixtures-4.1.0
+de0efb51ea247297002c8c7687b187c3 fixtures-4.1.0.tar.gz
+
+# 25 testtools-2.7.2    if err try 1.7.1
+35777a93ea85b59160380595b8cf315e testtools-2.7.2.tar.gz
+
+# 26 testscenarios-0.5.0
+859073d9e7b049aee2e6704c51f6001a testscenarios-0.5.0.tar.gz
+
+# 27 PyJWT-2.9.0
+88c9dbeb3e6302c7db813195e202420a pyjwt-2.9.0.tar.gz
+
+# 28 rpds_py-0.22.3
+6035fa10b2b05b46d81fd886b30e75cc rpds_py-0.22.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+#461d6f4e753bfd1f26627f5520294b88 rpds_py-0.22.3.tar.gz
+
+# 29 referencing-0.32.1
+d1a0a4ae03ebba4b86b22bfb825f150b referencing-0.32.1.tar.gz
+
+# 30 jsonschema_specifications-2023.12.1
+de730f6937d1e3660a2d835c4f93f31b jsonschema_specifications-2023.12.1.tar.gz
+
+# 31 jsonschema-4.23.0
+a2cb5fee4da011118708ab275b34f30b jsonschema-4.23.0.tar.gz
+
+# 32 networkx-3.4.2
+b6cde64de26aca58aa8431c0b232512f networkx-3.4.2.tar.gz
+
+# 33 tenacity-9.0.0
+60b69eb66eed108dc4d385b9ebee6c07 tenacity-9.0.0.tar.gz
+
+# 34 pydot-3.0.4
+2982947628b80e3c699081a3a500ee86 pydot-3.0.4.tar.gz
+
+# 35 sortedcontainers-2.4.0
+50eeb6cb739568b590b28f9a3f445c78 sortedcontainers-2.4.0.tar.gz
+
+# 36 ovs-3.3.4
+9f6e54fb1e1d3b6abbba60da15b725bc ovs-3.3.4.tar.gz
+
+# 37 pyroute2-0.7.12
+04e3b1a6550840c2eaa75da16b83f62b pyroute2-0.7.12.tar.gz
+
+# 38 voluptuous-0.15.2
+d963b2b4f3f2c6489e85f32605418964 voluptuous-0.15.2.tar.gz

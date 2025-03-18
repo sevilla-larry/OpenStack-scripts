@@ -1,0 +1,59 @@
+# Python OpenStack sub-Services Apps - 3
+
+
+# 01 pycadf-3.1.1
+https://tarballs.opendev.org/openstack/pycadf/pycadf-3.1.1.tar.gz
+
+# 02 keystonemiddleware-10.7.1
+https://tarballs.opendev.org/openstack/keystonemiddleware/keystonemiddleware-10.7.1.tar.gz
+
+# 03 osprofiler-4.2.0
+https://tarballs.opendev.org/openstack/osprofiler/osprofiler-4.2.0.tar.gz
+
+# 04 automaton-3.2.0
+https://tarballs.opendev.org/openstack/automaton/automaton-3.2.0.tar.gz
+
+# 05 taskflow-5.9.1
+https://tarballs.opendev.org/openstack/taskflow/taskflow-5.9.1.tar.gz
+
+# 06 glance_store-4.8.1
+https://tarballs.opendev.org/openstack/glance_store/glance_store-4.8.1.tar.gz
+
+# 07 python-barbicanclient-7.0.0
+https://tarballs.opendev.org/openstack/python-barbicanclient/python-barbicanclient-7.0.0.tar.gz
+
+# 08 castellan-5.1.1
+https://tarballs.opendev.org/openstack/castellan/castellan-5.1.1.tar.gz
+
+# 09 cursive-0.2.3  (openstack app, but not in tarballs site)
+https://files.pythonhosted.org/packages/fc/3d/dd3b74dab4240ca2eeb291a643e0a8780fe5a83f5d3efeb358b5bc8d2a17/cursive-0.2.3.tar.gz
+
+# 10 os-win-5.9.0
+https://tarballs.opendev.org/openstack/os-win/os-win-5.9.0.tar.gz
+
+# 11 os-resource-classes-1.1.0
+https://tarballs.opendev.org/openstack/os-resource-classes/os-resource-classes-1.1.0.tar.gz
+
+# 12 os-traits-3.1.0
+https://tarballs.opendev.org/openstack/os-traits/os-traits-3.1.0.tar.gz
+
+# 13 microversion_parse-2.0.0
+https://tarballs.opendev.org/openstack/microversion-parse/microversion_parse-2.0.0.tar.gz
+
+# 14 os-client-config-2.1.0
+https://tarballs.opendev.org/openstack/os-client-config/os-client-config-2.1.0.tar.gz
+
+# 15 python-neutronclient-11.3.1
+https://tarballs.opendev.org/openstack/python-neutronclient/python-neutronclient-11.3.1.tar.gz
+
+# 16 os_brick-6.9.1
+https://tarballs.opendev.org/openstack/os-brick/os_brick-6.9.1.tar.gz
+
+# 17 ovsdbapp-2.8.0
+https://tarballs.opendev.org/openstack/ovsdbapp/ovsdbapp-2.8.0.tar.gz
+
+# 18 os_vif-3.7.0
+https://tarballs.opendev.org/openstack/os-vif/os_vif-3.7.0.tar.gz
+
+# 19 tooz-6.3.0
+https://tarballs.opendev.org/openstack/tooz/tooz-6.3.0.tar.gz
