@@ -36,6 +36,20 @@ echo "." >> $LFSLOG_PROCESS
 echo "."
 echo "."
 
+###
+
+echo "i111.6.noVNC"
+echo "i111.6.noVNC" >> $LFSLOG_PROCESS
+
+time { bash i111.6.noVNC.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+
+echo "." >> $LFSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset LFSLOG_PROCESS

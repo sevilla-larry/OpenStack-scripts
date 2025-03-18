@@ -14,6 +14,8 @@
 ###     already installed MariaDB, Apache, RabbitMQ, MemCacheD, etcd,
 ###     KeyStone, Glance, Placement.
 ###     how to install Nova-30.0.0 from source?
+###  then added
+###     noVNC app
 ###
 # Author      : Grok 3
 # Version     : Nova 30.0.0
@@ -34,8 +36,11 @@
 
 . /lib/lsb/init-functions
 
-NOVA_HOME=/usr/local
+#NOVA_HOME=/usr/local
+NOVA_HOME=/usr/
 NOVA_BIN=$NOVA_HOME/bin
+NOVA_CONFIG=/etc/nova/nova.conf
+NOVA_LOGDIR=/var/log/nova
 PID_DIR=/var/run/nova
 mkdir -p $PID_DIR
 chown nova:nova $PID_DIR
@@ -43,19 +48,31 @@ chown nova:nova $PID_DIR
 case "$1" in
    start)
       log_info_msg "Starting Nova API..."
-      start_daemon -u nova $NOVA_BIN/nova-api --config-file=/etc/nova/nova.conf
+#      start_daemon -u nova $NOVA_BIN/nova-api --config-file=/etc/nova/nova.conf
+#      su - nova -c "$NOVA_BIN/nova-api --config-file=$NOVA_CONFIG --log-dir=$NOVA_LOGDIR &""
+      $NOVA_BIN/nova-api --config-file=$NOVA_CONFIG --log-dir=$NOVA_LOGDIR &
       evaluate_retval
 
       log_info_msg "Starting Nova Scheduler..."
-      start_daemon -u nova $NOVA_BIN/nova-scheduler --config-file=/etc/nova/nova.conf
+#      start_daemon -u nova $NOVA_BIN/nova-scheduler --config-file=/etc/nova/nova.conf
+      $NOVA_BIN/nova-scheduler --config-file=$NOVA_CONFIG --log-dir=$NOVA_LOGDIR &
       evaluate_retval
 
       log_info_msg "Starting Nova Conductor..."
-      start_daemon -u nova $NOVA_BIN/nova-conductor --config-file=/etc/nova/nova.conf
+#      start_daemon -u nova $NOVA_BIN/nova-conductor --config-file=/etc/nova/nova.conf
+      $NOVA_BIN/nova-conductor --config-file=$NOVA_CONFIG --log-dir=$NOVA_LOGDIR &
+      evaluate_retval
+
+      log_info_msg "Starting Nova NoVNC Proxy..."
+      $NOVA_BIN/nova-novncproxy --config-file=$NOVA_CONFIG --log-dir=$NOVA_LOGDIR &
       evaluate_retval
       ;;
 
    stop)
+      log_info_msg "Stopping Nova NoVncProxy..."
+      killproc $NOVA_BIN/nova-novncproxy
+      evaluate_retval
+
       log_info_msg "Stopping Nova Conductor..."
       killproc $NOVA_BIN/nova-conductor
       evaluate_retval
@@ -79,6 +96,7 @@ case "$1" in
       statusproc $NOVA_BIN/nova-api
       statusproc $NOVA_BIN/nova-scheduler
       statusproc $NOVA_BIN/nova-conductor
+      statusproc $NOVA_BIN/nova-novncproxy
       ;;
 
    *)

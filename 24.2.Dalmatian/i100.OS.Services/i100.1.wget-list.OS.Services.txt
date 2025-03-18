@@ -4,6 +4,10 @@
 https://tarballs.opendev.org/openstack/nova/nova-30.0.0.tar.gz
 https://docs.openstack.org/nova/2024.2/_static/nova.conf.sample
 
+# 111 noVNC-1.5.0
+#--content-disposition https://github.com/novnc/noVNC/archive/refs/tags/v1.5.0.tar.gz
+# https://sourceforge.net/projects/novnc.mirror/files/v1.5.0/noVNC%201.5.0%20source%20code.tar.gz
+
 # 151 KeyStone-26.0.0
 https://tarballs.opendev.org/openstack/keystone/keystone-26.0.0.tar.gz
 https://docs.openstack.org/keystone/2024.2/_static/keystone.conf.sample

@@ -1229,7 +1229,7 @@ M.  Nova - Compute Service
         [service_user]
         send_service_user_token = true
         auth_url = https://controller/identity
-        auth_strategy = keystone
+            auth_strategy = keystone
         auth_type = password
         project_domain_name = default
         project_name = service
@@ -1288,6 +1288,8 @@ M.  Nova - Compute Service
       # password = PLACEMENT_PASS
         password = openstack
 
+        log_dir=/var/log/nova
+
         ###
         ### Additional Suggestions by Grok 3
         ###
@@ -1297,9 +1299,14 @@ M.  Nova - Compute Service
         use_neutron = true
         firewall_driver = nova.virt.firewall.NoopFirewallDriver
 
-        # Oslo concurrency
-        [oslo_concurrency]
-        lock_path = /var/lib/nova/tmp
+        [vnc]
+        vncserver_listen = 0.0.0.0
+        vncserver_proxyclient_address = 10.0.0.11
+        novncproxy_base_url = http://10.0.0.10:6080/vnc_auto.html
+        novncproxy_host = 0.0.0.0
+        novncproxy_port = 6080
+        # Explicitly set the path if not using default
+        # novncproxy_web = /usr/share/novnc  # Uncomment if needed
 
         ###
 
@@ -1347,28 +1354,37 @@ M.  Nova - Compute Service
         nc -w5 -z -v controller 8774
 
             Ncat: Version 7.95 ( https://nmap.org/ncat )
-            Ncat: Connected to 10.0.0.11:8778.
+            Ncat: Connected to 10.0.0.11:8774.
             Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
 
         lsof -i:8774
 
-            COMMAND    PID      USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            placement pppp placement 5u  IPv4   nnnn      0t0  TCP controller.localdomain:uec (LISTEN)
+            COMMAND   PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            nova-api xxxx root xxu  IPv4   nnnn      0t0  TCP *:8774 (LISTEN)
+            ...      .... .... ...  ....   ....      ...  ... ...... ........
 
         curl -i http://controller:8774
 
-            HTTP/1.0 200 OK
-            Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
-            Server: WSGIServer/0.2 CPython/3.11.10
-            Content-Length: 136
+            HTTP/1.1 200 OK
+            Content-Length: 369
             Content-Type: application/json
-            openstack-api-version: placement 1.0
-            vary: openstack-api-version
-            x-openstack-request-id: req-........-....-....-....-............
+            Date: Tue, 18 Mar 2025 03:28:43 GMT
 
             {"versions":
-             [{"id": "v1.0",
-              "max_version": "1.39",
-               "min_version": "1.0",
-                "status": "CURRENT",
-                 "links": [{"rel": "self", "href": ""}]}]}
+             [{"id": "v2.0",
+              "status": "SUPPORTED",
+               "version": "",
+                "min_version": "",
+                 "updated": "2011-01-21T11:33:21Z",
+                  "links":
+                   [{"rel": "self",
+                    "href": "http://controller:8774/v2/"}]},
+                     {"id": "v2.1",
+                      "status": "CURRENT",
+                       "version": "2.96",
+                        "min_version": "2.1",
+                         "updated": "2013-07-23T11:33:21Z",
+                          "links":
+                           [{"rel": "self",
+                            "href": "http://controller:8774/v2.1/"}]}]}
+

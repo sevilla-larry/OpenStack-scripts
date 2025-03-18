@@ -4,6 +4,10 @@
 ce648ed8161ef7cd44fa96b868ce124d nova-30.0.0.tar.gz
 #     nova.conf.sample
 
+# 111 noVNC 1.5.0
+# noVNC-1.5.0.tar.gz
+# noVNC%201.5.0%20source%20code.tar.gz
+
 # 151 KeyStone-26.0.0
 d225b4d3d7332068984a43340f8ce327 keystone-26.0.0.tar.gz
 #     keystone.conf.sample
