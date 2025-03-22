@@ -1,0 +1,14 @@
+# Python Openstack Oslo Apps - Part 1
+
+
+# 01 oslo.i18n-6.4.0
+https://tarballs.opendev.org/openstack/oslo.i18n/oslo.i18n-6.4.0.tar.gz
+
+# 02 oslo.utils-7.3.0
+https://tarballs.opendev.org/openstack/oslo.utils/oslo.utils-7.3.0.tar.gz
+
+# 03 oslo.config-9.6.0
+https://tarballs.opendev.org/openstack/oslo.config/oslo.config-9.6.0.tar.gz
+
+# 04 oslo.serialization-5.5.0
+https://tarballs.opendev.org/openstack/oslo.serialization/oslo.serialization-5.5.0.tar.gz

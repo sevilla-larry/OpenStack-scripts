@@ -68,11 +68,23 @@
 #
 #	source - build, install
 #
+# elseif Python App in OpenDev / Openstack
+#
+#   DL from OpenDev tarballs
+#
+#   build & install from .tar.gz, and (optionally) test
+#
+#   if there is error (minimal chance)
+#
+#       (see PyPi)
+#
+#   endif
+#
 # elseif Python App in PyPi
 #
 #   build & install from .tar.gz, and (optionally) test
 #
-#   if there is error
+#   if there is error (some apps)
 #
 #       install from .whl   (big chance will be successful)
 #

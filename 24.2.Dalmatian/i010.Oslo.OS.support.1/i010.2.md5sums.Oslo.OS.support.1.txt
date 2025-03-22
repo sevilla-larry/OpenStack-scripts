@@ -1,0 +1,88 @@
+# Python OpenStack Oslo support Apps - 1
+
+
+# 01 pycparser-2.21
+48f7d743bf018f7bb2ffc5fb976d1492 pycparser-2.21.tar.gz
+
+# 02 cffi-1.16.0
+0bcaed453da3004d0bea103038345c1e cffi-1.16.0.tar.gz
+
+# 03 cryptography-41.0.7 dg to  due to pyOpenSSL-23.3.0, if no acceptable, ug pyOpenSSL   ?43.0.3 ??3.4.8
+65ca27d709ff936a0506cd0aaf80381a cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl
+#c06f01c4bc95327c2e4378589ed5a193 cryptography-41.0.7.tar.gz
+#29b9a531187b47ee0651d97b2e50f226 cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl
+#e0669c198e0aecdcd68a2adef030f5a6 cryptography-43.0.3.tar.gz
+#e8b3e233556690acdc026b432a57c3fa cryptography-3.4.8.tar.gz
+
+# 04 autopage-0.5.2
+57936e4a9d379fe4a60eb617d8cdce33 autopage-0.5.2.tar.gz
+
+# 05 pyperclip-1.9.0
+43f9e69bf948139055683d28080787f4 pyperclip-1.9.0.tar.gz
+
+# 06 wcwidth-0.2.13
+5ce8dd9e6993dae268142feb1e605cd8 wcwidth-0.2.13.tar.gz
+
+# 07 cmd2-2.4.3
+b2c8691ef6300c2c72c697b846c6be1e cmd2-2.4.3.tar.gz
+
+# 08 prettytable-3.11.0
+fbec4419c46b035b6e792bef327eef3c prettytable-3.11.0.tar.gz
+
+# 09 iso8601-2.1.0
+#6e33910eba87066b3be7fcf3d59d16b5 iso8601-2.1.0.tar.gz              # giving ERRORs
+e3b1014d767f5178e4704b2f6b4e9562 iso8601-2.1.0-py3-none-any.whl     # alternative
+
+# 10 decorator-5.1.1
+a6b34700dcac8a4bb04efd55e99626c1 decorator-5.1.1.tar.gz
+
+# 11 jmespath-1.0.1
+2dd28beb22d698f58fe2281bfe5fe3a3 jmespath-1.0.1.tar.gz
+
+# 12 jsonpointer-3.0.0
+9a0b3e940bbd65f544f41018a904991f jsonpointer-3.0.0.tar.gz
+
+# 13 jsonpatch-1.33
+ed3e8eaa5cce105ad02509d185f0889f jsonpatch-1.33.tar.gz
+
+# 14 netifaces-0.11.0
+3146dcb3297dd018ae5eb9a52b440419 netifaces-0.11.0.tar.gz
+
+# 15 platformdirs-4.3.6
+9f63e7b2b462ee13ee2bf857f2839926 platformdirs-4.3.6.tar.gz
+
+# 16 netaddr-1.3.0
+b0307617f8f3aa73bbcfadac52d91df7 netaddr-1.3.0.tar.gz
+
+# 17 wrapt-1.16.0
+3e370b4bc08f7dcc518cf8895673b19c wrapt-1.16.0.tar.gz
+
+# 18 pyparsing-3.1.4
+92160532cc2c2f289e5f35d87ce0ed0d pyparsing-3.1.4.tar.gz
+
+# 19 tzdata-2024.2
+bda38291e705ce8329a2d49128f072fa tzdata-2024.2.tar.gz
+
+# 20 rfc3986-2.0.0
+bbf20302bf26bc771e88cc775fbde3bc rfc3986-2.0.0.tar.gz
+
+# 21 rpds_py-0.22.3
+6035fa10b2b05b46d81fd886b30e75cc rpds_py-0.22.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+#461d6f4e753bfd1f26627f5520294b88 rpds_py-0.22.3.tar.gz
+
+# 22 referencing-0.32.1
+d1a0a4ae03ebba4b86b22bfb825f150b referencing-0.32.1.tar.gz
+
+# 23 jsonschema_specifications-2023.12.1
+de730f6937d1e3660a2d835c4f93f31b jsonschema_specifications-2023.12.1.tar.gz
+
+# 24 jsonschema-4.23.0
+a2cb5fee4da011118708ab275b34f30b jsonschema-4.23.0.tar.gz
+
+# 25 warlock-2.0.1
+#78aa9050a11f1599d2b2ebb6def6b411 warlock-2.0.1.tar.gz
+efa855b264bc05f429d63208237ac491 warlock-2.0.1-py3-none-any.whl
+
+# 26 pyOpenSSL-23.3.0
+4c4f6f9e1c731b8ee7adcd9fbeccec62 pyOpenSSL-23.3.0.tar.gz
+

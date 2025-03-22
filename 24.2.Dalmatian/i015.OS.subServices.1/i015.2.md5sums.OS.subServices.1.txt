@@ -1,0 +1,21 @@
+# Python OpenStack sub-Services Apps - 1
+
+
+# 01 pbr-6.1.0
+06361b83d178fb62dcd1b4ba9a9b418c pbr-6.1.0.tar.gz
+
+# 02 stevedore-5.3.0
+f9117028291767cb5dfe665e3845c5ac stevedore-5.3.0.tar.gz
+
+# 03 os-service-types-1.7.0
+4a5bc8a60dfb3e98f5e5f975b173c04d os-service-types-1.7.0.tar.gz
+
+# 04 keystoneauth1-5.8.0
+ff119764cf7bd9d44fcb9c5f0a8fac7e keystoneauth1-5.8.0.tar.gz
+
+# 05 requestsexceptions-1.4.0
+f43b246ccd7d5b618e6f0dc946a6c3f3 requestsexceptions-1.4.0.tar.gz
+
+# 06 debtcollector-3.0.0
+399a20e47b0aec6c3007beb7cc7e017a debtcollector-3.0.0.tar.gz
+

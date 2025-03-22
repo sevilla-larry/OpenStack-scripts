@@ -1,0 +1,21 @@
+# Python OpenStack sub-Services Apps - 2
+
+
+# 01 cliff-4.7.0
+https://tarballs.opendev.org/openstack/cliff/cliff-4.7.0.tar.gz
+
+# 02 openstacksdk-4.0.1
+https://tarballs.opendev.org/openstack/openstacksdk/openstacksdk-4.0.1.tar.gz
+
+# 03 osc-lib-3.1.0
+https://tarballs.opendev.org/openstack/osc-lib/osc-lib-3.1.0.tar.gz
+
+
+# 11 python-keystoneclient-5.5.0
+https://tarballs.opendev.org/openstack/python-keystoneclient/python-keystoneclient-5.5.0.tar.gz
+
+# 12 python-cinderclient-9.6.0
+https://tarballs.opendev.org/openstack/python-cinderclient/python-cinderclient-9.6.0.tar.gz
+
+# 13 python-glanceclient-4.7.0
+https://tarballs.opendev.org/openstack/python-glanceclient/python-glanceclient-4.7.0.tar.gz
