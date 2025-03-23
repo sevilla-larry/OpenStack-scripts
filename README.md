@@ -30,7 +30,9 @@
 # i030 OpenStack Oslo  support
 # i040 OpenStack Oslo           (not included in the Minor group)
 # i050 OpenStack Support Others
-#
+
+
+
 # i010 Oslo and OpenStack Support Apps - 1
 # i015 Openstack sub-Services - 1
 # i020 Oslo and OpenStack Support Apps - 2
@@ -44,18 +46,19 @@
 # i080 Other Support Apss
 
 
+
 # i005 OpenStack Support Minor
 
 # i010 Oslo and OpenStack Support Apps - 1
-# i015 Openstack sub-Services - 1
-# i020 Oslo and OpenStack Support Apps - 2
+# i020 Openstack sub-Services - 1
+# i025 Oslo and OpenStack Support Apps - 2
 # i030 Oslo Apps - 1
 # i040 Openstack sub-Services - 2
 
 # i050 OpenStack Support Major
 
 # i060 Oslo and OpenStack Support Apps - 3
-# i065 Openstack sub-Services - 3
+# i070 Openstack sub-Services - 3
 # i080 Oslo Apps - 2
 # i090 Openstack sub-Services - 4
 
