@@ -1,30 +1,22 @@
-# i015.9.04.keystoneauth1-5.8.0.sh
+# i040.9.13.python-glanceclient-4.7.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i015.9.01 pbr-6.1.0
-#               i010.9.09 iso8601-2.1.0
+#               i020.9.01 pbr-6.1.0
+#               i010.9.08 prettytable-3.11.0
+#               i020.9.04 keystoneauth1-5.8.0
 #               b30.13.23.30 Requests-2.32.3
-#               i015.9.02 stevedore-5.3.0
-#               i015.9.03 os-service-types-1.7.0
+#               i010.9.25 warlock 2.0.1                         
+#               i030.9.02 oslo.utils-7.3.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i010.9.17 wrapt-1.16.0                          
+#               i010.9.26 pyOpenSSL-23.3.0                      
 #
 
-#
-# Required by:
-#
-#               i030.9.02 openstacksdk-4.0.1
-#               i030.9.03 osc-lib-3.1.0
-#               i030.9.11 python-keystoneclient-5.5.0
-#               i030.9.12 python-cinderclient-9.6.0
-#               i030.9.13 python-glanceclient-4.7.0
-#               i030.9.14 python-barbicanclient-7.0.0
-#               i030.9.15 python-neutronclient-11.3.1
-#
-
-export PKG="keystoneauth1-5.8.0"
-export PKGLOG_DIR=$OSLOG/015.04
+export PKG="python-glanceclient-4.7.0"
+export PKGLOG_DIR=$OSLOG/040.13
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -59,7 +51,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                keystoneauth1           \
+                python-glanceclient     \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

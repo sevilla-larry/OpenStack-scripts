@@ -1,34 +1,28 @@
-# i030.9.02.openstacksdk-4.0.1.sh
+# i030.9.01.oslo.i18n-6.4.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i010.9.03 cryptography-41.0.7
-#               i010.9.10 decorator-5.1.1
-#               i020.9.01 dogpile.cache-1.3.3
-#               i010.9.09 iso8601-2.1.0
-#               i010.9.11 jmespath-1.0.1
-#               i010.9.13 jsonpatch-1.33
-#               i015.9.04 keystoneauth1-5.8.0
-#               i010.9.14 netifaces-0.11.0
-#               i015.9.03 os-service-types-1.7.0
-#               i015.9.01 pbr-6.1.0
-#               i010.9.15 platformdirs-4.3.6
-#               b30.13.23.28 PyYAML-6.0.2
-#               i015.9.05 requestsexceptions-1.4.0
+#               i020.9.01 pbr-6.1.0
 #
 
 #
 # Required by:
 #
-#               i030.9.03 osc-lib-3.1.0.sh
-#               i030.9.15 python-neutronclient-11.3.1
-#               i020.9.1  python-openstackclient-7.1.3
+#               i030.9.02 oslo.utils-7.3.0
+#               i040.9.03 osc-lib-3.1.0
+#               i030.9.03.oslo.config-9.6.0
+#               i040.9.11 python-keystoneclient-5.5.0
+#               i040.9.12 python-cinderclient-9.6.0
+#               i040.9.13 python-glanceclient-4.7.0
+#               i040.9.14 python-barbicanclient-7.0.0
+#               i040.9.15 python-neutronclient-11.3.1
+#               i050.9.1  python-openstackclient-7.1.3
 #
 
-export PKG="openstacksdk-4.0.1"
-export PKGLOG_DIR=$OSLOG/030.02
+export PKG="oslo.i18n-6.4.0"
+export PKGLOG_DIR=$OSLOG/030.01
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -63,7 +57,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                openstacksdk            \
+                oslo.i18n               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

@@ -1,38 +1,29 @@
-# i015.9.01.pbr-6.1.0.sh
+# i040.9.03.osc-lib-3.1.0.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i020.9.01 pbr-6.1.0
+#               i040.9.01.cliff-4.7.0
+#               i020.9.04 keystoneauth1-5.8.0
+#               i040.9.02 openstacksdk-4.0.1
+#               i030.9.01 oslo.i18n-6.4.0
+#               i030.9.02 oslo.utils-7.3.0
+#               b30.13.23.30 Requests-2.32.3
+#               i020.9.02 stevedore-5.3.0
 #
 
 #
 # Required by:
 #
-#               i015.9.02 stevedore-5.3.0
-#               i015.9.03 os-service-types-1.7.0
-#               i015.9.04 keystoneauth1-5.8.0
-#               i030.9.02 openstacksdk-4.0.1
-#               i025.9.01 oslo.i18n-6.4.0
-#               i030.9.03 osc-lib-3.1.0
-#               i025.9.04 oslo.serialization-5.5.0
-#               i030.9.11 python-keystoneclient-5.5.0
-#               i030.9.12 python-cinderclient-9.6.0
-#               i030.9.13 python-glanceclient-4.7.0
-#               i030.9.14 python-barbicanclient-7.0.0
-#               i030.9.15 python-neutronclient-11.3.1
-#               i040.9.1  python-openstackclient-7.1.3
-#               i060.9.01 oslo.context-5.6.0
-#               i060.9.02 oslo.log-6.1.2
-#               i060.9.04 oslo.concurrency-6.1.0
-#               i060.9.06 oslo.middleware-6.2.0
-#               i060.9.07 oslo.metrics-0.9.0
-#               i060.9.08 oslo.messaging-14.9.1
-#               i050.9.23 testresources-2.0.1
-#               i050.9.25 testscenarios-0.5.0
-#               i060.9.09 oslo.db-16.0.0
-#               i070.9.02 keystonemiddleware-10.7.1 
-#               i151.3    KeyStone-26.0.0
-
+#               i040.9.11 python-keystoneclient-5.5.0
+#               i040.9.15 python-neutronclient-11.3.1
+#               i050.9.1  python-openstackclient-7.1.3
 #
 
-export PKG="pbr-6.1.0"
-export PKGLOG_DIR=$OSLOG/015.01
+export PKG="osc-lib-3.1.0"
+export PKGLOG_DIR=$OSLOG/040.03
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -67,7 +58,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                pbr                     \
+                osc-lib                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

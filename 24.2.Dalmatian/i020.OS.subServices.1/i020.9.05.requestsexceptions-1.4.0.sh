@@ -1,30 +1,14 @@
-# i030.9.11.python-keystoneclient-5.5.0.sh
-#
-
-#
-# Dependencies Required:
-#
-#               i015.9.01 pbr-6.1.0
-#               i015.9.06 debtcollector-3.0.0
-#               i015.9.04 keystoneauth1-5.8.0
-#               i025.9.03.oslo.config-9.6.0
-#               i025.9.01 oslo.i18n-6.4.0
-#               i025.9.04 oslo.serialization-5.5.0
-#               i025.9.02 oslo.utils-7.3.0
-#               b30.13.23.30 Requests-2.32.3
-#               i015.9.02 stevedore-5.3.0
-#               b10.13.23.15 Packaging-24.1
+# i020.9.05.requestsexceptions-1.4.0.sh
 #
 
 #
 # Required by:
 #
-#               i030.9.15 python-neutronclient-11.3.1
-#               i040.9.1  python-openstackclient-7.1.3
+#               i040.9.02 openstacksdk-4.0.1
 #
 
-export PKG="python-keystoneclient-5.5.0"
-export PKGLOG_DIR=$OSLOG/030.11
+export PKG="requestsexceptions-1.4.0"
+export PKGLOG_DIR=$OSLOG/020.05
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -59,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python-keystoneclient   \
+                requestsexceptions      \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

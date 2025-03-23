@@ -1,29 +1,21 @@
-# i030.9.03.osc-lib-3.1.0.sh
+# i030.9.05.oslo.context-5.6.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i015.9.01 pbr-6.1.0
-#               i030.9.01.cliff-4.7.0
-#               i015.9.04 keystoneauth1-5.8.0
-#               i030.9.02 openstacksdk-4.0.1
-#               i025.9.01 oslo.i18n-6.4.0
-#               i025.9.02 oslo.utils-7.3.0
-#               b30.13.23.30 Requests-2.32.3
-#               i015.9.02 stevedore-5.3.0
+#               i020.9.01 pbr-6.1.0
+#               i020.9.06 debtcollector-3.0.0
 #
 
 #
 # Required by:
 #
-#               i0?0.9.11 python-keystoneclient-5.5.0
-#               i030.9.15 python-neutronclient-11.3.1
-#               i020.9.1  python-openstackclient-7.1.3
+#               i030.9.06 oslo.log-6.1.2
 #
 
-export PKG="osc-lib-3.1.0"
-export PKGLOG_DIR=$OSLOG/030.03
+export PKG="oslo.context-5.6.0"
+export PKGLOG_DIR=$OSLOG/030.05
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -58,7 +50,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                osc-lib                 \
+                oslo.context            \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

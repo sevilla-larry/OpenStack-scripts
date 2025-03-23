@@ -1,21 +1,26 @@
-# i025.9.05.oslo.context-5.6.0.sh
+# i030.9.03.oslo.config-9.6.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i015.9.01 pbr-6.1.0
-#               i015.9.06 debtcollector-3.0.0
+#               i020.9.06 debtcollector-3.0.0
+#               i010.9.16 netaddr-1.3.0
+#               i020.9.02 stevedore-5.3.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i010.9.20 rfc3986-2.0.0
+#               b30.13.23.28 PyYAML-6.0.2
+#               b30.13.23.30 Requests-2.32.3
 #
 
 #
 # Required by:
 #
-#               i025.9.06 oslo.log-6.1.2
+#               i040.9.11 python-keystoneclient-5.5.0
 #
 
-export PKG="oslo.context-5.6.0"
-export PKGLOG_DIR=$OSLOG/025.05
+export PKG="oslo.config-9.6.0"
+export PKGLOG_DIR=$OSLOG/030.03
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -50,13 +55,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.context            \
+                oslo.config             \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

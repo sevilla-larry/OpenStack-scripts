@@ -1,21 +1,25 @@
-# i015.9.03.os-service-types-1.7.0.sh
+# i030.9.04.oslo.serialization-5.5.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i015.9.01 pbr-6.1.0
+#               i020.9.01 pbr-6.1.0
+#               b30.13.24.17 Msgpack-1.0.8
+#               i030.9.02 oslo.utils-7.3.0
+#               i010.9.19 tzdata-2024.2
 #
 
 #
 # Required by:
 #
-#               i015.9.04 keystoneauth1-5.8.0
-#               i030.9.02 openstacksdk-4.0.1
+#               i040.9.11 python-keystoneclient-5.5.0
+#               i040.9.14 python-barbicanclient-7.0.0
+#               i040.9.15 python-neutronclient-11.3.1
 #
 
-export PKG="os-service-types-1.7.0"
-export PKGLOG_DIR=$OSLOG/015.03
+export PKG="oslo.serialization-5.5.0"
+export PKGLOG_DIR=$OSLOG/030.04
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -50,7 +54,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                os-service-types        \
+                oslo.serialization      \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

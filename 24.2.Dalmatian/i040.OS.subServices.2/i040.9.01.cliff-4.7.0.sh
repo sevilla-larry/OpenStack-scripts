@@ -1,22 +1,27 @@
-# i020.9.01.dogpile.cache-1.3.3.sh
+# i040.9.01.cliff-4.7.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i010.9.10 decorator-5.1.1
-#               i015.9.02 stevedore-5.3.0
+#               i010.9.04 autopage-0.5.2
+#               i010.9.07 cmd2-2.4.3
+#               i010.9.08 prettytable-3.11.0
+#               i020.9.02 stevedore-5.3.0
+#               b30.13.23.28 PyYAML-6.0.2
 #
 
 #
 # Required by:
 #
-#               i030.9.02 openstacksdk-4.0.1
-#               i151.3    KeyStone-26.0.0
+#               i040.9.03 osc-lib-3.1.0
+#               i040.9.14 python-barbicanclient-7.0.0
+#               i040.9.15 python-neutronclient-11.3.1
+#               i050.9.1  python-openstackclient-7.1.3
 #
 
-export PKG="dogpile.cache-1.3.3"
-export PKGLOG_DIR=$OSLOG/020.01
+export PKG="cliff-4.7.0"
+export PKGLOG_DIR=$OSLOG/040.01
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -51,13 +56,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                dogpile.cache           \
+                cliff                   \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

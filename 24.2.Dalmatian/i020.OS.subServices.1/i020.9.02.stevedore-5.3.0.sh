@@ -1,27 +1,27 @@
-# i015.9.02.stevedore-5.3.0.sh
+# i020.9.02.stevedore-5.3.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i015.9.01 pbr-6.1.0
+#               i020.9.01 pbr-6.1.0
 #
 
 #
 # Required by:
 #
-#               i030.9.01 cliff-4.7.0
-#               i020.9.01 dogpile.cache-1.3.3
-#               i015.9.04 keystoneauth1-5.8.0
-#               i030.9.03 osc-lib-3.1.0
-#               i025.9.03 oslo.config-9.6.0
-#               i030.9.11 python-keystoneclient-5.5.0
-#               i030.9.12 python-cinderclient-9.6.0
-#               i040.9.1  python-openstackclient-7.1.3
+#               i040.9.01 cliff-4.7.0
+#               i025.9.01 dogpile.cache-1.3.3
+#               i020.9.04 keystoneauth1-5.8.0
+#               i040.9.03 osc-lib-3.1.0
+#               i030.9.03 oslo.config-9.6.0
+#               i040.9.11 python-keystoneclient-5.5.0
+#               i040.9.12 python-cinderclient-9.6.0
+#               i050.9.1  python-openstackclient-7.1.3
 #
 
 export PKG="stevedore-5.3.0"
-export PKGLOG_DIR=$OSLOG/015.02
+export PKGLOG_DIR=$OSLOG/020.02
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
