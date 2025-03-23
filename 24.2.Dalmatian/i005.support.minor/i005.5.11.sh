@@ -1,6 +1,6 @@
-# i010.5.11.2.sh
+# i005.5.11.2.sh
 #
-# Build all Apps in i010
+# Build all Apps in i005
 #
 
 export OSLOG_PROCESS=$OSLOG/process.log
