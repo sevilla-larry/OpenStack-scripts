@@ -3,6 +3,14 @@
 # https://docs.openstack.org/glance/2024.2/install/install-ubuntu.html
 #
 
+#
+# Dependencies Required:
+#
+#               i010.9.03 cryptography-41.0.7
+#    ??
+#
+
+
 export PKG="glance-29.0.0"
 export PKGLOG_DIR=$OSLOG/153.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log

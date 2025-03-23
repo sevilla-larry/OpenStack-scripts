@@ -5,7 +5,7 @@
 # Dependencies Required:
 #
 #               ?i010.9.01 pbr-6.1.0
-#               ?i010.9.04 cryptography-42.0.8
+#               i010.9.03 cryptography-41.0.7
 #               i070.9.07 python-barbicanclient-7.0.0
 #               ?i010.9.45 oslo.config-9.6.0
 #               i060.9.01 oslo.context-5.6.0

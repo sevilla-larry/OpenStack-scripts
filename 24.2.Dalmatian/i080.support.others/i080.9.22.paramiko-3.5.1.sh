@@ -5,7 +5,7 @@
 # Dependencies Required:
 #
 #               i050.9.13 bcrypt-4.1.3
-#               ?i010.9.04 cryptography-41.0.7
+#               i010.9.03 cryptography-41.0.7
 #               i080.9.21 PyNaCl-1.5.0
 #
 

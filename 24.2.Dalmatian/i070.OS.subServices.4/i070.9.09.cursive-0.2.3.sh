@@ -5,7 +5,7 @@
 # Dependencies Required:
 #
 #               ?i010.9.01 pbr-6.1.0
-#               ?i010.9.04 cryptography-42.0.8
+#               i010.9.03 cryptography-41.0.7
 #               ?i010.9.50 oslo.serialization-5.5.0
 #               ?i010.9.39 oslo.utils-7.3.0
 #               ?i010.9.31 oslo.i18n-6.4.0

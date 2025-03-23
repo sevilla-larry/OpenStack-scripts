@@ -10,7 +10,7 @@
 #               i030.9.03 WebOb-1.8.7
 #               i050.9.05 flask-3.0.3
 #               i050.9.08 Flask-RESTful-0.3.10
-#               i010.9.04 cryptography-42.0.8
+#               i010.9.03 cryptography-41.0.7
 #               i030.9.21 sqlalchemy-2.0.37
 #               i010.9.10 stevedore-5.3.0
 #               i050.9.09 passlib-1.7.4

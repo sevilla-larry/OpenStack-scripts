@@ -3,6 +3,13 @@
 # https://docs.openstack.org/nova/2024.2/install/controller-install-ubuntu.html
 #
 
+#
+# Dependencies Required:
+#
+#               i010.9.03 cryptography-41.0.7
+#    ??
+#
+
 export PKG="nova-30.0.0"
 export PKGLOG_DIR=$OSLOG/111.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log

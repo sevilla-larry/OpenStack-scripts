@@ -7,7 +7,7 @@ B:  i080.9.26 websockify-0.12.0                     websockify>=0.9.0 # LGPLv3
 A:  i080.9.24 jwcrypto-1.5.6                        jwcrypto                                                with Tests
 
 D:
-    i010.9.04 cryptography-41.0.7                   cryptography>=3.4
+    i010.9.03 cryptography-41.0.7                   cryptography>=3.4
     i050.9.20 typing_extensions-4.12.2              typing-extensions>=4.5.0
 
 B:  i080.9.26 websockify-0.12.0                     websockify>=0.9.0 # LGPLv3
@@ -42,7 +42,7 @@ A:  i080.9.22 paramiko-3.5.1                        paramiko>=2.7.1 # LGPLv2.1+ 
 
 D:
     i050.9.13 bcrypt-4.1.3                          bcrypt>=3.2
-    i010.9.04 cryptography-41.0.7                   cryptography>=3.3
+    i010.9.03 cryptography-41.0.7                   cryptography>=3.3
     i080.9.21 PyNaCl-1.5.0                          pynacl>=1.5
 
 B:  i111.3 Nova-30.0.0
@@ -58,14 +58,14 @@ B:  i070.9.19 tooz-6.3.0                            tooz>=1.58.0 # Apache-2.0
 A:  i070.9.19 tooz-6.3.0                            tooz>=1.58.0 # Apache-2.0                               with Tests
 
 D:
-    i010.9.10 stevedore-5.3.0                       stevedore>=1.16.0 # Apache-2.0
+    i015.9.02 stevedore-5.3.0                       stevedore>=1.16.0 # Apache-2.0
     i050.9.38 voluptuous-0.15.2                     voluptuous>=0.8.9 # BSD License
     b30.13.24.17 Msgpack-1.0.8                      msgpack>=0.4.0 # Apache-2.0
     i050.9.02 fasteners-0.19                        fasteners>=0.7 # Apache-2.0
     i050.9.33 tenacity-9.0.0                        tenacity>=5.0.0 # Apache-2.0
     i055.9.01 futurist-3.0.0                        futurist>=1.2.0 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=4.7.0 # Apache-2.0
-    i010.9.50 oslo.serialization-5.5.0              oslo.serialization>=1.10.0 # Apache-2.0
+    i025.9.02 oslo.utils-7.3.0                      oslo.utils>=4.7.0 # Apache-2.0
+    i025.9.04 oslo.serialization-5.5.0              oslo.serialization>=1.10.0 # Apache-2.0
 
 B:  i111.3 Nova-30.0.0
 
@@ -104,9 +104,9 @@ D:
     # date but we do not test them so no guarantee of having them all correct. If
     # you find any incorrect lower bounds, let us know or propose a fix.
     i050.9.24 fixtures-4.1.0                        fixtures>=3.0.0 # Apache-2.0/BSD
-    i010.9.32 netaddr-1.3.0                         netaddr>=0.10.0 # BSD
+    i010.9.16 netaddr-1.3.0                         netaddr>=0.10.0 # BSD
     i050.9.36 ovs-3.3.4                             ovs>=2.10.0 # Apache-2.0
-    i010.9.01 pbr-6.1.0                             pbr!=2.1.0,>=2.0.0 # Apache-2.0
+    i015.9.01 pbr-6.1.0                             pbr!=2.1.0,>=2.0.0 # Apache-2.0
 
 B:  i070.9.18 os_vif-3.7.0                          os-vif>=3.1.0 # Apache-2.0
 
@@ -118,19 +118,19 @@ D:
     # Requirements lower bounds listed here are our best effort to keep them up to
     # date but we do not test them so no guarantee of having them all correct. If
     # you find any incorrect lower bounds, let us know or propose a fix.
-    i010.9.01 pbr-6.1.0                             pbr>=3.0.0 # Apache-2.0
+    i015.9.01 pbr-6.1.0                             pbr>=3.0.0 # Apache-2.0
     i060.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=3.20.0 # Apache-2.0
-    i010.9.45 oslo.config-9.6.0                     oslo.config>=5.1.0 # Apache-2.0
+    i025.9.03 oslo.config-9.6.0                     oslo.config>=5.1.0 # Apache-2.0
     i060.9.02 oslo.log-6.1.2                        oslo.log>=3.30.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
+    i025.9.01 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
     i060.9.15 oslo.privsep-3.4.0                    oslo.privsep>=1.23.0 # Apache-2.0
-    i010.9.50 oslo.serialization-5.5.0              oslo.serialization>=2.20.0 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=2.0.0  # Apache-2.0
+    i025.9.04 oslo.serialization-5.5.0              oslo.serialization>=2.20.0 # Apache-2.0
+    i025.9.02 oslo.utils-7.3.0                      oslo.utils>=2.0.0  # Apache-2.0
     i060.9.15 oslo.versionedobjects-3.4.0           oslo.versionedobjects>=1.28.0 # Apache-2.0
     i070.9.17 ovsdbapp-2.8.0                        ovsdbapp>=0.12.1 # Apache-2.0
     i050.9.37 pyroute2-0.7.12                       pyroute2>=0.5.2;sys_platform!='win32' # Apache-2.0 (+ dual licensed GPL2)
-    i010.9.10 stevedore-5.3.0                       stevedore>=1.20.0 # Apache-2.0
-    i010.9.34 debtcollector-3.0.0                   debtcollector>=1.19.0 # Apache-2.0
+    i015.9.02 stevedore-5.3.0                       stevedore>=1.20.0 # Apache-2.0
+    i015.9.06 debtcollector-3.0.0                   debtcollector>=1.19.0 # Apache-2.0
 
 B:  i111.3 Nova-30.0.0
 
@@ -143,16 +143,16 @@ D:
     # of appearance. Changing the order has an impact on the overall integration
     # process, which may cause wedges in the gate later.
 
-    i010.9.01 pbr-6.1.0                             pbr>=5.8.0 # Apache-2.0
+    i015.9.01 pbr-6.1.0                             pbr>=5.8.0 # Apache-2.0
     i060.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=5.0.0 # Apache-2.0
-    i010.9.45 oslo.config-9.6.0                     oslo.config>=9.0.0 # Apache-2.0
+    i025.9.03 oslo.config-9.6.0                     oslo.config>=9.0.0 # Apache-2.0
     i060.9.01 oslo.context-5.6.0                    oslo.context>=4.1.0 # Apache-2.0
     i060.9.02 oslo.log-6.1.2                        oslo.log>=4.8.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=5.1.0 # Apache-2.0
+    i025.9.01 oslo.i18n-6.4.0                       oslo.i18n>=5.1.0 # Apache-2.0
     i060.9.15 oslo.privsep-3.4.0                    oslo.privsep>=3.0.0 # Apache-2.0
-    i010.9.50 oslo.serialization-5.5.0              oslo.serialization>=4.3.0 # Apache-2.0
+    i025.9.04 oslo.serialization-5.5.0              oslo.serialization>=4.3.0 # Apache-2.0
     i060.9.05 oslo.service-3.5.0                    oslo.service>=2.8.0 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=6.0.0 # Apache-2.0
+    i025.9.02 oslo.utils-7.3.0                      oslo.utils>=6.0.0 # Apache-2.0
     b30.13.23.30 Requests-2.32.3                    requests>=2.25.1 # Apache-2.0
     i050.9.33 tenacity-9.0.0                        tenacity>=6.3.1 # Apache-2.0
     i070.9.10 os-win-5.9.0                          os-win>=5.7.0 # Apache-2.0
@@ -166,16 +166,16 @@ A:  i060.9.16 oslo.versionedobjects-3.4.0           oslo.versionedobjects>=1.35.
 
 D:
     i060.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=3.26.0 # Apache-2.0
-    i010.9.45 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
+    i025.9.03 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
     i060.9.01 oslo.context-5.6.0                    oslo.context>=2.19.2 # Apache-2.0
     i060.9.08 oslo.messaging-14.9.1                 oslo.messaging>=5.29.0 # Apache-2.0
-    i010.9.50 oslo.serialization-5.5.0              oslo.serialization>=2.18.0 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=4.7.0 # Apache-2.0
-    i010.9.12 iso8601-2.1.0                         iso8601>=0.1.11 # MIT
+    i025.9.04 oslo.serialization-5.5.0              oslo.serialization>=2.18.0 # Apache-2.0
+    i025.9.02 oslo.utils-7.3.0                      oslo.utils>=4.7.0 # Apache-2.0
+    i010.9.09 iso8601-2.1.0                         iso8601>=0.1.11 # MIT
     i060.9.02 oslo.log-6.1.2                        oslo.log>=3.36.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
+    i025.9.01 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
     i050.9.03 WebOb-1.8.7                           WebOb>=1.7.1 # MIT
-    i010.9.32 netaddr-1.3.0                         netaddr>=0.7.18 # BSD
+    i010.9.16 netaddr-1.3.0                         netaddr>=0.7.18 # BSD
 
 B:  i111.3 Nova-30.0.0
 
@@ -185,10 +185,10 @@ A:  i060.9.15 oslo.privsep-3.4.0                    oslo.privsep>=2.6.2 # Apache
 
 D:
     i060.9.02 oslo.log-6.1.2                        oslo.log>=3.36.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
-    i010.9.45 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.33.0 # Apache-2.0
-    i010.9.03 cffi-1.16.0                           cffi>=1.14.0 # MIT
+    i025.9.01 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
+    i025.9.03 oslo.config-9.6.0                     oslo.config>=5.2.0 # Apache-2.0
+    i025.9.02 oslo.utils-7.3.0                      oslo.utils>=3.33.0 # Apache-2.0
+    i030.9.01 cffi-1.16.0                           cffi>=1.14.0 # MIT
     i050.9.06 eventlet-0.36.1                       eventlet>=0.21.0 # MIT
     i050.9.05 greenlet-3.0.3                        greenlet>=0.4.14 # MIT
     b30.13.24.17 Msgpack-1.0.8                      msgpack>=0.6.0 # Apache-2.0
@@ -209,34 +209,34 @@ D:
     # The order of packages is significant, because pip processes them in the order
     # of appearance. Changing the order has an impact on the overall integration
     # process, which may cause wedges in the gate later.
-    i010.9.30 openstacksdk-4.0.1                    openstacksdk>=0.13.0 # Apache-2.0
+    i030.9.02 openstacksdk-4.0.1                    openstacksdk>=0.13.0 # Apache-2.0
 
-B:  i070.9.15 python-neutronclient-11.3.1           python-neutronclient>=7.1.0 # Apache-2.0
+B:  i030.9.15 python-neutronclient-11.3.1           python-neutronclient>=7.1.0 # Apache-2.0
 
 #####
 
-A:  i070.9.15 python-neutronclient-11.3.1           python-neutronclient>=7.1.0 # Apache-2.0                with Tests
+A:  i030.9.15 python-neutronclient-11.3.1           python-neutronclient>=7.1.0 # Apache-2.0                with Tests
 
 D:
     # Requirements lower bounds listed here are our best effort to keep them up to
     # date but we do not test them so no guarantee of having them all correct. If
     # you find any incorrect lower bounds, let us know or propose a fix.
-    i010.9.01 pbr-6.1.0                             pbr!=2.1.0,>=2.0.0 # Apache-2.0
-    i010.9.11.cliff-4.7.0                           cliff>=3.4.0 # Apache-2.0
-    i010.9.34 debtcollector-3.0.0                   debtcollector>=1.2.0 # Apache-2.0
-    i010.9.12 iso8601-2.1.0                         iso8601>=0.1.11 # MIT
-    i010.9.32 netaddr-1.3.0                         netaddr>=0.7.18 # BSD
-    i010.9.30 openstacksdk-4.0.1                    openstacksdk>=1.5.0 # Apache-2.0
-    i010.9.40 osc-lib-3.1.0                         osc-lib>=1.12.0 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
+    i015.9.01 pbr-6.1.0                             pbr!=2.1.0,>=2.0.0 # Apache-2.0
+    i030.9.01 cliff-4.7.0                           cliff>=3.4.0 # Apache-2.0
+    i015.9.06 debtcollector-3.0.0                   debtcollector>=1.2.0 # Apache-2.0
+    i010.9.09 iso8601-2.1.0                         iso8601>=0.1.11 # MIT
+    i010.9.16 netaddr-1.3.0                         netaddr>=0.7.18 # BSD
+    i030.9.02 openstacksdk-4.0.1                    openstacksdk>=1.5.0 # Apache-2.0
+    i030.9.03 osc-lib-3.1.0                         osc-lib>=1.12.0 # Apache-2.0
+    i025.9.01 oslo.i18n-6.4.0                       oslo.i18n>=3.15.3 # Apache-2.0
     i060.9.02 oslo.log-6.1.2                        oslo.log>=3.36.0 # Apache-2.0
-    i010.9.50 oslo.serialization-5.5.0              oslo.serialization!=2.19.1,>=2.18.0 # Apache-2.0
-    i010.9.39 oslo.utils-7.3.0                      oslo.utils>=3.33.0 # Apache-2.0
+    i025.9.04 oslo.serialization-5.5.0              oslo.serialization!=2.19.1,>=2.18.0 # Apache-2.0
+    i025.9.02 oslo.utils-7.3.0                      oslo.utils>=3.33.0 # Apache-2.0
     i070.9.14 os-client-config-2.1.0                os-client-config>=1.28.0 # Apache-2.0
-    i010.9.19 keystoneauth1-5.8.0                   keystoneauth1>=3.8.0 # Apache-2.0
+    i015.9.04 keystoneauth1-5.8.0                   keystoneauth1>=3.8.0 # Apache-2.0
     # keystoneclient is used only by neutronclient.osc.utils
     # TODO(amotoki): Drop this after osc.utils has no dependency on keystoneclient
-    i010.9.60 python-keystoneclient-5.5.0           python-keystoneclient>=3.8.0 # Apache-2.0
+    i030.9.11 python-keystoneclient-5.5.0           python-keystoneclient>=3.8.0 # Apache-2.0
     b30.13.23.30 Requests-2.32.3                    requests>=2.14.2 # Apache-2.0
 
 B:  i111.3 Nova-30.0.0
@@ -250,51 +250,51 @@ D:
     # date but we do not test them so no guarantee of having them all correct. If
     # you find any incorrect lower bounds, let us know or propose a fix.
 
-    i010.9.01 pbr-6.1.0                             pbr>=5.8.0 # Apache-2.0
+    i015.9.01 pbr-6.1.0                             pbr>=5.8.0 # Apache-2.0
     i050.9.21 sqlalchemy-2.0.37                     SQLAlchemy>=1.4.13 # MIT
-    i010.9.13 decorator-5.1.1                       decorator>=4.1.0 # BSD
+    i010.9.10 decorator-5.1.1                       decorator>=4.1.0 # BSD
     i050.9.06 eventlet-0.36.1                       eventlet>=0.30.1 # MIT
     a.08.75   Jinja2-3.1.4                          Jinja2>=2.10 # BSD License (3 clause)
     i070.9.02 keystonemiddleware-10.7.1             keystonemiddleware>=4.20.0 # Apache-2.0
     b10.13.23.12 lxml-5.3.1                         lxml>=4.5.0 # BSD
     i050.9.09 Routes-2.5.1                          Routes>=2.3.1 # MIT
-    i010.9.04 cryptography-41.0.7                   cryptography>=2.7 # BSD/Apache-2.0
+    i010.9.03 cryptography-41.0.7                   cryptography>=2.7 # BSD/Apache-2.0
     i050.9.03 WebOb-1.8.7                           WebOb>=1.8.2 # MIT
     i050.9.05 greenlet-3.0.3                        greenlet>=0.4.15 # MIT
     i050.9.07 PasteDeploy-3.1.0                     PasteDeploy>=1.5.0 # MIT
     i050.9.10 paste-3.10.1                          Paste>=2.0.2 # MIT
-    i010.9.09 prettytable-3.11.0                    PrettyTable>=0.7.1 # BSD
+    i010.9.08 prettytable-3.11.0                    PrettyTable>=0.7.1 # BSD
     i050.9.22 alembic-1.13.3                        alembic>=1.5.0 # MIT
-    i010.9.32 netaddr-1.3.0                         netaddr>=0.7.18 # BSD
-    i010.9.20 netifaces-0.11.0                      netifaces>=0.10.4 # MIT
+    i010.9.16 netaddr-1.3.0                         netaddr>=0.7.18 # BSD
+    i010.9.14 netifaces-0.11.0                      netifaces>=0.10.4 # MIT
     i050.9.29 paramiko-3.5.1                        paramiko>=2.7.1 # LGPLv2.1+
-    i010.9.12 iso8601-2.1.0                         iso8601>=0.1.11 # MIT
+    i010.9.09 iso8601-2.1.0                         iso8601>=0.1.11 # MIT
     i050.9.31 jsonschema-4.23.0                     jsonschema>=4.0.0 # MIT
-    i010.9.52 python-cinderclient-9.6.0             python-cinderclient>=4.0.1 # Apache-2.0
-    i010.9.19 keystoneauth1-5.8.0                   keystoneauth1>=3.16.0 # Apache-2.0
-    i070.9.15 python-neutronclient-11.3.1           python-neutronclient>=7.1.0 # Apache-2.0
-    i010.9.53 python-glanceclient-4.7.0             python-glanceclient>=2.8.0 # Apache-2.0
+    i030.9.12 python-cinderclient-9.6.0             python-cinderclient>=4.0.1 # Apache-2.0
+    i015.9.04 keystoneauth1-5.8.0                   keystoneauth1>=3.16.0 # Apache-2.0
+    i030.9.15 python-neutronclient-11.3.1           python-neutronclient>=7.1.0 # Apache-2.0
+    i030.9.13 python-glanceclient-4.7.0             python-glanceclient>=2.8.0 # Apache-2.0
     b30.13.23.30 Requests-2.32.3                    requests>=2.25.1 # Apache-2.0
-    i010.9.10 stevedore-5.3.0                       stevedore>=1.20.0 # Apache-2.0
+    i015.9.02 stevedore-5.3.0                       stevedore>=1.20.0 # Apache-2.0
     i050.9.33 websockify-0.12.0                     websockify>=0.9.0 # LGPLv3
     i060.9.03 oslo.cache-3.8.0                      oslo.cache>=1.26.0 # Apache-2.0
     i060.9.04 oslo.concurrency-6.1.0                oslo.concurrency>=5.0.1 # Apache-2.0
-    i010.9.40 oslo.config-9.6.0                     oslo.config>=8.6.0 # Apache-2.0
+    i025.9.03 oslo.config-9.6.0                     oslo.config>=8.6.0 # Apache-2.0
     i060.9.01 oslo.context-5.6.0                    oslo.context>=3.4.0 # Apache-2.0
     i060.9.02 oslo.log-6.1.2                        oslo.log>=4.6.1 # Apache-2.0
     i060.9.12 oslo.limit-2.5.0                      oslo.limit>=1.5.0 # Apache-2.0
     i060.9.13 oslo.reports-3.4.0                    oslo.reports>=1.18.0 # Apache-2.0
-    i010.9.41 oslo.serialization-5.5.0              oslo.serialization>=4.2.0 # Apache-2.0
+    i025.9.04 oslo.serialization-5.5.0              oslo.serialization>=4.2.0 # Apache-2.0
     i060.9.11 oslo.upgradecheck-2.4.0               oslo.upgradecheck>=1.3.0
-    i010.9.37 oslo.utils-7.3.0                      oslo.utils>=7.3.0 # Apache-2.0
+    i025.9.02 oslo.utils-7.3.0                      oslo.utils>=7.3.0 # Apache-2.0
     i060.9.09 oslo.db-16.0.0                        oslo.db>=10.0.0 # Apache-2.0
     i060.9.14 oslo.rootwrap-7.3.0                   oslo.rootwrap>=5.15.0 # Apache-2.0
     i060.9.08 oslo.messaging-14.9.1                 oslo.messaging>=14.1.0 # Apache-2.0
     i060.9.10 oslo.policy-4.4.0                     oslo.policy>=4.4.0 # Apache-2.0
     i060.9.15 oslo.privsep-3.4.0                    oslo.privsep>=2.6.2 # Apache-2.0
-    i010.9.31 oslo.i18n-6.4.0                       oslo.i18n>=5.1.0 # Apache-2.0
+    i025.9.01 oslo.i18n-6.4.0                       oslo.i18n>=5.1.0 # Apache-2.0
     i060.9.05 oslo.service-3.5.0                    oslo.service>=2.8.0 # Apache-2.0
-    i010.9.39 rfc3986-2.0.0                         rfc3986>=1.2.0 # Apache-2.0
+    i010.9.20 rfc3986-2.0.0                         rfc3986>=1.2.0 # Apache-2.0
     i060.9.06 oslo.middleware-6.2.0                 oslo.middleware>=3.31.0 # Apache-2.0
     b30.13.23.17 psutil-6.0.0                       psutil>=3.2.2 # BSD
     i060.9.15 oslo.versionedobjects-3.4.0           oslo.versionedobjects>=1.35.0 # Apache-2.0
@@ -307,8 +307,8 @@ D:
     i070.9.?? tooz-6.3.0                            tooz>=1.58.0 # Apache-2.0
     i070.9.09 cursive-0.2.3                         cursive>=0.2.1 # Apache-2.0
     i080.9.20 retrying-1.3.4                        retrying>=1.3.3 # Apache-2.0
-    i010.9.18 os-service-types-1.7.0                os-service-types>=1.7.0 # Apache-2.0
-    i050.9.01 python-dateutil-2.9.0.post0           python-dateutil>=2.7.0 # BSD
+    i015.9.03 os-service-types-1.7.0                os-service-types>=1.7.0 # Apache-2.0
+    i010.9.27 python-dateutil-2.9.0.post0           python-dateutil>=2.7.0 # BSD
     i055.9.01 futurist-3.0.0                        futurist>=1.8.0 # Apache-2.0
-    i010.9.30 openstacksdk-4.0.1                    openstacksdk>=0.35.0 # Apache-2.0
+    i030.9.02 openstacksdk-4.0.1                    openstacksdk>=0.35.0 # Apache-2.0
     b30.13.23.28 PyYAML-6.0.2                       PyYAML>=5.1 # MIT
