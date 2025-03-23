@@ -15,7 +15,9 @@
 # Required by:
 #
 #               i030.9.03 osc-lib-3.1.0
-#               i0??.9.1 python-openstackclient-7.1.3
+#               i030.9.14 python-barbicanclient-7.0.0
+#               i030.9.15 python-neutronclient-11.3.1
+#               i040.9.1  python-openstackclient-7.1.3
 #
 
 export PKG="cliff-4.7.0"

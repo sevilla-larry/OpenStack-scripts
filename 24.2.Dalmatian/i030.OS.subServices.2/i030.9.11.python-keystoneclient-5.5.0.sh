@@ -19,11 +19,12 @@
 #
 # Required by:
 #
+#               i030.9.15 python-neutronclient-11.3.1
 #               i040.9.1  python-openstackclient-7.1.3
 #
 
 export PKG="python-keystoneclient-5.5.0"
-export PKGLOG_DIR=$OSLOG/010.51
+export PKGLOG_DIR=$OSLOG/030.11
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

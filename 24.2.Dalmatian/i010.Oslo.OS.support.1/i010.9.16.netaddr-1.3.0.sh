@@ -6,6 +6,12 @@
 #
 #               i025.9.02 oslo.utils-7.3.0
 #               i025.9.03 oslo.config-9.6.0
+#               i070.9.03 osprofiler-4.2.0
+#               i080.9.19 WSME-0.12.1
+#               i070.9.17 ovsdbapp-2.8.0
+#               i060.9.16 oslo.versionedobjects-3.4.0
+#               i030.9.15 python-neutronclient-11.3.1
+#               i111.3    Nova-30.0.0
 #
 
 export PKG="netaddr-1.3.0"

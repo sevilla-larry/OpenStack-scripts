@@ -13,6 +13,7 @@
 #               i025.9.02 oslo.utils-7.3.0
 #               i025.9.03 oslo.config-9.6.0
 #               i030.9.11 python-keystoneclient-5.5.0
+#               i030.9.15 python-neutronclient-11.3.1
 #
 
 export PKG="debtcollector-3.0.0"

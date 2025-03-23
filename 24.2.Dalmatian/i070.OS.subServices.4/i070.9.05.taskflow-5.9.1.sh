@@ -9,7 +9,7 @@
 #               i050.9.02 fasteners-0.19
 #               i050.9.32 networkx-3.4.2
 #               ?i010.9.10 stevedore-5.3.0
-#               i050.9.31 jsonschema-4.23.0
+#               i010.9.24 jsonschema-4.23.0
 #               i070.9.04 automaton-3.2.0
 #               ?i010.9.39 oslo.utils-7.3.0
 #               ?i010.9.50 oslo.serialization-5.5.0

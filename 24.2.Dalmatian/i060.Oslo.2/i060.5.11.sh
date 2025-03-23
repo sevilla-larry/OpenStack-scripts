@@ -10,34 +10,6 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i060.9.01.oslo.context-5.6.0"
-echo "i060.9.01.oslo.context-5.6.0" >> $OSLOG_PROCESS
-
-time { bash i060.9.01.oslo.context-5.6.0.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i060.9.02.oslo.log-6.1.2"
-echo "i060.9.02.oslo.log-6.1.2" >> $OSLOG_PROCESS
-
-time { bash i060.9.02.oslo.log-6.1.2.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
 echo "i060.9.03.oslo.cache-3.8.0"
 echo "i060.9.03.oslo.cache-3.8.0" >> $OSLOG_PROCESS
 

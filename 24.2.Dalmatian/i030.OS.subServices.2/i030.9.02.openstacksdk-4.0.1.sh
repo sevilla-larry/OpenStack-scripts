@@ -23,6 +23,7 @@
 # Required by:
 #
 #               i030.9.03 osc-lib-3.1.0.sh
+#               i030.9.15 python-neutronclient-11.3.1
 #               i020.9.1  python-openstackclient-7.1.3
 #
 

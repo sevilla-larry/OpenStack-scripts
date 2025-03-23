@@ -1,26 +1,20 @@
-# i060.9.02.oslo.log-6.1.2.sh
+# i030.9.04.os-client-config-2.1.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.01 pbr-6.1.0
-#               ?i010.9.45 oslo.config-9.6.0
-#               i060.9.01 oslo.context-5.6.0
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               ?i010.9.50 oslo.serialization-5.5.0
-#               i050.9.01 python-dateutil-2.9.0.post0
+#               i030.9.02 openstacksdk-4.0.1
 #
 
 #
 # Required by:
 #
-#               i060.9.04 oslo.cache-3.8.0
+#               i030.9.15 python-neutronclient-11.3.1
 #
 
-export PKG="oslo.log-6.1.2"
-export PKGLOG_DIR=$OSLOG/060.02
+export PKG="os-client-config-2.1.0"
+export PKGLOG_DIR=$OSLOG/030.04
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -55,7 +49,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.log                \
+                os-client-config        \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

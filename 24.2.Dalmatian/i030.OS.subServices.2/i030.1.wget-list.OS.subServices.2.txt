@@ -10,6 +10,9 @@ https://tarballs.opendev.org/openstack/openstacksdk/openstacksdk-4.0.1.tar.gz
 # 03 osc-lib-3.1.0
 https://tarballs.opendev.org/openstack/osc-lib/osc-lib-3.1.0.tar.gz
 
+# 04 os-client-config-2.1.0
+https://tarballs.opendev.org/openstack/os-client-config/os-client-config-2.1.0.tar.gz
+
 
 # 11 python-keystoneclient-5.5.0
 https://tarballs.opendev.org/openstack/python-keystoneclient/python-keystoneclient-5.5.0.tar.gz
@@ -19,3 +22,10 @@ https://tarballs.opendev.org/openstack/python-cinderclient/python-cinderclient-9
 
 # 13 python-glanceclient-4.7.0
 https://tarballs.opendev.org/openstack/python-glanceclient/python-glanceclient-4.7.0.tar.gz
+
+# 14 python-barbicanclient-7.0.0
+https://tarballs.opendev.org/openstack/python-barbicanclient/python-barbicanclient-7.0.0.tar.gz
+
+# 15 python-neutronclient-11.3.1
+https://tarballs.opendev.org/openstack/python-neutronclient/python-neutronclient-11.3.1.tar.gz
+

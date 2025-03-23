@@ -21,7 +21,10 @@
 #               i030.9.03 osc-lib-3.1.0
 #               i030.9.04 oslo.serialization-5.5.0
 #               i030.9.11 python-keystoneclient-5.5.0
-#               i030.9.11 python-cinderclient-9.6.0
+#               i030.9.12 python-cinderclient-9.6.0
+#               i030.9.13 python-glanceclient-4.7.0
+#               i030.9.14 python-barbicanclient-7.0.0
+#               i030.9.15 python-neutronclient-11.3.1
 #
 
 export PKG="oslo.utils-7.3.0"

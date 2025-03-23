@@ -1,20 +1,27 @@
-# i050.9.01.python-dateutil-2.9.0.post0.sh
+# i025.9.06.oslo.log-6.1.2.sh
 #
 
 #
 # Dependencies Required:
 #
-#               b30.13.23.33 six-1.16.0
+#               i015.9.01 pbr-6.1.0
+#               i025.9.03 oslo.config-9.6.0
+#               i025.9.05 oslo.context-5.6.0
+#               i025.9.01 oslo.i18n-6.4.0
+#               i025.9.02 oslo.utils-7.3.0
+#               i025.9.04 oslo.serialization-5.5.0
+#               i010.9.27 python-dateutil-2.9.0.post0
 #
 
 #
 # Required by:
 #
-#               i060.9.02 oslo.log-6.1.2
+#               i060.9.04 oslo.cache-3.8.0
+#               i030.9.15 python-neutronclient-11.3.1
 #
 
-export PKG="python-dateutil-2.9.0.post0"
-export PKGLOG_DIR=$OSLOG/050.01
+export PKG="oslo.log-6.1.2"
+export PKGLOG_DIR=$OSLOG/025.06
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -49,13 +56,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python-dateutil         \
+                oslo.log                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

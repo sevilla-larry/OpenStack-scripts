@@ -11,6 +11,7 @@
 # Required by:
 #
 #               i0?0.9.?? pysaml2-7.5.0
+#               i030.9.13 python-glanceclient-4.7.0
 #
 
 export PKG="pyOpenSSL-23.3.0"

@@ -12,3 +12,10 @@ https://tarballs.opendev.org/openstack/oslo.config/oslo.config-9.6.0.tar.gz
 
 # 04 oslo.serialization-5.5.0
 https://tarballs.opendev.org/openstack/oslo.serialization/oslo.serialization-5.5.0.tar.gz
+
+# 05 oslo.context-5.6.0
+https://tarballs.opendev.org/openstack/oslo.context/oslo.context-5.6.0.tar.gz
+
+# 06 oslo.log-6.1.2
+https://tarballs.opendev.org/openstack/oslo.log/oslo.log-6.1.2.tar.gz
+

@@ -14,8 +14,16 @@
 # Required by:
 #
 #               i030.9.02 openstacksdk-4.0.1
-#               i040.9.1 python-openstackclient-7.1.3
+#               i040.9.1  python-openstackclient-7.1.3
 #               i010.9.22 pyOpenSSL-23.3.0
+#               i080.9.14 pysaml2-7.5.0
+#               i151.3    KeyStone-26.0.0
+#               i070.9.08 castellan-5.1.1
+#               i070.9.09 cursive-0.2.3
+#               i153.3    Glance-29.0.0
+#               i080.9.24 jwcrypto-1.5.6
+#               i080.9.22 paramiko-3.5.1
+#               i111.3    Nova-30.0.0
 #
 
 export PKG="cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl"

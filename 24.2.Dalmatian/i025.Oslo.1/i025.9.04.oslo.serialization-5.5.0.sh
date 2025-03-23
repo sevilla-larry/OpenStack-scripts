@@ -14,6 +14,8 @@
 # Required by:
 #
 #               i030.9.11 python-keystoneclient-5.5.0
+#               i030.9.14 python-barbicanclient-7.0.0
+#               i030.9.15 python-neutronclient-11.3.1
 #
 
 export PKG="oslo.serialization-5.5.0"

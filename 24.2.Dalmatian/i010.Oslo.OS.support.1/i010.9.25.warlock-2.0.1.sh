@@ -11,6 +11,12 @@
 #               i010.9.24 jsonschema-4.23.0
 #
 
+#
+# Required by:
+#
+#               i030.9.13 python-glanceclient-4.7.0
+#
+
 export PKG="warlock-2.0.1-py3-none-any.whl"
 export PKGLOG_DIR=$OSLOG/010.25
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log

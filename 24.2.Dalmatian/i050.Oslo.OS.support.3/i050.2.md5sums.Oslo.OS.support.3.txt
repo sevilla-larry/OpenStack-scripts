@@ -1,9 +1,6 @@
 # Python OpenStack Oslo support Apps - 3
 
 
-# 01 python-dateutil-2.9.0.post0
-81cb6aad924ef40ebfd3d62eaebe47c6 python-dateutil-2.9.0.post0.tar.gz
-
 # 02 fasteners-0.19
 e957e11c2e00629e44166e1d2881798e fasteners-0.19.tar.gz
 

@@ -1,22 +1,22 @@
-# i010.9.53.python-glanceclient-4.7.0.sh
+# i030.9.13.python-glanceclient-4.7.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i010.9.01 pbr-6.1.0
-#               i010.9.09 prettytable-3.11.0
-#               i010.9.19 keystoneauth1-5.8.0
+#               i015.9.01 pbr-6.1.0
+#               i010.9.08 prettytable-3.11.0
+#               i015.9.04 keystoneauth1-5.8.0
 #               b30.13.23.30 Requests-2.32.3
-#               i010.9.42 warlock 2.0.1                         
-#               i010.9.39 oslo.utils-7.3.0
-#               i010.9.31 oslo.i18n-6.4.0
-#               i010.9.33 wrapt-1.16.0                          
-#               i050.9.15 pyOpenSSL-23.3.0                      
+#               i010.9.25 warlock 2.0.1                         
+#               i025.9.02 oslo.utils-7.3.0
+#               i025.9.01 oslo.i18n-6.4.0
+#               i010.9.17 wrapt-1.16.0                          
+#               i010.9.26 pyOpenSSL-23.3.0                      
 #
 
 export PKG="python-glanceclient-4.7.0"
-export PKGLOG_DIR=$OSLOG/010.53
+export PKGLOG_DIR=$OSLOG/030.13
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

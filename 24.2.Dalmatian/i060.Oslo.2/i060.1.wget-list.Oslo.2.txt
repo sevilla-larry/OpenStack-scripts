@@ -1,12 +1,6 @@
 # Python Openstack Oslo Apps - Part 2
 
 
-# 01 oslo.context-5.6.0
-https://tarballs.opendev.org/openstack/oslo.context/oslo.context-5.6.0.tar.gz
-
-# 02 oslo.log-6.1.2
-https://tarballs.opendev.org/openstack/oslo.log/oslo.log-6.1.2.tar.gz
-
 # 03 oslo.cache-3.8.0
 https://tarballs.opendev.org/openstack/oslo.cache/oslo.cache-3.8.0.tar.gz
 

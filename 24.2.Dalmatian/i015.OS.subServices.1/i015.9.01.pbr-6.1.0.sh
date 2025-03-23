@@ -13,7 +13,22 @@
 #               i025.9.04 oslo.serialization-5.5.0
 #               i030.9.11 python-keystoneclient-5.5.0
 #               i030.9.12 python-cinderclient-9.6.0
+#               i030.9.13 python-glanceclient-4.7.0
+#               i030.9.14 python-barbicanclient-7.0.0
+#               i030.9.15 python-neutronclient-11.3.1
 #               i040.9.1  python-openstackclient-7.1.3
+#               i060.9.01 oslo.context-5.6.0
+#               i060.9.02 oslo.log-6.1.2
+#               i060.9.04 oslo.concurrency-6.1.0
+#               i060.9.06 oslo.middleware-6.2.0
+#               i060.9.07 oslo.metrics-0.9.0
+#               i060.9.08 oslo.messaging-14.9.1
+#               i050.9.23 testresources-2.0.1
+#               i050.9.25 testscenarios-0.5.0
+#               i060.9.09 oslo.db-16.0.0
+#               i070.9.02 keystonemiddleware-10.7.1 
+#               i151.3    KeyStone-26.0.0
+
 #
 
 export PKG="pbr-6.1.0"

@@ -10,20 +10,6 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
  
-echo "i050.9.01.python-dateutil-2.9.0.post0"
-echo "i050.9.01.python-dateutil-2.9.0.post0" >> $OSLOG_PROCESS
-
-time { bash i050.9.01.python-dateutil-2.9.0.post0.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
- 
 echo "i050.9.02.fasteners-0.19"
 echo "i050.9.02.fasteners-0.19" >> $OSLOG_PROCESS
 

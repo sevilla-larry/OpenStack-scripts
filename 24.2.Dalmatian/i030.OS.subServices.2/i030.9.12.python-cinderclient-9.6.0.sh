@@ -1,16 +1,16 @@
-# i010.9.52.python-cinderclient-9.6.0.sh
+# i030.9.12.python-cinderclient-9.6.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i010.9.01 pbr-6.1.0
-#               i010.9.09 prettytable-3.11.0
-#               i010.9.19 keystoneauth1-5.8.0
-#               i010.9.31 oslo.i18n-6.4.0
-#               i010.9.39 oslo.utils-7.3.0
+#               i015.9.01 pbr-6.1.0
+#               i010.9.08 prettytable-3.11.0
+#               i015.9.04 keystoneauth1-5.8.0
+#               i025.9.01 oslo.i18n-6.4.0
+#               i025.9.02 oslo.utils-7.3.0
 #               b30.13.23.30 Requests-2.32.3
-#               i010.9.10 stevedore-5.3.0
+#               i015.9.02 stevedore-5.3.0
 #
 
 #
@@ -20,7 +20,7 @@
 #
 
 export PKG="python-cinderclient-9.6.0"
-export PKGLOG_DIR=$OSLOG/010.52
+export PKGLOG_DIR=$OSLOG/030.12
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

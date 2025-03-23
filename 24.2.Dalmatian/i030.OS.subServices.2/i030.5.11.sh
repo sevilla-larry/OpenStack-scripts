@@ -55,6 +55,20 @@ echo "."
 
 ###
 
+echo "i030.9.04.os-client-config-2.1.0"
+echo "i030.9.04.os-client-config-2.1.0" >> $OSLOG_PROCESS
+
+time { bash i030.9.04.os-client-config-2.1.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 echo "i030.9.11.python-keystoneclient-5.5.0"
 echo "i030.9.11.python-keystoneclient-5.5.0" >> $OSLOG_PROCESS
 
@@ -87,6 +101,34 @@ echo "i030.9.13.python-glanceclient-4.7.0"
 echo "i030.9.13.python-glanceclient-4.7.0" >> $OSLOG_PROCESS
 
 time { bash i030.9.13.python-glanceclient-4.7.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i030.9.14.python-barbicanclient-7.0.0"
+echo "i030.9.14.python-barbicanclient-7.0.0" >> $OSLOG_PROCESS
+
+time { bash i030.9.14.python-barbicanclient-7.0.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i030.9.15.python-neutronclient-11.3.1"
+echo "i030.9.15.python-neutronclient-11.3.1" >> $OSLOG_PROCESS
+
+time { bash i030.9.15.python-neutronclient-11.3.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

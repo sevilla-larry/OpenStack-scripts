@@ -19,9 +19,6 @@ https://tarballs.opendev.org/openstack/taskflow/taskflow-5.9.1.tar.gz
 # 06 glance_store-4.8.1
 https://tarballs.opendev.org/openstack/glance_store/glance_store-4.8.1.tar.gz
 
-# 07 python-barbicanclient-7.0.0
-https://tarballs.opendev.org/openstack/python-barbicanclient/python-barbicanclient-7.0.0.tar.gz
-
 # 08 castellan-5.1.1
 https://tarballs.opendev.org/openstack/castellan/castellan-5.1.1.tar.gz
 
@@ -39,12 +36,6 @@ https://tarballs.opendev.org/openstack/os-traits/os-traits-3.1.0.tar.gz
 
 # 13 microversion_parse-2.0.0
 https://tarballs.opendev.org/openstack/microversion-parse/microversion_parse-2.0.0.tar.gz
-
-# 14 os-client-config-2.1.0
-https://tarballs.opendev.org/openstack/os-client-config/os-client-config-2.1.0.tar.gz
-
-# 15 python-neutronclient-11.3.1
-https://tarballs.opendev.org/openstack/python-neutronclient/python-neutronclient-11.3.1.tar.gz
 
 # 16 os_brick-6.9.1
 https://tarballs.opendev.org/openstack/os-brick/os_brick-6.9.1.tar.gz

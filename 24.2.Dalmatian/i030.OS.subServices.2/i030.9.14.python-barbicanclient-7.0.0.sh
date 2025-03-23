@@ -1,14 +1,26 @@
-# i070.9.15.python-neutronclient-11.3.1.sh
+# i030.9.14.python-barbicanclient-7.0.0.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i015.9.01 pbr-6.1.0
+#               b30.13.23.30 Requests-2.32.3
+#               i030.9.01 cliff-4.7.0
+#               i015.9.04 keystoneauth1-5.8.0
+#               i025.9.01 oslo.i18n-6.4.0
+#               i025.9.04 oslo.serialization-5.5.0
+#               i025.9.02 oslo.utils-7.3.0
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i070.9.08 castellan-5.1.1
 #
 
-export PKG="python-neutronclient-11.3.1"
-export PKGLOG_DIR=$OSLOG/070.15
+export PKG="python-barbicanclient-7.0.0"
+export PKGLOG_DIR=$OSLOG/030.14
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,13 +55,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python-neutronclient    \
+                python-barbicanclient   \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..
