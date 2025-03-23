@@ -1,6 +1,8 @@
-# i055.5.1.sh
+# i055.5.11.sh
 #
 # Python OpenStack sub-Services Apps - 2
+#
+# for Controller Node
 #
 
 export OSLOG_PROCESS=$OSLOG/process.log

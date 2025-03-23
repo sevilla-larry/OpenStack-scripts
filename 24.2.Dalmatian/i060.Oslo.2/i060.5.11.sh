@@ -1,6 +1,8 @@
-# i060.5.1.sh
+# i060.5.11.sh
 #
 # Python Openstack Oslo Apps - Part 2
+#
+# for Controller Node
 #
 
 export OSLOG_PROCESS=$OSLOG/process.log

@@ -1,11 +1,11 @@
-# i040.9.6.etcd-3.5.17.sh (binary Install)
+# i040.9.6.etcd-3.1.10.sh (binary Install)
 #
 # https://docs.openstack.org/install-guide/environment-etcd.html
 #
 # Notes: https://etcd.io/docs/v3.5/install/
 #
 
-export PKG="etcd-v3.5.17-linux-amd64"
+export PKG="etcd-v3.1.11-linux-amd64"
 export PKGDEST="/usr/local"
 export PKGLOG_DIR=$OSLOG/040.6
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log

@@ -27,7 +27,7 @@ https://files.pythonhosted.org/packages/e8/3c/204e5c6087efc85b52a68edce8678d44eb
 # 06 Etcd-v3.5.17					  (amd64 binary)
 # Note: OpenStack - tarballs - 3.1.10
 # 06 etcd-v3.1.10 (from OpenStack site amd64 binary/sources )
-#https://tarballs.opendev.org/openstack/etcd/v3.1.10/etcd-v3.1.10-linux-amd64.tar.gz
-https://github.com/etcd-io/etcd/releases/download/v3.5.17/etcd-v3.5.17-linux-amd64.tar.gz
+https://tarballs.opendev.org/openstack/etcd/v3.1.10/etcd-v3.1.10-linux-amd64.tar.gz
+#https://github.com/etcd-io/etcd/releases/download/v3.5.17/etcd-v3.5.17-linux-amd64.tar.gz
 #--content-disposition https://github.com/etcd-io/etcd/archive/refs/tags/v3.5.17.tar.gz
 

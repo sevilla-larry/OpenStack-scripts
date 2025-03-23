@@ -2,6 +2,8 @@
 #
 # Python OpenStack Other support Apps
 #
+# for Controller Node
+#
 
 export OSLOG_PROCESS=$OSLOG/process.log
 
