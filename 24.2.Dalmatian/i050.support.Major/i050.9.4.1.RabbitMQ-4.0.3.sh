@@ -1,4 +1,4 @@
-# i040.9.4.RabbitMQ-4.0.3.sh (binary Install)
+# i050.9.4.RabbitMQ-4.0.3.sh (binary Install)
 #
 # https://docs.openstack.org/install-guide/environment-messaging.html
 #
@@ -8,16 +8,16 @@
 #
 # Dependencies Required:
 #
-#				i010.1	  simplejson-3.19.3	???
-#				i010.92	  Erlang-26.2.5.5
-#				i010.93	  Elixir-1.16.3
+#				?0??.9.?? simplejson-3.19.3	???
+#				i045.9.01 Erlang-26.2.5.5
+#				?045.9.02  Elixir-1.16.3
 #				b10.09.74 libxslt-1.1.42	???
 #				b10.49.06 xmlto-0.0.29		???
 #
 
 export PKG="rabbitmq-server-generic-unix-4.0.3"
 export PKGDEST="/usr/local"
-export PKGLOG_DIR=$OSLOG/040.4.1
+export PKGLOG_DIR=$OSLOG/050.4.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log

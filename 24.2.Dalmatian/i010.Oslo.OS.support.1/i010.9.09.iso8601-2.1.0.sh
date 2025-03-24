@@ -11,7 +11,7 @@
 #               i030.9.02 openstacksdk-4.0.1
 #               i025.9.02 oslo.utils-7.3.0
 #               i030.9.15 python-neutronclient-11.3.1
-#               i020.9.1  python-openstackclient-7.1.3
+#               i050.9.1  python-openstackclient-7.1.3
 #               i153.3    Glance-29.0.0
 #               i111.3    Nova-30.0.0
 #               i060.9.16 oslo.versionedobjects-3.4.0

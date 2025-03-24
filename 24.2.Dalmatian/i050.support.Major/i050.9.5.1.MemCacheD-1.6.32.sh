@@ -1,4 +1,4 @@
-# i040.9.5.1.MemCacheD-1.6.32.sh
+# i050.9.5.1.MemCacheD-1.6.32.sh
 #
 
 #
@@ -8,7 +8,7 @@
 #
 
 export PKG="memcached-1.6.32"
-export PKGLOG_DIR=$OSLOG/040.5.1
+export PKGLOG_DIR=$OSLOG/050.5.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

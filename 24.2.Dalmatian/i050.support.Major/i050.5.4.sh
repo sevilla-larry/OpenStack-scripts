@@ -1,8 +1,8 @@
-# i040.5.6.sh
+# i050.5.4.sh
 #
-# Install Etcd
+# Install RabbitMQ
 #
-# https://docs.openstack.org/install-guide/environment-etcd.html
+# https://docs.openstack.org/install-guide/environment-messaging.html
 #
 
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -12,10 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i040.9.6.1.etcd-3.5.17"
-echo "i040.9.6.1.etcd-3.5.17" >> $OSLOG_PROCESS
+echo "i050.9.4.1.RabbitMQ-4.0.3"
+echo "i050.9.4.1.RabbitMQ-4.0.3" >> $OSLOG_PROCESS
 
-time { bash i040.9.6.1.etcd-3.5.17.sh ; }
+time { bash i050.9.4.1.RabbitMQ-4.0.3.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -26,10 +26,10 @@ echo "."
 
 ###
 
-echo "i040.9.6.4.etcd.rc.d"
-echo "i040.9.6.4.etcd.rc.d" >> $OSLOG_PROCESS
+echo "i050.9.4.4.RabbitMQ.rc.d"
+echo "i050.9.4.4.RabbitMQ.rc.d" >> $OSLOG_PROCESS
 
-time { bash i040.9.6.4.etcd.rc.d.sh ; }
+time { bash i050.9.4.4.RabbitMQ.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

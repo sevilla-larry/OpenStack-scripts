@@ -1,4 +1,4 @@
-# i040.5.5.sh
+# i050.5.5.sh
 #
 # Build MemCached & python-MemCached
 #
@@ -12,24 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i040.9.5.1.MemCacheD-1.6.32"
-echo "i040.9.5.1.MemCacheD-1.6.32" >> $OSLOG_PROCESS
+echo "i050.9.5.1.MemCacheD-1.6.32"
+echo "i050.9.5.1.MemCacheD-1.6.32" >> $OSLOG_PROCESS
 
-time { bash i040.9.5.1.MemCacheD-1.6.32.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i040.9.5.2.python-memcached-1.62"
-echo "i040.9.5.2.python-memcached-1.62" >> $OSLOG_PROCESS
-
-time { bash i040.9.5.2.python-memcached-1.62.sh ; }
+time { bash i050.9.5.1.MemCacheD-1.6.32.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -40,10 +26,24 @@ echo "."
 
 ###
 
-echo "i040.9.5.4.MemCacheD.rc.d"
-echo "i040.9.5.4.MemCacheD.rc.d" >> $OSLOG_PROCESS
+echo "i050.9.5.2.python-memcached-1.62"
+echo "i050.9.5.2.python-memcached-1.62" >> $OSLOG_PROCESS
 
-time { bash i040.9.5.4.MemCacheD.rc.d.sh ; }
+time { bash i050.9.5.2.python-memcached-1.62.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i050.9.5.4.MemCacheD.rc.d"
+echo "i050.9.5.4.MemCacheD.rc.d" >> $OSLOG_PROCESS
+
+time { bash i050.9.5.4.MemCacheD.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

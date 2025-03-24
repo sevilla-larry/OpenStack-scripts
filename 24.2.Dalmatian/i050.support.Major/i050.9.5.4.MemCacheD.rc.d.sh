@@ -1,6 +1,6 @@
-# i040.9.5.4.MemCacheD.rc.d.sh
+# i050.9.5.4.MemCacheD.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/040.5.3
+export PKGLOG_DIR=$OSLOG/050.5.3
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,7 +16,7 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i040.9.5.3.MemCacheD.init.d.sh
+INITDFILESRC=$CURRDIR/i050.9.5.3.MemCacheD.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/memcached
 INITDFILEREL=../init.d/memcached
 

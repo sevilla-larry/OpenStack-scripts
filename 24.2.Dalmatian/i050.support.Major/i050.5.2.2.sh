@@ -1,4 +1,4 @@
-# i040.5.2.2.sh
+# i050.5.2.2.sh
 #
 # Build PyMySQL
 #
@@ -12,10 +12,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i040.9.2.2.PyMySQL-1.1.1"
-echo "i040.9.2.2.PyMySQL-1.1.1" >> $OSLOG_PROCESS
+echo "i050.9.2.2.PyMySQL-1.1.1"
+echo "i050.9.2.2.PyMySQL-1.1.1" >> $OSLOG_PROCESS
 
-time { bash i040.9.2.2.PyMySQL-1.1.1.sh ; }
+time { bash i050.9.2.2.PyMySQL-1.1.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

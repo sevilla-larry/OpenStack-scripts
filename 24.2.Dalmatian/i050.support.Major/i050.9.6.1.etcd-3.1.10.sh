@@ -1,4 +1,4 @@
-# i040.9.6.etcd-3.1.10.sh (binary Install)
+# i050.9.6.etcd-3.1.10.sh (binary Install)
 #
 # https://docs.openstack.org/install-guide/environment-etcd.html
 #
@@ -7,13 +7,13 @@
 
 export PKG="etcd-v3.1.11-linux-amd64"
 export PKGDEST="/usr/local"
-export PKGLOG_DIR=$OSLOG/040.6
+export PKGLOG_DIR=$OSLOG/050.6.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export OSLOG_PROCESS=$OSLOG/process.log
-export CONFYMLFILE1=`pwd`/i040.9.6.2.etcd.conf.yml
+export CONFYMLFILE1=`pwd`/i050.9.6.2.etcd.conf.yml
 export CONFYMLFILE2=/etc/etcd.conf.yml
 
 rm -r $PKGLOG_DIR 2> /dev/null

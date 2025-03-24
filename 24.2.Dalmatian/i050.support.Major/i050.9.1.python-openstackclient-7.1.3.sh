@@ -1,14 +1,24 @@
-# i040.9.2.2.PyMySQL-1.1.1.sh
+# i050.9.1.python-openstackclient-7.1.3.sh
 #
 
 #
-# Dependencies Required:
+# Dependecies Required:
 #
-#               ... MariaDB
+#               i020.9.01 pbr-6.1.0
+#               i010.9.03 cryptography-41.0.7
+#               i040.9.01 cliff-4.7.0
+#               i010.9.09 iso8601-2.1.0
+#               i040.9.02 openstacksdk-4.0.1
+#               i040.9.03 osc-lib-3.1.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i040.9.11 python-keystoneclient-5.5.0
+#               i040.9.12 python-cinderclient-9.6.0
+#               b30.13.23.30 Requests-2.32.3
+#               i020.9.02 stevedore-5.3.0
 #
 
-export PKG="pymysql-1.1.1"
-export PKGLOG_DIR=$OSLOG/040.2
+export PKG="python-openstackclient-7.1.3"
+export PKGLOG_DIR=$OSLOG/050.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +53,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                pymysql                 \
+                python_openstackclient  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

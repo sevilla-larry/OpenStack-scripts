@@ -1,8 +1,14 @@
-# i040.9.5.2.python-memcached-1.62.sh
+# i050.9.2.2.PyMySQL-1.1.1.sh
 #
 
-export PKG="python-memcached-1.62"
-export PKGLOG_DIR=$OSLOG/040.5.2
+#
+# Dependencies Required:
+#
+#               ... MariaDB
+#
+
+export PKG="pymysql-1.1.1"
+export PKGLOG_DIR=$OSLOG/050.2
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -37,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python-memcached        \
+                pymysql                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
