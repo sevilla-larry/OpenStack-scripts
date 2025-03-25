@@ -1,44 +1,44 @@
 # Python Openstack Oslo Apps - Part 2
 
 
-# 03 oslo.cache-3.8.0
+# 01 oslo.cache-3.8.0
 a89596207dac25dadc0f9df6c7b3970c oslo.cache-3.8.0.tar.gz
 
-# 04 oslo.concurrency-6.1.0
+# 02 oslo.concurrency-6.1.0
 edfdf16c0feb012e243ce082291e8e8e oslo.concurrency-6.1.0.tar.gz
 
-# 05 oslo.service-3.5.0
+# 03 oslo.service-3.5.0
 0353631e9fbf97528811fb8cae94b3aa oslo.service-3.5.0.tar.gz
 
-# 06 oslo.middleware-6.2.0
+# 04 oslo.middleware-6.2.0
 8bafecafcfb8fae058f1e732611c4f3f oslo.middleware-6.2.0.tar.gz
 
-# 07 oslo.metrics-0.9.0
+# 05 oslo.metrics-0.9.0
 92ed67cda1ea8b000781d7c2285b4840 oslo.metrics-0.9.0.tar.gz
 
-# 08 oslo.messaging-14.9.1
+# 06 oslo.messaging-14.9.1
 d272ab9e36d502addf7cd98e207c18a2 oslo.messaging-14.9.1.tar.gz
 
-# 09 oslo.db-16.0.0
+# 07 oslo.db-16.0.0
 2b1cd7d1e2fb2503379eeafccdecbf12 oslo.db-16.0.0.tar.gz
 
-# 10 oslo.policy-4.4.0
+# 08 oslo.policy-4.4.0
 7e15587f773e8a632362886e036adf5d oslo.policy-4.4.0.tar.gz
 
-# 11 oslo.upgradecheck-2.4.0
+# 09 oslo.upgradecheck-2.4.0
 8bce58a385b16626fbdcba30852495e8 oslo.upgradecheck-2.4.0.tar.gz
 
-# 12 oslo.limit-2.5.0
+# 10 oslo.limit-2.5.0
 32fe84e8dfd646d49e03f2873fafd616 oslo.limit-2.5.0.tar.gz
 
-# 13 oslo.reports-3.4.0
+# 11 oslo.reports-3.4.0
 c9fd64620d1952de85dc7848f634ab36 oslo.reports-3.4.0.tar.gz
 
-# 14 oslo.rootwrap-7.3.0
+# 12 oslo.rootwrap-7.3.0
 cd8fddc762736c05a4d580e310ecc42a oslo.rootwrap-7.3.0.tar.gz
 
-# 15 oslo.privsep-3.4.0
+# 13 oslo.privsep-3.4.0
 d2a818392a4b1edec2aba0175d492675 oslo.privsep-3.4.0.tar.gz
 
-# 16 oslo.versionedobjects-3.4.0
+# 14 oslo.versionedobjects-3.4.0
 f6500468a5d99bf7ba4e9292a463a5ec oslo.versionedobjects-3.4.0.tar.gz

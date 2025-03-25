@@ -12,7 +12,7 @@
 #
 # Required by:
 #
-#               i030.9.01 cliff-4.7.0
+#               i040.9.01 cliff-4.7.0
 #
 
 export PKG="cmd2-2.4.3"

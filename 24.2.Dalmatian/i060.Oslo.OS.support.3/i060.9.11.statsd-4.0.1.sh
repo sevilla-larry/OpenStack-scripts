@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i080.9.06 oslo.middleware-6.2.0
+#               i080.9.04 oslo.middleware-6.2.0
 #
 
 export PKG="statsd-4.0.1"

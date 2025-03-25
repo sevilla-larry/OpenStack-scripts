@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i080.9.07 oslo.metrics-0.9.0
+#               i080.9.05 oslo.metrics-0.9.0
 #
 
 export PKG="prometheus_client-0.20.0"

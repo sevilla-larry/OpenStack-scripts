@@ -4,8 +4,9 @@
 #
 # Required by:
 #
-#               i080.9.05 oslo.service-3.5.0
+#               i080.9.03 oslo.service-3.5.0
 #               i060.9.05 eventlet-0.36.1
+#               i080.9.13 oslo.privsep-3.4.0
 #
 
 export PKG="greenlet-3.0.3"

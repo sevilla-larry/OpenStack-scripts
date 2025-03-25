@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i090.9.02 keystonemiddleware-10.7.1
+#               i090.9.?? keystonemiddleware-10.7.1
 #
 
 export PKG="pyjwt-2.9.0"

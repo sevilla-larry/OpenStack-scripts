@@ -12,7 +12,8 @@
 # Required by:
 #
 #               i040.9.02 openstacksdk-4.0.1
-#               i151.3    KeyStone-26.0.0
+#               i080.9.01 oslo.cache-3.8.0
+#               i151.9.3  KeyStone-26.0.0
 #
 
 export PKG="dogpile.cache-1.3.3"

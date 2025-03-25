@@ -4,9 +4,9 @@
 #
 # Required by:
 #
-#               i025.9.02 oslo.utils-7.3.0
-#               i025.9.04 oslo.serialization-5.5.0
-#               i050.9.18 kombu-5.4.2
+#               i030.9.02 oslo.utils-7.3.0
+#               i030.9.04 oslo.serialization-5.5.0
+#               i060.9.16 kombu-5.4.2
 #
 
 export PKG="tzdata-2024.2"

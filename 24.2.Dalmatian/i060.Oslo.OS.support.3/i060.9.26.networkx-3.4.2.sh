@@ -1,31 +1,14 @@
-# i060.9.09.oslo.db-16.0.0.sh
-#
-
-#
-# Dependencies Required:
-#
-#               ?i010.9.01 pbr-6.1.0
-#               i050.9.22 alembic-1.13.3
-#               ?i010.9.34 debtcollector-3.0.0
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               ?i010.9.45 oslo.config-9.6.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               i050.9.21 sqlalchemy-2.0.37
-#               ?i010.9.10 stevedore-5.3.0
-#               # these are used by downstream libraries that require
-#               # oslo.db as one of their test requirements - do not remove!
-#               i050.9.23 testresources-2.0.1
-#               i050.9.25 testscenarios-0.5.0
+# i060.9.26.networkx-3.4.2.sh
 #
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i090.9.?? taskflow-5.9.1
 #
 
-export PKG="oslo.db-16.0.0"
-export PKGLOG_DIR=$OSLOG/060.09
+export PKG="networkx-3.4.2"
+export PKGLOG_DIR=$OSLOG/060.26
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -60,13 +43,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.db                 \
+                networkx                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

@@ -4,9 +4,9 @@
 #
 # Required by:
 #
-#               i030.9.02 openstacksdk-4.0.1
-#               i025.9.02 oslo.utils-7.3.0
-#               i111.3    Nova-30.0.0
+#               i040.9.02 openstacksdk-4.0.1
+#               i030.9.02 oslo.utils-7.3.0
+#               i111.9.3  Nova-30.0.0
 #
 
 export PKG="netifaces-0.11.0"

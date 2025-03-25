@@ -4,8 +4,8 @@
 #
 # Required by:
 #
-#               i025.9.03 oslo.config-9.6.0
-#               i111.3    Nova-30.0.0
+#               i030.9.03 oslo.config-9.6.0
+#               i111.9.3  Nova-30.0.0
 #
 
 export PKG="rfc3986-2.0.0"

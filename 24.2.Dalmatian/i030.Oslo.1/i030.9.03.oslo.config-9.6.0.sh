@@ -17,6 +17,19 @@
 # Required by:
 #
 #               i040.9.11 python-keystoneclient-5.5.0
+#               i080.9.01 oslo.cache-3.8.0
+#               i080.9.02 oslo.concurrency-6.1.0
+#               i080.9.03 oslo.service-3.5.0
+#               i080.9.04 oslo.middleware-6.2.0
+#               i080.9.05 oslo.metrics-0.9.0
+#               i080.9.06 oslo.messaging-14.9.1
+#               i080.9.07 oslo.db-16.0.0
+#               i080.9.08 oslo.policy-4.4.0
+#               i080.9.09 oslo.upgradecheck-2.4.0
+#               i080.9.10 oslo.limit-2.5.0
+#               i080.9.11 oslo.reports-3.4.0
+#               i080.9.13 oslo.privsep-3.4.0
+#               i080.9.14 oslo.versionedobjects-3.4.0
 #
 
 export PKG="oslo.config-9.6.0"

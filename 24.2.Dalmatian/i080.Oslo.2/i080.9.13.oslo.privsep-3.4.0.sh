@@ -1,32 +1,27 @@
-# i060.9.05.oslo.service-3.5.0.sh
+# i080.9.13.oslo.privsep-3.4.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i050.9.03 WebOb-1.8.7
-#               ?i010.9.34 debtcollector-3.0.0
-#               i050.9.06 eventlet-0.36.1
-#               i050.9.05 greenlet-3.0.3
-#               ?i010.9.39 oslo.utils-7.3.0
-#               i060.9.04 oslo.concurrency-6.1.0
-#               ?i010.9.45 oslo.config-9.6.0
-#               i060.9.02 oslo.log-6.1.2
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               i050.9.07 PasteDeploy-3.1.0
-#               i050.9.09 Routes-2.5.1
-#               i050.9.10 paste-3.10.1
-#               i050.9.11 yappi-1.6.0
+#               i030.9.06 oslo.log-6.1.2
+#               i030.9.01 oslo.i18n-6.4.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i010.9.02 cffi-1.16.0
+#               i060.9.05 eventlet-0.36.1
+#               i060.9.04 greenlet-3.0.3
+#               b30.13.24.17 Msgpack-1.0.8
 #
 
 #
 # Required by:
 #
-#               i060.9.08 oslo.messaging
+#               i111.9.3  Nova-30.0.0
 #
 
-export PKG="oslo.service-3.5.0"
-export PKGLOG_DIR=$OSLOG/060.05
+export PKG="oslo.privsep-3.4.0"
+export PKGLOG_DIR=$OSLOG/080.13
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -61,7 +56,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.service            \
+                oslo.privsep            \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

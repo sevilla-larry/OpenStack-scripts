@@ -11,7 +11,7 @@
 #
 # Required by:
 #
-#               i080.9.09 oslo.db-16.0.0
+#               i080.9.07 oslo.db-16.0.0
 #
 
 export PKG="testscenarios-0.5.0"

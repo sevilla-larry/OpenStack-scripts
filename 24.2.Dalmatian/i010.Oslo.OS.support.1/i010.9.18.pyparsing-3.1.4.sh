@@ -4,8 +4,8 @@
 #
 # Required by:
 #
-#               i025.9.02 oslo.utils-7.3.0
-#               i050.9.34 pydot-3.0.4
+#               i030.9.02 oslo.utils-7.3.0
+#               i0?0.9.?? pydot-3.0.4
 #
 
 export PKG="pyparsing-3.1.4"

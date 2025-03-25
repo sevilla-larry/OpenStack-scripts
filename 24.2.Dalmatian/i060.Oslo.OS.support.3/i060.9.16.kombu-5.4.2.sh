@@ -12,7 +12,7 @@
 #
 # Required by:
 #
-#               i080.9.08 oslo.messaging-14.9.1
+#               i080.9.06 oslo.messaging-14.9.1
 #
 
 export PKG="kombu-5.4.2"

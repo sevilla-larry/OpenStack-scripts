@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i030.9.02 openstacksdk-4.0.1
+#               i040.9.02 openstacksdk-4.0.1
 #
 
 export PKG="platformdirs-4.3.6"

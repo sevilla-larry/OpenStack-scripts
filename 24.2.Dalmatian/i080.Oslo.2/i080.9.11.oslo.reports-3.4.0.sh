@@ -1,24 +1,26 @@
-# i060.9.11.oslo.upgradecheck-2.4.0.sh
+# i080.9.11.oslo.reports-3.4.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.45 oslo.config-9.6.0
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               ?i010.9.09 prettytable-3.11.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               i060.9.10 oslo.policy-4.4.0
+#               i020.9.01 pbr-6.1.0
+#               a.08.75   Jinja2-3.1.4
+#               i030.9.04 oslo.serialization-5.5.0
+#               b30.13.23.17 psutil-6.0.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i030.9.03 oslo.config-9.6.0
 #
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i153.8 Glance-29.0.0
 #
 
-export PKG="oslo.upgradecheck-2.4.0"
-export PKGLOG_DIR=$OSLOG/060.11
+export PKG="oslo.reports-3.4.0"
+export PKGLOG_DIR=$OSLOG/080.11
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -53,7 +55,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.upgradecheck       \
+                oslo.reports            \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

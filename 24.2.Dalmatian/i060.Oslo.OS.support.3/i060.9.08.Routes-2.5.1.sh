@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i080.9.05 oslo.service-3.5.0
+#               i080.9.03 oslo.service-3.5.0
 #
 
 export PKG="Routes-2.5.1"

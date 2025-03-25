@@ -18,6 +18,10 @@
 #               i040.9.11 python-keystoneclient-5.5.0
 #               i040.9.12 python-cinderclient-9.6.0
 #               i050.9.1  python-openstackclient-7.1.3
+#               i080.9.04 oslo.middleware-6.2.0
+#               i080.9.06 oslo.messaging-14.9.1
+#               i080.9.07 oslo.db-16.0.0
+#               i080.9.08 oslo.policy-4.4.0
 #
 
 export PKG="stevedore-5.3.0"

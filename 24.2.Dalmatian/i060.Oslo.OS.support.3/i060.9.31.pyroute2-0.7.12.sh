@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i090.9.18 os_vif-3.7.0
+#               i090.9.?? os_vif-3.7.0
 #
 
 export PKG="pyroute2-0.7.12"

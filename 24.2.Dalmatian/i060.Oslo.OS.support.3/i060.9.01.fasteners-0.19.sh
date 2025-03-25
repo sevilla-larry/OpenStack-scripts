@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i080.9.04 oslo.concurrency-6.1.0
+#               i080.9.02 oslo.concurrency-6.1.0
 #
 
 export PKG="fasteners-0.19"

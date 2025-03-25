@@ -1,14 +1,14 @@
-# i060.9.14.oslo.rootwrap-7.3.0.sh
+# i080.9.12.oslo.rootwrap-7.3.0.sh
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i111.9.3 Nova-30.0.0
 #
 
 export PKG="oslo.rootwrap-7.3.0"
-export PKGLOG_DIR=$OSLOG/060.14
+export PKGLOG_DIR=$OSLOG/080.12
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

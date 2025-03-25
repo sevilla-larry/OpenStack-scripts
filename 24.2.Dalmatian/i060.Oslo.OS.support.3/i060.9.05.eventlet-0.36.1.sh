@@ -11,7 +11,8 @@
 #
 # Required by:
 #
-#               i080.9.05 oslo.service-3.5.0
+#               i080.9.03 oslo.service-3.5.0
+#               i080.9.13 oslo.privsep-3.4.0
 #
 
 export PKG="eventlet-0.36.1"

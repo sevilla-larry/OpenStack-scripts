@@ -21,6 +21,7 @@
 #               i040.9.13 python-glanceclient-4.7.0
 #               i040.9.14 python-barbicanclient-7.0.0
 #               i040.9.15 python-neutronclient-11.3.1
+#               i080.9.10 oslo.limit-2.5.0
 #
 
 export PKG="keystoneauth1-5.8.0"

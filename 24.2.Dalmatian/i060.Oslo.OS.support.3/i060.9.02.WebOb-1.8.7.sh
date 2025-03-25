@@ -4,7 +4,10 @@
 #
 # Required by:
 #
-#               i080.9.05 oslo.service-3.5.0
+#               i080.9.03 oslo.service-3.5.0
+#               i080.9.04 oslo.middleware-6.2.0
+#               i080.9.06 oslo.messaging-14.9.1
+#               i080.9.14 oslo.versionedobjects-3.4.0
 #
 
 export PKG="WebOb-1.8.7"

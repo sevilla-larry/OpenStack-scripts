@@ -1,27 +1,24 @@
-# i060.9.10.oslo.policy-4.4.0.sh
+# i080.9.02.oslo.concurrency-6.1.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               b30.13.23.30 Requests-2.32.3
-#               ?i010.9.45 oslo.config-9.6.0
-#               i060.9.01 oslo.context-5.6.0
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               ?i010.9.50 oslo.serialization-5.5.0
-#               b30.13.23.28 PyYAML-6.0.2
-#               ?i010.9.10 stevedore-5.3.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#
+#               i020.9.01 pbr-6.1.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i060.9.01 fasteners-0.19
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i080.9.03 oslo.service-3.5.0
+#               i080.9.14 oslo.versionedobjects-3.4.0
 #
 
-export PKG="oslo.policy-4.4.0"
-export PKGLOG_DIR=$OSLOG/060.10
+export PKG="oslo.concurrency-6.1.0"
+export PKGLOG_DIR=$OSLOG/080.02
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -56,7 +53,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.policy             \
+                oslo.concurrency        \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

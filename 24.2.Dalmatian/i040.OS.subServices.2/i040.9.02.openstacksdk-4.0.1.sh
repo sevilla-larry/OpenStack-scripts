@@ -25,6 +25,7 @@
 #               i040.9.03 osc-lib-3.1.0.sh
 #               i040.9.15 python-neutronclient-11.3.1
 #               i050.9.1  python-openstackclient-7.1.3
+#               i080.9.10 oslo.limit-2.5.0
 #
 
 export PKG="openstacksdk-4.0.1"

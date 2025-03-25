@@ -1,30 +1,30 @@
-# i060.9.16.oslo.versionedobjects-3.4.0.sh
+# i080.9.14.oslo.versionedobjects-3.4.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i060.9.04 oslo.concurrency-6.1.0
-#               ?i010.9.45 oslo.config-9.6.0
-#               i060.9.01 oslo.context-5.6.0
-#               i060.9.08 oslo.messaging-14.9.1
-#               ?i010.9.50 oslo.serialization-5.5.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               ?i010.9.12 iso8601-2.1.0
-#               i060.9.02 oslo.log-6.1.2
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               i050.9.03 WebOb-1.8.7
-#               ?i010.9.32 netaddr-1.3.0
+#               i080.9.02 oslo.concurrency-6.1.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.05 oslo.context-5.6.0
+#               i080.9.06 oslo.messaging-14.9.1
+#               i030.9.04 oslo.serialization-5.5.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i010.9.09 iso8601-2.1.0
+#               i030.9.06 oslo.log-6.1.2
+#               i030.9.01 oslo.i18n-6.4.0
+#               i060.9.02 WebOb-1.8.7
+#               i010.9.16 netaddr-1.3.0
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i111.9.3  Nova-30.0.0
 #
 
 export PKG="oslo.versionedobjects-3.4.0"
-export PKGLOG_DIR=$OSLOG/060.16
+export PKGLOG_DIR=$OSLOG/080.14
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

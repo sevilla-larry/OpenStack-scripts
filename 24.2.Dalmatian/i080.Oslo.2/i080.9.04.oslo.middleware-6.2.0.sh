@@ -1,14 +1,29 @@
-# i060.9.26.networkx-3.4.2.sh
+# i080.9.04.oslo.middleware-6.2.0.sh
 #
+
+#
+# Dependencies Required:
+#
+#               i020.9.01 pbr-6.1.0
+#               a.08.75   Jinja2-3.1.4
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.05 oslo.context-5.6.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i020.9.02 stevedore-5.3.0
+#               i060.9.02 WebOb-1.8.7
+#               i020.9.06 debtcollector-3.0.0
+#               i060.9.11 statsd-4.0.1
+#               i060.9.12 bcrypt-4.2.0
 
 #
 # Required by:
 #
-#               i090.9.05 taskflow-5.9.1
+#               i080.9.06 oslo.messaging
 #
 
-export PKG="networkx-3.4.2"
-export PKGLOG_DIR=$OSLOG/060.26
+export PKG="oslo.middleware-6.2.0"
+export PKGLOG_DIR=$OSLOG/080.04
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,13 +58,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                networkx                \
+                oslo.middleware         \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

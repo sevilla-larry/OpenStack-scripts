@@ -7,8 +7,8 @@
 #
 # Required by:
 #
-#               i080.9.06 oslo.middleware-6.2.0
-#               i151.3    KeyStone-26.0.0
+#               i080.9.04 oslo.middleware-6.2.0
+#               i151.9.3  KeyStone-26.0.0
 #
 
 export PKG="bcrypt-4.1.3-cp39-abi3-manylinux_2_28_x86_64.whl"

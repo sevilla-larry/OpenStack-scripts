@@ -4,9 +4,9 @@
 #
 # Required by:
 #
-#               i020.9.01 dogpile.cache-1.3.3
-#               i030.9.02 openstacksdk-4.0.1
-#               i111.3    Nova-30.0.0
+#               i025.9.01 dogpile.cache-1.3.3
+#               i040.9.02 openstacksdk-4.0.1
+#               i111.9.3  Nova-30.0.0
 #
 
 export PKG="decorator-5.1.1"

@@ -11,6 +11,7 @@
 # Required by:
 #
 #               i010.9.03 cryptography-42.0.8
+#               i080.9.13 oslo.privsep-3.4.0
 #
 
 export PKG="cffi-1.16.0"

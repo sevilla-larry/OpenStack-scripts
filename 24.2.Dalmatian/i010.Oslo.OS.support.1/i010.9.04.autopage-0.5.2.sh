@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i030.9.01 cliff-4.7.0
+#               i040.9.01 cliff-4.7.0
 #
 
 export PKG="autopage-0.5.2"

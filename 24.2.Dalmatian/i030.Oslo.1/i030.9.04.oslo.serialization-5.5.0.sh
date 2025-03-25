@@ -16,6 +16,10 @@
 #               i040.9.11 python-keystoneclient-5.5.0
 #               i040.9.14 python-barbicanclient-7.0.0
 #               i040.9.15 python-neutronclient-11.3.1
+#               i080.9.06 oslo.messaging-14.9.1
+#               i080.9.08 oslo.policy-4.4.0
+#               i080.9.11 oslo.reports-3.4.0
+#               i080.9.14 oslo.versionedobjects-3.4.0
 #
 
 export PKG="oslo.serialization-5.5.0"
