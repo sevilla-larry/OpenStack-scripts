@@ -1,0 +1,5 @@
+# Python OpenStack Oslo support Apps - 4
+
+
+# 01 cursive-0.2.3
+c90171b9c3e124169d97b5c6026ba66c cursive-0.2.3.tar.gz

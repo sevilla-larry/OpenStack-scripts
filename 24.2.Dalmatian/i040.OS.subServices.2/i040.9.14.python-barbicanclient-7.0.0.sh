@@ -11,6 +11,7 @@
 #               i030.9.01 oslo.i18n-6.4.0
 #               i030.9.04 oslo.serialization-5.5.0
 #               i030.9.02 oslo.utils-7.3.0
+#               i070.9.02 castellan-5.1.1
 #
 
 #

@@ -1,5 +1,8 @@
-# Python OpenStack sub-Services Apps - 2
+# Python OpenStack sub-Services Apps - 3
 
 
 # 01 futurist-3.0.0
 https://tarballs.opendev.org/openstack/futurist/futurist-3.0.0.tar.gz
+
+# 02 castellan-5.1.1
+https://tarballs.opendev.org/openstack/castellan/castellan-5.1.1.tar.gz

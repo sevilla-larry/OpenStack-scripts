@@ -31,6 +31,8 @@
 #               i080.9.11 oslo.reports-3.4.0
 #               i080.9.13 oslo.privsep-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
+#               i070.9.02 castellan-5.1.1
+#               i075.9.01 cursive-0.2.3
 #
 
 export PKG="oslo.i18n-6.4.0"

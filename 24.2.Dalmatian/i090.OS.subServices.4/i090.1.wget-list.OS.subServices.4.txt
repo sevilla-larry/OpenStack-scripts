@@ -1,4 +1,4 @@
-# Python OpenStack sub-Services Apps - 3
+# Python OpenStack sub-Services Apps - 4
 
 
 # 01 pycadf-3.1.1
@@ -18,12 +18,6 @@ https://tarballs.opendev.org/openstack/taskflow/taskflow-5.9.1.tar.gz
 
 # 06 glance_store-4.8.1
 https://tarballs.opendev.org/openstack/glance_store/glance_store-4.8.1.tar.gz
-
-# 08 castellan-5.1.1
-https://tarballs.opendev.org/openstack/castellan/castellan-5.1.1.tar.gz
-
-# 09 cursive-0.2.3  (openstack app, but not in tarballs site)
-https://files.pythonhosted.org/packages/fc/3d/dd3b74dab4240ca2eeb291a643e0a8780fe5a83f5d3efeb358b5bc8d2a17/cursive-0.2.3.tar.gz
 
 # 10 os-win-5.9.0
 https://tarballs.opendev.org/openstack/os-win/os-win-5.9.0.tar.gz

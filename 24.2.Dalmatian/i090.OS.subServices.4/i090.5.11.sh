@@ -96,34 +96,6 @@ echo "."
 
 ###
 
-echo "i070.9.08.castellan-5.1.1"
-echo "i070.9.08.castellan-5.1.1" >> $OSLOG_PROCESS
-
-time { bash i070.9.08.castellan-5.1.1.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i070.9.09.cursive-0.2.3"
-echo "i070.9.09.cursive-0.2.3" >> $OSLOG_PROCESS
-
-time { bash i070.9.09.cursive-0.2.3.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
 echo "i070.9.10.os-win-5.9.0"
 echo "i070.9.10.os-win-5.9.0" >> $OSLOG_PROCESS
 

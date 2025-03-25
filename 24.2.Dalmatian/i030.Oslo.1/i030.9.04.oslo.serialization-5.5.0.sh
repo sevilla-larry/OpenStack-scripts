@@ -20,6 +20,7 @@
 #               i080.9.08 oslo.policy-4.4.0
 #               i080.9.11 oslo.reports-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
+#               i075.9.01 cursive-0.2.3
 #
 
 export PKG="oslo.serialization-5.5.0"

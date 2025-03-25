@@ -16,6 +16,7 @@
 #               i080.9.06 oslo.messaging-14.9.1
 #               i080.9.08 oslo.policy-4.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
+#               i070.9.02 castellan-5.1.1
 #
 
 export PKG="oslo.context-5.6.0"

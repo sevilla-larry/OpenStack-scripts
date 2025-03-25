@@ -1,4 +1,4 @@
-# Python OpenStack sub-Services Apps - 3
+# Python OpenStack sub-Services Apps - 4
 
 
 # 01 pycadf-3.1.1
@@ -18,12 +18,6 @@ dff4ce67805e3b601439919d995f03e0 automaton-3.2.0.tar.gz
 
 # 06 glance_store-4.8.1
 20d76ed3dd05a8465f1f6031ac74903c glance_store-4.8.1.tar.gz
-
-# 08 castellan-5.1.1
-ae6153d14e84ce781c78f73d15ef71f6 castellan-5.1.1.tar.gz
-
-# 09 cursive-0.2.3
-c90171b9c3e124169d97b5c6026ba66c cursive-0.2.3.tar.gz
 
 # 10 os-win-5.9.0
 fad432cf40fef0f7d0c396f6df1994a8 os-win-5.9.0.tar.gz

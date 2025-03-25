@@ -18,8 +18,8 @@
 #               i010.9.26 pyOpenSSL-23.3.0
 #               i0?0.9.?? pysaml2-7.5.0
 #               i151.9.3  KeyStone-26.0.0
-#               i0?0.9.?? castellan-5.1.1
-#               i0?0.9.?? cursive-0.2.3
+#               i070.9.02 castellan-5.1.1
+#               i075.9.01 cursive-0.2.3
 #               i153.9.3  Glance-29.0.0
 #               i0?0.9.?? jwcrypto-1.5.6
 #               i0?0.9.?? paramiko-3.5.1

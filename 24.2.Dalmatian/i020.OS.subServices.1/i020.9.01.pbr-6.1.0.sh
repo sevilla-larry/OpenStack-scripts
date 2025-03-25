@@ -27,6 +27,8 @@
 #               i080.9.06 oslo.messaging-14.9.1
 #               i080.9.07 oslo.db-16.0.0
 #               i080.9.11 oslo.reports-3.4.0
+#               i070.9.02 castellan-5.1.1
+#               i075.9.01 cursive-0.2.3
 #               i090.9.02 keystonemiddleware-10.7.1 
 #               i151.3    KeyStone-26.0.0
 
