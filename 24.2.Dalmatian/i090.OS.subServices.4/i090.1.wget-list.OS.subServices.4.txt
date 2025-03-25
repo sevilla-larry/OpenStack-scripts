@@ -19,26 +19,26 @@ https://tarballs.opendev.org/openstack/taskflow/taskflow-5.9.1.tar.gz
 # 06 glance_store-4.8.1
 https://tarballs.opendev.org/openstack/glance_store/glance_store-4.8.1.tar.gz
 
-# 10 os-win-5.9.0
+# 07 os-win-5.9.0
 https://tarballs.opendev.org/openstack/os-win/os-win-5.9.0.tar.gz
 
-# 11 os-resource-classes-1.1.0
+# 08 os-resource-classes-1.1.0
 https://tarballs.opendev.org/openstack/os-resource-classes/os-resource-classes-1.1.0.tar.gz
 
-# 12 os-traits-3.1.0
+# 09 os-traits-3.1.0
 https://tarballs.opendev.org/openstack/os-traits/os-traits-3.1.0.tar.gz
 
-# 13 microversion_parse-2.0.0
+# 10 microversion_parse-2.0.0
 https://tarballs.opendev.org/openstack/microversion-parse/microversion_parse-2.0.0.tar.gz
 
-# 16 os_brick-6.9.1
+# 11 os_brick-6.9.1
 https://tarballs.opendev.org/openstack/os-brick/os_brick-6.9.1.tar.gz
 
-# 17 ovsdbapp-2.8.0
+# 12 ovsdbapp-2.8.0
 https://tarballs.opendev.org/openstack/ovsdbapp/ovsdbapp-2.8.0.tar.gz
 
-# 18 os_vif-3.7.0
+# 13 os_vif-3.7.0
 https://tarballs.opendev.org/openstack/os-vif/os_vif-3.7.0.tar.gz
 
-# 19 tooz-6.3.0
+# 14 tooz-6.3.0
 https://tarballs.opendev.org/openstack/tooz/tooz-6.3.0.tar.gz

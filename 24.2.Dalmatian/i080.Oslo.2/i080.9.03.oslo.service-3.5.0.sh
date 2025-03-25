@@ -23,6 +23,7 @@
 # Required by:
 #
 #               i080.9.06 oslo.messaging-14.9.1
+#               i090.9.11 os_brick-6.9.1
 #
 
 export PKG="oslo.service-3.5.0"

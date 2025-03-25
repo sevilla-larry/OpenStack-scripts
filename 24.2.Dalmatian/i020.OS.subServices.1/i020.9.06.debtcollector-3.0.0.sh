@@ -18,6 +18,8 @@
 #               i080.9.04 oslo.middleware-6.2.0
 #               i080.9.06 oslo.messaging-14.9.1
 #               i080.9.07 oslo.db-16.0.0
+#               i090.9.01 pycadf-3.1.1
+#               i090.9.13 os_vif-3.7.0
 #
 
 export PKG="debtcollector-3.0.0"

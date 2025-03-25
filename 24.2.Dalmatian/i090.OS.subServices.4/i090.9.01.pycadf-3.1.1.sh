@@ -1,25 +1,25 @@
-# i070.9.01.pycadf-3.1.1.sh
+# i090.9.01.pycadf-3.1.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.45 oslo.config-9.6.0
-#               ?i010.9.50 oslo.serialization-5.5.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.04 oslo.serialization-5.5.0
 #               b30.13.24.21 Pytz-2024.1
 #               b30.13.23.33 six-1.16.0
-#               ?i010.9.34 debtcollector-3.0.0
+#               i020.9.06 debtcollector-3.0.0
 #
 
 #
 # Required by:
 #
-#               i070.9.02 keystonemiddleware-10.7.1
-#               i151.8 KeyStone-26.0.0
+#               i090.9.02 keystonemiddleware-10.7.1
+#               i151.9.3  KeyStone-26.0.0
 #
 
 export PKG="pycadf-3.1.1"
-export PKGLOG_DIR=$OSLOG/070.01
+export PKGLOG_DIR=$OSLOG/090.01
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

@@ -23,6 +23,10 @@
 #               i080.9.07 oslo.db-16.0.0
 #               i080.9.08 oslo.policy-4.4.0
 #               i070.9.02 castellan-5.1.1
+#               i090.9.05 taskflow-5.9.1
+#               i090.9.06 glance_store-4.8.1
+#               i090.9.13 os_vif-3.7.0
+#               i090.9.14 tooz-6.3.0
 #
 
 export PKG="stevedore-5.3.0"

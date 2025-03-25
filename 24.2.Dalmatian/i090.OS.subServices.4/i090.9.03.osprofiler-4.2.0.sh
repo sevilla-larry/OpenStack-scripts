@@ -1,27 +1,27 @@
-# i070.9.03.osprofiler-4.2.0.sh
+# i090.9.03.osprofiler-4.2.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.32 netaddr-1.3.0
-#               i060.9.04 oslo.concurrency-6.1.0
-#               ?i010.9.45 oslo.config-9.6.0
-#               ?i010.9.50 oslo.serialization-5.5.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               ?i010.9.09 prettytable-3.11.0
+#               i010.9.16 netaddr-1.3.0
+#               i080.9.02 oslo.concurrency-6.1.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.04 oslo.serialization-5.5.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i010.9.08 prettytable-3.11.0
 #               b30.13.23.30 Requests-2.32.3
-#               i050.9.03 WebOb-1.8.7
+#               i060.9.02 WebOb-1.8.7
 #
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i151.9.3  KeyStone-26.0.0
 #
 
 export PKG="osprofiler-4.2.0"
-export PKGLOG_DIR=$OSLOG/070.03
+export PKGLOG_DIR=$OSLOG/090.03
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

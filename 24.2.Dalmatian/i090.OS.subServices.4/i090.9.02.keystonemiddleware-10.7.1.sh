@@ -1,23 +1,23 @@
-# i070.9.02.keystonemiddleware-10.7.1.sh
+# i090.9.02.keystonemiddleware-10.7.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.19 keystoneauth1-5.8.0
-#               i060.9.03 oslo.cache-3.8.0
-#               ?i010.9.45 oslo.config-9.6.0
-#               i060.9.01 oslo.context-5.6.0
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               i060.9.02 oslo.log-6.1.2
-#               ?i010.9.50 oslo.serialization-5.5.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               ?i010.9.01 pbr-6.1.0
-#               i070.9.01 pycadf-3.1.1
-#               i050.9.28 PyJWT-2.9.0
-#               ?i010.9.60 python-keystoneclient-5.5.0
+#               i020.9.04 keystoneauth1-5.8.0
+#               i080.9.01 oslo.cache-3.8.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.05 oslo.context-5.6.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i030.9.06 oslo.log-6.1.2
+#               i030.9.04 oslo.serialization-5.5.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i020.9.01 pbr-6.1.0
+#               i090.9.01 pycadf-3.1.1
+#               i060.9.25 PyJWT-2.9.0
+#               i040.9.11 python-keystoneclient-5.5.0
 #               b30.13.23.30 Requests-2.32.3
-#               i050.9.03 WebOb-1.8.7
+#               i060.9.02 WebOb-1.8.7
 #
 
 #
@@ -27,7 +27,7 @@
 #
 
 export PKG="keystonemiddleware-10.7.1"
-export PKGLOG_DIR=$OSLOG/070.02
+export PKGLOG_DIR=$OSLOG/090.02
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

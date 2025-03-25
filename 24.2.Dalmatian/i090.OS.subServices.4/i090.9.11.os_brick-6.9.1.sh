@@ -1,23 +1,33 @@
-# i070.9.17.ovsdbapp-2.8.0.sh
+# i090.9.11.os_brick-6.9.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i050.9.24 fixtures-4.1.0
-#               ?i010.9.32 netaddr-1.3.0
-#               i050.9.36 ovs-3.3.4
-#               ?i010.9.01 pbr-6.1.0
+#               i020.9.01 pbr-6.1.0
+#               i080.9.02 oslo.concurrency-6.1.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.05 oslo.context-5.6.0
+#               i030.9.06 oslo.log-6.1.2
+#               i030.9.01 oslo.i18n-6.4.0
+#               i080.9.13 oslo.privsep-3.4.0
+#               i030.9.04 oslo.serialization-5.5.0
+#               i080.9.03 oslo.service-3.5.0
+#               i030.9.02 oslo.utils-7.3.0
+#               b30.13.23.30 Requests-2.32.3
+#               i060.9.27 tenacity-9.0.0
+#               i090.9.07 os-win-5.9.0
+#               b30.13.23.17 psutil-6.0.0
 #
 
 #
 # Required by:
 #
-#               i070.9.18 os_vif-3.7.0
+#               i111.9.3  Nova-30.0.0
 #
 
-export PKG="ovsdbapp-2.8.0"
-export PKGLOG_DIR=$OSLOG/070.17
+export PKG="os_brick-6.9.1"
+export PKGLOG_DIR=$OSLOG/090.11
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -52,13 +62,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                ovsdbapp                \
+                os-brick                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

@@ -1,32 +1,20 @@
-# i070.9.18.os_vif-3.7.0.sh
+# i090.9.10.microversion-parse-2.0.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.01 pbr-6.1.0
-#               i060.9.04 oslo.concurrency-6.1.0
-#               ?i010.9.45 oslo.config-9.6.0
-#               i060.9.02 oslo.log-6.1.2
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               i060.9.15 oslo.privsep-3.4.0
-#               ?i010.9.50 oslo.serialization-5.5.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               i060.9.15 oslo.versionedobjects-3.4.0
-#               i070.9.17 ovsdbapp-2.8.0
-#               i050.9.37 pyroute2-0.7.12
-#               ?i010.9.10 stevedore-5.3.0
-#               ?i010.9.34 debtcollector-3.0.0
+#               i060.9.02 WebOb-1.8.7
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i152.9.3  Placement-12.0.0
 #
 
-export PKG="os_vif-3.7.0"
-export PKGLOG_DIR=$OSLOG/070.18
+export PKG="microversion_parse-2.0.0"
+export PKGLOG_DIR=$OSLOG/090.10
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -61,13 +49,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                os-vif                  \
+                microversion-parse      \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

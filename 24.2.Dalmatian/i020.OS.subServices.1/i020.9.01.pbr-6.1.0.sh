@@ -29,7 +29,15 @@
 #               i080.9.11 oslo.reports-3.4.0
 #               i070.9.02 castellan-5.1.1
 #               i075.9.01 cursive-0.2.3
-#               i090.9.02 keystonemiddleware-10.7.1 
+#               i090.9.02 keystonemiddleware-10.7.1
+#               i090.9.04 automaton-3.2.0
+#               i090.9.05 taskflow-5.9.1
+#               i090.9.07 os-win-5.9.0
+#               i090.9.08 os-resource-classes-1.1.0
+#               i090.9.09 os-traits-3.1.0
+#               i090.9.11 os_brick-6.9.1
+#               i090.9.12 ovsdbapp-2.8.0
+#               i090.9.13 os_vif-3.7.0
 #               i151.3    KeyStone-26.0.0
 
 #

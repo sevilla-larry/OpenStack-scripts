@@ -1,20 +1,20 @@
-# i070.9.11.os-resource-classes-1.1.0.sh
+# i090.9.08.os-resource-classes-1.1.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.01 pbr-6.1.0
+#               i020.9.01 pbr-6.1.0
 #
 
 #
 # Required by:
 #
-#               i152.8 Placement-12.0.0
+#               i152.9.3  Placement-12.0.0
 #
 
 export PKG="os-resource-classes-1.1.0"
-export PKGLOG_DIR=$OSLOG/070.11
+export PKGLOG_DIR=$OSLOG/090.08
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

@@ -13,6 +13,8 @@
 #
 #               i080.9.03 oslo.service-3.5.0
 #               i080.9.13 oslo.privsep-3.4.0
+#               i090.9.06 glance_store-4.8.1
+#               i090.9.07 os-win-5.9.0
 #
 
 export PKG="eventlet-0.36.1"

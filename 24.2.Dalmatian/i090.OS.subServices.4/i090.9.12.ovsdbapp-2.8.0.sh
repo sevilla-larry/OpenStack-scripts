@@ -1,27 +1,23 @@
-# i070.9.19.tooz-6.3.0.sh
+# i090.9.12.ovsdbapp-2.8.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.10 stevedore-5.3.0
-#               i050.9.38 voluptuous-0.15.2
-#               b30.13.24.17 Msgpack-1.0.8
-#               i050.9.02 fasteners-0.19
-#               i050.9.33 tenacity-9.0.0
-#               i050.9.14 futurist-3.0.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               ?i010.9.50 oslo.serialization-5.5.0
+#               i060.9.22 fixtures-4.1.0
+#               i010.9.16 netaddr-1.3.0
+#               i060.9.30 ovs-3.3.4
+#               i020.9.01 pbr-6.1.0
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i090.9.13 os_vif-3.7.0
 #
 
-export PKG="tooz-6.3.0"
-export PKGLOG_DIR=$OSLOG/070.19
+export PKG="ovsdbapp-2.8.0"
+export PKGLOG_DIR=$OSLOG/090.12
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -56,13 +52,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                tooz                    \
+                ovsdbapp                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

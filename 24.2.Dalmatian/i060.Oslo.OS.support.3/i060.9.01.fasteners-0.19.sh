@@ -5,6 +5,8 @@
 # Required by:
 #
 #               i080.9.02 oslo.concurrency-6.1.0
+#               i090.9.05 taskflow-5.9.1
+#               i090.9.14 tooz-6.3.0
 #
 
 export PKG="fasteners-0.19"

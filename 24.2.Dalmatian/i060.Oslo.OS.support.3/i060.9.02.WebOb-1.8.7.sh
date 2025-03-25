@@ -8,6 +8,9 @@
 #               i080.9.04 oslo.middleware-6.2.0
 #               i080.9.06 oslo.messaging-14.9.1
 #               i080.9.14 oslo.versionedobjects-3.4.0
+#               i090.9.02 keystonemiddleware-10.7.1
+#               i090.9.03 osprofiler-4.2.0
+#               i090.9.10 microversion-parse-2.0.0
 #
 
 export PKG="WebOb-1.8.7"

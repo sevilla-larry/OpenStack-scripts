@@ -5,6 +5,7 @@
 # Required by:
 #
 #               i060.9.23 testtools-2.7.2
+#               i090.9.12 ovsdbapp-2.8.0
 #
 
 export PKG="fixtures-4.1.0"

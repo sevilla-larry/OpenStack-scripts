@@ -23,6 +23,8 @@
 #               i040.9.15 python-neutronclient-11.3.1
 #               i080.9.10 oslo.limit-2.5.0
 #               i070.9.02 castellan-5.1.1
+#               i090.9.02 keystonemiddleware-10.7.1
+#               i090.9.06 glance_store-4.8.1
 #
 
 export PKG="keystoneauth1-5.8.0"

@@ -14,8 +14,8 @@
 #               i040.9.12 python-cinderclient-9.6.0
 #               i040.9.13 python-glanceclient-4.7.0
 #               i080.9.09 oslo.upgradecheck-2.4.0
-#               i0?0.9.?? osprofiler-4.2.0
-#               i0?0.9.?? automaton-3.2.0
+#               i090.9.03 osprofiler-4.2.0
+#               i090.9.04 automaton-3.2.0
 #               i153.9.3  Glance-29.0.0
 #               i111.9.3  Nova-30.0.0
 #

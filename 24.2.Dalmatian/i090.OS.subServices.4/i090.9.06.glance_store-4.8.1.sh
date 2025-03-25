@@ -1,30 +1,30 @@
-# i070.9.06.glance_store-4.8.1.sh
+# i090.9.06.glance_store-4.8.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.45 oslo.config-9.6.0
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               ?i010.9.50 oslo.serialization-5.5.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               i060.9.04 oslo.concurrency-6.1.0
-#               ?i010.9.10 stevedore-5.3.0
-#               i050.9.06 eventlet-0.36.1
-#               i050.9.31 jsonschema-4.23.0
-#               ?i010.9.19 keystoneauth1-5.8.0
-#               ?i010.9.60 python-keystoneclient-5.5.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i030.9.04 oslo.serialization-5.5.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i080.9.02 oslo.concurrency-6.1.0
+#               i020.9.02 stevedore-5.3.0
+#               i060.9.05 eventlet-0.36.1
+#               i010.9.24 jsonschema-4.23.0
+#               i020.9.04 keystoneauth1-5.8.0
+#               i040.9.11 python-keystoneclient-5.5.0
 #               b30.13.23.30 Requests-2.32.3
 #
 
 #
 # Required by:
 #
-#               i153.8 Glance-29.0.0
+#               i153.9.3  Glance-29.0.0
 #
 
 export PKG="glance_store-4.8.1"
-export PKGLOG_DIR=$OSLOG/070.06
+export PKGLOG_DIR=$OSLOG/090.06
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

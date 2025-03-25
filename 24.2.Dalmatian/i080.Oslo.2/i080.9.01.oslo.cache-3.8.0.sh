@@ -14,6 +14,7 @@
 #
 # Required by:
 #
+#               i090.9.02 keystonemiddleware-10.7.1
 #               i151.9.1  KeyStone-26.0.0
 #
 

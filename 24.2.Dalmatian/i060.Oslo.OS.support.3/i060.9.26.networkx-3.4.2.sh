@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i090.9.?? taskflow-5.9.1
+#               i090.9.05 taskflow-5.9.1
 #
 
 export PKG="networkx-3.4.2"

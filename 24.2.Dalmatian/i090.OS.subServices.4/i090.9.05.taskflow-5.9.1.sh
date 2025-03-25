@@ -1,31 +1,31 @@
-# i070.9.05.taskflow-5.9.1.sh
+# i090.9.05.taskflow-5.9.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.01 pbr-6.1.0
-#               i050.9.14 futurist-3.0.0
-#               i050.9.02 fasteners-0.19
-#               i050.9.32 networkx-3.4.2
-#               ?i010.9.10 stevedore-5.3.0
+#               i020.9.01 pbr-6.1.0
+#               i070.9.01 futurist-3.0.0
+#               i060.9.01 fasteners-0.19
+#               i060.9.26 networkx-3.4.2
+#               i020.9.02 stevedore-5.3.0
 #               i010.9.24 jsonschema-4.23.0
-#               i070.9.04 automaton-3.2.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               ?i010.9.50 oslo.serialization-5.5.0
-#               i050.9.33 tenacity-9.0.0
-#               i050.9.15 cachetools-5.5.1
-#               i050.9.34 pydot-3.0.4
+#               i090.9.04 automaton-3.2.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i030.9.04 oslo.serialization-5.5.0
+#               i060.9.27 tenacity-9.0.0
+#               i060.9.13 cachetools-5.5.1
+#               i060.9.28 pydot-3.0.4
 #
 
 #
 # Required by:
 #
-#               i153.8 Glance-29.0.0
+#               i153.9.3  Glance-29.0.0
 #
 
 export PKG="taskflow-5.9.1"
-export PKGLOG_DIR=$OSLOG/070.05
+export PKGLOG_DIR=$OSLOG/090.05
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

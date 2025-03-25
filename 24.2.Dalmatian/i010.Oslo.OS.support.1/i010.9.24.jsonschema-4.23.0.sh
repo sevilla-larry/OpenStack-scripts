@@ -15,7 +15,8 @@
 #
 #               i010.9.25 warlock-2.0.1
 #               i151.9.3  KeyStone-26.0.0
-#               i0?0.9.?? taskflow-5.9.1
+#               i090.9.05 taskflow-5.9.1
+#               i090.9.06 glance_store-4.8.1
 #
 
 export PKG="jsonschema-4.23.0"

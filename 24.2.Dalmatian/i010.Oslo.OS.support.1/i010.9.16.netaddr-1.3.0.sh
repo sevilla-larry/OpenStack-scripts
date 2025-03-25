@@ -7,10 +7,11 @@
 #               i030.9.02 oslo.utils-7.3.0
 #               i030.9.03 oslo.config-9.6.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
-#               i0?0.9.03 osprofiler-4.2.0
+#               i090.9.03 osprofiler-4.2.0
 #               i0?0.9.19 WSME-0.12.1
 #               i0?0.9.17 ovsdbapp-2.8.0
 #               i040.9.15 python-neutronclient-11.3.1
+#               i090.9.12 ovsdbapp-2.8.0
 #               i111.9.3  Nova-30.0.0
 #
 

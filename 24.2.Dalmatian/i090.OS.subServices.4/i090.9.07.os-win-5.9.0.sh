@@ -1,20 +1,27 @@
-# i070.9.13.microversion-parse-2.0.0.sh
+# i090.9.07.os-win-5.9.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i050.9.03 WebOb-1.8.7
+#               i020.9.01 pbr-6.1.0
+#               i060.9.05 eventlet-0.36.1
+#               i080.9.02 oslo.concurrency-6.1.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.06 oslo.log-6.1.2
+#               i030.9.02 oslo.utils-7.3.0
+#               i030.9.01 oslo.i18n-6.4.0
 #
 
 #
 # Required by:
 #
-#               i152.8 Placement-12.0.0
+#               i090.9.11 os_brick-6.9.1
+#               i153.9.3  Glance-29.0.0
 #
 
-export PKG="microversion_parse-2.0.0"
-export PKGLOG_DIR=$OSLOG/070.13
+export PKG="os-win-5.9.0"
+export PKGLOG_DIR=$OSLOG/090.07
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -49,7 +56,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                microversion-parse      \
+                os-win                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

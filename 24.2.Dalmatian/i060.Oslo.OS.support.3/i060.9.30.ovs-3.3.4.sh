@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i090.9.?? ovsdbapp-2.8.0
+#               i090.9.12 ovsdbapp-2.8.0
 #
 
 export PKG="ovs-3.3.4"

@@ -1,33 +1,32 @@
-# i070.9.16.os_brick-6.9.1.sh
+# i090.9.13.os_vif-3.7.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               ?i010.9.01 pbr-6.1.0
-#               i060.9.04 oslo.concurrency-6.1.0
-#               ?i010.9.45 oslo.config-9.6.0
-#               i060.9.01 oslo.context-5.6.0
-#               i060.9.02 oslo.log-6.1.2
-#               ?i010.9.31 oslo.i18n-6.4.0
-#               i060.9.15 oslo.privsep-3.4.0
-#               ?i010.9.50 oslo.serialization-5.5.0
-#               i060.9.05 oslo.service-3.5.0
-#               ?i010.9.39 oslo.utils-7.3.0
-#               b30.13.23.30 Requests-2.32.3
-#               i050.9.33 tenacity-9.0.0
-#               i070.9.10 os-win-5.9.0
-#               b30.13.23.17 psutil-6.0.0
+#               i020.9.01 pbr-6.1.0
+#               i080.9.02 oslo.concurrency-6.1.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.06 oslo.log-6.1.2
+#               i030.9.01 oslo.i18n-6.4.0
+#               i080.9.13 oslo.privsep-3.4.0
+#               i030.9.04 oslo.serialization-5.5.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i080.9.14 oslo.versionedobjects-3.4.0
+#               i090.9.12 ovsdbapp-2.8.0
+#               i060.9.31 pyroute2-0.7.12
+#               i020.9.02 stevedore-5.3.0
+#               i020.9.06 debtcollector-3.0.0
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i111.9.3  Nova-30.0.0
 #
 
-export PKG="os_brick-6.9.1"
-export PKGLOG_DIR=$OSLOG/070.16
+export PKG="os_vif-3.7.0"
+export PKGLOG_DIR=$OSLOG/090.13
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -62,7 +61,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                os-brick                \
+                os-vif                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."
