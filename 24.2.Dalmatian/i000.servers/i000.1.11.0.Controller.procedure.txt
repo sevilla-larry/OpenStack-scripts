@@ -43,16 +43,28 @@ A.  Preparation
 
         copy all script files from the following to /sources
 
-            1. i000.servers
-            2. i010.support.minor
-            3. i020.support.Major
-            4. i100.OS.Services
+            01. i000.servers
+            02. i010.Oslo.OS.support.1
+            03. i020.OS.subServices.1
+            04. i025.Oslo.OS.support.2
+            05. i030.Oslo.1
+            06. i040.OS.subServices.2
+            07. i045.support.minor
+            08. i050.support.Major
+            09. i060.Oslo.OS.support.3
+            10. i070.OS.subServices.3
+            11. i075.Oslo.OS.support.4
+            12. i080.Oslo.2
+            13. i090.OS.subServices.4
+            14. i095.support.others
+            15. i100.OS.Services
 
             # BLfS
-            5. b10.common.Xorg.and.servers
-            6. b30.OpenStack.support
-            7. c11.MariaDB
-            8. c13.Apache
+            16. b10.common.Xorg.and.servers
+            17. b30.OpenStack.support
+            18. c11.MariaDB
+            19. c13.Apache
+          #?20. g11.common.Xfce.Gnome.apps.support
 
     A.03. Download packages
 
@@ -63,13 +75,19 @@ A.  Preparation
         wget --input-file=c11.01.wget-list-sysv.MariaDB.txt                 --continue --directory-prefix=/sources
         wget --input-file=c13.01.wget-list-sysv.Apache.txt                  --continue --directory-prefix=/sources
 
-      # wget --input-file=i010.1.wget-list.support.minor.txt                --continue --directory-prefix=/sources
-        wget --input-file=i040.1.wget-list.support.Major.txt                --continue --directory-prefix=/sources
-        wget --input-file=i050.1.wget-list.Oslo.OS.support.2.txt             --continue --directory-prefix=/sources
-        wget --input-file=i050.1.wget-list.OS.subServices.2.txt             --continue --directory-prefix=/sources
-        wget --input-file=i060.1.wget-list.Oslo.2.txt                       --continue --directory-prefix=/sources
+        wget --input-file=i010.1.wget-list.Oslo.OS.support.1.txt            --continue --directory-prefix=/sources
+        wget --input-file=i020.1.wget-list.OS.subServices.1.txt             --continue --directory-prefix=/sources
+        wget --input-file=i025.1.wget-list.Oslo.OS.support.2.txt            --continue --directory-prefix=/sources
+        wget --input-file=i030.1.wget-list.Oslo.1.txt                       --continue --directory-prefix=/sources
+        wget --input-file=i040.1.wget-list.OS.subServices.2.txt             --continue --directory-prefix=/sources
+        wget --input-file=i045.1.wget-list.support.minor.txt                --continue --directory-prefix=/sources
+        wget --input-file=i050.1.wget-list.support.Major.txt                --continue --directory-prefix=/sources
+        wget --input-file=i060.1.wget-list.Oslo.OS.support.3.txt            --continue --directory-prefix=/sources
         wget --input-file=i070.1.wget-list.OS.subServices.3.txt             --continue --directory-prefix=/sources
-        wget --input-file=i080.1.wget-list.support.others.txt               --continue --directory-prefix=/sources
+        wget --input-file=i075.1.wget-list.Oslo.OS.support.4.txt            --continue --directory-prefix=/sources
+        wget --input-file=i080.1.wget-list.Oslo.2.txt                       --continue --directory-prefix=/sources
+        wget --input-file=i090.1.wget-list.OS.subServices.4.txt             --continue --directory-prefix=/sources
+        wget --input-file=i095.1.wget-list.support.others.txt               --continue --directory-prefix=/sources
         wget --input-file=i100.1.wget-list.OS.Services.txt                  --continue --directory-prefix=/sources
 
         # md5sum -c md5sums.txt
@@ -77,14 +95,24 @@ A.  Preparation
         md5sum -c b30.02.md5sums.OpenStack.support.txt
         md5sum -c c11.02.md5sums.MariaDB.txt
         md5sum -c c13.02.md5sums.Apache.txt
-        md5sum -c g11.02.md5sums.common.Xfce.Gnome.apps.support.txt
-      # md5sum -c i010.2.md5sums.support.minor.txt
-        md5sum -c i040.2.md5sums.support.Major.txt
-        md5sum -c i050.2.md5sums.Oslo.OS.support.2.txt
-        md5sum -c i070.2.md5sums.OS.subServices.2.txt
-        md5sum -c i060.2.md5sums.Oslo.2.txt
+      # md5sum -c g11.02.md5sums.common.Xfce.Gnome.apps.support.txt
+
+        md5sum -c i010.2.md5sums.Oslo.OS.support.1.txt
+        md5sum -c i020.2.md5sums.OS.subServices.1.txt
+        md5sum -c i025.2.md5sums.Oslo.OS.support.2.txt
+        md5sum -c i030.2.md5sums.Oslo.1.txt
+        md5sum -c i040.2.md5sums.OS.subServices.2.txt
+
+        md5sum -c i045.2.md5sums.support.minor.txt
+        md5sum -c i050.2.md5sums.support.Major.txt
+
+        md5sum -c i060.2.md5sums.Oslo.OS.support.3.txt
         md5sum -c i070.2.md5sums.OS.subServices.3.txt
-        md5sum -c i080.2.md5sums.support.others.txt
+        md5sum -c i075.2.md5sums.Oslo.OS.support.4.txt
+        md5sum -c i080.2.md5sums.Oslo.2.txt
+        md5sum -c i090.2.md5sums.OS.subServices.4.txt
+
+        md5sum -c i095.2.md5sums.support.others.txt
         md5sum -c i100.2.md5sums.OS.Services.txt
 
         ###

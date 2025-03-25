@@ -26,48 +26,22 @@
 # https://www.openstack.org/software/project-navigator/openstack-components#openstack-services
 #
 
-
-
-# i010 OpenStack Support Minor
-# i020 OpenStack Support Major
-# i030 OpenStack Oslo  support
-# i040 OpenStack Oslo           (not included in the Minor group)
-# i050 OpenStack Support Others
-
-
-
-# i010 Oslo and OpenStack Support Apps - 1
-# i015 Openstack sub-Services - 1
-# i020 Oslo and OpenStack Support Apps - 2
-# i025 Oslo Apps - 1
-# i030 Openstack sub-Services - 2
-# i040 OpenStack Support Major
-# i050 Oslo and OpenStack Support Apps - 3
-# i055 Openstack sub-Services - 3
-# i060 Oslo Apps - 2
-# i070 Oslo and OpenStack Support Apps - 4
-# i080 Other Support Apss
-
-
-
-# i005 OpenStack Support Minor
-
 # i010 Oslo and OpenStack Support Apps - 1
 # i020 Openstack sub-Services - 1
 # i025 Oslo and OpenStack Support Apps - 2
 # i030 Oslo Apps - 1
 # i040 Openstack sub-Services - 2
 
+# i045 OpenStack Support Minor
 # i050 OpenStack Support Major
 
 # i060 Oslo and OpenStack Support Apps - 3
 # i070 Openstack sub-Services - 3
+# i075 Oslo and OpenStack Support Apps - 4
 # i080 Oslo Apps - 2
 # i090 Openstack sub-Services - 4
 
 # i095 Other Support Apss
-
-
 
 # i100 OpenStack Services
 # i11x  Compute
