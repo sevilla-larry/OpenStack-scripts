@@ -1,14 +1,14 @@
-# i080.9.16.simplegeneric-0.8.1.sh
+# i095.9.09.scrypt-0.8.27.sh
 #
 
 #
 # Required by:
 #
-#               i080.9.19 WSME-0.12.1
+#               i151.9.3  KeyStone-26.0.0
 #
 
-export PKG="simplegeneric-0.8.1"
-export PKGLOG_DIR=$OSLOG/080.16
+export PKG="scrypt-0.8.27"
+export PKGLOG_DIR=$OSLOG/095.09
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -22,7 +22,7 @@ mkdir $PKGLOG_DIR
 echo "1. Extract tar..."
 echo "1. Extract tar..." >> $OSLOG_PROCESS
 echo "1. Extract tar..." >> $PKGLOG_ERROR
-unzip $PKG.zip > $PKGLOG_TAR 2>> $PKGLOG_ERROR
+tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
@@ -43,13 +43,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                simplegeneric           \
+                scrypt                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

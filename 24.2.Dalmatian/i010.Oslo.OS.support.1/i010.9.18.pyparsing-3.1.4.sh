@@ -5,6 +5,7 @@
 # Required by:
 #
 #               i030.9.02 oslo.utils-7.3.0
+#               i095.9.15 httplib2-0.22.0
 #               i0?0.9.?? pydot-3.0.4
 #
 

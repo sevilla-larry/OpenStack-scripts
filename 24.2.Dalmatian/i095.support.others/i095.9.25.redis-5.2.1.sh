@@ -1,14 +1,14 @@
-# i080.9.17.zipp-3.20.2.sh
+# i095.9.25.redis-5.2.1.sh
 #
 
 #
 # Required by:
 #
-#               i080.9.18 importlib_metadata-8.5.0
+#               i095.9.26 websockify-0.12.0
 #
 
-export PKG="zipp-3.20.2"
-export PKGLOG_DIR=$OSLOG/080.17
+export PKG="redis-5.2.1"
+export PKGLOG_DIR=$OSLOG/095.25
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                zipp                    \
+                redis                   \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

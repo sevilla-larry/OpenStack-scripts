@@ -1,14 +1,14 @@
-# i080.9.21.PyNaCl-1.5.0.sh
+# i095.9.11.defusedxml-0.7.1.sh
 #
 
 #
 # Required by:
 #
-#               i080.9.22 paramiko-3.5.1
+#               i095.9.14 pysaml2-7.5.0
 #
 
-export PKG="PyNaCl-1.5.0"
-export PKGLOG_DIR=$OSLOG/080.21
+export PKG="defusedxml-0.7.1"
+export PKGLOG_DIR=$OSLOG/095.11
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                PyNaCl                  \
+                defusedxml              \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

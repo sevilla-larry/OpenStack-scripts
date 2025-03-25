@@ -1,21 +1,20 @@
-# i080.9.24.jwcrypto-1.5.6.sh
+# i095.9.20.retrying-1.3.4.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i010.9.03 cryptography-41.0.7
-#               i050.9.20 typing_extensions-4.12.2
+#               b30.13.23.33 six-1.16.0
 #
 
 #
 # Required by:
 #
-#               i080.9.26 websockify-0.12.0
+#               i153.9.3  Glance-29.0.0
 #
 
-export PKG="jwcrypto-1.5.6"
-export PKGLOG_DIR=$OSLOG/080.24
+export PKG="retrying-1.3.4"
+export PKGLOG_DIR=$OSLOG/095.20
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -50,13 +49,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                jwcrypto                \
+                retrying                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

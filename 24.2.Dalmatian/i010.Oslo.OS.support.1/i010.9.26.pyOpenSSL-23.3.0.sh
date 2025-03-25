@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i0?0.9.?? pysaml2-7.5.0
+#               i095.9.14 pysaml2-7.5.0
 #               i030.9.13 python-glanceclient-4.7.0
 #
 

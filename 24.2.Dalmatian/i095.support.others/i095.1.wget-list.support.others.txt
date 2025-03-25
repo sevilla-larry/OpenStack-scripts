@@ -19,9 +19,6 @@ https://files.pythonhosted.org/packages/41/e1/d104c83026f8d35dfd2c261df7d6473834
 # 06 aniso8601-9.0.1
 https://files.pythonhosted.org/packages/cb/72/be3db445b03944bfbb2b02b82d00cb2a2bcf96275c4543f14bf60fa79e12/aniso8601-9.0.1.tar.gz
 
-## pytz-2024.2
-#https://files.pythonhosted.org/packages/3a/31/3c70bf7603cc2dca0f19bdc53b4537a797747a58875b552c8c413d963a3f/pytz-2024.2.tar.gz
-
 # 07 Flask-RESTful-0.3.10
 https://files.pythonhosted.org/packages/c0/ce/a0a133db616ea47f78a41e15c4c68b9f08cab3df31eb960f61899200a119/Flask-RESTful-0.3.10.tar.gz
 
@@ -36,9 +33,6 @@ https://files.pythonhosted.org/packages/6d/fa/fbf4001037904031639e6bfbfc02badfc7
 
 # 11 defusedxml-0.7.1
 https://files.pythonhosted.org/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c984ebd9c2a06e2b8a4dc7331c72/defusedxml-0.7.1.tar.gz
-
-# pyOpenSSL-23.3.0 ---> i010.43
-# https://files.pythonhosted.org/packages/bf/a0/e667c3c43b65a188cc3041fa00c50655315b93be45182b2c94d185a2610e/pyOpenSSL-23.3.0.tar.gz
 
 # 12 elementpath-4.1.5
 https://files.pythonhosted.org/packages/02/c4/198233fa9052d755766eadaf11c91337e49c0ea99ccc370ead94afab9d14/elementpath-4.1.5.tar.gz

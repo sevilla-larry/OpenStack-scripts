@@ -1,14 +1,14 @@
-# i080.9.12.elementpath-4.1.5.sh
+# i095.9.21.PyNaCl-1.5.0.sh
 #
 
 #
 # Required by:
 #
-#               i080.9.13 xmlschema-3.0.2
+#               i095.9.22 paramiko-3.5.1
 #
 
-export PKG="elementpath-4.1.5"
-export PKGLOG_DIR=$OSLOG/080.12
+export PKG="PyNaCl-1.5.0"
+export PKGLOG_DIR=$OSLOG/095.21
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                elementpath             \
+                PyNaCl                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

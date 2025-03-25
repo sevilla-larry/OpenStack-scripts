@@ -1,14 +1,23 @@
-# i080.9.09.scrypt-0.8.27.sh
+# i095.9.07.Flask-RESTful-0.3.10.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i095.9.06 aniso8601-9.0.1
+#               i095.9.05 flask-3.0.3
+#               b30.13.23.33 six-1.16.0
+#               b30.13.24.21 Pytz-2024.1
 #
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i151.9.3  KeyStone-26.0.0
 #
 
-export PKG="scrypt-0.8.27"
-export PKGLOG_DIR=$OSLOG/080.09
+export PKG="Flask-RESTful-0.3.10"
+export PKGLOG_DIR=$OSLOG/095.07
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,13 +52,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                scrypt                  \
+                Flask-RESTful           \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

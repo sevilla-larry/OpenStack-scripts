@@ -1,14 +1,23 @@
-# i080.9.25.redis-5.2.1.sh
+# i095.9.26.websockify-0.12.0.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i095.9.23 numpy-2.1.3
+#               b30.13.23.30 Requests-2.32.3
+#               i095.9.24 jwcrypto-1.5.6
+#               i095.9.25 redis-5.2.1
 #
 
 #
 # Required by:
 #
-#               i080.9.26 websockify-0.12.0
+#               i111.9.3  Nova-30.0.0
 #
 
-export PKG="redis-5.2.1"
-export PKGLOG_DIR=$OSLOG/080.25
+export PKG="websockify-0.12.0"
+export PKGLOG_DIR=$OSLOG/095.26
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +52,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                redis                   \
+                websockify              \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

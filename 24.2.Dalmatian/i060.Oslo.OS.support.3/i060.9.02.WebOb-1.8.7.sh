@@ -11,6 +11,7 @@
 #               i090.9.02 keystonemiddleware-10.7.1
 #               i090.9.03 osprofiler-4.2.0
 #               i090.9.10 microversion-parse-2.0.0
+#               i095.9.19 WSME-0.12.1
 #
 
 export PKG="WebOb-1.8.7"

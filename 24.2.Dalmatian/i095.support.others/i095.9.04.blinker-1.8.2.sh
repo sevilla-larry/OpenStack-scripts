@@ -1,20 +1,14 @@
-# i080.9.15.httplib2-0.22.0.sh
-#
-
-#
-# Dependencies Required:
-#
-#               ?i010.9.35 pyparsing-3.1.4
+# i095.9.04.blinker-1.8.2.sh
 #
 
 #
 # Required by:
 #
-#               i153.8 Glance-29.0.0
+#               i095.9.05 flask-3.0.3
 #
 
-export PKG="httplib2-0.22.0"
-export PKGLOG_DIR=$OSLOG/080.15
+export PKG="blinker-1.8.2"
+export PKGLOG_DIR=$OSLOG/095.04
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -49,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                httplib2                \
+                blinker                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

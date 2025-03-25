@@ -1,20 +1,14 @@
-# i080.9.20.retrying-1.3.4.sh
-#
-
-#
-# Dependencies Required:
-#
-#               b30.13.23.33 six-1.16.0
+# i095.9.03.click-8.1.8.sh
 #
 
 #
 # Required by:
 #
-#               i153.8 Glance-29.0.0
+#               i095.9.05 flask-3.0.3
 #
 
-export PKG="retrying-1.3.4"
-export PKGLOG_DIR=$OSLOG/080.20
+export PKG="click-8.1.8"
+export PKGLOG_DIR=$OSLOG/095.03
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -49,13 +43,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                retrying                \
+                click                   \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

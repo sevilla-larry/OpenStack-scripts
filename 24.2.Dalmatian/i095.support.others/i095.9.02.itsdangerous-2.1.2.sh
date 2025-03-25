@@ -1,14 +1,14 @@
-# i080.9.08.passlib-1.7.4.sh
+# i095.9.02.itsdangerous-2.1.2.sh
 #
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i095.9.05 flask-3.0.3
 #
 
-export PKG="passlib-1.7.4"
-export PKGLOG_DIR=$OSLOG/080.08
+export PKG="itsdangerous-2.1.2"
+export PKGLOG_DIR=$OSLOG/095.02
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                passlib                 \
+                itsdangerous            \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

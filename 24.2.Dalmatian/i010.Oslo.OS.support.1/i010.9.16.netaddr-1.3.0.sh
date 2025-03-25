@@ -12,6 +12,7 @@
 #               i0?0.9.17 ovsdbapp-2.8.0
 #               i040.9.15 python-neutronclient-11.3.1
 #               i090.9.12 ovsdbapp-2.8.0
+#               i095.9.19 WSME-0.12.1
 #               i111.9.3  Nova-30.0.0
 #
 

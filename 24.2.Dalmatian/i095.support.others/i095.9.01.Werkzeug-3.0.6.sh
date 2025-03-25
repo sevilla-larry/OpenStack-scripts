@@ -1,14 +1,20 @@
-# i080.9.06.aniso8601-9.0.1.sh
+# i095.9.01.Werkzeug-3.0.6.sh
+#
+
+#
+# Dependencies Required:
+#
+#               a.08.74 MarkupSafe-2.1.5
 #
 
 #
 # Required by:
 #
-#               i080.9.08 Flask-RESTful-0.3.10
+#               i095.9.05 flask-3.0.3
 #
 
-export PKG="aniso8601-9.0.1"
-export PKGLOG_DIR=$OSLOG/080.06
+export PKG="werkzeug-3.0.6"
+export PKGLOG_DIR=$OSLOG/095.01
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,13 +49,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                aniso8601               \
+                Werkzeug                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

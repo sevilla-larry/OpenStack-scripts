@@ -8,6 +8,7 @@
 # Required by:
 #
 #               i080.9.04 oslo.middleware-6.2.0
+#               i095.9.22 paramiko-3.5.1
 #               i151.9.3  KeyStone-26.0.0
 #
 

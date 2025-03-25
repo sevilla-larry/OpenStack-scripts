@@ -1,14 +1,14 @@
-# i080.9.03.click-8.1.8.sh
+# i095.9.12.elementpath-4.1.5.sh
 #
 
 #
 # Required by:
 #
-#               i080.9.05 flask-3.0.3
+#               i095.9.13 xmlschema-3.0.2
 #
 
-export PKG="click-8.1.8"
-export PKGLOG_DIR=$OSLOG/080.03
+export PKG="elementpath-4.1.5"
+export PKGLOG_DIR=$OSLOG/095.12
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +43,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                click                   \
+                elementpath             \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

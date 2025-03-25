@@ -1,24 +1,21 @@
-# i080.9.05.flask-3.0.3.sh
+# i095.9.24.jwcrypto-1.5.6.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i080.9.01 werkzeug-3.0.6
-#               a.08.75 Jinja2-3.1.4
-#               i080.9.02 itsdangerous-2.1.2
-#               i080.9.03 click-8.1.8
-#               i080.9.04 blinker-1.8.2
+#               i010.9.03 cryptography-41.0.7
+#               i060.9.18 typing_extensions-4.12.2
 #
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i095.9.26 websockify-0.12.0
 #
 
-export PKG="flask-3.0.3"
-export PKGLOG_DIR=$OSLOG/080.05
+export PKG="jwcrypto-1.5.6"
+export PKGLOG_DIR=$OSLOG/095.24
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -53,7 +50,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                Flask                   \
+                jwcrypto                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

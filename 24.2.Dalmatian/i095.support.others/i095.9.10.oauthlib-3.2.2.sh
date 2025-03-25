@@ -1,24 +1,14 @@
-# i080.9.19.WSME-0.12.1.sh
-#
-
-#
-# Dependencies Required:
-#
-#               i050.9.03 WebOb-1.8.7
-#               i080.9.16 simplegeneric-0.8.1
-#               b30.13.24.21 Pytz-2024.1
-#               ?i010.9.32 netaddr-1.3.0
-#               i080.9.18 importlib_metadata-8.5.0
+# i095.9.10.oauthlib-3.2.2.sh
 #
 
 #
 # Required by:
 #
-#               i153.8 Glance-29.0.0
+#               i151.9.3  KeyStone-26.0.0
 #
 
-export PKG="WSME-0.12.1"
-export PKGLOG_DIR=$OSLOG/080.19
+export PKG="oauthlib-3.2.2"
+export PKGLOG_DIR=$OSLOG/095.10
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -53,13 +43,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                WSME                    \
+                oauthlib                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

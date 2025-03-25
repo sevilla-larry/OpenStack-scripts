@@ -19,9 +19,6 @@ ce2f9fb3bc0c0000db11f012f5f5afda blinker-1.8.2.tar.gz
 # 06 aniso8601-9.0.1
 89b25ea9fd70b8facaf189aed43afcf8 aniso8601-9.0.1.tar.gz
 
-## pytz-2024.2
-#efcb554763a36b3e18acee074f44d1a5 pytz-2024.2.tar.gz
-
 # 07 Flask-RESTful-0.3.10
 2a1f17e91c526a03bf721e178d8fce94 Flask-RESTful-0.3.10.tar.gz
 
@@ -36,9 +33,6 @@ ce2f9fb3bc0c0000db11f012f5f5afda blinker-1.8.2.tar.gz
 
 # 11 defusedxml-0.7.1
 a50e7f21aa60a741efe6b1b658dfb3f8 defusedxml-0.7.1.tar.gz
-
-# pyOpenSSL-23.3.0 ---> i010.43
-# 4c4f6f9e1c731b8ee7adcd9fbeccec62 pyOpenSSL-23.3.0.tar.gz
 
 # 12 elementpath-4.1.5
 8e00373aecd92734d5b1d7fa0335be23 elementpath-4.1.5.tar.gz
@@ -86,7 +80,6 @@ b8af8e2ab2b82825b1487ee1547be693 paramiko-3.5.1.tar.gz
 
 # 26 websockify-0.12.0
 f09e10b8206913c82030fa8abcd31ffc websockify-0.12.0.tar.gz
-
 
 ## 99 pylibyaml-0.1.0
 #825ea77151d7e91e3d5f2143712ece50 pylibyaml-0.1.0.tar.gz

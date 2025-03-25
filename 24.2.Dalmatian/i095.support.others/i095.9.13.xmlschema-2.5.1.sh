@@ -1,23 +1,20 @@
-# i080.9.07.Flask-RESTful-0.3.10.sh
+# i095.9.13.xmlschema-2.5.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i080.9.06 aniso8601-9.0.1
-#               i080.9.05 flask-3.0.3
-#               b30.13.23.33 six-1.16.0
-#               b30.13.24.21 Pytz-2024.1
+#               i095.9.12 elementpath-4.2.1
 #
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i095.9.14 pysaml2-7.5.0
 #
 
-export PKG="Flask-RESTful-0.3.10"
-export PKGLOG_DIR=$OSLOG/080.07
+export PKG="xmlschema-2.5.1"
+export PKGLOG_DIR=$OSLOG/095.13
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -52,13 +49,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                Flask-RESTful           \
+                xmlschema               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..

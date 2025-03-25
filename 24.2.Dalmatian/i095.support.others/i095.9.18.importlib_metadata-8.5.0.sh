@@ -1,23 +1,20 @@
-# i080.9.26.websockify-0.12.0.sh
+# i095.9.18.importlib_metadata-8.5.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i080.9.23 numpy-2.1.3
-#               b30.13.23.30 Requests-2.32.3
-#               i080.9.24 jwcrypto-1.5.6
-#               i080.9.25 redis-5.2.1
+#               i095.9.17 zipp-3.20.2
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i095.9.19 WSME-0.12.1
 #
 
-export PKG="websockify-0.12.0"
-export PKGLOG_DIR=$OSLOG/080.26
+export PKG="importlib_metadata-8.5.0"
+export PKGLOG_DIR=$OSLOG/095.18
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -52,7 +49,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                websockify              \
+                importlib-metadata      \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

@@ -1,14 +1,24 @@
-# i080.9.10.oauthlib-3.2.2.sh
+# i095.9.05.flask-3.0.3.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i095.9.01 werkzeug-3.0.6
+#               a.08.75 Jinja2-3.1.4
+#               i095.9.02 itsdangerous-2.1.2
+#               i095.9.03 click-8.1.8
+#               i095.9.04 blinker-1.8.2
 #
 
 #
 # Required by:
 #
-#               i151.9.1 KeyStone-26.0.0
+#               i151.9.3 KeyStone-26.0.0
 #
 
-export PKG="oauthlib-3.2.2"
-export PKGLOG_DIR=$OSLOG/080.10
+export PKG="flask-3.0.3"
+export PKGLOG_DIR=$OSLOG/095.05
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -43,7 +53,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oauthlib                \
+                Flask                   \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

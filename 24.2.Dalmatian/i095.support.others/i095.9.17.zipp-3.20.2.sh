@@ -1,22 +1,14 @@
-# i080.9.22.paramiko-3.5.1.sh
-#
-
-#
-# Dependencies Required:
-#
-#               i050.9.13 bcrypt-4.1.3
-#               i010.9.03 cryptography-41.0.7
-#               i080.9.21 PyNaCl-1.5.0
+# i095.9.17.zipp-3.20.2.sh
 #
 
 #
 # Required by:
 #
-#               i111.8 Nova-30.0.0
+#               i095.9.18 importlib_metadata-8.5.0
 #
 
-export PKG="paramiko-3.5.1"
-export PKGLOG_DIR=$OSLOG/080.22
+export PKG="zipp-3.20.2"
+export PKGLOG_DIR=$OSLOG/095.17
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -51,13 +43,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                paramiko                \
+                zipp                    \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd ..
