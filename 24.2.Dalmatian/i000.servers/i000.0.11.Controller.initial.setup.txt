@@ -33,12 +33,11 @@ A. Preparation
 
 	d. # nano /root/.bashrc
 
-        pathprepend /usr/local/bin PATH
-        pathprepend /usr/local/sbin PATH
+		export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
 	e. $ nano /home/user/.bashrc
 
-        pathprepend /usr/local/bin PATH
+		export PATH=/usr/local/bin:$PATH
 
 	f. update /etc/hosts
 

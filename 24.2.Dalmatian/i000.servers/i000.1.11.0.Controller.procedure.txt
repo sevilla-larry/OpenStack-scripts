@@ -103,7 +103,7 @@ A.  Preparation
         md5sum -c i030.2.md5sums.Oslo.1.txt
         md5sum -c i040.2.md5sums.OS.subServices.2.txt
 
-        md5sum -c i045.2.md5sums.support.minor.txt
+      # md5sum -c i045.2.md5sums.support.minor.txt
         md5sum -c i050.2.md5sums.support.Major.txt
 
         md5sum -c i060.2.md5sums.Oslo.OS.support.3.txt

@@ -23,11 +23,10 @@ bash b10.03.4.sh
 bash b10.03.8.sh
 bash b10.03.9.sh
 
-# ***** Note intentionally EXcluded *****
-# but seems needed by Glance
+# needed by Glance
 # SQLite then Python
-bash b10.03.3.sh
-bash g11.03.3.py.3.11.sh
+bash b10.03.3.sh            # SQLite
+bash b30.03.3.py.3.11.sh    # Python 3.11 after SQLite
 
 # support apps for OpenStack, Nmap + deps, lsof & iptables
 bash b30.03.1.sh

@@ -1,14 +1,6 @@
 # support apps - minor
 
 
-# [23-29]  allowance for future dependencies of openstacksdk
-
-####################
-
-## 46 msgpack-1.1.0
-#e5769d4ab610491ac561c84fde4cf4a7 msgpack-1.1.0.tar.gz
-
-# [44-49] allowance for future dependencies
 
 
 
@@ -16,24 +8,6 @@
 
 
 
-
-
-
-
-
-# 04 build 1.2.1
-#9675d7b278f4533b9b75701e6e87390b build-1.2.1.tar.gz
-
-# 01 simplejson 3.19.3  (Python module)
-#a198e17c5dcc426ff83ec4a02190eae5 simplejson-3.19.3.tar.gz
-
-# 05 sshpass-1.10
-#
 
 ##99 qemu-ga 9.1.2
-##--content-disposition https://github.com/qemu/qemu/archive/refs/tags/v9.1.2.tar.gz
-
-
-# 01 simplejson-3.19.3  (Python module)
-#
-#
+##--content-disposition 
