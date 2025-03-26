@@ -32,6 +32,32 @@ B:
     i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
     i040.9.12 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
     i050.9.1  python-openstackclient-7.1.3
+    i030.9.05 oslo.context-5.6.0
+    i030.9.06 oslo.log-6.1.2
+    i040.9.13 python-glanceclient-4.7.0
+    i040.9.14 python-barbicanclient-7.0.0
+    i040.9.15 python-neutronclient-11.3.1
+    i050.9.1  python-openstackclient-7.1.3
+    i060.9.21 testresources-2.0.1
+    i060.9.24 testscenarios-0.5.0
+    i080.9.02 oslo.concurrency-6.1.0
+    i080.9.04 oslo.middleware-6.2.0
+    i080.9.05 oslo.metrics-0.9.0
+    i080.9.06 oslo.messaging-14.9.1
+    i080.9.07 oslo.db-16.0.0
+    i080.9.11 oslo.reports-3.4.0
+    i070.9.02 castellan-5.1.1
+    i075.9.01 cursive-0.2.3
+    i090.9.02 keystonemiddleware-10.7.1
+    i090.9.04 automaton-3.2.0
+    i090.9.05 taskflow-5.9.1
+    i090.9.07 os-win-5.9.0
+    i090.9.08 os-resource-classes-1.1.0
+    i090.9.09 os-traits-3.1.0
+    i090.9.11 os_brick-6.9.1
+    i090.9.12 ovsdbapp-2.8.0
+    i090.9.13 os_vif-3.7.0
+    i151.3    KeyStone-26.0.0
 
 ##########
 
@@ -45,7 +71,9 @@ A:  i010.9.02 cffi-1.16.0                   cffi>=1.12                          
 
 D:  i010.9.01 pycparser-2.21                pycparser
 
-B:  i010.9.03 cryptography-41.0.7           cryptography>=2.7 # BSD/Apache-2.0
+B:
+    i010.9.03 cryptography-41.0.7           cryptography>=2.7 # BSD/Apache-2.0
+    i080.9.13 oslo.privsep-3.4.0
 
 #####
 
@@ -56,6 +84,15 @@ D:  i010.9.02 cffi-1.16.0                   cffi>=1.12
 B:
     i040.9.02 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
     i050.9.1  python-openstackclient-7.1.3
+    i010.9.26 pyOpenSSL-23.3.0
+    i095.9.14 pysaml2-7.5.0
+    i151.9.3  KeyStone-26.0.0
+    i070.9.02 castellan-5.1.1
+    i075.9.01 cursive-0.2.3
+    i153.9.3  Glance-29.0.0
+    i095.9.24 jwcrypto-1.5.6
+    i095.9.22 paramiko-3.5.1
+    i111.9.3  Nova-30.0.0
 
 ##########
 
@@ -97,6 +134,12 @@ D:  i010.9.06 wcwidth-0.2.13                wcwidth >= 0.1.7
 B:
     i040.9.01.cliff-4.7.0                   cliff>=3.5.0 # Apache-2.0
     i040.9.12 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
+    i040.9.13 python-glanceclient-4.7.0
+    i080.9.09 oslo.upgradecheck-2.4.0
+    i090.9.03 osprofiler-4.2.0
+    i090.9.04 automaton-3.2.0
+    i153.9.3  Glance-29.0.0
+    i111.9.3  Nova-30.0.0
 
 #####
 
@@ -113,6 +156,15 @@ B:
     i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
     i040.9.12 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
     i050.9.1  python-openstackclient-7.1.3
+    i080.9.04 oslo.middleware-6.2.0
+    i080.9.06 oslo.messaging-14.9.1
+    i080.9.07 oslo.db-16.0.0
+    i080.9.08 oslo.policy-4.4.0
+    i070.9.02 castellan-5.1.1
+    i090.9.05 taskflow-5.9.1
+    i090.9.06 glance_store-4.8.1
+    i090.9.13 os_vif-3.7.0
+    i090.9.14 tooz-6.3.0
 
 #####
 
@@ -129,6 +181,8 @@ D:
 B:
     i040.9.03 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0
     i050.9.1  python-openstackclient-7.1.3
+    i040.9.14 python-barbicanclient-7.0.0
+    i040.9.15 python-neutronclient-11.3.1
 
 ##########
 
@@ -139,6 +193,10 @@ B:
     i040.9.02 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
     i030.9.02 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
     i050.9.1  python-openstackclient-7.1.3
+    i040.9.15 python-neutronclient-11.3.1
+    i153.9.3  Glance-29.0.0
+    i111.9.3  Nova-30.0.0
+    i080.9.14 oslo.versionedobjects-3.4.0
 
 #####
 
@@ -147,6 +205,7 @@ A:  i010.9.10 decorator-5.1.1               decorator>=4.4.1 # BSD              
 B:
     i025.9.01 dogpile.cache-1.3.3           dogpile.cache>=0.6.5 # BSD
     i040.9.02 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
+    i111.9.3  Nova-30.0.0
 
 ####
 
@@ -156,7 +215,10 @@ D:
     i010.9.10 decorator-5.1.1               decorator>=4.4.1 # BSD
     i020.9.02 stevedore-5.3.0               stevedore>=2.0.1 # Apache-2.0
 
-B:  i040.9.02 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
+B:
+    i040.9.02 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
+    i080.9.01 oslo.cache-3.8.0
+    i151.9.3  KeyStone-26.0.0
 
 #####
 
@@ -176,7 +238,9 @@ A:  i010.9.13 jsonpatch-1.33                jsonpatch!=1.20,>=1.16 # BSD        
 
 D:  i010.9.12 jsonpointer-3.0.0             jsonpointer>=1.9
 
-B:  i040.9.02 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
+B:
+    i040.9.02 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
+    i010.9.42 warlock 2.0.1
 
 ##########
 
@@ -204,6 +268,13 @@ B:
     i040.9.03 osc-lib-3.1.0                 osc-lib>=2.3.0 # Apache-2.0
     i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
     i040.9.12 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
+    i040.9.13 python-glanceclient-4.7.0
+    i040.9.14 python-barbicanclient-7.0.0
+    i040.9.15 python-neutronclient-11.3.1
+    i080.9.10 oslo.limit-2.5.0
+    i070.9.02 castellan-5.1.1
+    i090.9.02 keystonemiddleware-10.7.1
+    i090.9.06 glance_store-4.8.1
 
 #####
 
@@ -212,6 +283,7 @@ A:  i010.9.14 netifaces-0.11.0              netifaces>=0.10.4 # MIT             
 B:
     i040.9.02 openstacksdk-4.0.1            openstacksdk>=3.3.0 # Apache-2.0
     i030.9.02 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
+    i111.9.3  Nova-30.0.0
 
 #####
 
@@ -244,7 +316,11 @@ D:
     b30.13.23.28 PyYAML-6.0.2               PyYAML>=3.13 # MIT
     i020.9.05 requestsexceptions-1.4.0      requestsexceptions>=1.2.0 # Apache-2.0
     
-B:  i050.9.1  python-openstackclient-7.1.3
+B:
+    i050.9.1  python-openstackclient-7.1.3
+    i040.9.03 osc-lib-3.1.0.sh
+    i040.9.15 python-neutronclient-11.3.1
+    i080.9.10 oslo.limit-2.5.0
 
 ###############
 
@@ -259,6 +335,28 @@ B:
     i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
     i040.9.12 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
     i050.9.1  python-openstackclient-7.1.3
+    i040.9.13 python-glanceclient-4.7.0
+    i040.9.14 python-barbicanclient-7.0.0
+    i040.9.15 python-neutronclient-11.3.1
+    i080.9.01 oslo.cache-3.8.0
+    i080.9.02 oslo.concurrency-6.1.0
+    i080.9.03 oslo.service-3.5.0
+    i080.9.04 oslo.middleware-6.2.0
+    i080.9.06 oslo.messaging-14.9.1
+    i080.9.07 oslo.db-16.0.0
+    i080.9.08 oslo.policy-4.4.0
+    i080.9.09 oslo.upgradecheck-2.4.0
+    i080.9.10 oslo.limit-2.5.0
+    i080.9.11 oslo.reports-3.4.0
+    i080.9.13 oslo.privsep-3.4.0
+    i080.9.14 oslo.versionedobjects-3.4.0
+    i070.9.02 castellan-5.1.1
+    i075.9.01 cursive-0.2.3
+    i090.9.02 keystonemiddleware-10.7.1
+    i090.9.06 glance_store-4.8.1
+    i090.9.07 os-win-5.9.0
+    i090.9.11 os_brick-6.9.1
+    i090.9.13 os_vif-3.7.0
 
 #####
 
@@ -267,12 +365,22 @@ A:  i010.9.16 netaddr-1.3.0                 netaddr>=0.10.0 # BSD               
 B:
     i030.9.02 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
     i030.9.03 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
+    i080.9.14 oslo.versionedobjects-3.4.0
+    i090.9.03 osprofiler-4.2.0
+    i0?0.9.19 WSME-0.12.1
+    i0?0.9.17 ovsdbapp-2.8.0
+    i040.9.15 python-neutronclient-11.3.1
+    i090.9.12 ovsdbapp-2.8.0
+    i095.9.19 WSME-0.12.1
+    i111.9.3  Nova-30.0.0
 
 #####
 
 A:  i010.9.17 wrapt-1.16.0                  wrapt>=1.7.0 # BSD License                                      with test
 
-B:  i020.9.06 debtcollector-3.0.0           debtcollector>=1.2.0 # Apache-2.0
+B:
+    i020.9.06 debtcollector-3.0.0           debtcollector>=1.2.0 # Apache-2.0
+    i040.9.13 python-glanceclient-4.7.0
 
 #####
 
@@ -284,12 +392,23 @@ B:
     i030.9.02 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
     i030.9.03 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
     i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
+    i040.9.15 python-neutronclient-11.3.1
+    i080.9.03 oslo.service-3.5.0
+    i080.9.04 oslo.middleware-6.2.0
+    i080.9.06 oslo.messaging-14.9.1
+    i080.9.07 oslo.db-16.0.0
+    i090.9.01 pycadf-3.1.1
+    i090.9.13 os_vif-3.7.0
 
 #####
 
 A:  i010.9.18 pyparsing-3.1.4               pyparsing>=2.1.0 # MIT                                          No test
 
-B:  i030.9.02 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
+B:
+    i030.9.02 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
+    i060.9.28 pydot-3.0.4
+    i095.9.15 httplib2-0.22.0
+
 
 #####
 
@@ -297,7 +416,8 @@ A:  i010.9.19 tzdata-2024.2                 tzdata>=2022.4;python_version>="3.9"
 
 B:
     i030.9.02 oslo.utils-7.3.0              oslo.utils>=3.33.0 # Apache-2.0
-    i030.9.04 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0                         No test
+    i030.9.04 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0
+    i060.9.16 kombu-5.4.2
 
 #####
 
@@ -325,6 +445,31 @@ B:
     i030.9.04 oslo.serialization-5.5.0      oslo.serialization>=2.18.0 # Apache-2.0
     i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
     i040.9.12 python-cinderclient-9.6.0     python-cinderclient>=3.3.0 # Apache-2.0
+    i040.9.13 python-glanceclient-4.7.0
+    i040.9.14 python-barbicanclient-7.0.0
+    i040.9.15 python-neutronclient-11.3.1
+    i080.9.01 oslo.cache-3.8.0
+    i080.9.02 oslo.concurrency-6.1.0
+    i080.9.03 oslo.service-3.5.0
+    i080.9.04 oslo.middleware-6.2.0
+    i080.9.05 oslo.metrics-0.9.0
+    i080.9.06 oslo.messaging-14.9.1
+    i080.9.07 oslo.db-16.0.0
+    i080.9.08 oslo.policy-4.4.0
+    i080.9.09 oslo.upgradecheck-2.4.0
+    i080.9.11 oslo.reports-3.4.0
+    i080.9.13 oslo.privsep-3.4.0
+    i080.9.14 oslo.versionedobjects-3.4.0
+    i070.9.02 castellan-5.1.1
+    i075.9.01 cursive-0.2.3
+    i090.9.02 keystonemiddleware-10.7.1
+    i090.9.03 osprofiler-4.2.0
+    i090.9.05 taskflow-5.9.1
+    i090.9.06 glance_store-4.8.1
+    i090.9.07 os-win-5.9.0
+    i090.9.11 os_brick-6.9.1
+    i090.9.13 os_vif-3.7.0
+    i090.9.14 tooz-6.3.0
 
 #####
 
@@ -348,12 +493,15 @@ D:
 B:
     i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
     i050.9.1  python-openstackclient-7.1.3
+    i040.9.15 python-neutronclient-11.3.1
 
 ###############
 
 A:  i010.9.20 rfc3986-2.0.0                 rfc3986>=1.2.0 # Apache-2.0                                     with test
 
-B:  i030.9.03 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
+B:
+    i030.9.03 oslo.config-9.6.0             oslo.config>=5.2.0 # Apache-2.0
+    i111.9.3  Nova-30.0.0
 
 #####
 
@@ -368,7 +516,29 @@ D:
     b30.13.23.28 PyYAML-6.0.2               PyYAML>=5.1 # MIT
     b30.13.23.30 Requests-2.32.3            requests>=2.18.0 # Apache-2.0
 
-B:  i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
+B:
+    i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
+    i080.9.01 oslo.cache-3.8.0
+    i080.9.02 oslo.concurrency-6.1.0
+    i080.9.03 oslo.service-3.5.0
+    i080.9.04 oslo.middleware-6.2.0
+    i080.9.05 oslo.metrics-0.9.0
+    i080.9.06 oslo.messaging-14.9.1
+    i080.9.07 oslo.db-16.0.0
+    i080.9.08 oslo.policy-4.4.0
+    i080.9.09 oslo.upgradecheck-2.4.0
+    i080.9.10 oslo.limit-2.5.0
+    i080.9.11 oslo.reports-3.4.0
+    i080.9.13 oslo.privsep-3.4.0
+    i080.9.14 oslo.versionedobjects-3.4.0
+    i070.9.02 castellan-5.1.1
+    i090.9.01 pycadf-3.1.1
+    i090.9.02 keystonemiddleware-10.7.1
+    i090.9.03 osprofiler-4.2.0
+    i090.9.06 glance_store-4.8.1
+    i090.9.07 os-win-5.9.0
+    i090.9.11 os_brick-6.9.1
+    i090.9.13 os_vif-3.7.0
 
 #####
 
@@ -386,7 +556,23 @@ D:
     pytz>=2013.6;python_version<"3.9" # MIT
     i010.9.19 tzdata-2024.2                 tzdata>=2022.4;python_version>="3.9" # MIT
 
-B:  i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
+B:
+    i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0
+    i040.9.14 python-barbicanclient-7.0.0
+    i040.9.15 python-neutronclient-11.3.1
+    i080.9.06 oslo.messaging-14.9.1
+    i080.9.08 oslo.policy-4.4.0
+    i080.9.11 oslo.reports-3.4.0
+    i080.9.14 oslo.versionedobjects-3.4.0
+    i075.9.01 cursive-0.2.3
+    i090.9.01 pycadf-3.1.1
+    i090.9.02 keystonemiddleware-10.7.1
+    i090.9.03 osprofiler-4.2.0
+    i090.9.05 taskflow-5.9.1
+    i090.9.06 glance_store-4.8.1
+    i090.9.11 os_brick-6.9.1
+    i090.9.13 os_vif-3.7.0
+    i090.9.14 tooz-6.3.0
 
 #####
 
@@ -409,7 +595,11 @@ D:
     i020.9.02 stevedore-5.3.0               stevedore>=1.20.0 # Apache-2.0
     b10.13.23.15 Packaging-24.1             packaging>=20.4 # BSD
 
-B:  i050.9.1  python-openstackclient-7.1.3
+B:
+    i050.9.1  python-openstackclient-7.1.3
+    i040.9.15 python-neutronclient-11.3.1
+    i090.9.02 keystonemiddleware-10.7.1
+    i090.9.06 glance_store-4.8.1
 
 ############### 
 

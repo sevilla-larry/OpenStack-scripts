@@ -129,6 +129,9 @@ A.  Preparation
 
         #export LANG=C.UTF-8
 
+        pathprepend /usr/local/bin  PATH
+        pathprepend /usr/local/sbin PATH
+
         ###
 
     A.05. check /etc/hosts
@@ -147,6 +150,7 @@ B.  Support Applications - minor
         echo $NPROC           # $(nproc)
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
+        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 
         echo $SHELL           # /bin/bash
         ls -l /bin/sh         # bash

@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i010.9.03 cryptography-42.0.8
+#               i010.9.03 cryptography-41.0.7
 #               i080.9.13 oslo.privsep-3.4.0
 #
 

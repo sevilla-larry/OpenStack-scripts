@@ -18,8 +18,8 @@
 # Required by:
 #
 #               i040.9.11 python-keystoneclient-5.5.0
-#               i040.9.15 python-neutronclient-11.3.1
 #               i050.9.1  python-openstackclient-7.1.3
+#               i040.9.15 python-neutronclient-11.3.1
 #
 
 export PKG="osc-lib-3.1.0"

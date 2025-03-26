@@ -15,10 +15,10 @@
 #               i030.9.03.oslo.config-9.6.0
 #               i040.9.11 python-keystoneclient-5.5.0
 #               i040.9.12 python-cinderclient-9.6.0
+#               i050.9.1  python-openstackclient-7.1.3
 #               i040.9.13 python-glanceclient-4.7.0
 #               i040.9.14 python-barbicanclient-7.0.0
 #               i040.9.15 python-neutronclient-11.3.1
-#               i050.9.1  python-openstackclient-7.1.3
 #               i080.9.01 oslo.cache-3.8.0
 #               i080.9.02 oslo.concurrency-6.1.0
 #               i080.9.03 oslo.service-3.5.0

@@ -19,8 +19,8 @@
 #
 # Required by:
 #
-#               i040.9.15 python-neutronclient-11.3.1
 #               i050.9.1  python-openstackclient-7.1.3
+#               i040.9.15 python-neutronclient-11.3.1
 #               i090.9.02 keystonemiddleware-10.7.1
 #               i090.9.06 glance_store-4.8.1
 #
