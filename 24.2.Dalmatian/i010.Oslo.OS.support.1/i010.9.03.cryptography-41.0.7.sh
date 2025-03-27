@@ -17,13 +17,13 @@
 #               i050.9.1  python-openstackclient-7.1.3
 #               i010.9.26 pyOpenSSL-23.3.0
 #               i095.9.14 pysaml2-7.5.0
-#               i151.9.3  KeyStone-26.0.0
+#               i151.3    KeyStone-26.0.0
 #               i070.9.02 castellan-5.1.1
 #               i075.9.01 cursive-0.2.3
-#               i153.9.3  Glance-29.0.0
+#               i153.3    Glance-29.0.0
 #               i095.9.24 jwcrypto-1.5.6
 #               i095.9.22 paramiko-3.5.1
-#               i111.9.3  Nova-30.0.0
+#               i111.3    Nova-30.0.0
 #
 
 export PKG="cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl"

@@ -19,7 +19,7 @@
 #
 # Required by:
 #
-#               i151.9.3  KeyStone-26.0.0
+#               i151.3    KeyStone-26.0.0
 #
 
 export PKG="pysaml2-7.5.0-py3-none-any.whl"
