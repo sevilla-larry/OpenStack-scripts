@@ -16,6 +16,7 @@
 #
 #               i151.3    KeyStone-26.0.0
 #               i153.3    Glance-29.0.0
+#               i152.3    Openstack-Placement-12.0.0
 #
 
 export PKG="oslo.upgradecheck-2.4.0"

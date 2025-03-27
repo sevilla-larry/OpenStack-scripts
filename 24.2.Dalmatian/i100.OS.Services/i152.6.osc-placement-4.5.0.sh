@@ -4,10 +4,10 @@
 #
 # Dependencies Required:
 #
-#               i010.9.01 pbr-6.1.0
-#               i010.9.19 keystoneauth1-5.8.0
-#               i010.9.38 osc-lib-3.1.0
-#               i010.9.39 oslo.utils-7.3.0
+#               i020.9.01 pbr-6.1.0
+#               i020.9.04 keystoneauth1-5.8.0
+#               i040.9.03 osc-lib-3.1.0
+#               i030.9.02 oslo.utils-7.3.0
 #
 
 export PKG="osc-placement-4.5.0"

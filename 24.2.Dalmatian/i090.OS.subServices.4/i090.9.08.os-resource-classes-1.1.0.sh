@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i152.9.3  Placement-12.0.0
+#               i152.3    Openstack-Placement-12.0.0
 #
 
 export PKG="os-resource-classes-1.1.0"

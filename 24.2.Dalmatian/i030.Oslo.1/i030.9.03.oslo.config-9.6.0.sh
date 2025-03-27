@@ -40,6 +40,7 @@
 #               i090.9.13 os_vif-3.7.0
 #               i151.3    KeyStone-26.0.0
 #               i153.3    Glance-29.0.0
+#               i152.3    Openstack-Placement-12.0.0
 #
 
 export PKG="oslo.config-9.6.0"

@@ -9,7 +9,7 @@
 #
 
 export PKG="otp_src_26.2.5.5"
-export PKGLOG_DIR=$OSLOG/005.01
+export PKGLOG_DIR=$OSLOG/045.01
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

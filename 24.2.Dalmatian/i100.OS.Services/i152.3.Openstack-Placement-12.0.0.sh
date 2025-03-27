@@ -4,6 +4,32 @@
 # https://docs.openstack.org/placement/2024.2/install/from-pypi.html
 #
 
+#
+# Dependencies Required:
+#
+#               i020.9.01 pbr-6.1.0
+#               i060.9.19 sqlalchemy-2.0.37
+#               i090.9.02 keystonemiddleware-10.7.1
+#               i060.9.08 Routes-2.5.1
+#               i060.9.02 WebOb-1.8.7
+#               i010.9.24 jsonschema-4.23.0
+#               b30.13.23.30 Requests-2.32.3
+#               a.08.55   Setuptools-72.2.0.sh
+#               i080.9.02 oslo.concurrency-6.1.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.05 oslo.context-5.6.0
+#               i030.9.06 oslo.log-6.1.2
+#               i030.9.04 oslo.serialization-5.5.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i080.9.07 oslo.db-16.0.0
+#               i080.9.08 oslo.policy-4.4.0
+#               i080.9.04 oslo.middleware-6.2.0
+#               i080.9.09 oslo.upgradecheck-2.4.0
+#               i090.9.08 os-resource-classes-1.1.0
+#               i090.9.09 os-traits-3.1.0
+#               i090.9.10 microversion-parse-2.0.0
+#
+
 export PKG="openstack-placement-12.0.0"
 export PKGLOG_DIR=$OSLOG/152.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log

@@ -17,6 +17,7 @@
 #               i151.3    KeyStone-26.0.0
 #               i090.9.05 taskflow-5.9.1
 #               i090.9.06 glance_store-4.8.1
+#               i152.3    Openstack-Placement-12.0.0
 #
 
 export PKG="jsonschema-4.23.0"

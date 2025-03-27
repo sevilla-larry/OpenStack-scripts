@@ -21,6 +21,7 @@
 #               i090.9.11 os_brick-6.9.1
 #               i090.9.13 os_vif-3.7.0
 #               i153.3    Glance-29.0.0
+#               i152.3    Openstack-Placement-12.0.0
 #
 
 export PKG="oslo.concurrency-6.1.0"

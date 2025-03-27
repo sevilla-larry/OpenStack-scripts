@@ -73,6 +73,29 @@
 # i4xx Integration Enablers
 #
 
+
+
+
+
+# for 25.1 Epoxy
+# numbering based on:
+#   https://releases.openstack.org/epoxy/index.html
+#
+# i0 { caller }
+# i1 OpenStack and Oslo Support Apps 
+# i2 OpenStack Support Apps - Major
+# i3 { reserve }
+# i4 Library Projects
+# i5 Service Client Projects
+# i6 Service Projects
+# i7 Horizon Plugins
+# i8 Other Projects
+# i9 Tempest Plugins
+
+
+
+
+
 #
 # Process
 #
