@@ -21,6 +21,7 @@
 #
 #               i080.9.06 oslo.messaging
 #               i151.3    KeyStone-26.0.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="oslo.middleware-6.2.0"

@@ -25,6 +25,7 @@
 #               i070.9.02 castellan-5.1.1
 #               i090.9.02 keystonemiddleware-10.7.1
 #               i090.9.06 glance_store-4.8.1
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="keystoneauth1-5.8.0"

@@ -20,6 +20,7 @@
 #               i080.9.07 oslo.db-16.0.0
 #               i090.9.01 pycadf-3.1.1
 #               i090.9.13 os_vif-3.7.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="debtcollector-3.0.0"

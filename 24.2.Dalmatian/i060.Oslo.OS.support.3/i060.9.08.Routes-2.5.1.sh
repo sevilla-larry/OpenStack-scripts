@@ -11,6 +11,7 @@
 # Required by:
 #
 #               i080.9.03 oslo.service-3.5.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="Routes-2.5.1"

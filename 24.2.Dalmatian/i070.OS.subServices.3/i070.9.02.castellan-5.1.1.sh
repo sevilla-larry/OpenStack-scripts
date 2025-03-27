@@ -21,6 +21,7 @@
 # Required by:
 #
 #               i075.9.01 cursive-0.2.3
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="castellan-5.1.1"

@@ -19,6 +19,7 @@
 #
 #               i151.3    KeyStone-26.0.0
 #               i080.9.09 oslo.upgradecheck-2.4.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="oslo.policy-4.4.0"

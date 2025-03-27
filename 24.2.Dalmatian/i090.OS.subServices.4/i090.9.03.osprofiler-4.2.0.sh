@@ -18,6 +18,7 @@
 # Required by:
 #
 #               i151.3    KeyStone-26.0.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="osprofiler-4.2.0"

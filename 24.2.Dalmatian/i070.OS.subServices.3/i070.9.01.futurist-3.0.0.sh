@@ -7,6 +7,7 @@
 #               i080.9.06 oslo.messaging-14.9.1
 #               i090.9.05 taskflow-5.9.1
 #               i090.9.14 tooz-6.3.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="futurist-3.0.0"

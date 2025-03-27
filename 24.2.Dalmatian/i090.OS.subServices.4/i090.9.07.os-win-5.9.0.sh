@@ -17,7 +17,7 @@
 # Required by:
 #
 #               i090.9.11 os_brick-6.9.1
-#               i153.9.3  Glance-29.0.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="os-win-5.9.0"

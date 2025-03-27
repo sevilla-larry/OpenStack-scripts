@@ -16,7 +16,7 @@
 #
 # Required by:
 #
-#               i153.8 Glance-29.0.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="oslo.reports-3.4.0"

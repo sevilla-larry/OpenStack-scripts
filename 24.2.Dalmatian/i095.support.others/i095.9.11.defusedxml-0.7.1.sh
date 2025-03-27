@@ -5,6 +5,7 @@
 # Required by:
 #
 #               i095.9.14 pysaml2-7.5.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="defusedxml-0.7.1"

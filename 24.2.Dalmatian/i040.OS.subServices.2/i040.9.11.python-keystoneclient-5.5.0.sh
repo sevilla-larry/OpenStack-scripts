@@ -24,6 +24,7 @@
 #               i090.9.02 keystonemiddleware-10.7.1
 #               i090.9.06 glance_store-4.8.1
 #               i151.3    KeyStone-26.0.0
+#               i153.3    Glance-29.0.0
 #
 
 export PKG="python-keystoneclient-5.5.0"
