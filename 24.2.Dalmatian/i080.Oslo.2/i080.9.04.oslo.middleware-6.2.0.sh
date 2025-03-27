@@ -20,6 +20,7 @@
 # Required by:
 #
 #               i080.9.06 oslo.messaging
+#               i151.9.3  KeyStone-26.0.0
 #
 
 export PKG="oslo.middleware-6.2.0"

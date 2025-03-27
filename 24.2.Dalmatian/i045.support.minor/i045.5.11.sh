@@ -30,7 +30,7 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 echo "i045.9.92.Erlang-26.2.5.5"
 echo "i045.9.92.Erlang-26.2.5.5" >> $OSLOG_PROCESS
 
-time { bash i045.9.92.Erlang-26.2.5.5.sh ; }
+time { bash i045.9.01.Erlang-26.2.5.5.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

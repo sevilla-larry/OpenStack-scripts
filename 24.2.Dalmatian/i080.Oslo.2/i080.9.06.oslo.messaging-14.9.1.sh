@@ -25,8 +25,8 @@
 #
 # Required by:
 #
-#               i080.9.14 oslo.versionedobjects-3.4.0
 #               i151.9.3  KeyStone-26.0.0
+#               i080.9.14 oslo.versionedobjects-3.4.0
 #
 
 export PKG="oslo.messaging-14.9.1"

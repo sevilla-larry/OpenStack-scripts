@@ -16,8 +16,8 @@
 #
 # Required by:
 #
-#               i040.9.15 python-neutronclient-11.3.1
 #               i080.9.01 oslo.cache-3.8.0
+#               i040.9.15 python-neutronclient-11.3.1
 #               i080.9.03 oslo.service-3.5.0
 #               i080.9.05 oslo.metrics-0.9.0
 #               i080.9.06 oslo.messaging-14.9.1
@@ -30,6 +30,7 @@
 #               i090.9.07 os-win-5.9.0
 #               i090.9.11 os_brick-6.9.1
 #               i090.9.13 os_vif-3.7.0
+#               i151.9.3  KeyStone-26.0.0
 #
 
 export PKG="oslo.log-6.1.2"

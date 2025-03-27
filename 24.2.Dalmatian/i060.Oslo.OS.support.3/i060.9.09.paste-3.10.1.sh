@@ -2,6 +2,12 @@
 #
 
 #
+# Dependencies Required:
+#
+#               a.08.55   Setuptools-72.2.0.sh
+#
+
+#
 # Required by:
 #
 #               i080.9.03 oslo.service-3.5.0

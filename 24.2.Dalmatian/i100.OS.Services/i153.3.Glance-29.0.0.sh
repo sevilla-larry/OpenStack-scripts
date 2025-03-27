@@ -6,10 +6,48 @@
 #
 # Dependencies Required:
 #
+#               i020.9.01 pbr-6.1.0
+#               i095.9.11 defusedxml-0.7.1
+#               i060.9.19 sqlalchemy-2.0.37
+#               i060.9.05 eventlet-0.36.1
+#               i060.9.06 PasteDeploy-3.1.0
+#               i060.9.08 Routes-2.5.1
+#               i060.9.02 WebOb-1.8.7
+#               i060.9.20 alembic-1.13.3
+#               i095.9.15 httplib2-0.22.0
+#               i030.9.03 oslo.config-9.6.0
+#               i080.9.02 oslo.concurrency-6.1.0
+#               i030.9.05 oslo.context-5.6.0
+#               i080.9.09 oslo.upgradecheck-2.4.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i020.9.02 stevedore-5.3.0
+#               i070.9.01 futurist-3.0.0
+#               i090.9.05 taskflow-5.9.1
+#               i020.9.04 keystoneauth1-5.8.0
+#               i090.9.02 keystonemiddleware-10.7.1
+#               i095.9.19 WSME-0.12.1
+#               i010.9.08 prettytable-3.11.0
+#               i060.9.09 paste-3.10.1
+#               i010.9.24 jsonschema-4.23.0
+#               i040.9.11 python-keystoneclient-5.5.0
+#               i080.9.07 oslo.db-16.0.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i080.9.10 oslo.limit-2.5.0
+#               i030.9.06 oslo.log-6.1.2
+#               i080.9.06 oslo.messaging-14.9.1
+#               i080.9.04 oslo.middleware-6.2.0
+#               i080.9.11 oslo.reports-3.4.0
+#               i080.9.08 oslo.policy-4.4.0
+#               i095.9.20 retrying-1.3.4
+#               i090.9.03 osprofiler-4.2.0
+#               i090.9.06 glance_store-4.8.1
+#               i020.9.06 debtcollector-3.0.0
 #               i010.9.03 cryptography-41.0.7
-#    ??
+#               i075.9.01 cursive-0.2.3
+#               i010.9.09 iso8601-2.1.0
+#               i090.9.07 os-win-5.9.0
+#               i070.9.02 castellan-5.1.1
 #
-
 
 export PKG="glance-29.0.0"
 export PKGLOG_DIR=$OSLOG/153.1

@@ -12,6 +12,7 @@
 #
 #               i060.9.20 alembic-1.13.3
 #               i080.9.07 oslo.db-16.0.0
+#               i151.9.3  KeyStone-26.0.0
 #
 
 export PKG="sqlalchemy-2.0.37"

@@ -14,8 +14,8 @@
 #
 # Required by:
 #
+#               i151.9.3  KeyStone-26.0.0
 #               i090.9.02 keystonemiddleware-10.7.1
-#               i151.9.1  KeyStone-26.0.0
 #
 
 export PKG="oslo.cache-3.8.0"
