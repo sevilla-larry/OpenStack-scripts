@@ -1,0 +1,32 @@
+# Python OpenStack sub-Services Apps - 2
+
+
+# 11 python_keystoneclient-5.6.0
+fd5336428ed27a1413365c662cdce9c9 python_keystoneclient-5.6.0.tar.gz
+
+
+# 01 cliff-4.7.0
+f2f7cf512ffd8a1a0ba82481fde7056b cliff-4.7.0.tar.gz
+
+# 02 openstacksdk-4.0.1
+90af9da354a4389d487a0165919af72f openstacksdk-4.0.1.tar.gz
+
+# 03 osc-lib-3.1.0
+62509f72b5d68233e86812d45f9daf0f osc-lib-3.1.0.tar.gz
+
+# 04 os-client-config-2.1.0
+cb8e78d37424f9f8c28b1ff05d662b66 os-client-config-2.1.0.tar.gz
+
+
+# 12 python-cinderclient-9.6.0
+e9f12ae2884ab2f0a2b43f1936742fa2 python-cinderclient-9.6.0.tar.gz
+
+# 13 python-glanceclient-4.7.0
+acb3ce6cbf614c82f6c074d66a8ab6a6 python-glanceclient-4.7.0.tar.gz
+
+# 14 python-barbicanclient-7.0.0
+fe8c5ccee65db40ec1262878ce17aafa python-barbicanclient-7.0.0.tar.gz
+
+# 15 python-neutronclient-11.3.1
+b1dc176249c9a7973874999a2c6f54c8 python-neutronclient-11.3.1.tar.gz
+

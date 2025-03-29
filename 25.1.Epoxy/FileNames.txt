@@ -2,24 +2,25 @@
 #   https://releases.openstack.org/epoxy/index.html
 #
 
-i0 { caller }
-i1 OpenStack and Oslo Support Apps 
-i2 OpenStack Support Apps - Major
-i3 { reserve }
-i4 Library Projects
-i5 Service Client Projects
-i6 Service Projects
-i7 Horizon Plugins
-i8 Other Projects
-i9 Tempest Plugins
+i0 { groupings / caller }
+i1 OS support minor
+i2 OS support Major
+i3 OS Hosted apps
+i4 OS Library Projects
+i5 OS Service Client Projects
+i6 OS Service Projects
+i7 OS Horizon Plugins
+i8 OS Other Projects
+i9 OS Tempest Plugins
 
 
+i4 OS Library Projects
 i4.01.castellan
 i4.02.ceilometermiddleware
-i4.03.cliff
+*i4.03.cliff
 i4.04.glance-store
 i4.05.heat-translator
-i4.06.keystoneauth
+*i4.06.keystoneauth
 i4.07.keystonemiddleware
 i4.08.kuryr
 i4.09.metalsmith
@@ -27,13 +28,13 @@ i4.10.mistral-extra
 i4.11.mistral-lib
 i4.12.neutron-lib
 i4.13.octavia-lib
-i4.14.openstacksdk
+*2-i4.14.openstacksdk
 i4.15.os-brick
 i4.16.os-ken
 i4.17.os-vif
-i4.18.osc-lib
+*2-i4.18.osc-lib
 i4.19.ovsdbapp
-i4.20.stevedore
+*i4.20.stevedore
 i4.21.sushy
 i4.22.taskflow
 i4.23.tosca-parser
@@ -43,7 +44,7 @@ i4.32.oslo.concurrency
 i4.33.oslo.config
 i4.34.oslo.context
 i4.35.oslo.db
-i4.36.oslo.i18n
+*i4.36.oslo.i18n
 i4.37.oslo.limit
 i4.38.oslo.log
 i4.39.oslo.messaging
@@ -56,10 +57,12 @@ i4.45.oslo.rootwrap
 i4.46.oslo.serialization
 i4.47.oslo.service
 i4.48.oslo.upgradecheck
-i4.49.oslo.utils
+*i4.49.oslo.utils
 i4.50.oslo.versionedobjects
 i4.51.oslo.vmware
 
+
+i5 OS Service Client Projects
 i5.01.osc-placement
 i5.02.python-adjutantclient
 i5.03.python-aodhclient
@@ -93,6 +96,7 @@ i5.30.python-watcherclient
 i5.31.python-zaqarclient
 i5.32.python-zunclient
 
+i6 OS Service Projects
 i6.01.adjutant
 i6.02.aodh
 i6.03.barbican
@@ -129,6 +133,7 @@ i6.33.watcher
 i6.34.zaqar
 i6.35.zun
 
+i7 OS Horizon Plugins
 i7.01.adjutant-ui
 i7.02.blazar-dashboard
 i7.03.cloudkitty-dashboard
@@ -151,6 +156,7 @@ i7.19.watcher-dashboard
 i7.20.zaqar-ui
 i7.21.zun-ui
 
+i8 OS Other Projects
 i8.01.ansible-role-atos-hsm
 i8.02.ansible-role-lunasa-hsm
 i8.03.ansible-role-thales-hsm
@@ -173,11 +179,12 @@ i8.19.neutron-fwaas
 i8.20.neutron-vpnaas
 i8.21.ovn-bgp-agent
 i8.22.ovn-octavia-provider
-i8.23.python-openstackclient
+*i8.23.python-openstackclient
 i8.24.release-test
 i8.25.tap-as-a-service
 i8.26.tempest
 
+i9 OS Tempest Plugins
 i9.01.barbican-tempest-plugin
 i9.02.blazar-tempest-plugin
 i9.03.cinder-tempest-plugin

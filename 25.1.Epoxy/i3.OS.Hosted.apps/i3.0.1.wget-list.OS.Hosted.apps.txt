@@ -1,0 +1,15 @@
+# Python OpenStack Hosted apps
+
+
+# i3.01 pbr-6.1.1
+https://tarballs.opendev.org/openstack/pbr/pbr-6.1.1.tar.gz
+
+# i3.02 os-service-types-1.7.0
+https://tarballs.opendev.org/openstack/os-service-types/os-service-types-1.7.0.tar.gz
+
+# i3.03 requestsexceptions-1.4.0
+https://tarballs.opendev.org/openstack/requestsexceptions/requestsexceptions-1.4.0.tar.gz
+
+# i3.04 debtcollector-3.0.0
+https://tarballs.opendev.org/openstack/debtcollector/debtcollector-3.0.0.tar.gz
+

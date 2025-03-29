@@ -5,12 +5,6 @@
 # Author: Sevilla, Larry
 #  eMail: sevilla.larry.prg@gmail.com
 #
-# Started: 2024/Nov 
-#          2024/Dec/06
-#               finished Python-OpenStackClient
-#                           and Support Python Apps
-#                               from Sources
-#
 # Guide based on:
 # https://docs.openstack.org/install-guide/index.html
 #
@@ -25,6 +19,16 @@
 # Groupings ( numbering based on: )
 # https://www.openstack.org/software/project-navigator/openstack-components#openstack-services
 #
+
+# 24.2 Dalmatian
+#
+# Started: 2024/Nov 
+#          2024/Dec/06
+#               finished Python-OpenStackClient
+#                           and Support Python Apps
+#                               from Sources
+# only finished Nova at Controller
+# Stopped 2025/Mar due to time constrained
 
 # i010 Oslo and OpenStack Support Apps - 1
 # i020 Openstack sub-Services - 1
@@ -76,8 +80,10 @@
 
 
 
-
-# for 25.1 Epoxy
+#
+# 25.1 Epoxy
+# Started: 2025/Apr
+#
 # numbering based on:
 #   https://releases.openstack.org/epoxy/index.html
 #
@@ -107,7 +113,7 @@
 #
 #   DL from OpenDev tarballs
 #
-#   build & install from .tar.gz, and (optionally) test
+#   Source build & install from .tar.gz, and (optionally) test
 #
 #   if there is error (minimal chance)
 #
@@ -117,7 +123,7 @@
 #
 # elseif Python App in PyPi
 #
-#   build & install from .tar.gz, and (optionally) test
+#   Source build & install from .tar.gz, and (optionally) test
 #
 #   if there is error (some apps)
 #

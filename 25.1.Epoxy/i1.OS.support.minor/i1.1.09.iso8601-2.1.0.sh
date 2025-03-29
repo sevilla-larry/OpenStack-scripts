@@ -1,18 +1,24 @@
-# i095.9.23.numpy-2.1.3.sh
+# i1.1.09.iso8601-2.1.0.sh
 #
 # Note: (alternative) .whl install
 # since the source build is giving ERRORs
 #
-# to B30.13.23
 
 #
 # Required by:
 #
-#               i095.9.26 websockify-0.12.0
+#               i4.14   openstacksdk-4.4.0
+#               i4.06   keystoneauth1-5.10.0
+#               i4.49   oslo.utils-8.2.0
+#               i8.23   python-openstackclient-7.4.0
+#               i?.??   python-neutronclient-11.3.1
+#               i?.??   Glance-29.0.0
+#               i?.??   Nova-30.0.0
+#               i?.??   oslo.versionedobjects-3.4.0
 #
 
-export PKG="numpy-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
-export PKGLOG_DIR=$OSLOG/095.23
+export PKG="iso8601-2.1.0-py3-none-any.whl"
+export PKGLOG_DIR=$OSLOG/1.1.09
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log

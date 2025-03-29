@@ -1,0 +1,28 @@
+# Python OpenStack Hosted Apps
+
+
+# i4.03
+7f6a2a8046eb190aaaff1adf5fed2f27 cliff-4.9.1.tar.gz
+
+# i4.06 keystoneauth1-5.10.0
+78a361c86a13c97342a19f5fa35cf726 keystoneauth1-5.10.0.tar.gz
+
+# i4.14 openstacksdk-4.4.0
+bf630eb421ebcde4b97e6778835fa5ba openstacksdk-4.4.0.tar.gz
+
+# i4.18 osc-lib-3.2.0
+ba12311dd67d186239e6b834aa419d2a osc-lib-3.2.0.tar.gz
+
+# i4.20 stevedore-5.4.1
+d8ce49d9a513d454bec0e897ce10062b stevedore-5.4.1.tar.gz
+
+
+# i4.36 oslo.i18n-6.5.1
+92a0ab4448eef3fb3ed473eb50600702 oslo_i18n-6.5.1.tar.gz
+
+# 02 oslo.utils-8.2.0
+92de3ac9bb25d889499717c95b86d65c oslo_utils-8.2.0.tar.gz
+
+
+# 06 debtcollector-3.0.0
+399a20e47b0aec6c3007beb7cc7e017a debtcollector-3.0.0.tar.gz
