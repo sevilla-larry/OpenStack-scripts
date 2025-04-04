@@ -106,8 +106,8 @@ A.  Preparation
 
         #export LANG=C.UTF-8
 
-        pathprepend /usr/local/bin  PATH
-        pathprepend /usr/local/sbin PATH
+        # pathprepend /usr/local/bin  PATH
+        # pathprepend /usr/local/sbin PATH
 
         ###
 

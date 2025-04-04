@@ -7,6 +7,7 @@
 #               i060.9.19 sqlalchemy-2.0.37
 #               i060.9.20 alembic-1.13.3
 #               i095.9.24 jwcrypto-1.5.6
+#                         pyOpenSSL
 #
 
 export PKG="typing_extensions-4.12.2"

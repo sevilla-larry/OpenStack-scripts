@@ -1,22 +1,14 @@
-# i1.1.07.cmd2-2.5.11.sh
-#
-
-#
-# Dependencies Required:
-#
-#?not required? ?b30.13.24.02 Attrs-24.2.0
-#               i1.1.05 pyperclip-1.9.0
-#               i1.1.06 wcwidth-0.2.13
+# i1.1.01.pycparser-2.22.sh
 #
 
 #
 # Required by:
 #
-#               i4.03   cliff-4.9.1
+#               i1.1.02 cffi-1.17.1
 #
 
-export PKG="cmd2-2.5.11"
-export PKGLOG_DIR=$OSLOG/1.1.07
+export PKG="pycparser-2.22"
+export PKGLOG_DIR=$OSLOG/1.1.01
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -52,13 +44,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                cmd2                    \
+                pycparser               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES

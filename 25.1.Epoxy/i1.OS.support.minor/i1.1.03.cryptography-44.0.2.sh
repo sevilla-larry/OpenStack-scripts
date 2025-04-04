@@ -1,4 +1,4 @@
-# i1.1.03.cryptography-41.0.7.sh
+# i1.1.03.cryptography-44.0.2.sh
 #
 # Note: (alternative) .whl install
 # since the source build is giving ERRORs
@@ -7,7 +7,7 @@
 #
 # Dependencies Required:
 #
-#               i1.1.02 cffi-1.16.0
+#               i1.1.02 cffi-1.17.1
 #
 
 #

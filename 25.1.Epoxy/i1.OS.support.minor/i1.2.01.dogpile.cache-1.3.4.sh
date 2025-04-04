@@ -5,7 +5,7 @@
 # Dependencies Required:
 #
 #               i1.1.10 decorator-5.1.1
-#               i4.20   stevedore-5.3.0
+#               i4.20   stevedore-5.4.1
 #
 
 #
@@ -24,6 +24,7 @@ export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+export SOURCES=`pwd`
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -61,8 +62,9 @@ echo "4. pyTest ..." >> $PKGLOG_ERROR
 pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
+unset SOURCES
 unset OSLOG_PROCESS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_CHECK

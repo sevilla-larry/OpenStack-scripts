@@ -1,20 +1,28 @@
-# i1.1.01.pycparser-2.21.sh
+# i1.1.02.cffi-1.17.1.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i1.1.01 pycparser-2.22
 #
 
 #
 # Required by:
 #
-#               i1.1.02 cffi-1.16.0
+#               i1.1.03 cryptography-44.0.2
+#               i?.??   oslo.privsep-3.4.0
 #
 
-export PKG="pycparser-2.21"
-export PKGLOG_DIR=$OSLOG/1.1.01
+export PKG="cffi-1.16.0"
+export PKGLOG_DIR=$OSLOG/1.1.02
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+export SOURCES=`pwd`
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -43,7 +51,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                pycparser               \
+                cffi                    \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."
@@ -52,8 +60,9 @@ echo "4. pyTest ..." >> $PKGLOG_ERROR
 pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
+unset SOURCES
 unset OSLOG_PROCESS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_CHECK

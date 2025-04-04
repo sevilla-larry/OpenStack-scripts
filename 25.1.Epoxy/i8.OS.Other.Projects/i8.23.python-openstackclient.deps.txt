@@ -2,6 +2,22 @@
 
 A:  i3.01 pbr-6.1.1                                 pbr!=2.1.0,>=2.0.0 # Apache-2.0                 No test
 
+D:
+    # PBR always implicitly depended on setuptools which until python3.12
+    # was included by default in python installations. Since python3.12
+    # setuptools is not included so we add an explicit dependency on
+    # setuptools here. For the sake of simplicity we don't set an
+    # environment marker restricting this to specific Python versions,
+    # since in older environments it should just be a no-op anyway.
+    #
+    # DO NOT add any other dependencies as PBR is meant to be minimalist
+    # to avoid problems with bootstrapping build environments.
+
+    setuptools
+        a.08.9x                     LfS 12.0
+        a.08.55 Setuptools-72.2.0   LfS 12.2
+        a.08.54 Setuptools-75.8.1   LfS 12.3
+
 B:
     i8.23 python-openstackclient-7.4.0
     i4.20 stevedore-5.4.1                           stevedore>=2.0.1 # Apache-2.0
@@ -41,25 +57,25 @@ B:
 
 ##########
 
-A:  i1.1.01 pycparser-2.21                            pycparser                                       with test
+A:  i1.1.01 pycparser-2.22                            pycparser                                       with test
 
-B:  i1.1.02 cffi-1.16.0                               cffi>=1.12
+B:  i1.1.02 cffi-1.17.1                               cffi>=1.12
 
 #####
 
-A:  i1.1.02 cffi-1.16.0                               cffi>=1.12                                      with test
+A:  i1.1.02 cffi-1.17.1                               cffi>=1.12                                      with test
 
-D:  i1.1.01 pycparser-2.21                            pycparser
+D:  i1.1.01 pycparser-2.22                            pycparser
 
 B:
-    i1.1.03 cryptography-41.0.7                       cryptography>=2.7 # BSD/Apache-2.0
+    i1.1.03 cryptography-44.0.2                       cryptography>=2.7 # BSD/Apache-2.0
     i080.9.13 oslo.privsep-3.4.0
 
 #####
 
-A:  i1.1.03 cryptography-41.0.7                       cryptography>=2.7 # BSD/Apache-2.0              No test
+A:  i1.1.03 cryptography-44.0.2                       cryptography>=2.7 # BSD/Apache-2.0              whl install
 
-D:  i1.1.02 cffi-1.16.0                               cffi>=1.12
+D:  i1.1.02 cffi-1.17.1                               cffi>=1.12
 
 B:
     i4.14   openstacksdk-4.4.0                      openstacksdk>=3.3.0 # Apache-2.0
@@ -99,7 +115,7 @@ B:
 A:  i1.1.07 cmd2-2.5.11                               cmd2>=1.0.0 # MIT                               with test
 
 D:
-    a.08.91.20.16 Attrs-25.1.0                        attrs >= 16.3.0
+??? a.08.91.20.16 Attrs-25.1.0                        attrs >= 16.3.0
     i1.1.05 pyperclip-1.9.0                           pyperclip >= 1.8
     i1.1.06 wcwidth-0.2.13                            wcwidth >= 0.2.10
 
@@ -109,7 +125,7 @@ B:  i4.03 cliff-4.9.1                               cliff>=3.5.0 # Apache-2.0
 
 A:  i1.1.08 prettytable-3.15.1                        PrettyTable>=0.7.2 # BSD                        No test
 
-D:  i1.1.06 wcwidth-0.2.13                            wcwidth >= 0.1.7
+D:  i1.1.06 wcwidth-0.2.13                            wcwidth ? >= 0.1.7 ?
 
 B:
     i4.03 cliff-4.9.1                               cliff>=3.5.0 # Apache-2.0
@@ -151,12 +167,12 @@ B:
 A:  i4.03 cliff-4.9.1                               cliff>=3.5.0 # Apache-2.0                       No test
 
 D:
-    i1.1.04 autopage-0.5.2                            autopage>=0.4.0 # Apache 2.0
-    importlib_metadata>=4.4;python_version<"3.10" # Apache-2.0
-    i1.1.07 cmd2-2.5.11               cmd2>=1.0.0 # MIT
-    i1.1.08 prettytable-3.15.1                        PrettyTable>=0.7.2 # BSD
+    i1.1.04 autopage-0.5.2                          autopage>=0.4.0 # Apache 2.0
+                                                    importlib_metadata>=4.4;python_version<"3.10" # Apache-2.0
+    i1.1.07 cmd2-2.5.11                             cmd2>=1.0.0 # MIT
+    i1.1.08 prettytable-3.15.1                      PrettyTable>=0.7.2 # BSD
     i4.20 stevedore-5.4.1                           stevedore>=2.0.1 # Apache-2.0
-    b30.13.23.28 PyYAML-6.0.2       PyYAML>=3.12 # MIT
+    b30.13.23.28 PyYAML-6.0.2                       PyYAML>=3.12 # MIT
 
 B:
     i8.23 python-openstackclient-7.4.0
@@ -193,7 +209,7 @@ A:  i1.2.01 dogpile_cache-1.3.4                     dogpile.cache>=0.6.5 # BSD  
 
 D:
     i1.1.10 decorator-5.2.1                         decorator>=4.4.1 # BSD
-    i4.20 stevedore-5.4.1                           stevedore>=2.0.1 # Apache-2.0
+    i4.20 stevedore-5.4.1                           stevedore>=3.0.0 # Apache-2.0
 
 B:
     i4.14   openstacksdk-4.4.0                      openstacksdk>=3.3.0 # Apache-2.0
@@ -282,7 +298,7 @@ B:  i4.14   openstacksdk-4.4.0                      openstacksdk>=3.3.0 # Apache
 A:  i4.14   openstacksdk-4.4.0                      openstacksdk>=3.3.0 # Apache-2.0                                No test
 
 D:
-    i1.1.03 cryptography-41.0.7                     cryptography>=2.7 # BSD/Apache-2.0
+    i1.1.03 cryptography-44.0.2                     cryptography>=2.7 # BSD/Apache-2.0
     i1.1.10 decorator-5.2.1                         decorator>=4.4.1 # BSD
     i1.2.01 dogpile_cache-1.3.4                     dogpile.cache>=0.6.5 # BSD
     i1.1.09 iso8601-2.1.0                           iso8601>=0.1.11 # MIT
@@ -297,7 +313,7 @@ PyYAML>=3.13 # MIT
     i3.03   requestsexceptions-1.4.0                requestsexceptions>=1.2.0 # Apache-2.0
 typing-extensions>=4.12.0 # PSF
 
-    i1.1.03 cryptography-41.0.7                     cryptography>=2.7 # BSD/Apache-2.0
+    i1.1.03 cryptography-44.0.2                     cryptography>=2.7 # BSD/Apache-2.0
     i010.9.10 decorator-5.1.1               decorator>=4.4.1 # BSD
     i025.9.01 dogpile.cache-1.3.3           dogpile.cache>=0.6.5 # BSD
     i1.1.09 iso8601-2.1.0                           iso8601>=0.1.11 # MIT
@@ -571,7 +587,7 @@ B:
 
 #####
 
-A:  i040.9.11 python-keystoneclient-5.5.0   python-keystoneclient>=3.22.0 # Apache-2.0                      No test
+A:  ???i040.9.11 python-keystoneclient-5.6.0   python-keystoneclient>=3.22.0 # Apache-2.0                      No test
 
 D:
     # Requirements lower bounds listed here are our best effort to keep them up to
@@ -627,7 +643,7 @@ D:
 
     i3.01 pbr-6.1.1                                 pbr!=2.1.0,>=2.0.0 # Apache-2.0
 
-    i1.1.03 cryptography-41.0.7                     cryptography>=2.7 # BSD/Apache-2.0
+    i1.1.03 cryptography-44.0.2                     cryptography>=2.7 # BSD/Apache-2.0
     i4.03   cliff-4.9.1                             cliff>=3.5.0 # Apache-2.0
     i1.1.09 iso8601-2.1.0                           iso8601>=0.1.11 # MIT
     i4.14   openstacksdk-4.4.0                      openstacksdk>=3.3.0 # Apache-2.0
@@ -636,7 +652,7 @@ D:
     python-keystoneclient>=3.22.0 # Apache-2.0
     python-cinderclient>=3.3.0 # Apache-2.0
     requests>=2.27.0 # Apache-2.0
-    i4.20 stevedore-5.4.1                           >=2.0.1 # Apache-2.0
+    i4.20 stevedore-5.4.1                           stevedore>=2.0.1 # Apache-2.0
 
     # Requirements lower bounds listed here are our best effort to keep them up to
     # date but we do not test them so no guarantee of having them all correct. If
@@ -644,7 +660,7 @@ D:
 
     i3.01 pbr-6.1.1                                 pbr!=2.1.0,>=2.0.0 # Apache-2.0
 
-    i1.1.03 cryptography-41.0.7                       cryptography>=2.7 # BSD/Apache-2.0
+    i1.1.03 cryptography-44.0.2                       cryptography>=2.7 # BSD/Apache-2.0
     i4.03 cliff-4.9.1                               cliff>=3.5.0 # Apache-2.0
     i1.1.09 iso8601-2.1.0                             iso8601>=0.1.11 # MIT
     i4.14   openstacksdk-4.4.0            openstacksdk>=3.3.0 # Apache-2.0

@@ -1,18 +1,17 @@
 # Python OpenStack support minor
 
 
-# i1.1.01 pycparser-2.21
-48f7d743bf018f7bb2ffc5fb976d1492 pycparser-2.21.tar.gz
+# i1.1.01 pycparser-2.22
+8922b0b1b53b419e3a38fba4aa43a348 pycparser-2.22.tar.gz
 
-# i1.1.02 cffi-1.16.0
-0bcaed453da3004d0bea103038345c1e cffi-1.16.0.tar.gz
+# i1.1.02 cffi-1.17.1
+4336ca58b2df0cc3b163884d5fa2e5e2 cffi-1.17.1.tar.gz
 
-# i1.1.03 cryptography-41.0.7 dg to  due to pyOpenSSL-23.3.0, if no acceptable, ug pyOpenSSL   ?43.0.3 ??3.4.8
-65ca27d709ff936a0506cd0aaf80381a cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl
-#c06f01c4bc95327c2e4378589ed5a193 cryptography-41.0.7.tar.gz
+# i1.1.03 cryptography-44.0.2 so far working with pyOpenSSL 25.0.0
+# previous note ( 41.0.7 dg to  due to pyOpenSSL-23.3.0, if not acceptable, ug pyOpenSSL   ?43.0.3 ??3.4.8 )
+267a0974c09a5b26583d2204794690d7 cryptography-44.0.2-cp39-abi3-manylinux_2_34_x86_64.whl
+#65ca27d709ff936a0506cd0aaf80381a cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl
 #29b9a531187b47ee0651d97b2e50f226 cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl
-#e0669c198e0aecdcd68a2adef030f5a6 cryptography-43.0.3.tar.gz
-#e8b3e233556690acdc026b432a57c3fa cryptography-3.4.8.tar.gz
 
 # i1.1.04 autopage-0.5.2
 57936e4a9d379fe4a60eb617d8cdce33 autopage-0.5.2.tar.gz
@@ -27,7 +26,9 @@
 8d5f8d668772c418e0e55942a2adcd8b cmd2-2.5.11.tar.gz
 
 # i1.1.08 prettytable-3.15.1
-738581362aa4acb73e4f8c4f38652501 prettytable-3.15.1.tar.gz
+# Note: 3.11.0 source build
+#738581362aa4acb73e4f8c4f38652501 prettytable-3.15.1.tar.gz
+c0ffad6f69d85eb40a340ffe93d9d610 prettytable-3.15.1-py3-none-any.whl
 
 # i1.1.09 iso8601-2.1.0
 #6e33910eba87066b3be7fcf3d59d16b5 iso8601-2.1.0.tar.gz              # giving ERRORs
