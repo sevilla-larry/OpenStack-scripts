@@ -1,7 +1,7 @@
 # Python OpenStack support minor
 
 
-# i1.1.01 pycparser-2.21
+# i1.1.01 pycparser-2.21    ???
 https://files.pythonhosted.org/packages/5e/0b/95d387f5f4433cb0f53ff7ad859bd2c6051051cebbb564f139a999ab46de/pycparser-2.21.tar.gz
 
 # i1.1.02 cffi-1.16.0
@@ -17,10 +17,10 @@ https://files.pythonhosted.org/packages/62/bd/69628ab50368b1beb900eb1de5c46f8137
 # i1.1.04 autopage-0.5.2
 https://files.pythonhosted.org/packages/9f/9e/559b0cfdba9f3ed6744d8cbcdbda58880d3695c43c053a31773cefcedde3/autopage-0.5.2.tar.gz
 
-# i1.1.05 pyperclip-1.9.0
+# i1.1.05 pyperclip-1.9.0   ???
 https://files.pythonhosted.org/packages/30/23/2f0a3efc4d6a32f3b63cdff36cd398d9701d26cda58e3ab97ac79fb5e60d/pyperclip-1.9.0.tar.gz
 
-# i1.1.06 wcwidth-0.2.13
+# i1.1.06 wcwidth-0.2.13    ???
 https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz
 
 # i1.1.07 cmd2-2.5.11
@@ -40,7 +40,7 @@ https://files.pythonhosted.org/packages/43/fa/6d96a0978d19e17b68d634497769987b16
 # i1.1.11 jmespath-1.0.1
 https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz
 
-# i1.1.12 jsonpointer-3.0.0
+# i1.1.12 jsonpointer-3.0.0     ???
 https://files.pythonhosted.org/packages/6a/0a/eebeb1fa92507ea94016a2a790b93c2ae41a7e18778f85471dc54475ed25/jsonpointer-3.0.0.tar.gz
 
 # i1.1.13 jsonpatch-1.33
@@ -58,11 +58,6 @@ https://files.pythonhosted.org/packages/54/90/188b2a69654f27b221fba92fda72177782
 # i1.1.17 wrapt-1.16.0
 https://files.pythonhosted.org/packages/95/4c/063a912e20bcef7124e0df97282a8af3ff3e4b603ce84c481d6d7346be0a/wrapt-1.16.0.tar.gz
 
-# i1.1.18 pyparsing-3.2.3
-https://files.pythonhosted.org/packages/bb/22/f1129e69d94ffff626bdb5c835506b3a5b4f3d070f17ea295e12c2c6f60f/pyparsing-3.2.3.tar.gz
-
-# i1.1.19 tzdata-2025.2
-https://files.pythonhosted.org/packages/95/32/1a225d6164441be760d75c2c42e2780dc0873fe382da3e98a2e1e48361e5/tzdata-2025.2.tar.gz
 
 
 # 20 rfc3986-2.0.0
@@ -94,3 +89,13 @@ https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49b
 
 # i1.2.01 
 https://files.pythonhosted.org/packages/cb/b7/2fa37f52b4f38bc8eb6d4923163dd822ca6f9e2f817378478a5de73b239e/dogpile_cache-1.3.4.tar.gz
+
+
+
+
+
+# z1.1.18 pyparsing-3.2.3   to B30
+#https://files.pythonhosted.org/packages/bb/22/f1129e69d94ffff626bdb5c835506b3a5b4f3d070f17ea295e12c2c6f60f/pyparsing-3.2.3.tar.gz
+
+# z1.1.19 tzdata-2025.2     to A.08.9x
+https://files.pythonhosted.org/packages/95/32/1a225d6164441be760d75c2c42e2780dc0873fe382da3e98a2e1e48361e5/tzdata-2025.2.tar.gz

@@ -1,0 +1,1399 @@
+A.  Preparation
+
+    A.01. ( Assumming LfS is already running )
+
+        ###
+
+        rm -v /sources
+
+        ###
+
+        # (a) VM & VB
+
+            mkdir -v /mnt/Src/blfs.log
+            mkdir -v /mnt/Src/os.{src,log}
+
+            chmod -vR a+wt /mnt/Src/blfs.log
+            chmod -vR a+wt /mnt/Src/os.{src,log}
+
+            ln -sfv /mnt/Src/os.src /sources
+
+            ln -sfv /mnt/Src/blfs.log /var/log/blfs
+            ln -sfv /mnt/Src/os.log /var/log/os
+
+        # (b) PC
+
+            mkdir -pv /usr/src/os
+
+            mkdir -pv /var/log/{blfs,os}
+
+            chmod -vR a+wt /usr/src/os
+
+            chmod -vR a+wt /var/log/{blfs,os}
+
+            ln -sfv /usr/src/os /sources
+
+        ###
+
+        cd /sources
+
+        ###
+
+    A.02. Copy all script files
+
+        copy all script files from the following to /sources
+
+            01. i1.OS.support.minor
+            02. i2.OS.support.Major
+            03. i3.OS.Hosted.apps
+            04. i4.OS.Library.Projects
+            05. i5.OS.Service.Client.Projects
+            06. i6.OS.Service.Projects
+            07. i7.OS.Horizon.Plugins
+            08. i8.OS.Other.Projects
+
+            # BLfS
+            09. b10.common.Xorg.and.servers
+            10. b30.OpenStack.support
+            11. c11.MariaDB
+            12. c13.Apache
+          #?20. g11.common.Xfce.Gnome.apps.support
+
+    A.03. Download packages
+
+        ###
+
+        wget --input-file=b10.01.wget-list-sysv.common.Xorg.and.servers.txt --continue --directory-prefix=/sources
+        wget --input-file=b30.01.wget-list-sysv.OpenStack.support.txt       --continue --directory-prefix=/sources
+        wget --input-file=c11.01.wget-list-sysv.MariaDB.txt                 --continue --directory-prefix=/sources
+        wget --input-file=c13.01.wget-list-sysv.Apache.txt                  --continue --directory-prefix=/sources
+      # wget --input-file=g11
+
+        wget --input-file=i1.0.1.wget-list.OS.support.minor.txt             --continue --directory-prefix=/sources
+        wget --input-file=i2.0.1.wget-list.OS.support.Major.txt             --continue --directory-prefix=/sources
+        wget --input-file=i3.0.1.wget-list.OS.Hosted.apps.txt               --continue --directory-prefix=/sources
+        wget --input-file=i4.0.1.wget-list.OS.Library.Projects.txt          --continue --directory-prefix=/sources
+        wget --input-file=i5.0.1.wget-list.OS.Service.Client.Projects.txt   --continue --directory-prefix=/sources
+      # wget --input-file=i?
+        wget --input-file=i8.0.1.wget-list.OS.Other.Projects.txt            --continue --directory-prefix=/sources
+
+        # md5sum -c md5sums.txt
+        md5sum -c b10.02.md5sums.common.Xorg.and.servers.txt
+        md5sum -c b30.02.md5sums.OpenStack.support.txt
+        md5sum -c c11.02.md5sums.MariaDB.txt
+        md5sum -c c13.02.md5sums.Apache.txt
+      # md5sum -c g11.02.md5sums.common.Xfce.Gnome.apps.support.txt
+
+        md5sum -c i1.0.2.md5sums.OS.support.minor.txt
+      # md5sum -c i2.0.2.md5sums.OS.support.Major.txt
+        md5sum -c i3.0.2.md5sums.OS.Hosted.apps.txt
+        md5sum -c i4.0.2.md5sums.OS.Library.Projects.txt
+        md5sum -c i5.0.2.md5sums.OS.Service.Client.Projects.txt
+      # md5sum -c i?
+        md5sum -c i8.0.2.md5sums.OS.Other.Projects.txt
+
+        ###
+
+    A.04. Setting Up the Environment
+        ( Note: change the MAKEFLAGS based on the number of threads )
+
+        ###
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        #export LANG=C.UTF-8
+
+        pathprepend /usr/local/bin  PATH
+        pathprepend /usr/local/sbin PATH
+
+        ###
+
+    A.05. check /etc/hosts
+
+        # 10.0.0.11   localhost.controller    controller
+
+B.  Support Applications - minor
+
+    B.01. Checking Environment
+
+        ###
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
+
+        ###
+
+        ( display )
+        root [ /sources ]#
+
+    B.03. Generate Applications - minor
+
+        ###
+
+        bash i0.1.11.sh
+
+        ###
+
+C.  Support Applications - Major
+
+        ###
+
+        # Python OpenStack Client
+        # MariaDB, Apache, RabbitMQ, MemCacheD, EtcD
+        bash i000.1.11.2.support.apps.sh
+
+        ###
+
+D.  Support Apps - Major - Configuration 1
+
+    D.01. MariaDB configuration
+
+        ##### as root
+
+        ### edit /etc/mysql/my.cnf, add:
+
+        !includedir /etc/mysql/mariadb.conf.d/
+
+        ### create mariadb.conf.d subdirectory
+
+        mkdir /etc/mysql/mariadb.conf.d
+
+        ### add/create file /etc/mysql/mariadb.conf.d/99-openstack.cnf
+
+        [mysqld]
+        bind-address = 10.0.0.11
+
+        default-storage-engine = innodb
+        innodb_file_per_table = on
+        max_connections = 4096
+        collation-server = utf8_general_ci
+        character-set-server = utf8
+
+        ###
+
+    D.02. Activate some modules & add mod_wsgi to Apache HTTPD
+
+        ###
+
+        # Copy the output of:
+        mod_wsgi-express module-config
+
+        # and Paste into:
+        #
+        # /etc/httpd/httpd.conf
+        #
+
+        ServerName controller
+
+        ###
+        # other Modules to be Loaded
+        ###
+
+        # watchdog
+        # deflate
+        # logio
+        # negotiation
+
+        # Modules to be UnLoaded
+
+        # authz_groupfile
+
+        # apachectl -k restart
+
+        ###
+
+    D.03. BLfS bootscripts
+
+        ###
+
+        cd /mnt/Src/lfs.src/blfs-bootscripts-20240416       # VM/VB
+        cd /usr/src/lfs/blfs-bootscripts-20240416           # PC
+
+        ###
+
+        make install-mysql      # MariaDB
+        make install-httpd      # Apache
+#        make install-iptables   # iptables
+
+        reboot
+
+        ###
+
+E.  Support Apps - Major - Configuration 2
+
+    E.01. MariaDB
+
+        ###
+
+        mysql_secure_installation
+
+            current password                            <blank>
+            Switch to unix_socket authentication        n
+            set root password?                          Y
+            New Password                                openstack
+            Remove anonymous user?                      Y
+            Disallow root login remotely?               n
+            Remove test database and access to it?      Y
+            Reload privilege tables now?                Y
+
+        ###
+
+    E.02. Check if mod_wsgi is included in Apache
+
+        ###
+
+        apachectl -t -D DUMP_MODULES       # check if wsgi is running
+
+        ###
+
+    E.03. check MemCacheD
+
+        ###
+
+        echo "stats settings" | ncat 10.0.0.11 11211
+
+        ###
+
+F.  RabbitMQ
+
+        ### as root
+
+        # pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
+
+        #
+        # FAILED
+        #   su - rabbitmq -c 'rabbitmq-server -detached'
+        #
+        # rabbitmq-server -detached 
+        #
+        # rabbitmqctl start_app
+
+        export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
+
+        cp -v /var/lib/rabbitmq/.erlang.cookie /home/user
+        cp -v /var/lib/rabbitmq/.erlang.cookie /root
+
+        chmod 600 /home/user/.erlang.cookie
+        chmod 600 /root/.erlang.cookie
+
+        chown user:user /home/user/.erlang.cookie
+
+        #                    user      password
+        rabbitmqctl add_user openstack openstack
+
+        rabbitmqctl set_permissions openstack ".*" ".*" ".*"
+
+        ### to check
+
+        rabbitmqctl list_users
+
+        rabbitmqctl list_permissions
+
+            ###
+
+G.  OpenStack Services Support Apps
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+        export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
+
+        bash i000.1.11.3.support.apps.sh
+
+
+H.  KeyStone - Identity service
+
+    # ubuntu install, automatically created /etc/apache2/keystone.conf
+    # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
+    # https://docs.openstack.org/keystone/2024.2/install/keystone-install-obs.html
+
+    H.01. KeyStone database
+
+        ###
+
+        mysql
+        # or # mariadb
+
+        ### display:
+        #
+        # MariaDB [(none)]
+        #
+
+        CREATE DATABASE keystone;
+
+      # GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost'    \
+      #     IDENTIFIED BY 'KEYSTONE_DBPASS';
+      # GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%'            \
+      #     IDENTIFIED BY 'KEYSTONE_DBPASS';
+
+        GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost'    \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%'            \
+            IDENTIFIED BY 'openstack';
+
+        exit;
+
+        #
+        #
+        # end MariaDB
+        #
+        ###
+
+    H.02. KeyStone install
+
+        ###
+
+        bash i151.1.sh      # KeyStone
+
+        ###
+
+    H.03. KeyStone configuration
+
+        ### edit /etc/keystone/keystone.conf
+
+        [default]
+        log_dir = /var/log/keystone
+
+        [database]
+      # connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
+        connection = mysql+pymysql://keystone:openstack@controller/keystone
+
+        [token]
+        provider = fernet
+
+        ###
+
+        ### KeyStone Configuration
+        # https://docs.openstack.org/keystone/2024.2/configuration/index.html
+        # https://docs.openstack.org/keystone/2024.2/configuration/samples/index.html
+
+
+        ### REBOOT
+
+        reboot
+
+        ###
+
+    H.04. Populate the Identity service database
+
+        ###
+
+        su -s /bin/sh -c "keystone-manage db_sync" keystone
+    
+        ###
+
+    H.05. Initialize Fernet key repositories
+
+        ###
+
+        keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
+        keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
+
+        ###
+
+    H.06. Check some things
+
+        iptables -S
+
+            -P INPUT ACCEPT
+            -P FORWARD ACCEPT
+            -P OUTPUT ACCEPT
+
+        nc -w5 -z -v controller 5000
+        #ncat -w5 -z -v 10.0.0.11 5000
+
+            Ncat: Version 7.95 ( https://nmap.org/ncat )
+            Ncat: Connected to 10.0.0.11:5000.
+            Ncat: 0 bytes sent, 0 bytes received in 0.0x seconds.
+
+        lsof -i:5000
+
+            COMMAND  PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            httpd    ppp   root Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
+            httpd    ppp apache Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
+            httpd    ppp apache Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
+            httpd    ppp apache Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
+
+        curl -i http://controller:5000/v3
+        #curl -i http://10.0.0.11:5000/v3
+
+            HTTP/1.1 200 OK
+            Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
+            Server: Apache/2.4.62 (Unix) mod_wsgi/5.0.2 Python/3.11
+            Content-Length: 250
+            Vary: X-Auth-Token
+            x-openstack-request-id: req-........-....-....-....-............
+            Content-Type: application/json
+
+            {"version":
+             {"id": "v3.14", "status": "stable", "updated": "2020-04-07T00:00:00Z",
+              "links": [{"rel": "self", "href": "http://controller:5000/v3/"}],
+              "media-types": [{"base": "application/json",
+                               "type": "application/vnd.openstack.identity-v3+json"}]}}
+
+    H.07. Bootstrap the Identity service
+
+        ###
+
+      # keystone-manage bootstrap --bootstrap-password ADMIN_PASS \
+      #     --bootstrap-admin-url http://controller:5000/v3/ \
+      #     --bootstrap-internal-url http://controller:5000/v3/ \
+      #     --bootstrap-public-url http://controller:5000/v3/ \
+      #     --bootstrap-region-id RegionOne
+        keystone-manage bootstrap --bootstrap-password openstack \
+            --bootstrap-admin-url http://controller:5000/v3/ \
+            --bootstrap-internal-url http://controller:5000/v3/ \
+            --bootstrap-public-url http://controller:5000/v3/ \
+            --bootstrap-region-id RegionOne
+        ###
+
+#
+#    H.??. Remove/exclude wsgi-test.conf
+#
+#        ### edit /etc/httpd/httpd.conf
+#
+#        ### remove/exclude test, add wsgi-keystone app
+#        #Include /etc/httpd/extra/wsgi-test.conf
+#        Include /etc/httpd/extra/wsgi-keystone.conf
+#
+#        # Verify
+#        ServerName controller
+#
+#        ### Create the /etc/httpd/extra/wsgi-keystone.conf
+#
+#        Listen 5000
+#
+#        <VirtualHost *:5000>
+#            WSGIDaemonProcess keystone-public processes=5 threads=1 user=keystone group=keystone display-name=%{GROUP}
+#            WSGIProcessGroup keystone-public
+#            WSGIScriptAlias / /usr/bin/keystone-wsgi-public
+#            WSGIApplicationGroup %{GLOBAL}
+#            WSGIPassAuthorization On
+#            ErrorLogFormat "%{cu}t %M"
+#            ErrorLog /var/log/httpd/keystone.log
+#            CustomLog /var/log/httpd/keystone_access.log combined
+#
+#            #<Directory /usr/bin>
+#            <Directory /usr>
+#                Require all granted
+#            </Directory>
+#        </VirtualHost>
+#
+#        Alias /identity /usr/bin/keystone-wsgi-public
+#        <Location /identity>
+#            SetHandler wsgi-script
+#            Options +ExecCGI
+#
+#            WSGIProcessGroup keystone-public
+#            WSGIApplicationGroup %{GLOBAL}
+#            WSGIPassAuthorization On
+#        </Location>
+#
+#        ### end of /etc/httpd/extra/wsgi-keystone.conf
+#
+
+        reboot
+
+        ### or restart Apache
+        # apachectl -k restart
+
+        ###
+
+
+I.  Create a domain, projects, users, roles
+
+    $$$ as user
+
+    I.01. Configure the administrative account
+            by setting the proper environmental variables
+
+        $$$
+
+        export OS_USERNAME=admin
+        # export OS_PASSWORD=ADMIN_PASS
+        export OS_PASSWORD=openstack
+        export OS_PROJECT_NAME=admin
+        export OS_USER_DOMAIN_NAME=default
+        export OS_PROJECT_DOMAIN_NAME=default
+        export OS_AUTH_URL=http://controller:5000/v3
+        export OS_IDENTITY_API_VERSION=3
+
+        $$$ Formal way to create a new domain
+        $openstack domain create --description "An Example Domain" example
+
+        $$$ Create the "service" project on "default" domain
+        openstack project create --domain default \
+            --description "Service Project" service
+
+        $$$ Create "demo" project on "default" domain
+        openstack project create --domain default \
+            --description "Demo Project" demo
+
+        $$$ Create "demo" user on "default" domain
+        openstack user create --domain default \
+            --password openstack demo
+
+        $$$ Create "demo" role
+        #openstack role create role
+        openstack role create demo
+
+        $$$ Add "demo" role to "demo" project and "demo" user
+        openstack role add --project demo --user demo demo
+        $$$ Note: no output
+
+    I.02 Verify Operation
+
+        $$$
+        openstack domain list
+
+        $$$ unset some environmental variables
+        unset OS_AUTH_URL OS_PASSWORD
+
+        $$$ request an authentication token for admin user in admin project
+        openstack --os-auth-url http://controller:5000/v3 \
+            --os-project-domain-name default --os-user-domain-name Default \
+            --os-project-name admin --os-username admin token issue
+
+        $$$ request an authentication token for myuser in myproject
+        openstack --os-auth-url http://controller:5000/v3 \
+            --os-project-domain-name default --os-user-domain-name Default \
+            --os-project-name demo --os-username demo token issue
+
+J.  Create OpenStack client environment scripts
+
+    J.01. Create scripts
+
+        $$$ create admin-openrc file (in user home directory)
+            export OS_PROJECT_DOMAIN_NAME=Default
+            export OS_USER_DOMAIN_NAME=Default
+            export OS_PROJECT_NAME=admin
+            export OS_USERNAME=admin
+            export OS_PASSWORD=openstack
+            export OS_AUTH_URL=http://controller:5000/v3
+            export OS_IDENTITY_API_VERSION=3
+            export OS_IMAGE_API_VERSION=2
+
+        $$$ create demo-openrc file (in user home directory)
+            export OS_PROJECT_DOMAIN_NAME=Default
+            export OS_USER_DOMAIN_NAME=Default
+            export OS_PROJECT_NAME=demo
+            export OS_USERNAME=demo
+            export OS_PASSWORD=openstack
+            export OS_AUTH_URL=http://controller:5000/v3
+            export OS_IDENTITY_API_VERSION=3
+            export OS_IMAGE_API_VERSION=2
+
+    J.02 Verify Operation
+
+        $$$
+        . admin-openrc
+        openstack domain list
+
+        $$$ request an authentication token for "admin" user in "admin" project
+        . admin-openrc
+        openstack token issue
+
+        $$$ request an authentication token for "demo" user in "demo" project
+        . demo-openrc
+        openstack token issue
+
+K.  Glance - Image Service
+
+    K.01. Glance database
+
+        ###
+
+        mysql
+        # or # mariadb
+
+        ### display:
+        #
+        # MariaDB [(none)]
+        #
+
+        CREATE DATABASE glance;
+
+      # GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' \
+      #     IDENTIFIED BY 'GLANCE_DBPASS';
+      # GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' \
+      #     IDENTIFIED BY 'GLANCE_DBPASS';
+
+        GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' \
+            IDENTIFIED BY 'openstack';
+
+        exit;
+
+        #
+        #
+        # end MariaDB
+        #
+        ###
+
+    K.02. Create the service credentials
+
+        $$$ as user
+        . admin-openrc
+
+        $$$ create the "glance" user on "default" domain
+        openstack user create --domain default  \
+            --password openstack glance
+
+        $$$ Add the "admin" role to the "glance" user and "service" project:
+        openstack role add --project service --user glance admin
+        $$$ Note: no display
+
+        $$$ Create the glance service entity "image"
+        openstack service create --name glance \
+            --description "OpenStack Image" image
+
+        $$$ Create the "image" service API endpoints:
+        openstack endpoint create --region RegionOne \
+          image public http://controller:9292
+        $$$ note set ENDPOINT_ID=id
+        openstack endpoint create --region RegionOne \
+          image internal http://controller:9292
+        openstack endpoint create --region RegionOne \
+          image admin http://controller:9292
+
+        $$$ Register quota limits (optional):
+        $$$ none
+        $$$ https://docs.openstack.org/oslo.limit/latest/user/usage.html#configuration
+
+    K.03. Glance install
+
+        ###
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
+
+        ###
+
+        bash i153.1.sh      # Glance
+
+        ###
+
+    K.04. Glance configuration
+
+        ### edit /etc/glance/glance-api.conf
+
+        [database]
+      # connection = mysql+pymysql://glance:GLANCE_DBPASS@controller/glance
+        connection = mysql+pymysql://glance:openstack@controller/glance
+
+        #
+        # configure Identity service access
+        #
+        # Note: Comment out or remove any other options
+        # in the [keystone_authtoken] section
+        #
+        [keystone_authtoken]
+      # ...
+        www_authenticate_uri  = http://controller:5000
+            auth_url = http://controller:5000
+        memcached_servers = controller:11211
+        auth_type = password
+            project_domain_name = default
+            user_domain_name = default
+            project_name = service
+            username = glance
+          # password = GLANCE_PASS
+            password = openstack
+
+        [paste_deploy]
+      # ...
+        flavor = keystone
+
+        #
+        # Note: For deployment, use OpenStack Object Storage - Swift
+        #
+        # For simplicity, this configuration stores images on the local file system
+        # configure the local file system store and location of image files
+        #
+        [DEFAULT]
+        # ...
+        enabled_backends=fs:file
+
+        [glance_store]
+        # ...
+        default_backend = fs
+
+        # OpenStack - Ubuntu installation documentation
+        [fs]
+        filesystem_store_datadir = /var/lib/glance/images/
+
+        # Alternative based on sample configuration
+        [file]
+        filesystem_store_datadir = /var/lib/glance/images
+
+        # configure access to keystone
+        [oslo_limit]
+        auth_url = http://controller:5000
+            auth_type = password
+        user_domain_id = default
+        username = glance
+        system_scope = all
+      # password = GLANCE_PASS
+        password = openstack
+        endpoint_id = ENDPOINT_ID
+        region_name = RegionOne
+      # see notes below on ENDPOINT_ID
+
+        ###
+
+        # https://docs.openstack.org/oslo.limit/latest/user/usage.html#configuration
+        # if quotas where SET
+        [DEFAULT]
+      # use_keystone_limits = True
+        # if NO quotas
+        use_keystone_limits = False
+
+        log_file = /var/log/glance/api.log
+
+        ### end /etc/glance/glance-api.conf
+
+        ### Glance Configuration
+        # https://docs.openstack.org/glance/2024.2/configuration/index.html
+
+    K.05. Endpoint list and reader access
+
+        $$$ Note: To list endpoints
+        openstack endpoint list --service glance --region RegionOne
+
+        $$$    
+        $$$ Make sure that the glance account has reader access
+        $$$ to system-scope resources (like limits)
+        $$$
+
+        openstack role add --user glance --user-domain default --system all reader
+        $$$ Note: no display
+
+    K.06. Restart Glance
+
+        reboot
+
+    K.07. Check some things
+
+        iptables -S
+
+            -P INPUT ACCEPT
+            -P FORWARD ACCEPT
+            -P OUTPUT ACCEPT
+
+        nc -w5 -z -v controller 9292
+
+            Ncat: Version 7.95 ( https://nmap.org/ncat )
+            Ncat: Connected to 10.0.0.11:9292.
+            Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
+
+        lsof -i:9292
+
+            COMMAND    PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+
+        curl -i http://controller:9292
+
+            HTTP/1.1 300 Multiple Choices
+            Content-Type: application/json
+            Content-Length: 1698
+            Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
+
+            {"versions":
+             [{"id": "v2.15", "status": "SUPPORTED",
+              "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+               {"id": "v2.13", "status": "SUPPORTED",
+                "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                 {"id": "v2.12", "status": "SUPPORTED",
+                  "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                   {"id": "v2.11", "status": "SUPPORTED",
+                    "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                     {"id": "v2.10", "status": "SUPPORTED",
+                      "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                       {"id": "v2.9", "status": "SUPPORTED",
+                        "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                         {"id": "v2.8", "status": "SUPPORTED",
+                          "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                           {"id": "v2.17", "status": "CURRENT",
+                            "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                             {"id": "v2.7", "status": "SUPPORTED",
+                              "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                               {"id": "v2.6", "status": "SUPPORTED",
+                                "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                 {"id": "v2.5", "status": "SUPPORTED",
+                                  "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                   {"id": "v2.4", "status": "SUPPORTED",
+                                    "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                     {"id": "v2.3", "status": "SUPPORTED",
+                                      "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                       {"id": "v2.2", "status": "SUPPORTED",
+                                        "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                         {"id": "v2.1", "status": "SUPPORTED",
+                                          "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+                                           {"id": "v2.0", "status": "SUPPORTED",
+                                            "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]}]}
+
+    K.08. Populate the Image service database:
+
+        ###
+
+        su -s /bin/sh -c "glance-manage db_sync" glance
+
+        ###
+
+    K.09. Verify Operation
+
+        $$$
+
+        . admin-openrc
+
+      # wget http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img
+        wget http://download.cirros-cloud.net/0.6.3/cirros-0.6.3-x86_64-disk.img
+        $$$ or other cloud image
+
+        $$$ Upload the image to the Image service using
+        $$$ the QCOW2 (QEMU Copy On Write 2) disk format,
+        $$$ bare container format,
+        $$$ and public visibility
+        $$$ so all projects can access it:
+        glance image-create --name "cirros" \
+            --file cirros-0.6.3-x86_64-disk.img \
+            --disk-format qcow2 --container-format bare \
+            --visibility=public
+
+        ### For information about the glance parameters,
+        ### see Image service (glance) command-line client
+        ### https://docs.openstack.org/python-glanceclient/latest/cli/details.html
+        ### in the OpenStack User Guide
+
+        ### For information about disk and container formats for images,
+        ### see Disk and container formats for images
+        ### https://docs.openstack.org/image-guide/image-formats.html
+        ### in the OpenStack Virtual Machine Image Guide.
+
+        $$$ Confirm upload of the image and validate attributes
+        glance image-list
+
+L.  Placement - Placement Service
+
+    L.01. Placement database
+
+        ###
+
+        mysql
+        # or # mariadb
+
+        ### display:
+        #
+        # MariaDB [(none)]
+        #
+
+        CREATE DATABASE placement;
+
+      # GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'localhost' \
+      #     IDENTIFIED BY 'placement_DBPASS';
+      # GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'%' \
+      #     IDENTIFIED BY 'placement_DBPASS';
+
+        GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON placement.* TO 'placement'@'%' \
+            IDENTIFIED BY 'openstack';
+
+        exit;
+
+        #
+        #
+        # end MariaDB
+        #
+        ###
+
+    L.02. Create the service credentials
+
+        $$$ as user
+        . admin-openrc
+
+        $$$ create the "placement" user on "default" domain
+        openstack user create --domain default  \
+            --password openstack placement
+
+        $$$ Add the "admin" role to the "placement" user and "service" project:
+        openstack role add --project service --user placement admin
+        $$$ Note: no display
+
+        $$$ Create the placement service entity "Placement"
+        openstack service create --name placement \
+            --description "Placement API" placement
+
+        $$$ Create the "Placement" service API endpoints:
+        openstack endpoint create --region RegionOne \
+          placement public http://controller:8778
+        openstack endpoint create --region RegionOne \
+          placement internal http://controller:8778
+        openstack endpoint create --region RegionOne \
+          placement admin http://controller:8778
+
+    L.03. Placement install
+
+        ###
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
+
+        ###
+
+        bash i152.1.sh      # Placement
+
+        ###
+
+    L.04. Placement configuration
+
+        ### edit /etc/placement/placement.conf
+
+        [placement_database]
+      # connection = mysql+pymysql://placement:PLACEMENT_DBPASS@controller/placement
+        connection = mysql+pymysql://placement:openstack@controller/placement
+
+        [api]
+        auth_strategy = keystone
+
+        # Note: Comment out or remove any other options
+        # in the [keystone_authtoken] section
+        #
+        [keystone_authtoken]
+      # ...
+        www_authenticate_uri  = http://controller:5000
+            auth_url = http://controller:5000
+        memcached_servers = controller:11211
+        auth_type = password
+            project_domain_name = default
+            user_domain_name = default
+            project_name = service
+            username = placement
+          # password = PLACEMENT_PASS
+            password = openstack
+
+        [DEFAULT]
+        log_file = /var/log/placement/placement.log
+
+        ### end /etc/placement/placement.conf
+
+        ### Placement Configuration
+        # https://docs.openstack.org/placement/2024.2/configuration/sample-config.html
+
+    L.05. Populate the Placement database:
+
+        ###
+
+        su -s /bin/sh -c "placement-manage db sync" placement
+
+        ###
+
+    L.06. Restart Placement
+
+        reboot
+
+    L.07. Check some things
+
+        iptables -S
+
+            -P INPUT ACCEPT
+            -P FORWARD ACCEPT
+            -P OUTPUT ACCEPT
+
+        nc -w5 -z -v controller 8778
+
+            Ncat: Version 7.95 ( https://nmap.org/ncat )
+            Ncat: Connected to 10.0.0.11:8778.
+            Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
+
+        lsof -i:8778
+
+            COMMAND    PID      USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            placement pppp placement 5u  IPv4   nnnn      0t0  TCP controller.localdomain:uec (LISTEN)
+
+        curl -i http://controller:8778
+
+            HTTP/1.0 200 OK
+            Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
+            Server: WSGIServer/0.2 CPython/3.11.10
+            Content-Length: 136
+            Content-Type: application/json
+            openstack-api-version: placement 1.0
+            vary: openstack-api-version
+            x-openstack-request-id: req-........-....-....-....-............
+
+            {"versions":
+             [{"id": "v1.0",
+              "max_version": "1.39",
+               "min_version": "1.0",
+                "status": "CURRENT",
+                 "links": [{"rel": "self", "href": ""}]}]}
+
+    L.08. Verify Operation
+
+        $$$
+        . admin-openrc
+
+        $$$ Perform status checks to make sure everything is in order
+        placement-status upgrade check
+
+        $$$ List available resource classes and traits
+        openstack --os-placement-api-version 1.2    \
+            resource class list --sort-column name
+        openstack --os-placement-api-version 1.6    \
+            trait list --sort-column name
+
+M.  Nova - Compute Service
+
+    M.01. Nova databases
+
+        ###
+
+        mysql
+        # or # mariadb
+
+        ### display:
+        #
+        # MariaDB [(none)]
+        #
+
+        CREATE DATABASE nova_api;
+        CREATE DATABASE nova;
+        CREATE DATABASE nova_cell0;
+
+        GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'%' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'%' \
+            IDENTIFIED BY 'openstack';
+
+        exit;
+
+        #
+        #
+        # end MariaDB
+        #
+        ###
+
+    M.02. Create the service credentials
+
+        $$$ as user
+        . admin-openrc
+
+        $$$ create the "nova" user on "default" domain
+        openstack user create --domain default  \
+            --password openstack nova
+
+        $$$ Add the "admin" role to the "nova" user and "service" project:
+        openstack role add --project service --user nova admin
+        $$$ Note: no display
+
+        $$$ Create the placement service entity "Compute"
+        openstack service create --name nova \
+            --description "Openstack Compute" compute
+
+        $$$ Create the "Compute" service endpoints:
+        openstack endpoint create --region RegionOne \
+          compute public http://controller:8774/v2.1
+        openstack endpoint create --region RegionOne \
+          compute internal http://controller:8774/v2.1
+        openstack endpoint create --region RegionOne \
+          compute admin http://controller:8774/v2.1
+
+    M.03. Nova install
+
+        ###
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
+
+        ###
+
+        bash i111.1.sh      # Nova
+
+        ###
+
+    M.04. Nova configuration
+
+        ### edit /etc/nova/nova.conf
+
+        [api_database]
+      # connection = mysql+pymysql://nova:NOVA_DBPASS@controller/nova_api
+        connection = mysql+pymysql://nova:openstack@controller/nova_api
+
+        [database]
+      # connection = mysql+pymysql://nova:NOVA_DBPASS@controller/nova
+        connection = mysql+pymysql://nova:openstack@controller/nova
+
+        [DEFAULT]
+      # transport_url = rabbit://openstack:RABBIT_PASS@controller:5672/
+        transport_url = rabbit://openstack:openstack@controller:5672/
+
+        [api]
+        auth_strategy = keystone
+
+        # Note: Comment out or remove any other options
+        # in the [keystone_authtoken] section
+        #
+        [keystone_authtoken]
+      # ...
+        www_authenticate_uri  = http://controller:5000
+            auth_url = http://controller:5000
+        memcached_servers = controller:11211
+        auth_type = password
+            project_domain_name = default
+            user_domain_name = default
+            project_name = service
+            username = nova
+          # password = NOVA_PASS
+            password = openstack
+
+        [service_user]
+        send_service_user_token = true
+        auth_url = https://controller/identity
+            auth_strategy = keystone
+        auth_type = password
+        project_domain_name = default
+        project_name = service
+        user_domain_name = default
+        username = nova
+      # password = NOVA_PASS
+        password = openstack
+
+        [DEFAULT]
+        my_ip = 10.0.0.11
+
+        ##
+        ## from Neutron ( networking )
+        ##
+
+        [neutron]
+        # ...
+        auth_url = http://controller:5000
+        auth_type = password
+        project_domain_name = default
+        user_domain_name = default
+        region_name = RegionOne
+        project_name = service
+        username = neutron
+      # password = NEUTRON_PASS
+        password = openstack
+        service_metadata_proxy = true
+      # metadata_proxy_shared_secret = METADATA_SECRET
+        metadata_proxy_shared_secret = openstack
+
+        ##
+
+        [vnc]
+        enabled = true
+        # ...
+        server_listen = $my_ip
+        server_proxyclient_address = $my_ip
+
+        [glance]
+        # ...
+        api_servers = http://controller:9292
+
+        [oslo_concurrency]
+        # ...
+        lock_path = /var/lib/nova/tmp
+
+        [placement]
+        # ...
+        region_name = RegionOne
+        project_domain_name = default
+        project_name = service
+        auth_type = password
+        user_domain_name = default
+        auth_url = http://controller:5000/v3
+        username = placement
+      # password = PLACEMENT_PASS
+        password = openstack
+
+        ###
+        ### Additional Suggestions by Grok 3
+        ###
+
+        [DEFAULT]
+      # enabled_apis = osapi_compute,metadata
+      # use_neutron = true
+      # firewall_driver = nova.virt.firewall.NoopFirewallDriver
+
+        [vnc]
+        vncserver_listen = 0.0.0.0
+        vncserver_proxyclient_address = 10.0.0.11
+        novncproxy_base_url = http://10.0.0.11:6080/vnc_auto.html
+        novncproxy_host = 0.0.0.0
+        novncproxy_port = 6080
+        # Explicitly set the path if not using default
+        # novncproxy_web = /usr/share/novnc  # Uncomment if needed
+
+        ###
+
+        [DEFAULT]
+      # log_dir ??? packaging BUG
+      # log_dir=/var/log/nova
+
+        ### end /etc/nova/nova.conf
+
+        ### Nova Configuration
+        # https://docs.openstack.org/nova/2024.2/configuration/sample-config.html
+
+    M.05. Populate the Nova databases:
+
+        ###
+
+        # Populate the nova-api database
+        su -s /bin/sh -c "nova-manage api_db sync" nova
+
+        # Register the cell0 database
+        su -s /bin/sh -c "nova-manage cell_v2 map_cell0" nova
+
+        # Create the cell1 cell
+        su -s /bin/sh -c "nova-manage cell_v2 create_cell --name=cell1 --verbose" nova
+
+        # Populate the nova database
+        su -s /bin/sh -c "nova-manage db sync" nova
+
+        # Verify nova cell0 and cell1 are registered correctly
+        su -s /bin/sh -c "nova-manage cell_v2 list_cells" nova
+
+        ###
+
+    M.06. Restart Compute services
+
+        reboot
+
+    M.07. Check some things
+
+        iptables -S
+
+            -P INPUT ACCEPT
+            -P FORWARD ACCEPT
+            -P OUTPUT ACCEPT
+
+        nc -w5 -z -v controller 8774
+
+            Ncat: Version 7.95 ( https://nmap.org/ncat )
+            Ncat: Connected to 10.0.0.11:8774.
+            Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
+
+        lsof -i:8774
+
+            COMMAND   PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            nova-api xxxx root xxu  IPv4   nnnn      0t0  TCP *:8774 (LISTEN)
+            ...      .... .... ...  ....   ....      ...  ... ...... ........
+
+        curl -i http://controller:8774
+
+            HTTP/1.1 200 OK
+            Content-Length: 369
+            Content-Type: application/json
+            Date: Tue, DD Mmm YYYY HH:MM:SS GMT
+
+            {"versions":
+             [{"id": "v2.0",
+              "status": "SUPPORTED",
+               "version": "",
+                "min_version": "",
+                 "updated": "2011-01-21T11:33:21Z",
+                  "links":
+                   [{"rel": "self",
+                    "href": "http://controller:8774/v2/"}]},
+                     {"id": "v2.1",
+                      "status": "CURRENT",
+                       "version": "2.96",
+                        "min_version": "2.1",
+                         "updated": "2013-07-23T11:33:21Z",
+                          "links":
+                           [{"rel": "self",
+                            "href": "http://controller:8774/v2.1/"}]}]}
