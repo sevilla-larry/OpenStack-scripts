@@ -18,12 +18,12 @@ A. Qemu/KVM
 
     Each VM should have 3 virtual NICs:
 
-    1. enp1s0   Isolated
-    2. enp10s0  NAT
-    3. enp11s0  Open
+    1. eth0    NAT
+    2. eth1    Isolated
+    3. eth2    Open
 
     During startup, the read sequence will be:
 
-    1. ifconfig.enp10s0  NAT
-    2. ifconfig.enp11s0  Open
-    3. ifconfig.enp1s0   Isolated
+    1. ifconfig.eth0    NAT
+    2. ifconfig.eth1    Isolated
+    3. ifconfig.eth2    Open

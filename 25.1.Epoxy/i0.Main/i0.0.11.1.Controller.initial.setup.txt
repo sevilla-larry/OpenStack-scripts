@@ -4,32 +4,32 @@ A. Preparation
 	b. update /etc/sysconfig/rc.site (hostname)		controller
 	c. update networks with the ff:
 
-		1. ifconfig.enp10s0		### NAT
+		1. ifconfig.eth0		### NAT
 			ONBOOT=yes
-			IFACE=enp10s0
+			IFACE=eth0
 			SERVICE=ipv4-static
 			IP=192.168.122.11
 			GATEWAY=192.168.122.1
 			PREFIX=24
 			BROADCAST=192.168.122.255
 
-		2. ifconfig.enp11s0		### Open
+	    2. ifconfig.eth1		### Isolated
 			ONBOOT=yes
-			IFACE=enp11s0
-			SERVICE=ipv4-static
-			IP=203.0.113.11
-			GATEWAY=
-			PREFIX=24
-			BROADCAST=203.0.113.255
-
-	    3. ifconfig.enp1s0		### Isolated
-			ONBOOT=yes
-			IFACE=enp1s0
+			IFACE=eth1
 			SERVICE=ipv4-static
 			IP=10.0.0.11
 			GATEWAY=
 			PREFIX=24
 			BROADCAST=10.0.0.255
+
+		3. ifconfig.eth2		### Open
+			ONBOOT=yes
+			IFACE=eth2
+			SERVICE=ipv4-static
+			IP=203.0.113.11
+			GATEWAY=
+			PREFIX=24
+			BROADCAST=203.0.113.255
 
 	d. # nano /root/.bashrc
 
