@@ -1,4 +1,4 @@
-8.00    Other Projects              Recent
+8.00    Other Projects
 
 8.01    ansible-role-atos-hsm        9.0.0
 8.02    ansible-role-lunasa-hsm      9.0.0

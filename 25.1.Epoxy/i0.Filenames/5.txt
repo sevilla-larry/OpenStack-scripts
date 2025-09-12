@@ -1,0 +1,34 @@
+5.00	Service Client Projects	
+		
+5.01	osc-placement					 4.6.0
+5.02	python-adjutantclient			 1.3.0
+5.03	python-aodhclient				 3.7.1
+5.04	python-barbicanclient			 7.1.0
+5.05	python-blazarclient				 4.3.0
+5.06	python-brick-cinderclient-ext	 2.5.0
+5.07	python-cinderclient				 9.7.0
+5.08	python-cloudkittyclient			 5.3.1
+5.09	python-cyborgclient				 2.5.0
+5.10	python-designateclient			 6.2.0
+5.11	python-freezerclient			 6.0.0
+5.12	python-glanceclient				 4.8.0
+5.13	python-heatclient				 4.1.0
+5.14	python-ironic-inspector-client	 5.3.1
+5.15	python-ironicclient				5.10.1
+5.16	python-keystoneclient			 5.6.0
+5.17	python-magnumclient				 4.8.1
+5.18	python-manilaclient				 5.4.0
+5.19	python-masakariclient			 8.6.0
+5.20	python-mistralclient			 5.4.0
+5.21	python-neutronclient			11.4.0
+5.22	python-novaclient				18.9.0
+5.23	python-observabilityclient		 0.4.0
+5.24	python-octaviaclient			3.10.0
+5.25	python-swiftclient				 4.7.0
+5.26	python-tackerclient				 2.3.0
+5.27	python-troveclient				 8.8.0
+5.28	python-venusclient				 2.4.0
+5.29	python-vitrageclient			 5.2.0
+5.30	python-watcherclient			 4.8.0
+5.31	python-zaqarclient				 3.0.1
+5.32	python-zunclient				 5.2.1
