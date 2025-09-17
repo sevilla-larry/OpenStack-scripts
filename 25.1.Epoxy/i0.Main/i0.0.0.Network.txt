@@ -2,28 +2,19 @@ A. Qemu/KVM
 
     Connection Details / Virtual Networks
 
-    1. default / NAT
+    1. Management Network - NAT
        internet access
-       192.168.122.0/24 DHCP enabled
+       10.0.0.0/24 DHCP enabled
 
-    2. Isolated
-       Management Network
-       10.0.0.0/24      DHCP disabled
+    2. bridge
+       no IPs, Neutron will provide
 
-    3. Open
-       Provider Network
-       used for direct access (ssh) of VMs from Host
-       203.0.113.0/24   DHCP disabled
+    Each VM should have 2 virtual NICs:
 
-
-    Each VM should have 3 virtual NICs:
-
-    1. eth0    NAT
-    2. eth1    Isolated
-    3. eth2    Open
+    1. eth0 Management Network - NAT
+    2. eth1 bridge
 
     During startup, the read sequence will be:
 
-    1. ifconfig.eth0    NAT
-    2. ifconfig.eth1    Isolated
-    3. ifconfig.eth2    Open
+    1. ifconfig.eth0 Management Network - NAT
+    2. ifconfig.eth1 bridge   

@@ -67,7 +67,6 @@ A.  Preparation
         wget --input-file=b30.01.wget-list-sysv.OpenStack.support.txt       --continue --directory-prefix=/sources
         wget --input-file=c11.01.wget-list-sysv.MariaDB.txt                 --continue --directory-prefix=/sources
         wget --input-file=c13.01.wget-list-sysv.Apache.txt                  --continue --directory-prefix=/sources
-      # wget --input-file=g11
 
         wget --input-file=i1.0.1.wget-list.OS.support.minor.txt             --continue --directory-prefix=/sources
         wget --input-file=i2.0.1.wget-list.OS.support.Major.txt             --continue --directory-prefix=/sources
@@ -79,10 +78,9 @@ A.  Preparation
 
         # md5sum -c md5sums.txt
         md5sum -c b10.02.md5sums.common.Xorg.and.servers.txt
-        md5sum -c b30.02.md5sums.OpenStack.support.txt
-        md5sum -c c11.02.md5sums.MariaDB.txt
-        md5sum -c c13.02.md5sums.Apache.txt
-      # md5sum -c g11.02.md5sums.common.Xfce.Gnome.apps.support.txt
+      # md5sum -c b30.02.md5sums.OpenStack.support.txt
+      # md5sum -c c11.02.md5sums.MariaDB.txt
+      # md5sum -c c13.02.md5sums.Apache.txt
 
         md5sum -c i1.0.2.md5sums.OS.support.minor.txt
       # md5sum -c i2.0.2.md5sums.OS.support.Major.txt
@@ -103,6 +101,23 @@ A.  Preparation
         export LFSLOG=/var/log/blfs
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
+
+        ###
+        # for VBs
+        #
+        export CFLAGS="-O2 -march=nehalem -mtune=generic -pipe -fomit-frame-pointer -msse4.2"
+        #
+        ###
+        # for VMs
+        #   and
+        # for PCs
+        #
+        export CFLAGS="-O2 -march=native -mtune=native -pipe -fomit-frame-pointer -mavx2 -mfma"
+        #
+        ###
+
+        export CXXFLAGS=$CFLAGS
+        export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
 
         #export LANG=C.UTF-8
 
@@ -128,6 +143,10 @@ B.  Support Applications - minor
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
         echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+
+        echo $CFLAGS
+        echo $CXXFLAGS
+        echo $LDFLAGS
 
         echo $SHELL           # /bin/bash
         ls -l /bin/sh         # bash

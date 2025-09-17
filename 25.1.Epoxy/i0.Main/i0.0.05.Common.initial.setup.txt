@@ -1,0 +1,78 @@
+A. Preparation
+
+	a. update /etc/hostname							template
+	b. update /etc/sysconfig/rc.site (hostname)		template
+	c. update networks with the ff:
+
+		1. ifconfig.eth0		### Management NAT
+			ONBOOT=yes
+			IFACE=eth0
+			SERVICE=ipv4-static
+			IP=10.0.0.5
+			GATEWAY=10.0.0.1
+			PREFIX=24
+			BROADCAST=10.0.0.255
+
+	    2. ifconfig.eth1		### Provider Open
+			ONBOOT=yes
+			IFACE=eth1
+			SERVICE=bridge
+
+	d. add bridge service
+
+		cat > /lib/services/bridge << "EOF"
+		#!/bin/sh
+		# /lib/services/bridge
+
+		# Use first command-line argument as interface
+		IFACE="$1"
+		ACTION="$2"
+
+		# Check if interface is provided
+		if [ -z "$IFACE" ]; then
+		echo "Error: Interface not specified"
+		exit 1
+		fi
+
+		# Verify interface exists
+		if ! ip link show "$IFACE" > /dev/null 2>&1; then
+		echo "Error: Interface $IFACE does not exist"
+		exit 1
+		fi
+
+		# Handle up/down actions
+		case "$ACTION" in
+		up)
+			ip link set dev "$IFACE" up
+			if [ $? -eq 0 ]; then
+			echo "Interface $IFACE brought up successfully"
+			exit 0
+			else
+			echo "Error: Failed to bring up interface $IFACE"
+			exit 1
+			fi
+			;;
+		down)
+			ip link set dev "$IFACE" down
+			if [ $? -eq 0 ]; then
+			echo "Interface $IFACE brought down successfully"
+			exit 0
+			else
+			echo "Error: Failed to bring down interface $IFACE"
+			exit 1
+			fi
+			;;
+		*)
+			echo "Error: Invalid action '$ACTION'. Use 'up' or 'down'."
+			exit 1
+			;;
+		esac
+		EOF
+
+		chmod +x /lib/services/bridge
+
+	e. update /etc/hosts
+
+		10.0.0.11	controller.localdomain	controller
+		10.0.0.31	compute1.localdomain	compute1
+		10.0.0.41	block1.localdomain		block1
