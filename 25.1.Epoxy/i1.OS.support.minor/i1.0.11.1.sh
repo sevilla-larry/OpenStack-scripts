@@ -14,24 +14,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i1.1.01.pycparser-2.21"
-echo "i1.1.01.pycparser-2.21" >> $OSLOG_PROCESS
+echo "i1.1.01.pycparser-2.23"
+echo "i1.1.01.pycparser-2.23" >> $OSLOG_PROCESS
 
-time { bash i1.1.01.pycparser-2.21.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i1.1.02.cffi-1.16.0"
-echo "i1.1.02.cffi-1.16.0" >> $OSLOG_PROCESS
-
-time { bash i1.1.02.cffi-1.16.0.sh ; }
+time { bash i1.1.01.pycparser-2.23.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -42,20 +28,24 @@ echo "."
 
 ###
 
-# echo "i010.9.04.cryptography-3.4.8"
-# echo "i010.9.04.cryptography-3.4.8" >> $OSLOG_PROCESS
+echo "i1.1.02.cffi-1.17.1"
+echo "i1.1.02.cffi-1.17.1" >> $OSLOG_PROCESS
 
-# time { bash i010.9.04.cryptography-3.4.8.sh ; }
+time { bash i1.1.02.cffi-1.17.1.sh ; }
 
-echo "i1.1.03.cryptography-41.0.7"
-echo "i1.1.03.cryptography-41.0.7" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-time { bash i1.1.03.cryptography-41.0.7.sh ; }
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# echo "i010.9.04.cryptography-43.0.3"
-# echo "i010.9.04.cryptography-43.0.3" >> $OSLOG_PROCESS
+###
 
-# time { bash i010.9.04.cryptography-43.0.3.sh ; }
+echo "i1.1.03.cryptography-45.0.7 whl"
+echo "i1.1.03.cryptography-45.0.7 whl" >> $OSLOG_PROCESS
+
+time { bash i1.1.03.cryptography-45.0.7.whl.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

@@ -9,9 +9,11 @@
 
 # i1.1.03 cryptography-44.0.2 so far working with pyOpenSSL 25.0.0
 # previous note ( 41.0.7 dg to  due to pyOpenSSL-23.3.0, if not acceptable, ug pyOpenSSL   ?43.0.3 ??3.4.8 )
-267a0974c09a5b26583d2204794690d7 cryptography-44.0.2-cp39-abi3-manylinux_2_34_x86_64.whl
+#267a0974c09a5b26583d2204794690d7 cryptography-44.0.2-cp39-abi3-manylinux_2_34_x86_64.whl
 #65ca27d709ff936a0506cd0aaf80381a cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl
 #29b9a531187b47ee0651d97b2e50f226 cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl
+# i1.1.03 cryptography-45.0.7 
+c7c51e216abd722be0e8120e220c2473 cryptography-45.0.7.tar.gz
 
 # i1.1.04 autopage-0.5.2
 57936e4a9d379fe4a60eb617d8cdce33 autopage-0.5.2.tar.gz

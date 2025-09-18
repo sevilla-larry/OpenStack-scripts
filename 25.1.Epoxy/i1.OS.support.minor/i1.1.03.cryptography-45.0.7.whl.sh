@@ -1,4 +1,4 @@
-# i1.1.03.cryptography-44.0.2.sh
+# i1.1.03.cryptography-45.0.7.whl.sh
 #
 # Note: (alternative) .whl install
 # since the source build is giving ERRORs
@@ -26,7 +26,7 @@
 #               i?.??   Nova-30.0.0
 #
 
-export PKG="cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl"
+export PKG="cryptography-45.0.7-cp311-abi3-manylinux_2_34_x86_64.whl"
 export PKGLOG_DIR=$OSLOG/1.1.03
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log

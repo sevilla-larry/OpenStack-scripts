@@ -1,30 +1,21 @@
-# i8.23.python-openstackclient-7.4.0.sh
+# i1.1.01.pycparser-2.23.sh
 #
 
 #
-# Dependecies Required:
+# Required by:
 #
-#               i3.01 pbr-6.1.1
-#               i1.03 cryptography-41.0.7
-#               i4.03 cliff-4.9.1
-#               i1.09 iso8601-2.1.0
-#               i4.14 openstacksdk-4.4.0
-#               i?.?? osc-lib-3.1.0
-#               i?.?? oslo.i18n-6.4.0
-#               i?.?? python-keystoneclient-5.5.0
-#               i?.?? python-cinderclient-9.6.0
-#               b30.13.23.30 Requests-2.32.3
-#               i4.20 stevedore-5.4.1
+#               i1.1.02 cffi-1.17.1
 #
 
-export PKG="python_openstackclient-7.4.0"
-export PKGLOG_DIR=$OSLOG/8.23
+export PKG="pycparser-2.23"
+export PKGLOG_DIR=$OSLOG/1.1.01
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+export SOURCES=`pwd`
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -53,17 +44,18 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python-openstackclient  \
+                pycparser               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
+unset SOURCES
 unset OSLOG_PROCESS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_CHECK

@@ -4,17 +4,17 @@
 #
 # Dependencies Required:
 #
-#               i1.1.01 pycparser-2.22
+#               i1.1.01 pycparser-2.23
 #
 
 #
 # Required by:
 #
-#               i1.1.03 cryptography-44.0.2
+#               i1.1.03 cryptography-45.0.7 whl
 #               i?.??   oslo.privsep-3.4.0
 #
 
-export PKG="cffi-1.16.0"
+export PKG="cffi-1.17.1"
 export PKGLOG_DIR=$OSLOG/1.1.02
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

@@ -1,7 +1,7 @@
-# Python OpenStack Library Projects
+# OpenStack Library Projects
 
 
-# i4.03
+# i4.03 cliff-4.9.1
 https://tarballs.opendev.org/openstack/cliff/cliff-4.9.1.tar.gz
 
 # i4.06 keystoneauth1-5.10.0
@@ -17,7 +17,7 @@ https://tarballs.opendev.org/openstack/osc-lib/osc-lib-3.2.0.tar.gz
 https://tarballs.opendev.org/openstack/stevedore/stevedore-5.4.1.tar.gz
 
 
-# i4.36 oslo.i18n-6.5.1
+# i4.36 oslo_i18n-6.5.1
 https://tarballs.opendev.org/openstack/oslo.i18n/oslo_i18n-6.5.1.tar.gz
 
 # 02 oslo.utils-8.2.0
