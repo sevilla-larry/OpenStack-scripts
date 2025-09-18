@@ -53,14 +53,8 @@ https://files.pythonhosted.org/packages/42/78/18813351fe5d63acad16aec57f94ec2b70
 # i1.1.14 typing-extensions-4.12.2
 https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz
 
-
-
-
-# i1.1.14 netifaces-0.11.0
-https://files.pythonhosted.org/packages/a6/91/86a6eac449ddfae239e93ffc1918cf33fd9bab35c04d1e963b311e347a73/netifaces-0.11.0.tar.gz
-
-# i1.1.15 platformdirs-4.3.7    4.3.6 if err
-https://files.pythonhosted.org/packages/b6/2d/7d512a3913d60623e7eb945c6d1b4f0bddf1d0b7ada5225274c87e5b53d1/platformdirs-4.3.7.tar.gz
+# i1.1.15 platformdirs-4.3.8    4.3.6 if err
+https://files.pythonhosted.org/packages/fe/8b/3c73abc9c759ecd3f1f7ceff6685840859e8070c4d947c93fae71f6a0bf2/platformdirs-4.3.8.tar.gz
 
 # i1.1.16 netaddr-1.3.0
 https://files.pythonhosted.org/packages/54/90/188b2a69654f27b221fba92fda7217778208532c962509e959a9cee5229d/netaddr-1.3.0.tar.gz
@@ -98,12 +92,17 @@ https://files.pythonhosted.org/packages/bf/a0/e667c3c43b65a188cc3041fa00c5065531
 https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz
 
 
+
+
 # i1.2.01 dogpile_cache-1.3.4
 https://files.pythonhosted.org/packages/cb/b7/2fa37f52b4f38bc8eb6d4923163dd822ca6f9e2f817378478a5de73b239e/dogpile_cache-1.3.4.tar.gz
 
 
 
 
+
+# i1.1.14 netifaces-0.11.0
+https://files.pythonhosted.org/packages/a6/91/86a6eac449ddfae239e93ffc1918cf33fd9bab35c04d1e963b311e347a73/netifaces-0.11.0.tar.gz
 
 # z1.1.18 pyparsing-3.2.3   to B30
 #https://files.pythonhosted.org/packages/bb/22/f1129e69d94ffff626bdb5c835506b3a5b4f3d070f17ea295e12c2c6f60f/pyparsing-3.2.3.tar.gz

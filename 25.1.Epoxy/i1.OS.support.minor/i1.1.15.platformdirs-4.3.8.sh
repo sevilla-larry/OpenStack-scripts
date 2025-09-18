@@ -1,13 +1,13 @@
-# i1.1.15.platformdirs-4.3.7.sh
+# i1.1.15.platformdirs-4.3.8.sh
 #
 
 #
 # Required by:
 #
-#               i4.14   openstacksdk-4.4.0
+#               i4.2.14 openstacksdk-4.4.0
 #
 
-export PKG="platformdirs-4.3.7"
+export PKG="platformdirs-4.3.8"
 export PKGLOG_DIR=$OSLOG/1.1.15
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -47,10 +47,10 @@ pip3 install    --no-index              \
                 platformdirs            \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES
