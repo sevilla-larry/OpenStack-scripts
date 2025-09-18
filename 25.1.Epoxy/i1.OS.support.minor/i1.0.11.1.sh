@@ -126,10 +126,10 @@ echo "."
 
 ###
 
-echo "i1.1.09.iso8601-2.1.0"
-echo "i1.1.09.iso8601-2.1.0" >> $OSLOG_PROCESS
+echo "i1.1.09.iso8601-2.1.0 whl"
+echo "i1.1.09.iso8601-2.1.0 whl" >> $OSLOG_PROCESS
 
-time { bash i1.1.09.iso8601-2.1.0.sh ; }
+time { bash i1.1.09.iso8601-2.1.0.whl.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -196,24 +196,10 @@ echo "."
 
 ###
 
-echo "i1.1.14.netifaces-0.11.0"
-echo "i1.1.14.netifaces-0.11.0" >> $OSLOG_PROCESS
+echo "i1.1.14.typing-extensions-4.12.2"
+echo "i1.1.14.typing-extensions-4.12.2" >> $OSLOG_PROCESS
 
-time { bash i1.1.14.netifaces-0.11.0.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i1.1.15.platformdirs-4.3.7"
-echo "i1.1.15.platformdirs-4.3.7" >> $OSLOG_PROCESS
-
-time { bash i1.1.15.platformdirs-4.3.7.sh ; }
+time { bash i1.1.14.typing-extensions-4.12.2.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -224,31 +210,59 @@ echo "."
 
 ###
 
-echo "i1.1.16.netaddr-1.3.0"
-echo "i1.1.16.netaddr-1.3.0" >> $OSLOG_PROCESS
+# echo "i1.1.14.netifaces-0.11.0"
+# echo "i1.1.14.netifaces-0.11.0" >> $OSLOG_PROCESS
 
-time { bash i1.1.16.netaddr-1.3.0.sh ; }
+# time { bash i1.1.14.netifaces-0.11.0.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
-###
+# ###
 
-echo "i1.1.17.wrapt-1.16.0"
-echo "i1.1.17.wrapt-1.16.0" >> $OSLOG_PROCESS
+# echo "i1.1.15.platformdirs-4.3.7"
+# echo "i1.1.15.platformdirs-4.3.7" >> $OSLOG_PROCESS
 
-time { bash i1.1.17.wrapt-1.16.0.sh ; }
+# time { bash i1.1.15.platformdirs-4.3.7.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
+
+# ###
+
+# echo "i1.1.16.netaddr-1.3.0"
+# echo "i1.1.16.netaddr-1.3.0" >> $OSLOG_PROCESS
+
+# time { bash i1.1.16.netaddr-1.3.0.sh ; }
+
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
+
+# ###
+
+# echo "i1.1.17.wrapt-1.16.0"
+# echo "i1.1.17.wrapt-1.16.0" >> $OSLOG_PROCESS
+
+# time { bash i1.1.17.wrapt-1.16.0.sh ; }
+
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 # ###
 

@@ -46,10 +46,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 ##    i4.14 openstacksdk-4.4.0 depends on i1.2.01 dogpile.cache-1.3.4
 
-echo "i4.14.openstacksdk-4.4.0"
-echo "i4.14.openstacksdk-4.4.0" >> $OSLOG_PROCESS
+echo "i4.2.14.openstacksdk-4.4.0"
+echo "i4.2.14.openstacksdk-4.4.0" >> $OSLOG_PROCESS
 
-time { bash i4.14.openstacksdk-4.4.0.sh ; }
+time { bash i4.2.W14.openstacksdk-4.4.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

@@ -1,4 +1,4 @@
-# i1.1.09.iso8601-2.1.0.sh
+# i1.1.09.iso8601-2.1.0.whl.sh
 #
 # Note: (alternative) .whl install
 # since the source build is giving ERRORs

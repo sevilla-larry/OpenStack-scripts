@@ -26,45 +26,45 @@ echo "."
 
 ###
 
-echo "i3.02.os-service-types-1.7.0"
-echo "i3.02.os-service-types-1.7.0" >> $OSLOG_PROCESS
+# echo "i3.02.os-service-types-1.7.0"
+# echo "i3.02.os-service-types-1.7.0" >> $OSLOG_PROCESS
 
-time { bash i3.02.os-service-types-1.7.0.sh ; }
+# time { bash i3.02.os-service-types-1.7.0.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
-###
+# ###
 
-echo "i3.03.requestsexceptions-1.4.0"
-echo "i3.03.requestsexceptions-1.4.0" >> $OSLOG_PROCESS
+# echo "i3.03.requestsexceptions-1.4.0"
+# echo "i3.03.requestsexceptions-1.4.0" >> $OSLOG_PROCESS
 
-time { bash i3.03.requestsexceptions-1.4.0.sh ; }
+# time { bash i3.03.requestsexceptions-1.4.0.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
-###
+# ###
 
-echo "i3.04.debtcollector-3.0.0"
-echo "i3.04.debtcollector-3.0.0" >> $OSLOG_PROCESS
+# echo "i3.04.debtcollector-3.0.0"
+# echo "i3.04.debtcollector-3.0.0" >> $OSLOG_PROCESS
 
-time { bash i3.04.debtcollector-3.0.0.sh ; }
+# time { bash i3.04.debtcollector-3.0.0.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 ###
 

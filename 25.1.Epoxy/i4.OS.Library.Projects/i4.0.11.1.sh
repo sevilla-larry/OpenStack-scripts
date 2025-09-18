@@ -15,10 +15,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 #####
 
 
-echo "i4.20.stevedore-5.4.1"
-echo "i4.20.stevedore-5.4.1" >> $OSLOG_PROCESS
+echo "i4.1.20.stevedore-5.4.1"
+echo "i4.1.20.stevedore-5.4.1" >> $OSLOG_PROCESS
 
-time { bash i4.20.stevedore-5.4.1.sh ; }
+time { bash i4.1.20.stevedore-5.4.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -31,10 +31,10 @@ echo "."
 
 ##    i4.03 cliff-4.9.1 depends on i4.20 stevedore-5.4.1
 
-echo "i4.03.cliff-4.9.1"
-echo "i4.03.cliff-4.9.1" >> $OSLOG_PROCESS
+echo "i4.1.03.cliff-4.9.1"
+echo "i4.1.03.cliff-4.9.1" >> $OSLOG_PROCESS
 
-time { bash i4.03.cliff-4.9.1.sh ; }
+time { bash i4.1.03.cliff-4.9.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -73,31 +73,31 @@ echo "."
 
 #####
 
-echo "i4.36.oslo.i18n-6.5.1"
-echo "i4.36.oslo.i18n-6.5.1" >> $OSLOG_PROCESS
+# echo "i4.36.oslo.i18n-6.5.1"
+# echo "i4.36.oslo.i18n-6.5.1" >> $OSLOG_PROCESS
 
-time { bash i4.36.oslo.i18n-6.5.1.sh ; }
+# time { bash i4.36.oslo.i18n-6.5.1.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
-###
+# ###
 
-echo "i4.49.oslo.utils-8.2.0"
-echo "i4.49.oslo.utils-8.2.0" >> $OSLOG_PROCESS
+# echo "i4.49.oslo.utils-8.2.0"
+# echo "i4.49.oslo.utils-8.2.0" >> $OSLOG_PROCESS
 
-time { bash i4.49.oslo.utils-8.2.0.sh ; }
+# time { bash i4.49.oslo.utils-8.2.0.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 # ###
 

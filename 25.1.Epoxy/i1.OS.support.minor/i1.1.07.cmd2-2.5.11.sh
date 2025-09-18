@@ -4,7 +4,6 @@
 #
 # Dependencies Required:
 #
-#?not required? ?b30.13.24.02 Attrs-24.2.0
 #               i1.1.05 pyperclip-1.9.0
 #               i1.1.06 wcwidth-0.2.13
 #

@@ -22,7 +22,7 @@ bash b10.03.6.sh
 
 ###### b30 for updating
 
-######          support apps for OpenStack, Nmap + deps, lsof & iptables
+######          support apps for OpenStack, lsof & iptables
 #bash b30.03.1.sh
 ######          support apps for OpenStack, Python Modules & Dependecies
-#bash b30.03.2.sh
+bash b30.03.2.sh
