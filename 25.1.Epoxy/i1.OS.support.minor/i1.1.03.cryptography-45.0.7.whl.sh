@@ -14,7 +14,7 @@
 # Required by:
 #
 #               i8.23   python-openstackclient-7.4.0
-#               i?.??   openstacksdk-4.0.1
+#               i4.2.14 openstacksdk-4.4.0
 #               i?.??   pyOpenSSL-23.3.0
 #               i?.??   pysaml2-7.5.0
 #               i?.??   KeyStone-26.0.0

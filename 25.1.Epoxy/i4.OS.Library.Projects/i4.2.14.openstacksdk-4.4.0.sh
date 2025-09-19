@@ -4,7 +4,7 @@
 #
 # Dependencies Required:
 #
-#               i1.1.03 cryptography-45.0.7
+#               i1.1.03 cryptography-45.0.7 whl
 #               i1.1.10 decorator-5.2.1
 #      2nd pass i1.2.01 dogpile.cache-1.3.4
 #               i1.1.09 iso8601-2.1.0
