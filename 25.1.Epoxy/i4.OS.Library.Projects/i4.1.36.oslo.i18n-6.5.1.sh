@@ -6,13 +6,14 @@
 #
 #               i3.01   pbr-6.1.1
 #               a.08.55 Setuptools-80.9.0   (hidden)
+#
 
 #
 # Required by:
 #
 #               i8.23   python-openstackclient-7.1.3
-#               i4.49   oslo.utils-8.2.0
-#      2nd pass i4.18   osc-lib-3.4.0
+#               i4.1.49 oslo.utils-8.2.0
+#      2nd pass i4.2.18 osc-lib-3.2.0
 #               i?.??   oslo.config-9.6.0
 #               i?.??   python-keystoneclient-5.5.0
 #               i?.??   python-cinderclient-9.6.0

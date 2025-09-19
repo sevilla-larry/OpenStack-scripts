@@ -1,17 +1,17 @@
 # i4.2.18.osc-lib-3.2.0.sh
-# 2nd pass
+#
 
 #
 # Dependencies Required:
 #
-#               i3.01   pbr-6.1.1
-#               i4.1.03 cliff-4.9.1
-#               i4.1.06 keystoneauth1-5.10.0
-#               i4.2.14 openstacksdk-4.4.0
-#               i4.1.36 oslo.i18n-6.4.0
-#               i4.1.49 oslo.utils-7.3.0
-#               b30.13.23.30 Requests-2.32.3
-#               i4.1.20 stevedore-5.3.0
+#               i3.01        pbr-6.1.1
+#               i4.1.03      cliff-4.9.1
+#               i4.1.06      keystoneauth1-5.10.0
+#               i4.2.14      openstacksdk-4.4.0
+#               i4.1.36      oslo.i18n-6.5.1
+#               i4.1.49      oslo.utils-8.2.0
+#               b30.13.24.30 Requests-2.32.5
+#               i4.1.20      stevedore-5.4.1
 #
 
 #

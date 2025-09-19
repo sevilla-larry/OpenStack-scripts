@@ -8,14 +8,14 @@
 #               i1.1.07 cmd2-2.4.3
 #               i1.1.08 prettytable-3.15.1
 #               i4.1.20 stevedore-5.4.1
-#               b30.13.23.28 PyYAML-6.0.2
+#               b10.13.24.28 PyYAML-6.0.2
 #
 
 #
 # Required by:
 #
 #               i8.23   python-openstackclient-7.4.0
-#               i4.2.18 osc-lib-3.1.0
+#               i4.2.18 osc-lib-3.2.0
 #               i?.?? python-barbicanclient-7.0.0
 #               i?.?? python-neutronclient-11.3.1
 #

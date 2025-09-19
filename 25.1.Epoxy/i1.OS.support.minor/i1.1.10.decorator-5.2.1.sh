@@ -4,8 +4,8 @@
 #
 # Required by:
 #
-#               i4.14   openstacksdk-4.4.0
-#               i1.2.01 dogpile.cache-1.3.3
+#               i4.2.14 openstacksdk-4.4.0
+#               i1.2.01 dogpile.cache-1.3.4
 #               i?.??   Nova-30.0.0
 #
 

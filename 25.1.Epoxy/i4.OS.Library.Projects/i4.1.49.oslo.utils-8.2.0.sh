@@ -4,21 +4,23 @@
 #
 # Dependencies Required:
 #
-#               i1.1.09 iso8601-2.1.0
-#               i4.1.36 oslo.i18n-6.5.1
-#               i1.1.16 netaddr-1.3.0
-#               i1.1.14 netifaces-0.11.0
-#               i3.04   debtcollector-3.0.0
-#               i1.1.18 pyparsing-3.2.3
-#               b10.13.23.15 Packaging-24.1
-#               i1.1.19 tzdata-2025.2
-#               b30.13.23.28 PyYAML-6.0.2
+#               i1.1.09      iso8601-2.1.0
+#               i4.1.36      oslo.i18n-6.5.1
+#               i1.1.16      netaddr-1.3.0
+#               i3.04        debtcollector-3.0.0
+#               b30.13.24.24 pyparsing-3.2.3
+#               a.08.53      Packaging-25.0
+#               i1.1.18      tzdata-2025.2
+#               b30.13.24.28 PyYAML-6.0.2
+#               b10.13.24.17 psutil-7.0.0
+#               i3.01        pbr-6.1.1
 #
-
+#          ???  i1.1.14 netifaces-0.11.0
+#
 #
 # Required by:
 #
-#      2nd pass i4.18   osc-lib-3.2.0
+#               i4.2.18 osc-lib-3.2.0
 #               i040.9.04 oslo.serialization-5.5.0
 #               i040.9.11 python-keystoneclient-5.5.0
 #               i040.9.12 python-cinderclient-9.6.0

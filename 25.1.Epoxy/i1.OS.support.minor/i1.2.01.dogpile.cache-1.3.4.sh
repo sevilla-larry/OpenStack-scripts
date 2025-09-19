@@ -11,7 +11,7 @@
 #
 # Required by:
 #
-#               i4.14   openstacksdk-4.0.1
+#               i4.2.14 openstacksdk-4.4.0
 #               i?.??   oslo.cache-3.8.0
 #               i?.??   KeyStone-26.0.0
 #

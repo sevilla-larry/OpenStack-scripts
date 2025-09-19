@@ -11,7 +11,7 @@
 #
 # Required by:
 #
-#               i4.03   cliff-4.9.1
+#               i4.1.03 cliff-4.9.1
 #
 
 export PKG="cmd2-2.5.11"

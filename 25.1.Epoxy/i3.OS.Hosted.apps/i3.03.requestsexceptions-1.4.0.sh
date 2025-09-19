@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i4.14   openstacksdk-4.4.0
+#               i4.2.14 openstacksdk-4.4.0
 #
 
 export PKG="requestsexceptions-1.4.0"

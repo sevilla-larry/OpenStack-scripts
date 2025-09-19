@@ -4,19 +4,20 @@
 #
 # Dependencies Required:
 #
-#               i1.1.03 cryptography-45.0.7 whl
-#               i1.1.10 decorator-5.2.1
-#      2nd pass i1.2.01 dogpile.cache-1.3.4
-#               i1.1.09 iso8601-2.1.0
-#               i1.1.11 jmespath-1.0.1
-#               i1.1.13 jsonpatch-1.33
-#               i4.1.06 keystoneauth1-5.10.0
-#               i3.02   os-service-types-1.7.0
-#               i3.01   pbr-6.1.1
-#               i1.1.15 platformdirs-4.3.6
-#               b30.13.23.28 PyYAML-6.0.2
-#               i3.03   requestsexceptions-1.4.0
-#               i1.1.14 typing-extensions-4.12.2
+#               i1.1.03      cryptography-45.0.7 whl
+#               i1.1.10      decorator-5.2.1
+#      2nd pass i1.2.01      dogpile.cache-1.3.4
+#               i1.1.09      iso8601-2.1.0
+#               i1.1.11      jmespath-1.0.1
+#               i1.1.13      jsonpatch-1.33
+#               i4.1.06      keystoneauth1-5.10.0
+#               i3.02        os-service-types-1.7.0
+#               i3.01        pbr-6.1.1
+#               i1.1.15      platformdirs-4.3.8
+#               b10.13.24.17 psutil-7.0.0
+#               b30.13.24.28 PyYAML-6.0.2
+#               i3.03        requestsexceptions-1.4.0
+#               i1.1.14      typing-extensions-4.12.2
 #
 #      ??? 24.2 i1.1.14 netifaces-0.11.0
 
@@ -24,7 +25,7 @@
 # Required by:
 #
 #               i8.23   python-openstackclient-7.4.0
-#               i4.18   osc-lib-3.1.0
+#               i4.2.18 osc-lib-3.2.0
 #               i040.9.15 python-neutronclient-11.3.1
 #               i080.9.10 oslo.limit-2.5.0
 #
