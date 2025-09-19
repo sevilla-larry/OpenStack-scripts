@@ -1,11 +1,11 @@
-# i4.49.oslo.utils-8.2.0.sh
+# i4.1.49.oslo.utils-8.2.0.sh
 #
 
 #
 # Dependencies Required:
 #
 #               i1.1.09 iso8601-2.1.0
-#               i4.36   oslo.i18n-6.5.1
+#               i4.1.36 oslo.i18n-6.5.1
 #               i1.1.16 netaddr-1.3.0
 #               i1.1.14 netifaces-0.11.0
 #               i3.04   debtcollector-3.0.0

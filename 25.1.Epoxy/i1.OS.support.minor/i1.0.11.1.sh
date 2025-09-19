@@ -224,61 +224,47 @@ echo "."
 
 ###
 
-# echo "i1.1.16.netaddr-1.3.0"
-# echo "i1.1.16.netaddr-1.3.0" >> $OSLOG_PROCESS
+echo "i1.1.16.netaddr-1.3.0"
+echo "i1.1.16.netaddr-1.3.0" >> $OSLOG_PROCESS
 
-# time { bash i1.1.16.netaddr-1.3.0.sh ; }
+time { bash i1.1.16.netaddr-1.3.0.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# ###
+###
 
-# echo "i1.1.17.wrapt-1.16.0"
-# echo "i1.1.17.wrapt-1.16.0" >> $OSLOG_PROCESS
+echo "i1.1.17.wrapt-1.16.0"
+echo "i1.1.17.wrapt-1.16.0" >> $OSLOG_PROCESS
 
-# time { bash i1.1.17.wrapt-1.16.0.sh ; }
+time { bash i1.1.17.wrapt-1.16.0.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# ###
+###
 
-# echo "i010.9.18.pyparsing-3.1.4"
-# echo "i010.9.18.pyparsing-3.1.4" >> $OSLOG_PROCESS
+echo "i010.9.18.tzdata-2025.2"
+echo "i010.9.18.tzdata-2025.2" >> $OSLOG_PROCESS
 
-# time { bash i010.9.18.pyparsing-3.1.4.sh ; }
+time { bash i010.9.18.tzdata-2025.2.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# ###
-
-# echo "i010.9.19.tzdata-2024.2"
-# echo "i010.9.19.tzdata-2024.2" >> $OSLOG_PROCESS
-
-# time { bash i010.9.19.tzdata-2024.2.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
-# ###
+###
 
 # echo "i010.9.20.rfc3986-2.0.0"
 # echo "i010.9.20.rfc3986-2.0.0" >> $OSLOG_PROCESS

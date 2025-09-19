@@ -1,29 +1,49 @@
-# i4.18.osc-lib-3.2.0.sh
-# 2nd pass
+# i4.1.36.oslo.i18n-6.5.1.sh
+#
 
 #
 # Dependencies Required:
 #
 #               i3.01   pbr-6.1.1
-#               i4.03   cliff-4.9.1
-#               i4.06   keystoneauth1-5.10.0
-#               i4.14   openstacksdk-4.4.0
-#        due to i4.36   oslo.i18n-6.4.0
-#        due to i4.49   oslo.utils-7.3.0
-#               b30.13.23.30 Requests-2.32.3
-#               i4.20   stevedore-5.3.0
-#
+#               a.08.55 Setuptools-80.9.0   (hidden)
 
 #
 # Required by:
 #
-#               i8.23     python-openstackclient-7.4.0
-#               i?.??     python-keystoneclient-5.5.0
-#               i?.??     python-neutronclient-11.3.1
+#               i8.23   python-openstackclient-7.1.3
+#               i4.49   oslo.utils-8.2.0
+#      2nd pass i4.18   osc-lib-3.4.0
+#               i?.??   oslo.config-9.6.0
+#               i?.??   python-keystoneclient-5.5.0
+#               i?.??   python-cinderclient-9.6.0
+#               i?.??   python-glanceclient-4.7.0
+#               i?.??   python-barbicanclient-7.0.0
+#               i?.??   python-neutronclient-11.3.1
+#               i?.??   oslo.cache-3.8.0
+#               i?.??   oslo.concurrency-6.1.0
+#               i?.??   oslo.service-3.5.0
+#               i?.??   oslo.middleware-6.2.0
+#               i?.??   oslo.messaging-14.9.1
+#               i?.??   oslo.db-16.0.0
+#               i?.??   oslo.policy-4.4.0
+#               i?.??   oslo.upgradecheck-2.4.0
+#               i?.??   oslo.limit-2.5.0
+#               i?.??   oslo.reports-3.4.0
+#               i?.??   oslo.privsep-3.4.0
+#               i?.??   oslo.versionedobjects-3.4.0
+#               i?.??   castellan-5.1.1
+#               i?.??   cursive-0.2.3
+#               i?.??   keystonemiddleware-10.7.1
+#               i?.??   glance_store-4.8.1
+#               i?.??   os-win-5.9.0
+#               i?.??   os_brick-6.9.1
+#               i?.??   os_vif-3.7.0
+#               i?.??   KeyStone-26.0.0
+#               i?.??   Glance-29.0.0
 #
 
-export PKG="osc-lib-3.2.0"
-export PKGLOG_DIR=$OSLOG/4.18
+export PKG="oslo_i18n-6.5.1"
+export PKGLOG_DIR=$OSLOG/4.36
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -58,7 +78,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                osc-lib                 \
+                oslo.i18n               \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

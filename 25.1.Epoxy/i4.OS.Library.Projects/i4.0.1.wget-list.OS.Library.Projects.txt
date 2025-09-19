@@ -20,7 +20,7 @@ https://tarballs.opendev.org/openstack/stevedore/stevedore-5.4.1.tar.gz
 # i4.36 oslo_i18n-6.5.1
 https://tarballs.opendev.org/openstack/oslo.i18n/oslo_i18n-6.5.1.tar.gz
 
-# 02 oslo.utils-8.2.0
+# 02 oslo_utils-8.2.0
 https://tarballs.opendev.org/openstack/oslo.utils/oslo_utils-8.2.0.tar.gz
 
 

@@ -1,4 +1,4 @@
-# i4.20.stevedore-5.4.1.sh
+# i4.1.20.stevedore-5.4.1.sh
 #
 
 #
@@ -10,10 +10,10 @@
 #
 # Required by:
 #
-#               i4.03   cliff-4.9.1
+#               i4.1.03 cliff-4.9.1
 #               i1.2.01 dogpile.cache-1.3.3
-#               i4.06   keystoneauth1-5.8.0
-#               i4.18   osc-lib-3.1.0
+#               i4.1.06 keystoneauth1-5.8.0
+#               i4.2.18 osc-lib-3.1.0
 #               i?.?? oslo.config-9.6.0
 #               i?.?? python-keystoneclient-5.5.0
 #               i?.?? python-cinderclient-9.6.0

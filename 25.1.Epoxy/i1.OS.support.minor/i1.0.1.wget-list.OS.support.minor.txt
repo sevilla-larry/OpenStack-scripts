@@ -56,14 +56,14 @@ https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607
 # i1.1.15 platformdirs-4.3.8    4.3.6 if err
 https://files.pythonhosted.org/packages/fe/8b/3c73abc9c759ecd3f1f7ceff6685840859e8070c4d947c93fae71f6a0bf2/platformdirs-4.3.8.tar.gz
 
-
-
-
 # i1.1.16 netaddr-1.3.0
 https://files.pythonhosted.org/packages/54/90/188b2a69654f27b221fba92fda7217778208532c962509e959a9cee5229d/netaddr-1.3.0.tar.gz
 
 # i1.1.17 wrapt-1.16.0
 https://files.pythonhosted.org/packages/95/4c/063a912e20bcef7124e0df97282a8af3ff3e4b603ce84c481d6d7346be0a/wrapt-1.16.0.tar.gz
+
+# i1.1.18 tzdata-2025.2
+https://files.pythonhosted.org/packages/95/32/1a225d6164441be760d75c2c42e2780dc0873fe382da3e98a2e1e48361e5/tzdata-2025.2.tar.gz
 
 
 
@@ -106,9 +106,3 @@ https://files.pythonhosted.org/packages/cb/b7/2fa37f52b4f38bc8eb6d4923163dd822ca
 
 # i1.1.14 netifaces-0.11.0
 https://files.pythonhosted.org/packages/a6/91/86a6eac449ddfae239e93ffc1918cf33fd9bab35c04d1e963b311e347a73/netifaces-0.11.0.tar.gz
-
-# z1.1.18 pyparsing-3.2.3   to B30
-#https://files.pythonhosted.org/packages/bb/22/f1129e69d94ffff626bdb5c835506b3a5b4f3d070f17ea295e12c2c6f60f/pyparsing-3.2.3.tar.gz
-
-# z1.1.19 tzdata-2025.2     to A.08.9x
-https://files.pythonhosted.org/packages/95/32/1a225d6164441be760d75c2c42e2780dc0873fe382da3e98a2e1e48361e5/tzdata-2025.2.tar.gz

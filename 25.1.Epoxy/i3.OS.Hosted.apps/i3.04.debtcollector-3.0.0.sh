@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i4.49   oslo.utils-8.2.0
+#               i4.1.49 oslo.utils-8.2.0
 #               i?.??   oslo.config-9.6.0
 #               i?.??   python-keystoneclient-5.5.0
 #               i?.??   python-neutronclient-11.3.1

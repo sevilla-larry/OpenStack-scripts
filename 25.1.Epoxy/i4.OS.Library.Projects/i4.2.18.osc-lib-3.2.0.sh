@@ -1,16 +1,29 @@
-# i1.1.18.pyparsing-3.2.3.sh
-# to B30.13.23
+# i4.2.18.osc-lib-3.2.0.sh
+# 2nd pass
+
+#
+# Dependencies Required:
+#
+#               i3.01   pbr-6.1.1
+#               i4.1.03 cliff-4.9.1
+#               i4.1.06 keystoneauth1-5.10.0
+#               i4.2.14 openstacksdk-4.4.0
+#               i4.1.36 oslo.i18n-6.4.0
+#               i4.1.49 oslo.utils-7.3.0
+#               b30.13.23.30 Requests-2.32.3
+#               i4.1.20 stevedore-5.3.0
+#
 
 #
 # Required by:
 #
-#               i4.49   oslo.utils-8.2.0
-#               i?.??   pydot-3.0.4
-#               i?.??   httplib2-0.22.0
+#               i8.23     python-openstackclient-7.4.0
+#               i?.??     python-keystoneclient-5.5.0
+#               i?.??     python-neutronclient-11.3.1
 #
 
-export PKG="pyparsing-3.2.3"
-export PKGLOG_DIR=$OSLOG/1.1.18
+export PKG="osc-lib-3.2.0"
+export PKGLOG_DIR=$OSLOG/4.18
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -45,7 +58,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                pyparsing               \
+                osc-lib                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

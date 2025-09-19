@@ -4,18 +4,19 @@
 #
 # Dependencies Required:
 #
-#               i3.01   pbr-6.1.1
-#               i1.1.09 iso8601-2.1.0
-#               b30.13.23.30 Requests-2.32.3
-#               i4.20   stevedore-5.4.1
-#               i3.02   os-service-types-1.7.0
+#               i3.01        pbr-6.1.1
+#               i1.1.09      iso8601-2.1.0
+#               b30.13.23.30 Requests-2.32.5
+#               i4.1.20      stevedore-5.4.1
+#               i3.02        os-service-types-1.7.0
+#               i1.1.14      typing-extensions-4.12.2
 #
 
 #
 # Required by:
 #
-#               i4.14   openstacksdk-4.4.0
-#               i4.18   osc-lib-3.1.0
+#               i4.2.14 openstacksdk-4.4.0
+#               i4.2.18 osc-lib-3.1.0
 #               i?.??   python-keystoneclient-5.5.0
 #               i?.??   python-cinderclient-9.6.0
 #               i?.??   python-glanceclient-4.7.0

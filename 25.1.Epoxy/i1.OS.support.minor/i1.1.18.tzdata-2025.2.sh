@@ -1,16 +1,16 @@
-# i1.1.19.tzdata-2025.2.sh
+# i1.1.18.tzdata-2025.2.sh
 #
 
 #
 # Required by:
 #
-#               i4.49   oslo.utils-8.2.0
+#               i4.1.49 oslo.utils-8.2.0
 #               i030.9.04 oslo.serialization-5.5.0
 #               i060.9.16 kombu-5.4.2
 #
 
 export PKG="tzdata-2025.2"
-export PKGLOG_DIR=$OSLOG/1.1.19
+export PKGLOG_DIR=$OSLOG/1.1.18
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
