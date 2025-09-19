@@ -45,17 +45,17 @@ echo "."
 
 ###
 
-echo "i4.06.keystoneauth1-5.10.0"
-echo "i4.06.keystoneauth1-5.10.0" >> $OSLOG_PROCESS
+# echo "i4.06.keystoneauth1-5.10.0"
+# echo "i4.06.keystoneauth1-5.10.0" >> $OSLOG_PROCESS
 
-time { bash i4.06.keystoneauth1-5.10.0.sh ; }
+# time { bash i4.06.keystoneauth1-5.10.0.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 ###
 

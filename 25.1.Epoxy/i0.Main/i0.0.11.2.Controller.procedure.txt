@@ -78,7 +78,7 @@ A.  Preparation
 
         # md5sum -c md5sums.txt
         md5sum -c b10.02.md5sums.common.Xorg.and.servers.txt
-      # md5sum -c b30.02.md5sums.OpenStack.support.txt
+        md5sum -c b30.02.md5sums.OpenStack.support.txt
       # md5sum -c c11.02.md5sums.MariaDB.txt
       # md5sum -c c13.02.md5sums.Apache.txt
 

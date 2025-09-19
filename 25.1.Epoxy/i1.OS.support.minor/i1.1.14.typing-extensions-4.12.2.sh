@@ -2,16 +2,9 @@
 #
 
 #
-# Dependencies Required:
-#
-#               i1.1.12 jsonpointer-3.0.0
-#
-
-#
 # Required by:
 #
 #               i4.14   openstacksdk-4.4.0
-#               i?.??   warlock 2.0.1
 #
 
 export PKG="typing_extensions-4.12.2"
@@ -51,7 +44,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                jsonpatch               \
+                typing_extensions       \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

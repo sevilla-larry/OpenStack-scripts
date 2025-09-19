@@ -13,12 +13,12 @@ A. Preparation
 			PREFIX=24
 			BROADCAST=10.0.0.255
 
-	    2. ifconfig.eth1		### Provider Open
+	    2. ifconfig.eth1		### Provider Bridge
 			ONBOOT=yes
 			IFACE=eth1
 			SERVICE=bridge
 
-	d. add bridge service
+	d. add bridge service (Grok)
 
 		cat > /lib/services/bridge << "EOF"
 		#!/bin/sh
