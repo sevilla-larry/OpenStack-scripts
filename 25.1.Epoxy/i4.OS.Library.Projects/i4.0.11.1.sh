@@ -59,10 +59,10 @@ echo "."
 
 ###
 
-echo "i4.36.oslo.i18n-6.5.1"
-echo "i4.36.oslo.i18n-6.5.1" >> $OSLOG_PROCESS
+echo "i4.1.36.oslo.i18n-6.5.1"
+echo "i4.1.36.oslo.i18n-6.5.1" >> $OSLOG_PROCESS
 
-time { bash i4.36.oslo.i18n-6.5.1.sh ; }
+time { bash i4.1.36.oslo.i18n-6.5.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -73,10 +73,10 @@ echo "."
 
 ###
 
-echo "i4.49.oslo.utils-8.2.0"
-echo "i4.49.oslo.utils-8.2.0" >> $OSLOG_PROCESS
+echo "i4.1.49.oslo.utils-8.2.0"
+echo "i4.1.49.oslo.utils-8.2.0" >> $OSLOG_PROCESS
 
-time { bash i4.49.oslo.utils-8.2.0.sh ; }
+time { bash i4.1.49.oslo.utils-8.2.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
