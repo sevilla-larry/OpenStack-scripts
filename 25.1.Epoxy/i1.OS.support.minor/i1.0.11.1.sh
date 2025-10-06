@@ -252,10 +252,10 @@ echo "."
 
 ###
 
-echo "i010.9.18.tzdata-2025.2"
-echo "i010.9.18.tzdata-2025.2" >> $OSLOG_PROCESS
+echo "i1.1.18.tzdata-2025.2"
+echo "i1.1.18.tzdata-2025.2" >> $OSLOG_PROCESS
 
-time { bash i010.9.18.tzdata-2025.2.sh ; }
+time { bash i1.1.18.tzdata-2025.2.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
