@@ -31,7 +31,7 @@
 #
 
 export PKG="openstacksdk-4.4.0"
-export PKGLOG_DIR=$OSLOG/4.14
+export PKGLOG_DIR=$OSLOG/4.2.14
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

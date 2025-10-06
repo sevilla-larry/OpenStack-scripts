@@ -14,38 +14,6 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-# echo "i4.20.stevedore-5.4.1"
-# echo "i4.20.stevedore-5.4.1" >> $OSLOG_PROCESS
-
-# time { bash i4.20.stevedore-5.4.1.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
-# ###
-
-# ##    i4.03 cliff-4.9.1 depends on i4.20 stevedore-5.4.1 pass 1
-
-# echo "i4.03.cliff-4.9.1"
-# echo "i4.03.cliff-4.9.1" >> $OSLOG_PROCESS
-
-# time { bash i4.03.cliff-4.9.1.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
-###
-
-##    i4.14 openstacksdk-4.4.0 depends on i1.2.01 dogpile.cache-1.3.4
-
 echo "i4.2.14.openstacksdk-4.4.0"
 echo "i4.2.14.openstacksdk-4.4.0" >> $OSLOG_PROCESS
 

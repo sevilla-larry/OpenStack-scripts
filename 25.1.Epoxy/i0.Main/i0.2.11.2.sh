@@ -7,6 +7,6 @@
 
 # Python OpenStackClient support
 bash i1.0.11.2.sh   # OpenStack support minor
-#bash i4.0.11.2.sh   # OpenStack Library Projects
+bash i4.0.11.2.sh   # OpenStack Library Projects
 #bash i8.0.11.sh     # OpenStack Other Projects
                     # python-openstackclient
