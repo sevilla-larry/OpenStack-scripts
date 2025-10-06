@@ -59,47 +59,33 @@ echo "."
 
 ###
 
-# echo "i020.9.06.debtcollector-3.0.0"
-# echo "i020.9.06.debtcollector-3.0.0" >> $OSLOG_PROCESS
+echo "i4.36.oslo.i18n-6.5.1"
+echo "i4.36.oslo.i18n-6.5.1" >> $OSLOG_PROCESS
 
-# time { bash i020.9.06.debtcollector-3.0.0.sh ; }
+time { bash i4.36.oslo.i18n-6.5.1.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-#####
+###
 
-# echo "i4.36.oslo.i18n-6.5.1"
-# echo "i4.36.oslo.i18n-6.5.1" >> $OSLOG_PROCESS
+echo "i4.49.oslo.utils-8.2.0"
+echo "i4.49.oslo.utils-8.2.0" >> $OSLOG_PROCESS
 
-# time { bash i4.36.oslo.i18n-6.5.1.sh ; }
+time { bash i4.49.oslo.utils-8.2.0.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# ###
-
-# echo "i4.49.oslo.utils-8.2.0"
-# echo "i4.49.oslo.utils-8.2.0" >> $OSLOG_PROCESS
-
-# time { bash i4.49.oslo.utils-8.2.0.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
-# ###
+###
 
 # echo "i030.9.03.oslo.config-9.6.0"
 # echo "i030.9.03.oslo.config-9.6.0" >> $OSLOG_PROCESS
