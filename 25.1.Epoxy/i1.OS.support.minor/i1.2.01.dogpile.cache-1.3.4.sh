@@ -4,7 +4,7 @@
 #
 # Dependencies Required:
 #
-#               i1.1.10 decorator-5.1.1
+#               i1.1.10 decorator-5.2.1
 #               i4.1.20 stevedore-5.4.1
 #
 

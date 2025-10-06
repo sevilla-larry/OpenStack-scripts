@@ -4,17 +4,17 @@
 #
 # Dependecies Required:
 #
-#               i3.01 pbr-6.1.1
-#               i1.03 cryptography-45.0.7   44.0.3 41.0.7
-#               i4.03 cliff-4.9.1
-#               i1.09 iso8601-2.1.0
-#               i4.14 openstacksdk-4.4.0
-#               i?.?? osc-lib-3.2.0
-#               i?.?? oslo.i18n-6.5.1
+#               i3.01        pbr-6.1.1
+#               i1.1.03      cryptography-45.0.7
+#               i4.1.03      cliff-4.9.1
+#               i1.1.09      iso8601-2.1.0
+#               i4.2.14      openstacksdk-4.4.0
+#               i4.2.18      osc-lib-3.2.0
+#               i4.1.36      oslo.i18n-6.5.1
 #               i?.?? python-keystoneclient-5.6.0
 #               i?.?? python-cinderclient-9.7.0
 #               b30.13.24.30 Requests-2.32.5
-#               i4.20 stevedore-5.4.1
+#               i4.1.20      stevedore-5.4.1
 #
 
 export PKG="python_openstackclient-7.5.0"

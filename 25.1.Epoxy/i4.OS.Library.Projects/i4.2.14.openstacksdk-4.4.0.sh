@@ -6,7 +6,7 @@
 #
 #               i1.1.03      cryptography-45.0.7 whl
 #               i1.1.10      decorator-5.2.1
-#      2nd pass i1.2.01      dogpile.cache-1.3.4
+#               i1.2.01      dogpile.cache-1.3.4
 #               i1.1.09      iso8601-2.1.0
 #               i1.1.11      jmespath-1.0.1
 #               i1.1.13      jsonpatch-1.33
@@ -24,7 +24,7 @@
 #
 # Required by:
 #
-#               i8.23   python-openstackclient-7.4.0
+#               i8.23   python-openstackclient-7.5.0
 #               i4.2.18 osc-lib-3.2.0
 #               i040.9.15 python-neutronclient-11.3.1
 #               i080.9.10 oslo.limit-2.5.0

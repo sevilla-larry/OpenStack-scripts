@@ -2,9 +2,15 @@
 #
 
 #
+# Dependencies Required:
+#
+#               a.08.55 Setuptools-80.9.0
+#
+
+#
 # Required by:
 #
-#               i8.23   python-openstackclient-7.4.0
+#               i8.23   python-openstackclient-7.5.0
 #               i4.1.20 stevedore-5.4.1
 #               i3.01   os-service-types-1.7.0
 #               i4.1.06 keystoneauth1-5.10.0

@@ -30,19 +30,19 @@ echo "."
 
 ##    i4.18.osc-lib-3.2.0 depends on some i4.xx oslo.xxxxx-x.x.x
 
-# echo "i4.18.osc-lib-3.2.0"
-# echo "i4.18.osc-lib-3.2.0" >> $OSLOG_PROCESS
+echo "i4.2.18.osc-lib-3.2.0"
+echo "i4.2.18.osc-lib-3.2.0" >> $OSLOG_PROCESS
 
-# time { bash i4.18.osc-lib-3.2.0.sh ; }
+time { bash i4.2.18.osc-lib-3.2.0.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# ###
+###
 
 # echo "i020.9.03.os-service-types-1.7.0"
 # echo "i020.9.03.os-service-types-1.7.0" >> $OSLOG_PROCESS
