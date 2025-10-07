@@ -19,7 +19,7 @@
 #               i8.23  python-openstackclient-7.5.0
 #
 
-export PKG="python-cinderclient-9.7.0"
+export PKG="python_cinderclient-9.7.0"
 export PKGLOG_DIR=$OSLOG/5.07
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

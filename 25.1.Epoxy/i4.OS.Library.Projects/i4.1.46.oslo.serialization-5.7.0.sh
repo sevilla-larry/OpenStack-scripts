@@ -32,7 +32,7 @@
 #               i152.3    Openstack-Placement-12.0.0
 #
 
-export PKG="oslo.serialization-5.6.0"
+export PKG="oslo_serialization-5.7.0"
 export PKGLOG_DIR=$OSLOG/4.1.46
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
