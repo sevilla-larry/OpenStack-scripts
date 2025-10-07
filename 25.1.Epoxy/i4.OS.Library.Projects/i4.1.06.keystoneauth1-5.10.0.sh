@@ -17,8 +17,8 @@
 #
 #               i4.2.14 openstacksdk-4.4.0
 #               i4.2.18 osc-lib-3.2.0
-#               i?.??   python-keystoneclient-5.5.0
-#               i?.??   python-cinderclient-9.6.0
+#               i5.16   python-keystoneclient-5.6.0
+#               i5.07   python-cinderclient-9.7.0
 #               i?.??   python-glanceclient-4.7.0
 #               i?.??   python-barbicanclient-7.0.0
 #               i?.??   python-neutronclient-11.3.1

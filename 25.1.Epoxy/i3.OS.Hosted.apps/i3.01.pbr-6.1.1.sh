@@ -18,9 +18,9 @@
 #               i4.2.18 osc-lib-3.2.0
 #               i4.1.36 oslo.i18n-6.5.1
 #               i4.1.49 oslo.utils-8.2.0
-#               i?.?? oslo.serialization-5.5.0
-#               i?.?? python-keystoneclient-5.5.0
-#               i?.?? python-cinderclient-9.6.0
+#               i4.1.46 oslo.serialization-5.7.0
+#               i5.16   python-keystoneclient-5.6.0
+#               i5.07   python-cinderclient-9.7.0
 #               i?.?? oslo.context-5.6.0
 #               i?.?? oslo.log-6.1.2
 #               i?.?? python-glanceclient-4.7.0

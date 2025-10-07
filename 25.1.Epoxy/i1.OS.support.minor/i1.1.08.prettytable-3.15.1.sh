@@ -11,13 +11,13 @@
 # Required by:
 #
 #               i4.1.03 cliff-4.9.1
-#               i?.??   python-cinderclient-9.6.0
+#               i5.07   python-cinderclient-9.7.0
 #               i?.??   python-glanceclient-4.7.0
 #               i?.??   oslo.upgradecheck-2.4.0
 #               i?.??   osprofiler-4.2.0
 #               i?.??   automaton-3.2.0
 #               i?.??   Glance-29.0.0
-#               i?.??  d Nova-30.0.0
+#               i?.??   Nova-30.0.0
 #
 
 export PKG="prettytable-3.15.1"

@@ -11,8 +11,8 @@
 # Required by:
 #
 #               i4.1.49 oslo.utils-8.2.0
-#               i?.??   oslo.config-9.6.0
-#               i?.??   python-keystoneclient-5.5.0
+#               i1.1.33 oslo.config-9.7.1
+#               i5.16   python-keystoneclient-5.6.0
 #               i?.??   python-neutronclient-11.3.1
 #               i?.??   oslo.service-3.5.0
 #               i?.??   oslo.middleware-6.2.0

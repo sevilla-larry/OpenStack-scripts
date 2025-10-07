@@ -22,9 +22,9 @@
 # Required by:
 #
 #               i4.2.18 osc-lib-3.2.0
-#               i040.9.04 oslo.serialization-5.5.0
-#               i040.9.11 python-keystoneclient-5.5.0
-#               i040.9.12 python-cinderclient-9.6.0
+#               i4.1.46 oslo.serialization-5.7.0
+#               i5.16   python-keystoneclient-5.6.0
+#               i5.07   python-cinderclient-9.7.0
 #               i040.9.13 python-glanceclient-4.7.0
 #               i040.9.14 python-barbicanclient-7.0.0
 #               i040.9.15 python-neutronclient-11.3.1

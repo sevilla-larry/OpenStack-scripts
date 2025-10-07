@@ -5,7 +5,7 @@
 # Required by:
 #
 #               i4.1.49 oslo.utils-8.2.0
-#               i030.9.04 oslo.serialization-5.5.0
+#               i4.1.46 oslo.serialization-5.7.0
 #               i060.9.16 kombu-5.4.2
 #
 

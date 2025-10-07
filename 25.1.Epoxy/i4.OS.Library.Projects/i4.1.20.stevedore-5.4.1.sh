@@ -14,10 +14,10 @@
 #               i1.2.01 dogpile.cache-1.3.4
 #               i4.1.06 keystoneauth1-5.10.0
 #               i4.2.18 osc-lib-3.2.0
-#               i?.?? oslo.config-9.6.0
-#               i?.?? python-keystoneclient-5.5.0
-#               i?.?? python-cinderclient-9.6.0
-#               i?.?? python-openstackclient-7.1.3
+#               i4.1.33 oslo.config-9.7.1
+#               i5.16 python-keystoneclient-5.6.0
+#               i5.07 python-cinderclient-9.7.0
+#               i8.23 python-openstackclient-7.5.0
 #               i?.?? oslo.middleware-6.2.0
 #               i?.?? oslo.messaging-14.9.1
 #               i?.?? oslo.db-16.0.0

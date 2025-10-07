@@ -5,7 +5,7 @@
 # Required by:
 #
 #               i4.1.49 oslo.utils-8.2.0
-#               i?.??   oslo.config-9.6.0
+#               i4.1.33 oslo.config-9.7.1
 #               i?.??   oslo.versionedobjects-3.4.0
 #               i?.??   osprofiler-4.2.0
 #               i?.??   WSME-0.12.1
