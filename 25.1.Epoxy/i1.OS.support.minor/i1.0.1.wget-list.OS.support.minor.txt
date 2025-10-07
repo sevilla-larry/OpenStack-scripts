@@ -65,10 +65,10 @@ https://files.pythonhosted.org/packages/95/4c/063a912e20bcef7124e0df97282a8af3ff
 # i1.1.18 tzdata-2025.2
 https://files.pythonhosted.org/packages/95/32/1a225d6164441be760d75c2c42e2780dc0873fe382da3e98a2e1e48361e5/tzdata-2025.2.tar.gz
 
-
-
-# 20 rfc3986-2.0.0
+# i1.1.19 rfc3986-2.0.0
 https://files.pythonhosted.org/packages/85/40/1520d68bfa07ab5a6f065a186815fb6610c86fe957bc065754e47f7b0840/rfc3986-2.0.0.tar.gz
+
+
 
 # 21 rpds_py-0.22.3
 https://files.pythonhosted.org/packages/e1/78/79c128c3e71abbc8e9739ac27af11dc0f91840a86fce67ff83c65d1ba195/rpds_py-0.22.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl

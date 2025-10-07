@@ -1,24 +1,39 @@
-# i8.23.python-openstackclient-7.5.0.sh
+# i4.1.46.oslo.serialization-5.7.0.sh
 #
 
 #
-# Dependecies Required:
+# Dependencies Required:
 #
-#               i3.01        pbr-6.1.1
-#               i1.1.03      cryptography-45.0.7
-#               i4.1.03      cliff-4.9.1
-#               i1.1.09      iso8601-2.1.0
-#               i4.2.14      openstacksdk-4.4.0
-#               i4.2.18      osc-lib-3.2.0
-#               i4.1.36      oslo.i18n-6.5.1
-#               i5.16        python-keystoneclient-5.6.0
-#               i5.07        python-cinderclient-9.7.0
-#               b30.13.24.30 Requests-2.32.5
-#               i4.1.20      stevedore-5.4.1
+#               b30.13.25.17 Msgpack-1.1.1
+#               i4.1.49      oslo.utils-8.2.0
+#               i1.1.18      tzdata-2025.2
 #
 
-export PKG="python_openstackclient-7.5.0"
-export PKGLOG_DIR=$OSLOG/8.23
+#
+# Required by:
+#
+#               i5.16 python-keystoneclient-5.6.0
+#               i040.9.14 python-barbicanclient-7.0.0
+#               i040.9.15 python-neutronclient-11.3.1
+#               i080.9.06 oslo.messaging-14.9.1
+#               i080.9.08 oslo.policy-4.4.0
+#               i080.9.11 oslo.reports-3.4.0
+#               i080.9.14 oslo.versionedobjects-3.4.0
+#               i075.9.01 cursive-0.2.3
+#               i090.9.01 pycadf-3.1.1
+#               i090.9.02 keystonemiddleware-10.7.1
+#               i090.9.03 osprofiler-4.2.0
+#               i090.9.05 taskflow-5.9.1
+#               i090.9.06 glance_store-4.8.1
+#               i090.9.11 os_brick-6.9.1
+#               i090.9.13 os_vif-3.7.0
+#               i090.9.14 tooz-6.3.0
+#               i151.3    KeyStone-26.0.0
+#               i152.3    Openstack-Placement-12.0.0
+#
+
+export PKG="oslo.serialization-5.6.0"
+export PKGLOG_DIR=$OSLOG/4.1.46
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -54,7 +69,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python-openstackclient  \
+                oslo.serialization      \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

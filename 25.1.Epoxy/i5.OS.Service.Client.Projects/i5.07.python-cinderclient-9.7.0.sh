@@ -1,24 +1,26 @@
-# i8.23.python-openstackclient-7.5.0.sh
+# i5.07.python-cinderclient-9.7.0.sh
 #
 
 #
-# Dependecies Required:
+# Dependencies Required:
 #
 #               i3.01        pbr-6.1.1
-#               i1.1.03      cryptography-45.0.7
-#               i4.1.03      cliff-4.9.1
-#               i1.1.09      iso8601-2.1.0
-#               i4.2.14      openstacksdk-4.4.0
-#               i4.2.18      osc-lib-3.2.0
+#               i1.1.08      prettytable-3.15.1
+#               i4.1.06      keystoneauth1-5.10.0
 #               i4.1.36      oslo.i18n-6.5.1
-#               i5.16        python-keystoneclient-5.6.0
-#               i5.07        python-cinderclient-9.7.0
+#               i4.1.49      oslo.utils-8.2.0
 #               b30.13.24.30 Requests-2.32.5
 #               i4.1.20      stevedore-5.4.1
 #
 
-export PKG="python_openstackclient-7.5.0"
-export PKGLOG_DIR=$OSLOG/8.23
+#
+# Required by:
+#
+#               i8.23  python-openstackclient-7.5.0
+#
+
+export PKG="python-cinderclient-9.7.0"
+export PKGLOG_DIR=$OSLOG/5.07
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -54,7 +56,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python-openstackclient  \
+                python-cinderclient     \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

@@ -1,4 +1,4 @@
-# i4.00.11.1.sh
+# i4.0.11.1.sh
 #
 # Python OpenStack Library Projects
 #
@@ -73,6 +73,20 @@ echo "."
 
 ###
 
+echo "i4.1.33.oslo.config-9.7.1"
+echo "i4.1.33.oslo.config-9.7.1" >> $OSLOG_PROCESS
+
+time { bash i4.1.33.oslo.config-9.7.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 echo "i4.1.49.oslo.utils-8.2.0"
 echo "i4.1.49.oslo.utils-8.2.0" >> $OSLOG_PROCESS
 
@@ -87,33 +101,19 @@ echo "."
 
 ###
 
-# echo "i030.9.03.oslo.config-9.6.0"
-# echo "i030.9.03.oslo.config-9.6.0" >> $OSLOG_PROCESS
+echo "i4.1.46.oslo.serialization-5.7.0"
+echo "i4.1.46.oslo.serialization-5.7.0" >> $OSLOG_PROCESS
 
-# time { bash i030.9.03.oslo.config-9.6.0.sh ; }
+time { bash i4.1.46.oslo.serialization-5.7.0.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# ###
-
-# echo "i030.9.04.oslo.serialization-5.5.0"
-# echo "i030.9.04.oslo.serialization-5.5.0" >> $OSLOG_PROCESS
-
-# time { bash i030.9.04.oslo.serialization-5.5.0.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
-# ###
+###
 
 # echo "i030.9.05.oslo.context-5.6.0"
 # echo "i030.9.05.oslo.context-5.6.0" >> $OSLOG_PROCESS
