@@ -1,0 +1,8 @@
+# OpenStack support Major
+
+
+# i2.01 Erlang 27.3.4.3
+https://github.com/erlang/otp/releases/download/OTP-27.3.4.3/otp_src_27.3.4.3.tar.gz
+
+# i2.02 RabbitMQ-4.1.4					(generic unix binary)
+https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.1.4/rabbitmq-server-generic-unix-4.1.4.tar.xz
