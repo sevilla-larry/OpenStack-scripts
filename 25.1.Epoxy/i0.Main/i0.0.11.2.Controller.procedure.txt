@@ -86,7 +86,7 @@ A.  Preparation
       # md5sum -c i2.0.2.md5sums.OS.support.Major.txt
         md5sum -c i3.0.2.md5sums.OS.Hosted.apps.txt
         md5sum -c i4.0.2.md5sums.OS.Library.Projects.txt
-      # md5sum -c i5.0.2.md5sums.OS.Service.Client.Projects.txt
+        md5sum -c i5.0.2.md5sums.OS.Service.Client.Projects.txt
       # md5sum -c i?
         md5sum -c i8.0.2.md5sums.OS.Other.Projects.txt
 

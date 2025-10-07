@@ -1,5 +1,5 @@
 # Python OpenStack Other Projects
 
 
-# i8.23 python_openstackclient-7.4.0
-b3177553b062491c97d4fe0f525f3229 python_openstackclient-7.4.0.tar.gz
+# i8.23 python_openstackclient-7.5.0
+73f6655a73ab6950c0f9e43330a1cef7 python_openstackclient-7.5.0.tar.gz
