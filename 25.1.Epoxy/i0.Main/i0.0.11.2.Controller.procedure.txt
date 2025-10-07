@@ -159,10 +159,11 @@ B.  Support Applications - minor
         ( display )
         root [ /sources ]#
 
-    B.03. Generate Applications - minor
+    B.03. Generate Applications
 
         ###
 
+        # before Python OpenStack Client
         bash i0.1.11.sh
 
         ###
@@ -173,7 +174,9 @@ C.  Support Applications - Major
 
         # Python OpenStack Client
         # MariaDB, Apache, RabbitMQ, MemCacheD, EtcD
-        bash i000.1.11.2.support.apps.sh
+        bash i0.3.11.sh
+
+        #bash i000.1.11.2.support.apps.sh
 
         ###
 
@@ -244,7 +247,7 @@ D.  Support Apps - Major - Configuration 1
 
         ###
 
-        make install-mysql      # MariaDB
+        make install-mariadb    # MariaDB
         make install-httpd      # Apache
 #        make install-iptables   # iptables
 

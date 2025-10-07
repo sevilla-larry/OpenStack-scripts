@@ -68,6 +68,9 @@ https://files.pythonhosted.org/packages/95/32/1a225d6164441be760d75c2c42e2780dc0
 # i1.1.19 rfc3986-2.0.0
 https://files.pythonhosted.org/packages/85/40/1520d68bfa07ab5a6f065a186815fb6610c86fe957bc065754e47f7b0840/rfc3986-2.0.0.tar.gz
 
+# i1.1.20 PyMySQL 1.1.2
+https://files.pythonhosted.org/packages/f5/ae/1fe3fcd9f959efa0ebe200b8de88b5a5ce3e767e38c7ac32fb179f16a388/pymysql-1.1.2.tar.gz
+
 
 
 # 21 rpds_py-0.22.3
