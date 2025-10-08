@@ -12,4 +12,4 @@ python-memcached 1.62   2024/Jan/14
 
 # OpenStack Hosted
 etcd 6.1.10             2017/Jul/14
-etcd 6.6.5              2025/Sep/19
+#etcd 6.6.5             2025/Sep/19
