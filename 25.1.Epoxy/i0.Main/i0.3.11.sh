@@ -13,11 +13,12 @@ bash c13.03.sh					# Apr & Apr-util
 bash c13.03.9.main.app.sh		# Apache
 bash i1.0.11.3.2.sh				# mod-wsgi
 
-# # RabbitMQ
-# bash i050.5.4.sh				# RabbitMQ          ????
+# RabbitMQ
+bash i2.0.11.1.sh			    # RabbitMQ with Erlang
 
-# # MemCacheD
-# bash i050.5.5.sh				# MemCacheD         ????
+# MemCacheD
+bash i2.0.11.2.sh				# MemCacheD
+bash i1.0.11.3.3.sh             # python-memcached
 
-# # EtcD
-# bash i050.5.6.sh				# EtcD              ????
+# EtcD
+bash i2.0.11.3.sh				# EtcD

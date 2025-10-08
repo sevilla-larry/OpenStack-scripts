@@ -8,6 +8,7 @@
 #
 # mod-wsgi
 #
+#####
 
 export OSLOG_PROCESS=$OSLOG/process.log
 
@@ -27,9 +28,6 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
-
-###
-
 
 #####
 

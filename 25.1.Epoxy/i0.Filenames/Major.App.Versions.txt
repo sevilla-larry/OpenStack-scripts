@@ -1,6 +1,13 @@
-MariaDB 11.8.3  2025/Aug/01
-PyMySQL 1.1.2   2025/Aug/24
+MariaDB 11.8.3          2025/Aug/01
+PyMySQL 1.1.2           2025/Aug/24
 
-Apache 2.4.65   2025/Jul/23
-mod-wsgi 5.0.2  2024/Nov/22
+Apache 2.4.65           2025/Jul/23
+mod-wsgi 5.0.2          2024/Nov/22
 
+Erlang 27.3.4.3         2025/Sep/10
+RabbitMQ 4.1.4          2025/Sep/02
+
+MemCached 1.6.39        2025/Jul/28
+python-memcached 1.62   2024/Jan/14
+
+etcd 6.6.5              2025/Sep/19

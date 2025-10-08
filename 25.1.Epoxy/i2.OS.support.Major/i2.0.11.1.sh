@@ -1,6 +1,10 @@
-# i2.0.11.sh
+# i2.0.11.1.sh
 #
 # Build OpenStack support Major
+#
+# RabbitMQ
+#
+# https://docs.openstack.org/install-guide/environment-messaging.html
 #
 
 export OSLOG_PROCESS=$OSLOG/process.log

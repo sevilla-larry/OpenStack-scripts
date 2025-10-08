@@ -4,5 +4,16 @@
 # i2.01 Erlang 27.3.4.3
 476495d43e5c704f5e718b571120f269 otp_src_27.3.4.3.tar.gz
 
-# i2.02 RabbitMQ-4.1.4					(generic unix binary)
+# i2.02 RabbitMQ-4.1.4			(generic unix binary)
 #                                rabbitmq-server-generic-unix-4.1.4.tar.xz
+
+
+# i2.11 memcached-1.6.39
+#                                memcached-1.6.39.tar.gz
+
+
+# Note: OpenStack - tarballs - 3.1.10
+# i2.21 etcd-v3.1.10            (from OpenStack site amd64 binary/sources )
+#                                etcd-v3.1.10-linux-amd64.tar.gz
+# i2.21 etcd-v3.6.5             (generic unix binary)
+#                                etcd-v3.6.5-linux-amd64.tar.gz

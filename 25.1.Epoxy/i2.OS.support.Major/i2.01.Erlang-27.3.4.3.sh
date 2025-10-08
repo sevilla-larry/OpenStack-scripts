@@ -1,5 +1,7 @@
 # i2.01.Erlang-27.3.4.3.sh
 #
+# Notes: https://www.erlang.org/doc/system/install.html
+#
 
 #
 # Required by:
