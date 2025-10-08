@@ -176,8 +176,6 @@ C.  Support Applications - Major
         # MariaDB, Apache, RabbitMQ, MemCacheD, EtcD
         bash i0.3.11.sh
 
-        #bash i000.1.11.2.support.apps.sh
-
         ###
 
 D.  Support Apps - Major - Configuration 1
