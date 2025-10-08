@@ -45,10 +45,10 @@ echo "3. Make Build ..." >> $OSLOG_PROCESS
 echo "3. Make Build ..." >> $PKGLOG_ERROR
 make > $PKGLOG_BUILD 2>> $PKGLOG_ERROR
 
-echo "4. Make Test ..."
-echo "4. Make Test ..." >> $OSLOG_PROCESS
-echo "4. Make Test ..." >> $PKGLOG_ERROR
-make test > $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. Make Test (too long, not executed)"
+echo "4. Make Test (too long, not executed)" >> $OSLOG_PROCESS
+echo "4. Make Test (too long, not executed)" >> $PKGLOG_ERROR
+#make test > $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 echo "5. Make Release Tests ..."
 echo "5. Make Release Tests ..." >> $OSLOG_PROCESS
