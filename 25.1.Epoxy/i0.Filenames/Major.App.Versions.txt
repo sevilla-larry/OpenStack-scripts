@@ -10,4 +10,6 @@ RabbitMQ 4.1.4          2025/Sep/02
 MemCached 1.6.39        2025/Jul/28
 python-memcached 1.62   2024/Jan/14
 
+# OpenStack Hosted
+etcd 6.1.10             2017/Jul/14
 etcd 6.6.5              2025/Sep/19
