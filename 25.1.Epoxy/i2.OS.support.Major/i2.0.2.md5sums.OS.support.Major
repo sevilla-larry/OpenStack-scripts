@@ -10,10 +10,3 @@
 
 # i2.11 memcached-1.6.39
 #                                memcached-1.6.39.tar.gz
-
-
-# Note: OpenStack - tarballs - 3.1.10
-# i2.21 etcd-v3.1.10            (from OpenStack site amd64 binary/sources )
-#                                etcd-v3.1.10-linux-amd64.tar.gz
-# i2.21 etcd-v3.6.5             (generic unix binary)
-#                                etcd-v3.6.5-linux-amd64.tar.gz
