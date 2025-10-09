@@ -29,7 +29,9 @@ echo "."
 
 ###
 
-##    i4.03 cliff-4.9.1 depends on i4.20 stevedore-5.4.1
+##    i4.1.03 cliff-4.9.1
+##      depends on
+##    i4.1.20 stevedore-5.4.1
 
 echo "i4.1.03.cliff-4.9.1"
 echo "i4.1.03.cliff-4.9.1" >> $OSLOG_PROCESS
@@ -72,6 +74,10 @@ echo "."
 echo "."
 
 ###
+
+##    i4.1.33 oslo.config-9.7.1
+##      depends on
+##    i4.1.36 oslo.i18n-6.5.1
 
 echo "i4.1.33.oslo.config-9.7.1"
 echo "i4.1.33.oslo.config-9.7.1" >> $OSLOG_PROCESS
