@@ -1,21 +1,30 @@
-# i3.02.os-service-types-1.7.0.sh
+# i3.1.04.debtcollector-3.0.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i3.01   pbr-6.1.1
+#               i1.1.17 wrapt-1.16.0
 #
 
 #
 # Required by:
 #
-#               i4.1.06 keystoneauth1-5.10.0
-#               i4.2.14 openstacksdk-4.4.0
+#               i4.1.49 oslo.utils-8.2.0
+#               i1.1.33 oslo.config-9.7.1
+#               i5.16   python-keystoneclient-5.6.0
+#               i?.??   python-neutronclient-11.3.1
+#               i?.??   oslo.service-3.5.0
+#               i?.??   oslo.middleware-6.2.0
+#               i?.??   oslo.messaging-14.9.1
+#               i?.??   oslo.db-16.0.0
+#               i?.??   pycadf-3.1.1
+#               i?.??   os_vif-3.7.0
+#               i?.??   Glance-29.0.0
 #
 
-export PKG="os-service-types-1.7.0"
-export PKGLOG_DIR=$OSLOG/3.02
+export PKG="debtcollector-3.0.0"
+export PKGLOG_DIR=$OSLOG/3.1.04
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -51,7 +60,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                os-service-types        \
+                debtcollector           \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

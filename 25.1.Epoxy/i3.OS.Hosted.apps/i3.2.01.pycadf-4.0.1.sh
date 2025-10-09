@@ -1,31 +1,31 @@
-# i1.1.39.sqlalchemy-2.0.43.sh
+# i3.2.01.pycadf-4.0.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i060.9.04 greenlet-3.0.3
-#               i060.9.18 typing_extensions-4.12.2
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.04 oslo.serialization-5.5.0
+#               b30.13.24.21 Pytz-2024.1
+#               b30.13.23.33 six-1.16.0
+#               i020.9.06 debtcollector-3.0.0
+#
 
 #
 # Required by:
 #
-#               i060.9.20 alembic-1.13.3
-#               i080.9.07 oslo.db-16.0.0
+#               i090.9.02 keystonemiddleware-10.7.1
 #               i151.3    KeyStone-26.0.0
-#               i153.3    Glance-29.0.0
-#               i152.3    Openstack-Placement-12.0.0
 #
 
-export PKG="sqlalchemy-2.0.37"
-export PKGLOG_DIR=$OSLOG/060.19
+export PKG="pycadf-4.0.1"
+export PKGLOG_DIR=$OSLOG/3.2.01
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
-export SOURCES=`pwd`
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -54,7 +54,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                SQLAlchemy              \
+                pycadf                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."
@@ -63,9 +63,8 @@ echo "4. pyTest ..." >> $PKGLOG_ERROR
 pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
-cd $SOURCES
+cd ..
 rm -rf $PKG
-unset SOURCES
 unset OSLOG_PROCESS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_CHECK

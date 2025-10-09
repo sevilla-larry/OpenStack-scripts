@@ -13,6 +13,9 @@ f43b246ccd7d5b618e6f0dc946a6c3f3 requestsexceptions-1.4.0.tar.gz
 # i3.04 debtcollector-3.0.0
 399a20e47b0aec6c3007beb7cc7e017a debtcollector-3.0.0.tar.gz
 
+# i3.05 pycadf-4.0.1
+8551605ac44c50a68b1d9c9fba22d00e pycadf-4.0.1.tar.gz
+
 
 # Note: OpenStack - tarballs - 3.1.10
 # i3.11 etcd-v3.1.10            (from OpenStack site amd64 binary/sources )

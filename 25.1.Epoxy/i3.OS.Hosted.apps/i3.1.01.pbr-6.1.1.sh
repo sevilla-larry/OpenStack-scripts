@@ -1,4 +1,4 @@
-# i3.01.pbr-6.1.1.sh
+# i3.1.01.pbr-6.1.1.sh
 #
 
 #
@@ -52,7 +52,7 @@
 #
 
 export PKG="pbr-6.1.1"
-export PKGLOG_DIR=$OSLOG/3.01
+export PKGLOG_DIR=$OSLOG/3.1.01
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

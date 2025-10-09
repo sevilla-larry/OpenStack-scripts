@@ -1,43 +1,21 @@
-# i4.1.38.oslo.log-7.1.0.sh
+# i3.1.02.os-service-types-1.7.0.sh
 #
 
 #
 # Dependencies Required:
 #
 #               i3.01   pbr-6.1.1
-#               i4.1.33 oslo.config-9.7.1
-#               i030.9.05 oslo.context-5.6.0
-#               i4.1.36 oslo.i18n-6.5.1
-#               i4.1.49 oslo.utils-8.2.0
-#               i4.1.46 oslo.serialization-5.7.0
-#               i010.9.27 python-dateutil-2.9.0.post0
-#               i3.04   debtcollector-3.0.0
 #
 
 #
 # Required by:
 #
-#               i080.9.01 oslo.cache-3.8.0
-#               i040.9.15 python-neutronclient-11.3.1
-#               i080.9.03 oslo.service-3.5.0
-#               i080.9.05 oslo.metrics-0.9.0
-#               i080.9.06 oslo.messaging-14.9.1
-#               i080.9.10 oslo.limit-2.5.0
-#               i080.9.13 oslo.privsep-3.4.0
-#               i080.9.14 oslo.versionedobjects-3.4.0
-#               i070.9.02 castellan-5.1.1
-#               i075.9.01 cursive-0.2.3
-#               i090.9.02 keystonemiddleware-10.7.1
-#               i090.9.07 os-win-5.9.0
-#               i090.9.11 os_brick-6.9.1
-#               i090.9.13 os_vif-3.7.0
-#               i151.3    KeyStone-26.0.0
-#               i153.3    Glance-29.0.0
-#               i152.3    Openstack-Placement-12.0.0
+#               i4.1.06 keystoneauth1-5.10.0
+#               i4.2.14 openstacksdk-4.4.0
 #
 
-export PKG="oslo_log-7.1.0"
-export PKGLOG_DIR=$OSLOG/4.1.38
+export PKG="os-service-types-1.7.0"
+export PKGLOG_DIR=$OSLOG/3.1.02
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -73,7 +51,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.log                \
+                os-service-types        \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
