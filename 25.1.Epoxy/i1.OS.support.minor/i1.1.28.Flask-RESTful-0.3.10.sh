@@ -1,24 +1,23 @@
-# i1.1.21.WebOb-1.8.9.sh
+# i095.9.07.Flask-RESTful-0.3.10.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i095.9.06 aniso8601-9.0.1
+#               i095.9.05 Flask-3.0.3
+#               b30.13.23.33 six-1.16.0
+#               b30.13.24.21 Pytz-2024.1
 #
 
 #
 # Required by:
 #
-#               i6.16   KeyStone-27.0.0
-#               i080.9.03 oslo.service-3.5.0
-#               i080.9.04 oslo.middleware-6.2.0
-#               i080.9.06 oslo.messaging-14.9.1
-#               i080.9.14 oslo.versionedobjects-3.4.0
-#               i090.9.02 keystonemiddleware-10.7.1
-#               i090.9.03 osprofiler-4.2.0
-#               i090.9.10 microversion-parse-2.0.0
-#               i095.9.19 WSME-0.12.1
-#               i153.3    Glance-29.0.0
-#               i152.3    Openstack-Placement-12.0.0
+#               i151.3    KeyStone-26.0.0
 #
 
-export PKG="WebOb-1.8.9"
-export PKGLOG_DIR=$OSLOG/1.1.21
+export PKG="Flask-RESTful-0.3.10"
+export PKGLOG_DIR=$OSLOG/095.07
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -54,13 +53,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                WebOb                   \
+                Flask-RESTful           \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES

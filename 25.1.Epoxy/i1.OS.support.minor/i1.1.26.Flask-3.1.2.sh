@@ -1,24 +1,25 @@
-# i1.1.21.WebOb-1.8.9.sh
+# i1.1.26.Flask-3.1.2.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i1.1.22 blinker-1.9.0
+#               i1.1.23 click-8.2.1
+#               i1.1.24 itsdangerous-2.2.0
+#               a.08.75 Jinja2-3.1.6
+#               a.08.74 MarkupSafe-3.0.2
+#               i1.1.25 Werkzeug-3.1.3
 #
 
 #
 # Required by:
 #
-#               i6.16   KeyStone-27.0.0
-#               i080.9.03 oslo.service-3.5.0
-#               i080.9.04 oslo.middleware-6.2.0
-#               i080.9.06 oslo.messaging-14.9.1
-#               i080.9.14 oslo.versionedobjects-3.4.0
-#               i090.9.02 keystonemiddleware-10.7.1
-#               i090.9.03 osprofiler-4.2.0
-#               i090.9.10 microversion-parse-2.0.0
-#               i095.9.19 WSME-0.12.1
-#               i153.3    Glance-29.0.0
-#               i152.3    Openstack-Placement-12.0.0
+#               i6.16 KeyStone-27.0.0
 #
 
-export PKG="WebOb-1.8.9"
-export PKGLOG_DIR=$OSLOG/1.1.21
+export PKG="flask-3.1.2"
+export PKGLOG_DIR=$OSLOG/1.1.26
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -54,7 +55,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                WebOb                   \
+                Flask                   \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

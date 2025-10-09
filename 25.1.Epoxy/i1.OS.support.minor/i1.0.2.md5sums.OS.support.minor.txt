@@ -72,6 +72,27 @@ bbf20302bf26bc771e88cc775fbde3bc rfc3986-2.0.0.tar.gz
 # i1.1.21 WebOb-1.8.9
 4167b16880e0d4c22aadee8ec3cc6c26 webob-1.8.9.tar.gz
 
+# i1.1.22 blinker-1.9.0
+1ffce54aca3d568ab18ee921d479274f blinker-1.9.0.tar.gz
+
+# i1.1.23 click-8.2.1
+438cfd4974584ae4f960ffeab32e8991 click-8.2.1.tar.gz
+
+# i1.1.24 itsdangerous-2.2.0
+a901babde35694c3577f7655010cd380 itsdangerous-2.2.0.tar.gz
+
+# i1.1.25 Werkzeug-3.1.3
+b6005d403d01d08b9fe2330a0cfea05a werkzeug-3.1.3.tar.gz
+
+# i1.1.26 Flask-3.1.2
+62ae81cf2e91a376af909a2bc8939e15 flask-3.1.2.tar.gz
+
+# i1.1.27 aniso8601-9.0.1
+89b25ea9fd70b8facaf189aed43afcf8 aniso8601-9.0.1.tar.gz
+
+# i1.1.28 Flask-RESTful-0.3.10
+2a1f17e91c526a03bf721e178d8fce94 Flask-RESTful-0.3.10.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz

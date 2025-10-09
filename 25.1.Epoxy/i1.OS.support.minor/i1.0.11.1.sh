@@ -294,6 +294,76 @@ echo "."
 
 ###
 
+echo "i1.1.22.blinker-1.9.0"
+echo "i1.1.22.blinker-1.9.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.22.blinker-1.9.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.23.click-8.2.1"
+echo "i1.1.23.click-8.2.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.23.click-8.2.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.24.itsdangerous-2.2.0"
+echo "i1.1.24.itsdangerous-2.2.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.24.itsdangerous-2.2.0sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.25.Werkzeug-3.1.3"
+echo "i1.1.25.Werkzeug-3.1.3" >> $OSLOG_PROCESS
+
+time { bash i1.1.25.Werkzeug-3.1.3.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.26.Flask-3.1.2"
+echo "i1.1.26.Flask-3.1.2" >> $OSLOG_PROCESS
+
+time { bash i1.1.26.Flask-3.1.2.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.21.rpds_py-0.22.3"
 # echo "i010.9.21.rpds_py-0.22.3" >> $OSLOG_PROCESS
 
