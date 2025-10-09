@@ -7,6 +7,9 @@ https://tarballs.opendev.org/openstack/cliff/cliff-4.9.1.tar.gz
 # i4.1.06 keystoneauth1-5.10.0
 https://tarballs.opendev.org/openstack/keystoneauth/keystoneauth1-5.10.0.tar.gz
 
+# i4.2.07 keystonemiddleware-10.9.0
+https://tarballs.opendev.org/openstack/keystonemiddleware/keystonemiddleware-10.9.0.tar.gz
+
 # i4.2.14 openstacksdk-4.4.0
 https://tarballs.opendev.org/openstack/openstacksdk/openstacksdk-4.4.0.tar.gz
 

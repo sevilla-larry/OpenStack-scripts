@@ -93,6 +93,12 @@ b6005d403d01d08b9fe2330a0cfea05a werkzeug-3.1.3.tar.gz
 # i1.1.28 Flask-RESTful-0.3.10
 2a1f17e91c526a03bf721e178d8fce94 Flask-RESTful-0.3.10.tar.gz
 
+# i1.1.29 greenlet-3.2.4
+9aed26a4881c49d5f56c3f32f73e8572 greenlet-3.2.4.tar.gz
+
+# i1.1.30 SQLAlchemy-2.0.43
+a006c045b1a5610dba083ab3ae5dd991 sqlalchemy-2.0.43.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz
