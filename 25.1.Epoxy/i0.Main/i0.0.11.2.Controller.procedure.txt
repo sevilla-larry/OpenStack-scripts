@@ -184,15 +184,15 @@ D.  Support Apps - Major - Configuration 1
 
         ##### as root
 
-        ### edit /etc/mysql/my.cnf, add:
+        ### edit /etc/mariadb/my.cnf, add:
 
-        !includedir /etc/mysql/mariadb.conf.d/
+        !includedir /etc/mariadb/mariadb.conf.d/
 
         ### create mariadb.conf.d subdirectory
 
-        mkdir /etc/mysql/mariadb.conf.d
+        mkdir -v /etc/mariadb/mariadb.conf.d
 
-        ### add/create file /etc/mysql/mariadb.conf.d/99-openstack.cnf
+        ### add/create file /etc/mariadb/mariadb.conf.d/99-openstack.cnf
 
         [mysqld]
         bind-address = 10.0.0.11
@@ -240,8 +240,8 @@ D.  Support Apps - Major - Configuration 1
 
         ###
 
-        cd /mnt/Src/lfs.src/blfs-bootscripts-20240416       # VM/VB
-        cd /usr/src/lfs/blfs-bootscripts-20240416           # PC
+        cd /mnt/Src/lfs.src/blfs-bootscripts-20250225       # VM/VB
+        cd /usr/src/lfs/blfs-bootscripts-20250225           # PC
 
         ###
 
@@ -294,6 +294,9 @@ F.  RabbitMQ
 
         # pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
 
+        pathprepend /usr/local/bin  PATH
+        pathprepend /usr/local/sbin PATH
+
         #
         # FAILED
         #   su - rabbitmq -c 'rabbitmq-server -detached'
@@ -333,12 +336,33 @@ G.  OpenStack Services Support Apps
         export NPROC="$(nproc)"
         export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
 
+        ###
+        # for VBs
+        #
+        export CFLAGS="-O2 -march=nehalem -mtune=generic -pipe -fomit-frame-pointer -msse4.2"
+        #
+        ###
+        # for VMs
+        #   and
+        # for PCs
+        #
+        export CFLAGS="-O2 -march=native -mtune=native -pipe -fomit-frame-pointer -mavx2 -mfma"
+        #
+        ###
+
+        export CXXFLAGS=$CFLAGS
+        export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
+
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
+
+        echo $CFLAGS
+        echo $CXXFLAGS
+        echo $LDFLAGS
 
         echo $SHELL           # /bin/bash
         ls -l /bin/sh         # bash
@@ -352,15 +376,15 @@ G.  OpenStack Services Support Apps
 H.  KeyStone - Identity service
 
     # ubuntu install, automatically created /etc/apache2/keystone.conf
-    # https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
-    # https://docs.openstack.org/keystone/2024.2/install/keystone-install-obs.html
+    # https://docs.openstack.org/keystone/2025.1/install/keystone-install-ubuntu.html
+    # https://docs.openstack.org/keystone/2025.1/install/keystone-install-obs.html
 
     H.01. KeyStone database
 
         ###
 
-        mysql
-        # or # mariadb
+        mariadb
+        # or # mysql
 
         ### display:
         #

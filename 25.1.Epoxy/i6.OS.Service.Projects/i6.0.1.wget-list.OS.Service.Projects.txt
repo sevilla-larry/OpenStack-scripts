@@ -1,0 +1,25 @@
+# i6 OpenStack Service Projects
+
+
+# i6.16 KeyStone-27.0.0
+https://tarballs.opendev.org/openstack/keystone/keystone-27.0.0.tar.gz
+https://docs.openstack.org/keystone/2025.1/_static/keystone.conf.sample
+
+
+
+# 111 nova-30.0.0
+#https://tarballs.opendev.org/openstack/nova/nova-30.0.0.tar.gz
+#https://docs.openstack.org/nova/2024.2/_static/nova.conf.sample
+
+# 111 noVNC-1.5.0
+#--content-disposition https://github.com/novnc/noVNC/archive/refs/tags/v1.5.0.tar.gz
+# https://sourceforge.net/projects/novnc.mirror/files/v1.5.0/noVNC%201.5.0%20source%20code.tar.gz
+
+# 153 Glance-29.0.0
+#https://tarballs.opendev.org/openstack/glance/glance-29.0.0.tar.gz
+
+# 152.3 Placement-12.0.0
+#https://tarballs.opendev.org/openstack/placement/openstack-placement-12.0.0.tar.gz
+#https://docs.openstack.org/placement/2024.2/_static/placement.conf.sample
+# 152.5 osc-placement-4.5.0
+#https://tarballs.opendev.org/openstack/osc-placement/osc-placement-4.5.0.tar.gz

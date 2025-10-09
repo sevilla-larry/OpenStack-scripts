@@ -1,0 +1,29 @@
+# i6 OpenStack Service Projects
+
+
+# i6.16 KeyStone-27.0.0
+508589f28d24531288572dcdc950c541 keystone-27.0.0.tar.gz
+#                                keystone.conf.sample
+
+
+
+# 111 nova-30.0.0
+ce648ed8161ef7cd44fa96b868ce124d nova-30.0.0.tar.gz
+#     nova.conf.sample
+
+# 111 noVNC 1.5.0
+# noVNC-1.5.0.tar.gz
+# noVNC%201.5.0%20source%20code.tar.gz
+
+# 151 KeyStone-26.0.0
+d225b4d3d7332068984a43340f8ce327 keystone-26.0.0.tar.gz
+#     keystone.conf.sample
+
+# 153 Glance-29.0.0
+7adfcc51db68a8861db44c83ddcc1a5a glance-29.0.0.tar.gz
+
+# 152.3 Placement-12.0.0
+5ea25fdd8f9ce69e5d385296fab6ed46 openstack-placement-12.0.0.tar.gz
+#       placement.conf.sample
+# 152.5 osc-placement-4.5.0
+c131a8ad6aeab907f290f2672cde887c osc-placement-4.5.0.tar.gz

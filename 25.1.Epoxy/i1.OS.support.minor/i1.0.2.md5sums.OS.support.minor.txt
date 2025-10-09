@@ -69,6 +69,14 @@ b0307617f8f3aa73bbcfadac52d91df7 netaddr-1.3.0.tar.gz
 bbf20302bf26bc771e88cc775fbde3bc rfc3986-2.0.0.tar.gz
 
 
+# i1.1.21 WebOb-1.8.9
+4167b16880e0d4c22aadee8ec3cc6c26 webob-1.8.9.tar.gz
+
+
+# i1.2.01 dogpile.cache-1.3.4
+c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz
+
+
 # i1.3.1 PyMySQL 1.1.2
 abb9c2e708ca71c6534cc04b7e4a8f86 pymysql-1.1.2.tar.gz
 
