@@ -406,10 +406,10 @@ echo "."
 
 ###
 
-echo "i1.1.39.sqlalchemy-2.0.43"
-echo "i1.1.39.sqlalchemy-2.0.43" >> $OSLOG_PROCESS
+echo "i1.1.30.SQLAlchemy-2.0.43"
+echo "i1.1.30.SQLAlchemy-2.0.43" >> $OSLOG_PROCESS
 
-time { bash i1.1.39.sqlalchemy-2.0.43.sh ; }
+time { bash i1.1.30.SQLAlchemy-2.0.43.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
