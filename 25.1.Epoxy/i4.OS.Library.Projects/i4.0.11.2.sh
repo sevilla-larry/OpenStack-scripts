@@ -68,6 +68,25 @@ echo "."
 
 ###
 
+##    i4.2.35.oslo.db-17.2.1
+##      depends on
+##    i1.2.02 testresources-2.0.2
+##    i1.2.05 testsceanarios-0.5.0
+
+echo "i4.2.35.oslo.db-17.2.1"
+echo "i4.2.35.oslo.db-17.2.1" >> $OSLOG_PROCESS
+
+time { bash i4.2.35.oslo.db-17.2.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 ##    i4.2.07.keystonemiddleware-10.9.0
 ##      depends on
 ##    i4.2.31.oslo.cache-3.10.2

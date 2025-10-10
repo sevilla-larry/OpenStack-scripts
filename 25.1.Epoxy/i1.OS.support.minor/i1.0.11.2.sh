@@ -14,6 +14,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
+##    i1.2.01.dogpile.cache-1.3.4
+##      dependes on
+##    i4.1.20.stevedore-5.4.1
+
 echo "i1.2.01.dogpile.cache-1.3.4"
 echo "i1.2.01.dogpile.cache-1.3.4" >> $OSLOG_PROCESS
 
@@ -27,6 +31,10 @@ echo "."
 echo "."
 
 ###
+
+##    i1.2.02.testresources-2.0.2
+##      dependes on
+##    i3.1.01.pbr-6.1.1
 
 echo "i1.2.02.testresources-2.0.2"
 echo "i1.2.02.testresources-2.0.2" >> $OSLOG_PROCESS
@@ -42,6 +50,10 @@ echo "."
 
 ###
 
+##    i1.2.03.fixtures-4.1.0
+##      dependes on
+##    i3.1.01.pbr-6.1.1
+
 echo "i1.2.03.fixtures-4.1.0"
 echo "i1.2.03.fixtures-4.1.0" >> $OSLOG_PROCESS
 
@@ -56,6 +68,10 @@ echo "."
 
 ###
 
+##    i1.2.04.testtools-2.7.2
+##      dependes on
+##    i1.2.03.fixtures-4.1.0
+
 echo "i1.2.04.testtools-2.7.2"
 echo "i1.2.04.testtools-2.7.2" >> $OSLOG_PROCESS
 
@@ -69,6 +85,10 @@ echo "."
 echo "."
 
 ###
+
+##    i1.2.05.testscenarios-0.5.0
+##      dependes on
+##    i3.1.01.pbr-6.1.1
 
 echo "i1.2.05.testscenarios-0.5.0"
 echo "i1.2.05.testscenarios-0.5.0" >> $OSLOG_PROCESS

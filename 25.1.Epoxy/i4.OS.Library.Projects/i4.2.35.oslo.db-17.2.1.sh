@@ -1,18 +1,18 @@
-# i4.1.35.oslo.db-17.2.1.sh
+# i4.2.35.oslo.db-17.2.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i060.9.20 alembic-1.13.3
+#               i1.1.49 alembic-1.14.1
 #               i3.1.04 debtcollector-3.0.0
 #               i4.1.36 oslo.i18n-6.5.1
 #               i4.1.33 oslo.config-9.7.1
 #               i4.1.49 oslo.utils-8.2.0
 #               i1.1.30 SQLAlchemy-2.0.43
 #               i4.1.20 stevedore-5.4.1
-#               i060.9.21 testresources-2.0.1
-#               i060.9.24 testscenarios-0.5.0
+#               i1.2.02 testresources-2.0.2
+#               i1.2.05 testscenarios-0.5.0
 #
 
 #
@@ -24,7 +24,7 @@
 #
 
 export PKG="oslo_db-17.2.1"
-export PKGLOG_DIR=$OSLOG/4.1.35
+export PKGLOG_DIR=$OSLOG/4.2.35
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
