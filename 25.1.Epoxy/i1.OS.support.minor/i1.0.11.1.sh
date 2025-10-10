@@ -476,6 +476,48 @@ echo "."
 
 ###
 
+echo "i1.1.35.dnspython-2.7.0"
+echo "i1.1.35.dnspython-2.7.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.35.dnspython-2.7.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.36.eventlet-0.39.1"
+echo "i1.1.36.eventlet-0.39.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.36.eventlet-0.39.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.37.fasteners-0.19"
+echo "i1.1.37.fasteners-0.19" >> $OSLOG_PROCESS
+
+time { bash i1.1.37.fasteners-0.19.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.21.rpds_py-0.22.3"
 # echo "i010.9.21.rpds_py-0.22.3" >> $OSLOG_PROCESS
 

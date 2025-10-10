@@ -119,6 +119,9 @@ defd7a1286fbff309297edefe609799e scrypt-0.8.29.tar.gz
 # i1.1.36 eventlet-0.39.1
 00206ce34e033f9a8167270c29c4b24d eventlet-0.39.1.tar.gz
 
+# i1.1.37 fasteners-0.19
+e957e11c2e00629e44166e1d2881798e fasteners-0.19.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz
