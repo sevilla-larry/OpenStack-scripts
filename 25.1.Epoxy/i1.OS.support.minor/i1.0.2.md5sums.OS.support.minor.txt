@@ -110,6 +110,15 @@ f3273aaf736c24795e78ac48adbab111 pyjwt-2.10.1.tar.gz
 # Alternative
 #a2023c38e52997576d91b18d7b052847 bcrypt-4.1.3-cp39-abi3-manylinux_2_28_x86_64.whl
 
+# i1.1.34 scrypt-0.8.29
+defd7a1286fbff309297edefe609799e scrypt-0.8.29.tar.gz
+
+# i1.1.35 dnspython-2.7.0
+7a8f6f15038a116598744517931420d0 dnspython-2.7.0.tar.gz
+
+# i1.1.36 eventlet-0.39.1
+00206ce34e033f9a8167270c29c4b24d eventlet-0.39.1.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz
