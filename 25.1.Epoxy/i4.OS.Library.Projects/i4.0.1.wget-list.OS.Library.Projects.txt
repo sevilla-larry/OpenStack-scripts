@@ -59,6 +59,9 @@ https://tarballs.opendev.org/openstack/oslo.serialization/oslo_serialization-5.7
 # i4.1.47 oslo_service-4.1.1
 https://tarballs.opendev.org/openstack/oslo.service/oslo_service-4.1.1.tar.gz
 
+# i4.1.48 oslo_upgradecheck-2.5.0
+https://tarballs.opendev.org/openstack/oslo.upgradecheck/oslo_upgradecheck-2.5.0.tar.gz
+
 # i4.1.49 oslo_utils-8.2.0
 https://tarballs.opendev.org/openstack/oslo.utils/oslo_utils-8.2.0.tar.gz
 
