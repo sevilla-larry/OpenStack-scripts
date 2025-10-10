@@ -140,6 +140,15 @@ c08cc030387e0b1fc53c5c7d964b35e2 repoze.lru-0.7.tar.gz
 # i1.1.43 cachetools-5.5.2
 bc4019928cf73ca154ff5416280282bb cachetools-5.5.2.tar.gz
 
+# i1.1.44 vine-5.1.0
+eb53f54bbe9b6b4d65f072972cea0fcd vine-5.1.0.tar.gz
+
+# i1.1.45 amqp-5.3.1
+6f23f380ba02c1dbdc035f5f90c31475 amqp-5.3.1.tar.gz
+
+# i1.1.46 kombu-5.4.2
+115f555f67568d9680c84e1d57b01e3a kombu-5.4.2.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz

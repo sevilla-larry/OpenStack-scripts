@@ -3,7 +3,7 @@
                                         aiomysql  # MIT License
                                         aiosqlite  # MIT License
                                         alembic!=1.2.0,!=1.6.3  # MIT
-                                        amqp!=2.1.4,!=5.0.4  # BSD
+i1.1.45.amqp-5.3.1                      amqp!=2.1.4,!=5.0.4  # BSD
                                         appdirs  # MIT License
                                         apscheduler  # MIT License
                                         autobahn  # MIT License
@@ -18,7 +18,7 @@ i1.1.33.bcrypt-4.0.1.whl                bcrypt==4.0.1  # Apache-2.0
                                         boto  # MIT
                                         boto3  # Apache-2.0
                                         botocore  # Apache-2.0
-                                        cachetools  # MIT License
+i1.1.43.cachetools-5.5.2                cachetools  # MIT License
                                         cassandra-driver!=3.6.0  # Apache-2.0
 i1.1.02.cffi-1.17.1                     cffi  # MIT
 i1.1.07.cmd2-2.5.11                     cmd2!=0.8.3  # MIT
@@ -78,7 +78,7 @@ i1.1.11.jmespath-1.0.1                  jmespath  # MIT
 i1.1.13.jsonpatch-1.33                  jsonpatch!=1.20  # BSD
                                         jsonschema  # MIT
                                         kazoo  # Apache-2.0
-                                        kombu!=4.0.2  # BSD
+i1.1.46.kombu-5.4.2                     kombu!=4.0.2  # BSD
                                         kubernetes  # Apache-2.0
                                         ldap3  # LGPLv3
                                         libsass  # MIT
@@ -99,8 +99,8 @@ i1.1.14.netifaces-0.11.0                netifaces!=0.10.0,!=0.10.1  # MIT
                                         packaging!=20.5,!=20.6,!=20.7  # Apache-2.0
                                         paramiko!=2.9.0,!=2.9.1  # LGPLv2.1+
                                         passlib  # BSD
-                                        Paste  # MIT
-                                        PasteDeploy  # MIT
+i1.1.41.Paste-3.10.1                    Paste  # MIT
+i1.1.38.PasteDeploy-3.1.0               PasteDeploy  # MIT
                                         pecan!=1.0.2,!=1.0.3,!=1.0.4,!=1.2,!=1.4.0  # BSD
                                         pexpect!=3.3  # ISC License
                                         pika  # BSD
@@ -145,7 +145,7 @@ i1.3.3.python-memcached-1.62            python-memcached  # PSF
                                         requests-kerberos  # ISC
 i3.1.03.requestsexceptions-1.4.0        requestsexceptions  # Apache-2.0
 i1.1.19.rfc3986-2.0.0                   rfc3986  # Apache-2.0
-                                        Routes  # MIT
+i1.1.40.Routes-2.5.1                    Routes  # MIT
                                         rtslib-fb  # Apache-2.0
                                         ruamel.yaml  # MIT
                                         salt!=2019.2.1,!=2019.2.2  # Apache-2.0
@@ -212,7 +212,7 @@ i1.1.21.WebOb-1.8.9                     WebOb  # MIT
                                         XStatic-term.js  # MIT License
                                         XStatic-tv4  # MIT
                                         # NOTE(anilvenkata): This is required for profiling oslo.service processes
-                                        Yappi!=0.98,!=0.99  # MIT
+i1.1.42.yappi-1.6.10                    Yappi!=0.98,!=0.99  # MIT
                                         zeroconf  # LGPL
                                         zipp  # MIT
                                         zstd  # BSD License (2 clause)
