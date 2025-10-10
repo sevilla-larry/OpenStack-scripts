@@ -14,6 +14,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
+##    i4.2.14.openstacksdk-4.4.0
+##      depends on some
+##    i1.2.01 dogpile.cache-1.3.4
+
 echo "i4.2.14.openstacksdk-4.4.0"
 echo "i4.2.14.openstacksdk-4.4.0" >> $OSLOG_PROCESS
 
@@ -28,7 +32,9 @@ echo "."
 
 ###
 
-##    i4.18.osc-lib-3.2.0 depends on some i4.xx oslo.xxxxx-x.x.x
+##    i4.2.18.osc-lib-3.2.0
+##      depends on some
+##    i4.1.xx oslo.xxxxx-x.x.x
 
 echo "i4.2.18.osc-lib-3.2.0"
 echo "i4.2.18.osc-lib-3.2.0" >> $OSLOG_PROCESS
@@ -44,62 +50,39 @@ echo "."
 
 ###
 
-# echo "i020.9.03.os-service-types-1.7.0"
-# echo "i020.9.03.os-service-types-1.7.0" >> $OSLOG_PROCESS
+##    i4.2.31.oslo.cache-3.10.2
+##      depends on
+##    i1.2.01 dogpile.cache-1.3.4
 
-# time { bash i020.9.03.os-service-types-1.7.0.sh ; }
+echo "i4.2.31.oslo.cache-3.10.2"
+echo "i4.2.31.oslo.cache-3.10.2" >> $OSLOG_PROCESS
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+time { bash i4.2.31.oslo.cache-3.10.2.sh ; }
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# ###
-
-# echo "i020.9.04.keystoneauth1-5.8.0"
-# echo "i020.9.04.keystoneauth1-5.8.0" >> $OSLOG_PROCESS
-
-# time { bash i020.9.04.keystoneauth1-5.8.0.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
-# ###
-
-# echo "i020.9.05.requestsexceptions-1.4.0"
-# echo "i020.9.05.requestsexceptions-1.4.0" >> $OSLOG_PROCESS
-
-# time { bash i020.9.05.requestsexceptions-1.4.0.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
-# ###
-
-# echo "i020.9.06.debtcollector-3.0.0"
-# echo "i020.9.06.debtcollector-3.0.0" >> $OSLOG_PROCESS
-
-# time { bash i020.9.06.debtcollector-3.0.0.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
 ###
 
+##    i4.2.07.keystonemiddleware-10.9.0
+##      depends on
+##    i4.2.31.oslo.cache-3.10.2
+
+echo "i4.2.07.keystonemiddleware-10.9.0"
+echo "i4.2.07.keystonemiddleware-10.9.0" >> $OSLOG_PROCESS
+
+time { bash i4.2.07.keystonemiddleware-10.9.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
 #####
 

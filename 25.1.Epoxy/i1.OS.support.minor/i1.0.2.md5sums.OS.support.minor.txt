@@ -103,6 +103,10 @@ a006c045b1a5610dba083ab3ae5dd991 sqlalchemy-2.0.43.tar.gz
 81cb6aad924ef40ebfd3d62eaebe47c6 python-dateutil-2.9.0.post0.tar.gz
 
 
+# i1.1.32 PyJWT-2.10.1
+f3273aaf736c24795e78ac48adbab111 pyjwt-2.10.1.tar.gz
+
+
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz
 

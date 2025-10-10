@@ -93,6 +93,34 @@ echo "."
 
 ###
 
+echo "i4.1.34.oslo.context-5.7.1"
+echo "i4.1.34.oslo.context-5.7.1" >> $OSLOG_PROCESS
+
+time { bash i4.1.34.oslo.context-5.7.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i4.1.38.oslo.log-7.1.0"
+echo "i4.1.38.oslo.log-7.1.0" >> $OSLOG_PROCESS
+
+time { bash i4.1.38.oslo.log-7.1.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 echo "i4.1.49.oslo.utils-8.2.0"
 echo "i4.1.49.oslo.utils-8.2.0" >> $OSLOG_PROCESS
 
@@ -107,6 +135,10 @@ echo "."
 
 ###
 
+##    i4.1.46.oslo.serialization-5.7.0
+##      depends on
+##    i4.1.49.oslo.utils-8.2.0
+
 echo "i4.1.46.oslo.serialization-5.7.0"
 echo "i4.1.46.oslo.serialization-5.7.0" >> $OSLOG_PROCESS
 
@@ -118,34 +150,6 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
-
-###
-
-# echo "i030.9.05.oslo.context-5.6.0"
-# echo "i030.9.05.oslo.context-5.6.0" >> $OSLOG_PROCESS
-
-# time { bash i030.9.05.oslo.context-5.6.0.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
-# ###
-
-# echo "i030.9.06.oslo.log-6.1.2"
-# echo "i030.9.06.oslo.log-6.1.2" >> $OSLOG_PROCESS
-
-# time { bash i030.9.06.oslo.log-6.1.2.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
 
 #####
 
