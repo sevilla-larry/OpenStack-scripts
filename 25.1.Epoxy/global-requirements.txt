@@ -159,7 +159,7 @@ i1.1.30.SQLAlchemy-2.0.43               SQLAlchemy  # MIT
                                         sqlalchemy-filters  # Apache-2.0
                                         SQLAlchemy-Utils  # BSD License
                                         sshtunnel  # MIT
-                                        statsd  # MIT
+i1.1.47.statsd-4.0.1                    statsd  # MIT
                                         suds-community  # LGPLv3+
                                         sympy  # BSD
                                         systemd-python  # LGPLv2+
@@ -366,8 +366,8 @@ i4.1.36.oslo.i18n-6.5.1                 oslo.i18n  # Apache-2.0
                                         oslo.limit  # Apache-2.0
 i4.1.38.oslo.log-7.1.0                  oslo.log!=3.44.2,!=4.1.2,!=4.2.0,!=5.0.1,!=5.0.2,!=5.1.0  # Apache-2.0
 i4.1.39.oslo.messaging-16.1.0           oslo.messaging!=9.0.0  # Apache-2.0
-                                        oslo.metrics  # Apache-2.0
-                                        oslo.middleware  # Apache-2.0
+i4.1.40.oslo.metrics-0.11.0             oslo.metrics  # Apache-2.0
+i4.1.41.oslo.middleware-6.3.1           oslo.middleware  # Apache-2.0
                                         oslo.policy!=3.0.0,!=3.6.1  # Apache-2.0
                                         oslo.privsep  # Apache-2.0
                                         oslo.reports  # Apache-2.0

@@ -644,6 +644,34 @@ echo "."
 
 ###
 
+echo "i1.1.47.statsd-4.0.1"
+echo "i1.1.47.statsd-4.0.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.47.statsd-4.0.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.48.prometheus_client-0.21.1"
+echo "i1.1.48.prometheus_client-0.21.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.48.prometheus_client-0.21.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.21.rpds_py-0.22.3"
 # echo "i010.9.21.rpds_py-0.22.3" >> $OSLOG_PROCESS
 
