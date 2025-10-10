@@ -162,6 +162,18 @@ https://files.pythonhosted.org/packages/99/09/f844822e4e847a3f0bd41797f93c4674cd
 # i1.2.01 dogpile.cache-1.3.4
 https://files.pythonhosted.org/packages/cb/b7/2fa37f52b4f38bc8eb6d4923163dd822ca6f9e2f817378478a5de73b239e/dogpile_cache-1.3.4.tar.gz
 
+# i1.2.02 testresources-2.0.2
+https://files.pythonhosted.org/packages/b2/2e/905756faf6bada00adccb5dbc9e5987760675b682f08dd1312a40042a838/testresources-2.0.2.tar.gz
+
+# i1.2.03 fixtures-4.1.0
+https://files.pythonhosted.org/packages/5e/4c/3c3faee9f554d753ee428bef3a5e8176995cffbf0b5ad3f1d6c272ab2148/fixtures-4.1.0.tar.gz
+
+# i1.2.04 testtools-2.7.2    if err try 1.7.1
+https://files.pythonhosted.org/packages/6a/05/a543317ac62cf72e98dc40de5ab117ef14508f36352ed715cb3cd3fe1bbb/testtools-2.7.2.tar.gz
+
+# i1.2.05 testscenarios-0.5.0
+https://files.pythonhosted.org/packages/f0/de/b0b5b98c0f38fd7086d082c47fcb455eedd39a044abe7c595f5f40cd6eed/testscenarios-0.5.0.tar.gz
+
 
 # i1.3.1 PyMySQL-1.1.2
 https://files.pythonhosted.org/packages/f5/ae/1fe3fcd9f959efa0ebe200b8de88b5a5ce3e767e38c7ac32fb179f16a388/pymysql-1.1.2.tar.gz
