@@ -152,7 +152,7 @@ i1.1.19.rfc3986-2.0.0                   rfc3986  # Apache-2.0
                                         scikit-learn  # BSD
                                         scipy  # BSD
                                         # https://github.com/holgern/py-scrypt/issues/16
-                                        scrypt!=0.8.21  # BSD
+i1.1.34.scrypt-0.8.29                   scrypt!=0.8.21  # BSD
                                         semantic-version  # BSD
                                         setproctitle  # BSD
 i1.1.30.SQLAlchemy-2.0.43               SQLAlchemy  # MIT
