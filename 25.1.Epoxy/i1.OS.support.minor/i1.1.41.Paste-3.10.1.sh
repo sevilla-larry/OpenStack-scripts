@@ -1,32 +1,21 @@
-# i4.1.32.oslo.concurrency-7.1.0.sh
+# i1.1.41.Paste-3.10.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i3.1.01 pbr-6.1.1
-#               i4.1.33 oslo.config-9.7.1
-#               i4.1.36 oslo.i18n-6.5.1
-#               i4.1.49 oslo.utils-8.2.0
-#               i1.1.37 fasteners-0.19
-#               i3.1.04 debtcollector-3.0.0
+#               a.08.55   Setuptools-72.2.0.sh
+#
 
 #
 # Required by:
 #
 #               i4.1.47 oslo.service-4.1.1
-#               i080.9.14 oslo.versionedobjects-3.4.0
-#               i090.9.03 osprofiler-4.2.0
-#               i090.9.06 glance_store-4.8.1
-#               i090.9.07 os-win-5.9.0
-#               i090.9.11 os_brick-6.9.1
-#               i090.9.13 os_vif-3.7.0
 #               i153.3    Glance-29.0.0
-#               i152.3    Openstack-Placement-12.0.0
 #
 
-export PKG="oslo_concurrency-7.1.0"
-export PKGLOG_DIR=$OSLOG/4.1.32
+export PKG="paste-3.10.1"
+export PKGLOG_DIR=$OSLOG/1.1.41
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -62,13 +51,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.concurrency        \
+                Paste                   \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "4. pyTest ..."
-# echo "4. pyTest ..." >> $OSLOG_PROCESS
-# echo "4. pyTest ..." >> $PKGLOG_ERROR
-# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+echo "4. pyTest ..."
+echo "4. pyTest ..." >> $OSLOG_PROCESS
+echo "4. pyTest ..." >> $PKGLOG_ERROR
+pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES

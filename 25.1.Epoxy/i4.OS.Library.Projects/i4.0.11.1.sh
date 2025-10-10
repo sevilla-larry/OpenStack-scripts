@@ -135,6 +135,24 @@ echo "."
 
 ###
 
+##    i4.1.32.oslo.concurrency-7.1.0
+##      depends on
+##    i4.1.49.oslo.utils-8.2.0
+
+echo "i4.1.32.oslo.concurrency-7.1.0"
+echo "i4.1.32.oslo.concurrency-7.1.0" >> $OSLOG_PROCESS
+
+time { bash i4.1.32.oslo.concurrency-7.1.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 ##    i4.1.46.oslo.serialization-5.7.0
 ##      depends on
 ##    i4.1.49.oslo.utils-8.2.0

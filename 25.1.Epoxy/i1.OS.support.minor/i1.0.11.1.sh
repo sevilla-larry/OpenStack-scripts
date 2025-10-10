@@ -518,6 +518,76 @@ echo "."
 
 ###
 
+echo "i1.1.38.PasteDeploy-3.1.0"
+echo "i1.1.38.PasteDeploy-3.1.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.38.PasteDeploy-3.1.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.39.repoze.lru-0.7"
+echo "i1.1.39.repoze.lru-0.7" >> $OSLOG_PROCESS
+
+time { bash i1.1.39.repoze.lru-0.7.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.40.Routes-2.5.1"
+echo "i1.1.40.Routes-2.5.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.40.Routes-2.5.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.41.Paste-3.10.1"
+echo "i1.1.41.Paste-3.10.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.41.Paste-3.10.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.42.yappi-1.6.10"
+echo "i1.1.42.yappi-1.6.10" >> $OSLOG_PROCESS
+
+time { bash i1.1.42.yappi-1.6.10.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.21.rpds_py-0.22.3"
 # echo "i010.9.21.rpds_py-0.22.3" >> $OSLOG_PROCESS
 
