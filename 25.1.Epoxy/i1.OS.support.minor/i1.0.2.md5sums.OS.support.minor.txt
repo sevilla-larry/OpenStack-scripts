@@ -102,9 +102,13 @@ a006c045b1a5610dba083ab3ae5dd991 sqlalchemy-2.0.43.tar.gz
 # i1.1.31 python-dateutil-2.9.0.post0
 81cb6aad924ef40ebfd3d62eaebe47c6 python-dateutil-2.9.0.post0.tar.gz
 
-
 # i1.1.32 PyJWT-2.10.1
 f3273aaf736c24795e78ac48adbab111 pyjwt-2.10.1.tar.gz
+
+# i1.1.33 bcrypt-4.0.1 (whl) pinned version
+5fb2c3f2022f68d7b614beecd2db2c8b bcrypt-4.0.1-cp36-abi3-manylinux_2_28_x86_64.whl
+# Alternative
+#a2023c38e52997576d91b18d7b052847 bcrypt-4.1.3-cp39-abi3-manylinux_2_28_x86_64.whl
 
 
 # i1.2.01 dogpile.cache-1.3.4

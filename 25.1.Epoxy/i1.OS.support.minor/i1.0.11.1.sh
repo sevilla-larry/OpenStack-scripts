@@ -420,6 +420,48 @@ echo "."
 
 ###
 
+echo "i1.1.31..python-dateutil-2.9.0.post0"
+echo "i1.1.31..python-dateutil-2.9.0.post0" >> $OSLOG_PROCESS
+
+time { bash i1.1.31..python-dateutil-2.9.0.post0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.32.PyJWT-2.9.0"
+echo "i1.1.32.PyJWT-2.9.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.32.PyJWT-2.9.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.33.bcrypt-4.0.1.whl"
+echo "i1.1.33.bcrypt-4.0.1.whl" >> $OSLOG_PROCESS
+
+time { bash i1.1.33.bcrypt-4.0.1.whl.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.21.rpds_py-0.22.3"
 # echo "i010.9.21.rpds_py-0.22.3" >> $OSLOG_PROCESS
 
@@ -503,18 +545,6 @@ echo "."
 # echo "."
 
 # ###
-
-# echo "i010.9.27.python-dateutil-2.9.0.post0"
-# echo "i010.9.27.python-dateutil-2.9.0.post0" >> $OSLOG_PROCESS
-
-# time { bash i010.9.27.python-dateutil-2.9.0.post0.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
 
 # echo "i1.1.14.netifaces-0.11.0"
 # echo "i1.1.14.netifaces-0.11.0" >> $OSLOG_PROCESS
