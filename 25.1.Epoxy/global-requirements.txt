@@ -2,7 +2,7 @@
 
                                         aiomysql  # MIT License
                                         aiosqlite  # MIT License
-                                        alembic!=1.2.0,!=1.6.3  # MIT
+i1.1.49.alembic-1.14.1                  alembic!=1.2.0,!=1.6.3  # MIT
 i1.1.45.amqp-5.3.1                      amqp!=2.1.4,!=5.0.4  # BSD
                                         appdirs  # MIT License
                                         apscheduler  # MIT License
