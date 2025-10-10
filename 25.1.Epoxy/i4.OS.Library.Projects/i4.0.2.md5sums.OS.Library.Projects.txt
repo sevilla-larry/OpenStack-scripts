@@ -19,8 +19,12 @@ ba12311dd67d186239e6b834aa419d2a osc-lib-3.2.0.tar.gz
 # i4.1.20 stevedore-5.4.1
 d8ce49d9a513d454bec0e897ce10062b stevedore-5.4.1.tar.gz
 
+
 # i4.2.31 oslo_cache-3.10.2
 69c3bfc2d8af7e9e64b0786abe9e4ede oslo_cache-3.10.2.tar.gz
+
+# i4.1.32 oslo_concurrency-7.1.0
+1c4f7310787ab3c495b706c92e5e6290 oslo_concurrency-7.1.0.tar.gz
 
 # i4.1.33 oslo_config-9.7.1
 5ff5ce394addc9cf84885c48aba03aca oslo_config-9.7.1.tar.gz
