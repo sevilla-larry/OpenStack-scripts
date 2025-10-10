@@ -34,8 +34,14 @@ d8ce49d9a513d454bec0e897ce10062b stevedore-5.4.1.tar.gz
 # i4.1.38 oslo_log-7.1.0
 e0320b4bed1f89584cb75ec348f1c66d oslo_log-7.1.0.tar.gz
 
+# i4.1.39 oslo_messaging-16.1.0
+ac6782c1c4b7a6474ecc6b344f8735e8 oslo_messaging-16.1.0.tar.gz
+
 # i4.1.46 oslo_serialization-5.7.0
 9a24cd1d32418e6cd5547b9f017cd30e oslo_serialization-5.7.0.tar.gz
+
+# i4.1.47 oslo_service-4.1.1
+56803a6a9e282969169c461fdf56c30c oslo_service-4.1.1.tar.gz
 
 # i4.1.49 oslo_utils-8.2.0
 92de3ac9bb25d889499717c95b86d65c oslo_utils-8.2.0.tar.gz
