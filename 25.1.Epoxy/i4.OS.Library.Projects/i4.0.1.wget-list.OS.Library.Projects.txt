@@ -32,6 +32,9 @@ https://tarballs.opendev.org/openstack/oslo.config/oslo_config-9.7.1.tar.gz
 # i4.1.34 oslo_context-5.7.1
 https://tarballs.opendev.org/openstack/oslo.context/oslo_context-5.7.1.tar.gz
 
+# i4.1.35 oslo_db-17.2.1
+https://tarballs.opendev.org/openstack/oslo.db/oslo_db-17.2.1.tar.gz
+
 # i4.1.36 oslo_i18n-6.5.1
 https://tarballs.opendev.org/openstack/oslo.i18n/oslo_i18n-6.5.1.tar.gz
 

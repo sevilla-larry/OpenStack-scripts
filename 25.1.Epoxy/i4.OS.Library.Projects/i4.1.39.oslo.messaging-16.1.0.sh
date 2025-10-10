@@ -4,28 +4,28 @@
 #
 # Dependencies Required:
 #
-#               i020.9.01 pbr-6.1.0
-#               i070.9.01 futurist-3.0.0
-#               i030.9.03 oslo.config-9.6.0
-#               i030.9.05 oslo.context-5.6.0
-#               i030.9.06 oslo.log-6.1.2
-#               i030.9.02 oslo.utils-7.3.0
-#               i030.9.04 oslo.serialization-5.5.0
-#               i080.9.03 oslo.service-3.5.0
-#               i020.9.02 stevedore-5.3.0
-#               i020.9.06 debtcollector-3.0.0
-#               i060.9.13 cachetools-5.5.1
-#               i060.9.02 WebOb-1.8.7
-#               b30.13.23.28 PyYAML-6.0.2
-#               i060.9.15 amqp-5.2.0
-#               i060.9.16 kombu-5.4.2
-#               i080.9.04 oslo.middleware-6.2.0
-#               i080.9.05 oslo.metrics-0.9.0
+#               i3.1.01 pbr-6.1.1
+#               i3.1.05 futurist-3.0.0
+#               i4.1.33 oslo.config-9.7.1
+#               i4.1.34 oslo.context-5.7.1
+#               i4.1.38 oslo.log-7.1.0
+#               i4.1.49 oslo.utils-8.2.0
+#               i4.1.46 oslo.serialization-5.7.0
+#               i4.1.47 oslo.service-4.1.1
+#               i4.1.20 stevedore-5.4.1
+#               i3.1.04 debtcollector-3.0.0
+#               i1.1.43 cachetools-5.5.2
+#               i1.1.21 WebOb-1.8.9
+#               b30.13.24.28 PyYAML-6.0.2
+#               i1.1.45 amqp-5.3.1
+#               i1.1.46 kombu-5.4.2
+#               i4.1.41 oslo.middleware-6.3.1
+#               i4.1.40 oslo.metrics-0.11.0
 
 #
 # Required by:
 #
-#               i151.3    KeyStone-26.0.0
+#               i6.16 KeyStone-27.0.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i153.3    Glance-29.0.0
 #

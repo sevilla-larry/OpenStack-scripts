@@ -32,6 +32,9 @@ d8ce49d9a513d454bec0e897ce10062b stevedore-5.4.1.tar.gz
 # i4.1.34 oslo_context-5.7.1
 0b97517f43374fb8f272bb6d64a7d7ba oslo_context-5.7.1.tar.gz
 
+# i4.1.35 oslo_db-17.2.1
+d251fb247d4c2284df38382449ee821e oslo_db-17.2.1.tar.gz
+
 # i4.1.36 oslo_i18n-6.5.1
 92a0ab4448eef3fb3ed473eb50600702 oslo_i18n-6.5.1.tar.gz
 
