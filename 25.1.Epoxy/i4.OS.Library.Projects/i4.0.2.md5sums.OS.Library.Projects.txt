@@ -32,7 +32,7 @@ d8ce49d9a513d454bec0e897ce10062b stevedore-5.4.1.tar.gz
 # i4.1.34 oslo_context-5.7.1
 0b97517f43374fb8f272bb6d64a7d7ba oslo_context-5.7.1.tar.gz
 
-# i4.1.35 oslo_db-17.2.1
+# i4.2.35 oslo_db-17.2.1
 d251fb247d4c2284df38382449ee821e oslo_db-17.2.1.tar.gz
 
 # i4.1.36 oslo_i18n-6.5.1
@@ -49,6 +49,9 @@ ac6782c1c4b7a6474ecc6b344f8735e8 oslo_messaging-16.1.0.tar.gz
 
 # i4.1.41 oslo_middleware-6.3.1
 7acfb2253161501960c343e17a5ce4d7 oslo_middleware-6.3.1.tar.gz
+
+# i4.1.42 oslo_policy-4.5.1
+9b0cee5742e234b999396625b9e6a765 oslo_policy-4.5.1.tar.gz
 
 # i4.1.46 oslo_serialization-5.7.0
 9a24cd1d32418e6cd5547b9f017cd30e oslo_serialization-5.7.0.tar.gz
