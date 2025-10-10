@@ -137,6 +137,9 @@ c08cc030387e0b1fc53c5c7d964b35e2 repoze.lru-0.7.tar.gz
 # i1.1.42 yappi-1.6.10
 55bb9235aec7aa02c56656e7ad17c28e yappi-1.6.10.tar.gz
 
+# i1.1.43 cachetools-5.5.2
+bc4019928cf73ca154ff5416280282bb cachetools-5.5.2.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz
