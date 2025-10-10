@@ -1,24 +1,31 @@
-# i4.1.40.oslo.metrics-0.11.0.sh
+# i4.1.35.oslo.db-17.2.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i3.1.01 pbr-6.1.1
-#               i4.1.49 oslo.utils-8.2.0
-#               i4.1.38 oslo.log-7.1.0
-#               i4.1.33 oslo.config-9.7.1
-#               i1.1.48 prometheus_client-0.21.1
+#               i020.9.01 pbr-6.1.0
+#               i060.9.20 alembic-1.13.3
+#               i020.9.06 debtcollector-3.0.0
+#               i030.9.01 oslo.i18n-6.4.0
+#               i030.9.03 oslo.config-9.6.0
+#               i030.9.02 oslo.utils-7.3.0
+#               i060.9.19 sqlalchemy-2.0.37
+#               i020.9.02 stevedore-5.3.0
+#               i060.9.21 testresources-2.0.1
+#               i060.9.24 testscenarios-0.5.0
 #
 
 #
 # Required by:
 #
-#               i4.1.39 oslo.messaging-16.1.0
+#               i151.3    KeyStone-26.0.0
+#               i153.3    Glance-29.0.0
+#               i152.3    Openstack-Placement-12.0.0
 #
 
-export PKG="oslo_metrics-0.11.0"
-export PKGLOG_DIR=$OSLOG/4.1.40
+export PKG="oslo_db-17.2.1"
+export PKGLOG_DIR=$OSLOG/4.1.35
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -54,7 +61,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                oslo.metrics            \
+                oslo.db                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

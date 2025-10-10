@@ -153,6 +153,24 @@ echo "."
 
 ###
 
+##    i4.1.40.oslo.metrics-0.11.0
+##      depends on
+##    i4.1.49.oslo.utils-8.2.0
+
+echo "i4.1.40.oslo.metrics-0.11.0"
+echo "i4.1.40.oslo.metrics-0.11.0" >> $OSLOG_PROCESS
+
+time { bash i4.1.40.oslo.metrics-0.11.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 ##    i4.1.41.oslo.middleware-6.3.1
 ##      depends on
 ##    i4.1.49.oslo.utils-8.2.0
