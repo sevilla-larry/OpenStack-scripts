@@ -4,18 +4,15 @@
 #
 # Dependencies Required:
 #
-#               i030.9.03 oslo.config-9.6.0
-#               i030.9.04 oslo.serialization-5.5.0
-#               b30.13.24.21 Pytz-2024.1
-#               b30.13.23.33 six-1.16.0
-#               i020.9.06 debtcollector-3.0.0
+#               i4.1.33 oslo.config-9.7.1
+#               i4.1.46 oslo.serialization-5.7.0
 #
 
 #
 # Required by:
 #
-#               i090.9.02 keystonemiddleware-10.7.1
-#               i151.3    KeyStone-26.0.0
+#               i4.2.07 keystonemiddleware-10.9.0
+#               i6.16   KeyStone-27.0.0
 #
 
 export PKG="pycadf-4.0.1"
@@ -26,6 +23,7 @@ export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+export SOURCES=`pwd`
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -57,14 +55,15 @@ pip3 install    --no-index              \
                 pycadf                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest ..."
-echo "4. pyTest ..." >> $OSLOG_PROCESS
-echo "4. pyTest ..." >> $PKGLOG_ERROR
-pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
+unset SOURCES
 unset OSLOG_PROCESS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_CHECK

@@ -21,4 +21,4 @@ bash i2.0.11.2.sh				# MemCacheD
 bash i1.0.11.3.3.sh             # python-memcached
 
 # EtcD
-bash i3.0.11.2.sh				# EtcD
+bash i3.0.11.1.2.sh				# EtcD
