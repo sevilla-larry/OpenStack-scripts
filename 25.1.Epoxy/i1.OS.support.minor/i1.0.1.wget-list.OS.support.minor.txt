@@ -162,7 +162,19 @@ https://files.pythonhosted.org/packages/99/09/f844822e4e847a3f0bd41797f93c4674cd
 # i1.1.50 oauthlib-3.2.2
 https://files.pythonhosted.org/packages/6d/fa/fbf4001037904031639e6bfbfc02badfc7e12f137a8afa254df6c4c8a670/oauthlib-3.2.2.tar.gz
 
-# i1.1.59 pysaml2-7.5.4-py3-none-any.whl
+# i1.1.51 defusedxml-0.7.1
+https://files.pythonhosted.org/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c984ebd9c2a06e2b8a4dc7331c72/defusedxml-0.7.1.tar.gz
+
+# i1.1.52 pyOpenSSL 24.2.1
+https://files.pythonhosted.org/packages/5d/70/ff56a63248562e77c0c8ee4aefc3224258f1856977e0c1472672b62dadb8/pyopenssl-24.2.1.tar.gz
+
+# i1.1.53 elementpath-4.8.0
+https://files.pythonhosted.org/packages/ac/41/afdd82534c80e9675d1c51dc21d0889b72d023bfe395a2f5a44d751d3a73/elementpath-4.8.0.tar.gz
+
+# i1.1.54 xmlschema-2.5.1
+https://files.pythonhosted.org/packages/59/af/42e9e773eaa6bc8e8c322f93c75454b0d370979048b250bfef7786ff26ec/xmlschema-2.5.1.tar.gz
+
+# i1.1.55 pysaml2-7.5.4-py3-none-any.whl
 https://files.pythonhosted.org/packages/79/21/c95583bfce176ebf5e6a0655f1678502de970f3a6d17dee65852906b2d80/pysaml2-7.5.4-py3-none-any.whl
 
 

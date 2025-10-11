@@ -700,6 +700,76 @@ echo "."
 
 ###
 
+echo "i1.1.51.defusedxml-0.7.1"
+echo "i1.1.51.defusedxml-0.7.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.51.defusedxml-0.7.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.52.pyOpenSSL-24.2.1"
+echo "i1.1.52.pyOpenSSL-24.2.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.52.pyOpenSSL-24.2.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.53.elementpath-4.8.0"
+echo "i1.1.53.elementpath-4.8.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.53.elementpath-4.8.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.54.xmlschema-2.5.1"
+echo "i1.1.54.xmlschema-2.5.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.54.xmlschema-2.5.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.55.pysaml2-7.5.4.whl"
+echo "i1.1.55.pysaml2-7.5.4.whl" >> $OSLOG_PROCESS
+
+time { bash i1.1.55.pysaml2-7.5.4.whl.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.21.rpds_py-0.22.3"
 # echo "i010.9.21.rpds_py-0.22.3" >> $OSLOG_PROCESS
 

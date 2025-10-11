@@ -162,7 +162,19 @@ e2a16ce5cd0ba72af974594b653af36c prometheus_client-0.21.1.tar.gz
 # i1.1.50 oauthlib-3.2.2
 2f7b898cc1af8c1409cc329e8843ea8f oauthlib-3.2.2.tar.gz
 
-# i1.1.59 pysaml2-7.5.4-py3-none-any.whl
+# i1.1.51 defusedxml-0.7.1
+a50e7f21aa60a741efe6b1b658dfb3f8 defusedxml-0.7.1.tar.gz
+
+# i1.1.52 pyOpenSSL 24.2.1
+4e41c41b8a14ac141dde132c348aaf5d pyopenssl-24.2.1.tar.gz
+
+# i1.1.53 elementpath-4.8.0
+1e598149c2761d660d89f7bba4fef20d elementpath-4.8.0.tar.gz
+
+# i1.1.54 xmlschema-2.5.1
+6da79e5709eb7de805e9dbc50de040ca xmlschema-2.5.1.tar.gz
+
+# i1.1.55 pysaml2-7.5.4-py3-none-any.whl
 dc519584a4aaaef34711097ff26580b9 pysaml2-7.5.4-py3-none-any.whl
 
 
