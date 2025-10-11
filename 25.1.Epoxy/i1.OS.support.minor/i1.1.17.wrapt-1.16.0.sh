@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i3.04   debtcollector-3.0.0
+#               i3.1.04 debtcollector-3.0.0
 #               i?.??   python-glanceclient-4.7.0
 #
 

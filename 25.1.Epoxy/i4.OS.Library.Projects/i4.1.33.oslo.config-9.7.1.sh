@@ -31,9 +31,9 @@
 #               i080.9.13 oslo.privsep-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i070.9.02 castellan-5.1.1
-#               i090.9.01 pycadf-3.1.1
+#               i3.2.01 pycadf-4.0.1
 #               i090.9.02 keystonemiddleware-10.7.1
-#               i090.9.03 osprofiler-4.2.0
+#               i3.2.02 osprofiler-4.2.0
 #               i090.9.06 glance_store-4.8.1
 #               i090.9.07 os-win-5.9.0
 #               i090.9.11 os_brick-6.9.1

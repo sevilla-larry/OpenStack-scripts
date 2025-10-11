@@ -43,7 +43,7 @@
 #               i070.9.02 castellan-5.1.1
 #               i075.9.01 cursive-0.2.3
 #               i090.9.02 keystonemiddleware-10.7.1
-#               i090.9.03 osprofiler-4.2.0
+#               i3.2.02 osprofiler-4.2.0
 #               i090.9.05 taskflow-5.9.1
 #               i090.9.06 glance_store-4.8.1
 #               i090.9.07 os-win-5.9.0

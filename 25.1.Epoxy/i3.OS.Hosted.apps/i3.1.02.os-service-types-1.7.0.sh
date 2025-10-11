@@ -4,7 +4,7 @@
 #
 # Dependencies Required:
 #
-#               i3.01   pbr-6.1.1
+#               i3.1.01 pbr-6.1.1
 #
 
 #

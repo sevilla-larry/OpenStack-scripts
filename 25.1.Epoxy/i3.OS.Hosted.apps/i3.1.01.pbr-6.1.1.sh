@@ -12,7 +12,7 @@
 #
 #               i8.23   python-openstackclient-7.5.0
 #               i4.1.20 stevedore-5.4.1
-#               i3.01   os-service-types-1.7.0
+#               i3.1.02 os-service-types-1.7.0
 #               i4.1.06 keystoneauth1-5.10.0
 #               i4.2.14 openstacksdk-4.4.0
 #               i4.2.18 osc-lib-3.2.0

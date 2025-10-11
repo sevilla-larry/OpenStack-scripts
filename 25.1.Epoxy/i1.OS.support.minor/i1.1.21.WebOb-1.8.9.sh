@@ -10,7 +10,7 @@
 #               i080.9.06 oslo.messaging-14.9.1
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i090.9.02 keystonemiddleware-10.7.1
-#               i090.9.03 osprofiler-4.2.0
+#               i3.2.02 osprofiler-4.2.0
 #               i090.9.10 microversion-parse-2.0.0
 #               i095.9.19 WSME-0.12.1
 #               i153.3    Glance-29.0.0

@@ -19,10 +19,10 @@
 #               i080.9.08 oslo.policy-4.4.0
 #               i080.9.11 oslo.reports-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
+#               i3.2.01 pycadf-4.0.1
 #               i075.9.01 cursive-0.2.3
-#               i090.9.01 pycadf-3.1.1
 #               i090.9.02 keystonemiddleware-10.7.1
-#               i090.9.03 osprofiler-4.2.0
+#               i3.2.02 osprofiler-4.2.0
 #               i090.9.05 taskflow-5.9.1
 #               i090.9.06 glance_store-4.8.1
 #               i090.9.11 os_brick-6.9.1
