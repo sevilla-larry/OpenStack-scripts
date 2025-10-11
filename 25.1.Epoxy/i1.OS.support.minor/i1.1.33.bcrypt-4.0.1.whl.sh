@@ -7,9 +7,9 @@
 #
 # Required by:
 #
-#               i080.9.04 oslo.middleware-6.2.0
+#               i4.1.41 oslo.middleware-6.3.1
+#               i6.16   KeyStone-26.0.0
 #               i095.9.22 paramiko-3.5.1
-#               i6.16 KeyStone-26.0.0
 #
 
 export PKG="bcrypt-4.0.1-cp36-abi3-manylinux_2_28_x86_64.whl"

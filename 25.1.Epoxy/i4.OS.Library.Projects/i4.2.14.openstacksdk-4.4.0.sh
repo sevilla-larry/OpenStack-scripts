@@ -4,19 +4,19 @@
 #
 # Dependencies Required:
 #
-#               i1.1.03      cryptography-45.0.7 whl
+#               i1.1.03      cryptography-43.0.3 whl
 #               i1.1.10      decorator-5.2.1
 #               i1.2.01      dogpile.cache-1.3.4
 #               i1.1.09      iso8601-2.1.0
 #               i1.1.11      jmespath-1.0.1
 #               i1.1.13      jsonpatch-1.33
 #               i4.1.06      keystoneauth1-5.10.0
-#               i3.02        os-service-types-1.7.0
-#               i3.01        pbr-6.1.1
+#               i3.1.02      os-service-types-1.7.0
+#               i3.1.01      pbr-6.1.1
 #               i1.1.15      platformdirs-4.3.8
 #               b10.13.24.17 psutil-7.0.0
-#               b30.13.24.28 PyYAML-6.0.2
-#               i3.03        requestsexceptions-1.4.0
+#               b10.13.24.28 PyYAML-6.0.2
+#               i3.1.03      requestsexceptions-1.4.0
 #               i1.1.14      typing-extensions-4.12.2
 #
 #      ??? 24.2 i1.1.14 netifaces-0.11.0

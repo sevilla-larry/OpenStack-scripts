@@ -4,22 +4,22 @@
 #
 # Dependencies Required:
 #
-#               i3.01 pbr-6.1.1
-#               i3.04 debtcollector-3.0.0
+#               i3.1.01 pbr-6.1.1
+#               i3.1.04 debtcollector-3.0.0
 #
 
 #
 # Required by:
 #
-#               i030.9.06 oslo.log-6.1.2
-#               i080.9.04 oslo.middleware-6.2.0
-#               i080.9.06 oslo.messaging-14.9.1
-#               i080.9.08 oslo.policy-4.4.0
+#               i4.2.07 keystonemiddleware-10.9.0
+#               i4.1.38 oslo.log-7.1.0
+#               i4.1.39 oslo.messaging-16.1.0
+#               i4.1.41 oslo.middleware-6.3.1
+#               i4.1.42 oslo.policy-4.5.1
+#               i6.16   KeyStone-27.0.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i070.9.02 castellan-5.1.1
-#               i090.9.02 keystonemiddleware-10.7.1
 #               i090.9.11 os_brick-6.9.1
-#               i151.3    KeyStone-26.0.0
 #               i153.3    Glance-29.0.0
 #               i152.3    Openstack-Placement-12.0.0
 #

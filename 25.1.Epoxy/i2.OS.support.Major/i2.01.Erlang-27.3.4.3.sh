@@ -6,7 +6,7 @@
 #
 # Required by:
 #
-#                               i020.9.3 RabbitMQ-4.0.3
+#                               i2.02 RabbitMQ-4.1.4
 #
 
 export PKG="otp_src_27.3.4.3"

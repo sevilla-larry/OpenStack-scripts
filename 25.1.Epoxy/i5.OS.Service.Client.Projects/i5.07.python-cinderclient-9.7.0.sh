@@ -4,7 +4,7 @@
 #
 # Dependencies Required:
 #
-#               i3.01        pbr-6.1.1
+#               i3.1.01      pbr-6.1.1
 #               i1.1.08      prettytable-3.15.1
 #               i4.1.06      keystoneauth1-5.10.0
 #               i4.1.36      oslo.i18n-6.5.1

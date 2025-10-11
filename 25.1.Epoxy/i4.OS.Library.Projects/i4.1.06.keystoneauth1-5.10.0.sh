@@ -4,27 +4,27 @@
 #
 # Dependencies Required:
 #
-#               i3.01        pbr-6.1.1
+#               i3.1.01      pbr-6.1.1
 #               i1.1.09      iso8601-2.1.0
 #               b30.13.24.30 Requests-2.32.5
 #               i4.1.20      stevedore-5.4.1
-#               i3.02        os-service-types-1.7.0
+#               i3.1.02      os-service-types-1.7.0
 #               i1.1.14      typing-extensions-4.12.2
 #
 
 #
 # Required by:
 #
+#               i4.2.07 keystonemiddleware-10.9.0
 #               i4.2.14 openstacksdk-4.4.0
 #               i4.2.18 osc-lib-3.2.0
-#               i5.16   python-keystoneclient-5.6.0
 #               i5.07   python-cinderclient-9.7.0
+#               i5.16   python-keystoneclient-5.6.0
 #               i?.??   python-glanceclient-4.7.0
 #               i?.??   python-barbicanclient-7.0.0
 #               i?.??   python-neutronclient-11.3.1
 #               i?.??   oslo.limit-2.5.0
 #               i?.??   castellan-5.1.1
-#               i?.??   keystonemiddleware-10.7.1
 #               i?.??   glance_store-4.8.1
 #               i?.??   Glance-29.0.0
 #

@@ -6,17 +6,17 @@
 #
 #               i1.1.21 WebOb-1.8.9
 #               i3.1.04 debtcollector-3.0.0
-#               i060.9.05 eventlet-0.36.1
+#               i1.1.36 eventlet-0.39.1
 #               i1.1.29 greenlet-3.2.4
 #               i1.1.49 oslo.utils-8.2.0
-#               i080.9.02 oslo.concurrency-6.1.0
+#               i4.1.32 oslo.concurrency-7.1.0
 #               i1.1.33 oslo.config-9.7.1
 #               i1.1.38 oslo.log-7.1.0
 #               i4.1.36 oslo.i18n-6.5.1
-#               i060.9.06 PasteDeploy-3.1.0
-#               i060.9.08 Routes-2.5.1
-#               i060.9.09 paste-3.10.1
-#               i060.9.10 yappi-1.6.0
+#               i1.1.38 PasteDeploy-3.1.0
+#               i1.1.40 Routes-2.5.1
+#               i1.1.41 paste-3.10.1
+#               i1.1.42 yappi-1.6.0
 #
 
 #

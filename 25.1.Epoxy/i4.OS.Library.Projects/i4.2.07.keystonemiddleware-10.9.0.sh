@@ -16,14 +16,14 @@
 #               i3.2.01      pycadf-4.0.1
 #               i1.1.32      PyJWT-2.10.1
 #               i5.16        python-keystoneclient-5.6.0
-#               b30.13.24.30 Requests-2.32.3
+#               b30.13.24.30 Requests-2.32.5
 #               i1.1.21      WebOb-1.8.9
 #
 
 #
 # Required by:
 #
-#               i6.16 KeyStone-26.0.0
+#               i6.16 KeyStone-27.0.0
 #               i153.3    Glance-29.0.0
 #               i152.3    Openstack-Placement-12.0.0
 #

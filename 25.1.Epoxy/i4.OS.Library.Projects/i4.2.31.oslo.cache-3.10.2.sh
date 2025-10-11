@@ -7,16 +7,16 @@
 #               i1.2.01 dogpile.cache-1.3.4
 #               i4.1.33 oslo.config-9.7.1
 #               i4.1.36 oslo.i18n-6.5.1
-#               i030.9.06 oslo.log-6.1.2
+#               i4.1.38 oslo.log-7.1.0
 #               i4.1.19 oslo.utils-8.2.0
-#               i3.04   debtcollector-3.0.0
+#               i3.1.04 debtcollector-3.0.0
 #
 
 #
 # Required by:
 #
-#               i151.3    KeyStone-26.0.0
-#               i090.9.02 keystonemiddleware-10.7.1
+#               i4.2.07 keystonemiddleware-10.9.0
+#               i6.16   KeyStone-26.0.0
 #
 
 export PKG="oslo_cache-3.10.2"

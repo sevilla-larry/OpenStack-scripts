@@ -4,36 +4,37 @@
 #
 # Dependencies Required:
 #
-#               i3.04        debtcollector-3.0.0
+#               i3.1.04      debtcollector-3.0.0
 #               i1.1.16      netaddr-1.3.0
 #               i4.1.20      stevedore-5.4.1
 #               i4.1.36      oslo.i18n-6.5.1
 #               i1.1.19      rfc3986-2.0.0
-#               b30.13.24.28 PyYAML-6.0.2
+#               b10.13.24.28 PyYAML-6.0.2
 #               b30.13.24.30 Requests-2.32.5
 #
 
 #
 # Required by:
 #
-#               i5.16 python-keystoneclient-5.6.0
-#               i080.9.01 oslo.cache-3.8.0
-#               i080.9.02 oslo.concurrency-6.1.0
-#               i080.9.03 oslo.service-3.5.0
-#               i080.9.04 oslo.middleware-6.2.0
-#               i080.9.05 oslo.metrics-0.9.0
-#               i080.9.06 oslo.messaging-14.9.1
-#               i080.9.07 oslo.db-16.0.0
-#               i080.9.08 oslo.policy-4.4.0
-#               i080.9.09 oslo.upgradecheck-2.4.0
+#               i3.2.01 pycadf-4.0.1
+#               i3.2.02 osprofiler-4.2.0
+#               i4.2.07 keystonemiddleware-10.9.0
+#               i4.2.31 oslo.cache-3.10.0
+#               i4.1.32 oslo.concurrency-7.1.0
+#               i4.2.35 oslo.db-17.2.1
+#               i4.1.38 oslo.log-7.1.0
+#               i4.1.39 oslo.messaging-16.1.0
+#               i4.1.40 oslo.metrics-0.11.0
+#               i4.1.41 oslo.middleware-6.3.1
+#               i4.1.42 oslo.policy-4.5.1
+#               i4.1.47 oslo.service-4.1.1
+#               i4.1.48 oslo.upgradecheck-2.5.0
+#               i5.16   python-keystoneclient-5.6.0
 #               i080.9.10 oslo.limit-2.5.0
 #               i080.9.11 oslo.reports-3.4.0
 #               i080.9.13 oslo.privsep-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i070.9.02 castellan-5.1.1
-#               i3.2.01 pycadf-4.0.1
-#               i090.9.02 keystonemiddleware-10.7.1
-#               i3.2.02 osprofiler-4.2.0
 #               i090.9.06 glance_store-4.8.1
 #               i090.9.07 os-win-5.9.0
 #               i090.9.11 os_brick-6.9.1

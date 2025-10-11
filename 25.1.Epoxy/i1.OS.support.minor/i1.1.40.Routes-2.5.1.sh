@@ -11,7 +11,7 @@
 #
 # Required by:
 #
-#               i4.1.47 oslo.service-3.5.0
+#               i4.1.47 oslo.service-4.1.1
 #               i153.3    Glance-29.0.0
 #               i152.3    Openstack-Placement-12.0.0
 #

@@ -4,37 +4,37 @@
 #
 # Dependencies Required:
 #
-#               i3.01   pbr-6.1.1
-#               a.08.55 Setuptools-80.9.0   (hidden)
+#               i3.1.01 pbr-6.1.1
 #
 
 #
 # Required by:
 #
-#               i8.23   python-openstackclient-7.5.0
-#               i4.1.49 oslo.utils-8.2.0
+#               i4.2.07 keystonemiddleware-10.9.0
 #               i4.2.18 osc-lib-3.2.0
+#               i4.2.31 oslo.cache-3.10.0
+#               i4.1.32 oslo.concurrency-7.1.0
 #               i4.1.33 oslo.config-9.7.1
-#               i5.16   python-keystoneclient-5.6.0
+#               i4.2.35 oslo.db-17.2.1
+#               i4.1.38 oslo.log-7.1.0
+#               i4.1.41 oslo.middleware-6.3.1
+#               i4.1.42 oslo.policy-4.5.1
+#               i4.1.47 oslo.service-4.1.1
+#               i4.1.48 oslo.upgradecheck-2.5.0
+#               i4.1.49 oslo.utils-8.2.0
 #               i5.07   python-cinderclient-9.7.0
+#               i5.16   python-keystoneclient-5.6.0
+#               i8.23   python-openstackclient-7.5.0
 #               i?.??   python-glanceclient-4.7.0
 #               i?.??   python-barbicanclient-7.0.0
 #               i?.??   python-neutronclient-11.3.1
-#               i?.??   oslo.cache-3.8.0
-#               i?.??   oslo.concurrency-6.1.0
-#               i?.??   oslo.service-3.5.0
-#               i?.??   oslo.middleware-6.2.0
 #               i?.??   oslo.messaging-14.9.1
-#               i?.??   oslo.db-16.0.0
-#               i?.??   oslo.policy-4.4.0
-#               i?.??   oslo.upgradecheck-2.4.0
 #               i?.??   oslo.limit-2.5.0
 #               i?.??   oslo.reports-3.4.0
 #               i?.??   oslo.privsep-3.4.0
 #               i?.??   oslo.versionedobjects-3.4.0
 #               i?.??   castellan-5.1.1
 #               i?.??   cursive-0.2.3
-#               i?.??   keystonemiddleware-10.7.1
 #               i?.??   glance_store-4.8.1
 #               i?.??   os-win-5.9.0
 #               i?.??   os_brick-6.9.1

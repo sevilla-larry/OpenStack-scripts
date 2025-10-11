@@ -7,10 +7,10 @@
 #
 # Required by:
 #
-#               i8.23   python-openstackclient-7.5.0
-#               i4.2.14 openstacksdk-4.4.0
 #               i4.1.06 keystoneauth1-5.10.0
+#               i4.2.14 openstacksdk-4.4.0
 #               i4.1.49 oslo.utils-8.2.0
+#               i8.23   python-openstackclient-7.5.0
 #               i?.??   python-neutronclient-11.3.1
 #               i?.??   Glance-29.0.0
 #               i?.??   Nova-30.0.0

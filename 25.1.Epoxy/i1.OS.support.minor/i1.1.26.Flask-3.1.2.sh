@@ -15,8 +15,8 @@
 #
 # Required by:
 #
-#               i6.16   KeyStone-27.0.0
 #               i1.1.28 Flask-RESTful-0.3.10
+#               i6.16   KeyStone-27.0.0
 #
 
 export PKG="flask-3.1.2"

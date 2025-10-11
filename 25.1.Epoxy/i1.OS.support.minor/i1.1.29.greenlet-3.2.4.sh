@@ -5,8 +5,8 @@
 # Required by:
 #
 #               i1.1.30 SQLAlchemy-2.0.43
-#               i4.1.47 oslo.service-4.1.1
 #               i1.1.36 eventlet-0.39.1
+#               i4.1.47 oslo.service-4.1.1
 #               i080.9.13 oslo.privsep-3.4.0
 #
 

@@ -4,8 +4,8 @@
 #
 # Dependencies Required:
 #
-#               i3.01        pbr-6.1.1
-#               i3.04        debtcollector-3.0.0
+#               i3.1.01      pbr-6.1.1
+#               i3.1.04      debtcollector-3.0.0
 #               i4.1.06      keystoneauth1-5.10.0
 #               i4.1.33      oslo.config-9.7.1
 #               i4.1.36      oslo.i18n-6.5.1
@@ -19,9 +19,9 @@
 #
 # Required by:
 #
-#               i8.23 python-openstackclient-7.5.0
+#               i4.2.07 keystonemiddleware-10.9.0
+#               i8.23   python-openstackclient-7.5.0
 #               i040.9.15 python-neutronclient-11.3.1
-#               i090.9.02 keystonemiddleware-10.7.1
 #               i090.9.06 glance_store-4.8.1
 #               i151.3    KeyStone-26.0.0
 #               i153.3    Glance-29.0.0

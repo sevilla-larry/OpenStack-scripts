@@ -12,7 +12,7 @@
 #
 # Required by:
 #
-#               i4.1.35 oslo.db-17.2.1
+#               i4.2.35 oslo.db-17.2.1
 #               i153.3    Glance-29.0.0
 #
 

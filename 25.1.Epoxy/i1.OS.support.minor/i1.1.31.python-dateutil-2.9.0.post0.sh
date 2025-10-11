@@ -10,8 +10,8 @@
 #
 # Required by:
 #
-#               i030.9.06 oslo.log-6.1.2
 #               i1.1.55 pysaml2-7.5.4 whl
+#               i4.1.38 oslo.log-7.1.0
 #
 
 export PKG="python-dateutil-2.9.0.post0"

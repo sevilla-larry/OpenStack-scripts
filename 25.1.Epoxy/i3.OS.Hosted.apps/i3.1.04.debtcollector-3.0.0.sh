@@ -10,14 +10,18 @@
 #
 # Required by:
 #
+#               i4.2.31 oslo.cache-3.10.0
+#               i4.1.32 oslo.concurrency-7.1.0
+#               i4.1.33 oslo.config-9.7.1
+#               i4.1.34 oslo.context-5.7.1
+#               i4.2.35 oslo.db-17.2.1
+#               i4.1.38 oslo.log-7.1.0
+#               i4.1.39 oslo.messaging-16.1.0
+#               i4.1.41 oslo.middleware-6.3.1
+#               i4.1.47 oslo.service-4.1.1
 #               i4.1.49 oslo.utils-8.2.0
-#               i1.1.33 oslo.config-9.7.1
 #               i5.16   python-keystoneclient-5.6.0
 #               i?.??   python-neutronclient-11.3.1
-#               i?.??   oslo.service-3.5.0
-#               i?.??   oslo.middleware-6.2.0
-#               i?.??   oslo.messaging-14.9.1
-#               i?.??   oslo.db-16.0.0
 #               i?.??   pycadf-3.1.1
 #               i?.??   os_vif-3.7.0
 #               i?.??   Glance-29.0.0

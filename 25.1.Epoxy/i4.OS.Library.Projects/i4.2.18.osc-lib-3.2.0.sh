@@ -4,7 +4,7 @@
 #
 # Dependencies Required:
 #
-#               i3.01        pbr-6.1.1
+#               i3.1.01      pbr-6.1.1
 #               i4.1.03      cliff-4.9.1
 #               i4.1.06      keystoneauth1-5.10.0
 #               i4.2.14      openstacksdk-4.4.0

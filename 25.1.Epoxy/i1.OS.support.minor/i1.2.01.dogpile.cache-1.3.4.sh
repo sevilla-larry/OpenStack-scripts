@@ -12,7 +12,7 @@
 # Required by:
 #
 #               i4.2.14 openstacksdk-4.4.0
-#               i?.??   oslo.cache-3.8.0
+#               i4.2.31 oslo.cache-3.10.0
 #               i?.??   KeyStone-26.0.0
 #
 

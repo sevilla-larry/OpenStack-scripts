@@ -9,7 +9,7 @@
 #               i4.1.34      oslo.context-5.7.1
 #               i4.1.36      oslo.i18n-6.5.1
 #               i4.1.46      oslo.serialization-5.7.0
-#               b30.13.24.28 PyYAML-6.0.2
+#               b10.13.24.28 PyYAML-6.0.2
 #               i4.1.20      stevedore-5.4.1
 #               i4.1.49      oslo.utils-8.2.0
 #
@@ -17,8 +17,8 @@
 #
 # Required by:
 #
-#               i6.16 KeyStone-27.0.0
-#               i080.9.09 oslo.upgradecheck-2.4.0
+#               i4.1.48 oslo.upgradecheck-2.5.0
+#               i6.16   KeyStone-27.0.0
 #               i153.3    Glance-29.0.0
 #               i152.3    Openstack-Placement-12.0.0
 #
