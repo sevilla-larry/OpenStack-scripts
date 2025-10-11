@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i1.1.03 cryptography-45.0.7 whl
+#               i1.1.03 cryptography-43.0.3 whl
 #               i?.??   oslo.privsep-3.4.0
 #
 

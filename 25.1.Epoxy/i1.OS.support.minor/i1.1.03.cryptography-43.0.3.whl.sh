@@ -1,4 +1,6 @@
 # i1.1.03.cryptography-43.0.3.whl.sh
+# Note: version chosen by pysaml2-7.5.4
+#
 #
 # Note: (alternative) .whl install
 # since the source build is giving ERRORs
@@ -15,8 +17,8 @@
 #
 #               i8.23   python-openstackclient-7.5.0
 #               i4.2.14 openstacksdk-4.4.0
-#               i?.??   pyOpenSSL-23.3.0
-#               i?.??   pysaml2-7.5.0
+#               i1.1.52 pyOpenSSL-24.2.1
+#               i1.1.55 pysaml2-7.5.4 whl
 #               i6.16   KeyStone-27.0.0
 #               i?.??   castellan-5.1.1
 #               i?.??   cursive-0.2.3
