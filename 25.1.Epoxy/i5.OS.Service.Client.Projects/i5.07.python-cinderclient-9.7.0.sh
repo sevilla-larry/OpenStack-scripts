@@ -16,7 +16,7 @@
 #
 # Required by:
 #
-#               i8.23  python-openstackclient-7.5.0
+#               i8.23 python-openstackclient-7.5.0
 #
 
 export PKG="python_cinderclient-9.7.0"

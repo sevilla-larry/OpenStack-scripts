@@ -5,7 +5,7 @@
 # Dependecies Required:
 #
 #               i3.1.01      pbr-6.1.1
-#               i1.1.03      cryptography-45.0.7
+#               i1.1.03      cryptography-43.0.3
 #               i4.1.03      cliff-4.9.1
 #               i1.1.09      iso8601-2.1.0
 #               i4.2.14      openstacksdk-4.4.0

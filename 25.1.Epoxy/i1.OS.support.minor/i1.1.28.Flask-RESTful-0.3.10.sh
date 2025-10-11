@@ -13,7 +13,7 @@
 #
 # Required by:
 #
-#               i151.3    KeyStone-26.0.0
+#               i6.16 KeyStone-27.0.0
 #
 
 export PKG="Flask-RESTful-0.3.10"
