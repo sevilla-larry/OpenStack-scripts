@@ -17,7 +17,7 @@
 #               i152.3    Openstack-Placement-12.0.0
 #
 
-export PKG="WebOb-1.8.9"
+export PKG="webob-1.8.9"
 export PKGLOG_DIR=$OSLOG/1.1.21
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

@@ -42,10 +42,10 @@ echo "."
 
 ###
 
-echo "i1.1.03.cryptography-45.0.7 whl"
-echo "i1.1.03.cryptography-45.0.7 whl" >> $OSLOG_PROCESS
+echo "i1.1.03.cryptography-43.0.3.whl"
+echo "i1.1.03.cryptography-43.0.3.whl" >> $OSLOG_PROCESS
 
-time { bash i1.1.03.cryptography-45.0.7.whl.sh ; }
+time { bash i1.1.03.cryptography-43.0.3.whl.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -325,7 +325,7 @@ echo "."
 echo "i1.1.24.itsdangerous-2.2.0"
 echo "i1.1.24.itsdangerous-2.2.0" >> $OSLOG_PROCESS
 
-time { bash i1.1.24.itsdangerous-2.2.0sh ; }
+time { bash i1.1.24.itsdangerous-2.2.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -420,10 +420,10 @@ echo "."
 
 ###
 
-echo "i1.1.31..python-dateutil-2.9.0.post0"
-echo "i1.1.31..python-dateutil-2.9.0.post0" >> $OSLOG_PROCESS
+echo "i1.1.31.python-dateutil-2.9.0.post0"
+echo "i1.1.31.python-dateutil-2.9.0.post0" >> $OSLOG_PROCESS
 
-time { bash i1.1.31..python-dateutil-2.9.0.post0.sh ; }
+time { bash i1.1.31.python-dateutil-2.9.0.post0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -434,10 +434,10 @@ echo "."
 
 ###
 
-echo "i1.1.32.PyJWT-2.9.0"
-echo "i1.1.32.PyJWT-2.9.0" >> $OSLOG_PROCESS
+echo "i1.1.32.PyJWT-2.10.1"
+echo "i1.1.32.PyJWT-2.10.1" >> $OSLOG_PROCESS
 
-time { bash i1.1.32.PyJWT-2.9.0.sh ; }
+time { bash i1.1.32.PyJWT-2.10.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

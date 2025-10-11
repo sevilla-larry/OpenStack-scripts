@@ -8,7 +8,7 @@
 #               i6.16   KeyStone-27.0.0
 #
 
-export PKG="pyjwt-2.9.0"
+export PKG="pyjwt-2.10.1"
 export PKGLOG_DIR=$OSLOG/1.1.32
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
