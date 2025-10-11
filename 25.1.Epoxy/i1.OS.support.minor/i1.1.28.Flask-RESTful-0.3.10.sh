@@ -1,13 +1,13 @@
-# i095.9.07.Flask-RESTful-0.3.10.sh
+# i1.1.28.Flask-RESTful-0.3.10.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i095.9.06 aniso8601-9.0.1
-#               i095.9.05 Flask-3.0.3
-#               b30.13.23.33 six-1.16.0
-#               b30.13.24.21 Pytz-2024.1
+#               i1.1.27       aniso8601-9.0.1
+#               i1.1.26       Flask-3.1.2
+#               b30.13.24.33  six-1.17.0
+#               a.08.91.20.16 Pytz-2025.2
 #
 
 #
@@ -17,7 +17,7 @@
 #
 
 export PKG="Flask-RESTful-0.3.10"
-export PKGLOG_DIR=$OSLOG/095.07
+export PKGLOG_DIR=$OSLOG/1.1.28
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

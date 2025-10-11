@@ -11,7 +11,7 @@
 # Required by:
 #
 #               i030.9.06 oslo.log-6.1.2
-#               i095.9.14 pysaml2-7.5.0
+#               i1.1.55 pysaml2-7.5.4 whl
 #
 
 export PKG="python-dateutil-2.9.0.post0"

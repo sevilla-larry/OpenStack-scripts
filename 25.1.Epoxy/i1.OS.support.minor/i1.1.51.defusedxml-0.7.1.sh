@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i1.1.55 pysaml2-7.5.4
+#               i1.1.55 pysaml2-7.5.4 whl
 #               i153.3    Glance-29.0.0
 #
 

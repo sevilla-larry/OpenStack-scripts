@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i1.1.55 pysaml2-7.5.4
+#               i1.1.55 pysaml2-7.5.4 whl
 #
 
 export PKG="xmlschema-2.5.1"

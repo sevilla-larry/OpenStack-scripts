@@ -1,4 +1,4 @@
-# i060.9.25.PyJWT-2.9.0.sh
+# i1.1.32.PyJWT-2.9.0.sh
 #
 
 #
@@ -9,7 +9,7 @@
 #
 
 export PKG="pyjwt-2.9.0"
-export PKGLOG_DIR=$OSLOG/060.25
+export PKGLOG_DIR=$OSLOG/1.1.32
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

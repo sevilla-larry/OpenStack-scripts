@@ -1,6 +1,12 @@
 # i1.3.2.mod-wsgi-5.0.2.sh
 #
 
+#
+# Dependencies Required:
+#
+#               ... Apache
+#
+
 export PKG="mod_wsgi-5.0.2"
 export PKGLOG_DIR=$OSLOG/1.3.2
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log

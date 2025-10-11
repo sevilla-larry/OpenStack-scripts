@@ -10,6 +10,7 @@
 #
 # Required by:
 #
+#               i1.1.46 kombu-5.4.2
 #               i4.1.39 oslo.messaging-16.1.0
 #
 

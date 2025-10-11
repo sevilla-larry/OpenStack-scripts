@@ -4,13 +4,13 @@
 #
 # Dependencies Required:
 #
-#               i060.9.04 greenlet-3.0.3
-#               i060.9.18 typing_extensions-4.12.2
+#               i1.1.29 greenlet-3.2.4
+#               i1.1.14 typing-extensions-4.12.2
 
 #
 # Required by:
 #
-#               i060.9.20 alembic-1.13.3
+#               i1.1.49 alembic-1.14.1
 #               i080.9.07 oslo.db-16.0.0
 #               i151.3    KeyStone-26.0.0
 #               i153.3    Glance-29.0.0

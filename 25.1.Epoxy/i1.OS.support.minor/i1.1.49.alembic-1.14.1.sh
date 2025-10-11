@@ -5,8 +5,8 @@
 # Dependencies Required:
 #
 #               i1.1.30      SQLAlchemy-2.0.43
-#               b10.13.24.14 Mako-1.3.5
-#               i1.1.14      typing_extensions-4.12.2
+#               b10.13.24.14 Mako-1.3.10
+#               i1.1.14      typing-extensions-4.12.2
 #
 
 #

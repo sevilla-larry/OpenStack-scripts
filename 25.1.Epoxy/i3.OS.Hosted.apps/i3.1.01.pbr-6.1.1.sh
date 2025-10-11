@@ -26,8 +26,9 @@
 #               i?.?? python-glanceclient-4.7.0
 #               i?.?? python-barbicanclient-7.0.0
 #               i?.?? python-neutronclient-11.3.1
-#               i?.?? testresources-2.0.1
-#               i?.?? testscenarios-0.5.0
+#               i1.2.02 testresources-2.0.2
+#               i1.2.03 fixtures-4.1.0
+#               i1.2.05 testscenarios-0.5.0
 #               i?.?? oslo.concurrency-6.1.0
 #               i?.?? oslo.middleware-6.2.0
 #               i?.?? oslo.metrics-0.9.0

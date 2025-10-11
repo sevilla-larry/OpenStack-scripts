@@ -16,7 +16,7 @@
 #
 
 export PKG="referencing-0.32.1"
-export PKGLOG_DIR=$OSLOG/010.22
+export PKGLOG_DIR=$OSLOG/1.1.57
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

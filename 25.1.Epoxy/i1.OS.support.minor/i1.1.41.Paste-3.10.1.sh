@@ -4,7 +4,7 @@
 #
 # Dependencies Required:
 #
-#               a.08.55   Setuptools-72.2.0.sh
+#               a.08.55 Setuptools-80.9.0.sh
 #
 
 #

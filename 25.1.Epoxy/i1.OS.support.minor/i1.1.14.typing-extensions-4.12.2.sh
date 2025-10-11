@@ -6,6 +6,8 @@
 #
 #               i4.1.06 keystoneauth1-5.10.0
 #               i4.2.14 openstacksdk-4.4.0
+#               i1.1.30 SQLAlchemy-2.0.43
+#               i1.1.49 alembic-1.14.1
 #
 
 export PKG="typing_extensions-4.12.2"

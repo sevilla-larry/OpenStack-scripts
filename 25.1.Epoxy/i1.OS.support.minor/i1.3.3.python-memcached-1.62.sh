@@ -1,6 +1,12 @@
 # i13.3.python-memcached-1.62.sh
 #
 
+#
+# Dependencies Required:
+#
+#               ... memcached
+#
+
 export PKG="python-memcached-1.62"
 export PKGLOG_DIR=$OSLOG/1.3.3
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log

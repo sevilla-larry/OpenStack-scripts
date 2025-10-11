@@ -4,13 +4,13 @@
 #
 # Dependencies Required:
 #
-#               i1.1.03 cryptography-43.0.3
+#               i1.1.03 cryptography-43.0.3 whl
 #
 
 #
 # Required by:
 #
-#               i1.1.55 pysaml2-7.5.4
+#               i1.1.55 pysaml2-7.5.4 whl
 #               i030.9.13 python-glanceclient-4.7.0
 #
 

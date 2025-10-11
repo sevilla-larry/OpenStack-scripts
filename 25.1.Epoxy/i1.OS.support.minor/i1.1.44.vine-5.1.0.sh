@@ -4,7 +4,8 @@
 #
 # Required by:
 #
-#               i1.1.45 amqp-5.2.0
+#               i1.1.45 amqp-5.3.1
+#               i1.1.46 kombu-5.4.2
 #
 
 export PKG="vine-5.1.0"

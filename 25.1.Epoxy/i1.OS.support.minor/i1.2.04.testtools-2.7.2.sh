@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i060.9.24 testscenarios-0.5.0
+#               i1.2.05 testscenarios-0.5.0
 #
 
 export PKG="testtools-2.7.2"

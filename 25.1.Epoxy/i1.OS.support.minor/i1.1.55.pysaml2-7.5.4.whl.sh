@@ -7,7 +7,7 @@
 #
 # Dependencies Required:
 #
-#               i1.1.03      cryptography-43.0.3
+#               i1.1.03      cryptography-43.0.3 whl
 #               i1.1.51      defusedxml-0.7.1
 #               i1.1.52      pyOpenSSL-24.2.1
 #               i1.1.31      python-dateutil-2.9.0.post0
