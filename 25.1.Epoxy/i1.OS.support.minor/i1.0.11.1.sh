@@ -770,62 +770,62 @@ echo "."
 
 ###
 
-# echo "i010.9.21.rpds_py-0.22.3"
-# echo "i010.9.21.rpds_py-0.22.3" >> $OSLOG_PROCESS
+echo "i1.1.56.rpds_py-0.16.2.whl"
+echo "i1.1.56.rpds_py-0.16.2.whl" >> $OSLOG_PROCESS
 
-# time { bash i010.9.21.rpds_py-0.22.3.sh ; }
+time { bash i1.1.56.rpds_py-0.16.2.whl.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# ###
- 
-# echo "i010.9.22.referencing-0.32.1"
-# echo "i010.9.22.referencing-0.32.1" >> $OSLOG_PROCESS
+###
 
-# time { bash i010.9.22.referencing-0.32.1.sh ; }
+echo "i1.1.57.referencing-0.32.1"
+echo "i1.1.57.referencing-0.32.1" >> $OSLOG_PROCESS
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+time { bash i1.1.57.referencing-0.32.1.sh ; }
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# ###
- 
-# echo "i010.9.23.jsonschema_specifications-2023.12.1"
-# echo "i010.9.23.jsonschema_specifications-2023.12.1" >> $OSLOG_PROCESS
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# time { bash i010.9.23.jsonschema_specifications-2023.12.1.sh ; }
+###
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+echo "i1.1.58.jsonschema_specifications-2023.12.1"
+echo "i1.1.58.jsonschema_specifications-2023.12.1" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+time { bash i1.1.58.jsonschema_specifications-2023.12.1.sh ; }
 
-# ###
- 
-# echo "i010.9.24.jsonschema-4.23.0"
-# echo "i010.9.24.jsonschema-4.23.0" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# time { bash i010.9.24.jsonschema-4.23.0.sh ; }
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+###
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "i1.1.59.jsonschema-4.23.0"
+echo "i1.1.59.jsonschema-4.23.0" >> $OSLOG_PROCESS
 
-# ###
- 
+time { bash i1.1.59.jsonschema-4.23.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.25.warlock-2.0.1"
 # echo "i010.9.25.warlock-2.0.1" >> $OSLOG_PROCESS
 
