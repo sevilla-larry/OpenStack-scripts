@@ -415,7 +415,7 @@ H.  KeyStone - Identity service
 
         ###
 
-        bash i151.1.sh      # KeyStone
+        bash i6.16.sh      # KeyStone
 
         ###
 

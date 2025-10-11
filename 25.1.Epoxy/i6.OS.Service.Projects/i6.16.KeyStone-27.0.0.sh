@@ -1,6 +1,6 @@
-# i151.9.3.KeyStone-26.0.0.sh
+# i6.16.KeyStone-27.0.0
 #
-# https://docs.openstack.org/keystone/2024.2/install/keystone-install-ubuntu.html
+# https://docs.openstack.org/keystone/2025.1/install/keystone-install-ubuntu.html
 #
 
 #
@@ -40,15 +40,16 @@
 #               i090.9.03 osprofiler-4.2.0
 #
 
-export PKG="keystone-26.0.0"
-export PKGLOG_DIR=$OSLOG/151
+export PKG="keystone-27.0.0"
+export PKGLOG_DIR=$OSLOG/6.16
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export OSLOG_PROCESS=$OSLOG/process.log
-export SOURCES_DIR=$PWD
+export SOURCES=`pwd`
+#export SOURCES_DIR=$PWD
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -103,8 +104,7 @@ cp -v   etc/logging.conf.sample                 \
         /etc/keystone/logging.conf             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 chown -vR keystone:keystone /etc/keystone       \
-                        /var/lib/keystone       \
-                        /var/log/keystone       \
+                        /var/{lib,log}/keystone \
     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
@@ -112,7 +112,7 @@ export APACHE_CONF_DIR=/etc/httpd
 export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
 export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
 
-export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES_DIR/i151.6.KeyStone.conf.for.Apache.txt
+export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES/i6.16.KeyStone.conf.for.Apache.txt
 export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone.conf
 
 cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \
@@ -136,9 +136,10 @@ unset KEYSTONE_CONF_FOR_APACHE_SRC
 unset KEYSTONE_CONF_FOR_APACHE_DST
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
-unset SOURCES_DIR
+unset SOURCES
+#unset SOURCES_DIR
 unset OSLOG_PROCESS
 unset PKGLOG_OTHERS
 unset PKGLOG_INSTALL PKGLOG_BUILD
