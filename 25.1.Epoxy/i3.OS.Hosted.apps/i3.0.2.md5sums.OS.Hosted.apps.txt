@@ -26,3 +26,6 @@ cd171597ea297afc0ef98b2f8b96081b futurist-3.0.0.tar.gz
 
 # i3.2.01 pycadf-4.0.1
 8551605ac44c50a68b1d9c9fba22d00e pycadf-4.0.1.tar.gz
+
+# i3.2.02 osprofiler-4.2.0
+e1e6db90f3bdc3ea36761777b1e3e049 osprofiler-4.2.0.tar.gz
