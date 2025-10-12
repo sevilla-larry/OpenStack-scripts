@@ -17,8 +17,8 @@
 #
 # Required by:
 #
-#               i8.23 python-openstackclient-7.5.0
 #               i5.16 python-keystoneclient-5.6.0
+#               i8.23 python-openstackclient-7.5.0
 #               i?.?? python-neutronclient-11.3.1
 #
 
