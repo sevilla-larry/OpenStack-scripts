@@ -1,4 +1,5 @@
 # i095.9.11.defusedxml-0.7.1.sh
+# Note: version chosen by pysaml2-7.5.4
 #
 
 #

@@ -308,12 +308,12 @@ F.  RabbitMQ
         export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
 
         cp -v /var/lib/rabbitmq/.erlang.cookie /home/user
-        cp -v /var/lib/rabbitmq/.erlang.cookie /root
+      # cp -v /var/lib/rabbitmq/.erlang.cookie /root        symbolic link
 
-        chmod 600 /home/user/.erlang.cookie
-        chmod 600 /root/.erlang.cookie
+        chmod -v 600 /home/user/.erlang.cookie
+        chmod -v 600 /root/.erlang.cookie
 
-        chown user:user /home/user/.erlang.cookie
+        chown -v user:user /home/user/.erlang.cookie
 
         #                    user      password
         rabbitmqctl add_user openstack openstack
@@ -369,8 +369,6 @@ G.  OpenStack Services Support Apps
         ls -l /usr/bin/awk    # gawk
 
         cd /sources
-
-        bash i000.1.11.3.support.apps.sh
 
 
 H.  KeyStone - Identity service
@@ -436,8 +434,8 @@ H.  KeyStone - Identity service
         ###
 
         ### KeyStone Configuration
-        # https://docs.openstack.org/keystone/2024.2/configuration/index.html
-        # https://docs.openstack.org/keystone/2024.2/configuration/samples/index.html
+        # https://docs.openstack.org/keystone/2025.1/configuration/index.html
+        # https://docs.openstack.org/keystone/2025.1/configuration/samples/index.html
 
 
         ### REBOOT
@@ -474,7 +472,7 @@ H.  KeyStone - Identity service
         nc -w5 -z -v controller 5000
         #ncat -w5 -z -v 10.0.0.11 5000
 
-            Ncat: Version 7.95 ( https://nmap.org/ncat )
+            Ncat: Version 7.98 ( https://nmap.org/ncat )
             Ncat: Connected to 10.0.0.11:5000.
             Ncat: 0 bytes sent, 0 bytes received in 0.0x seconds.
 
@@ -491,7 +489,7 @@ H.  KeyStone - Identity service
 
             HTTP/1.1 200 OK
             Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
-            Server: Apache/2.4.62 (Unix) mod_wsgi/5.0.2 Python/3.11
+            Server: Apache/2.4.65 (Unix) mod_wsgi/5.0.2 Python/3.12
             Content-Length: 250
             Vary: X-Auth-Token
             x-openstack-request-id: req-........-....-....-....-............
@@ -518,51 +516,6 @@ H.  KeyStone - Identity service
             --bootstrap-public-url http://controller:5000/v3/ \
             --bootstrap-region-id RegionOne
         ###
-
-#
-#    H.??. Remove/exclude wsgi-test.conf
-#
-#        ### edit /etc/httpd/httpd.conf
-#
-#        ### remove/exclude test, add wsgi-keystone app
-#        #Include /etc/httpd/extra/wsgi-test.conf
-#        Include /etc/httpd/extra/wsgi-keystone.conf
-#
-#        # Verify
-#        ServerName controller
-#
-#        ### Create the /etc/httpd/extra/wsgi-keystone.conf
-#
-#        Listen 5000
-#
-#        <VirtualHost *:5000>
-#            WSGIDaemonProcess keystone-public processes=5 threads=1 user=keystone group=keystone display-name=%{GROUP}
-#            WSGIProcessGroup keystone-public
-#            WSGIScriptAlias / /usr/bin/keystone-wsgi-public
-#            WSGIApplicationGroup %{GLOBAL}
-#            WSGIPassAuthorization On
-#            ErrorLogFormat "%{cu}t %M"
-#            ErrorLog /var/log/httpd/keystone.log
-#            CustomLog /var/log/httpd/keystone_access.log combined
-#
-#            #<Directory /usr/bin>
-#            <Directory /usr>
-#                Require all granted
-#            </Directory>
-#        </VirtualHost>
-#
-#        Alias /identity /usr/bin/keystone-wsgi-public
-#        <Location /identity>
-#            SetHandler wsgi-script
-#            Options +ExecCGI
-#
-#            WSGIProcessGroup keystone-public
-#            WSGIApplicationGroup %{GLOBAL}
-#            WSGIPassAuthorization On
-#        </Location>
-#
-#        ### end of /etc/httpd/extra/wsgi-keystone.conf
-#
 
         reboot
 

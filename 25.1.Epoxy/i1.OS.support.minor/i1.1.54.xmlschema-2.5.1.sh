@@ -1,4 +1,5 @@
 # i1.1.54.xmlschema-2.5.1.sh
+# Note: version chosen by pysaml2-7.5.4
 #
 
 #
