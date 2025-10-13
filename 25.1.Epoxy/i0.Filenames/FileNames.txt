@@ -18,7 +18,7 @@ i4 OS Library Projects
 i4.01.castellan
 i4.02.ceilometermiddleware
 *i4.03.cliff
-i4.04.glance-store
+*i4.04.glance-store
 i4.05.heat-translator
 *i4.06.keystoneauth1
 *i4.07.keystonemiddleware

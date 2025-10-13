@@ -4,6 +4,9 @@
 # i4.1.03 cliff-4.9.1
 7f6a2a8046eb190aaaff1adf5fed2f27 cliff-4.9.1.tar.gz
 
+# i4.1.04 glance_store-4.9.1
+bce12c9f46d35ed03a3aa2cb63e5a3a8 glance_store-4.9.1.tar.gz
+
 # i4.1.06 keystoneauth1-5.10.0
 78a361c86a13c97342a19f5fa35cf726 keystoneauth1-5.10.0.tar.gz
 

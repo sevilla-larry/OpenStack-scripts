@@ -4,6 +4,9 @@
 # i4.1.03 cliff-4.9.1
 https://tarballs.opendev.org/openstack/cliff/cliff-4.9.1.tar.gz
 
+# i4.1.04 glance_store-4.9.1
+https://tarballs.opendev.org/openstack/glance_store/glance_store-4.9.1.tar.gz
+
 # i4.1.06 keystoneauth1-5.10.0
 https://tarballs.opendev.org/openstack/keystoneauth/keystoneauth1-5.10.0.tar.gz
 

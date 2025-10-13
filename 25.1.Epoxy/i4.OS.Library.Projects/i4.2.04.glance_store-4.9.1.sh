@@ -1,35 +1,30 @@
-# i4.2.07.keystonemiddleware-10.9.0.sh
+# i4.2.04.glance-store-4.9.1.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i4.1.06      keystoneauth1-5.10.0
-#               i4.2.31      oslo.cache-3.10.2
 #               i4.1.33      oslo.config-9.7.1
-#               i4.1.34      oslo.context-5.7.1
 #               i4.1.36      oslo.i18n-6.5.1
-#               i4.1.38      oslo.log-7.1.0
 #               i4.1.46      oslo.serialization-5.7.0
 #               i4.1.49      oslo.utils-8.2.0
-#               i3.1.01      pbr-6.1.1
-#               i3.2.01      pycadf-4.0.1
-#               i1.1.32      PyJWT-2.10.1
+#               i4.1.32      oslo.concurrency-7.1.0
+#               i4.1.20      stevedore-5.4.1
+#               i1.1.36      eventlet-0.39.1
+#               i1.1.59      jsonschema-4.23.0
+#               i4.1.06      keystoneauth1-5.10.0
 #               i5.16        python-keystoneclient-5.6.0
 #               b30.13.24.30 Requests-2.32.5
-#               i1.1.21      WebOb-1.8.9
 #
 
 #
 # Required by:
 #
 #               i6.12 Glance-30.0.0
-#               i6.16 KeyStone-27.0.0
-#               i152.3    Openstack-Placement-12.0.0
 #
 
-export PKG="keystonemiddleware-10.9.0"
-export PKGLOG_DIR=$OSLOG/4.2.07
+export PKG="glance_store-4.9.1"
+export PKGLOG_DIR=$OSLOG/4.2.04
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -65,7 +60,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                keystonemiddleware      \
+                glance_store            \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
