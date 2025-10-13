@@ -938,6 +938,20 @@ echo "."
 
 ###
 
+echo "i1.1.69.retrying-1.3.4"
+echo "i1.1.69.retrying-1.3.4" >> $OSLOG_PROCESS
+
+time { bash i1.1.69.retrying-1.3.4.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.25.warlock-2.0.1"
 # echo "i010.9.25.warlock-2.0.1" >> $OSLOG_PROCESS
 

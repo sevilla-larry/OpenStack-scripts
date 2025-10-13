@@ -210,6 +210,9 @@ c04c814eee1abf42790cfa4bd0454af1 importlib_metadata-6.8.0.tar.gz
 # i1.1.68 WSME-0.12.1
 90d07765ce30dfbb7ef6ae20fb2136ba WSME-0.12.1.tar.gz
 
+# i1.1.69 retrying-1.3.4
+60ec4690e80e903117b91bc74a220116 retrying-1.3.4.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz
