@@ -37,6 +37,7 @@
 #               i4.1.48 oslo.upgradecheck-2.5.0
 #               i5.07   python-cinderclient-9.7.0
 #               i5.16   python-keystoneclient-5.6.0
+#               i6.12   Glance-30.0.0
 #               i6.16   KeyStone-27.0.0
 #               i040.9.13 python-glanceclient-4.7.0
 #               i040.9.14 python-barbicanclient-7.0.0
@@ -52,7 +53,6 @@
 #               i090.9.11 os_brick-6.9.1
 #               i090.9.13 os_vif-3.7.0
 #               i090.9.14 tooz-6.3.0
-#               i153.3    Glance-29.0.0
 #               i152.3    Openstack-Placement-12.0.0
 #
 

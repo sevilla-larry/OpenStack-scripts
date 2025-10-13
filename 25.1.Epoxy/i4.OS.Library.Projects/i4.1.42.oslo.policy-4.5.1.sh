@@ -18,8 +18,8 @@
 # Required by:
 #
 #               i4.1.48 oslo.upgradecheck-2.5.0
+#               i6.12   Glance-30.0.0
 #               i6.16   KeyStone-27.0.0
-#               i153.3    Glance-29.0.0
 #               i152.3    Openstack-Placement-12.0.0
 #
 

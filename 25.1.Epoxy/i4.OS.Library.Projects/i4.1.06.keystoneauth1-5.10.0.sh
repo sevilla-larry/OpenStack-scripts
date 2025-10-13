@@ -20,13 +20,13 @@
 #               i4.2.18 osc-lib-3.2.0
 #               i5.07   python-cinderclient-9.7.0
 #               i5.16   python-keystoneclient-5.6.0
+#               i6.12   Glance-30.0.0
 #               i?.??   python-glanceclient-4.7.0
 #               i?.??   python-barbicanclient-7.0.0
 #               i?.??   python-neutronclient-11.3.1
 #               i?.??   oslo.limit-2.5.0
 #               i?.??   castellan-5.1.1
 #               i?.??   glance_store-4.8.1
-#               i?.??   Glance-29.0.0
 #
 
 export PKG="keystoneauth1-5.10.0"

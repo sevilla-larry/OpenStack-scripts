@@ -108,7 +108,7 @@ i6.08.cyborg
 i6.09.designate
 i6.10.freezer
 i6.11.freezer-api
-i6.12.glance
+*i6.12.glance
 i6.13.heat
 i6.14.horizon
 i6.15.ironic

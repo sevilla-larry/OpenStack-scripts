@@ -25,9 +25,9 @@
 #
 # Required by:
 #
+#               i6.12 Glance-30.0.0
 #               i6.16 KeyStone-27.0.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
-#               i153.3    Glance-29.0.0
 #
 
 export PKG="oslo_messaging-16.1.0"

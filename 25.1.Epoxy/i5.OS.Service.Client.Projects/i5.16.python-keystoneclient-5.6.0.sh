@@ -20,11 +20,11 @@
 # Required by:
 #
 #               i4.2.07 keystonemiddleware-10.9.0
+#               i6.12   Glance-30.0.0
 #               i6.16   KeyStone-27.0.0
 #               i8.23   python-openstackclient-7.5.0
 #               i040.9.15 python-neutronclient-11.3.1
 #               i090.9.06 glance_store-4.8.1
-#               i153.3    Glance-29.0.0
 #
 
 export PKG="python_keystoneclient-5.6.0"

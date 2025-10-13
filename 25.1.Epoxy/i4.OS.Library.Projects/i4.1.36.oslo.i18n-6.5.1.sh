@@ -24,6 +24,7 @@
 #               i4.1.49 oslo.utils-8.2.0
 #               i5.07   python-cinderclient-9.7.0
 #               i5.16   python-keystoneclient-5.6.0
+#               i6.12   Glance-30.0.0
 #               i6.16   KeyStone-27.0.0
 #               i8.23   python-openstackclient-7.5.0
 #               i?.??   python-glanceclient-4.7.0
@@ -40,7 +41,6 @@
 #               i?.??   os-win-5.9.0
 #               i?.??   os_brick-6.9.1
 #               i?.??   os_vif-3.7.0
-#               i?.??   Glance-29.0.0
 #
 
 export PKG="oslo_i18n-6.5.1"

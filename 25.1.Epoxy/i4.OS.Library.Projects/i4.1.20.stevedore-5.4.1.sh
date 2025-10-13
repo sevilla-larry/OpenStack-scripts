@@ -21,6 +21,7 @@
 #               i4.1.42 oslo.policy-4.5.1
 #               i5.07   python-cinderclient-9.7.0
 #               i5.16   python-keystoneclient-5.6.0
+#               i6.12   Glance-30.0.0
 #               i6.16   KeyStone-27.0.0
 #               i8.23   python-openstackclient-7.5.0
 #               i?.?? castellan-5.1.1
@@ -28,7 +29,6 @@
 #               i?.?? glance_store-4.8.1
 #               i?.?? os_vif-3.7.0
 #               i?.?? tooz-6.3.0
-#               i?.??   Glance-29.0.0
 #
 
 export PKG="stevedore-5.4.1"

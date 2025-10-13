@@ -22,6 +22,7 @@
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.40 oslo.metrics-0.11.0
 #               i4.1.47 oslo.service-4.1.1
+#               i6.12   Glance-30.0.0
 #               i6.16   KeyStone-27.0.0
 #               i040.9.15 python-neutronclient-11.3.1
 #               i080.9.10 oslo.limit-2.5.0
@@ -32,7 +33,6 @@
 #               i090.9.07 os-win-5.9.0
 #               i090.9.11 os_brick-6.9.1
 #               i090.9.13 os_vif-3.7.0
-#               i153.3    Glance-29.0.0
 #               i152.3    Openstack-Placement-12.0.0
 #
 

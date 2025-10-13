@@ -13,6 +13,7 @@
 #
 # Required by:
 #
+#               i6.12 Glance-30.0.0
 #               i6.16 KeyStone-27.0.0
 #               i010.9.25 warlock-2.0.1
 #               i090.9.05 taskflow-5.9.1

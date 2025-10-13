@@ -13,7 +13,7 @@
 # Required by:
 #
 #               i4.2.35 oslo.db-17.2.1
-#               i153.3    Glance-29.0.0
+#               i6.12   Glance-30.0.0
 #
 
 export PKG="alembic-1.14.1"

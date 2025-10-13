@@ -9,11 +9,11 @@
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.41 oslo.middleware-6.3.1
 #               i4.1.47 oslo.service-4.1.1
+#               i6.12   Glance-30.0.0
 #               i6.16   KeyStone-27.0.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i090.9.10 microversion-parse-2.0.0
 #               i095.9.19 WSME-0.12.1
-#               i153.3    Glance-29.0.0
 #               i152.3    Openstack-Placement-12.0.0
 #
 

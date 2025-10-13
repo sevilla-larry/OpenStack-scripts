@@ -1,24 +1,20 @@
-# i1.1.30.SQLAlchemy-2.0.43.sh
+# i1.1.61.httplib2-0.22.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i1.1.29 greenlet-3.2.4
-#               i1.1.14 typing-extensions-4.12.2
+#               b30.13.24.24 pyparsing-3.2.3
+#
 
 #
 # Required by:
 #
-#               i1.1.49 alembic-1.14.1
-#               i4.2.35 oslo.db-17.2.1
-#               i6.16   KeyStone-27.0.0
-#               i6.12   Glance-30.0.0
-#               i152.3    Openstack-Placement-12.0.0
+#               i6.12 Glance-30.0.0
 #
 
-export PKG="sqlalchemy-2.0.43"
-export PKGLOG_DIR=$OSLOG/1.1.30
+export PKG="httplib2-0.22.0"
+export PKGLOG_DIR=$OSLOG/1.1.61
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -54,13 +50,13 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                SQLAlchemy              \
+                httplib2                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "4. pyTest (too long, not executed)"
-echo "4. pyTest (too long, not executed)" >> $OSLOG_PROCESS
-echo "4. pyTest (too long, not executed)" >> $PKGLOG_ERROR
-#pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# echo "4. pyTest ..."
+# echo "4. pyTest ..." >> $OSLOG_PROCESS
+# echo "4. pyTest ..." >> $PKGLOG_ERROR
+# pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES

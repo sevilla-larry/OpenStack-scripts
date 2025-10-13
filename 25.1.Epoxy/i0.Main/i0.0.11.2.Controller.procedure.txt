@@ -184,7 +184,7 @@ D.  Support Apps - Major - Configuration 1
 
         ##### as root
 
-        ### edit /etc/mariadb/my.cnf, add:
+        ### edit / nano /etc/mariadb/my.cnf, add:
 
         !includedir /etc/mariadb/mariadb.conf.d/
 
@@ -192,7 +192,7 @@ D.  Support Apps - Major - Configuration 1
 
         mkdir -v /etc/mariadb/mariadb.conf.d
 
-        ### add/create file /etc/mariadb/mariadb.conf.d/99-openstack.cnf
+        ### add/create file nano /etc/mariadb/mariadb.conf.d/99-openstack.cnf
 
         [mysqld]
         bind-address = 10.0.0.11
@@ -419,7 +419,7 @@ H.  KeyStone - Identity service
 
     H.03. KeyStone configuration
 
-        ### edit /etc/keystone/keystone.conf
+        ### edit / nano /etc/keystone/keystone.conf
 
         [default]
         log_dir = /var/log/keystone
@@ -628,8 +628,8 @@ K.  Glance - Image Service
 
         ###
 
-        mysql
-        # or # mariadb
+        mariadb
+        # or # mysql
 
         ### display:
         #
@@ -676,7 +676,7 @@ K.  Glance - Image Service
         $$$ Create the "image" service API endpoints:
         openstack endpoint create --region RegionOne \
           image public http://controller:9292
-        $$$ note set ENDPOINT_ID=id
+        $$$ note export ENDPOINT_ID=id
         openstack endpoint create --region RegionOne \
           image internal http://controller:9292
         openstack endpoint create --region RegionOne \
@@ -694,6 +694,24 @@ K.  Glance - Image Service
         export LFSLOG=/var/log/blfs
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
+      # export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
+
+        ###
+        # for VBs
+        #
+        export CFLAGS="-O2 -march=nehalem -mtune=generic -pipe -fomit-frame-pointer -msse4.2"
+        #
+        ###
+        # for VMs
+        #   and
+        # for PCs
+        #
+        export CFLAGS="-O2 -march=native -mtune=native -pipe -fomit-frame-pointer -mavx2 -mfma"
+        #
+        ###
+
+        export CXXFLAGS=$CFLAGS
+        export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
 
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
@@ -701,6 +719,10 @@ K.  Glance - Image Service
         echo $NPROC           # $(nproc)
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
+
+        echo $CFLAGS
+        echo $CXXFLAGS
+        echo $LDFLAGS
 
         echo $SHELL           # /bin/bash
         ls -l /bin/sh         # bash
