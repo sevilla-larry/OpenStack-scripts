@@ -1,17 +1,32 @@
-# i3.1.05.futurist-3.0.0.sh
+# i4.2.22.taskflow-5.12.0.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i3.1.01 pbr-6.1.2
+#               i3.1.04 debtcollector-3.0.0
+#               i3.1.05 futurist-3.0.0
+#               i1.1.37 fasteners-0.19
+#               i1.1.62 networkx-3.4.2
+#               i4.1.20 stevedore-5.4.1
+#               i1.1.59 jsonschema-4.23.0
+#               i3.1.06 automaton-3.2.0
+#               i4.1.49 oslo.utils-8.2.0
+#               i4.1.46 oslo.serialization-5.7.0
+#               i1.1.63 tenacity-9.0.0
+#               i1.1.43 cachetools-5.5.2
+#               i1.1.64 pydot-3.0.4
 #
 
 #
 # Required by:
 #
-#               i4.1.39 oslo.messaging-16.1.0
-#               i6.12   Glance-30.0.0
-#               i090.9.05 taskflow-5.9.1
-#               i090.9.14 tooz-6.3.0
+#               i153.3    Glance-29.0.0
 #
 
-export PKG="futurist-3.0.0"
-export PKGLOG_DIR=$OSLOG/3.1.05
+export PKG="taskflow-5.12.0"
+export PKGLOG_DIR=$OSLOG/4.2.22
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -47,7 +62,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                futurist                \
+                taskflow                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

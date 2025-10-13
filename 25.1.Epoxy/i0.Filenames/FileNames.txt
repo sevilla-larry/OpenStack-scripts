@@ -36,7 +36,7 @@ i4.17.os-vif
 i4.19.ovsdbapp
 *i4.20.stevedore
 i4.21.sushy
-i4.22.taskflow
+*i4.22.taskflow
 i4.23.tosca-parser
 
 *i4.31.oslo.cache

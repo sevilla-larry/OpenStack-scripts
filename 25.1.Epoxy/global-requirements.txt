@@ -59,7 +59,7 @@ i1.1.28.Flask-RESTful-0.3.10            Flask-RESTful  # BSD
 i1.1.29.greenlet-3.2.4                  greenlet!=0.4.14  # MIT
                                         grpcio  # Apache-2.0
                                         gunicorn  # MIT
-                                        httplib2  # MIT
+i1.1.61.httplib2-0.22.0                 httplib2  # MIT
                                         httpx  # BSD
                                         hvac  # Apache-2.0
                                         icalendar  # BSD
@@ -91,7 +91,7 @@ i1.1.46.kombu-5.4.2                     kombu!=4.0.2  # BSD
 i1.1.16.netaddr-1.3.0                   netaddr  # BSD
 i1.1.14.netifaces-0.11.0                netifaces!=0.10.0,!=0.10.1  # MIT
                                         netmiko  # MIT
-                                        networkx!=2.8.4  # BSD
+i1.1.62.networkx-3.4.2                  networkx!=2.8.4  # BSD
 i1.1.50.oauthlib-3.2.2                  oauthlib  # BSD
                                         opentelemetry-exporter-otlp  # Apache-2.0
                                         opentelemetry-sdk  # Apache-2.0
@@ -385,7 +385,7 @@ i3.1.01.pbr-6.1.1                       pbr!=2.1.0  # Apache-2.0
                                         sherlock  # MIT
 i4.1.20.stevedore-5.4.1                 stevedore!=3.0.0  # Apache-2.0
                                         tap-as-a-service  # Apache-2.0
-                                        taskflow  # Apache-2.0
+i4.2.22.taskflow-5.12.0                 taskflow  # Apache-2.0
                                         tempest  # Apache-2.0
                                         tooz  # Apache-2.0
                                         tosca-parser  # Apache-2.0

@@ -826,24 +826,66 @@ echo "."
 
 ###
 
+echo "i1.1.61.httplib2-0.22.0"
+echo "i1.1.61.httplib2-0.22.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.61.httplib2-0.22.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.62.networkx-3.4.2"
+echo "i1.1.62.networkx-3.4.2" >> $OSLOG_PROCESS
+
+time { bash i1.1.62.networkx-3.4.2.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.63.tenacity-9.0.0"
+echo "i1.1.63.tenacity-9.0.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.63.tenacity-9.0.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.64.pydot-3.0.4"
+echo "i1.1.64.pydot-3.0.4" >> $OSLOG_PROCESS
+
+time { bash i1.1.64.pydot-3.0.4.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.25.warlock-2.0.1"
 # echo "i010.9.25.warlock-2.0.1" >> $OSLOG_PROCESS
 
 # time { bash i010.9.25.warlock-2.0.1.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
-# ###
-
-# echo "i010.9.26.pyOpenSSL-23.3.0"
-# echo "i010.9.26.pyOpenSSL-23.3.0" >> $OSLOG_PROCESS
-
-# time { bash i010.9.26.pyOpenSSL-23.3.0.sh ; }
 
 # date +"%Y/%b/%d %H:%M"
 # date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

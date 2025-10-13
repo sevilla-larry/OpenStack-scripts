@@ -16,6 +16,9 @@ https://tarballs.opendev.org/openstack/debtcollector/debtcollector-3.0.0.tar.gz
 # i3.1.05 futurist-3.0.0
 https://tarballs.opendev.org/openstack/futurist/futurist-3.0.0.tar.gz
 
+# i3.1.06 automaton-3.2.0
+https://tarballs.opendev.org/openstack/automaton/automaton-3.2.0.tar.gz
+
 
 # Note: OpenStack - tarballs - 3.1.10
 # i3.1.11 etcd-v3.1.10 (from OpenStack site amd64 binary/sources )
