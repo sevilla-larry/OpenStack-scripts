@@ -1,4 +1,4 @@
-# i6.16.sh
+# i6.16.0.sh
 #
 # Build KeyStone
 #
@@ -10,10 +10,10 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i6.16.KeyStone-27.0.0"
-echo "i6.16.KeyStone-27.0.0" >> $LFSLOG_PROCESS
+echo "i6.16.1.KeyStone-27.0.0"
+echo "i6.16.1.KeyStone-27.0.0" >> $LFSLOG_PROCESS
 
-time { bash i6.16.KeyStone-27.0.0.sh ; }
+time { bash i6.16.1.KeyStone-27.0.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

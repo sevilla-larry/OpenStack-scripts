@@ -1,6 +1,9 @@
 # OpenStack Library Projects
 
 
+# i4.1.01 castellan-5.2.1
+https://tarballs.opendev.org/openstack/castellan/castellan-5.2.1.tar.gz
+
 # i4.1.03 cliff-4.9.1
 https://tarballs.opendev.org/openstack/cliff/cliff-4.9.1.tar.gz
 

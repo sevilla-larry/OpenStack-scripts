@@ -1,4 +1,4 @@
-# i153.1.sh
+# i6.12.0.sh
 #
 # Build Glance
 #
@@ -10,10 +10,10 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i153.3.Glance-29.0.0"
-echo "i153.3.Glance-29.0.0" >> $LFSLOG_PROCESS
+echo "i6.12.1.Glance-30.0.0"
+echo "i6.12.1.Glance-30.0.0" >> $LFSLOG_PROCESS
 
-time { bash i153.3.Glance-29.0.0.sh ; }
+time { bash i6.12.1.Glance-30.0.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
@@ -24,10 +24,10 @@ echo "."
 
 ###
 
-echo "i153.5.Glance-api.rc.d"
-echo "i153.5.Glance-api.rc.d" >> $LFSLOG_PROCESS
+echo "i6.12.2.Glance-api.rc.d"
+echo "i6.12.2.Glance-api.rc.d" >> $LFSLOG_PROCESS
 
-time { bash i153.5.Glance-api.rc.d.sh ; }
+time { bash i6.12.2.Glance-api.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

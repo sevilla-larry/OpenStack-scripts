@@ -1,12 +1,12 @@
-# i1.0.11.3.1.sh
+# i1.0.11.4.2.sh
 #
 # Python OpenStack support minor
 #
 # for Controller Node
 #
-# Pass 3
+# Pass 4
 #
-# PyMySQL
+# python-memcached
 #
 #####
 
@@ -17,10 +17,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i1.3.1.PyMySQL-1.1.2"
-echo "i1.3.1.PyMySQL-1.1.2" >> $OSLOG_PROCESS
+echo "i1.4.3.python-memcached-1.62"
+echo "i1.4.3.python-memcached-1.62" >> $OSLOG_PROCESS
 
-time { bash i1.3.1.PyMySQL-1.1.2.sh ; }
+time { bash i1.4.3.python-memcached-1.62.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

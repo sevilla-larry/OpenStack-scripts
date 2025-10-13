@@ -1,6 +1,9 @@
 # OpenStack Library Projects
 
 
+# i4.1.01 castellan-5.2.1
+152bec7a7b37bc019cff19003f837dfa castellan-5.2.1.tar.gz
+
 # i4.1.03 cliff-4.9.1
 7f6a2a8046eb190aaaff1adf5fed2f27 cliff-4.9.1.tar.gz
 

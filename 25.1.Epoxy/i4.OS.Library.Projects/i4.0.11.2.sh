@@ -14,6 +14,25 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
+##    i4.2.01.castellan-5.2.1
+##      depends on some
+##    i4.1.xx oslo.xxxxx-x.x.x
+##    i5.04 python-barbicanclient-7.1.0
+
+echo "i4.2.01.castellan-5.2.1"
+echo "i4.2.01.castellan-5.2.1" >> $OSLOG_PROCESS
+
+time { bash i4.2.01.castellan-5.2.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 ##    i4.2.04.glance_store-4.9.1
 ##      depends on some
 ##    i4.1.xx oslo.xxxxx-x.x.x

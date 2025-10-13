@@ -1,6 +1,9 @@
 # OpenStack Service Client Projects
 
 
+# i5.04 python_barbicanclient-7.1.0
+658ad3106b05b1d26da1cc8b364074c2 python_barbicanclient-7.1.0.tar.gz
+
 # i5.07 python_cinderclient-9.7.0
 aa5532cfa4d5969abc3e4b4484c7d745 python_cinderclient-9.7.0.tar.gz
 

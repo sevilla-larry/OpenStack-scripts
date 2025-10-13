@@ -15,7 +15,7 @@ i9 OS Tempest Plugins
 
 
 i4 OS Library Projects
-i4.01.castellan
+*i4.01.castellan
 i4.02.ceilometermiddleware
 *i4.03.cliff
 *i4.04.glance-store
@@ -66,7 +66,7 @@ i5 OS Service Client Projects
 i5.01.osc-placement
 i5.02.python-adjutantclient
 i5.03.python-aodhclient
-i5.04.python-barbicanclient
+*i5.04.python-barbicanclient
 i5.05.python-blazarclient
 i5.06.python-brick-cinderclient-ext
 *i5.07.python-cinderclient

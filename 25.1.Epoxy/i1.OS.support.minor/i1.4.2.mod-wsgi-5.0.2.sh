@@ -1,32 +1,21 @@
-# i075.9.01.cursive-0.2.3.sh
+# i1.4.2.mod-wsgi-5.0.2.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i020.9.01 pbr-6.1.0
-#               i010.9.03 cryptography-41.0.7
-#               i030.9.04 oslo.serialization-5.5.0
-#               i030.9.02 oslo.utils-7.3.0
-#               i030.9.01 oslo.i18n-6.4.0
-#               i030.9.06 oslo.log-6.1.2
-#               i070.9.02 castellan-5.1.1
+#               ... Apache
 #
 
-#
-# Required by:
-#
-#               i153.3    Glance-29.0.0
-#
-
-export PKG="cursive-0.2.3"
-export PKGLOG_DIR=$OSLOG/075.01
+export PKG="mod_wsgi-5.0.2"
+export PKGLOG_DIR=$OSLOG/1.4.2
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+export SOURCES=`pwd`
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -55,7 +44,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                cursive                 \
+                mod-wsgi                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
@@ -64,8 +53,9 @@ pip3 install    --no-index              \
 # pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
+unset SOURCES
 unset OSLOG_PROCESS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_CHECK

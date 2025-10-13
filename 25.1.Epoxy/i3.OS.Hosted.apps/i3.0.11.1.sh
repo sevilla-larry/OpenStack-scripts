@@ -1,4 +1,4 @@
-# i3.0.11.1.1.sh
+# i3.0.11.1.sh
 #
 # Python OpenStack Hosted apps
 #

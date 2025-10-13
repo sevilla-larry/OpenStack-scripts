@@ -12,6 +12,20 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
+echo "i5.04.python-barbicanclient-7.1.0"
+echo "i5.04.python-barbicanclient-7.1.0" >> $OSLOG_PROCESS
+
+time { bash i5.04.python-barbicanclient-7.1.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 echo "i5.07.python-cinderclient-9.7.0"
 echo "i5.07.python-cinderclient-9.7.0" >> $OSLOG_PROCESS
 

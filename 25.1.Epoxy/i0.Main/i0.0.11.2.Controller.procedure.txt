@@ -174,7 +174,7 @@ C.  Support Applications - Major
 
         # Python OpenStack Client
         # MariaDB, Apache, RabbitMQ, MemCacheD, EtcD
-        bash i0.3.11.sh
+        bash i0.4.11.sh
 
         ###
 
@@ -413,7 +413,7 @@ H.  KeyStone - Identity service
 
         ###
 
-        bash i6.16.sh      # KeyStone
+        bash i6.16.0.sh      # KeyStone
 
         ###
 
@@ -732,7 +732,7 @@ K.  Glance - Image Service
 
         ###
 
-        bash i153.1.sh      # Glance
+        bash i6.12.0.sh      # Glance
 
         ###
 

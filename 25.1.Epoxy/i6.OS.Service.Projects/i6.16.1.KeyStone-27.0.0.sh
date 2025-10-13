@@ -111,7 +111,7 @@ export APACHE_CONF_DIR=/etc/httpd
 export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
 export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
 
-export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES/i6.16.KeyStone.conf.for.Apache.txt
+export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES/i6.16.2.KeyStone.conf.for.Apache.txt
 export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone.conf
 
 cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \
