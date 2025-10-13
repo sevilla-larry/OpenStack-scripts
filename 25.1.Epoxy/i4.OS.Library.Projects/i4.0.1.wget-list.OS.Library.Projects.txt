@@ -41,6 +41,9 @@ https://tarballs.opendev.org/openstack/oslo.db/oslo_db-17.2.1.tar.gz
 # i4.1.36 oslo_i18n-6.5.1
 https://tarballs.opendev.org/openstack/oslo.i18n/oslo_i18n-6.5.1.tar.gz
 
+# i4.1.37 oslo_limit-2.6.1
+https://tarballs.opendev.org/openstack/oslo.limit/oslo_limit-2.6.1.tar.gz
+
 # i4.1.38 oslo_log-7.1.0
 https://tarballs.opendev.org/openstack/oslo.log/oslo_log-7.1.0.tar.gz
 
@@ -55,6 +58,9 @@ https://tarballs.opendev.org/openstack/oslo.middleware/oslo_middleware-6.3.1.tar
 
 # i4.1.42 oslo_policy-4.5.1
 https://tarballs.opendev.org/openstack/oslo.policy/oslo_policy-4.5.1.tar.gz
+
+# i4.1.44 oslo_reports-3.5.1
+https://tarballs.opendev.org/openstack/oslo.reports/oslo_reports-3.5.1.tar.gz
 
 # i4.1.46 oslo_serialization-5.7.0
 https://tarballs.opendev.org/openstack/oslo.serialization/oslo_serialization-5.7.0.tar.gz

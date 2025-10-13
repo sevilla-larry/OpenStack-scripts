@@ -105,6 +105,24 @@ echo "."
 
 ###
 
+##    i4.2.36.oslo.limit-2.6.1
+##      depends on
+##    i4.2.14.openstacksdk-4.4.0
+
+echo "i4.2.36.oslo.limit-2.6.1"
+echo "i4.2.36.oslo.limit-2.6.1" >> $OSLOG_PROCESS
+
+time { bash i4.2.36.oslo.limit-2.6.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 ##    i4.2.07.keystonemiddleware-10.9.0
 ##      depends on
 ##    i4.2.31.oslo.cache-3.10.2

@@ -231,6 +231,29 @@ echo "."
 
 ###
 
+##    i4.1.44.oslo.reports-3.5.1
+##      depends on
+##    i4.1.46.oslo.serialization-5.7.0
+##    i4.1.49.oslo.utils-8.2.0
+
+echo "i4.1.44.oslo.reports-3.5.1"
+echo "i4.1.44.oslo.reports-3.5.1" >> $OSLOG_PROCESS
+
+time { bash i4.1.44.oslo.reports-3.5.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+##    i4.1.47.oslo.service-4.1.1
+##      depends on
+##    i4.1.49.oslo.utils-8.2.0
+
 echo "i4.1.47.oslo.service-4.1.1"
 echo "i4.1.47.oslo.service-4.1.1" >> $OSLOG_PROCESS
 
@@ -249,6 +272,7 @@ echo "."
 ##      depends on
 ##    i4.1.49.oslo.utils-8.2.0
 ##    i4.1.46.oslo.serialization-5.7.0
+##    i4.1.47.oslo.service-4.1.1
 
 echo "i4.1.39.oslo.messaging-16.1.0"
 echo "i4.1.39.oslo.messaging-16.1.0" >> $OSLOG_PROCESS
