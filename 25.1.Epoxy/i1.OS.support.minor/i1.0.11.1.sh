@@ -882,6 +882,62 @@ echo "."
 
 ###
 
+echo "i1.1.65.simplegeneric-0.8.1"
+echo "i1.1.65.simplegeneric-0.8.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.65.simplegeneric-0.8.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.66.zipp-3.15.0"
+echo "i1.1.66.zipp-3.15.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.66.zipp-3.15.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.67.importlib_metadata-6.8.0"
+echo "i1.1.67.importlib_metadata-6.8.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.67.importlib_metadata-6.8.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.68.WSME-0.12.1"
+echo "i1.1.68.WSME-0.12.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.68.WSME-0.12.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i010.9.25.warlock-2.0.1"
 # echo "i010.9.25.warlock-2.0.1" >> $OSLOG_PROCESS
 
