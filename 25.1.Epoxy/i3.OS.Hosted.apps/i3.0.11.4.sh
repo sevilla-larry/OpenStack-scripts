@@ -17,10 +17,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i3.4.1.etcd-3.1.10"
-echo "i3.4.1.etcd-3.1.10" >> $OSLOG_PROCESS
+echo "i3.4.1.etcd-3.1.10 bin"
+echo "i3.4.1.etcd-3.1.10 bin" >> $OSLOG_PROCESS
 
-time { bash i3.4.1.etcd-3.1.10.sh ; }
+time { bash i3.4.1.etcd-3.1.10.bin.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

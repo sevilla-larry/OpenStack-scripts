@@ -36,20 +36,6 @@ echo "." >> $LFSLOG_PROCESS
 echo "."
 echo "."
 
-###
-
-echo "i152.6.osc-placement-4.5.0"
-echo "i152.6.osc-placement-4.5.0" >> $LFSLOG_PROCESS
-
-time { bash i152.6.osc-placement-4.5.0.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
-
-echo "." >> $LFSLOG_PROCESS
-echo "."
-echo "."
-
 #####
 
 unset LFSLOG_PROCESS

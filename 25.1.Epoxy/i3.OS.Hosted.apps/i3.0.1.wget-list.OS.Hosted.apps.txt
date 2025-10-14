@@ -19,12 +19,14 @@ https://tarballs.opendev.org/openstack/futurist/futurist-3.0.0.tar.gz
 # i3.1.06 automaton-3.2.0
 https://tarballs.opendev.org/openstack/automaton/automaton-3.2.0.tar.gz
 
+# i3.1.07 os-resource-classes-1.1.0
+https://tarballs.opendev.org/openstack/os-resource-classes/os-resource-classes-1.1.0.tar.gz
 
-# Note: OpenStack - tarballs - 3.1.10
-# i3.1.11 etcd-v3.1.10 (from OpenStack site amd64 binary/sources )
-https://tarballs.opendev.org/openstack/etcd/v3.1.10/etcd-v3.1.10-linux-amd64.tar.gz
-# i3.1.11 etcd-v3.6.5  (generic unix binary)
-# https://github.com/etcd-io/etcd/releases/download/v3.6.5/etcd-v3.6.5-linux-amd64.tar.gz
+# i3.1.08 os-traits-3.4.0
+https://tarballs.opendev.org/openstack/os-traits/os_traits-3.4.0.tar.gz
+
+# i3.1.09 microversion_parse-2.0.0
+https://tarballs.opendev.org/openstack/microversion-parse/microversion_parse-2.0.0.tar.gz
 
 
 # i3.2.01 pycadf-4.0.1
@@ -32,3 +34,10 @@ https://tarballs.opendev.org/openstack/pycadf/pycadf-4.0.1.tar.gz
 
 # i3.2.02 osprofiler-4.2.0
 https://tarballs.opendev.org/openstack/osprofiler/osprofiler-4.2.0.tar.gz
+
+
+# Note: OpenStack - tarballs - 3.1.10
+# i3.1.11 etcd-v3.1.10 (from OpenStack site amd64 binary/sources )
+https://tarballs.opendev.org/openstack/etcd/v3.1.10/etcd-v3.1.10-linux-amd64.tar.gz
+# i3.1.11 etcd-v3.6.5  (generic unix binary)
+# https://github.com/etcd-io/etcd/releases/download/v3.6.5/etcd-v3.6.5-linux-amd64.tar.gz

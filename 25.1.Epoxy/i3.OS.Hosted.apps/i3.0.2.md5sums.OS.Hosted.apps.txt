@@ -19,12 +19,14 @@ cd171597ea297afc0ef98b2f8b96081b futurist-3.0.0.tar.gz
 # i3.1.06 automaton-3.2.0
 dff4ce67805e3b601439919d995f03e0 automaton-3.2.0.tar.gz
 
+# i3.1.07 os-resource-classes-1.1.0
+3d9a25ddcd68b5d1fdec0981271b896e os-resource-classes-1.1.0.tar.gz
 
-# Note: OpenStack - tarballs - 3.1.10
-# i3.1.11 etcd-v3.1.10            (from OpenStack site amd64 binary/sources )
-19465352ad5ad02ff4b2b9eb5857205e etcd-v3.1.10-linux-amd64.tar.gz
-# i3.1.11 etcd-v3.6.5             (generic unix binary)
-#                                etcd-v3.6.5-linux-amd64.tar.gz
+# i3.1.08 os-traits-3.4.0
+a117096140bebf95dc03825c535ed101 os_traits-3.4.0.tar.gz
+
+# i3.1.09 microversion_parse-2.0.0
+9037af30e555f95c2083bdbb7a0e92cf microversion_parse-2.0.0.tar.gz
 
 
 # i3.2.01 pycadf-4.0.1
@@ -32,3 +34,10 @@ dff4ce67805e3b601439919d995f03e0 automaton-3.2.0.tar.gz
 
 # i3.2.02 osprofiler-4.2.0
 e1e6db90f3bdc3ea36761777b1e3e049 osprofiler-4.2.0.tar.gz
+
+
+# Note: OpenStack - tarballs - 3.1.10
+# i3.4.1 etcd-v3.1.10            (from OpenStack site amd64 binary/sources )
+19465352ad5ad02ff4b2b9eb5857205e etcd-v3.1.10-linux-amd64.tar.gz
+# i3.4.1 etcd-v3.6.5             (generic unix binary)
+#                                etcd-v3.6.5-linux-amd64.tar.gz

@@ -7,27 +7,26 @@
 #
 # Dependencies Required:
 #
-#               i020.9.01 pbr-6.1.0
-#               i060.9.19 sqlalchemy-2.0.37
-#               i090.9.02 keystonemiddleware-10.7.1
-#               i060.9.08 Routes-2.5.1
-#               i060.9.02 WebOb-1.8.7
-#               i010.9.24 jsonschema-4.23.0
-#               b30.13.23.30 Requests-2.32.3
-#               a.08.55   Setuptools-72.2.0.sh
-#               i080.9.02 oslo.concurrency-6.1.0
-#               i030.9.03 oslo.config-9.6.0
-#               i030.9.05 oslo.context-5.6.0
-#               i030.9.06 oslo.log-6.1.2
-#               i030.9.04 oslo.serialization-5.5.0
-#               i030.9.02 oslo.utils-7.3.0
-#               i080.9.07 oslo.db-16.0.0
-#               i080.9.08 oslo.policy-4.4.0
-#               i080.9.04 oslo.middleware-6.2.0
-#               i080.9.09 oslo.upgradecheck-2.4.0
-#               i090.9.08 os-resource-classes-1.1.0
-#               i090.9.09 os-traits-3.1.0
-#               i090.9.10 microversion-parse-2.0.0
+#               i3.1.01      pbr-6.1.1
+#               i1.1.30      SQLAlchemy-2.0.43
+#               i4.2.07      keystonemiddleware-10.9.0
+#               i1.1.40      Routes-2.5.1
+#               i1.1.21      WebOb-1.8.9
+#               i1.1.59      jsonschema-4.23.0
+#               b30.13.24.30 Requests-2.32.5
+#               i4.1.32      oslo.concurrency-7.1.0
+#               i4.1.33      oslo.config-9.7.1
+#               i4.1.34      oslo.context-5.7.1
+#               i4.1.38      oslo.log-7.1.0
+#               i4.1.46      oslo.serialization-5.7.0
+#               i4.1.49      oslo.utils-8.2.0
+#               i4.2.35      oslo.db-17.2.1
+#               i4.1.42      oslo.policy-4.5.1
+#               i4.1.41      oslo.middleware-6.3.1
+#               i4.1.48      oslo.upgradecheck-2.5.0
+#               i3.1.07      os-resource-classes-1.1.0
+#               i3.1.08      os-traits-3.4.0
+#               i3.1.09      microversion-parse-2.0.0
 #
 
 export PKG="openstack_placement-13.0.0"

@@ -1,23 +1,27 @@
-# i152.6.osc-placement-4.5.0.sh
+# i3.1.07.os-resource-classes-1.1.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i020.9.01 pbr-6.1.0
-#               i020.9.04 keystoneauth1-5.8.0
-#               i040.9.03 osc-lib-3.1.0
-#               i030.9.02 oslo.utils-7.3.0
+#               i3.1.01 pbr-6.1.1
 #
 
-export PKG="osc-placement-4.5.0"
-export PKGLOG_DIR=$OSLOG/152.3
+#
+# Required by:
+#
+#               i6.24 Openstack-Placement-13.0.0
+#
+
+export PKG="os-resource-classes-1.1.0"
+export PKGLOG_DIR=$OSLOG/3.1.07
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+export SOURCES=`pwd`
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -46,7 +50,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                osc-placement           \
+                os-resource-classes     \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
@@ -55,8 +59,9 @@ pip3 install    --no-index              \
 # pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
+unset SOURCES
 unset OSLOG_PROCESS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_CHECK

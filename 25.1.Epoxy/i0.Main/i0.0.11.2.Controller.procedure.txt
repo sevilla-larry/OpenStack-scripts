@@ -359,6 +359,7 @@ G.  OpenStack Services Support Apps
         echo $NPROC           # $(nproc)
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
+        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 
         echo $CFLAGS
         echo $CXXFLAGS
@@ -713,12 +714,16 @@ K.  Glance - Image Service
         export CXXFLAGS=$CFLAGS
         export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
 
+        pathprepend /usr/local/bin  PATH
+        pathprepend /usr/local/sbin PATH
+
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
+        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 
         echo $CFLAGS
         echo $CXXFLAGS
@@ -1029,12 +1034,16 @@ L.  Placement - Placement Service
         export CXXFLAGS=$CFLAGS
         export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
 
+        pathprepend /usr/local/bin  PATH
+        pathprepend /usr/local/sbin PATH
+
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
+        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 
         echo $CFLAGS
         echo $CXXFLAGS
@@ -1048,7 +1057,7 @@ L.  Placement - Placement Service
 
         ###
 
-        bash i152.1.sh      # Placement
+        bash i6.24.0.sh       # Placement
 
         ###
 
@@ -1223,12 +1232,33 @@ M.  Nova - Compute Service
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
 
+        ###
+        # for VBs
+        #
+        export CFLAGS="-O2 -march=nehalem -mtune=generic -pipe -fomit-frame-pointer -msse4.2"
+        #
+        ###
+        # for VMs
+        #   and
+        # for PCs
+        #
+        export CFLAGS="-O2 -march=native -mtune=native -pipe -fomit-frame-pointer -mavx2 -mfma"
+        #
+        ###
+
+        export CXXFLAGS=$CFLAGS
+        export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
+
+        pathprepend /usr/local/bin  PATH
+        pathprepend /usr/local/sbin PATH
+
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
+        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 
         echo $SHELL           # /bin/bash
         ls -l /bin/sh         # bash

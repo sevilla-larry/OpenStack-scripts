@@ -1,4 +1,4 @@
-# i3.4.1.etcd-3.1.10.sh (binary Install)
+# i3.4.1.etcd-3.1.10.bin.sh (binary Install)
 #
 # https://docs.openstack.org/install-guide/environment-etcd.html
 #

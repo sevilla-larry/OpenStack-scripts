@@ -63,7 +63,7 @@ i4.51.oslo.vmware
 
 
 i5 OS Service Client Projects
-i5.01.osc-placement
+*i5.01.osc-placement
 i5.02.python-adjutantclient
 i5.03.python-aodhclient
 *i5.04.python-barbicanclient
