@@ -15,6 +15,7 @@
 #               i1.2.05 testscenarios-0.5.0
 #               i1.3.01 cursive-0.2.3
 #               i3.1.02 os-service-types-1.7.0
+#               i3.1.06 automaton-3.2.0
 #               i4.1.06 keystoneauth1-5.10.0
 #               i4.2.01 castellan-5.2.1
 #               i4.2.07 keystonemiddleware-10.9.0
@@ -41,7 +42,6 @@
 #               i?.?? python-neutronclient-11.3.1
 #               i?.?? oslo.db-16.0.0
 #               i?.?? oslo.reports-3.4.0
-#               i?.?? automaton-3.2.0
 #               i?.?? os-win-5.9.0
 #               i?.?? os-resource-classes-1.1.0
 #               i?.?? os-traits-3.1.0

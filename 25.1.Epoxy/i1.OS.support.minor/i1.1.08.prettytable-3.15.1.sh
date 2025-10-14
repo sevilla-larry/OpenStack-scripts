@@ -10,13 +10,13 @@
 #
 # Required by:
 #
+#               i3.1.06 automaton-3.2.0
 #               i3.2.02 osprofiler-4.2.0
 #               i4.1.03 cliff-4.9.1
 #               i4.1.48 oslo.upgradecheck-2.5.0
 #               i5.07   python-cinderclient-9.7.0
 #               i6.12   Glance-30.0.0
 #               i?.??   python-glanceclient-4.7.0
-#               i?.??   automaton-3.2.0
 #               i?.??   Nova-30.0.0
 #
 
