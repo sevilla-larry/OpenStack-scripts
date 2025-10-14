@@ -18,7 +18,7 @@
 #
 
 export PKG="WSME-0.12.1"
-export PKGLOG_DIR=$OSLOG/1.1.66
+export PKGLOG_DIR=$OSLOG/1.1.68
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

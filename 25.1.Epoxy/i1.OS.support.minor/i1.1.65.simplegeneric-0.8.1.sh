@@ -20,9 +20,9 @@ export SOURCES=`pwd`
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
 
-echo "1. Extract tar..."
-echo "1. Extract tar..." >> $OSLOG_PROCESS
-echo "1. Extract tar..." >> $PKGLOG_ERROR
+echo "1. Extract zip..."
+echo "1. Extract zip..." >> $OSLOG_PROCESS
+echo "1. Extract zip..." >> $PKGLOG_ERROR
 unzip $PKG.zip > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 

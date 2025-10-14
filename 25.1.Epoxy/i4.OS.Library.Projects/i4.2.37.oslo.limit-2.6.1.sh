@@ -1,4 +1,4 @@
-# i4.2.36.oslo.limit-2.6.1.sh
+# i4.2.37.oslo.limit-2.6.1.sh
 #
 
 #
@@ -18,7 +18,7 @@
 #
 
 export PKG="oslo_limit-2.6.1"
-export PKGLOG_DIR=$OSLOG/4.2.36
+export PKGLOG_DIR=$OSLOG/4.2.37
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

@@ -19,7 +19,7 @@
 #               i4.2.01 castellan-5.2.1
 #
 
-export PKG="python-barbicanclient-7.1.0"
+export PKG="python_barbicanclient-7.1.0"
 export PKGLOG_DIR=$OSLOG/5.04
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
