@@ -15,7 +15,7 @@
 #
 
 export PKG="automaton-3.2.0"
-export PKGLOG_DIR=$OSLOG/090.04
+export PKGLOG_DIR=$OSLOG/3.1.06
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
