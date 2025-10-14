@@ -40,6 +40,20 @@ echo "."
 
 ###
 
+echo "i5.12.python-glanceclient-4.8.0"
+echo "i5.12.python-glanceclient-4.8.0" >> $OSLOG_PROCESS
+
+time { bash i5.12.python-glanceclient-4.8.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 echo "i5.16.python-keystoneclient-5.6.0"
 echo "i5.16.python-keystoneclient-5.6.0" >> $OSLOG_PROCESS
 

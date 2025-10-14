@@ -74,7 +74,7 @@ i5.08.python-cloudkittyclient
 i5.09.python-cyborgclient
 i5.10.python-designateclient
 i5.11.python-freezerclient
-i5.12.python-glanceclient
+*i5.12.python-glanceclient
 i5.13.python-heatclient
 i5.14.python-ironic-inspector-client
 i5.15.python-ironicclient
@@ -120,7 +120,7 @@ i6.20.mistral
 i6.21.neutron
 i6.22.nova
 i6.23.octavia
-i6.24.placement
+*i6.24.placement
 i6.25.skyline-apiserver
 i6.26.skyline-console
 i6.27.storlets

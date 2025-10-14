@@ -952,19 +952,19 @@ echo "."
 
 ###
 
-# echo "i010.9.25.warlock-2.0.1"
-# echo "i010.9.25.warlock-2.0.1" >> $OSLOG_PROCESS
+echo "i1.1.70.warlock-2.0.1.whl"
+echo "i1.1.70.warlock-2.0.1.whl" >> $OSLOG_PROCESS
 
-# time { bash i010.9.25.warlock-2.0.1.sh ; }
+time { bash i1.1.70.warlock-2.0.1.whl.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
 
-# ###
+###
 
 # echo "i1.1.14.netifaces-0.11.0"
 # echo "i1.1.14.netifaces-0.11.0" >> $OSLOG_PROCESS

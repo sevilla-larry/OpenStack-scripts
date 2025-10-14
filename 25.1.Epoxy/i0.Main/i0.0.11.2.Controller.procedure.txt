@@ -192,7 +192,7 @@ D.  Support Apps - Major - Configuration 1
 
         mkdir -v /etc/mariadb/mariadb.conf.d
 
-        ### add/create file nano /etc/mariadb/mariadb.conf.d/99-openstack.cnf
+        ### add/create file: nano /etc/mariadb/mariadb.conf.d/99-openstack.cnf
 
         [mysqld]
         bind-address = 10.0.0.11
@@ -738,7 +738,7 @@ K.  Glance - Image Service
 
     K.04. Glance configuration
 
-        ### edit /etc/glance/glance-api.conf
+        ### edit nano /etc/glance/glance-api.conf
 
         [database]
       # connection = mysql+pymysql://glance:GLANCE_DBPASS@controller/glance
@@ -816,7 +816,7 @@ K.  Glance - Image Service
         ### end /etc/glance/glance-api.conf
 
         ### Glance Configuration
-        # https://docs.openstack.org/glance/2024.2/configuration/index.html
+        # https://docs.openstack.org/glance/2025.1/configuration/index.html
 
     K.05. Endpoint list and reader access
 
@@ -852,15 +852,15 @@ K.  Glance - Image Service
         lsof -i:9292
 
             COMMAND    PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance 3u  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
 
         curl -i http://controller:9292
 
@@ -950,8 +950,8 @@ L.  Placement - Placement Service
 
         ###
 
-        mysql
-        # or # mariadb
+        mariadb
+        # or # mysql
 
         ### display:
         #
@@ -1012,12 +1012,33 @@ L.  Placement - Placement Service
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
 
+        ###
+        # for VBs
+        #
+        export CFLAGS="-O2 -march=nehalem -mtune=generic -pipe -fomit-frame-pointer -msse4.2"
+        #
+        ###
+        # for VMs
+        #   and
+        # for PCs
+        #
+        export CFLAGS="-O2 -march=native -mtune=native -pipe -fomit-frame-pointer -mavx2 -mfma"
+        #
+        ###
+
+        export CXXFLAGS=$CFLAGS
+        export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
+
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
+
+        echo $CFLAGS
+        echo $CXXFLAGS
+        echo $LDFLAGS
 
         echo $SHELL           # /bin/bash
         ls -l /bin/sh         # bash

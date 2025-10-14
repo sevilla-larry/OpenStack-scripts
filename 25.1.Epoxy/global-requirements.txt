@@ -167,7 +167,7 @@ i1.1.47.statsd-4.0.1                    statsd  # MIT
                                         uhashring  # BSD
                                         urllib3  # MIT
                                         voluptuous  # BSD License
-                                        warlock  # Apache-2.0
+i1.1.70.warlock-2.0.1.whl               warlock  # Apache-2.0
 i1.1.21.WebOb-1.8.9                     WebOb  # MIT
                                         websocket-client  # LGPLv2+
                                         websockify  # LGPLv3
@@ -407,7 +407,7 @@ i5.07.python-cinderclient-9.7.0         python-cinderclient!=4.0.0  # Apache-2.0
                                         python-cyborgclient  # Apache-2.0
                                         python-designateclient  # Apache-2.0
                                         python-freezerclient  # Apache-2.0
-                                        python-glanceclient  # Apache-2.0
+i5.12.python-glanceclient-4.8.0         python-glanceclient  # Apache-2.0
                                         python-heatclient  # Apache-2.0
                                         python-ironic-inspector-client  # Apache-2.0
                                         python-ironicclient!=2.5.2,!=2.7.1,!=3.0.0  # Apache-2.0
