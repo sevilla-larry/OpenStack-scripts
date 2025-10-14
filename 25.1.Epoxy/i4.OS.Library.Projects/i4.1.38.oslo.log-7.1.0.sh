@@ -21,13 +21,13 @@
 #               i4.2.01 castellan-5.2.1
 #               i4.2.07 keystonemiddleware-10.9.0
 #               i4.2.31 oslo.cache-3.10.0
+#               i4.2.36 oslo.limit-2.6.1
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.40 oslo.metrics-0.11.0
 #               i4.1.47 oslo.service-4.1.1
 #               i6.12   Glance-30.0.0
 #               i6.16   KeyStone-27.0.0
 #               i040.9.15 python-neutronclient-11.3.1
-#               i080.9.10 oslo.limit-2.5.0
 #               i080.9.13 oslo.privsep-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i090.9.07 os-win-5.9.0

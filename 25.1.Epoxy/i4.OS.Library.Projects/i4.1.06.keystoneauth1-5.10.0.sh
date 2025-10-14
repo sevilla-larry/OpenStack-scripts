@@ -20,13 +20,13 @@
 #               i4.2.07 keystonemiddleware-10.9.0
 #               i4.2.14 openstacksdk-4.4.0
 #               i4.2.18 osc-lib-3.2.0
+#               i4.2.36 oslo.limit-2.6.1
 #               i5.07   python-cinderclient-9.7.0
 #               i5.16   python-keystoneclient-5.6.0
 #               i6.12   Glance-30.0.0
 #               i?.??   python-glanceclient-4.7.0
 #               i?.??   python-barbicanclient-7.0.0
 #               i?.??   python-neutronclient-11.3.1
-#               i?.??   oslo.limit-2.5.0
 #
 
 export PKG="keystoneauth1-5.10.0"

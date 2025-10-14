@@ -7,7 +7,7 @@
 #               i3.1.01      pbr-6.1.1
 #               a.08.75      Jinja2-3.1.6
 #               i4.1.46      oslo.serialization-5.7.0
-#               b30.13.24.17 psutil-7.0.0
+#               b10.13.24.17 psutil-7.0.0
 #               i4.1.36      oslo.i18n-6.5.1
 #               i4.1.49      oslo.utils-8.2.0
 #               i4.1.33      oslo.config-9.7.1

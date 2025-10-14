@@ -19,9 +19,11 @@
 #               i4.1.32 oslo.concurrency-7.1.0
 #               i4.1.33 oslo.config-9.7.1
 #               i4.2.35 oslo.db-17.2.1
+#               i4.2.36 oslo.limit-2.6.1
 #               i4.1.38 oslo.log-7.1.0
 #               i4.1.41 oslo.middleware-6.3.1
 #               i4.1.42 oslo.policy-4.5.1
+#               i4.1.44 oslo.reports-3.5.1
 #               i4.1.47 oslo.service-4.1.1
 #               i4.1.48 oslo.upgradecheck-2.5.0
 #               i4.1.49 oslo.utils-8.2.0
@@ -34,8 +36,6 @@
 #               i?.??   python-barbicanclient-7.0.0
 #               i?.??   python-neutronclient-11.3.1
 #               i?.??   oslo.messaging-14.9.1
-#               i?.??   oslo.limit-2.5.0
-#               i?.??   oslo.reports-3.4.0
 #               i?.??   oslo.privsep-3.4.0
 #               i?.??   oslo.versionedobjects-3.4.0
 #               i?.??   os-win-5.9.0

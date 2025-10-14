@@ -36,6 +36,7 @@
 #               i4.1.40 oslo.metrics-0.11.0
 #               i4.1.41 oslo.middleware-6.3.1
 #               i4.1.42 oslo.policy-4.5.1
+#               i4.1.44 oslo.reports-3.5.1
 #               i4.1.46 oslo.serialization-5.7.0
 #               i4.1.47 oslo.service-4.1.1
 #               i4.1.48 oslo.upgradecheck-2.5.0
@@ -46,7 +47,6 @@
 #               i040.9.13 python-glanceclient-4.7.0
 #               i040.9.14 python-barbicanclient-7.0.0
 #               i040.9.15 python-neutronclient-11.3.1
-#               i080.9.11 oslo.reports-3.4.0
 #               i080.9.13 oslo.privsep-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i090.9.07 os-win-5.9.0

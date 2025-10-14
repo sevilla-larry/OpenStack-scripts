@@ -8,7 +8,7 @@
 #               i4.1.33 oslo.config-9.7.1
 #               i4.1.36 oslo.i18n-6.5.1
 #               i4.1.38 oslo.log-7.1.0
-#               i4.1.19 oslo.utils-8.2.0
+#               i4.1.49 oslo.utils-8.2.0
 #               i3.1.04 debtcollector-3.0.0
 #
 

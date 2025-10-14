@@ -6,8 +6,8 @@
 #
 #               i1.1.68 WSME-0.12.1
 #               i3.2.02 osprofiler-4.2.0
-#               i4.1.49 oslo.utils-8.2.0
 #               i4.1.33 oslo.config-9.7.1
+#               i4.1.49 oslo.utils-8.2.0
 #               i?.??   oslo.versionedobjects-3.4.0
 #               i?.??   ovsdbapp-2.8.0
 #               i?.??   python-neutronclient-11.3.1

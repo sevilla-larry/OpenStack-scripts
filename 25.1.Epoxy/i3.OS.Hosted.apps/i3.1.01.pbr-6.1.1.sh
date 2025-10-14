@@ -16,8 +16,8 @@
 #               i1.3.01 cursive-0.2.3
 #               i3.1.02 os-service-types-1.7.0
 #               i3.1.06 automaton-3.2.0
-#               i4.1.06 keystoneauth1-5.10.0
 #               i4.2.01 castellan-5.2.1
+#               i4.1.06 keystoneauth1-5.10.0
 #               i4.2.07 keystonemiddleware-10.9.0
 #               i4.2.14 openstacksdk-4.4.0
 #               i4.2.18 osc-lib-3.2.0
@@ -30,6 +30,7 @@
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.40 oslo.metrics-0.11.0
 #               i4.1.41 oslo.middleware-6.3.1
+#               i4.1.44 oslo.reports-3.5.1
 #               i4.1.46 oslo.serialization-5.7.0
 #               i4.1.49 oslo.utils-8.2.0
 #               i5.07   python-cinderclient-9.7.0
@@ -40,8 +41,6 @@
 #               i?.?? python-glanceclient-4.7.0
 #               i?.?? python-barbicanclient-7.0.0
 #               i?.?? python-neutronclient-11.3.1
-#               i?.?? oslo.db-16.0.0
-#               i?.?? oslo.reports-3.4.0
 #               i?.?? os-win-5.9.0
 #               i?.?? os-resource-classes-1.1.0
 #               i?.?? os-traits-3.1.0
