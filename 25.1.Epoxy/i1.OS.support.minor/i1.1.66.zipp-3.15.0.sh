@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i1.167 importlib_metadata-6.8.0
+#               i1.1.67 importlib_metadata-6.8.0
 #
 
 export PKG="zipp-3.15.0"

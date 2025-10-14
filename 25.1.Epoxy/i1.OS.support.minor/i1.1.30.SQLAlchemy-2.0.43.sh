@@ -12,8 +12,8 @@
 #
 #               i1.1.49 alembic-1.14.1
 #               i4.2.35 oslo.db-17.2.1
-#               i6.16   KeyStone-27.0.0
 #               i6.12   Glance-30.0.0
+#               i6.16   KeyStone-27.0.0
 #               i152.3    Openstack-Placement-12.0.0
 #
 

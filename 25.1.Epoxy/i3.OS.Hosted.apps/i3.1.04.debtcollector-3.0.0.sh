@@ -10,6 +10,7 @@
 #
 # Required by:
 #
+#               i4.2.22 taskflow-5.12.0
 #               i4.2.31 oslo.cache-3.10.0
 #               i4.1.32 oslo.concurrency-7.1.0
 #               i4.1.33 oslo.config-9.7.1

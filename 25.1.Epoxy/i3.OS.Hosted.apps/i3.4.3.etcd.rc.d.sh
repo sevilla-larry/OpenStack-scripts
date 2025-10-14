@@ -1,6 +1,6 @@
-# i3.1.13.etcd.rc.d.sh
+# i3.4.3.etcd.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/3.1.13
+export PKGLOG_DIR=$OSLOG/3.4.3
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,7 +16,7 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i3.1.14.etcd.init.d.sh
+INITDFILESRC=$CURRDIR/i3.4.4.etcd.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/etcd
 INITDFILEREL=../init.d/etcd
 

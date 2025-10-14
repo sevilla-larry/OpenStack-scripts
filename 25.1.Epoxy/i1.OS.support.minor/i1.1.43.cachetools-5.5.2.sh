@@ -5,7 +5,7 @@
 # Required by:
 #
 #               i4.1.39 oslo.messaging-16.1.0
-#               i090.9.05 taskflow-5.9.1
+#               i4.2.22 taskflow-5.12.0
 #
 
 export PKG="cachetools-5.5.2"

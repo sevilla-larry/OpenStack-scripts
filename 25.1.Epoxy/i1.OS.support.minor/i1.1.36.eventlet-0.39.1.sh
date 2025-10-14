@@ -11,10 +11,10 @@
 #
 # Required by:
 #
+#               i4.2.04 glance_store-4.9.1
 #               i4.1.47 oslo.service-4.1.1
 #               i6.12   Glance-30.0.0
 #               i080.9.13 oslo.privsep-3.4.0
-#               i090.9.06 glance_store-4.8.1
 #               i090.9.07 os-win-5.9.0
 #
 

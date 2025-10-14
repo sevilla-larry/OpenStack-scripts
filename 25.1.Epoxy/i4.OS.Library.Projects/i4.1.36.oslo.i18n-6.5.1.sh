@@ -10,6 +10,9 @@
 #
 # Required by:
 #
+#               i1.3.01 cursive-0.2.3
+#               i4.2.01 castellan-5.2.1
+#               i4.2.04 glance_store-4.9.1
 #               i4.2.07 keystonemiddleware-10.9.0
 #               i4.2.18 osc-lib-3.2.0
 #               i4.2.31 oslo.cache-3.10.0
@@ -35,9 +38,6 @@
 #               i?.??   oslo.reports-3.4.0
 #               i?.??   oslo.privsep-3.4.0
 #               i?.??   oslo.versionedobjects-3.4.0
-#               i?.??   castellan-5.1.1
-#               i?.??   cursive-0.2.3
-#               i?.??   glance_store-4.8.1
 #               i?.??   os-win-5.9.0
 #               i?.??   os_brick-6.9.1
 #               i?.??   os_vif-3.7.0

@@ -13,11 +13,11 @@
 #
 # Required by:
 #
-#               i6.12 Glance-30.0.0
-#               i6.16 KeyStone-27.0.0
+#               i4.2.04 glance_store-4.9.1
+#               i4.2.22 taskflow-5.12.0
+#               i6.12   Glance-30.0.0
+#               i6.16   KeyStone-27.0.0
 #               i010.9.25 warlock-2.0.1
-#               i090.9.05 taskflow-5.9.1
-#               i090.9.06 glance_store-4.8.1
 #               i152.3    Openstack-Placement-12.0.0
 #
 

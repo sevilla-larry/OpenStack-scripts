@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i1.1.66 WSME-0.12.1
+#               i1.1.68 WSME-0.12.1
 #
 
 export PKG="simplegeneric-0.8.1"

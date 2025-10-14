@@ -4,13 +4,13 @@
 #
 # Dependencies Required:
 #
-#               i095.9.17 zipp-3.20.2
+#               i1.1.66 zipp-3.15.0
 #
 
 #
 # Required by:
 #
-#               i095.9.19 WSME-0.12.1
+#               i1.1.68 WSME-0.12.1
 #
 
 export PKG="importlib_metadata-6.8.0"

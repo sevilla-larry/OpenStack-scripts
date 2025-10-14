@@ -17,6 +17,8 @@
 #
 # Required by:
 #
+#               i1.3.01 cursive-0.2.3
+#               i4.2.01 castellan-5.2.1
 #               i4.2.07 keystonemiddleware-10.9.0
 #               i4.2.31 oslo.cache-3.10.0
 #               i4.1.39 oslo.messaging-16.1.0
@@ -28,8 +30,6 @@
 #               i080.9.10 oslo.limit-2.5.0
 #               i080.9.13 oslo.privsep-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
-#               i070.9.02 castellan-5.1.1
-#               i075.9.01 cursive-0.2.3
 #               i090.9.07 os-win-5.9.0
 #               i090.9.11 os_brick-6.9.1
 #               i090.9.13 os_vif-3.7.0

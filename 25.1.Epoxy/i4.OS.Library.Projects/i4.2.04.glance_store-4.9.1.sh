@@ -1,4 +1,4 @@
-# i4.2.04.glance-store-4.9.1.sh
+# i4.2.04.glance_store-4.9.1.sh
 #
 
 #

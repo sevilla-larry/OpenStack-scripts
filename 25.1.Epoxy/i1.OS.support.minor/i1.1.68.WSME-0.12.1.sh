@@ -8,6 +8,7 @@
 #               i1.1.65       simplegeneric-0.8.1
 #               a.08.91.20.16 Pytz-2025.2
 #               i1.1.16       netaddr-1.3.0
+#               i1.1.67       importlib_metadata-6.8.0
 #
 
 #

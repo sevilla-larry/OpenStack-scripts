@@ -17,10 +17,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i3.1.11.etcd-3.1.10"
-echo "i3.1.11.etcd-3.1.10" >> $OSLOG_PROCESS
+echo "i3.4.1.etcd-3.1.10"
+echo "i3.4.1.etcd-3.1.10" >> $OSLOG_PROCESS
 
-time { bash i3.1.11.etcd-3.1.10.sh ; }
+time { bash i3.4.1.etcd-3.1.10.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -31,10 +31,10 @@ echo "."
 
 ###
 
-echo "i3.1.13.etcd.rc.d"
-echo "i3.1.13.etcd.rc.d" >> $OSLOG_PROCESS
+echo "i3.4.3.etcd.rc.d"
+echo "i3.4.3.etcd.rc.d" >> $OSLOG_PROCESS
 
-time { bash i3.1.13.etcd.rc.d.sh ; }
+time { bash i3.4.3.etcd.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

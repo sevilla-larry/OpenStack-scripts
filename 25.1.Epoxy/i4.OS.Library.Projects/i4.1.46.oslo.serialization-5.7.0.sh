@@ -12,9 +12,12 @@
 #
 # Required by:
 #
+#               i1.3.01 cursive-0.2.3
 #               i3.2.01 pycadf-4.0.1
 #               i3.2.02 osprofiler-4.2.0
+#               i4.2.04 glance_store-4.9.1
 #               i4.2.07 keystonemiddleware-10.9.0
+#               i4.2.22 taskflow-5.12.0
 #               i4.1.38 oslo.log-7.1.0
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.42 oslo.policy-4.5.1
@@ -24,9 +27,6 @@
 #               i040.9.15 python-neutronclient-11.3.1
 #               i080.9.11 oslo.reports-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
-#               i075.9.01 cursive-0.2.3
-#               i090.9.05 taskflow-5.9.1
-#               i090.9.06 glance_store-4.8.1
 #               i090.9.11 os_brick-6.9.1
 #               i090.9.13 os_vif-3.7.0
 #               i090.9.14 tooz-6.3.0
