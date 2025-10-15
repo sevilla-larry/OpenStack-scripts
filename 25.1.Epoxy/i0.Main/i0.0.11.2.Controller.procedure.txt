@@ -184,7 +184,8 @@ D.  Support Apps - Major - Configuration 1
 
         ##### as root
 
-        ### edit / nano /etc/mariadb/my.cnf, add:
+        nano /etc/mariadb/my.cnf
+        ### add to the lastline:
 
         !includedir /etc/mariadb/mariadb.conf.d/
 
@@ -192,7 +193,8 @@ D.  Support Apps - Major - Configuration 1
 
         mkdir -v /etc/mariadb/mariadb.conf.d
 
-        ### add/create file: nano /etc/mariadb/mariadb.conf.d/99-openstack.cnf
+        ### add/create file:
+        nano /etc/mariadb/mariadb.conf.d/99-openstack.cnf
 
         [mysqld]
         bind-address = 10.0.0.11
@@ -420,7 +422,8 @@ H.  KeyStone - Identity service
 
     H.03. KeyStone configuration
 
-        ### edit / nano /etc/keystone/keystone.conf
+        ### edit
+        nano /etc/keystone/keystone.conf
 
         [default]
         log_dir = /var/log/keystone
@@ -743,7 +746,8 @@ K.  Glance - Image Service
 
     K.04. Glance configuration
 
-        ### edit nano /etc/glance/glance-api.conf
+        ### edit
+        nano /etc/glance/glance-api.conf
 
         [database]
       # connection = mysql+pymysql://glance:GLANCE_DBPASS@controller/glance

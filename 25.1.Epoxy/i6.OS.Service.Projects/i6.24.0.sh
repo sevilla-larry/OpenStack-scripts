@@ -10,10 +10,10 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i152.3.Openstack-Placement-12.0.0"
-echo "i152.3.Openstack-Placement-12.0.0" >> $LFSLOG_PROCESS
+echo "i6.24.1.Openstack-Placement-13.0.0"
+echo "i6.24.1.Openstack-Placement-13.0.0" >> $LFSLOG_PROCESS
 
-time { bash i152.3.Openstack-Placement-12.0.0.sh ; }
+time { bash i6.24.1.Openstack-Placement-13.0.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
@@ -24,10 +24,10 @@ echo "."
 
 ###
 
-echo "i152.5.Placement-api.rc.d"
-echo "i152.5.Placement-api.rc.d" >> $LFSLOG_PROCESS
+echo "i6.24.2.Placement-api.rc.d"
+echo "i6.24.2.Placement-api.rc.d" >> $LFSLOG_PROCESS
 
-time { bash i152.5.Placement-api.rc.d.sh ; }
+time { bash i6.24.2.Placement-api.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
