@@ -1067,7 +1067,8 @@ L.  Placement - Placement Service
 
     L.04. Placement configuration
 
-        ### edit /etc/placement/placement.conf
+        ### edit
+        nano /etc/placement/placement.conf
 
         [placement_database]
       # connection = mysql+pymysql://placement:PLACEMENT_DBPASS@controller/placement
@@ -1169,8 +1170,8 @@ M.  Nova - Compute Service
 
         ###
 
-        mysql
-        # or # mariadb
+        mariadb
+        # or # mysql
 
         ### display:
         #
