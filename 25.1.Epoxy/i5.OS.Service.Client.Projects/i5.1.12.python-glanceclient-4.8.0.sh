@@ -15,7 +15,7 @@
 #               i1.1.52      pyOpenSSL-24.2.1
 #
 
-export PKG="python-glanceclient-4.8.0"
+export PKG="python_glanceclient-4.8.0"
 export PKGLOG_DIR=$OSLOG/5.1.12
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
