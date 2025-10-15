@@ -1,4 +1,4 @@
-# i4.2.07.keystonemiddleware-10.9.0.sh
+# i4.3.07.keystonemiddleware-10.9.0.sh
 #
 
 #
@@ -15,7 +15,7 @@
 #               i3.1.01      pbr-6.1.1
 #               i3.2.01      pycadf-4.0.1
 #               i1.1.32      PyJWT-2.10.1
-#               i5.16        python-keystoneclient-5.6.0
+#               i5.1.16      python-keystoneclient-5.6.0
 #               b30.13.24.30 Requests-2.32.5
 #               i1.1.21      WebOb-1.8.9
 #
@@ -23,13 +23,13 @@
 #
 # Required by:
 #
-#               i6.12 Glance-30.0.0
-#               i6.16 KeyStone-27.0.0
-#               i152.3    Openstack-Placement-12.0.0
+#               i6.12.1 Glance-30.0.0
+#               i6.16.1 KeyStone-27.0.0
+#               i6.24.1 Openstack-Placement-13.0.0
 #
 
 export PKG="keystonemiddleware-10.9.0"
-export PKGLOG_DIR=$OSLOG/4.2.07
+export PKGLOG_DIR=$OSLOG/4.3.07
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

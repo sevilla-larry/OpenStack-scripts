@@ -13,7 +13,7 @@
 #               i1.1.03      cryptography-43.0.3
 #               i1.1.30      SQLAlchemy-2.0.43
 #               i4.1.20      stevedore-5.4.1
-#               i5.16        python-keystoneclient-5.6.0
+#               i5.1.16      python-keystoneclient-5.6.0
 #               i4.2.07      keystonemiddleware-10.9.0
 #               i1.1.33      bcrypt-4.0.1
 #               i1.1.34      scrypt-0.8.29

@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i6.12 Glance-30.0.0
+#               i6.12.1 Glance-30.0.0
 #
 
 export PKG="httplib2-0.22.0"

@@ -20,11 +20,11 @@
 #               i3.2.02 osprofiler-4.2.0
 #               i4.2.01 castellan-5.2.1
 #               i4.2.04 glance_store-4.9.1
-#               i4.2.07 keystonemiddleware-10.9.0
+#               i4.3.07 keystonemiddleware-10.9.0
 #               i4.2.31 oslo.cache-3.10.0
 #               i4.1.32 oslo.concurrency-7.1.0
 #               i4.2.35 oslo.db-17.2.1
-#               i4.2.36 oslo.limit-2.6.1
+#               i4.2.37 oslo.limit-2.6.1
 #               i4.1.38 oslo.log-7.1.0
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.40 oslo.metrics-0.11.0
@@ -33,15 +33,15 @@
 #               i4.1.44 oslo.reports-3.5.1
 #               i4.1.47 oslo.service-4.1.1
 #               i4.1.48 oslo.upgradecheck-2.5.0
-#               i5.16   python-keystoneclient-5.6.0
-#               i6.12   Glance-30.0.0
-#               i6.16   KeyStone-27.0.0
+#               i5.1.16 python-keystoneclient-5.6.0
+#               i6.12.1 Glance-30.0.0
+#               i6.16.1 KeyStone-27.0.0
+#               i6.24.1 Openstack-Placement-13.0.0
 #               i080.9.13 oslo.privsep-3.4.0
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i090.9.07 os-win-5.9.0
 #               i090.9.11 os_brick-6.9.1
 #               i090.9.13 os_vif-3.7.0
-#               i152.3    Openstack-Placement-12.0.0
 #
 
 export PKG="oslo_config-9.7.1"

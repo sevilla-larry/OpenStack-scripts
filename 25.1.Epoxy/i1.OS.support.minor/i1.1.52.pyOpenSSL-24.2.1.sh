@@ -12,7 +12,7 @@
 # Required by:
 #
 #               i1.1.55 pysaml2-7.5.4 whl
-#               i030.9.13 python-glanceclient-4.7.0
+#               i5.1.12 python-glanceclient-4.8.0
 #
 
 export PKG="pyopenssl-24.2.1"

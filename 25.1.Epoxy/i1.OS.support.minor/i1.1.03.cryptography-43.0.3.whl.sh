@@ -20,8 +20,8 @@
 #               i1.3.01 cursive-0.2.3
 #               i4.2.01 castellan-5.2.1
 #               i4.2.14 openstacksdk-4.4.0
-#               i6.12   Glance-30.0.0
-#               i6.16   KeyStone-27.0.0
+#               i6.12.1 Glance-30.0.0
+#               i6.16.1 KeyStone-27.0.0
 #               i8.23   python-openstackclient-7.5.0
 #               i?.??   jwcrypto-1.5.6
 #               i?.??   paramiko-3.5.1

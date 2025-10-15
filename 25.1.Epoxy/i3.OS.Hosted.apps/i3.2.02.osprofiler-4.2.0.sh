@@ -17,8 +17,8 @@
 #
 # Required by:
 #
-#               i6.12 Glance-30.0.0
-#               i6.16 KeyStone-27.0.0
+#               i6.12.1 Glance-30.0.0
+#               i6.16.1 KeyStone-27.0.0
 #
 
 export PKG="osprofiler-4.2.0"

@@ -13,12 +13,12 @@
 #
 # Required by:
 #
+#               i1.1.70 warlock 2.0.1 whl
 #               i4.2.04 glance_store-4.9.1
 #               i4.2.22 taskflow-5.12.0
-#               i6.12   Glance-30.0.0
-#               i6.16   KeyStone-27.0.0
-#               i010.9.25 warlock-2.0.1
-#               i152.3    Openstack-Placement-12.0.0
+#               i6.12.1 Glance-30.0.0
+#               i6.16.1 KeyStone-27.0.0
+#               i6.24.1 Openstack-Placement-13.0.0
 #
 
 export PKG="jsonschema-4.23.0"

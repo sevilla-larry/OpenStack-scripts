@@ -4,7 +4,7 @@
 #
 # Required by:
 #
-#               i6.16 KeyStone-27.0.0
+#               i6.16.1 KeyStone-27.0.0
 #
 
 export PKG="oauthlib-3.2.2"

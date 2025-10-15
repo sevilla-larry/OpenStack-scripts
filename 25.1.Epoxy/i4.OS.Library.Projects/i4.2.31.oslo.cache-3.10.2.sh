@@ -15,8 +15,8 @@
 #
 # Required by:
 #
-#               i4.2.07 keystonemiddleware-10.9.0
-#               i6.16   KeyStone-27.0.0
+#               i4.3.07 keystonemiddleware-10.9.0
+#               i6.16.1 KeyStone-27.0.0
 #
 
 export PKG="oslo_cache-3.10.2"

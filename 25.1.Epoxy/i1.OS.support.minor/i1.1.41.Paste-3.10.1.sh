@@ -11,7 +11,7 @@
 # Required by:
 #
 #               i4.1.47 oslo.service-4.1.1
-#               i6.12   Glance-30.0.0
+#               i6.12.1 Glance-30.0.0
 #
 
 export PKG="paste-3.10.1"

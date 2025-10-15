@@ -29,7 +29,7 @@
 #               i1.1.08 prettytable-3.15.1
 #               i1.1.41 paste-3.10.1
 #               i1.1.59 jsonschema-4.23.0
-#               i5.16   python-keystoneclient-5.6.0
+#               i5.1.16 python-keystoneclient-5.6.0
 #               i4.2.35 oslo.db-17.2.1
 #               i4.1.36 oslo.i18n-6.5.1
 #               i4.2.37 oslo.limit-2.6.1

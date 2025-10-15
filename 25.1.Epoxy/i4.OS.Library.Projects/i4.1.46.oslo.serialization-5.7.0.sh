@@ -16,21 +16,21 @@
 #               i3.2.01 pycadf-4.0.1
 #               i3.2.02 osprofiler-4.2.0
 #               i4.2.04 glance_store-4.9.1
-#               i4.2.07 keystonemiddleware-10.9.0
+#               i4.3.07 keystonemiddleware-10.9.0
 #               i4.2.22 taskflow-5.12.0
 #               i4.1.38 oslo.log-7.1.0
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.42 oslo.policy-4.5.1
 #               i4.1.44 oslo.reports-3.5.1
-#               i5.16   python-keystoneclient-5.6.0
-#               i6.16   KeyStone-27.0.0
-#               i040.9.14 python-barbicanclient-7.0.0
+#               i5.1.04 python-barbicanclient-7.1.0
+#               i5.1.16 python-keystoneclient-5.6.0
+#               i6.16.1 KeyStone-27.0.0
+#               i6.24.1 Openstack-Placement-13.0.0
 #               i040.9.15 python-neutronclient-11.3.1
 #               i080.9.14 oslo.versionedobjects-3.4.0
 #               i090.9.11 os_brick-6.9.1
 #               i090.9.13 os_vif-3.7.0
 #               i090.9.14 tooz-6.3.0
-#               i152.3    Openstack-Placement-12.0.0
 #
 
 export PKG="oslo_serialization-5.7.0"

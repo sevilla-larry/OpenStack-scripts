@@ -5,7 +5,7 @@
 # Required by:
 #
 #               i3.1.04 debtcollector-3.0.0
-#               i?.??   python-glanceclient-4.7.0
+#               i5.1.12 python-glanceclient-4.8.0
 #
 
 export PKG="wrapt-1.16.0"

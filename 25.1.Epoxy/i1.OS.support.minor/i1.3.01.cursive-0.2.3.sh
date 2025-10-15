@@ -16,7 +16,7 @@
 #
 # Required by:
 #
-#               i6.12 Glance-30.0.0
+#               i6.12.1 Glance-30.0.0
 #
 
 export PKG="cursive-0.2.3"

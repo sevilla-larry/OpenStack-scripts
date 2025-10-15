@@ -8,7 +8,7 @@
 # Required by:
 #
 #               i4.1.41 oslo.middleware-6.3.1
-#               i6.16   KeyStone-27.0.0
+#               i6.16.1 KeyStone-27.0.0
 #               i095.9.22 paramiko-3.5.1
 #
 

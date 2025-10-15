@@ -18,7 +18,7 @@
 #
 # Required by:
 #
-#               i6.16 KeyStone-27.0.0
+#               i6.16.1 KeyStone-27.0.0
 #
 
 export PKG="pysaml2-7.5.4-py3-none-any.whl"

@@ -21,10 +21,9 @@
 #               i4.1.41 oslo.middleware-6.3.1
 #               i4.1.47 oslo.service-4.1.1
 #               i4.1.49 oslo.utils-8.2.0
-#               i5.16   python-keystoneclient-5.6.0
-#               i6.12   Glance-30.0.0
+#               i5.1.16 python-keystoneclient-5.6.0
+#               i6.12.1 Glance-30.0.0
 #               i?.??   python-neutronclient-11.3.1
-#               i?.??   pycadf-3.1.1
 #               i?.??   os_vif-3.7.0
 #
 

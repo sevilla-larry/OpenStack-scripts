@@ -20,9 +20,9 @@
 # Required by:
 #
 #               i4.1.39 oslo.messaging-16.1.0
-#               i6.12   Glance-30.0.0
-#               i6.16   KeyStone-27.0.0
-#               i152.3    Openstack-Placement-12.0.0
+#               i6.12.1 Glance-30.0.0
+#               i6.16.1 KeyStone-27.0.0
+#               i6.24.1 Openstack-Placement-13.0.0
 #
 
 export PKG="oslo_middleware-6.3.1"

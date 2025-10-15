@@ -13,7 +13,7 @@
 #
 #               i4.2.14 openstacksdk-4.4.0
 #               i4.2.31 oslo.cache-3.10.0
-#               i6.16   KeyStone-27.0.0
+#               i6.16.1 KeyStone-27.0.0
 #
 
 export PKG="dogpile_cache-1.3.4"

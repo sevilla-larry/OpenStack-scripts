@@ -4,15 +4,15 @@
 #
 # Dependencies Required:
 #
-#               i020.9.01 pbr-6.1.0
-#               i010.9.08 prettytable-3.11.0
-#               i020.9.04 keystoneauth1-5.8.0
-#               b30.13.23.30 Requests-2.32.3
-#               i010.9.25 warlock 2.0.1                         
-#               i030.9.02 oslo.utils-7.3.0
-#               i030.9.01 oslo.i18n-6.4.0
-#               i010.9.17 wrapt-1.16.0                          
-#               i010.9.26 pyOpenSSL-23.3.0                      
+#               i3.1.01      pbr-6.1.1
+#               i1.1.08      prettytable-3.15.1
+#               i4.1.06      keystoneauth1-5.10.0
+#               b30.13.24.30 Requests-2.32.5
+#               i1.1.70      warlock 2.0.1 whl
+#               i4.1.49      oslo.utils-8.2.0
+#               i4.1.36      oslo.i18n-6.5.1
+#               i1.1.17      wrapt-1.16.0
+#               i1.1.52      pyOpenSSL-24.2.1
 #
 
 export PKG="python-glanceclient-4.8.0"

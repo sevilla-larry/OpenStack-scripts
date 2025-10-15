@@ -10,8 +10,8 @@
 #
 # Required by:
 #
+#               i1.1.70 warlock 2.0.1 whl
 #               i4.2.14 openstacksdk-4.4.0
-#               i?.??   warlock 2.0.1
 #
 
 export PKG="jsonpatch-1.33"

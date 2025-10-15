@@ -17,15 +17,16 @@
 #
 #               i4.2.01 castellan-5.2.1
 #               i4.2.04 glance_store-4.9.1
-#               i4.2.07 keystonemiddleware-10.9.0
+#               i4.3.07 keystonemiddleware-10.9.0
 #               i4.2.14 openstacksdk-4.4.0
 #               i4.2.18 osc-lib-3.2.0
-#               i4.2.36 oslo.limit-2.6.1
-#               i5.07   python-cinderclient-9.7.0
-#               i5.16   python-keystoneclient-5.6.0
-#               i6.12   Glance-30.0.0
-#               i?.??   python-glanceclient-4.7.0
-#               i?.??   python-barbicanclient-7.0.0
+#               i4.2.37 oslo.limit-2.6.1
+#               i5.2.01 osc-placement-4.6.0
+#               i5.1.04 python-barbicanclient-7.1.0
+#               i5.1.07 python-cinderclient-9.7.0
+#               i5.1.12 python-glanceclient-4.8.0
+#               i5.1.16 python-keystoneclient-5.6.0
+#               i6.12.1 Glance-30.0.0
 #               i?.??   python-neutronclient-11.3.1
 #
 

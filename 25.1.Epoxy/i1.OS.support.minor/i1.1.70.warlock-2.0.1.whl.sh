@@ -14,7 +14,7 @@
 #
 # Required by:
 #
-#               i5.12 python-glanceclient-4.8.0
+#               i5.1.12 python-glanceclient-4.8.0
 #
 
 export PKG="warlock-2.0.1-py3-none-any.whl"

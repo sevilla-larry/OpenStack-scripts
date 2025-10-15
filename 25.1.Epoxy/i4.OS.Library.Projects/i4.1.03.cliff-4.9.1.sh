@@ -15,8 +15,8 @@
 # Required by:
 #
 #               i4.2.18 osc-lib-3.2.0
+#               i5.1.04 python-barbicanclient-7.1.0
 #               i8.23   python-openstackclient-7.5.0
-#               i?.?? python-barbicanclient-7.0.0
 #               i?.?? python-neutronclient-11.3.1
 #
 

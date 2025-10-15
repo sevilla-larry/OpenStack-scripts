@@ -22,10 +22,10 @@
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.41 oslo.middleware-6.3.1
 #               i4.1.42 oslo.policy-4.5.1
-#               i5.07   python-cinderclient-9.7.0
-#               i5.16   python-keystoneclient-5.6.0
-#               i6.12   Glance-30.0.0
-#               i6.16   KeyStone-27.0.0
+#               i5.1.07 python-cinderclient-9.7.0
+#               i5.1.16 python-keystoneclient-5.6.0
+#               i6.12.1 Glance-30.0.0
+#               i6.16.1 KeyStone-27.0.0
 #               i8.23   python-openstackclient-7.5.0
 #               i?.?? os_vif-3.7.0
 #               i?.?? tooz-6.3.0

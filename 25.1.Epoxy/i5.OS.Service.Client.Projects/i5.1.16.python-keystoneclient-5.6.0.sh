@@ -20,9 +20,9 @@
 # Required by:
 #
 #               i4.2.04 glance_store-4.9.1
-#               i4.2.07 keystonemiddleware-10.9.0
-#               i6.12   Glance-30.0.0
-#               i6.16   KeyStone-27.0.0
+#               i4.3.07 keystonemiddleware-10.9.0
+#               i6.12.1 Glance-30.0.0
+#               i6.16.1 KeyStone-27.0.0
 #               i8.23   python-openstackclient-7.5.0
 #               i040.9.15 python-neutronclient-11.3.1
 #

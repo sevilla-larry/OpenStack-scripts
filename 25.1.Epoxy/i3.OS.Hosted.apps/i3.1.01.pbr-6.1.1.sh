@@ -16,9 +16,11 @@
 #               i1.3.01 cursive-0.2.3
 #               i3.1.02 os-service-types-1.7.0
 #               i3.1.06 automaton-3.2.0
+#               i3.1.07 os-resource-classes-1.1.0
+#               i3.1.08 os-traits-3.4.0
 #               i4.2.01 castellan-5.2.1
 #               i4.1.06 keystoneauth1-5.10.0
-#               i4.2.07 keystonemiddleware-10.9.0
+#               i4.3.07 keystonemiddleware-10.9.0
 #               i4.2.14 openstacksdk-4.4.0
 #               i4.2.18 osc-lib-3.2.0
 #               i4.1.20 stevedore-5.4.1
@@ -33,22 +35,20 @@
 #               i4.1.44 oslo.reports-3.5.1
 #               i4.1.46 oslo.serialization-5.7.0
 #               i4.1.49 oslo.utils-8.2.0
-#               i5.07   python-cinderclient-9.7.0
-#               i5.16   python-keystoneclient-5.6.0
-#               i6.12   Glance-30.0.0
-#               i6.16   KeyStone-27.0.0
+#               i5.2.01 osc-placement-4.6.0
+#               i5.1.04 python-barbicanclient-7.1.0
+#               i5.1.07 python-cinderclient-9.7.0
+#               i5.1.12 python-glanceclient-4.8.0
+#               i5.1.16 python-keystoneclient-5.6.0
+#               i6.12.1 Glance-30.0.0
+#               i6.16.1 KeyStone-27.0.0
+#               i6.24.1 Openstack-Placement-13.0.0
 #               i8.23   python-openstackclient-7.5.0
-#               i?.?? python-glanceclient-4.7.0
-#               i?.?? python-barbicanclient-7.0.0
 #               i?.?? python-neutronclient-11.3.1
 #               i?.?? os-win-5.9.0
-#               i?.?? os-resource-classes-1.1.0
-#               i?.?? os-traits-3.1.0
 #               i?.?? os_brick-6.9.1
 #               i?.?? ovsdbapp-2.8.0
 #               i?.?? os_vif-3.7.0
-#               i?.?    Openstack-Placement-12.0.0
-#               i?.?    osc-placement-4.5.0
 #
 
 export PKG="pbr-6.1.1"

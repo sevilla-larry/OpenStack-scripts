@@ -13,14 +13,14 @@
 #               i1.1.36      eventlet-0.39.1
 #               i1.1.59      jsonschema-4.23.0
 #               i4.1.06      keystoneauth1-5.10.0
-#               i5.16        python-keystoneclient-5.6.0
+#               i5.1.16      python-keystoneclient-5.6.0
 #               b30.13.24.30 Requests-2.32.5
 #
 
 #
 # Required by:
 #
-#               i6.12 Glance-30.0.0
+#               i6.12.1 Glance-30.0.0
 #
 
 export PKG="glance_store-4.9.1"

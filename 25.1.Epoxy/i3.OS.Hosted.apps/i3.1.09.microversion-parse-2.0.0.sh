@@ -10,7 +10,7 @@
 #
 # Required by:
 #
-#               i6.24 Openstack-Placement-13.0.0
+#               i6.24.1 Openstack-Placement-13.0.0
 #
 
 export PKG="microversion_parse-2.0.0"

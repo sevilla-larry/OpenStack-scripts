@@ -6,7 +6,7 @@
 #
 #               i3.1.01      pbr-6.1.1
 #               i1.1.03      cryptography-43.0.3
-#               i5.04        python-barbicanclient-7.1.0
+#               i5.1.04      python-barbicanclient-7.1.0
 #               i4.1.33      oslo.config-9.7.1
 #               i4.1.34      oslo.context-5.7.1
 #               i4.1.36      oslo.i18n-6.5.1
@@ -21,7 +21,7 @@
 # Required by:
 #
 #               i1.3.01 cursive-0.2.3
-#               i6.12   Glance-30.0.0
+#               i6.12.1 Glance-30.0.0
 #
 
 export PKG="castellan-5.2.1"
