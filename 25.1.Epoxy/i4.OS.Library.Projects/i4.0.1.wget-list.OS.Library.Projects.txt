@@ -65,6 +65,9 @@ https://tarballs.opendev.org/openstack/oslo.middleware/oslo_middleware-6.3.1.tar
 # i4.1.42 oslo_policy-4.5.1
 https://tarballs.opendev.org/openstack/oslo.policy/oslo_policy-4.5.1.tar.gz
 
+# i4.1.43 oslo_privsep-3.6.0
+https://tarballs.opendev.org/openstack/oslo.privsep/oslo_privsep-3.6.0.tar.gz
+
 # i4.1.44 oslo_reports-3.5.1
 https://tarballs.opendev.org/openstack/oslo.reports/oslo_reports-3.5.1.tar.gz
 
