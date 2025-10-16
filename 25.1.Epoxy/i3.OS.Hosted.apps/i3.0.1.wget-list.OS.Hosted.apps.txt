@@ -35,6 +35,9 @@ https://tarballs.opendev.org/openstack/pycadf/pycadf-4.0.1.tar.gz
 # i3.2.02 osprofiler-4.2.0
 https://tarballs.opendev.org/openstack/osprofiler/osprofiler-4.2.0.tar.gz
 
+# i3.2.03 os-win-5.9.0
+https://tarballs.opendev.org/openstack/os-win/os-win-5.9.0.tar.gz
+
 
 # i3.3.01 os-client-config-2.1.0
 https://tarballs.opendev.org/openstack/os-client-config/os-client-config-2.1.0.tar.gz
