@@ -28,6 +28,9 @@ d0abffe54e306af912ce78d15a6cb2f2 os_vif-4.1.0.tar.gz
 # i4.2.18 osc-lib-3.2.0
 ba12311dd67d186239e6b834aa419d2a osc-lib-3.2.0.tar.gz
 
+# i4.1.19 ovsdbapp-2.11.0
+319a8bc55a3b2e6a9890c895a04c2c85 ovsdbapp-2.11.0.tar.gz
+
 # i4.1.20 stevedore-5.4.1
 d8ce49d9a513d454bec0e897ce10062b stevedore-5.4.1.tar.gz
 
