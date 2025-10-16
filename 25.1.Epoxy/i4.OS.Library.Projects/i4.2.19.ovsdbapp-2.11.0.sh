@@ -1,13 +1,13 @@
-# i4.1.19.ovsdbapp-2.11.0.sh
+# i4.2.19.ovsdbapp-2.11.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i060.9.22 fixtures-4.1.0
-#               i010.9.16 netaddr-1.3.0
+#               i1.2.03 fixtures-4.1.0
+#               i1.1.16 netaddr-1.3.0
 #               i060.9.30 ovs-3.3.4
-#               i020.9.01 pbr-6.1.0
+#               i3.1.01 pbr-6.1.1
 #
 
 #

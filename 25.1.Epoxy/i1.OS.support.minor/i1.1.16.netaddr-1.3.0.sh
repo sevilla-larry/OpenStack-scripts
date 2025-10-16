@@ -11,7 +11,6 @@
 #               i?.??   oslo.versionedobjects-3.4.0
 #               i?.??   ovsdbapp-2.8.0
 #               i?.??   python-neutronclient-11.3.1
-#               i?.??   ovsdbapp-2.8.0
 #               i?.??   Nova-30.0.0
 #
 

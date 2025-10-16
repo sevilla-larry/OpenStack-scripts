@@ -11,7 +11,7 @@
 # Required by:
 #
 #               i1.2.04 testtools-2.7.2
-#               i090.9.12 ovsdbapp-2.8.0
+#               i4.2.19 ovsdbapp-2.11.0
 #
 
 export PKG="fixtures-4.1.0"
