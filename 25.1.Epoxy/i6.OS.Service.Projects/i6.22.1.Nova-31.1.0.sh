@@ -22,12 +22,12 @@
 #               i1.1.08      prettytable-3.15.1
 #               i1.1.49      alembic-1.14.1
 #               i1.1.16      netaddr-1.3.0
-#paramiko>=2.7.1
+#               i1.1.73      paramiko-4.0.0
 #               i1.1.09      iso8601-2.1.0.whl
 #               i1.1.59      jsonschema-4.23.0
 #               i5.1.07      python-cinderclient-9.7.0
 #               i4.1.06      keystoneauth1-5.10.0
-#python-neutronclient>=7.1.0
+#               i5.1.21      python-neutronclient-11.4.0
 #               i5.1.12      python-glanceclient-4.8.0
 #               b30.13.24.30 Requests-2.32.5
 #               i4.1.20      stevedore-5.4.1

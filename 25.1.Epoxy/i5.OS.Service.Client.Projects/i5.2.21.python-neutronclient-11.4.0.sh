@@ -1,34 +1,34 @@
-# i5.1.21.python-neutronclient-11.4.0.sh
+# i5.2.21.python-neutronclient-11.4.0.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i020.9.01 pbr-6.1.0
-#               i040.9.01 cliff-4.7.0
-#               i020.9.06 debtcollector-3.0.0
-#               i010.9.09 iso8601-2.1.0
-#               i010.9.16 netaddr-1.3.0
-#               i040.9.02 openstacksdk-4.0.1
-#               i040.9.03 osc-lib-3.1.0
-#               i030.9.01 oslo.i18n-6.4.0
-#               i030.9.06 oslo.log-6.1.2
-#               i030.9.04 oslo.serialization-5.5.0
-#               i030.9.02 oslo.utils-7.3.0
-#               i040.9.04 os-client-config-2.1.0
-#               i020.9.04 keystoneauth1-5.8.0
-#               i040.9.11 python-keystoneclient-5.5.0
-#               b30.13.23.30 Requests-2.32.3
+#               i3.1.01      pbr-6.1.1
+#               i4.1.03      cliff-4.9.1
+#               i3.1.04      debtcollector-3.0.0
+#               i1.1.09      iso8601-2.1.0.whl
+#               i1.1.16      netaddr-1.3.0
+#               i4.2.14      openstacksdk-4.4.0
+#               i4.2.18      osc-lib-3.2.0
+#               i4.1.36      oslo.i18n-6.5.1
+#               i4.1.38      oslo.log-7.1.0
+#               i4.1.46      oslo.serialization-5.7.0
+#               i4.1.49      oslo.utils-8.2.0
+#               i040.9.04    os-client-config-2.1.0
+#               i4.1.06      keystoneauth1-5.10.0
+#               i5.1.16      python-keystoneclient-5.6.0
+#               b30.13.24.30 Requests-2.32.5
 #
 
 #
 # Required by:
 #
-#               i111.9.3  Nova-30.0.0
+#               i6.22.1  Nova-31.1.0
 #
 
 export PKG="python-neutronclient-11.4.0"
-export PKGLOG_DIR=$OSLOG/5.1.21
+export PKGLOG_DIR=$OSLOG/5.2.21
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
