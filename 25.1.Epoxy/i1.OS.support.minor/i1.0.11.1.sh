@@ -1050,6 +1050,34 @@ echo "."
 
 ###
 
+echo "i1.1.77.sortedcontainers-2.4.0"
+echo "i1.1.77.sortedcontainers-2.4.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.77.sortedcontainers-2.4.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.78.ovs-3.5.2"
+echo "i1.1.78.ovs-3.5.2" >> $OSLOG_PROCESS
+
+time { bash i1.1.78.ovs-3.5.2.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i1.1.14.netifaces-0.11.0"
 # echo "i1.1.14.netifaces-0.11.0" >> $OSLOG_PROCESS
 

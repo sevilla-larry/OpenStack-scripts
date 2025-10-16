@@ -231,8 +231,14 @@ https://files.pythonhosted.org/packages/e1/db/870e5d5fb311b0bcf049630b5ba3abca2d
 # i1.1.75 redis-6.1.1
 https://files.pythonhosted.org/packages/07/8b/14ef373ffe71c0d2fde93c204eab78472ea13c021d9aee63b0e11bd65896/redis-6.1.1.tar.gz
 
-# i1.1.7x websockify-0.13.0
+# i1.1.76 websockify-0.13.0
 https://files.pythonhosted.org/packages/f7/9e/fa7b6322fe22a02cf34256cbe300a9468533038b1262c7960119a787b595/websockify-0.13.0.tar.gz
+
+# i1.1.77 sortedcontainers-2.4.0
+https://files.pythonhosted.org/packages/e8/c4/ba2f8066cceb6f23394729afe52f3bf7adec04bf9ed2c820b39e19299111/sortedcontainers-2.4.0.tar.gz
+
+# i1.1.78 ovs-3.5.2     (if err try 3.4.4)
+https://files.pythonhosted.org/packages/42/65/dcc95e1f67451a6b792934f7296ffd0e7f2d0917b6ee9bd3d1e3f19fda8f/ovs-3.5.2.tar.gz
 
 
 # i1.2.01 dogpile.cache-1.3.4

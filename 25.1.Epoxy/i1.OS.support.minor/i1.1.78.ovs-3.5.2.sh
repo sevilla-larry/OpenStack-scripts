@@ -1,23 +1,20 @@
-# i4.2.19.ovsdbapp-2.11.0.sh
+# i1.1.78.ovs-3.5.2.sh
 #
 
 #
 # Dependencies Required:
 #
-#               i1.2.03 fixtures-4.1.0
-#               i1.1.16 netaddr-1.3.0
-#               i1.1.77 ovs-3.5.2
-#               i3.1.01 pbr-6.1.1
+#               i1.1.77 sortedcontainers-2.4.0
 #
 
 #
 # Required by:
 #
-#               i4.2.17 os-vif-4.1.0
+#               i4.2.19 ovsdbapp-2.11.0
 #
 
-export PKG="ovsdbapp-2.11.0"
-export PKGLOG_DIR=$OSLOG/4.1.19
+export PKG="ovs-3.5.2"
+export PKGLOG_DIR=$OSLOG/1.1.78
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -53,7 +50,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                ovsdbapp                \
+                ovs                     \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
