@@ -12,3 +12,6 @@ https://tarballs.opendev.org/openstack/python-glanceclient/python_glanceclient-4
 
 # i5.16 python_keystoneclient-5.6.0
 https://tarballs.opendev.org/openstack/python-keystoneclient/python_keystoneclient-5.6.0.tar.gz
+
+# i5.21 python-neutronclient-11.4.0
+https://tarballs.opendev.org/openstack/python-neutronclient/python-neutronclient-11.4.0.tar.gz
