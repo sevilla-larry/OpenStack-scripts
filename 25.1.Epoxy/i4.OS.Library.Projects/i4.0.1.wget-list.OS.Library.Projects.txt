@@ -68,6 +68,9 @@ https://tarballs.opendev.org/openstack/oslo.policy/oslo_policy-4.5.1.tar.gz
 # i4.1.44 oslo_reports-3.5.1
 https://tarballs.opendev.org/openstack/oslo.reports/oslo_reports-3.5.1.tar.gz
 
+# i4.1.45 oslo_rootwrap-7.5.1
+https://tarballs.opendev.org/openstack/oslo.rootwrap/oslo_rootwrap-7.5.1.tar.gz
+
 # i4.1.46 oslo_serialization-5.7.0
 https://tarballs.opendev.org/openstack/oslo.serialization/oslo_serialization-5.7.0.tar.gz
 
