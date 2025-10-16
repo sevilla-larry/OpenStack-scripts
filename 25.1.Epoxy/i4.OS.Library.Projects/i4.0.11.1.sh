@@ -75,6 +75,20 @@ echo "."
 
 ###
 
+echo "i4.1.45.oslo.rootwrap-7.5.1"
+echo "i4.1.45.oslo.rootwrap-7.5.1" >> $OSLOG_PROCESS
+
+time { bash i4.1.45.oslo.rootwrap-7.5.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 ##    i4.1.33 oslo.config-9.7.1
 ##      depends on
 ##    i4.1.36 oslo.i18n-6.5.1
@@ -278,6 +292,24 @@ echo "i4.1.39.oslo.messaging-16.1.0"
 echo "i4.1.39.oslo.messaging-16.1.0" >> $OSLOG_PROCESS
 
 time { bash i4.1.39.oslo.messaging-16.1.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+##    i4.1.43.oslo.privsep-3.6.0
+##      depends on
+##    i4.1.49.oslo.utils-8.2.0
+
+echo "i4.1.43.oslo.privsep-3.6.0"
+echo "i4.1.43.oslo.privsep-3.6.0" >> $OSLOG_PROCESS
+
+time { bash i4.1.43.oslo.privsep-3.6.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
