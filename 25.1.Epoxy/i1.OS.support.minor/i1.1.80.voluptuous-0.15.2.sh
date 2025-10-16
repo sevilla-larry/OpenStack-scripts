@@ -1,33 +1,21 @@
-# i090.9.14.tooz-6.3.0.sh
-#
-
-#
-# Dependencies Required:
-#
-#               i020.9.02 stevedore-5.3.0
-#               i060.9.32 voluptuous-0.15.2
-#               b30.13.24.17 Msgpack-1.0.8
-#               i060.9.01 fasteners-0.19
-#               i060.9.27 tenacity-9.0.0
-#               i070.9.01 futurist-3.0.0
-#               i030.9.02 oslo.utils-7.3.0
-#               i030.9.04 oslo.serialization-5.5.0
+# i1.1.80.voluptuous-0.15.2.sh
 #
 
 #
 # Required by:
 #
-#               i111.9.3  Nova-30.0.0
+#               i3.2.04 tooz-7.0.0
 #
 
-export PKG="tooz-6.3.0"
-export PKGLOG_DIR=$OSLOG/090.14
+export PKG="voluptuous-0.15.2"
+export PKGLOG_DIR=$OSLOG/1.1.80
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+export SOURCES=`pwd`
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -56,7 +44,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                tooz                    \
+                voluptuous              \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."
@@ -65,8 +53,9 @@ echo "4. pyTest ..." >> $PKGLOG_ERROR
 pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
+unset SOURCES
 unset OSLOG_PROCESS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_CHECK

@@ -68,15 +68,16 @@
 #               i4.2.14      openstacksdk-4.4.0
 #               b10.13.24.28 PyYAML-6.0.2
 
-export PKG="nova-30.0.0"
-export PKGLOG_DIR=$OSLOG/111.1
+export PKG="nova-31.1.0"
+export PKGLOG_DIR=$OSLOG/6.22.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export OSLOG_PROCESS=$OSLOG/process.log
-export SOURCES_DIR=$PWD
+export SOURCES=`pwd`
+#export SOURCES_DIR=$PWD
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -139,9 +140,10 @@ chown -vR nova:nova /etc/nova                   \
 #     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
-unset SOURCES_DIR
+unset SOURCES
+#unset SOURCES_DIR
 unset OSLOG_PROCESS
 unset PKGLOG_OTHERS
 unset PKGLOG_INSTALL PKGLOG_BUILD
