@@ -4,22 +4,22 @@
 #
 # Dependencies Required:
 #
-#               i030.9.06 oslo.log-6.1.2
-#               i030.9.01 oslo.i18n-6.4.0
-#               i030.9.03 oslo.config-9.6.0
-#               i030.9.02 oslo.utils-7.3.0
-#               i010.9.02 cffi-1.16.0
-#               i060.9.05 eventlet-0.36.1
-#               i060.9.04 greenlet-3.0.3
-#               b30.13.24.17 Msgpack-1.0.8
+#               i4.1.38      oslo.log-7.1.0
+#               i4.1.36      oslo.i18n-6.5.1
+#               i4.1.33      oslo.config-9.7.1
+#               i4.1.49      oslo.utils-8.2.0
+#               i1.1.02      cffi-1.17.1
+#               i1.1.36      eventlet-0.39.1
+#               i1.1.29      greenlet-3.2.4
+#               b30.13.25.17 Msgpack-1.1.1
 #
 
 #
 # Required by:
 #
+#               i6.22.1 Nova-31.1.0
 #               i090.9.11 os_brick-6.9.1
 #               i090.9.13 os_vif-3.7.0
-#               i111.9.3  Nova-30.0.0
 #
 
 export PKG="oslo_privsep-3.6.0"
