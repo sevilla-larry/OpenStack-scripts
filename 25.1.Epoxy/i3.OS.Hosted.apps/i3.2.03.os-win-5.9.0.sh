@@ -4,20 +4,19 @@
 #
 # Dependencies Required:
 #
-#               i020.9.01 pbr-6.1.0
-#               i060.9.05 eventlet-0.36.1
-#               i080.9.02 oslo.concurrency-6.1.0
-#               i030.9.03 oslo.config-9.6.0
-#               i030.9.06 oslo.log-6.1.2
-#               i030.9.02 oslo.utils-7.3.0
-#               i030.9.01 oslo.i18n-6.4.0
+#               i3.1.01 pbr-6.1.1
+#               i1.1.36 eventlet-0.39.1
+#               i4.1.32 oslo.concurrency-7.1.0
+#               i4.1.33 oslo.config-9.7.1
+#               i4.1.38 oslo.log-7.1.0
+#               i4.1.49 oslo.utils-8.2.0
+#               i4.1.36 oslo.i18n-6.5.1
 #
 
 #
 # Required by:
 #
-#               i090.9.11 os_brick-6.9.1
-#               i153.3    Glance-29.0.0
+#               i4.2.15 os_brick-6.11.0
 #
 
 export PKG="os-win-5.9.0"
