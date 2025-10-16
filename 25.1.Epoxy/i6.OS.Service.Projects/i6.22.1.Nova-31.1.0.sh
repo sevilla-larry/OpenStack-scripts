@@ -12,7 +12,7 @@
 #               i1.1.36      eventlet-0.39.1
 #               a.08.75      Jinja2-3.1.6
 #               i4.3.07      keystonemiddleware-10.9.0
-#               b10.13.24.13 lxml-6.0.0
+#               b10.13.24.13 lxml-6.0.2
 #               i1.1.40      Routes-2.5.1
 #               i1.1.03      cryptography-43.0.3 whl
 #               i1.1.21      WebOb-1.8.9
