@@ -13,7 +13,7 @@
 #               i6.22.1 Nova-31.1.0
 #
 
-export PKG="oslo.rootwrap-7.5.1"
+export PKG="oslo_rootwrap-7.5.1"
 export PKGLOG_DIR=$OSLOG/4.1.45
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

@@ -51,7 +51,7 @@ i4.23.tosca-parser
 *i4.40.oslo.metrics
 *i4.41.oslo.middleware
 *i4.42.oslo.policy
-i4.43.oslo.privsep
+*i4.43.oslo.privsep
 *i4.44.oslo.reports
 *i4.45.oslo.rootwrap
 *i4.46.oslo.serialization
