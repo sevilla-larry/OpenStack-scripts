@@ -46,7 +46,7 @@
 #oslo.rootwrap>=5.15.0
 #               i4.1.39      oslo.messaging-16.1.0
 #               i4.1.42      oslo.policy-4.5.1
-#oslo.privsep>=2.6.2
+#               i4.1.43      oslo.privsep-3.6.0
 #               i4.1.36      oslo.i18n-6.5.1
 #               i4.1.47      oslo.service-4.1.1
 #               i1.1.19      rfc3986-2.0.0

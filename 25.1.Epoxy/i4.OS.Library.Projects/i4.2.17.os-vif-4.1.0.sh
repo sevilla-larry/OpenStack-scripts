@@ -4,19 +4,19 @@
 #
 # Dependencies Required:
 #
-#               i020.9.01 pbr-6.1.0
-#               i080.9.02 oslo.concurrency-6.1.0
-#               i030.9.03 oslo.config-9.6.0
-#               i030.9.06 oslo.log-6.1.2
-#               i030.9.01 oslo.i18n-6.4.0
-#               i080.9.13 oslo.privsep-3.4.0
-#               i030.9.04 oslo.serialization-5.5.0
-#               i030.9.02 oslo.utils-7.3.0
-#               i080.9.14 oslo.versionedobjects-3.4.0
+#               i3.1.01 pbr-6.1.2
+#               i4.1.32 oslo.concurrency-7.1.0
+#               i4.1.33 oslo.config-9.7.1
+#               i4.1.38 oslo.log-7.1.0
+#               i4.1.36 oslo.i18n-6.5.1
+#               i4.1.43 oslo.privsep-3.6.0
+#               i4.1.46 oslo.serialization-5.7.0
+#               i4.1.49 oslo.utils-8.2.0
+#               i4.1.50 oslo.versionedobjects-3.6.0
 #               i090.9.12 ovsdbapp-2.8.0
 #               i060.9.31 pyroute2-0.7.12
-#               i020.9.02 stevedore-5.3.0
-#               i020.9.06 debtcollector-3.0.0
+#               i4.1.20 stevedore-5.4.1
+#               i3.1.04 debtcollector-3.0.0
 #
 
 #
