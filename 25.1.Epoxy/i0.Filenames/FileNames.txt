@@ -31,7 +31,7 @@ i4.13.octavia-lib
 *2-i4.14.openstacksdk
 *i4.15.os-brick
 i4.16.os-ken
-i4.17.os-vif
+*i4.17.os-vif
 *2-i4.18.osc-lib
 i4.19.ovsdbapp
 *i4.20.stevedore
