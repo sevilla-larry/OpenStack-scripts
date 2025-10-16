@@ -4,18 +4,17 @@
 #
 # Dependencies Required:
 #
-#               i080.9.02 oslo.concurrency-6.1.0
-#               i030.9.03 oslo.config-9.6.0
-#               i030.9.05 oslo.context-5.6.0
-#               i080.9.06 oslo.messaging-14.9.1
-#               i030.9.04 oslo.serialization-5.5.0
-#               i030.9.02 oslo.utils-7.3.0
-#               i010.9.09 iso8601-2.1.0
-#               i030.9.06 oslo.log-6.1.2
-#               i030.9.01 oslo.i18n-6.4.0
-#               i060.9.02 WebOb-1.8.7
-#               i010.9.16 netaddr-1.3.0
-#               i090.9.13 os_vif-3.7.0
+#               i4.1.32 oslo.concurrency-7.1.0
+#               i4.1.33 oslo.config-9.7.1
+#               i4.1.34 oslo.context-5.7.1
+#               i4.1.39 oslo.messaging-16.1.0
+#               i4.1.46 oslo.serialization-5.7.0
+#               i4.1.49 oslo.utils-8.2.0
+#               i1.1.09 iso8601-2.1.0
+#               i4.1.38 oslo.log-7.1.0
+#               i4.1.36 oslo.i18n-6.5.1
+#               i1.1.21 WebOb-1.8.9
+#               i1.1.16 netaddr-1.3.0
 #
 
 #
