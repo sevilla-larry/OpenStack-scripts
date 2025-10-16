@@ -58,7 +58,7 @@ i4.23.tosca-parser
 *i4.47.oslo.service
 *i4.48.oslo.upgradecheck
 *i4.49.oslo.utils
-i4.50.oslo.versionedobjects
+*i4.50.oslo.versionedobjects
 i4.51.oslo.vmware
 
 

@@ -86,5 +86,5 @@ https://tarballs.opendev.org/openstack/oslo.upgradecheck/oslo_upgradecheck-2.5.0
 # i4.1.49 oslo_utils-8.2.0
 https://tarballs.opendev.org/openstack/oslo.utils/oslo_utils-8.2.0.tar.gz
 
-
-
+# i4.1.50 oslo_versionedobjects-3.6.0
+https://tarballs.opendev.org/openstack/oslo.versionedobjects/oslo_versionedobjects-3.6.0.tar.gz
