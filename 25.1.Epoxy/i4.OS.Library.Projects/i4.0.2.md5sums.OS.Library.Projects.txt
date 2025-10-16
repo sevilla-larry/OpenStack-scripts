@@ -19,6 +19,9 @@ ed60b509de24c3040d93de117b67d2e6 keystonemiddleware-10.9.0.tar.gz
 # i4.2.14 openstacksdk-4.4.0
 bf630eb421ebcde4b97e6778835fa5ba openstacksdk-4.4.0.tar.gz
 
+# i4.1.15 os_brick-6.11.0
+6779b840941a6996a41c85647efbd47a os_brick-6.11.0.tar.gz
+
 # i4.2.18 osc-lib-3.2.0
 ba12311dd67d186239e6b834aa419d2a osc-lib-3.2.0.tar.gz
 
