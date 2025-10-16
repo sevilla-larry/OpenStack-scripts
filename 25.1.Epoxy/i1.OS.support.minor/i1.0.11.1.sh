@@ -966,6 +966,48 @@ echo "."
 
 ###
 
+echo "i1.1.71.invoke-2.2.1"
+echo "i1.1.71.invoke-2.2.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.71.invoke-2.2.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.72.PyNaCl-1.5.0"
+echo "i1.1.72.PyNaCl-1.5.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.72.PyNaCl-1.5.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.73.paramiko-4.0.0"
+echo "i1.1.73.paramiko-4.0.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.73.paramiko-4.0.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i1.1.14.netifaces-0.11.0"
 # echo "i1.1.14.netifaces-0.11.0" >> $OSLOG_PROCESS
 
