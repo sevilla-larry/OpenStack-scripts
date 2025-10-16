@@ -106,15 +106,15 @@ echo "."
 
 ###
 
-##    i4.2.17.os-vif-4.1.0
+##    i4.2.17.os_vif-4.1.0
 ##      depends on some
 ##    i4.1.xx oslo.xxxxx-x.x.x
 ##    i4.2.19.ovsdbapp-2.11.0
 
-echo "i4.2.17.os-vif-4.1.0"
-echo "i4.2.17.os-vif-4.1.0" >> $OSLOG_PROCESS
+echo "i4.2.17.os_vif-4.1.0"
+echo "i4.2.17.os_vif-4.1.0" >> $OSLOG_PROCESS
 
-time { bash i4.2.17.os-vif-4.1.0.sh ; }
+time { bash i4.2.17.os_vif-4.1.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

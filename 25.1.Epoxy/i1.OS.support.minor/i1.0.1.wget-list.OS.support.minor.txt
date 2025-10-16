@@ -240,6 +240,9 @@ https://files.pythonhosted.org/packages/e8/c4/ba2f8066cceb6f23394729afe52f3bf7ad
 # i1.1.78 ovs-3.5.2     (if err try 3.4.4)
 https://files.pythonhosted.org/packages/42/65/dcc95e1f67451a6b792934f7296ffd0e7f2d0917b6ee9bd3d1e3f19fda8f/ovs-3.5.2.tar.gz
 
+# i1.1.79 pyroute2-0.8.1
+https://files.pythonhosted.org/packages/4d/04/c9060b6cb024d05467e17ea93d3ca4bd2f3b05deb2372b7f79321640e8ad/pyroute2-0.8.1.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 https://files.pythonhosted.org/packages/cb/b7/2fa37f52b4f38bc8eb6d4923163dd822ca6f9e2f817378478a5de73b239e/dogpile_cache-1.3.4.tar.gz

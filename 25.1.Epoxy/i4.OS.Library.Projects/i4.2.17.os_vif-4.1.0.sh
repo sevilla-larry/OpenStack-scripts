@@ -13,8 +13,8 @@
 #               i4.1.46 oslo.serialization-5.7.0
 #               i4.1.49 oslo.utils-8.2.0
 #               i4.1.50 oslo.versionedobjects-3.6.0
-#               i090.9.12 ovsdbapp-2.8.0
-#               i060.9.31 pyroute2-0.7.12
+#               i4.2.19 ovsdbapp-2.11.0
+#               i1.1.79 pyroute2-0.8.1
 #               i4.1.20 stevedore-5.4.1
 #               i3.1.04 debtcollector-3.0.0
 #
@@ -22,7 +22,7 @@
 #
 # Required by:
 #
-#               i111.9.3  Nova-30.0.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="os_vif-4.1.0"
@@ -62,7 +62,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                os-vif                  \
+                os_vif                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."
