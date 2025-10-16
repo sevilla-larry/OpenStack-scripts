@@ -14,14 +14,14 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-##    i5.2.01.osc-placement-4.6.0
+##    i5.3.21.python-neutronclient-11.4.0
 ##      depends on
-##    i4.2.18 osc-lib-3.2.0
+##    i3.3.01.os-client-config-2.1.0
 
-echo "i5.2.01.osc-placement-4.6.0"
-echo "i5.2.01.osc-placement-4.6.0" >> $OSLOG_PROCESS
+echo "i5.3.21.python-neutronclient-11.4.0"
+echo "i5.3.21.python-neutronclient-11.4.0" >> $OSLOG_PROCESS
 
-time { bash i5.2.01.osc-placement-4.6.0.sh ; }
+time { bash i5.3.21.python-neutronclient-11.4.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

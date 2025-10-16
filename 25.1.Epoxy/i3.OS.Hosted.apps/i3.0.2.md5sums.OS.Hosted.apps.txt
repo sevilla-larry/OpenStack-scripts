@@ -36,6 +36,10 @@ a117096140bebf95dc03825c535ed101 os_traits-3.4.0.tar.gz
 e1e6db90f3bdc3ea36761777b1e3e049 osprofiler-4.2.0.tar.gz
 
 
+# i3.3.01 os-client-config-2.1.0
+cb8e78d37424f9f8c28b1ff05d662b66 os-client-config-2.1.0.tar.gz
+
+
 # Note: OpenStack - tarballs - 3.1.10
 # i3.4.1 etcd-v3.1.10            (from OpenStack site amd64 binary/sources )
 19465352ad5ad02ff4b2b9eb5857205e etcd-v3.1.10-linux-amd64.tar.gz

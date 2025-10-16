@@ -36,6 +36,10 @@ https://tarballs.opendev.org/openstack/pycadf/pycadf-4.0.1.tar.gz
 https://tarballs.opendev.org/openstack/osprofiler/osprofiler-4.2.0.tar.gz
 
 
+# i3.3.01 os-client-config-2.1.0
+https://tarballs.opendev.org/openstack/os-client-config/os-client-config-2.1.0.tar.gz
+
+
 # Note: OpenStack - tarballs - 3.1.10
 # i3.1.11 etcd-v3.1.10 (from OpenStack site amd64 binary/sources )
 https://tarballs.opendev.org/openstack/etcd/v3.1.10/etcd-v3.1.10-linux-amd64.tar.gz
