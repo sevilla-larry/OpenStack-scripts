@@ -225,6 +225,15 @@ efa855b264bc05f429d63208237ac491 warlock-2.0.1-py3-none-any.whl
 # i1.1.73 paramiko-4.0.0
 86c64e731c55db62c0be2ddcb97e6be5 paramiko-4.0.0.tar.gz
 
+# i1.1.74 jwcrypto-1.5.6
+1e4e957c883f41fc54d57c970512385e jwcrypto-1.5.6.tar.gz
+
+# i1.1.75 redis-6.1.1
+750e4ca1ef863bab6e0b156aca1d9c50 redis-6.1.1.tar.gz
+
+# i1.1.7x websockify-0.13.0
+92199f085943c3b8510e89de5f2717df websockify-0.13.0.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz

@@ -225,6 +225,15 @@ https://files.pythonhosted.org/packages/a7/22/27582568be639dfe22ddb3902225f91f2f
 # i1.1.73 paramiko-4.0.0
 https://files.pythonhosted.org/packages/1f/e7/81fdcbc7f190cdb058cffc9431587eb289833bdd633e2002455ca9bb13d4/paramiko-4.0.0.tar.gz
 
+# i1.1.74 jwcrypto-1.5.6
+https://files.pythonhosted.org/packages/e1/db/870e5d5fb311b0bcf049630b5ba3abca2d339fd5e13ba175b4c13b456d08/jwcrypto-1.5.6.tar.gz
+
+# i1.1.75 redis-6.1.1
+https://files.pythonhosted.org/packages/07/8b/14ef373ffe71c0d2fde93c204eab78472ea13c021d9aee63b0e11bd65896/redis-6.1.1.tar.gz
+
+# i1.1.7x websockify-0.13.0
+https://files.pythonhosted.org/packages/f7/9e/fa7b6322fe22a02cf34256cbe300a9468533038b1262c7960119a787b595/websockify-0.13.0.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 https://files.pythonhosted.org/packages/cb/b7/2fa37f52b4f38bc8eb6d4923163dd822ca6f9e2f817378478a5de73b239e/dogpile_cache-1.3.4.tar.gz

@@ -196,10 +196,10 @@ echo "."
 
 ###
 
-echo "i1.1.14.typing-extensions-4.12.2"
-echo "i1.1.14.typing-extensions-4.12.2" >> $OSLOG_PROCESS
+echo "i1.1.14.typing_extensions-4.12.2"
+echo "i1.1.14.typing_extensions-4.12.2" >> $OSLOG_PROCESS
 
-time { bash i1.1.14.typing-extensions-4.12.2.sh ; }
+time { bash i1.1.14.typing_extensions-4.12.2.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -998,6 +998,48 @@ echo "i1.1.73.paramiko-4.0.0"
 echo "i1.1.73.paramiko-4.0.0" >> $OSLOG_PROCESS
 
 time { bash i1.1.73.paramiko-4.0.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.74.jwcrypto-1.5.6"
+echo "i1.1.74.jwcrypto-1.5.6" >> $OSLOG_PROCESS
+
+time { bash i1.1.74.jwcrypto-1.5.6.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.75.redis-6.1.1"
+echo "i1.1.75.redis-6.1.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.75.redis-6.1.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.76.websockify-0.13.0"
+echo "i1.1.76.websockify-0.13.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.76.websockify-0.13.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
