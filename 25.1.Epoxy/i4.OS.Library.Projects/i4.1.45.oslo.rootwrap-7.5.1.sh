@@ -1,20 +1,27 @@
-# i080.9.12.oslo.rootwrap-7.3.0.sh
+# i4.1.45.oslo.rootwrap-7.5.1.sh
+#
+
+#
+# Dependencies Required:
+#
+#               i3.1.04 debtcollector-3.0.0
 #
 
 #
 # Required by:
 #
-#               i111.9.3 Nova-30.0.0
+#               i6.22.1 Nova-31.1.0
 #
 
-export PKG="oslo.rootwrap-7.3.0"
-export PKGLOG_DIR=$OSLOG/080.12
+export PKG="oslo.rootwrap-7.5.1"
+export PKGLOG_DIR=$OSLOG/4.1.45
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
+export SOURCES=`pwd`
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -52,8 +59,9 @@ echo "4. pyTest ..." >> $PKGLOG_ERROR
 pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 
-cd ..
+cd $SOURCES
 rm -rf $PKG
+unset SOURCES
 unset OSLOG_PROCESS
 unset PKGLOG_INSTALL PKGLOG_BUILD
 unset PKGLOG_CHECK
