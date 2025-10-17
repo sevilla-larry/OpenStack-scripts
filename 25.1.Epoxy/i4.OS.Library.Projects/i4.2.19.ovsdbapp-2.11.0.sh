@@ -17,7 +17,7 @@
 #
 
 export PKG="ovsdbapp-2.11.0"
-export PKGLOG_DIR=$OSLOG/4.1.19
+export PKGLOG_DIR=$OSLOG/4.2.19
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

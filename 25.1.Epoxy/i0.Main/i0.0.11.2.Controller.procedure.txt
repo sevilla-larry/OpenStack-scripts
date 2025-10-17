@@ -330,57 +330,13 @@ F.  RabbitMQ
 
             ###
 
-G.  OpenStack Services Support Apps
-
-        export OSLOG=/var/log/os
-        export LFSLOG=/var/log/blfs
-        export MAKEFLAGS="-j$(nproc)"
-        export NPROC="$(nproc)"
-        export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
-
-        ###
-        # for VBs
-        #
-        export CFLAGS="-O2 -march=nehalem -mtune=generic -pipe -fomit-frame-pointer -msse4.2"
-        #
-        ###
-        # for VMs
-        #   and
-        # for PCs
-        #
-        export CFLAGS="-O2 -march=native -mtune=native -pipe -fomit-frame-pointer -mavx2 -mfma"
-        #
-        ###
-
-        export CXXFLAGS=$CFLAGS
-        export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
-
-        echo $OSLOG           # /var/log/os
-        echo $LFSLOG          # /var/log/blfs
-        echo $MAKEFLAGS       # -j$(nproc)
-        echo $NPROC           # $(nproc)
-        echo $LANG            # en_US.UTF-8
-        echo $LC_ALL          # C.utf8
-        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
-
-        echo $CFLAGS
-        echo $CXXFLAGS
-        echo $LDFLAGS
-
-        echo $SHELL           # /bin/bash
-        ls -l /bin/sh         # bash
-        ls -l /usr/bin/awk    # gawk
-
-        cd /sources
-
-
-H.  KeyStone - Identity service
+G.  KeyStone - Identity service
 
     # ubuntu install, automatically created /etc/apache2/keystone.conf
     # https://docs.openstack.org/keystone/2025.1/install/keystone-install-ubuntu.html
     # https://docs.openstack.org/keystone/2025.1/install/keystone-install-obs.html
 
-    H.01. KeyStone database
+    G.01. KeyStone database
 
         ###
 
@@ -412,15 +368,59 @@ H.  KeyStone - Identity service
         #
         ###
 
-    H.02. KeyStone install
+    G.02. KeyStone install
 
         ###
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+        export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
+
+        ###
+        # for VBs
+        #
+        export CFLAGS="-O2 -march=nehalem -mtune=generic -pipe -fomit-frame-pointer -msse4.2"
+        #
+        ###
+        # for VMs
+        #   and
+        # for PCs
+        #
+        export CFLAGS="-O2 -march=native -mtune=native -pipe -fomit-frame-pointer -mavx2 -mfma"
+        #
+        ###
+
+        export CXXFLAGS=$CFLAGS
+        export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
+
+        pathprepend /usr/local/bin  PATH
+        pathprepend /usr/local/sbin PATH
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+
+        echo $CFLAGS
+        echo $CXXFLAGS
+        echo $LDFLAGS
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
 
         bash i6.16.0.sh      # KeyStone
 
         ###
 
-    H.03. KeyStone configuration
+    G.03. KeyStone configuration
 
         ### edit
         nano /etc/keystone/keystone.conf
@@ -448,7 +448,7 @@ H.  KeyStone - Identity service
 
         ###
 
-    H.04. Populate the Identity service database
+    G.04. Populate the Identity service database
 
         ###
 
@@ -456,7 +456,7 @@ H.  KeyStone - Identity service
     
         ###
 
-    H.05. Initialize Fernet key repositories
+    G.05. Initialize Fernet key repositories
 
         ###
 
@@ -465,7 +465,7 @@ H.  KeyStone - Identity service
 
         ###
 
-    H.06. Check some things
+    G.06. Check some things
 
         iptables -S
 
@@ -505,7 +505,7 @@ H.  KeyStone - Identity service
               "media-types": [{"base": "application/json",
                                "type": "application/vnd.openstack.identity-v3+json"}]}}
 
-    H.07. Bootstrap the Identity service
+    G.07. Bootstrap the Identity service
 
         ###
 
@@ -529,11 +529,11 @@ H.  KeyStone - Identity service
         ###
 
 
-I.  Create a domain, projects, users, roles
+H.  Create a domain, projects, users, roles
 
     $$$ as user
 
-    I.01. Configure the administrative account
+    H.01. Configure the administrative account
             by setting the proper environmental variables
 
         $$$
@@ -570,7 +570,7 @@ I.  Create a domain, projects, users, roles
         openstack role add --project demo --user demo demo
         $$$ Note: no output
 
-    I.02 Verify Operation
+    H.02 Verify Operation
 
         $$$
         openstack domain list
@@ -588,9 +588,9 @@ I.  Create a domain, projects, users, roles
             --os-project-domain-name default --os-user-domain-name Default \
             --os-project-name demo --os-username demo token issue
 
-J.  Create OpenStack client environment scripts
+I.  Create OpenStack client environment scripts
 
-    J.01. Create scripts
+    I.01. Create scripts
 
         $$$ create admin-openrc file (in user home directory)
             export OS_PROJECT_DOMAIN_NAME=Default
@@ -612,7 +612,7 @@ J.  Create OpenStack client environment scripts
             export OS_IDENTITY_API_VERSION=3
             export OS_IMAGE_API_VERSION=2
 
-    J.02 Verify Operation
+    I.02 Verify Operation
 
         $$$
         . admin-openrc
@@ -626,9 +626,10 @@ J.  Create OpenStack client environment scripts
         . demo-openrc
         openstack token issue
 
-K.  Glance - Image Service
 
-    K.01. Glance database
+J.  Glance - Image Service
+
+    J.01. Glance database
 
         ###
 
@@ -660,7 +661,7 @@ K.  Glance - Image Service
         #
         ###
 
-    K.02. Create the service credentials
+    J.02. Create the service credentials
 
         $$$ as user
         . admin-openrc
@@ -690,7 +691,7 @@ K.  Glance - Image Service
         $$$ none
         $$$ https://docs.openstack.org/oslo.limit/latest/user/usage.html#configuration
 
-    K.03. Glance install
+    J.03. Glance install
 
         ###
 
@@ -744,7 +745,7 @@ K.  Glance - Image Service
 
         ###
 
-    K.04. Glance configuration
+    J.04. Glance configuration
 
         ### edit
         nano /etc/glance/glance-api.conf
@@ -827,7 +828,7 @@ K.  Glance - Image Service
         ### Glance Configuration
         # https://docs.openstack.org/glance/2025.1/configuration/index.html
 
-    K.05. Endpoint list and reader access
+    J.05. Endpoint list and reader access
 
         $$$ Note: To list endpoints
         openstack endpoint list --service glance --region RegionOne
@@ -840,11 +841,11 @@ K.  Glance - Image Service
         openstack role add --user glance --user-domain default --system all reader
         $$$ Note: no display
 
-    K.06. Restart Glance
+    J.06. Restart Glance
 
         reboot
 
-    K.07. Check some things
+    J.07. Check some things
 
         iptables -S
 
@@ -912,7 +913,7 @@ K.  Glance - Image Service
                                            {"id": "v2.0", "status": "SUPPORTED",
                                             "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]}]}
 
-    K.08. Populate the Image service database:
+    J.08. Populate the Image service database:
 
         ###
 
@@ -920,7 +921,7 @@ K.  Glance - Image Service
 
         ###
 
-    K.09. Verify Operation
+    J.09. Verify Operation
 
         $$$
 
@@ -953,9 +954,9 @@ K.  Glance - Image Service
         $$$ Confirm upload of the image and validate attributes
         glance image-list
 
-L.  Placement - Placement Service
+K.  Placement - Placement Service
 
-    L.01. Placement database
+    K.01. Placement database
 
         ###
 
@@ -987,7 +988,7 @@ L.  Placement - Placement Service
         #
         ###
 
-    L.02. Create the service credentials
+    K.02. Create the service credentials
 
         $$$ as user
         . admin-openrc
@@ -1012,7 +1013,7 @@ L.  Placement - Placement Service
         openstack endpoint create --region RegionOne \
           placement admin http://controller:8778
 
-    L.03. Placement install
+    K.03. Placement install
 
         ###
 
@@ -1065,7 +1066,7 @@ L.  Placement - Placement Service
 
         ###
 
-    L.04. Placement configuration
+    K.04. Placement configuration
 
         ### edit
         nano /etc/placement/placement.conf
@@ -1099,9 +1100,9 @@ L.  Placement - Placement Service
         ### end /etc/placement/placement.conf
 
         ### Placement Configuration
-        # https://docs.openstack.org/placement/2024.2/configuration/sample-config.html
+        # https://docs.openstack.org/placement/2025.1/configuration/sample-config.html
 
-    L.05. Populate the Placement database:
+    K.05. Populate the Placement database:
 
         ###
 
@@ -1109,11 +1110,11 @@ L.  Placement - Placement Service
 
         ###
 
-    L.06. Restart Placement
+    K.06. Restart Placement
 
         reboot
 
-    L.07. Check some things
+    K.07. Check some things
 
         iptables -S
 
@@ -1150,7 +1151,7 @@ L.  Placement - Placement Service
                 "status": "CURRENT",
                  "links": [{"rel": "self", "href": ""}]}]}
 
-    L.08. Verify Operation
+    K.08. Verify Operation
 
         $$$
         . admin-openrc
@@ -1164,9 +1165,9 @@ L.  Placement - Placement Service
         openstack --os-placement-api-version 1.6    \
             trait list --sort-column name
 
-M.  Nova - Compute Service
+L.  Nova - Compute Service
 
-    M.01. Nova databases
+    L.01. Nova databases
 
         ###
 
@@ -1203,7 +1204,7 @@ M.  Nova - Compute Service
         #
         ###
 
-    M.02. Create the service credentials
+    L.02. Create the service credentials
 
         $$$ as user
         . admin-openrc
@@ -1228,7 +1229,7 @@ M.  Nova - Compute Service
         openstack endpoint create --region RegionOne \
           compute admin http://controller:8774/v2.1
 
-    M.03. Nova install
+    L.03. Nova install
 
         ###
 
@@ -1265,6 +1266,10 @@ M.  Nova - Compute Service
         echo $LC_ALL          # C.utf8
         echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 
+        echo $CFLAGS
+        echo $CXXFLAGS
+        echo $LDFLAGS
+
         echo $SHELL           # /bin/bash
         ls -l /bin/sh         # bash
         ls -l /usr/bin/awk    # gawk
@@ -1277,9 +1282,10 @@ M.  Nova - Compute Service
 
         ###
 
-    M.04. Nova configuration
+    L.04. Nova configuration
 
-        ### edit /etc/nova/nova.conf
+        ### edit
+        nano /etc/nova/nova.conf
 
         [api_database]
       # connection = mysql+pymysql://nova:NOVA_DBPASS@controller/nova_api
@@ -1378,6 +1384,10 @@ M.  Nova - Compute Service
         ### Additional Suggestions by Grok 3
         ###
 
+        [consoleauth]
+        token_ttl = 1000
+        enforce_session_timeout = True
+
         [DEFAULT]
       # enabled_apis = osapi_compute,metadata
       # use_neutron = true
@@ -1386,7 +1396,9 @@ M.  Nova - Compute Service
         [vnc]
         vncserver_listen = 0.0.0.0
         vncserver_proxyclient_address = 10.0.0.11
+        vncserver_proxyclient_address = <controller_management_ip>
         novncproxy_base_url = http://10.0.0.11:6080/vnc_auto.html
+        novncproxy_base_url = http://<controller_public_ip>:6080/vnc_auto.html
         novncproxy_host = 0.0.0.0
         novncproxy_port = 6080
         # Explicitly set the path if not using default
@@ -1395,15 +1407,15 @@ M.  Nova - Compute Service
         ###
 
         [DEFAULT]
-      # log_dir ??? packaging BUG
-      # log_dir=/var/log/nova
+      # log_dir ??? packaging BUG Ubuntu or Debian ???
+        log_dir=/var/log/nova
 
         ### end /etc/nova/nova.conf
 
         ### Nova Configuration
-        # https://docs.openstack.org/nova/2024.2/configuration/sample-config.html
+        # https://docs.openstack.org/nova/2025.1/configuration/sample-config.html
 
-    M.05. Populate the Nova databases:
+    L.05. Populate the Nova databases:
 
         ###
 
@@ -1424,11 +1436,11 @@ M.  Nova - Compute Service
 
         ###
 
-    M.06. Restart Compute services
+    L.06. Restart Compute services
 
         reboot
 
-    M.07. Check some things
+    L.07. Check some things
 
         iptables -S
 
@@ -1472,3 +1484,34 @@ M.  Nova - Compute Service
                           "links":
                            [{"rel": "self",
                             "href": "http://controller:8774/v2.1/"}]}]}
+
+
+M.  Neutron - Networking Service
+
+    M.01. Neutron database
+
+        ###
+
+        mariadb
+        # or # mysql
+
+        ### display:
+        #
+        # MariaDB [(none)]
+        #
+
+        CREATE DATABASE neutron;
+
+        GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' \
+            IDENTIFIED BY 'openstack';
+        GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' \
+            IDENTIFIED BY 'openstack';
+
+        exit;
+
+        #
+        #
+        # end MariaDB
+        #
+        ###
+

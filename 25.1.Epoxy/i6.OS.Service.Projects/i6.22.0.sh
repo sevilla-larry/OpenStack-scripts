@@ -38,17 +38,17 @@ echo "."
 
 ###
 
-# echo "i111.6.noVNC"
-# echo "i111.6.noVNC" >> $LFSLOG_PROCESS
+echo "i6.22.4.noVNC"
+echo "i6.22.4.noVNC" >> $LFSLOG_PROCESS
 
-# time { bash i111.6.noVNC.sh ; }
+time { bash i6.22.4.noVNC.sh ; }
 
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
-# echo "." >> $LFSLOG_PROCESS
-# echo "."
-# echo "."
+echo "." >> $LFSLOG_PROCESS
+echo "."
+echo "."
 
 #####
 

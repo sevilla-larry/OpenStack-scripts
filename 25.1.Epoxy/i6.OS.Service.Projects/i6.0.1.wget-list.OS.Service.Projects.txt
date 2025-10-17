@@ -10,6 +10,11 @@ https://docs.openstack.org/keystone/2025.1/_static/keystone.conf.sample
 # 16.22 nova-31.1.0
 https://tarballs.opendev.org/openstack/nova/nova-31.1.0.tar.gz
 https://docs.openstack.org/nova/2025.1/_static/nova.conf.sample
+# 16.22.4 noVNC-1.6.0
+--content-disposition https://github.com/novnc/noVNC/archive/refs/tags/v1.6.0.tar.gz
+# 111 noVNC-1.5.0
+#--content-disposition https://github.com/novnc/noVNC/archive/refs/tags/v1.5.0.tar.gz
+# https://sourceforge.net/projects/novnc.mirror/files/v1.5.0/noVNC%201.5.0%20source%20code.tar.gz
 
 # i6.24 Placement-13.0.0
 https://tarballs.opendev.org/openstack/placement/openstack_placement-13.0.0.tar.gz
@@ -17,10 +22,5 @@ https://docs.openstack.org/placement/2025.1/_static/placement.conf.sample
 # 152.5 osc-placement-4.5.0
 #https://tarballs.opendev.org/openstack/osc-placement/osc-placement-4.5.0.tar.gz
 
-
-
-# 111 noVNC-1.5.0
-#--content-disposition https://github.com/novnc/noVNC/archive/refs/tags/v1.5.0.tar.gz
-# https://sourceforge.net/projects/novnc.mirror/files/v1.5.0/noVNC%201.5.0%20source%20code.tar.gz
 
 
