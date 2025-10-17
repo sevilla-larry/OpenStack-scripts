@@ -58,6 +58,20 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+
+echo "i3.2.04.tooz-7.0.0"
+echo "i3.2.04.tooz-7.0.0" >> $OSLOG_PROCESS
+
+time { bash i3.2.04.tooz-7.0.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset OSLOG_PROCESS

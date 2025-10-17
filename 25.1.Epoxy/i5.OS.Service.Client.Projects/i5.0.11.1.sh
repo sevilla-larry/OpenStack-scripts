@@ -68,20 +68,6 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
-###
-
-# echo "i040.9.15.python-neutronclient-11.3.1"
-# echo "i040.9.15.python-neutronclient-11.3.1" >> $OSLOG_PROCESS
-
-# time { bash i040.9.15.python-neutronclient-11.3.1.sh ; }
-
-# date +"%Y/%b/%d %H:%M"
-# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-# echo "." >> $OSLOG_PROCESS
-# echo "."
-# echo "."
-
 #####
 
 unset OSLOG_PROCESS
