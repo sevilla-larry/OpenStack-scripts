@@ -7,7 +7,7 @@
 #               i3.1.01      pbr-6.1.1
 #               i4.1.03      cliff-4.9.1
 #               i3.1.04      debtcollector-3.0.0
-#               i1.1.09      iso8601-2.1.0.whl
+#               i1.1.09      iso8601-2.1.0 whl
 #               i1.1.16      netaddr-1.3.0
 #               i4.2.14      openstacksdk-4.4.0
 #               i4.2.18      osc-lib-3.2.0
