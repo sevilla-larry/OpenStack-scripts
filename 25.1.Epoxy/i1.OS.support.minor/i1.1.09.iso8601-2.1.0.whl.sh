@@ -11,8 +11,8 @@
 #               i4.2.14 openstacksdk-4.4.0
 #               i4.1.49 oslo.utils-8.2.0
 #               i4.1.50 oslo.versionedobjects-3.6.0
-#               i6.22.1 Nova-31.1.0
 #               i5.3.21 python-neutronclient-11.4.0
+#               i6.22.1 Nova-31.1.0
 #               i8.23   python-openstackclient-7.5.0
 #
 

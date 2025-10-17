@@ -126,10 +126,10 @@ echo "."
 
 ###
 
-echo "i3.1.09.microversion-parse-2.0.0"
-echo "i3.1.09.microversion-parse-2.0.0" >> $OSLOG_PROCESS
+echo "i3.1.09.microversion_parse-2.0.0"
+echo "i3.1.09.microversion_parse-2.0.0" >> $OSLOG_PROCESS
 
-time { bash i3.1.09.microversion-parse-2.0.0.sh ; }
+time { bash i3.1.09.microversion_parse-2.0.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

@@ -5,6 +5,7 @@
 # Required by:
 #
 #               i1.1.02 cffi-1.17.1
+#               i1.1.72 PyNaCl-1.5.0
 #
 
 export PKG="pycparser-2.23"
