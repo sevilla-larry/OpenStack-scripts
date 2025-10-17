@@ -16,7 +16,7 @@
 #
 # Required by:
 #
-#               i4.2.15 os_brick-6.11.0
+#               i4.2.15 os-brick-6.11.0
 #
 
 export PKG="os-win-5.9.0"

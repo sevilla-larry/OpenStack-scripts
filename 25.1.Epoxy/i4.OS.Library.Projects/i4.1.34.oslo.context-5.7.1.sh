@@ -13,15 +13,16 @@
 #
 #               i4.2.01 castellan-5.2.1
 #               i4.3.07 keystonemiddleware-10.9.0
+#               i4.2.15 os-brick-6.11.0
 #               i4.1.38 oslo.log-7.1.0
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.41 oslo.middleware-6.3.1
 #               i4.1.42 oslo.policy-4.5.1
+#               i4.1.50 oslo.versionedobjects-3.6.0
 #               i6.12.1 Glance-30.0.0
 #               i6.16.1 KeyStone-27.0.0
+#               i6.22.1 Nova-31.1.0
 #               i6.24.1 Openstack-Placement-13.0.0
-#               i080.9.14 oslo.versionedobjects-3.4.0
-#               i090.9.11 os_brick-6.9.1
 #
 
 export PKG="oslo_context-5.7.1"

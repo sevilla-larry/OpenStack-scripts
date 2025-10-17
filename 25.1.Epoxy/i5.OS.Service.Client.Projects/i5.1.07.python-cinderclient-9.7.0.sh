@@ -16,6 +16,7 @@
 #
 # Required by:
 #
+#               i6.22.1 Nova-31.1.0
 #               i8.23 python-openstackclient-7.5.0
 #
 

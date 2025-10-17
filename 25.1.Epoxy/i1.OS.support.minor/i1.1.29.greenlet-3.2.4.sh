@@ -6,8 +6,9 @@
 #
 #               i1.1.30 SQLAlchemy-2.0.43
 #               i1.1.36 eventlet-0.39.1
+#               i4.1.43 oslo.privsep-3.6.0
 #               i4.1.47 oslo.service-4.1.1
-#               i080.9.13 oslo.privsep-3.4.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="greenlet-3.2.4"

@@ -17,7 +17,7 @@
 #
 # Required by:
 #
-#               i4.2.15 os_brick-6.11.0
+#               i4.2.15 os-brick-6.11.0
 #               i4.2.17 os_vif-4.1.0
 #               i6.22.1 Nova-31.1.0
 #

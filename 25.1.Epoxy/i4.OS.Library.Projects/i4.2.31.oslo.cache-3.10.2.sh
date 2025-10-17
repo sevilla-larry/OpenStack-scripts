@@ -17,6 +17,7 @@
 #
 #               i4.3.07 keystonemiddleware-10.9.0
 #               i6.16.1 KeyStone-27.0.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="oslo_cache-3.10.2"

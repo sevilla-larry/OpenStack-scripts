@@ -11,11 +11,12 @@
 #
 # Required by:
 #
+#               i3.2.03 os-win-5.9.0
 #               i4.2.04 glance_store-4.9.1
+#               i4.1.43 oslo.privsep-3.6.0
 #               i4.1.47 oslo.service-4.1.1
 #               i6.12.1 Glance-30.0.0
-#               i080.9.13 oslo.privsep-3.4.0
-#               i090.9.07 os-win-5.9.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="eventlet-0.39.1"

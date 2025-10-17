@@ -11,7 +11,7 @@
 # Required by:
 #
 #               i1.1.03 cryptography-43.0.3 whl
-#               i?.??   oslo.privsep-3.4.0
+#               i4.1.43 oslo.privsep-3.6.0
 #
 
 export PKG="cffi-1.17.1"

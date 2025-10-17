@@ -20,6 +20,7 @@
 #               i4.1.48 oslo.upgradecheck-2.5.0
 #               i6.12.1 Glance-30.0.0
 #               i6.16.1 KeyStone-27.0.0
+#               i6.22.1 Nova-31.1.0
 #               i6.24.1 Openstack-Placement-13.0.0
 #
 

@@ -31,7 +31,7 @@
 #               i5.1.12      python-glanceclient-4.8.0
 #               b30.13.24.30 Requests-2.32.5
 #               i4.1.20      stevedore-5.4.1
-#websockify>=0.9.0
+#               i1.1.76      websockify-0.13.0
 #               i4.2.31      oslo.cache-3.10.2
 #               i4.1.32      oslo.concurrency-7.1.0
 #               i4.1.33      oslo.config-9.7.1
@@ -43,7 +43,7 @@
 #               i4.1.48      oslo.upgradecheck-2.5.0
 #               i4.1.49      oslo.utils-8.2.0
 #               i4.2.35      oslo.db-17.2.1
-#oslo.rootwrap>=5.15.0
+#               i4.1.45      oslo.rootwrap-7.5.1
 #               i4.1.39      oslo.messaging-16.1.0
 #               i4.1.42      oslo.policy-4.5.1
 #               i4.1.43      oslo.privsep-3.6.0
@@ -52,14 +52,14 @@
 #               i1.1.19      rfc3986-2.0.0
 #               i4.1.41      oslo.middleware-6.3.1
 #               b10.13.24.17 psutil-7.0.0
-#oslo.versionedobjects>=1.35.0
-#os-brick>=6.10.0
+#               i4.1.50      oslo.versionedobjects-3.6.0
+#               i4.2.15      os-brick-6.11.0
 #               i3.1.07      os-resource-classes-1.1.0
 #               i3.1.08      os-traits-3.4.0
-#os-vif>=3.1.0
+#               i4.2.17      os_vif-4.1.0
 #               i4.2.01      castellan-5.2.1
 #               i3.1.09      microversion-parse-2.0.0
-#tooz>=1.58.0
+#               i3.2.04      tooz-7.0.0
 #               i1.3.01      cursive-0.2.3
 #               i1.1.69      retrying-1.3.4
 #               i3.1.02      os-service-types-1.7.0

@@ -11,10 +11,12 @@
 # Required by:
 #
 #               i1.2.01 dogpile.cache-1.3.4
+#               i3.2.04 tooz-7.0.0
 #               i4.2.01 castellan-5.2.1
 #               i4.1.03 cliff-4.9.1
 #               i4.2.04 glance_store-4.9.1
 #               i4.1.06 keystoneauth1-5.10.0
+#               i4.2.17 os_vif-4.1.0
 #               i4.2.18 osc-lib-3.2.0
 #               i4.2.22 taskflow-5.12.0
 #               i4.1.33 oslo.config-9.7.1
@@ -26,9 +28,8 @@
 #               i5.1.16 python-keystoneclient-5.6.0
 #               i6.12.1 Glance-30.0.0
 #               i6.16.1 KeyStone-27.0.0
+#               i6.22.1 Nova-31.1.0
 #               i8.23   python-openstackclient-7.5.0
-#               i?.?? os_vif-3.7.0
-#               i?.?? tooz-6.3.0
 #
 
 export PKG="stevedore-5.4.1"

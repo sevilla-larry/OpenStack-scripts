@@ -11,6 +11,7 @@
 # Required by:
 #
 #               i6.12.1 Glance-30.0.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="retrying-1.3.4"

@@ -16,14 +16,14 @@
 #               i4.1.49      oslo.utils-8.2.0
 #               b30.13.24.30 Requests-2.32.5
 #               i1.1.63      tenacity-9.0.0
-#               i090.9.07 os-win-5.9.0
+#               i3.2.03      os-win-5.9.0
 #               b10.13.24.17 psutil-7.0.0
 #
 
 #
 # Required by:
 #
-#               i6.22.1  Nova-31.1.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="os_brick-6.11.0"

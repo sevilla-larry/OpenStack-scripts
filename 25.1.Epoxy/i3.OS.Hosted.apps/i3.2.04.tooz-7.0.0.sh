@@ -4,14 +4,14 @@
 #
 # Dependencies Required:
 #
-#               i020.9.02 stevedore-5.3.0
-#               i060.9.32 voluptuous-0.15.2
-#               b30.13.24.17 Msgpack-1.0.8
-#               i060.9.01 fasteners-0.19
-#               i060.9.27 tenacity-9.0.0
-#               i070.9.01 futurist-3.0.0
-#               i030.9.02 oslo.utils-7.3.0
-#               i030.9.04 oslo.serialization-5.5.0
+#               i4.1.20      stevedore-5.4.1
+#               i1.1.80      voluptuous-0.15.2
+#               b30.13.25.17 Msgpack-1.1.1
+#               i1.1.37      fasteners-0.19
+#               i1.1.63      tenacity-9.0.0
+#               i3.1.05      futurist-3.0.0
+#               i4.1.49      oslo.utils-8.2.0
+#               i4.1.46      oslo.serialization-5.7.0
 #
 
 #

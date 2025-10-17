@@ -13,7 +13,7 @@
 #
 # Required by:
 #
-#               i6.221 Nova-31.1.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="websockify-0.12.0"

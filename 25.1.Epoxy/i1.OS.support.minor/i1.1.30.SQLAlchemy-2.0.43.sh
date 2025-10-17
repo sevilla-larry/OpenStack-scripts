@@ -14,6 +14,7 @@
 #               i4.2.35 oslo.db-17.2.1
 #               i6.12.1 Glance-30.0.0
 #               i6.16.1 KeyStone-27.0.0
+#               i6.22.1 Nova-31.1.0
 #               i6.24.1 Openstack-Placement-13.0.0
 #
 

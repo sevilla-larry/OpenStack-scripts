@@ -24,10 +24,12 @@
 #
 # Required by:
 #
+#               i3.3.01 os-client-config-2.1.0
 #               i4.2.18 osc-lib-3.2.0
 #               i4.2.37 oslo.limit-2.6.1
+#               i5.3.21 python-neutronclient-11.4.0
+#               i6.22.1 Nova-31.1.0
 #               i8.23   python-openstackclient-7.5.0
-#               i040.9.15 python-neutronclient-11.3.1
 #
 
 export PKG="openstacksdk-4.4.0"

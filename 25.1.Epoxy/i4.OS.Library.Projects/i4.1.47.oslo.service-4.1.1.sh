@@ -22,8 +22,9 @@
 #
 # Required by:
 #
+#               i4.2.15 os-brick-6.11.0
 #               i4.1.39 oslo.messaging-16.1.0
-#               i090.9.11 os_brick-6.9.1
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="oslo_service-4.1.1"

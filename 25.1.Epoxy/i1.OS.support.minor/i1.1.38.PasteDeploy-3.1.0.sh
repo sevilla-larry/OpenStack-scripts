@@ -6,6 +6,7 @@
 #
 #               i4.1.47 oslo.service-4.1.1
 #               i6.12.1 Glance-30.0.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="PasteDeploy-3.1.0"

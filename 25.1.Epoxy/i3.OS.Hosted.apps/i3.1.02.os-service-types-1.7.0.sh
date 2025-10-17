@@ -12,6 +12,7 @@
 #
 #               i4.1.06 keystoneauth1-5.10.0
 #               i4.2.14 openstacksdk-4.4.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="os-service-types-1.7.0"

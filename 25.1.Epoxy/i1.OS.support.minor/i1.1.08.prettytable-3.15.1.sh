@@ -17,7 +17,7 @@
 #               i5.1.07 python-cinderclient-9.7.0
 #               i5.1.12 python-glanceclient-4.8.0
 #               i6.12.1 Glance-30.0.0
-#               i?.??   Nova-30.0.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="prettytable-3.15.1"

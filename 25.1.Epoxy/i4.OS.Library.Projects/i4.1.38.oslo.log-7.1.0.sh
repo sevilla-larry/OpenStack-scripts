@@ -18,22 +18,23 @@
 # Required by:
 #
 #               i1.3.01 cursive-0.2.3
+#               i3.2.03 os-win-5.9.0
 #               i4.2.01 castellan-5.2.1
 #               i4.3.07 keystonemiddleware-10.9.0
+#               i4.2.15 os-brick-6.11.0
+#               i4.2.17 os_vif-4.1.0
 #               i4.2.31 oslo.cache-3.10.0
 #               i4.2.37 oslo.limit-2.6.1
 #               i4.1.39 oslo.messaging-16.1.0
 #               i4.1.40 oslo.metrics-0.11.0
+#               i4.1.43 oslo.privsep-3.6.0
 #               i4.1.47 oslo.service-4.1.1
+#               i4.1.50 oslo.versionedobjects-3.6.0
+#               i5.3.21 python-neutronclient-11.4.0
 #               i6.12.1 Glance-30.0.0
 #               i6.16.1 KeyStone-27.0.0
+#               i6.22.1 Nova-31.1.0
 #               i6.24.1 Openstack-Placement-13.0.0
-#               i040.9.15 python-neutronclient-11.3.1
-#               i080.9.13 oslo.privsep-3.4.0
-#               i080.9.14 oslo.versionedobjects-3.4.0
-#               i090.9.07 os-win-5.9.0
-#               i090.9.11 os_brick-6.9.1
-#               i090.9.13 os_vif-3.7.0
 #
 
 export PKG="oslo_log-7.1.0"

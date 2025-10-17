@@ -10,6 +10,7 @@
 #
 # Required by:
 #
+#               i6.22.1 Nova-31.1.0
 #               i6.24.1 Openstack-Placement-13.0.0
 #
 

@@ -19,8 +19,8 @@
 #
 #               i5.2.01 osc-placement-4.6.0
 #               i5.1.16 python-keystoneclient-5.6.0
+#               i5.3.21 python-neutronclient-11.4.0
 #               i8.23   python-openstackclient-7.5.0
-#               i?.?? python-neutronclient-11.3.1
 #
 
 export PKG="osc-lib-3.2.0"

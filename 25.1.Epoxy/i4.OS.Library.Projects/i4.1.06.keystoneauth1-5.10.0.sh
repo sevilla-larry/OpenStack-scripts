@@ -26,8 +26,9 @@
 #               i5.1.07 python-cinderclient-9.7.0
 #               i5.1.12 python-glanceclient-4.8.0
 #               i5.1.16 python-keystoneclient-5.6.0
+#               i5.2.21 python-neutronclient-11.4.0
 #               i6.12.1 Glance-30.0.0
-#               i?.??   python-neutronclient-11.3.1
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="keystoneauth1-5.10.0"

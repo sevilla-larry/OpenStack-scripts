@@ -22,6 +22,7 @@
 #
 #               i1.3.01 cursive-0.2.3
 #               i6.12.1 Glance-30.0.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="castellan-5.2.1"

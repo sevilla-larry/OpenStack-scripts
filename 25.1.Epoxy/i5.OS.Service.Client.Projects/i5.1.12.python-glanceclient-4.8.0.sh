@@ -15,6 +15,12 @@
 #               i1.1.52      pyOpenSSL-24.2.1
 #
 
+#
+# Required by:
+#
+#               i6.22.1 Nova-31.1.0
+#
+
 export PKG="python_glanceclient-4.8.0"
 export PKGLOG_DIR=$OSLOG/5.1.12
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log

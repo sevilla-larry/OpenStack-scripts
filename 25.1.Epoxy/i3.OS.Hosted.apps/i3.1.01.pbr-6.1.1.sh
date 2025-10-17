@@ -18,11 +18,15 @@
 #               i3.1.06 automaton-3.2.0
 #               i3.1.07 os-resource-classes-1.1.0
 #               i3.1.08 os-traits-3.4.0
+#               i3.2.03 os-win-5.9.0
 #               i4.2.01 castellan-5.2.1
 #               i4.1.06 keystoneauth1-5.10.0
 #               i4.3.07 keystonemiddleware-10.9.0
 #               i4.2.14 openstacksdk-4.4.0
+#               i4.2.15 os-brick-6.11.0
+#               i4.2.17 os_vif-4.1.0
 #               i4.2.18 osc-lib-3.2.0
+#               i4.2.19 ovsdbapp-2.11.0
 #               i4.1.20 stevedore-5.4.1
 #               i4.2.22 taskflow-5.12.0
 #               i4.1.32 oslo.concurrency-7.1.0
@@ -40,15 +44,12 @@
 #               i5.1.07 python-cinderclient-9.7.0
 #               i5.1.12 python-glanceclient-4.8.0
 #               i5.1.16 python-keystoneclient-5.6.0
+#               i5.3.21 python-neutronclient-11.4.0
 #               i6.12.1 Glance-30.0.0
 #               i6.16.1 KeyStone-27.0.0
+#               i6.22.1 Nova-31.1.0
 #               i6.24.1 Openstack-Placement-13.0.0
 #               i8.23   python-openstackclient-7.5.0
-#               i?.?? python-neutronclient-11.3.1
-#               i?.?? os-win-5.9.0
-#               i?.?? os_brick-6.9.1
-#               i?.?? ovsdbapp-2.8.0
-#               i?.?? os_vif-3.7.0
 #
 
 export PKG="pbr-6.1.1"

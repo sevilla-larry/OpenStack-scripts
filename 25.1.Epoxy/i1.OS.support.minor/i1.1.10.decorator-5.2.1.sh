@@ -6,7 +6,7 @@
 #
 #               i1.2.01 dogpile.cache-1.3.4
 #               i4.2.14 openstacksdk-4.4.0
-#               i?.??   Nova-30.0.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="decorator-5.2.1"

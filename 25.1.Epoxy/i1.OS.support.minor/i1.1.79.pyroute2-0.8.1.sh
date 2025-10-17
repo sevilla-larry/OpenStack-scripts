@@ -4,8 +4,8 @@
 #
 # Required by:
 #
-#               i4.2.17 os-vif-4.1.0
-
+#               i4.2.17 os_vif-4.1.0
+#
 
 export PKG="pyroute2-0.8.1"
 export PKGLOG_DIR=$OSLOG/1.1.79

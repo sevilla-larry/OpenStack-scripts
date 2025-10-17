@@ -4,10 +4,11 @@
 #
 # Required by:
 #
+#               i3.2.04 tooz-7.0.0
 #               i4.2.22 taskflow-5.12.0
 #               i4.1.39 oslo.messaging-16.1.0
 #               i6.12.1 Glance-30.0.0
-#               i090.9.14 tooz-6.3.0
+#               i6.22.1 Nova-31.1.0
 #
 
 export PKG="futurist-3.0.0"

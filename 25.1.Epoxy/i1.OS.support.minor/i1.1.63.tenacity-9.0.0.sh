@@ -4,9 +4,9 @@
 #
 # Required by:
 #
+#               i3.2.04 tooz-7.0.0
+#               i4.2.15 os-brick-6.11.0
 #               i4.2.22 taskflow-5.12.0
-#               i090.9.11 os_brick-6.9.1
-#               i090.9.14 tooz-6.3.0
 #
 
 export PKG="tenacity-9.0.0"

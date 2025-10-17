@@ -9,7 +9,7 @@
 #
 #               i3.1.01      pbr-6.1.1
 #               i1.1.30      SQLAlchemy-2.0.43
-#               i4.2.07      keystonemiddleware-10.9.0
+#               i4.3.07      keystonemiddleware-10.9.0
 #               i1.1.40      Routes-2.5.1
 #               i1.1.21      WebOb-1.8.9
 #               i1.1.59      jsonschema-4.23.0
