@@ -67,6 +67,7 @@
 #               i3.1.05      futurist-3.0.0
 #               i4.2.14      openstacksdk-4.4.0
 #               b10.13.24.28 PyYAML-6.0.2
+#
 
 export PKG="nova-31.1.0"
 export PKGLOG_DIR=$OSLOG/6.22.1
