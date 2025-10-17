@@ -336,6 +336,20 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+
+echo "i4.1.50.oslo.versionedobjects-3.6.0"
+echo "i4.1.50.oslo.versionedobjects-3.6.0" >> $OSLOG_PROCESS
+
+time { bash i4.1.50.oslo.versionedobjects-3.6.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset OSLOG_PROCESS
