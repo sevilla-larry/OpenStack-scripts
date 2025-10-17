@@ -1078,6 +1078,34 @@ echo "."
 
 ###
 
+echo "i1.1.79.pyroute2-0.8.1"
+echo "i1.1.79.pyroute2-0.8.1" >> $OSLOG_PROCESS
+
+time { bash i1.1.79.pyroute2-0.8.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.80.voluptuous-0.15.2"
+echo "i1.1.80.voluptuous-0.15.2" >> $OSLOG_PROCESS
+
+time { bash i1.1.80.voluptuous-0.15.2.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i1.1.14.netifaces-0.11.0"
 # echo "i1.1.14.netifaces-0.11.0" >> $OSLOG_PROCESS
 
