@@ -16,8 +16,8 @@
 #               i6.22.1 Nova-31.1.0
 #
 
-export PKG="websockify-0.12.0"
-export PKGLOG_DIR=$OSLOG/095.26
+export PKG="websockify-0.13.0"
+export PKGLOG_DIR=$OSLOG/1.1.76
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
