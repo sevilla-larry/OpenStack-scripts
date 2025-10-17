@@ -20,7 +20,7 @@
 #
 # Required by:
 #
-#               i4.2.17 os-vif-4.1.0.sh
+#               i4.2.17 os_vif-4.1.0.sh
 #               i6.22.1 Nova-31.1.0
 #
 
