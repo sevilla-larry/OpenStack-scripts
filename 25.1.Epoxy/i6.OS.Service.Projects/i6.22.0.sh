@@ -1,4 +1,4 @@
-# i111.1.sh
+# i6.22.0.sh
 #
 # Build Nova
 #
@@ -10,24 +10,10 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 
 #####
 
-echo "i111.3.Nova-30.0.0"
-echo "i111.3.Nova-30.0.0" >> $LFSLOG_PROCESS
+echo "i6.22.1.Nova-31.1.0"
+echo "i6.22.1.Nova-31.1.0" >> $LFSLOG_PROCESS
 
-time { bash i111.3.Nova-30.0.0.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
-
-echo "." >> $LFSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i111.5.Nova.rc.d"
-echo "i111.5.Nova.rc.d" >> $LFSLOG_PROCESS
-
-time { bash i111.5.Nova.rc.d.sh ; }
+time { bash i6.22.1.Nova-31.1.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
@@ -38,10 +24,10 @@ echo "."
 
 ###
 
-echo "i111.6.noVNC"
-echo "i111.6.noVNC" >> $LFSLOG_PROCESS
+echo "i6.22.2.Nova.rc.d"
+echo "i6.22.2.Nova.rc.d" >> $LFSLOG_PROCESS
 
-time { bash i111.6.noVNC.sh ; }
+time { bash i6.22.2.Nova.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
@@ -49,6 +35,20 @@ date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
 echo "." >> $LFSLOG_PROCESS
 echo "."
 echo "."
+
+###
+
+# echo "i111.6.noVNC"
+# echo "i111.6.noVNC" >> $LFSLOG_PROCESS
+
+# time { bash i111.6.noVNC.sh ; }
+
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+
+# echo "." >> $LFSLOG_PROCESS
+# echo "."
+# echo "."
 
 #####
 

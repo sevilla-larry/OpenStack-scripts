@@ -1273,7 +1273,7 @@ M.  Nova - Compute Service
 
         ###
 
-        bash i111.1.sh      # Nova
+        bash i6.22.0.sh       # Nova
 
         ###
 
