@@ -1,4 +1,4 @@
-# i2.21.openvswitch-3.3.6.sh
+# i2.4.1.openvswitch-3.3.6.sh
 #
 # https://docs.openvswitch.org/en/latest/intro/install/general/
 #
@@ -12,7 +12,7 @@
 #
 
 export PKG="openvswitch-3.3.6"
-export PKGLOG_DIR=$OSLOG/2.21
+export PKGLOG_DIR=$OSLOG/2.4.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -56,20 +56,19 @@ echo "5. Make Install ..." >> $OSLOG_PROCESS
 echo "5. Make Install ..." >> $PKGLOG_ERROR
 make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-echo "6. Make Modules Install ..."
-echo "6. Make Modules Install ..." >> $OSLOG_PROCESS
-echo "6. Make Modules Install ..." >> $PKGLOG_ERROR
-make modules_install >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+# echo "6. Make Modules Install ..."
+# echo "6. Make Modules Install ..." >> $OSLOG_PROCESS
+# echo "6. Make Modules Install ..." >> $PKGLOG_ERROR
+# make modules_install >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-depmod  >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+# depmod  >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-modprobe openvswitch >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+# modprobe openvswitch >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 mkdir -pv /var/run/openvswitch /var/log/openvswitch             \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 chown -Rv root:root /var/run/openvswitch /var/log/openvswitch   \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
 
 
 cd $SOURCES

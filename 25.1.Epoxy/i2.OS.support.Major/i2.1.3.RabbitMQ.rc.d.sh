@@ -1,6 +1,6 @@
-# i2.03.RabbitMQ.rc.d.sh
+# i2.1.3.RabbitMQ.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/2.03
+export PKGLOG_DIR=$OSLOG/2.1.3
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -17,13 +17,13 @@ DIRMODE=755
 CONFMODE=644
 COOKIEMODE=400
 CURRDIR=`pwd`
-ENVFILESRC=$CURRDIR/i2.04.RabbitMQ-env.conf.txt
+ENVFILESRC=$CURRDIR/i2.1.4.RabbitMQ-env.conf.txt
 ENVFILEDST=${ETCDIR}/rabbitmq/rabbitmq-env.conf
-INITDFILESRC=$CURRDIR/i2.05.RabbitMQ.init.d.sh
+INITDFILESRC=$CURRDIR/i2.1.5.RabbitMQ.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/rabbitmq
 INITDFILEREL=../init.d/rabbitmq
 COOKIEFILE=.erlang.cookie
-COOKIESRC=$CURRDIR/i2.06.RabbitMQ${COOKIEFILE}.txt
+COOKIESRC=$CURRDIR/i2.1.6.RabbitMQ${COOKIEFILE}.txt
 COOKIEDST1=/var/lib/rabbitmq/$COOKIEFILE
 COOKIEDST2=/root/$COOKIEFILE
 #RABBITMQ_HOME=/usr/local/rabbitmq_server-4.1.4

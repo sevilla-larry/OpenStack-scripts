@@ -31,10 +31,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 ###
 
-echo "i2.01.Erlang-27.3.4.3"
-echo "i2.01.Erlang-27.3.4.3" >> $OSLOG_PROCESS
+echo "i2.1.1.Erlang-27.3.4.3"
+echo "i2.1.1.Erlang-27.3.4.3" >> $OSLOG_PROCESS
 
-time { bash i2.01.Erlang-27.3.4.3.sh ; }
+time { bash i2.1.1.Erlang-27.3.4.3.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -61,10 +61,10 @@ echo "."
 
 ###
 
-echo "i2.02.RabbitMQ-4.1.4"
-echo "i2.02.RabbitMQ-4.1.4" >> $OSLOG_PROCESS
+echo "i2.1.2.RabbitMQ-4.1.4"
+echo "i2.1.2.RabbitMQ-4.1.4" >> $OSLOG_PROCESS
 
-time { bash i2.02.RabbitMQ-4.1.4.sh ; }
+time { bash i2.1.2.RabbitMQ-4.1.4.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -75,10 +75,10 @@ echo "."
 
 ###
 
-echo "i2.03.RabbitMQ.rc.d"
-echo "i2.03.RabbitMQ.rc.d" >> $OSLOG_PROCESS
+echo "i2.1.3.RabbitMQ.rc.d"
+echo "i2.1.3.RabbitMQ.rc.d" >> $OSLOG_PROCESS
 
-time { bash i2.03.RabbitMQ.rc.d.sh ; }
+time { bash i2.1.3.RabbitMQ.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

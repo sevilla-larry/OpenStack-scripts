@@ -190,7 +190,6 @@ D.  Support Apps - Major - Configuration 1
         !includedir /etc/mariadb/mariadb.conf.d/
 
         ### create mariadb.conf.d subdirectory
-
         mkdir -v /etc/mariadb/mariadb.conf.d
 
         ### add/create file:
@@ -954,6 +953,7 @@ J.  Glance - Image Service
         $$$ Confirm upload of the image and validate attributes
         glance image-list
 
+
 K.  Placement - Placement Service
 
     K.01. Placement database
@@ -1164,6 +1164,7 @@ K.  Placement - Placement Service
             resource class list --sort-column name
         openstack --os-placement-api-version 1.6    \
             trait list --sort-column name
+
 
 L.  Nova - Compute Service
 

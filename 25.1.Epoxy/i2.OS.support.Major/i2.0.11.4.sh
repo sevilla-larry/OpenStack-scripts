@@ -1,10 +1,10 @@
-# i2.0.11.2.sh
+# i2.0.11.4.sh
 #
 # Build OpenStack support Major
 #
-# MemCached
+# OpenVSwitch
 #
-# https://docs.openstack.org/install-guide/environment-memcached.html
+# https://docs.openvswitch.org/en/latest/intro/install/general/
 #
 
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -14,10 +14,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i2.2.1.MemCacheD-1.6.39"
-echo "i2.2.1.MemCacheD-1.6.39" >> $OSLOG_PROCESS
+echo "i2.4.1.openvswitch-3.3.6"
+echo "i2.4.1.openvswitch-3.3.6" >> $OSLOG_PROCESS
 
-time { bash i2.2.1.MemCacheD-1.6.39.sh ; }
+time { bash i2.4.1.openvswitch-3.3.6.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -28,10 +28,10 @@ echo "."
 
 ###
 
-echo "i2.2.2.MemCacheD.rc.d"
-echo "i2.2.2.MemCacheD.rc.d" >> $OSLOG_PROCESS
+echo "i2.4.2.openvswitch-switch.rc.d"
+echo "i2.4.2.openvswitch-switch.rc.d" >> $OSLOG_PROCESS
 
-time { bash i2.2.2.MemCacheD.rc.d.sh ; }
+time { bash i2.4.2.openvswitch-switch.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

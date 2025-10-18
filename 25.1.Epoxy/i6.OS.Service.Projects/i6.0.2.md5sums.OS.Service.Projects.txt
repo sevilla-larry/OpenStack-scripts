@@ -10,15 +10,14 @@
 # 16.22 nova-31.1.0
 8c1b94a3b18220f539f6d7b797fbfa94 nova-31.1.0.tar.gz
 #                                nova.conf.sample
+# 16.22.4 noVNC-1.6.0
+#                                noVNC-1.6.0.tar.gz
+# 111 noVNC 1.5.0
+# noVNC-1.5.0.tar.gz
+# noVNC%201.5.0%20source%20code.tar.gz
 
 # i6.24 Placement-13.0.0
 ceb968fce84c033420b2c5302b4d5325 openstack_placement-13.0.0.tar.gz
 #                                placement.conf.sample
 # 152.5 osc-placement-4.5.0
 #c131a8ad6aeab907f290f2672cde887c osc-placement-4.5.0.tar.gz
-
-# 111 noVNC 1.5.0
-# noVNC-1.5.0.tar.gz
-# noVNC%201.5.0%20source%20code.tar.gz
-
-

@@ -25,7 +25,7 @@ echo "2. Install ..." >> $PKGLOG_ERROR
 
 mkdir -vp /usr/share/novnc                                        \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -vr *.html app/ core/ utils/ /usr/share/novnc/    \
+cp -vr *.html app/ core/ utils/ vendor/ /usr/share/novnc/    \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 chown -vR nova:nova /usr/share/novnc                              \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR

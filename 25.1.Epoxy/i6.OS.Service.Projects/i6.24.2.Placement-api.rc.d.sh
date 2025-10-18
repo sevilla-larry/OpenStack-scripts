@@ -32,7 +32,7 @@ chmod -v ${MODE} $INITDFILEDST         \
 
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K07placement    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S92placement    \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S93placement    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K07placement    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR

@@ -1,19 +1,30 @@
 rc.0
 
+        K07placement
+        K08glance
 K10gpm
-K46ntpd
-K90sysklogd
-K94swap
-K98localnet
+    K14etcd
+    K15memcached
+    K16rabbitmq
+    K26mariadb
+    K28httpd
 K30sshd
+K46ntpd
+K75openvswitch-switch
 K80network
+K90sysklogd
 K92sendsignals
+K94swap
 K96mountfs
+K98localnet
 S99halt
 
 rc.1
 
 K10gpm
+    K14etcd
+    K26mariadb
+    K28httpd
 K30sshd
 K46ntpd
 K80network
@@ -22,44 +33,69 @@ K90sysklogd
 rc.2
 
 S10network
+S15openvswitch-switch
 S20sysklogd
 S30sshd
+    S32httpd
+    S34mariadb
 S36ntpd
 S70gpm
+    S86etcd
 
 rc.3
 
-S10network
-S20sysklogd
+S10sysklogd
+S20network
 S30sshd
+    S32httpd
+    S34mariadb
 S36ntpd
 S70gpm
+    S84rabbitmq
+    S85memcached
+    S86etcd
+        S92glance
+        S93placement
 
 rc.4
 
-S10network
-S20sysklogd
+S10sysklogd
+S20network
 S30sshd
+    S32httpd
+    S34mariadb
 S36ntpd
 S70gpm
+    S86etcd
 
 rc.5
 
-S10network
-S20sysklogd
+S10sysklogd
+S20network
 S30sshd
+    S32httpd
+    S34mariadb
 S36ntpd
 S70gpm
+    S86etcd
 
 rc.6
 
+        K07placement
+        K08glance
 K10gpm
-K46ntpd
-K90sysklogd
-K94swap
-K98localnet
+    K14etcd
+    K15memcached
+    K16rabbitmq
+    K26mariadb
+    K28httpd
 K30sshd
+K46ntpd
+K75openvswitch-switch
 K80network
+K90sysklogd
 K92sendsignals
+K94swap
 K96mountfs
+K98localnet
 S99reboot

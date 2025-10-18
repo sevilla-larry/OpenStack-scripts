@@ -1,6 +1,6 @@
-# i2.22.openvswitch-switch.rc.d.sh
+# i2.2.2.MemCacheD.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/2.22
+export PKGLOG_DIR=$OSLOG/2.2.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,9 +16,9 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i2.23.openvswitch-switch.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/openvswitch-switch
-INITDFILEREL=../init.d/openvswitch-switch
+INITDFILESRC=$CURRDIR/i2.2.3.MemCacheD.init.d.sh
+INITDFILEDST=${EXTDIR}/rc.d/init.d/memcached
+INITDFILEREL=../init.d/memcached
 
 
 echo "Install Init.d/rc.d ..."
@@ -30,11 +30,11 @@ cp -v $INITDFILESRC $INITDFILEDST      \
 chmod -v ${MODE} $INITDFILEDST         \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K85openvswitch-switch \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K15memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S15openvswitch-switch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S85memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K85openvswitch-switch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K15memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 
