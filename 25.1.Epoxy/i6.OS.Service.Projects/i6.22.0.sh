@@ -38,10 +38,10 @@ echo "."
 
 ###
 
-echo "i6.22.4.noVNC"
-echo "i6.22.4.noVNC" >> $LFSLOG_PROCESS
+echo "i6.22.4.noVNC-1.6.0"
+echo "i6.22.4.noVNC-1.6.0" >> $LFSLOG_PROCESS
 
-time { bash i6.22.4.noVNC.sh ; }
+time { bash i6.22.4.noVNC-1.6.0.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

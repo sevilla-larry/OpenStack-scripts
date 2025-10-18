@@ -10,3 +10,7 @@ https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.1.4/rabbitmq-se
 
 # i2.11 memcached-1.6.39
 http://www.memcached.org/files/memcached-1.6.39.tar.gz
+
+
+# i2.20 openvswitch-3.3.6
+https://www.openvswitch.org/releases/openvswitch-3.3.6.tar.gz
