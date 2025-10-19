@@ -23,4 +23,4 @@ fd5336428ed27a1413365c662cdce9c9 python_keystoneclient-5.6.0.tar.gz
 ff8d8a9e8fc82c1043193833c9483fb8 python-neutronclient-11.4.0.tar.gz
 
 # i5.1.22 python_novaclient-18.9.0
-https://tarballs.opendev.org/openstack/python-novaclient/python_novaclient-18.9.0.tar.gz
+49eaec2c5e8c671c2e21144fc24c0e9b python_novaclient-18.9.0.tar.gz
