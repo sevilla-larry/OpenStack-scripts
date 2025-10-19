@@ -16,6 +16,9 @@ https://tarballs.opendev.org/openstack/keystoneauth/keystoneauth1-5.10.0.tar.gz
 # i4.2.07 keystonemiddleware-10.9.0
 https://tarballs.opendev.org/openstack/keystonemiddleware/keystonemiddleware-10.9.0.tar.gz
 
+# i4.1.12 neutron_lib-3.18.2
+https://tarballs.opendev.org/openstack/neutron-lib/neutron_lib-3.18.2.tar.gz
+
 # i4.2.14 openstacksdk-4.4.0
 https://tarballs.opendev.org/openstack/openstacksdk/openstacksdk-4.4.0.tar.gz
 
