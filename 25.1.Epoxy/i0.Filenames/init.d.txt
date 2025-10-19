@@ -1,5 +1,6 @@
 rc.0
 
+        K06nova
         K07placement
         K08glance
 K10gpm
@@ -10,7 +11,7 @@ K10gpm
     K28httpd
 K30sshd
 K46ntpd
-K75openvswitch-switch
+        K75openvswitch-switch
 K80network
 K90sysklogd
 K92sendsignals
@@ -33,7 +34,6 @@ K90sysklogd
 rc.2
 
 S10network
-S15openvswitch-switch
 S20sysklogd
 S30sshd
     S32httpd
@@ -46,6 +46,7 @@ rc.3
 
 S10sysklogd
 S20network
+        S25openvswitch-switch
 S30sshd
     S32httpd
     S34mariadb
@@ -56,6 +57,7 @@ S70gpm
     S86etcd
         S92glance
         S93placement
+        S94nova
 
 rc.4
 
@@ -81,6 +83,7 @@ S70gpm
 
 rc.6
 
+        K06nova
         K07placement
         K08glance
 K10gpm
@@ -91,7 +94,7 @@ K10gpm
     K28httpd
 K30sshd
 K46ntpd
-K75openvswitch-switch
+        K75openvswitch-switch
 K80network
 K90sysklogd
 K92sendsignals

@@ -246,6 +246,9 @@ ee56c51e0541c112a853ae93666099ec ovs-3.5.2.tar.gz
 # i1.1.80 voluptuous-0.15.2
 d963b2b4f3f2c6489e85f32605418964 voluptuous-0.15.2.tar.gz
 
+# i1.1.81 pecan-1.6.0
+f397743614cd7da4e39d85bdd204ff7e pecan-1.6.0.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz
