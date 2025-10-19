@@ -23,7 +23,7 @@
 #               i1.1.49      alembic-1.14.1
 #               i1.1.16      netaddr-1.3.0
 #               i1.1.73      paramiko-4.0.0
-#               i1.1.09      iso8601-2.1.0.whl
+#               i1.1.09      iso8601-2.1.0 whl
 #               i1.1.59      jsonschema-4.23.0
 #               i5.1.07      python-cinderclient-9.7.0
 #               i4.1.06      keystoneauth1-5.10.0
