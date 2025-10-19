@@ -30,6 +30,25 @@ echo "." >> $OSLOG_PROCESS
 echo "."
 echo "."
 
+###
+
+##    i4.3.12.neutron-lib-3.18.2
+##      depends on
+##    i4.2.35.oslo.db-17.2.1
+
+
+echo "i4.3.12.neutron-lib-3.18.2"
+echo "i4.3.12.neutron-lib-3.18.2" >> $OSLOG_PROCESS
+
+time { bash i4.3.12.neutron-lib-3.18.2.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset OSLOG_PROCESS

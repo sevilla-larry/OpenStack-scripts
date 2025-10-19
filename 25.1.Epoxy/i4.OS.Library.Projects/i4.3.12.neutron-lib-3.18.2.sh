@@ -1,4 +1,4 @@
-# i4.2.12.neutron-lib-3.18.2.sh
+# i4.3.12.neutron-lib-3.18.2.sh
 #
 
 #
@@ -36,7 +36,7 @@
 #
 
 export PKG="neutron_lib-3.18.2"
-export PKGLOG_DIR=$OSLOG/4.2.12
+export PKGLOG_DIR=$OSLOG/4.3.12
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

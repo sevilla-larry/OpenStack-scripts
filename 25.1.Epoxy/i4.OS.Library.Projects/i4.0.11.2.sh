@@ -88,6 +88,24 @@ echo "."
 
 ###
 
+##    i4.2.16.os-ken-3.0.1
+##      depends on
+##    i4.1.33 oslo.config-9.7.1
+
+echo "i4.2.16.os-ken-3.0.1"
+echo "i4.2.16.os-ken-3.0.1" >> $OSLOG_PROCESS
+
+time { bash i4.2.16.os-ken-3.0.1.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 ##    i4.2.19.ovsdbapp-2.11.0
 ##      depends on
 ##    i1.2.03 fixtures-4.1.0

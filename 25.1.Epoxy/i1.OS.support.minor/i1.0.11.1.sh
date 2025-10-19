@@ -1106,6 +1106,48 @@ echo "."
 
 ###
 
+echo "i1.1.81.pecan-1.6.0"
+echo "i1.1.81.pecan-1.6.0" >> $OSLOG_PROCESS
+
+time { bash i1.1.81.pecan-1.6.0.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.82.ncclient-0.6.19"
+echo "i1.1.82.ncclient-0.6.19" >> $OSLOG_PROCESS
+
+time { bash i1.1.82.ncclient-0.6.19.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.1.83.setproctitle-1.3.7"
+echo "i1.1.83.setproctitle-1.3.7" >> $OSLOG_PROCESS
+
+time { bash i1.1.83.setproctitle-1.3.7.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
 # echo "i1.1.14.netifaces-0.11.0"
 # echo "i1.1.14.netifaces-0.11.0" >> $OSLOG_PROCESS
 
