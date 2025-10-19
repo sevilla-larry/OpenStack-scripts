@@ -46,19 +46,20 @@
 #               i4.1.49      oslo.utils-8.2.0
 #               i4.1.50      oslo.versionedobjects-3.6.0
 #               i3.2.02      osprofiler-4.2.0
-os-ken>=3.0.0
+#               i4.2.16      os-ken-3.0.1
 #               i3.1.07      os-resource-classes-1.1.0
 #               i1.1.78      ovs-3.5.2
 #               i4.2.19      ovsdbapp-2.11.0
 #               b10.13.24.17 psutil-7.0.0
 #               i1.1.79      pyroute2-0.8.1
 #               i1.1.52      pyOpenSSL-24.2.1
-python-novaclient>=9.1.0
+#               i5.1.22      python-novaclient-18.9.0
 #               i4.2.14      openstacksdk-4.4.0
-python-designateclient>=2.7.0
+#               i5.2.10      python-designateclient-6.2.0
 #               i4.2.17      os_vif-4.1.0
 #               i3.1.05      futurist-3.0.0
 #               i3.2.04      tooz-7.0.0
+#
 
 export PKG="neutron-26.0.1"
 export PKGLOG_DIR=$OSLOG/6.21.1
@@ -81,14 +82,14 @@ tar xvf $PKG.tar.gz > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 cd $PKG
 
 
-groupadd -g 447 nova            \
+groupadd -g 446 neutron         \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-useradd -c "nova"               \
-        -g nova                 \
+useradd -c "neutron"            \
+        -g neutron              \
         -s /bin/false           \
-        -d /var/lib/nova        \
-        -u 447                  \
-        nova                    \
+        -d /var/lib/neutron     \
+        -u 446                  \
+        neutron                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 #        -s /usr/sbin/nologin    \
 
@@ -109,27 +110,25 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                nova                  \
+                neutron                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/nova                   \
+install -vp -d -m755 /etc/neutron/plugins/ml2   \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/nova               \
+install -v -d -m777 /var/lib/neutron            \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/log/nova               \
+install -v -d -m777 /var/log/neutron            \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   ../nova.conf.sample                     \
-        /etc/nova/nova.conf                     \
+cp -v   ../neutron.conf.sample                  \
+        /etc/neutron/neutron.conf               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   etc/nova/api-paste.ini                  \
-        /etc/nova/api-paste.ini                 \
+cp -v   etc/neutron/api-paste.ini               \
+        /etc/neutron/api-paste.ini              \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR nova:nova /etc/nova                   \
-                /var/lib/nova                   \
-                /var/log/nova                   \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-# chmod 640 /etc/nova/*                         \
-#     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+chown -vR neutron:neutron /etc/neutron          \
+                /var/lib/neutron                \
+                /var/log/neutron                \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES

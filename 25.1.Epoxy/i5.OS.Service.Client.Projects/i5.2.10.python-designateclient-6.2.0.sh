@@ -22,8 +22,8 @@
 #               i6.21.1 Neutron-26.0.1
 #
 
-export PKG="python-neutronclient-11.4.0"
-export PKGLOG_DIR=$OSLOG/5.3.21
+export PKG="python_designateclient-6.2.0"
+export PKGLOG_DIR=$OSLOG/5.2.10
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -59,7 +59,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                python-neutronclient    \
+                python-designateclient  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 echo "4. pyTest ..."

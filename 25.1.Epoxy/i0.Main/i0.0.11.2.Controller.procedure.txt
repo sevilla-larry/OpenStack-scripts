@@ -1289,25 +1289,29 @@ L.  Nova - Compute Service
         nano /etc/nova/nova.conf
 
         [api_database]
+        # ...
       # connection = mysql+pymysql://nova:NOVA_DBPASS@controller/nova_api
         connection = mysql+pymysql://nova:openstack@controller/nova_api
 
         [database]
+        # ...
       # connection = mysql+pymysql://nova:NOVA_DBPASS@controller/nova
         connection = mysql+pymysql://nova:openstack@controller/nova
 
         [DEFAULT]
+        # ...
       # transport_url = rabbit://openstack:RABBIT_PASS@controller:5672/
         transport_url = rabbit://openstack:openstack@controller:5672/
 
         [api]
+        # ...
         auth_strategy = keystone
 
         # Note: Comment out or remove any other options
         # in the [keystone_authtoken] section
         #
         [keystone_authtoken]
-      # ...
+        # ...
         www_authenticate_uri  = http://controller:5000
             auth_url = http://controller:5000
         memcached_servers = controller:11211
@@ -1332,6 +1336,7 @@ L.  Nova - Compute Service
         password = openstack
 
         [DEFAULT]
+        # ...
         my_ip = 10.0.0.11
 
         ##
@@ -1368,6 +1373,8 @@ L.  Nova - Compute Service
         [oslo_concurrency]
         # ...
         lock_path = /var/lib/nova/tmp
+
+        # Due to a packaging bug, remove the log_dir option from the [DEFAULT] section.
 
         [placement]
         # ...
@@ -1570,3 +1577,148 @@ M.  Neutron - Networking Service
         #
         ###
 
+    M.02. Create the service credentials
+
+        $$$ as user
+        . admin-openrc
+
+        $$$ create the "neutron" user on "default" domain
+        openstack user create --domain default  \
+            --password openstack neutron
+
+        $$$ Add the "admin" role to the "nova" user and "service" project:
+        openstack role add --project service --user neutron admin
+        $$$ Note: no display
+
+        $$$ Create the placement service entity "Compute"
+        openstack service create --name neutron \
+            --description "Openstack Networking" network
+
+        $$$ Create the "Networking" service endpoints:
+        openstack endpoint create --region RegionOne \
+          network public http://controller:9696
+        openstack endpoint create --region RegionOne \
+          network internal http://controller:9696
+        openstack endpoint create --region RegionOne \
+          network admin http://controller:9696
+
+    M.03. Neutron install
+
+        ###
+
+        export OSLOG=/var/log/os
+        export LFSLOG=/var/log/blfs
+        export MAKEFLAGS="-j$(nproc)"
+        export NPROC="$(nproc)"
+
+        ###
+        # for VBs
+        #
+        export CFLAGS="-O2 -march=nehalem -mtune=generic -pipe -fomit-frame-pointer -msse4.2"
+        #
+        ###
+        # for VMs
+        #   and
+        # for PCs
+        #
+        export CFLAGS="-O2 -march=native -mtune=native -pipe -fomit-frame-pointer -mavx2 -mfma"
+        #
+        ###
+
+        export CXXFLAGS=$CFLAGS
+        export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
+
+        pathprepend /usr/local/bin  PATH
+        pathprepend /usr/local/sbin PATH
+
+        echo $OSLOG           # /var/log/os
+        echo $LFSLOG          # /var/log/blfs
+        echo $MAKEFLAGS       # -j$(nproc)
+        echo $NPROC           # $(nproc)
+        echo $LANG            # en_US.UTF-8
+        echo $LC_ALL          # C.utf8
+        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+
+        echo $CFLAGS
+        echo $CXXFLAGS
+        echo $LDFLAGS
+
+        echo $SHELL           # /bin/bash
+        ls -l /bin/sh         # bash
+        ls -l /usr/bin/awk    # gawk
+
+        cd /sources
+
+        ###
+
+        bash i6.21.0.sh       # Neutron
+
+    M.04. Neutron configuration
+
+        ### edit
+        nano /etc/neutron/neutron.conf
+
+        [database]
+        # ...
+      # connection = mysql+pymysql://neutron:NEUTRON_DBPASS@controller/neutron
+        connection = mysql+pymysql://neutron:openstack@controller/neutron
+
+        [DEFAULT]
+        # ...
+        core_plugin = ml2
+        service_plugins =
+
+        [DEFAULT]
+        # ...
+      # transport_url = rabbit://openstack:RABBIT_PASS@controller
+        transport_url = rabbit://openstack:openstack@controller
+      # transport_url = rabbit://openstack:openstack@controller:5672/ ### nova
+
+        [DEFAULT]
+        # ...
+        auth_strategy = keystone
+
+        [keystone_authtoken]
+        # ...
+        www_authenticate_uri  = http://controller:5000
+            auth_url = http://controller:5000
+        memcached_servers = controller:11211
+        auth_type = password
+            project_domain_name = default
+            user_domain_name = default
+            project_name = service
+            username = neutron
+          # password = NEUTRON_PASS
+            password = openstack
+
+        [DEFAULT]
+        # ...
+        notify_nova_on_port_status_changes = true
+        notify_nova_on_port_data_changes = true
+
+        [nova]
+        # ...
+        auth_url = http://controller:5000
+        auth_type = password
+        project_domain_name = Default
+        user_domain_name = Default
+        region_name = RegionOne
+        project_name = service
+        username = nova
+        password = NOVA_PASS
+        password = openstack
+
+        [oslo_concurrency]
+        # ...
+        lock_path = /var/lib/nova/tmp
+
+
+        ### end /etc/neutron/neutron.conf
+
+        ### Nova Configuration
+        # https://docs.openstack.org/neutron/2025.1/configuration/samples/neutron.html
+
+        ### Modular Layer 2 (ML2) plug-in Configuration
+        ### edit
+        nano /etc/neutron/plugins/ml2/ml2_conf.ini
+        
