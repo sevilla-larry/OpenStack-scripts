@@ -19,7 +19,7 @@
 #               a.08.75      Jinja2-3.1.6
 #               i4.3.07      keystonemiddleware-10.9.0
 #               i1.1.16      netaddr-1.3.0
-neutron-lib>=3.17.0
+#               i4.2.12      neutron-lib-3.18.2
 #               i5.1.21      python-neutronclient-11.4.0
 #               i1.1.63      tenacity-9.0.0
 #               i1.1.30      SQLAlchemy-2.0.43
