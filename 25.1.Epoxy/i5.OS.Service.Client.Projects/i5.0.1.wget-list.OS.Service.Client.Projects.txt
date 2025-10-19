@@ -1,17 +1,23 @@
 # OpenStack Service Client Projects
 
 
-# i5.04 python_barbicanclient-7.1.0
+# 15.2.01 osc_placement-4.6.0
+https://tarballs.opendev.org/openstack/osc-placement/osc_placement-4.6.0.tar.gz
+
+# i5.1.04 python_barbicanclient-7.1.0
 https://tarballs.opendev.org/openstack/python-barbicanclient/python_barbicanclient-7.1.0.tar.gz
 
-# i5.07 python_cinderclient-9.7.0
+# i5.1.07 python_cinderclient-9.7.0
 https://tarballs.opendev.org/openstack/python-cinderclient/python_cinderclient-9.7.0.tar.gz
 
-# i5.12 python_glanceclient-4.8.0
+# i5.1.12 python_glanceclient-4.8.0
 https://tarballs.opendev.org/openstack/python-glanceclient/python_glanceclient-4.8.0.tar.gz
 
-# i5.16 python_keystoneclient-5.6.0
+# i5.1.16 python_keystoneclient-5.6.0
 https://tarballs.opendev.org/openstack/python-keystoneclient/python_keystoneclient-5.6.0.tar.gz
 
-# i5.21 python-neutronclient-11.4.0
+# i5.3.21 python-neutronclient-11.4.0
 https://tarballs.opendev.org/openstack/python-neutronclient/python-neutronclient-11.4.0.tar.gz
+
+# i5.1.22 python_novaclient-18.9.0
+https://tarballs.opendev.org/openstack/python-novaclient/python_novaclient-18.9.0.tar.gz

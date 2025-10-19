@@ -84,7 +84,7 @@ i5.18.python-manilaclient
 i5.19.python-masakariclient
 i5.20.python-mistralclient
 *i5.21.python-neutronclient
-i5.22.python-novaclient
+*i5.22.python-novaclient
 i5.23.python-observabilityclient
 i5.24.python-octaviaclient
 i5.25.python-swiftclient

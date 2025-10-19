@@ -22,5 +22,3 @@ https://docs.openstack.org/nova/2025.1/_static/nova.conf.sample
 # i6.24 Placement-13.0.0
 https://tarballs.opendev.org/openstack/placement/openstack_placement-13.0.0.tar.gz
 https://docs.openstack.org/placement/2025.1/_static/placement.conf.sample
-# 152.5 osc-placement-4.5.0
-#https://tarballs.opendev.org/openstack/osc-placement/osc-placement-4.5.0.tar.gz

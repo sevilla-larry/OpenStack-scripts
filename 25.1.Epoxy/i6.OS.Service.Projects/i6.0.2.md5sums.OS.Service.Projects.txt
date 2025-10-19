@@ -22,5 +22,3 @@
 # i6.24 Placement-13.0.0
 ceb968fce84c033420b2c5302b4d5325 openstack_placement-13.0.0.tar.gz
 #                                placement.conf.sample
-# 152.5 osc-placement-4.5.0
-#c131a8ad6aeab907f290f2672cde887c osc-placement-4.5.0.tar.gz
