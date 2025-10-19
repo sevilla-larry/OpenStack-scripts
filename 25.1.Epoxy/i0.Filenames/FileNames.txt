@@ -72,7 +72,7 @@ i5.06.python-brick-cinderclient-ext
 *i5.07.python-cinderclient
 i5.08.python-cloudkittyclient
 i5.09.python-cyborgclient
-i5.10.python-designateclient
+*i5.10.python-designateclient
 i5.11.python-freezerclient
 *i5.12.python-glanceclient
 i5.13.python-heatclient

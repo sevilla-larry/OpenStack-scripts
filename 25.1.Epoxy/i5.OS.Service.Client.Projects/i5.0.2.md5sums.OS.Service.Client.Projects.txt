@@ -10,6 +10,9 @@
 # i5.1.07 python_cinderclient-9.7.0
 aa5532cfa4d5969abc3e4b4484c7d745 python_cinderclient-9.7.0.tar.gz
 
+# i5.2.10 python_designateclient-6.2.0
+7a772e81facf3355d13fd4f9a96ef8c1 python_designateclient-6.2.0.tar.gz
+
 # i5.1.12 python_glanceclient-4.8.0
 66784cfc7df929c7c969a9b5267a411b python_glanceclient-4.8.0.tar.gz
 

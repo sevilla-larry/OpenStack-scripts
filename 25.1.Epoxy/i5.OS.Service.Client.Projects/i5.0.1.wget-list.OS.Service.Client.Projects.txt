@@ -10,6 +10,9 @@ https://tarballs.opendev.org/openstack/python-barbicanclient/python_barbicanclie
 # i5.1.07 python_cinderclient-9.7.0
 https://tarballs.opendev.org/openstack/python-cinderclient/python_cinderclient-9.7.0.tar.gz
 
+# i5.2.10 python_designateclient-6.2.0
+https://tarballs.opendev.org/openstack/python-designateclient/python_designateclient-6.2.0.tar.gz
+
 # i5.1.12 python_glanceclient-4.8.0
 https://tarballs.opendev.org/openstack/python-glanceclient/python_glanceclient-4.8.0.tar.gz
 
