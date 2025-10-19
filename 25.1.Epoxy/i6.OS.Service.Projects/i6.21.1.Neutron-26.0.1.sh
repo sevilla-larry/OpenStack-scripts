@@ -3,22 +3,25 @@
 # https://docs.openstack.org/neutron/2025.1/install/controller-install-ubuntu.html
 #
 
+#
+# Dependencies Required:
+#
 #               i3.1.01      pbr-6.1.1
 #               i1.1.41      Paste-3.10.1
 #               i1.1.38      PasteDeploy-3.1.0
 #               i1.1.40      Routes-2.5.1
-#               i3.1.04 debtcollector-3.0.0
+#               i3.1.04      debtcollector-3.0.0
 #               i1.1.10      decorator-5.2.1
 #               i1.1.36      eventlet-0.39.1
-pecan>=1.4.0
-#               i1.1.61 httplib2-0.22.0
+#               i1.1.81      pecan-1.6.0
+#               i1.1.61      httplib2-0.22.0
 #               b30.13.24.30 Requests-2.32.5
 #               a.08.75      Jinja2-3.1.6
 #               i4.3.07      keystonemiddleware-10.9.0
 #               i1.1.16      netaddr-1.3.0
 neutron-lib>=3.17.0
 #               i5.1.21      python-neutronclient-11.4.0
-#               i1.1.63 tenacity-9.0.0
+#               i1.1.63      tenacity-9.0.0
 #               i1.1.30      SQLAlchemy-2.0.43
 #               i1.1.21      WebOb-1.8.9
 #               i4.1.06      keystoneauth1-5.10.0
@@ -42,13 +45,13 @@ neutron-lib>=3.17.0
 #               i4.1.48      oslo.upgradecheck-2.5.0
 #               i4.1.49      oslo.utils-8.2.0
 #               i4.1.50      oslo.versionedobjects-3.6.0
-#               i3.2.02 osprofiler-4.2.0
+#               i3.2.02      osprofiler-4.2.0
 os-ken>=3.0.0
 #               i3.1.07      os-resource-classes-1.1.0
-#               i1.1.78 ovs-3.5.2
-#               i4.2.19 ovsdbapp-2.11.0
+#               i1.1.78      ovs-3.5.2
+#               i4.2.19      ovsdbapp-2.11.0
 #               b10.13.24.17 psutil-7.0.0
-#               i1.1.79 pyroute2-0.8.1
+#               i1.1.79      pyroute2-0.8.1
 #               i1.1.52      pyOpenSSL-24.2.1
 python-novaclient>=9.1.0
 #               i4.2.14      openstacksdk-4.4.0
