@@ -24,7 +24,7 @@
 #               i4.1.49      oslo.utils-8.2.0
 #               i4.1.50      oslo.versionedobjects-3.6.0
 #               i3.2.02      osprofiler-4.2.0
-setproctitle>=1.1.10
+#               i1.1.83      setproctitle-1.3.7
 #               i1.1.21      WebOb-1.8.9
 #               i3.1.08      os-traits-3.4.0
 #               i3.1.04      debtcollector-3.0.0
@@ -72,7 +72,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                cliff                   \
+                neutron-lib             \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."

@@ -252,6 +252,9 @@ f397743614cd7da4e39d85bdd204ff7e pecan-1.6.0.tar.gz
 # i1.1.82 ncclient-0.6.19
 4f4456cac3b5a77a08360f4bf668cc34 ncclient-0.6.19.tar.gz
 
+# i1.1.83 setproctitle-1.3.7
+422cd04321b1aa0f4b56d51d10ae5bb8 setproctitle-1.3.7.tar.gz
+
 
 # i1.2.01 dogpile.cache-1.3.4
 c59e7da8b6effd6bed0917149a38d416 dogpile_cache-1.3.4.tar.gz
