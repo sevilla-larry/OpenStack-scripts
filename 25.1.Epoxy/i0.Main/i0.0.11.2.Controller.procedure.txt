@@ -1437,6 +1437,15 @@ L.  Nova - Compute Service
 
         ###
 
+        iptables -A INPUT -p tcp --dport 8774 -j ACCEPT
+        iptables -A INPUT -p tcp --dport 6080 -j ACCEPT
+
+        iptables-save > /etc/iptables.rules
+
+        echo "iptables-restore < /etc/iptables.rules" >> /etc/rc.local
+
+        ###
+
     L.06. Restart Compute services
 
         reboot
@@ -1448,6 +1457,8 @@ L.  Nova - Compute Service
             -P INPUT ACCEPT
             -P FORWARD ACCEPT
             -P OUTPUT ACCEPT
+            -A INPUT -p tcp -m tcp --dport 8774 -j ACCEPT
+            -A INPUT -p tcp -m tcp --dport 6080 -j ACCEPT
 
         nc -w5 -z -v controller 8774
 
@@ -1455,11 +1466,22 @@ L.  Nova - Compute Service
             Ncat: Connected to 10.0.0.11:8774.
             Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
 
+        nc -w5 -z -v controller 6080
+
+            Ncat: Version 7.98 ( https://nmap.org/ncat )
+            Ncat: Connected to 10.0.0.11:6080.
+            Ncat: 0 bytes sent, 0 bytes received in 0.01 seconds.
+
         lsof -i:8774
 
             COMMAND   PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
             nova-api xxxx root xxu  IPv4   nnnn      0t0  TCP *:8774 (LISTEN)
             ...      .... .... ...  ....   ....      ...  ... ...... ........
+
+        lsof -i:6080
+
+            COMMAND    PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            nova-novn 1249 root 7u  IPv4   4469      0t0  TCP *:6080 (LISTEN)
 
         curl -i http://controller:8774
 
@@ -1485,6 +1507,38 @@ L.  Nova - Compute Service
                           "links":
                            [{"rel": "self",
                             "href": "http://controller:8774/v2.1/"}]}]}
+
+        ps aux | grep nova
+
+        netstat -tuln | grep -E '8774|6080'
+
+            tcp        0      0 0.0.0.0:6080            0.0.0.0:*               LISTEN     
+            tcp        0      0 0.0.0.0:8774            0.0.0.0:*               LISTEN     
+
+        ss -tuln | grep -E '8774|6080'
+
+            tcp   LISTEN 0      0            0.0.0.0:6080       0.0.0.0:*   
+            tcp   LISTEN 0      0            0.0.0.0:8774       0.0.0.0:*   
+
+        iptables -L INPUT -v -n --line-numbers
+
+            Chain INPUT (policy ACCEPT 10196 packets, 1841K bytes)
+            num   pkts bytes target     prot opt in     out     source               destination         
+            1        0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:8774
+            2        0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:6080
+
+        telnet controller 8774
+
+            Trying 10.0.0.11...
+            Connected to controller.
+            Escape character is '^]'.
+
+                Ctrl-]
+                quit
+
+        $$$ from remote machine
+
+        nc -zv 10.0.0.11 8774
 
 
 M.  Neutron - Networking Service

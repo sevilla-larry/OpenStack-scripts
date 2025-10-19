@@ -10,6 +10,8 @@
 ###     how to install Open vSwitch on Controller node?
 ###
 
+#!/bin/sh
+
 ### BEGIN INIT INFO
 # Provides:          openvswitch-switch
 # Required-Start:    $network $local_fs $remote_fs
@@ -25,6 +27,7 @@
 PROGRAM="ovs-vswitchd"
 BINARY="/usr/sbin/${PROGRAM}"
 PIDFILE="/var/run/openvswitch/${PROGRAM}.pid"
+DB_SOCK="/var/run/openvswitch/db.sock"
 LOGFILE="/var/log/openvswitch/${PROGRAM}.log"
 OVS_CTL="/usr/share/openvswitch/scripts/ovs-ctl"
 

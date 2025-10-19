@@ -117,7 +117,7 @@ i6.17.magnum
 i6.18.manila
 i6.19.masakari
 i6.20.mistral
-i6.21.neutron
+*i6.21.neutron
 *i6.22.nova
 i6.23.octavia
 *i6.24.placement
