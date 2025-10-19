@@ -1,42 +1,14 @@
-# i4.2.12.neutron-lib-3.18.2.sh
+# i1.1.82.ncclient-0.6.19.sh
 #
-
-#
-# Dependencies Required:
-#
-#               i3.1.01      pbr-6.1.1
-#               i1.1.30      SQLAlchemy-2.0.43
-#               i1.1.81      pecan-1.6.0
-#               i4.1.06      keystoneauth1-5.10.0
-#               i1.1.16      netaddr-1.3.0
-#               i4.1.20      stevedore-5.4.1
-#               i4.2.16      os-ken-3.0.1
-#               i4.1.32      oslo.concurrency-7.1.0
-#               i4.1.33      oslo.config-9.7.1
-#               i4.1.34      oslo.context-5.7.1
-#               i4.2.35      oslo.db-17.2.1
-#               i4.1.36      oslo.i18n-6.5.1
-#               i4.1.38      oslo.log-7.1.0
-#               i4.1.39      oslo.messaging-16.1.0
-#               i4.1.42      oslo.policy-4.5.1
-#               i4.1.46      oslo.serialization-5.7.0
-#               i4.1.47      oslo.service-4.1.1
-#               i4.1.49      oslo.utils-8.2.0
-#               i4.1.50      oslo.versionedobjects-3.6.0
-#               i3.2.02      osprofiler-4.2.0
-setproctitle>=1.1.10
-#               i1.1.21      WebOb-1.8.9
-#               i3.1.08      os-traits-3.4.0
-#               i3.1.04      debtcollector-3.0.0
 
 #
 # Required by:
 #
-#               i6.21.1 Neutron-26.0.1
+#               i4.2.16 os-ken-3.0.1
 #
 
-export PKG="neutron_lib-3.18.2"
-export PKGLOG_DIR=$OSLOG/4.2.12
+export PKG="ncclient-0.6.19"
+export PKGLOG_DIR=$OSLOG/1.1.82
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log
@@ -72,7 +44,7 @@ pip3 install    --no-index              \
                 --no-user               \
                 --find-links dist       \
                 --no-cache-dir          \
-                cliff                   \
+                ncclient                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "4. pyTest ..."
