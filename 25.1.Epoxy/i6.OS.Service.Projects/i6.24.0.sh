@@ -24,10 +24,10 @@ echo "."
 
 ###
 
-echo "i6.24.2.Placement-api.rc.d"
-echo "i6.24.2.Placement-api.rc.d" >> $LFSLOG_PROCESS
+echo "i6.24.2.Placement.conf"
+echo "i6.24.2.Placement.conf" >> $LFSLOG_PROCESS
 
-time { bash i6.24.2.Placement-api.rc.d.sh ; }
+time { bash i6.24.2.Placement.conf.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

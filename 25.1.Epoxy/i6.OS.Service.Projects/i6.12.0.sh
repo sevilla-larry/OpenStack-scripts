@@ -24,10 +24,24 @@ echo "."
 
 ###
 
-echo "i6.12.2.Glance-api.rc.d"
-echo "i6.12.2.Glance-api.rc.d" >> $LFSLOG_PROCESS
+echo "i6.12.2.Glance.conf"
+echo "i6.12.2.Glance.conf" >> $LFSLOG_PROCESS
 
-time { bash i6.12.2.Glance-api.rc.d.sh ; }
+time { bash i6.12.2.Glance.conf.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+
+echo "." >> $LFSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i6.12.3.Glance-api.rc.d"
+echo "i6.12.3.Glance-api.rc.d" >> $LFSLOG_PROCESS
+
+time { bash i6.12.3.Glance-api.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

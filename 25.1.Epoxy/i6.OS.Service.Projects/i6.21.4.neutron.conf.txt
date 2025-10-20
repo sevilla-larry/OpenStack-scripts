@@ -1,0 +1,56 @@
+# i6.21.4.neutron.conf.txt
+#
+# to be copied to:
+# /etc/neutron/neutron.conf
+#
+# https://docs.openstack.org/neutron/2025.1/configuration/index.html
+# https://docs.openstack.org/neutron/2025.1/configuration/config.html
+# https://docs.openstack.org/neutron/2025.1/configuration/neutron.html
+# https://docs.openstack.org/neutron/2025.1/configuration/config-samples.html
+# https://docs.openstack.org/neutron/2025.1/_static/config-samples/neutron.conf.sample
+#
+
+[DEFAULT]
+
+core_plugin = ml2
+service_plugins =
+
+transport_url = rabbit://openstack:openstack@controller
+
+auth_strategy = keystone
+
+notify_nova_on_port_status_changes = true
+notify_nova_on_port_data_changes = true
+
+# suggestion by Grok
+state_path = /var/lib/neutron
+
+[database]
+# connection = mysql+pymysql://neutron:NEUTRON_DBPASS@controller/neutron
+connection = mysql+pymysql://neutron:openstack@controller/neutron
+
+[keystone_authtoken]
+www_authenticate_uri = http://controller:5000
+auth_url = http://controller:5000
+memcached_servers = controller:11211
+auth_type = password
+project_domain_name = Default
+user_domain_name = Default
+project_name = service
+username = neutron
+# password = NEUTRON_PASS
+password = openstack
+
+[nova]
+auth_url = http://controller:5000
+auth_type = password
+project_domain_name = Default
+user_domain_name = Default
+region_name = RegionOne
+project_name = service
+username = nova
+# password = NOVA_PASS
+password = openstack
+
+[oslo_concurrency]
+lock_path = /var/lib/neutron/tmp

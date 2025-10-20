@@ -2,6 +2,9 @@
 #
 # https://docs.openstack.org/keystone/2025.1/install/keystone-install-ubuntu.html
 #
+# Configuration:
+# https://docs.openstack.org/keystone/2025.1/configuration/index.html
+#
 
 #
 # Dependencies Required:
@@ -48,7 +51,6 @@ export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export OSLOG_PROCESS=$OSLOG/process.log
 export SOURCES=`pwd`
-#export SOURCES_DIR=$PWD
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -90,55 +92,42 @@ pip3 install    --no-index              \
                 keystone                \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/keystone               \
+# install -v -d -m755 /etc/keystone               \
+#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+install -v -d -m755 /etc/keystone/sample        \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/lib/keystone           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/log/keystone           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   ../keystone.conf.sample                 \
-        /etc/keystone/keystone.conf             \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+
+# copy the logging.conf.sample
+# to /etc/keystone/*
+# since the whole KeyStone source directory
+# will be removed
+
+CONFMODE=644
+
 cp -v   etc/logging.conf.sample                 \
-        /etc/keystone/logging.conf             \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR keystone:keystone /etc/keystone       \
-                        /var/{lib,log}/keystone \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+        /etc/keystone/logging.conf              \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   etc/logging.conf.sample                 \
+        /etc/keystone/sample                    \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   httpd/wsgi-keystone.conf                                \
+        /etc/keystone/sample/httpd_wsgi-keystone.conf.sample    \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
+chmod -v ${CONFMODE} /etc/keystone/logging.conf \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-export APACHE_CONF_DIR=/etc/httpd
-export APACHE_CONF_FILE=$APACHE_CONF_DIR/httpd.conf
-export APACHE_CONF_EXTRA_DIR=$APACHE_CONF_DIR/extra
-
-export KEYSTONE_CONF_FOR_APACHE_SRC=$SOURCES/i6.16.2.KeyStone.conf.for.Apache.txt
-export KEYSTONE_CONF_FOR_APACHE_DST=$APACHE_CONF_EXTRA_DIR/keystone.conf
-
-cp -v   $KEYSTONE_CONF_FOR_APACHE_SRC   \
-        $KEYSTONE_CONF_FOR_APACHE_DST   \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-
-chown -v apache:apache $KEYSTONE_CONF_FOR_APACHE_DST    \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
-cat >> $APACHE_CONF_FILE << "EOF"  2>> $PKGLOG_ERROR
-
-# add wsgi KeyStone configuration file
-Include /etc/httpd/extra/keystone.conf
-EOF
-
-unset APACHE_CONF_DIR
-unset APACHE_CONF_FILE
-unset APACHE_CONF_EXTRA_DIR
-
-unset KEYSTONE_CONF_FOR_APACHE_SRC
-unset KEYSTONE_CONF_FOR_APACHE_DST
+chown -vR keystone:keystone /{etc,var/{lib,log}}/keystone       \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES
 rm -rf $PKG
 unset SOURCES
-#unset SOURCES_DIR
 unset OSLOG_PROCESS
 unset PKGLOG_OTHERS
 unset PKGLOG_INSTALL PKGLOG_BUILD

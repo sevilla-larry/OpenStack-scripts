@@ -16,7 +16,7 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i6.24.3.Placement-api.init.d.sh
+INITDFILESRC=$CURRDIR/i6.24.5.Placement-api.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/placement
 INITDFILEREL=../init.d/placement
 

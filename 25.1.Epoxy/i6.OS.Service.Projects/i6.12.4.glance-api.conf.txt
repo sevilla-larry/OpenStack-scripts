@@ -1,0 +1,57 @@
+# i6.12.4.glance-api.conf.txt
+#
+# to be copied to:
+# /etc/glance/glance-api.conf
+#
+# https://docs.openstack.org/glance/2025.1/configuration/index.html
+# https://docs.openstack.org/glance/2025.1/configuration/glance_api.html
+# https://docs.openstack.org/glance/2025.1/configuration/sample-configuration.html
+# https://docs.openstack.org/glance/2025.1/_static/glance-api.conf.sample
+#
+
+[DEFAULT]
+enabled_backends=fs:file
+
+#currently NO per-tenant quotas
+# use_keystone_limits = True
+use_keystone_limits = False
+
+log_file = /var/log/glance/api.log
+
+
+[database]
+# connection = mysql+pymysql://glance:GLANCE_DBPASS@controller/glance
+connection = mysql+pymysql://glance:openstack@controller/glance
+
+[keystone_authtoken]
+www_authenticate_uri  = http://controller:5000
+auth_url = http://controller:5000
+memcached_servers = controller:11211
+auth_type = password
+project_domain_name = Default
+user_domain_name = Default
+project_name = service
+username = glance
+# password = GLANCE_PASS
+password = openstack
+
+[paste_deploy]
+flavor = keystone
+
+[glance_store]
+default_backend = fs
+
+[file]
+filesystem_store_datadir = /var/lib/glance/images/
+
+[oslo_limit]
+auth_url = http://controller:5000
+auth_type = password
+user_domain_id = default
+username = glance
+system_scope = all
+# password = GLANCE_PASS
+password = openstack
+endpoint_id = ENDPOINT_ID
+region_name = RegionOne
+# Note update the ENDPOINT_ID

@@ -1,0 +1,18 @@
+# i6.21.6.openvswitch_agent.ini.txt
+#
+# to be copied to:
+# /etc/neutron/plugins/ml2/openvswitch_agent.ini
+#
+# https://docs.openstack.org/neutron/2025.1/configuration/index.html
+# https://docs.openstack.org/neutron/2025.1/configuration/openvswitch-agent.html
+# https://docs.openstack.org/neutron/2025.1/_static/config-samples/openvswitch_agent.conf.sample
+#
+
+[ovs]
+# bridge_mappings = provider:PROVIDER_BRIDGE_NAME
+bridge_mappings = provider:br-provider
+
+[securitygroup]
+enable_security_group = true
+firewall_driver = openvswitch
+#firewall_driver = iptables_hybrid

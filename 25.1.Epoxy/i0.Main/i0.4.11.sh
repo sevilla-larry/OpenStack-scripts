@@ -6,7 +6,7 @@ bash i8.0.11.sh                 # OpenStack Other Projects
 
 # MariaDB
 bash c11.03.9.main.app.sh       # MariaDB
-bash i1.0.11.4.1.sh				# PyMySQL
+bash i1.0.11.4.1.sh				# PyMySQL & MariaDB configuration
 
 # Apache
 bash c13.03.sh					# Apr & Apr-util

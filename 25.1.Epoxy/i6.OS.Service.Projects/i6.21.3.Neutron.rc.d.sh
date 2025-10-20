@@ -1,6 +1,6 @@
-# i6.22.2.Nova.rc.d.sh
+# i6.21.3.Neutron.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/6.22.2
+export PKGLOG_DIR=$OSLOG/6.21.3
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,9 +16,9 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i6.22.3.Nova.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/nova
-INITDFILEREL=../init.d/nova
+INITDFILESRC=$CURRDIR/i6.21.5.Neutron.init.d.sh
+INITDFILEDST=${EXTDIR}/rc.d/init.d/neutron
+INITDFILEREL=../init.d/neutron
 
 
 echo "Install Init.d/rc.d ..."
@@ -30,11 +30,11 @@ cp -v $INITDFILESRC $INITDFILEDST      \
 chmod -v ${MODE} $INITDFILEDST         \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K06nova   \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K05neutron   \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S94nova   \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S95neutron   \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K06nova   \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K05neutron   \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

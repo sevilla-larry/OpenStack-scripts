@@ -10,8 +10,6 @@
 ###     how to install Open vSwitch on Controller node?
 ###
 
-#!/bin/sh
-
 ### BEGIN INIT INFO
 # Provides:          openvswitch-switch
 # Required-Start:    $network $local_fs $remote_fs

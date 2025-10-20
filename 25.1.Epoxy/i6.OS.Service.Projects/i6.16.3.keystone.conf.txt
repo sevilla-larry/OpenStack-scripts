@@ -1,0 +1,19 @@
+# i6.16.5.keystone.conf.txt
+#
+# to be copied to:
+# /etc/keystone/keystone.conf
+#
+# https://docs.openstack.org/keystone/2025.1/configuration/index.html
+# https://docs.openstack.org/keystone/2025.1/configuration/samples/keystone-conf.html
+# https://docs.openstack.org/keystone/2025.1/_static/keystone.conf.sample
+#
+
+[DEFAULT]
+log_dir = /var/log/keystone
+
+[database]
+# connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
+connection = mysql+pymysql://keystone:openstack@controller/keystone
+
+[token]
+provider = fernet

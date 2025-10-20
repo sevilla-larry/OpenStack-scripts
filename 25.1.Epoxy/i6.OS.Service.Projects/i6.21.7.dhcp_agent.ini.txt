@@ -1,0 +1,16 @@
+# i6.21.7.dhcp_agent.ini.txt
+#
+# to be copied to:
+# /etc/neutron/dhcp_agent.ini
+#
+# https://docs.openstack.org/neutron/2025.1/configuration/index.html
+# https://docs.openstack.org/neutron/2025.1/configuration/dhcp-agent.html
+# https://docs.openstack.org/neutron/2025.1/_static/config-samples/dhcp_agent.conf.sample
+# 
+
+[DEFAULT]
+dhcp_driver = neutron.agent.linux.dhcp.Dnsmasq
+enable_isolated_metadata = true
+
+# suggestion by Grok
+interface_driver = openvswitch

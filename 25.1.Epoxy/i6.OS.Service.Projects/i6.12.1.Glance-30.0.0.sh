@@ -2,6 +2,9 @@
 #
 # https://docs.openstack.org/glance/2025.1/install/install-ubuntu.html
 #
+# Configuration:
+# https://docs.openstack.org/glance/2025.1/configuration/index.html
+#
 
 #
 # Dependencies Required:
@@ -56,7 +59,6 @@ export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export OSLOG_PROCESS=$OSLOG/process.log
 export SOURCES=`pwd`
-#export SOURCES_DIR=$PWD
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -99,32 +101,79 @@ pip3 install    --no-index              \
                 glance                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/glance                 \
+install -v -d -m755 /etc/glance/{sample,metadefs}       \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/glance             \
+# install -v -d -m755 /etc/glance/sample          \
+#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+# install -v -d -m755 /etc/glance/metadefs        \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+# install -v -d -m777 /var/lib/glance             \
+#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/lib/glance/images      \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/log/glance             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   etc/glance-api.conf                     \
-        /etc/glance/glance-api.conf             \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   etc/glance-api-paste.ini                \
-        /etc/glance/glance-api-paste.ini        \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR glance:glance /etc/glance             \
-                        /var/lib/glance         \
-                        /var/log/glance         \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-# chmod 640 /etc/glance/*                         \
-#     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+# copy the configuration samples
+# to /etc/glance/sample/*
+# since the whole Glance source directory
+# will be removed
+
+CONFMODE=644
+GLANCEETCSAMPLE=/etc/glance/sample
+
+cd etc
+
+cp -v   glance-api-paste.ini                                            \
+        ${GLANCEETCSAMPLE}/glance-api-paste.ini.sample                  \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   glance-api.conf                                                 \
+        ${GLANCEETCSAMPLE}/glance-api.conf.sample                       \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   glance-cache.conf                                               \
+        ${GLANCEETCSAMPLE}/glance-cache.conf.sample                     \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   glance-image-import.conf.sample                                 \
+        ${GLANCEETCSAMPLE}/glance-image-import.conf.sample              \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   glance-manage.conf                                              \
+        ${GLANCEETCSAMPLE}/glance-manage.conf.sample                    \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   glance-policy-generator.conf                                    \
+        ${GLANCEETCSAMPLE}/glance-policy-generator.conf.sample          \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   glance-scrubber.conf                                            \
+        ${GLANCEETCSAMPLE}/glance-scrubber.conf.sample                  \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   glance-swift.conf.sample                                        \
+        ${GLANCEETCSAMPLE}/glance-swift.conf.sample                     \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   ovf-metadata.json.sample                                        \
+        ${GLANCEETCSAMPLE}/ovf-metadata.json.sample                     \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   property-protections-policies.conf.sample                       \
+        ${GLANCEETCSAMPLE}/property-protections-policies.conf.sample    \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   property-protections-roles.conf.sample                          \
+        ${GLANCEETCSAMPLE}/property-protections-roles.conf.sample       \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   schema-image.json                                               \
+        ${GLANCEETCSAMPLE}/schema-image.json.sample                     \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+cp -v   metadefs/* /etc/glance/metadefs                                 \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chmod -vR ${CONFMODE} /etc/glance                       \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chown -vR glance:glance /{etc,var/{lib,log}}/glance     \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES
 rm -rf $PKG
 unset SOURCES
-#unset SOURCES_DIR
 unset OSLOG_PROCESS
 unset PKGLOG_OTHERS
 unset PKGLOG_INSTALL PKGLOG_BUILD

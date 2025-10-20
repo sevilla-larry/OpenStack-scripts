@@ -1,6 +1,6 @@
-# i6.12.2.Glance-api.rc.d.sh
+# i6.12.3.Glance-api.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/6.12.2
+export PKGLOG_DIR=$OSLOG/6.12.3
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,7 +16,7 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i6.12.3.Glance-api.init.d.sh
+INITDFILESRC=$CURRDIR/i6.12.5.Glance-api.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/glance
 INITDFILEREL=../init.d/glance
 

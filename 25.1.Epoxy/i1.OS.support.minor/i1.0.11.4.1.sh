@@ -17,10 +17,24 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i1.4.1.PyMySQL-1.1.2"
-echo "i1.4.1.PyMySQL-1.1.2" >> $OSLOG_PROCESS
+echo "i1.4.1.1.PyMySQL-1.1.2"
+echo "i1.4.1.1.PyMySQL-1.1.2" >> $OSLOG_PROCESS
 
-time { bash i1.4.1.PyMySQL-1.1.2.sh ; }
+time { bash i1.4.1.1.PyMySQL-1.1.2.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i1.4.1.2.mariadb.my.cnf"
+echo "i1.4.1.2.mariadb.my.cnf" >> $OSLOG_PROCESS
+
+time { bash i1.4.1.2.mariadb.my.cnf.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

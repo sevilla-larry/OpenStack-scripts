@@ -1,0 +1,15 @@
+# i6.21.8.metadata_agent.ini.txt
+#
+# to be copied to:
+# /etc/neutron/metadata_agent.ini
+#
+# https://docs.openstack.org/neutron/2025.1/configuration/index.html
+# https://docs.openstack.org/neutron/2025.1/configuration/metadata-agent.html
+# https://docs.openstack.org/neutron/2025.1/_static/config-samples/metadata_agent.conf.sample
+#
+
+# suggestion by Grok
+[DEFAULT]
+nova_metadata_host = controller
+# metadata_proxy_shared_secret = METADATA_SECRET
+metadata_proxy_shared_secret = openstack

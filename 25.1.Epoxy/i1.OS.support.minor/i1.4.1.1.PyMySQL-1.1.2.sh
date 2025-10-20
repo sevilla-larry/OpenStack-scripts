@@ -1,4 +1,4 @@
-# i1.4.1.PyMySQL-1.1.2.sh
+# i1.4.1.1.PyMySQL-1.1.2.sh
 #
 
 #
@@ -8,7 +8,7 @@
 #
 
 export PKG="pymysql-1.1.2"
-export PKGLOG_DIR=$OSLOG/1.4.1
+export PKGLOG_DIR=$OSLOG/1.4.1.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
 export PKGLOG_CHECK=$PKGLOG_DIR/check.log

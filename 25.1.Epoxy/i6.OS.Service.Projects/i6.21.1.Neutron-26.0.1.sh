@@ -113,21 +113,41 @@ pip3 install    --no-index              \
                 neutron                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -vp -d -m755 /etc/neutron/plugins/ml2   \
+install -v -d -m755 /etc/neutron/{sample,plugins/mls}   \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+# install -v -d -m755 /etc/neutron/sample         \
+#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+# install -v -d -m755 /etc/neutron/plugins/ml2    \
+#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/lib/neutron            \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/log/neutron            \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   ../neutron.conf.sample                  \
-        /etc/neutron/neutron.conf               \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   etc/neutron/api-paste.ini               \
-        /etc/neutron/api-paste.ini              \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR neutron:neutron /etc/neutron          \
-                /var/lib/neutron                \
-                /var/log/neutron                \
+
+# copy the configuration samples
+# to /etc/neutron/sample/*
+# since the whole Neutron source directory
+# will be removed
+
+CONFMODE=644
+NEUTRONETCSAMPLE=/etc/neutron/sample
+
+cd etc
+
+cp -v   api-paste.ini                                   \
+        ${NEUTRONETCSAMPLE}/api-paste.ini.sample        \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   fullstack_tests_policy.yaml                             \
+        ${NEUTRONETCSAMPLE}/fullstack_tests_policy.yaml.sample  \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   rootwrap.conf                                   \
+        ${NEUTRONETCSAMPLE}/rootwrap.conf.sample        \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chmod -vR ${CONFMODE} /etc/neutron                      \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chown -vR neutron:neutron /{etc,var/{lib,log}}/neutron  \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 

@@ -1,0 +1,24 @@
+# i6.21.5.ml2_conf.ini.txt
+#
+# to be copied to:
+# /etc/neutron/plugins/ml2/ml2_conf.ini
+#
+# https://docs.openstack.org/neutron/2025.1/configuration/index.html
+# https://docs.openstack.org/neutron/2025.1/configuration/config.html
+# https://docs.openstack.org/neutron/2025.1/configuration/ml2-conf.html
+# https://docs.openstack.org/neutron/2025.1/_static/config-samples/ml2_conf.conf.sample
+#
+
+[ml2]
+type_drivers = flat,vlan
+tenant_network_types =
+mechanism_drivers = openvswitch
+extension_drivers = port_security
+
+[ml2_type_flat]
+flat_networks = provider
+
+# suggestion by Grok
+[securitygroup]
+enable_security_group = true
+enable_ipset = true

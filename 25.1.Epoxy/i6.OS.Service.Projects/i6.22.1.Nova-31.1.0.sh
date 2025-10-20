@@ -121,24 +121,44 @@ pip3 install    --no-index              \
                 nova                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/nova                   \
+# install -v -d -m755 /etc/nova                   \
+#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+install -v -d -m755 /etc/nova/sample            \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/lib/nova               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/log/nova               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   ../nova.conf.sample                     \
-        /etc/nova/nova.conf                     \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   etc/nova/api-paste.ini                  \
-        /etc/nova/api-paste.ini                 \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR nova:nova /etc/nova                   \
-                /var/lib/nova                   \
-                /var/log/nova                   \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-# chmod 640 /etc/nova/*                         \
-#     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+# copy the configuration samples
+# to /etc/nova/sample/*
+# since the whole Nova source directory
+# will be removed
+
+CONFMODE=644
+NOVAETCSAMPLE=/etc/nova/sample
+
+cd etc/nova
+
+cp -v   logging_sample.conf                     \
+        /etc/nova/logging.conf                  \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+cp -v   api-paste.ini                           \
+        ${NOVAETCSAMPLE}/api-paste.ini.sample   \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   logging_sample.conf                     \
+        ${NOVAETCSAMPLE}/logging.conf.sample    \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+cp -v   rootwrap.conf                           \
+        ${NOVAETCSAMPLE}/rootwrap.conf.sample   \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chmod -vR ${CONFMODE} /etc/nova                 \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chown -vR nova:nova /{etc,var/{lib,log}}/nova   \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES

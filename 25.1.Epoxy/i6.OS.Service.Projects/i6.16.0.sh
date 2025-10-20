@@ -22,6 +22,20 @@ echo "." >> $LFSLOG_PROCESS
 echo "."
 echo "."
 
+###
+
+echo "i6.16.2.KeyStone.conf"
+echo "i6.16.2.KeyStone.conf" >> $LFSLOG_PROCESS
+
+time { bash i6.16.2.KeyStone.conf.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+
+echo "." >> $LFSLOG_PROCESS
+echo "."
+echo "."
+
 #####
 
 unset LFSLOG_PROCESS

@@ -3,6 +3,9 @@
 # https://docs.openstack.org/placement/2025.1/install/install-ubuntu.html
 # https://docs.openstack.org/placement/2025.1/install/from-pypi.html
 #
+# Configuration:
+# https://docs.openstack.org/placement/2025.1/configuration/index.html
+#
 
 #
 # Dependencies Required:
@@ -39,7 +42,6 @@ export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export OSLOG_PROCESS=$OSLOG/process.log
 export SOURCES=`pwd`
-#export SOURCES_DIR=$PWD
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -87,27 +89,22 @@ echo "4. pyTest ..." >> $OSLOG_PROCESS
 echo "4. pyTest ..." >> $PKGLOG_ERROR
 pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/placement              \
+# install -v -d -m755 /etc/placement              \
+#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+install -v -d -m755 /etc/placement/sample       \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/lib/placement          \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/log/placement          \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-cp -v   ../placement.conf.sample                \
-        /etc/placement/placement.conf           \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR placement:placement /etc/placement    \
-                        /var/lib/placement      \
-                        /var/log/placement      \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-# chmod 640 /etc/placement/*                      \
-#     >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chown -vR placement:placement /{etc,var/{lib,log}}/placement    \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES
 rm -rf $PKG
 unset SOURCES
-#unset SOURCES_DIR
 unset OSLOG_PROCESS
 unset PKGLOG_OTHERS
 unset PKGLOG_INSTALL PKGLOG_BUILD

@@ -1,7 +1,8 @@
 rc.0
 
+        K05neutron
         K06nova
-        K07placement
+      # K07placement
         K08glance
 K10gpm
     K14etcd
@@ -56,8 +57,9 @@ S70gpm
     S85memcached
     S86etcd
         S92glance
-        S93placement
+      # S93placement
         S94nova
+        S95neutron
 
 rc.4
 
@@ -83,8 +85,9 @@ S70gpm
 
 rc.6
 
+        K05neutron
         K06nova
-        K07placement
+      # K07placement
         K08glance
 K10gpm
     K14etcd
