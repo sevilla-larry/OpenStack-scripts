@@ -17,12 +17,7 @@ bash b10.03.5.sh
 bash b10.03.6.sh
 
 
-
-
-
-###### b30 for updating
-
-######          support apps for OpenStack, iptables & lsof
+# support apps for OpenStack, iptables, lsof, SWIG & unbound
 bash b30.03.1.sh
-######          support apps for OpenStack, Python Modules & Dependecies
+# support apps for OpenStack, Python Modules & Dependecies
 bash b30.03.2.sh

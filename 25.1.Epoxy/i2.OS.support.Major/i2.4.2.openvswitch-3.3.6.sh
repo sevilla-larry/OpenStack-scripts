@@ -1,4 +1,4 @@
-# i2.4.1.openvswitch-3.3.6.sh
+# i2.4.2.openvswitch-3.3.6.sh
 #
 # https://docs.openvswitch.org/en/latest/intro/install/general/
 #
@@ -12,7 +12,7 @@
 #
 
 export PKG="openvswitch-3.3.6"
-export PKGLOG_DIR=$OSLOG/2.4.1
+export PKGLOG_DIR=$OSLOG/2.4.2
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -39,7 +39,10 @@ echo "2. Configure ..." >> $PKGLOG_ERROR
 ./configure --prefix=/usr           \
             --sysconfdir=/etc       \
             --localstatedir=/var    \
-             > $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
+            --enable-shared         \
+            > $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
+# Suggestion of Grok but unrecognized
+#            --with-libcap-ng        \
 
 echo "3. Make Build ..."
 echo "3. Make Build ..." >> $OSLOG_PROCESS
@@ -65,9 +68,12 @@ make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # modprobe openvswitch >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-mkdir -pv /var/run/openvswitch /var/log/openvswitch             \
+mkdir -pv /etc/openvswitch /var/{run,log}/openvswitch   \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-chown -Rv root:root /var/run/openvswitch /var/log/openvswitch   \
+#chown -Rv root:root /var/{run,log}/openvswitch         \
+#        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+ovsdb-tool create /etc/openvswitch/conf.db              \
+        /usr/share/openvswitch/vswitch.ovsschema        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 

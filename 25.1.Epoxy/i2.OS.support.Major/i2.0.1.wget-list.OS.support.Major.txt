@@ -1,18 +1,21 @@
 # OpenStack support Major
 
 
-# i2.01 Erlang 27.3.4.3
+# i2.1.1 Erlang 27.3.4.3
 https://github.com/erlang/otp/releases/download/OTP-27.3.4.3/otp_src_27.3.4.3.tar.gz
 
-# i2.02 RabbitMQ-4.1.4		(generic unix binary)
+# i2.1.2 RabbitMQ-4.1.4		(generic unix binary)
 https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.1.4/rabbitmq-server-generic-unix-4.1.4.tar.xz
 
 
-# i2.11 memcached-1.6.39
+# i2.2.1 memcached-1.6.39
 http://www.memcached.org/files/memcached-1.6.39.tar.gz
 
-# i2.20 libwebsockets-4.4.1.tar.gz
+# i2.3 libwebsockets-4.4.1.tar.gz
 --content-disposition https://github.com/warmcat/libwebsockets/archive/refs/tags/v4.4.1.tar.gz
 
-# i2.31 openvswitch-3.3.6
+# i2.4.1 libcap-ng-0.8.5
+https://people.redhat.com/sgrubb/libcap-ng/libcap-ng-0.8.5.tar.gz
+
+# i2.4.2 openvswitch-3.3.6
 https://www.openvswitch.org/releases/openvswitch-3.3.6.tar.gz

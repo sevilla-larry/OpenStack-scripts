@@ -14,5 +14,8 @@ e2f935b83bde497c28299d3464a16fe5 memcached-1.6.39.tar.gz
 # i2.20 libwebsockets-4.4.1.tar.gz
 4930ef82adc24b7912a8bb729f4a7df9 libwebsockets-4.4.1.tar.gz
 
-# i2.31 openvswitch-3.3.6
+# i2.4.1 libcap-ng-0.8.5
+3c280d902b902f28caf3990e018fcd31 libcap-ng-0.8.5.tar.gz
+
+# i2.4.2 openvswitch-3.3.6
 d75a2c9b3719365259816706f340658e openvswitch-3.3.6.tar.gz

@@ -1,6 +1,6 @@
-# i2.4.2.openvswitch-switch.rc.d.sh
+# i2.4.3.openvswitch.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/2.4.2
+export PKGLOG_DIR=$OSLOG/2.4.3
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,9 +16,9 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i2.4.3.openvswitch-switch.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/openvswitch-switch
-INITDFILEREL=../init.d/openvswitch-switch
+INITDFILESRC=$CURRDIR/i2.4.4.openvswitch.init.d.sh
+INITDFILEDST=${EXTDIR}/rc.d/init.d/openvswitch
+INITDFILEREL=../init.d/openvswitch
 
 
 echo "Install Init.d/rc.d ..."
@@ -30,11 +30,19 @@ cp -v $INITDFILESRC $INITDFILEDST      \
 chmod -v ${MODE} $INITDFILEDST         \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K75openvswitch-switch \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K75openvswitch \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S25openvswitch-switch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K75openvswitch \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K75openvswitch-switch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S25openvswitch  \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S25openvswitch  \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S25openvswitch  \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S25openvswitch  \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K75openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

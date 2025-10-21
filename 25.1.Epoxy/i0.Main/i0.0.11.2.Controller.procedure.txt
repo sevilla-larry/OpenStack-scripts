@@ -121,6 +121,13 @@ A.  Preparation
 
         #export LANG=C.UTF-8
 
+        # PYVER values are:
+        #
+        # 12 = Python-3.12.xx   best suited for OpenStack 2025.1 Epoxy
+        # 13 = Python-3.13.xx
+        # refer to LfS 12.4 installed value
+        export PYVER=12
+
         pathprepend /usr/local/bin  PATH
         pathprepend /usr/local/sbin PATH
 
@@ -144,6 +151,7 @@ B.  Support Applications - minor
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
         echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+        echo $PYVER           # 12
 
         echo $CFLAGS
         echo $CXXFLAGS
@@ -170,10 +178,23 @@ B.  Support Applications - minor
 
         ###
 
+    B.04. Unbound bootscripts
+
+        ###
+
+        cd /mnt/Src/lfs.src/blfs-bootscripts-20250225       # VM/VB
+        cd /usr/src/lfs/blfs-bootscripts-20250225           # PC
+
+        ###
+
+        make install-unbound
+
 
 C.  Support Applications - Major
 
         ###
+
+        cd /sources
 
         # Python OpenStack Client
         # MariaDB, Apache, RabbitMQ, MemCacheD, EtcD
@@ -242,7 +263,7 @@ D.  Support Apps - Major - Configuration 1
 
         ###
 
-    D.02. BLfS bootscripts
+    D.03. BLfS bootscripts
 
         ###
 
