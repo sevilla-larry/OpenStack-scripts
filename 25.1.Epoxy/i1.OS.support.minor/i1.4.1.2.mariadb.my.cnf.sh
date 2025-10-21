@@ -29,9 +29,12 @@ echo "1. Install OpenStack's MariaDB Configuration ..." >> $PKGLOG_ERROR
 
 cp -v ${CNFFILESRC} ${CNFFILEDST}       \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
 chmod -v ${CONFMODE} ${CNFFILEDST}      \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
+chown -v mariadb:mariadb ${CNFFILEDST}  \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 unset OSLOG_PROCESS
 unset PKGLOG_OTHERS

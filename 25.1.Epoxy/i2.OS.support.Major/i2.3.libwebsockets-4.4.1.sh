@@ -37,7 +37,7 @@ mkdir    build
 cd       build
 
 echo "2. Configure ..."
-echo "2. Configure ..." >> $LFSLOG_PROCESS
+echo "2. Configure ..." >> $OSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR
 cmake -D CMAKE_INSTALL_PREFIX=/usr      \
       -D CMAKE_BUILD_TYPE=Release       \
