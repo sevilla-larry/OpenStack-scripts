@@ -49,7 +49,7 @@ https://tarballs.opendev.org/openstack/os-client-config/os-client-config-2.1.0.t
 
 
 # Note: OpenStack - tarballs - 3.1.10
-# i3.1.11 etcd-v3.1.10 (from OpenStack site amd64 binary/sources )
+# i3.4.1 etcd-v3.1.10 (from OpenStack site amd64 binary/sources )
 https://tarballs.opendev.org/openstack/etcd/v3.1.10/etcd-v3.1.10-linux-amd64.tar.gz
-# i3.1.11 etcd-v3.6.5  (generic unix binary)
+# i3.4.1 etcd-v3.6.5  (generic unix binary)
 # https://github.com/etcd-io/etcd/releases/download/v3.6.5/etcd-v3.6.5-linux-amd64.tar.gz

@@ -178,7 +178,18 @@ B.  Support Applications - minor
 
         ###
 
-    B.04. Unbound bootscripts
+    B.04. Unbound configuration
+
+        # edit
+        nano /etc/unbound/unbound.conf
+
+            auto-trust-anchor-file: "/etc/unbound/root.key"
+
+        nano /etc/resolv.conf
+
+            nameserver 127.0.0.1    # only ?
+
+    B.05. Unbound bootscripts
 
         ###
 
