@@ -49,14 +49,17 @@ echo "3. Make Build ..." >> $OSLOG_PROCESS
 echo "3. Make Build ..." >> $PKGLOG_ERROR
 make > $PKGLOG_BUILD 2>> $PKGLOG_ERROR
 
-echo "4. Make Check ..."
-echo "4. Make Check ..." >> $OSLOG_PROCESS
-echo "4. Make Check ..." >> $PKGLOG_ERROR
-make check TESTSUITEFLAGS=$MAKEFLAGS > $PKGLOG_CHECK 2>> $PKGLOG_ERROR
+# Causing the PC Hardware (Host) to hang
+# even when run as Guest
+# known issue, not a bug
+# echo "4. Make Check ..."
+# echo "4. Make Check ..." >> $OSLOG_PROCESS
+# echo "4. Make Check ..." >> $PKGLOG_ERROR
+# make check TESTSUITEFLAGS=$MAKEFLAGS > $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
-echo "5. Make Install ..."
-echo "5. Make Install ..." >> $OSLOG_PROCESS
-echo "5. Make Install ..." >> $PKGLOG_ERROR
+echo "4. Make Install ..."
+echo "4. Make Install ..." >> $OSLOG_PROCESS
+echo "4. Make Install ..." >> $PKGLOG_ERROR
 make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # echo "6. Make Modules Install ..."

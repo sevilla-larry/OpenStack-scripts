@@ -182,7 +182,8 @@ B.  Support Applications - minor
 
         # edit
         nano /etc/unbound/unbound.conf
-
+            # under server:
+            # UnComment
             auto-trust-anchor-file: "/etc/unbound/root.key"
 
         nano /etc/resolv.conf
@@ -373,7 +374,6 @@ G.  KeyStone - Identity service
 
     # ubuntu install, automatically created /etc/apache2/keystone.conf
     # https://docs.openstack.org/keystone/2025.1/install/keystone-install-ubuntu.html
-    # https://docs.openstack.org/keystone/2025.1/install/keystone-install-obs.html
 
     G.01. KeyStone database
 

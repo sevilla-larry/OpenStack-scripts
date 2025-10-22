@@ -13,6 +13,7 @@ K10gpm
 K30sshd
 K46ntpd
         K75openvswitch
+        K79unbound
 K80network
 K90sysklogd
 K92sendsignals
@@ -30,6 +31,7 @@ K10gpm
 K30sshd
 K46ntpd
         K75openvswitch
+        K79unbound
 K80network
 K90sysklogd
 
@@ -37,6 +39,7 @@ rc.2
 
 S10network
 S20sysklogd
+        S21unbound
         S25openvswitch
 S30sshd
     S32httpd
@@ -49,6 +52,7 @@ rc.3
 
 S10sysklogd
 S20network
+        S21unbound
         S25openvswitch
 S30sshd
     S32httpd
@@ -67,6 +71,7 @@ rc.4
 
 S10sysklogd
 S20network
+        S21unbound
         S25openvswitch
 S30sshd
     S32httpd
@@ -79,6 +84,7 @@ rc.5
 
 S10sysklogd
 S20network
+        S21unbound
         S25openvswitch
 S30sshd
     S32httpd
@@ -102,6 +108,7 @@ K10gpm
 K30sshd
 K46ntpd
         K75openvswitch-switch
+        K79unbound
 K80network
 K90sysklogd
 K92sendsignals
