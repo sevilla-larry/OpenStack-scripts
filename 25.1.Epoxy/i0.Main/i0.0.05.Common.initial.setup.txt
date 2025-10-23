@@ -77,7 +77,20 @@ A. Preparation
 		10.0.0.31	compute1.localdomain	compute1
 		10.0.0.41	block1.localdomain		block1
 
-	f. update /root/.bashrc
+	f. update /etc/profile
+
+		# add after if [ $EUID ] /usr/bin
+		if [ ! -L /usr/local/bin ]; then
+			pathprepend /usr/local/bin
+		fi
+
+		if [ $EUID -eq 0 ] ; then
+			if [ ! -L /usr/local/sbin ]; then
+					pathappend /usr/local/sbin
+			fi
+		fi
+
+	g. update /root/.bashrc
 
 		# add after source /etc/bashrc
 
@@ -98,7 +111,7 @@ A. Preparation
 				pathprepend /usr/local/share XDG_DATA_DIRS
 		fi
 
-	g. update /home/user/.bashrc
+	h. update /home/user/.bashrc (optional)
 
 		# add after source /etc/bashrc
 
@@ -106,3 +119,10 @@ A. Preparation
 				pathprepend /usr/local/bin
 		fi
 
+	# included in /etc/ld.so.conf but not updated
+	i. ldconfig
+
+Note:
+	LfS and BLfS apps in /usr/bin & /usr/sbin
+
+	non-(B)LfS apps in /usr/local/bin & /usr/local/sbin

@@ -35,7 +35,7 @@ echo "Extract/Install tar..." >> $OSLOG_PROCESS
 echo "Extract/Install tar..." >> $PKGLOG_ERROR
 tar xvf $PKG.tar.gz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 
-ln -sv $PKGDEST/$PKG/etcd* /usr/local/bin \
+ln -sv $PKGDEST/$PKG/etcd* $PKGDEST/bin \
         > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 cp -v $CONFYMLFILE1 $CONFYMLFILE2 \
@@ -48,9 +48,9 @@ install -v -dm777 /var/log/etcd         \
 install -v -dm775 /run/etcd             \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chown -Rv etcd:etcd     /var/{lib,log}/etcd     \
+chown -vR etcd:etcd     /var/{lib,log}/etcd     \
                         /run/etcd               \
-    >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 unset CONFYMLFILE1 CONFYMLFILE2

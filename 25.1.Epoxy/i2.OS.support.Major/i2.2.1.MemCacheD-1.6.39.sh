@@ -80,7 +80,7 @@ EOF
 
 mkdir   -pv /var/{lib,run,log}/memcached                        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-chown   -Rv memcached:memcached /var/{lib,run,log}/memcached    \
+chown   -vR memcached:memcached /var/{lib,run,log}/memcached    \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 

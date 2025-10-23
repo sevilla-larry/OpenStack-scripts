@@ -36,6 +36,13 @@
 
 # RABBITMQ_HOME=/usr/local/rabbitmq_server-4.0.3
 # RABBITMQ_SBIN=$RABBITMQ_HOME/sbin
+
+# Set PATH to include /usr/local/bin where erl and escript are located
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
+
+# Set UTF-8 locale to avoid Elixir encoding warning
+export LANG=C.UTF-8
+
 RABBITMQ_SBIN=/usr/local/sbin
 PIDFILE=/var/run/rabbitmq.pid
 export HOME=/var/lib/rabbitmq  # Enforce cookie location

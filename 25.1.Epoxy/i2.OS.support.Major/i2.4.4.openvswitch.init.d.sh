@@ -30,7 +30,7 @@
 
 . /lib/lsb/init-functions
 
-PATH=$PATH:/usr/share/openvswitch/scripts
+PATH=$PATH:/usr/local/share/openvswitch/scripts
 
 case "$1" in
    start)

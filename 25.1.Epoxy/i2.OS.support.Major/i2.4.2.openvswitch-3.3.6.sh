@@ -76,7 +76,7 @@ mkdir -pv /{etc,var/{run,log}}/openvswitch              \
 #chown -Rv root:root /var/{run,log}/openvswitch         \
 #        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 ovsdb-tool create /etc/openvswitch/conf.db              \
-        /usr/share/openvswitch/vswitch.ovsschema        \
+        /usr/local/share/openvswitch/vswitch.ovsschema        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 mkdir -v /usr/local/scripts     \
@@ -84,8 +84,12 @@ mkdir -v /usr/local/scripts     \
 
 #link the scripts at /usr/share/openvswitch/scripts
 # to /usr/scripts
-ln -sv  /usr/share/openvswitch/scripts/ovs-ctl  \
-        /usr/scripts/ovs-ctl
+ln -sv  /usr/local/share/openvswitch/scripts/ovs-ctl  \
+        /usr/local/scripts/ovs-ctl              \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+#update library path (with existing /usr/local/lib)
+ldconfig >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES

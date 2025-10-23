@@ -136,8 +136,8 @@ A.  Preparation
         # refer to LfS 12.4 installed value
         export PYVER=12
 
-        pathprepend /usr/local/bin  PATH
-        pathprepend /usr/local/sbin PATH
+        # pathprepend /usr/local/bin  PATH
+        # pathprepend /usr/local/sbin PATH
 
         ###
 
@@ -395,6 +395,22 @@ G.  OpenVSwitch - Configuration
                         Interface br0
                             type: internal
                 ovs_version: "3.3.6"
+
+
+        # Create a test OVS bridge
+        ovs-vsctl add-br test-br
+
+        # Manually run the script
+        /lib/services/bridge test-br up
+
+        # Check logs, should have no errors
+        cat /var/log/openvswitch/ovs-vswitchd.log
+
+        # This should shows it up, no issue.
+        ip link show test-br
+
+        # Clean up
+        ovs-vsctl del-br test-br
 
 
 G.  KeyStone - Identity service
