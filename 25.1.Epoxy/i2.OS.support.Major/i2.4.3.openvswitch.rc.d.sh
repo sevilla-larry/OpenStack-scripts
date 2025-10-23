@@ -30,19 +30,19 @@ cp -v $INITDFILESRC $INITDFILEDST      \
 chmod -v ${MODE} $INITDFILEDST         \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K75openvswitch \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K91openvswitch \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K75openvswitch \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K91openvswitch \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S25openvswitch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S09openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S25openvswitch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S09openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S25openvswitch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S09openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S25openvswitch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S09openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K75openvswitch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K91openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

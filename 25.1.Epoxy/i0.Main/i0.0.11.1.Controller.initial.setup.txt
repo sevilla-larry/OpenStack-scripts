@@ -20,12 +20,4 @@ A. Preparation
 
 	d.  check /lib/services/bridge
 
-	e. # nano /root/.bashrc
-
-		export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
-
-	f. $ nano /home/user/.bashrc
-
-		export PATH=/usr/local/bin:/usr/bin
-
-	g. check /etc/hosts
+	e.  check /etc/hosts

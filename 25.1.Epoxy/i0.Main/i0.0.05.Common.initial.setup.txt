@@ -76,3 +76,33 @@ A. Preparation
 		10.0.0.11	controller.localdomain	controller
 		10.0.0.31	compute1.localdomain	compute1
 		10.0.0.41	block1.localdomain		block1
+
+	f. update /root/.bashrc
+
+		# add after source /etc/bashrc
+
+		if [ -d /usr/local/bin ]; then
+				pathprepend /usr/local/bin
+		fi
+
+	  # if [ -d /usr/local/sbin ]; then
+		if [ -d /usr/local/sbin -a $EUID -eq 0 ]; then
+				pathprepend /usr/local/sbin
+		fi
+
+		if [ -d /usr/local/scripts ]; then
+				pathappend /usr/local/scripts
+		fi
+
+		if [ -d /usr/local/share ]; then
+				pathprepend /usr/local/share XDG_DATA_DIRS
+		fi
+
+	g. update /home/user/.bashrc
+
+		# add after source /etc/bashrc
+
+		if [ -d /usr/local/bin ]; then
+				pathprepend /usr/local/bin
+		fi
+

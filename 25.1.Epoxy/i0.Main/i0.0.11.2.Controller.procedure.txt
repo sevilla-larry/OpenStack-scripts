@@ -136,8 +136,8 @@ A.  Preparation
         # refer to LfS 12.4 installed value
         export PYVER=12
 
-      # pathprepend /usr/local/bin  PATH
-      # pathprepend /usr/local/sbin PATH
+        pathprepend /usr/local/bin  PATH
+        pathprepend /usr/local/sbin PATH
 
         ###
 
@@ -380,7 +380,7 @@ F.  RabbitMQ
 
 G.  OpenVSwitch - Configuration
 
-        pathappend /usr/scripts PATH
+        pathappend /usr/local/scripts PATH
 
         ovs-vsctl show
                 ovs_version: "3.3.6"
