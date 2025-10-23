@@ -62,14 +62,8 @@ echo "4. Make Install ..." >> $OSLOG_PROCESS
 echo "4. Make Install ..." >> $PKGLOG_ERROR
 make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# echo "6. Make Modules Install ..."
-# echo "6. Make Modules Install ..." >> $OSLOG_PROCESS
-# echo "6. Make Modules Install ..." >> $PKGLOG_ERROR
-# make modules_install >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-
-# depmod  >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-
-# modprobe openvswitch >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+#update library path (with existing /usr/local/lib)
+ldconfig >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 mkdir -pv /{etc,var/{run,log}}/openvswitch              \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
@@ -87,9 +81,6 @@ mkdir -v /usr/local/scripts     \
 ln -sv  /usr/local/share/openvswitch/scripts/ovs-ctl  \
         /usr/local/scripts/ovs-ctl              \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
-#update library path (with existing /usr/local/lib)
-ldconfig >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 cd $SOURCES

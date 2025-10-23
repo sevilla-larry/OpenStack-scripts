@@ -86,8 +86,12 @@ A. Preparation
 
 		if [ $EUID -eq 0 ] ; then
 			if [ ! -L /usr/local/sbin ]; then
-					pathappend /usr/local/sbin
+					pathprepend /usr/local/sbin
 			fi
+		fi
+
+		if [ -d /usr/local/scripts ]; then
+				pathappend /usr/local/scripts
 		fi
 
 	g. update /root/.bashrc
