@@ -36,7 +36,7 @@ cd $PKG
 echo "2. Configure ..."
 echo "2. Configure ..." >> $OSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR
-./configure --prefix=/usr           \
+./configure --prefix=/usr/local     \
             --sysconfdir=/etc       \
             --localstatedir=/var    \
             --enable-shared         \

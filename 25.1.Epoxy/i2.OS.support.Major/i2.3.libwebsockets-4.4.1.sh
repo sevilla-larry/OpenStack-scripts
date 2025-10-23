@@ -39,12 +39,12 @@ cd       build
 echo "2. Configure ..."
 echo "2. Configure ..." >> $OSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR
-cmake -D CMAKE_INSTALL_PREFIX=/usr      \
-      -D CMAKE_BUILD_TYPE=Release       \
-      -D LWS_WITH_SSL=1                 \
-      -D LWS_WITH_SHARED=1              \
-      -D LWS_WITH_STATIC=1              \
-      ..                                \
+cmake -D CMAKE_INSTALL_PREFIX=/usr/local  \
+      -D CMAKE_BUILD_TYPE=Release   \
+      -D LWS_WITH_SSL=1             \
+      -D LWS_WITH_SHARED=1          \
+      -D LWS_WITH_STATIC=1          \
+      ..                            \
       > $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
 
 echo "3. Make Build ..."

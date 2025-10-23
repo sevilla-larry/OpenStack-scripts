@@ -36,7 +36,7 @@ export ERL_TOP=`pwd`    # current directory
 echo "2. Configure ..."
 echo "2. Configure ..." >> $OSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR
-./configure --prefix=/usr       \
+./configure --prefix=/usr/local \
             --with-ssl          \
                 > $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
 

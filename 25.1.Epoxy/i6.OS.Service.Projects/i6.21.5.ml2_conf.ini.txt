@@ -13,14 +13,21 @@
 # datapath_type = netdev
 # initially none
 
+# Suggestions by Grok
 [ml2]
-type_drivers = flat,vlan
-tenant_network_types =
+#type_drivers = flat,vlan
+type_drivers = flat,vlan,vxlan
+#tenant_network_types =
+tenant_network_types = vxlan
 mechanism_drivers = openvswitch
 extension_drivers = port_security
 
 [ml2_type_flat]
 flat_networks = provider
+
+# suggestion by Grok
+[ovs]
+bridge_mappings = provider:br-ex
 
 # suggestion by Grok
 [securitygroup]

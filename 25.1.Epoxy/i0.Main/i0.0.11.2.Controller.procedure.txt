@@ -35,6 +35,14 @@ A.  Preparation
 
         ###
 
+        nano /etc/profile
+
+        # after export PATH=/usr/bin
+
+        if [ ! -L /usr/scripts ]; then
+                pathappend /usr/scripts
+        fi
+
         cd /sources
 
         ###
@@ -128,8 +136,8 @@ A.  Preparation
         # refer to LfS 12.4 installed value
         export PYVER=12
 
-        pathprepend /usr/local/bin  PATH
-        pathprepend /usr/local/sbin PATH
+      # pathprepend /usr/local/bin  PATH
+      # pathprepend /usr/local/sbin PATH
 
         ###
 

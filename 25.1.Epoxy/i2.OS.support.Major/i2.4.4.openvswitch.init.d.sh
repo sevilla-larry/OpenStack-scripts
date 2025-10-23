@@ -52,8 +52,8 @@ case "$1" in
       ;;
 
    status)
-      statusproc /usr/bin/ovs-vswitchd
-      statusproc /usr/bin/ovsdb-server
+      statusproc /usr/local/bin/ovs-vswitchd
+      statusproc /usr/local/bin/ovsdb-server
       ;;
 
    *)
