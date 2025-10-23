@@ -370,6 +370,25 @@ F.  RabbitMQ
             ###
 
 
+G.  OpenVSwitch - Configuration
+
+        pathappend /usr/scripts PATH
+
+        ovs-vsctl show
+                ovs_version: "3.3.6"
+
+        ovs-vsctl add-br br0
+
+        # check
+
+        ovs-vsctl show
+            Bridge br0
+                    Port br0
+                        Interface br0
+                            type: internal
+                ovs_version: "3.3.6"
+
+
 G.  KeyStone - Identity service
 
     # ubuntu install, automatically created /etc/apache2/keystone.conf

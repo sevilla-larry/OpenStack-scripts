@@ -35,7 +35,7 @@ PATH=$PATH:/usr/share/openvswitch/scripts
 case "$1" in
    start)
       log_info_msg "Starting Open vSwitch..."
-      ovs-ctl start --system-id=random
+      ovs-ctl start --system-id=random --system-version="12.4" --system-type="linux"
       evaluate_retval
       ;;
 

@@ -9,6 +9,10 @@
 # https://docs.openstack.org/neutron/2025.1/_static/config-samples/ml2_conf.conf.sample
 #
 
+# suggestion of Grok, but not in documentation
+# datapath_type = netdev
+# initially none
+
 [ml2]
 type_drivers = flat,vlan
 tenant_network_types =

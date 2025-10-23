@@ -71,13 +71,21 @@ make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # modprobe openvswitch >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-mkdir -pv /etc/openvswitch /var/{run,log}/openvswitch   \
+mkdir -pv /{etc,var/{run,log}}/openvswitch              \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 #chown -Rv root:root /var/{run,log}/openvswitch         \
 #        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 ovsdb-tool create /etc/openvswitch/conf.db              \
         /usr/share/openvswitch/vswitch.ovsschema        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+mkdir -v /usr/scripts   \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+#link the scripts at /usr/share/openvswitch/scripts
+# to /usr/scripts
+ln -sv  /usr/share/openvswitch/scripts/ovs-ctl  \
+        /usr/scripts/ovs-ctl
 
 
 cd $SOURCES
