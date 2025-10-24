@@ -6,7 +6,7 @@
 . /lib/lsb/init-functions
 
 name="etcd"
-program="/usr/local/bin/etcd"
+program="/usr/bin/etcd"
 pidfile="/run/etcd/etcd.pid"
 logfile="/var/log/etcd/etcd.log"
 args="--config-file /etc/etcd.conf.yml"

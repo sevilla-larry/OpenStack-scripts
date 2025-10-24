@@ -36,7 +36,7 @@ cd $PKG
 echo "2. Configure ..."
 echo "2. Configure ..." >> $OSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR
-./configure --prefix=/usr/local     \
+./configure --prefix=/usr           \
             --sysconfdir=/etc       \
             --localstatedir=/var    \
             --enable-shared         \
@@ -63,23 +63,23 @@ echo "4. Make Install ..." >> $PKGLOG_ERROR
 make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 #update library path (with existing /usr/local/lib)
-ldconfig >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+#ldconfig >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 mkdir -pv /{etc,var/{run,log}}/openvswitch              \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 #chown -Rv root:root /var/{run,log}/openvswitch         \
 #        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 ovsdb-tool create /etc/openvswitch/conf.db              \
-        /usr/local/share/openvswitch/vswitch.ovsschema        \
+        /usr/share/openvswitch/vswitch.ovsschema        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-mkdir -v /usr/local/scripts     \
+mkdir -v /usr/scripts     \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 #link the scripts at /usr/share/openvswitch/scripts
 # to /usr/scripts
-ln -sv  /usr/local/share/openvswitch/scripts/*  \
-        /usr/local/scripts/                     \
+ln -sv  /usr/share/openvswitch/scripts/*  \
+        /usr/scripts/                     \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 

@@ -22,7 +22,7 @@
 
 . /lib/lsb/init-functions
 
-program=/usr/local/bin/glance-api
+program=/usr/bin/glance-api
 config=/etc/glance/glance-api.conf
 pidfile=/var/run/glance/glance-api.pid
 logfile=/var/log/glance/glance-api.log

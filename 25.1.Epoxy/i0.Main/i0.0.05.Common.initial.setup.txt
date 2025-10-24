@@ -90,8 +90,8 @@ A. Preparation
 			fi
 		fi
 
-		if [ ! -L /usr/local/scripts ]; then
-				pathappend /usr/local/scripts
+		if [ ! -L /usr/scripts ]; then
+				pathappend /usr/scripts
 		fi
 
 	g. update /root/.bashrc
@@ -107,8 +107,8 @@ A. Preparation
 				pathprepend /usr/local/sbin
 		fi
 
-		if [ -d /usr/local/scripts ]; then
-				pathappend /usr/local/scripts
+		if [ -d /usr/scripts ]; then
+				pathappend /usr/scripts
 		fi
 
 		if [ -d /usr/local/share ]; then
@@ -126,7 +126,12 @@ A. Preparation
 	# included in /etc/ld.so.conf but not updated
 	i. ldconfig
 
-Note:
+	j. mkdir -vp /usr/openstack/{minor,major,support,service}
+
+	Note:
 	LfS and BLfS apps in /usr/bin & /usr/sbin
 
-	non-(B)LfS apps in /usr/local/bin & /usr/local/sbin
+	non-(B)LfS apps in /usr/openstack/*
+	link to /usr/local
+
+	others in /usr/local/bin & /usr/local/sbin

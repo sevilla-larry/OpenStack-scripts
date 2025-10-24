@@ -36,8 +36,8 @@ cd $PKG
 echo "2. Configure ..."
 echo "2. Configure ..." >> $OSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR
-./configure --prefix=/usr/local \
-            --with-python3      \
+./configure --prefix=/usr   \
+            --with-python3  \
              > $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
 
 echo "3. Make Build ..."

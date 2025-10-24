@@ -16,7 +16,7 @@ MODE=754
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i6.21.5.Neutron.init.d.sh
+INITDFILESRC=$CURRDIR/i6.21.11.Neutron.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/neutron
 INITDFILEREL=../init.d/neutron
 

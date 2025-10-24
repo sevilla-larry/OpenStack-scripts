@@ -55,7 +55,7 @@ install -v -dm775 $RABBITMQ_HOME/var/lib/rabbitmq/mnesia        \
 chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME                      \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-ln -vsf $RABBITMQ_HOME/sbin/* /usr/local/sbin                   \
+ln -vsf $RABBITMQ_HOME/sbin/* /usr/sbin                   \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 ln -vsf $RABBITMQ_HOME/etc/rabbitmq /etc/rabbitmq               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR

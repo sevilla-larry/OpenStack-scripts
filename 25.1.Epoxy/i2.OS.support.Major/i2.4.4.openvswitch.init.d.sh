@@ -30,7 +30,7 @@
 
 . /lib/lsb/init-functions
 
-PATH=$PATH:/usr/local/share/openvswitch/scripts
+PATH=$PATH:/usr/share/openvswitch/scripts
 
 case "$1" in
    start)
@@ -52,8 +52,8 @@ case "$1" in
       ;;
 
    status)
-      statusproc /usr/local/bin/ovs-vswitchd
-      statusproc /usr/local/bin/ovsdb-server
+      statusproc /usr/bin/ovs-vswitchd
+      statusproc /usr/bin/ovsdb-server
       ;;
 
    *)

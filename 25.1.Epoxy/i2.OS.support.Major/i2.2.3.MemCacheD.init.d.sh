@@ -39,7 +39,7 @@
 # Pull in sysconfig settings if available, otherwise set defaults
 [ -f /etc/sysconfig/memcached ] && . /etc/sysconfig/memcached
 
-MEMCACHED_BIN="${MEMCACHED_BIN:-/usr/local/bin/memcached}"
+MEMCACHED_BIN="${MEMCACHED_BIN:-/usr/bin/memcached}"
 PIDFILE="${PIDFILE:-/var/run/memcached/memcached.pid}"
 USER="${USER:-memcached}"
 PORT="${PORT:-11211}"
