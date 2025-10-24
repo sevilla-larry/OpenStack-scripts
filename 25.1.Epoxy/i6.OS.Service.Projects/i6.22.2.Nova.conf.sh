@@ -20,7 +20,7 @@ ETCDIR=/etc
 NOVAETCDIR=${ETCDIR}/nova
 NOVAETCDIRSAMPLE=${NOVAETCDIR}/sample
 CURRDIR=`pwd`
-CONFMODE=644
+MODE=755
 CNFFILESRC=${CURRDIR}/i6.22.4.nova.conf.txt
 CNFFILEDST=${NOVAETCDIR}/nova.conf
 
@@ -36,7 +36,7 @@ cp -v   ../nova.conf.sample                     \
 cp -v   ${CNFFILESRC} ${CNFFILEDST}             \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v ${CONFMODE} ${CNFFILEDST1}             \
+chmod -v ${MODE} ${CNFFILEDST1}                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR nova:nova ${NOVAETCDIR}               \

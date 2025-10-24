@@ -106,7 +106,7 @@ install -v -d -m777 /var/log/keystone           \
 # since the whole KeyStone source directory
 # will be removed
 
-CONFMODE=644
+MODE=755
 
 cp -v   etc/logging.conf.sample                 \
         /etc/keystone/logging.conf              \
@@ -118,7 +118,7 @@ cp -v   httpd/wsgi-keystone.conf                                \
         /etc/keystone/sample/httpd_wsgi-keystone.conf.sample    \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v ${CONFMODE} /etc/keystone/logging.conf \
+chmod -v ${MODE} /etc/keystone/logging.conf \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR keystone:keystone /{etc,var/{lib,log}}/keystone       \

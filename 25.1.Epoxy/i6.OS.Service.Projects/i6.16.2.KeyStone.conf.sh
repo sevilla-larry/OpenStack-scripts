@@ -21,7 +21,7 @@ ETCDIR=/etc
 KEYSTONEETCDIR=${ETCDIR}/keystone
 KEYSTONEETCDIRSAMPLE=${KEYSTONEETCDIR}/sample
 CURRDIR=`pwd`
-CONFMODE=644
+MODE=755
 CNFFILESRC1=${CURRDIR}/i6.16.3.keystone.conf.txt
 CNFFILEDST1=${KEYSTONEETCDIR}/keystone.conf
 CNFFILESRC2=${CURRDIR}/i6.16.5.policy.yaml.sample.txt
@@ -39,7 +39,7 @@ cp -v   ${CNFFILESRC1} ${CNFFILEDST1}           \
 cp -v   ${CNFFILESRC2} ${CNFFILEDST2}           \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v ${CONFMODE} ${CNFFILEDST2}             \
+chmod -v ${MODE} ${CNFFILEDST2}                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR keystone:keystone /etc/keystone       \
@@ -58,7 +58,7 @@ echo "2. Install Keystone's Apache Configuration ..." >> $PKGLOG_ERROR
 cp -v   ${CNFFILESRC3} ${CNFFILEDST3}           \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v ${CONFMODE} ${CNFFILEDST3}             \
+chmod -v ${MODE} ${CNFFILEDST3}                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -v apache:apache ${CNFFILEDST3}           \

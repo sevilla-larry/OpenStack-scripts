@@ -129,7 +129,7 @@ install -v -d -m777 /var/log/neutron            \
 # since the whole Neutron source directory
 # will be removed
 
-CONFMODE=644
+MODE=755
 NEUTRONETCSAMPLE=/etc/neutron/sample
 
 cd etc
@@ -144,7 +144,7 @@ cp -v   rootwrap.conf                                   \
         ${NEUTRONETCSAMPLE}/rootwrap.conf.sample        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -vR ${CONFMODE} /etc/neutron                      \
+chmod -vR ${MODE} /etc/neutron                          \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR neutron:neutron /{etc,var/{lib,log}}/neutron  \

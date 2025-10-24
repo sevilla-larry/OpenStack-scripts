@@ -135,7 +135,7 @@ install -v -d -m777 /var/log/nova               \
 # since the whole Nova source directory
 # will be removed
 
-CONFMODE=644
+MODE=755
 NOVAETCSAMPLE=/etc/nova/sample
 
 cd etc/nova
@@ -154,7 +154,7 @@ cp -v   rootwrap.conf                           \
         ${NOVAETCSAMPLE}/rootwrap.conf.sample   \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -vR ${CONFMODE} /etc/nova                 \
+chmod -vR ${MODE} /etc/nova                     \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR nova:nova /{etc,var/{lib,log}}/nova   \

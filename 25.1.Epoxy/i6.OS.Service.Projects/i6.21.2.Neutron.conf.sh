@@ -21,7 +21,7 @@ NEUTRONETCDIR=${ETCDIR}/neutron
 NEUTRONETCDIRSAMPLE=${NEUTRONETCDIR}/sample
 NEUTRONETCDIRPLUGINSML2=${NEUTRONETCDIR}/plugins/ml2
 CURRDIR=`pwd`
-CONFMODE=644
+MODE=755
 CNFFILESRC1=${CURRDIR}/i6.21.4.neutron.conf.txt
 CNFFILEDST1=${NEUTRONETCDIR}/neutron.conf
 CNFFILESRC2=${CURRDIR}/i6.21.5.ml2_conf.ini.txt
@@ -57,7 +57,7 @@ cp -v   ${CNFFILESRC3} ${CNFFILEDST3}           \
 cp -v   ${CNFFILESRC4} ${CNFFILEDST4}           \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v                ${CONFMODE}             \
+chmod -v                ${MODE}                 \
         ${CNFFILEDST1}  ${CNFFILEDST1}          \
         ${CNFFILEDST1}  ${CNFFILEDST1}          \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR

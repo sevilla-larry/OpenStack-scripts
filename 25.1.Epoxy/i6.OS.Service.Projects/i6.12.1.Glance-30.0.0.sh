@@ -121,8 +121,7 @@ install -v -d -m755 /var/run/glance             \
 # since the whole Glance source directory
 # will be removed
 
-DIRMODE=755
-CONFMODE=644
+MODE=755
 GLANCEETCSAMPLE=/etc/glance/sample
 
 cd etc
@@ -170,7 +169,7 @@ cp -v   schema-image.json                                               \
 cp -v   metadefs/* /etc/glance/metadefs                                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -vR ${DIRMODE} /etc/glance                        \
+chmod -vR ${MODE} /etc/glance                        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR glance:glance /{etc,var/{lib,log,run}}/glance \
