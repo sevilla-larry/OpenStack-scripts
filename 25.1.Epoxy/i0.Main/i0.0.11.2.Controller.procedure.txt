@@ -35,14 +35,6 @@ A.  Preparation
 
         ###
 
-        nano /etc/profile
-
-        # after export PATH=/usr/bin
-
-        if [ ! -L /usr/scripts ]; then
-                pathappend /usr/scripts
-        fi
-
         cd /sources
 
         ###
@@ -156,9 +148,9 @@ B.  Support Applications - minor
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
-        echo $LANG            # en_US.UTF-8
+        echo $LANG            # C.UTF-8
         echo $LC_ALL          # C.utf8
-        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+        echo $PATH            # /usr/sbin:/usr/bin    ??? /usr/local/sbin:/usr/local/bin:
         echo $PYVER           # 12
 
         echo $CFLAGS
@@ -488,9 +480,9 @@ G.  KeyStone - Identity service
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
-        echo $LANG            # en_US.UTF-8
+        echo $LANG            # C.UTF-8
         echo $LC_ALL          # C.utf8
-        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+        echo $PATH            # /usr/sbin:/usr/bin:/usr/scripts  ???/usr/local/sbin:/usr/local/bin:
 
         echo $CFLAGS
         echo $CXXFLAGS
@@ -651,7 +643,7 @@ H.  Create a domain, projects, users, roles
             --password openstack demo
 
         $$$ Create "demo" role
-        #openstack role create role
+        $openstack role create role
         openstack role create demo
 
         $$$ Add "demo" role to "demo" project and "demo" user
@@ -814,9 +806,9 @@ J.  Glance - Image Service
         echo $LFSLOG          # /var/log/blfs
         echo $MAKEFLAGS       # -j$(nproc)
         echo $NPROC           # $(nproc)
-        echo $LANG            # en_US.UTF-8
+        echo $LANG            # C.UTF-8
         echo $LC_ALL          # C.utf8
-        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+        echo $PATH            # /usr/sbin:/usr/bin:/usr/scripts  ???/usr/local/sbin:/usr/local/bin:
 
         echo $CFLAGS
         echo $CXXFLAGS

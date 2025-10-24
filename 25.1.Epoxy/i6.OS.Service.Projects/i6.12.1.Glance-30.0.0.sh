@@ -119,11 +119,15 @@ install -v -d -m777 /var/log/glance             \
 # since the whole Glance source directory
 # will be removed
 
+DIRMODE=755
 CONFMODE=644
 GLANCEETCSAMPLE=/etc/glance/sample
 
 cd etc
 
+cp -v   glance-api-paste.ini                                            \
+        /etc/glance/glance-api-paste.ini                                \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 cp -v   glance-api-paste.ini                                            \
         ${GLANCEETCSAMPLE}/glance-api-paste.ini.sample                  \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
@@ -164,7 +168,7 @@ cp -v   schema-image.json                                               \
 cp -v   metadefs/* /etc/glance/metadefs                                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -vR ${CONFMODE} /etc/glance                       \
+chmod -vR ${DIRMODE} /etc/glance                       \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR glance:glance /{etc,var/{lib,log}}/glance     \
