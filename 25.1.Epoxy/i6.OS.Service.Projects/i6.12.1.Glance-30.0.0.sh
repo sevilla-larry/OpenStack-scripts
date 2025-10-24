@@ -113,6 +113,8 @@ install -v -d -m777 /var/lib/glance/images      \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/log/glance             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+install -v -d -m755 /var/run/glance             \
+        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # copy the configuration samples
 # to /etc/glance/sample/*
@@ -168,10 +170,10 @@ cp -v   schema-image.json                                               \
 cp -v   metadefs/* /etc/glance/metadefs                                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -vR ${DIRMODE} /etc/glance                       \
+chmod -vR ${DIRMODE} /etc/glance                        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chown -vR glance:glance /{etc,var/{lib,log}}/glance     \
+chown -vR glance:glance /{etc,var/{lib,log,run}}/glance \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
