@@ -90,7 +90,7 @@ A. Preparation
 			fi
 		fi
 
-		if [ -d /usr/local/scripts ]; then
+		if [ ! -L /usr/local/scripts ]; then
 				pathappend /usr/local/scripts
 		fi
 

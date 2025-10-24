@@ -9,7 +9,7 @@
 #               i6.12.1 Glance-30.0.0
 #
 
-export PKGLOG_DIR=$OSLOG/6.16.2
+export PKGLOG_DIR=$OSLOG/6.12.2
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export OSLOG_PROCESS=$OSLOG/process.log

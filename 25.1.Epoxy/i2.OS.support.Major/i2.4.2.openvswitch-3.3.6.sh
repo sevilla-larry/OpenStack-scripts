@@ -78,8 +78,8 @@ mkdir -v /usr/local/scripts     \
 
 #link the scripts at /usr/share/openvswitch/scripts
 # to /usr/scripts
-ln -sv  /usr/local/share/openvswitch/scripts/ovs-ctl  \
-        /usr/local/scripts/ovs-ctl              \
+ln -sv  /usr/local/share/openvswitch/scripts/*  \
+        /usr/local/scripts/                     \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 

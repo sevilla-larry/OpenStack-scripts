@@ -17,8 +17,8 @@ DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
 INITDFILESRC=$CURRDIR/i6.12.5.Glance-api.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/glance
-INITDFILEREL=../init.d/glance
+INITDFILEDST=${EXTDIR}/rc.d/init.d/glance-api
+INITDFILEREL=../init.d/glance-api
 
 
 echo "Install Init.d/rc.d ..."
@@ -30,11 +30,11 @@ cp -v $INITDFILESRC $INITDFILEDST      \
 chmod -v ${MODE} $INITDFILEDST         \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K08glance \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K08glance-api \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S92glance \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S92glance-api \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K08glance \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K08glance-api \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

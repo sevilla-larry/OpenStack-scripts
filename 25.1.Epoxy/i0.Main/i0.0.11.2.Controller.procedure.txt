@@ -223,7 +223,7 @@ C.  Support Applications - Major
         ###
 
 
-D.  Support Apps - Major - Configuration 1
+D.  Support Apps - Major - Configuration
 
     D.01. MariaDB configuration
         # now part of i1.4.1.x
@@ -300,10 +300,7 @@ D.  Support Apps - Major - Configuration 1
 
         ###
 
-
-E.  Support Apps - Major - Configuration 2
-
-    E.01. MariaDB
+    D.04. MariaDB
 
         ###
 
@@ -320,7 +317,7 @@ E.  Support Apps - Major - Configuration 2
 
         ###
 
-    E.02. Check if mod_wsgi is included in Apache
+    D.05. Check if mod_wsgi is included in Apache
 
         ###
 
@@ -328,7 +325,7 @@ E.  Support Apps - Major - Configuration 2
 
         ###
 
-    E.03. check MemCacheD
+    D.06. check MemCacheD
 
         ###
 
@@ -337,14 +334,14 @@ E.  Support Apps - Major - Configuration 2
         ###
 
 
-F.  RabbitMQ
+E.  RabbitMQ
 
         ### as root
 
         # pathprepend /usr/local/rabbitmq_server-4.0.3/sbin PATH
 
-        pathprepend /usr/local/bin  PATH
-        pathprepend /usr/local/sbin PATH
+        # pathprepend /usr/local/bin  PATH
+        # pathprepend /usr/local/sbin PATH
 
         #
         # FAILED
@@ -378,11 +375,12 @@ F.  RabbitMQ
             ###
 
 
-G.  OpenVSwitch - Configuration
+F.  OpenVSwitch - Configuration
 
-        pathappend /usr/local/scripts PATH
+        # pathappend /usr/local/scripts PATH
 
         ovs-vsctl show
+            xxxxxxxx-xxxx-....
                 ovs_version: "3.3.6"
 
         ovs-vsctl add-br br0
@@ -390,12 +388,12 @@ G.  OpenVSwitch - Configuration
         # check
 
         ovs-vsctl show
-            Bridge br0
-                    Port br0
-                        Interface br0
-                            type: internal
+            xxxxxxxx-xxxx-....
+                Bridge br0
+                        Port br0
+                            Interface br0
+                                type: internal
                 ovs_version: "3.3.6"
-
 
         # Create a test OVS bridge
         ovs-vsctl add-br test-br
@@ -409,8 +407,14 @@ G.  OpenVSwitch - Configuration
         # This should shows it up, no issue.
         ip link show test-br
 
+        ovs-vsctl show
+            # two bridges
+
         # Clean up
         ovs-vsctl del-br test-br
+
+        ovs-vsctl show
+            # back to one bridge
 
 
 G.  KeyStone - Identity service
@@ -458,7 +462,7 @@ G.  KeyStone - Identity service
         export LFSLOG=/var/log/blfs
         export MAKEFLAGS="-j$(nproc)"
         export NPROC="$(nproc)"
-        export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
+      # export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
 
         ###
         # for VBs
@@ -477,8 +481,8 @@ G.  KeyStone - Identity service
         export CXXFLAGS=$CFLAGS
         export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
 
-        pathprepend /usr/local/bin  PATH
-        pathprepend /usr/local/sbin PATH
+        # pathprepend /usr/local/bin  PATH
+        # pathprepend /usr/local/sbin PATH
 
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
@@ -803,8 +807,8 @@ J.  Glance - Image Service
         export CXXFLAGS=$CFLAGS
         export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
 
-        pathprepend /usr/local/bin  PATH
-        pathprepend /usr/local/sbin PATH
+        # pathprepend /usr/local/bin  PATH
+        # pathprepend /usr/local/sbin PATH
 
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
@@ -840,8 +844,6 @@ J.  Glance - Image Service
         # update ENDPOINT_ID
         [oslo_limit]
         endpoint_id = ENDPOINT_ID
-
-
 
         # [database]
       # connection = mysql+pymysql://glance:GLANCE_DBPASS@controller/glance
