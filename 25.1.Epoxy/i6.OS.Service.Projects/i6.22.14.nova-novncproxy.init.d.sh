@@ -9,23 +9,26 @@
 NAME="nova-novncproxy"
 DAEMON="/usr/local/bin/nova-novncproxy-wrapper"
 PIDFILE="/var/run/nova/nova-novncproxy.pid"
-USER="nova"
 
 start() {
     log_info_msg "Starting $NAME ..."
 
-    # Clean old PID
+    mkdir -p /var/run/nova /var/log/nova
+    chown nova:nova /var/run/nova /var/log/nova
+
+    LOGFILE="/var/log/nova/nova-novncproxy.log"
+    touch "$LOGFILE"
+    chown nova:nova "$LOGFILE"
+    chmod 644 "$LOGFILE"
+
     rm -f "$PIDFILE"
 
-    # Manual fork: start in background
     setsid "$DAEMON" >/dev/null 2>&1 &
     PID=$!
 
-    # Write PID file
     echo "$PID" > "$PIDFILE"
-    chown "$USER:$USER" "$PIDFILE"
+    chown nova:nova "$PIDFILE"
 
-    # Wait up to 5s for process to be alive
     local i=0
     while [ $i -lt 50 ]; do
         if kill -0 "$PID" 2>/dev/null; then
@@ -46,7 +49,6 @@ stop() {
     if [ -f "$PIDFILE" ]; then
         PID=$(cat "$PIDFILE")
         kill "$PID" 2>/dev/null
-        # Wait up to 10s
         local i=0
         while [ $i -lt 100 ] && kill -0 "$PID" 2>/dev/null; do
             sleep 0.1
