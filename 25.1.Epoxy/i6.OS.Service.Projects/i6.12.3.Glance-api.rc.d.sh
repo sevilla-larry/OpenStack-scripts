@@ -12,7 +12,7 @@ SHELL=/bin/bash
 ETCDIR=/etc
 LIBDIR=${DESTDIR}/lib/services
 EXTDIR=${DESTDIR}${ETCDIR}
-MODE=755
+INITMODE=755
 CURRDIR=`pwd`
 INITDFILESRC=$CURRDIR/i6.12.5.Glance-api.init.d.sh
 INITDFILEDST=${EXTDIR}/rc.d/init.d/glance-api
@@ -25,7 +25,7 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
 cp -v $INITDFILESRC $INITDFILEDST      \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${MODE} $INITDFILEDST         \
+chmod -v ${INITMODE} $INITDFILEDST     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K09glance-api \

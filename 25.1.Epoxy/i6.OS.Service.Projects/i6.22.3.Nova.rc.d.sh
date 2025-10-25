@@ -12,7 +12,8 @@ SHELL=/bin/bash
 ETCDIR=/etc
 LIBDIR=${DESTDIR}/lib/services
 EXTDIR=${DESTDIR}${ETCDIR}
-MODE=754
+LOCALBIN=/usr/local/bin
+INITMODE=755
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
@@ -43,7 +44,7 @@ cp -v $INITDFILESRC3 $INITDFILEDST3 \
 cp -v $INITDFILESRC4 $INITDFILEDST4 \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-chmod -v ${MODE}
+chmod -v ${INITMODE}                \
       $INITDFILEDST1 $INITDFILEDST2 \
       $INITDFILEDST3 $INITDFILEDST4 \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
@@ -71,6 +72,33 @@ ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc0.d/K05nova-novncproxy   \
 ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc3.d/S95nova-novncproxy   \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc6.d/K05nova-novncproxy   \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
+WRAPRFILESRC1=$CURRDIR/i6.22.21.nova-api-wrapper.sh
+WRAPRFILEDST1=${LOCALBIN}/nova-api-wrapper
+WRAPRFILESRC2=$CURRDIR/i6.22.22.nova-scheduler-wrapper.sh
+WRAPRFILEDST2=${LOCALBIN}/nova-scheduler-wrapper
+WRAPRFILESRC3=$CURRDIR/i6.22.23.nova-conductor-wrapper.sh
+WRAPRFILEDST3=${LOCALBIN}/nova-conductor-wrapper
+WRAPRFILESRC4=$CURRDIR/i6.22.24.nova-novncproxy-wrapper.sh
+WRAPRFILEDST4=${LOCALBIN}/nova-novncproxy-wrapper
+
+echo "Install Wrappers ..."
+echo "Install Wrappers ..." >> $OSLOG_PROCESS
+echo "Install Wrappers ..." >> $PKGLOG_ERROR
+
+cp -v $WRAPRFILESRC1 $WRAPRFILEDST1 \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+cp -v $WRAPRFILESRC2 $WRAPRFILEDST2 \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+cp -v $WRAPRFILESRC3 $WRAPRFILEDST3 \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+cp -v $WRAPRFILESRC4 $WRAPRFILEDST4 \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
+chmod -v ${INITMODE}                \
+      $WRAPRFILEDST1 $WRAPRFILEDST2 \
+      $WRAPRFILEDST3 $WRAPRFILEDST4 \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

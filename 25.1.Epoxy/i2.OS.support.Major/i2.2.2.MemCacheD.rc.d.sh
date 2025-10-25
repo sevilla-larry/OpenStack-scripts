@@ -12,7 +12,7 @@ SHELL=/bin/bash
 ETCDIR=/etc
 LIBDIR=${DESTDIR}/lib/services
 EXTDIR=${DESTDIR}${ETCDIR}
-MODE=754
+INITMODE=755
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
@@ -27,7 +27,7 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
 cp -v $INITDFILESRC $INITDFILEDST      \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${MODE} $INITDFILEDST         \
+chmod -v ${INITMODE} $INITDFILEDST     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K23memcached  \
