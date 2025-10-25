@@ -13,6 +13,8 @@
 # wsgi already loaded
 # LoadModule wsgi_module modules/mod_wsgi.so  # Ensure this is loaded in httpd.conf if not already
 
+Listen 8778
+
 <VirtualHost *:8778>
     ServerName controller
     WSGIDaemonProcess placement-api display-name=%{GROUP} user=placement group=placement processes=3 threads=10

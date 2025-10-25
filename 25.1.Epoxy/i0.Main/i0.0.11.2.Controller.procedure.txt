@@ -1219,19 +1219,22 @@ K.  Placement - Placement Service
 
         lsof -i:8778
 
-            COMMAND    PID      USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            placement pppp placement 5u  IPv4   nnnn      0t0  TCP controller.localdomain:uec (LISTEN)
+            COMMAND PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+            httpd   nnn   root 8u  IPv6    277      0t0  TCP *:uec (LISTEN)
+            httpd   nnn apache 8u  IPv6    277      0t0  TCP *:uec (LISTEN)
+            httpd   nnn apache 8u  IPv6    277      0t0  TCP *:uec (LISTEN)
+            httpd   nnn apache 8u  IPv6    277      0t0  TCP *:uec (LISTEN)
 
         curl -i http://controller:8778
 
-            HTTP/1.0 200 OK
+            HTTP/1.1 200 OK
             Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
-            Server: WSGIServer/0.2 CPython/3.11.10
+            Server: Apache/2.4.65 (Unix) mod_wsgi/5.0.2 Python/3.12
             Content-Length: 136
-            Content-Type: application/json
             openstack-api-version: placement 1.0
             vary: openstack-api-version
-            x-openstack-request-id: req-........-....-....-....-............
+            x-openstack-request-id: req-323ec1b4-ef00-468d-9219-6febd880ff98
+            Content-Type: application/json
 
             {"versions":
              [{"id": "v1.0",
@@ -1239,6 +1242,7 @@ K.  Placement - Placement Service
                "min_version": "1.0",
                 "status": "CURRENT",
                  "links": [{"rel": "self", "href": ""}]}]}
+
 
     K.08. Verify Operation
 

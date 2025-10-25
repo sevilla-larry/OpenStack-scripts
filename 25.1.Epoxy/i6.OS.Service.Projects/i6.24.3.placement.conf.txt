@@ -12,7 +12,8 @@
 log_dir = /var/log/placement
 # log_file = /var/log/placement/placement.log
 
-transport_url = rabbit://  # Not used by Placement API, but set if RabbitMQ exists
+transport_url = rabbit://
+# Not used by Placement API, but set if RabbitMQ exists
 
 debug = False
 
@@ -22,7 +23,8 @@ debug = False
 connection = mysql+pymysql://placement:openstack@controller/placement
 
 [api]
-auth_strategy = keystone  # use noauth2 if not using keystone
+auth_strategy = keystone
+# use noauth2 if not using keystone
 
 [keystone_authtoken]
 www_authenticate_uri = http://controller:5000/
