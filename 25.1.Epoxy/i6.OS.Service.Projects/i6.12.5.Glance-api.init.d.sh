@@ -14,9 +14,11 @@ logfile="/var/log/glance/api.log"
 user="glance"
 
 # === ENSURE ENVIRONMENT ===
-mkdir -p /var/run/glance /var/log/glance
-chown $user:$user /var/run/glance /var/log/glance
-chown $user:$user "$config" "$logfile" 2>/dev/null || true
+mkdir -p /var/run/glance
+# /var/log/glance
+chown $user:$user /var/run/glance
+# /var/log/glance
+# chown $user:$user "$config" "$logfile" 2>/dev/null || true
 
 # === DEBUG LOG ===
 debug_log="/var/log/glance/startup-debug.log"

@@ -126,8 +126,7 @@ GLANCEETCSAMPLE=/etc/glance/sample
 
 cd etc
 
-cp -v   glance-api-paste.ini                                            \
-        /etc/glance/glance-api-paste.ini                                \
+cp -v   glance-api-paste.ini /etc/glance                                \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 cp -v   glance-api-paste.ini                                            \
         ${GLANCEETCSAMPLE}/glance-api-paste.ini.sample                  \

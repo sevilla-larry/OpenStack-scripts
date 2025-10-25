@@ -20,7 +20,7 @@ mkdir $PKGLOG_DIR
 ETCDIR=/etc
 GLANCEETCDIR=${ETCDIR}/glance
 CURRDIR=`pwd`
-CONFMODE=755
+MODE=755
 CNFFILESRC=${CURRDIR}/i6.12.4.glance-api.conf.txt
 CNFFILEDST=${GLANCEETCDIR}/glance-api.conf
 
@@ -31,7 +31,7 @@ echo "1. Install Glance API Configuration ..." >> $PKGLOG_ERROR
 cp -v   ${CNFFILESRC} ${CNFFILEDST}             \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v ${CONFMODE} ${CNFFILEDST}              \
+chmod -v ${MODE} ${CNFFILEDST}                  \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR glance:glance /etc/glance             \
