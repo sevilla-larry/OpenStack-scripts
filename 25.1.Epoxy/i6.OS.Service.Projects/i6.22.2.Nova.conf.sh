@@ -21,7 +21,7 @@ NOVAETCDIR=${ETCDIR}/nova
 NOVAETCDIRSAMPLE=${NOVAETCDIR}/sample
 CURRDIR=`pwd`
 MODE=755
-CNFFILESRC=${CURRDIR}/i6.22.4.nova.conf.txt
+CNFFILESRC=${CURRDIR}/i6.22.5.nova.conf.txt
 CNFFILEDST=${NOVAETCDIR}/nova.conf
 
 echo "1. Install Nova Configuration ..."

@@ -1,12 +1,12 @@
 rc.0
 
         K04neutron
-        K09glance
 K10gpm
         K12nova-novncproxy
         K13nova-conductor
         K14nova-scheduler
         K15nova-api
+        K18glance-api
     K22etcd
     K23memcached
     K24rabbitmq
@@ -64,11 +64,11 @@ S70gpm
     S76rabbitmq
     S77memcached
     S78etcd
+        S82glance-api
         S85nova-api
         S86nova-scheduler
         S87nova-conductor
         S88nova-novncproxy
-        S91glance
         S96neutron
 
 rc.4
@@ -100,12 +100,12 @@ S70gpm
 rc.6
 
         K04neutron
-        K09glance
 K10gpm
         K12nova-novncproxy
         K13nova-conductor
         K14nova-scheduler
         K15nova-api
+        K18glance-api
     K22etcd
     K23memcached
     K24rabbitmq

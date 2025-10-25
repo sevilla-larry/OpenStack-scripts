@@ -1543,7 +1543,7 @@ L.  Nova - Compute Service
 
         iptables-save > /etc/iptables.rules
 
-        echo "iptables-restore < /etc/iptables.rules" >> /etc/rc.local
+        echo "iptables-restore < /etc/iptables.rules" >> /etc/rc.d/rc3.d/S89iptables-restore-rules
 
         ###
 

@@ -25,7 +25,7 @@
 #                                nova.conf.sample
 #                                nova.policy.yaml.sample
 # 16.22.4 noVNC-1.6.0
-#                                noVNC-1.6.0.tar.gz
+830c3e16467cf54e250ad4c0a62cd1e9 noVNC-1.6.0.tar.gz
 # 111 noVNC 1.5.0
 # noVNC-1.5.0.tar.gz
 #                                noVNC%201.5.0%20source%20code.tar.gz
