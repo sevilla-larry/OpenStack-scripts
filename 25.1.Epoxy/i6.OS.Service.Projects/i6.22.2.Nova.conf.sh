@@ -36,7 +36,7 @@ cp -v   ../nova.conf.sample                     \
 cp -v   ${CNFFILESRC} ${CNFFILEDST}             \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v ${MODE} ${CNFFILEDST1}                 \
+chmod -v ${MODE} ${CNFFILEDST}                  \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR nova:nova ${NOVAETCDIR}               \

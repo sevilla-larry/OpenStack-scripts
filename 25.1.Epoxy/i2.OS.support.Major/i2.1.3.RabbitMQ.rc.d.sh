@@ -55,11 +55,11 @@ chmod -v ${COOKIEMODE} $COOKIEDST2        \
 # chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME      \
 #    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K16rabbitmq  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K24rabbitmq  \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S84rabbitmq  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S76rabbitmq  \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K16rabbitmq  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K24rabbitmq  \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

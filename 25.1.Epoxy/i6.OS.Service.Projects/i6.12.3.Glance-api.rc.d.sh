@@ -28,11 +28,11 @@ cp -v $INITDFILESRC $INITDFILEDST      \
 chmod -v ${MODE} $INITDFILEDST         \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K08glance-api \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K09glance-api \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S92glance-api \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S91glance-api \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K08glance-api \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K09glance-api \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

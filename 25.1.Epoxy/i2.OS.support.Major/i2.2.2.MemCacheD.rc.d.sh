@@ -30,11 +30,11 @@ cp -v $INITDFILESRC $INITDFILEDST      \
 chmod -v ${MODE} $INITDFILEDST         \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K15memcached  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K23memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S85memcached  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S77memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K15memcached  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K23memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

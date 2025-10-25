@@ -31,19 +31,19 @@ cp -v $INITDFILESRC $INITDFILEDST      \
 chmod -v ${MODE} $INITDFILEDST         \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K14etcd  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K22etcd  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K14etcd  \
+#ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K22etcd  \
+#      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+#ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S78etcd  \
+#      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S78etcd  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S86etcd  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S86etcd  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S86etcd  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S86etcd  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K14etcd  \
+#ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S78etcd  \
+#      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+#ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S78etcd  \
+#      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K22etcd  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

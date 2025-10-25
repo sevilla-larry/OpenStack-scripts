@@ -1,13 +1,15 @@
 rc.0
 
-        K05neutron
-        K06nova
-      # K07placement
-        K08glance
+        K04neutron
+        K05nova-novncproxy
+        K06nova-conductor
+        K07nova-scheduler
+        K08nova-api
+        K09glance
 K10gpm
-    K14etcd
-    K15memcached
-    K16rabbitmq
+    K22etcd
+    K23memcached
+    K24rabbitmq
     K26mariadb
     K28httpd
 K30sshd
@@ -59,13 +61,15 @@ S30sshd
     S34mariadb
 S36ntpd
 S70gpm
-    S84rabbitmq
-    S85memcached
-    S86etcd
-        S92glance
-      # S93placement
-        S94nova
-        S95neutron
+    S76rabbitmq
+    S77memcached
+    S78etcd
+        S91glance
+        S92nova-api
+        S93nova-scheduler
+        S94nova-conductor
+        S95nova-novncproxy
+        S96neutron
 
 rc.4
 
@@ -95,14 +99,16 @@ S70gpm
 
 rc.6
 
-        K05neutron
-        K06nova
-      # K07placement
-        K08glance
+        K04neutron
+        K05nova-novncproxy
+        K06nova-conductor
+        K07nova-scheduler
+        K08nova-api
+        K09glance
 K10gpm
-    K14etcd
-    K15memcached
-    K16rabbitmq
+    K22etcd
+    K23memcached
+    K24rabbitmq
     K26mariadb
     K28httpd
 K30sshd
