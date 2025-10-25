@@ -129,8 +129,8 @@ install -v -d -m777 /var/lib/nova               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m777 /var/log/nova               \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m755 /var/run/nova               \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+# install -v -d -m755 /var/run/nova               \
+#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # copy the configuration samples
 # to /etc/nova/sample/*
@@ -162,8 +162,9 @@ cp -v   rootwrap.conf                           \
 chmod -vR ${MODE} /etc/nova                     \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chown -vR nova:nova /{etc,var/{lib,log,run}}/nova   \
+chown -vR nova:nova /{etc,var/{lib,log}}/nova   \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# run
 
 
 cd $SOURCES

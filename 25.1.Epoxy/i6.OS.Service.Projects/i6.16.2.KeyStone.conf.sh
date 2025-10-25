@@ -31,7 +31,7 @@ echo "1. Install Keystone Configuration ..."
 echo "1. Install Keystone Configuration ..." >> $OSLOG_PROCESS
 echo "1. Install Keystone Configuration ..." >> $PKGLOG_ERROR
 
-cp -v   ../keystone.conf.sample                 \
+cp -v   keystone.conf.sample                    \
         ${KEYSTONEETCDIRSAMPLE}                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 cp -v   ${CNFFILESRC1} ${CNFFILEDST1}           \

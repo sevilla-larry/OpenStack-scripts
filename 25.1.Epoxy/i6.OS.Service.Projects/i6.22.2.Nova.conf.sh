@@ -28,8 +28,8 @@ echo "1. Install Nova Configuration ..."
 echo "1. Install Nova Configuration ..." >> $OSLOG_PROCESS
 echo "1. Install Nova Configuration ..." >> $PKGLOG_ERROR
 
-cp -v   ../nova.conf.sample                     \
-        ../nova.policy.yaml.sample              \
+cp -v   nova.conf.sample                        \
+        nova.policy.yaml.sample                 \
         ${NOVAETCDIRSAMPLE}                     \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 

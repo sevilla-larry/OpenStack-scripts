@@ -30,8 +30,8 @@ echo "1. Install Placement Configuration ..."
 echo "1. Install Placement Configuration ..." >> $OSLOG_PROCESS
 echo "1. Install Placement Configuration ..." >> $PKGLOG_ERROR
 
-cp -v   ../placement.conf.sample                \
-        ../placement.policy.yaml.sample         \
+cp -v   placement.conf.sample                   \
+        placement.policy.yaml.sample            \
         ${PLACEMENTETCDIRSAMPLE}                \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 

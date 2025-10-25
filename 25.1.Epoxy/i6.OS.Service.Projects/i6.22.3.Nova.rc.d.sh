@@ -49,57 +49,57 @@ chmod -v ${INITMODE}                \
       $INITDFILEDST3 $INITDFILEDST4 \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc0.d/K08nova-api          \
+ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc0.d/K15nova-api          \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc3.d/S92nova-api          \
+ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc3.d/S85nova-api          \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc6.d/K08nova-api          \
+ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc6.d/K15nova-api          \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc0.d/K07nova-scheduler    \
+ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc0.d/K14nova-scheduler    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc3.d/S93nova-scheduler    \
+ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc3.d/S86nova-scheduler    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc6.d/K07nova-scheduler    \
+ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc6.d/K14nova-scheduler    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL3 ${EXTDIR}/rc.d/rc0.d/K06nova-conductor    \
+ln -vsf  $INITDFILEREL3 ${EXTDIR}/rc.d/rc0.d/K13nova-conductor    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL3 ${EXTDIR}/rc.d/rc3.d/S94nova-conductor    \
+ln -vsf  $INITDFILEREL3 ${EXTDIR}/rc.d/rc3.d/S87nova-conductor    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL3 ${EXTDIR}/rc.d/rc6.d/K06nova-conductor    \
+ln -vsf  $INITDFILEREL3 ${EXTDIR}/rc.d/rc6.d/K13nova-conductor    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc0.d/K05nova-novncproxy   \
+ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc0.d/K12nova-novncproxy   \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc3.d/S95nova-novncproxy   \
+ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc3.d/S88nova-novncproxy   \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc6.d/K05nova-novncproxy   \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-
-WRAPRFILESRC1=$CURRDIR/i6.22.21.nova-api-wrapper.sh
-WRAPRFILEDST1=${LOCALBIN}/nova-api-wrapper
-WRAPRFILESRC2=$CURRDIR/i6.22.22.nova-scheduler-wrapper.sh
-WRAPRFILEDST2=${LOCALBIN}/nova-scheduler-wrapper
-WRAPRFILESRC3=$CURRDIR/i6.22.23.nova-conductor-wrapper.sh
-WRAPRFILEDST3=${LOCALBIN}/nova-conductor-wrapper
-WRAPRFILESRC4=$CURRDIR/i6.22.24.nova-novncproxy-wrapper.sh
-WRAPRFILEDST4=${LOCALBIN}/nova-novncproxy-wrapper
-
-echo "Install Wrappers ..."
-echo "Install Wrappers ..." >> $OSLOG_PROCESS
-echo "Install Wrappers ..." >> $PKGLOG_ERROR
-
-cp -v $WRAPRFILESRC1 $WRAPRFILEDST1 \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-cp -v $WRAPRFILESRC2 $WRAPRFILEDST2 \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-cp -v $WRAPRFILESRC3 $WRAPRFILEDST3 \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-cp -v $WRAPRFILESRC4 $WRAPRFILEDST4 \
+ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc6.d/K12nova-novncproxy   \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-chmod -v ${INITMODE}                \
-      $WRAPRFILEDST1 $WRAPRFILEDST2 \
-      $WRAPRFILEDST3 $WRAPRFILEDST4 \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+# WRAPRFILESRC1=$CURRDIR/i6.22.21.nova-api-wrapper.sh
+# WRAPRFILEDST1=${LOCALBIN}/nova-api-wrapper
+# WRAPRFILESRC2=$CURRDIR/i6.22.22.nova-scheduler-wrapper.sh
+# WRAPRFILEDST2=${LOCALBIN}/nova-scheduler-wrapper
+# WRAPRFILESRC3=$CURRDIR/i6.22.23.nova-conductor-wrapper.sh
+# WRAPRFILEDST3=${LOCALBIN}/nova-conductor-wrapper
+# WRAPRFILESRC4=$CURRDIR/i6.22.24.nova-novncproxy-wrapper.sh
+# WRAPRFILEDST4=${LOCALBIN}/nova-novncproxy-wrapper
+
+# echo "Install Wrappers ..."
+# echo "Install Wrappers ..." >> $OSLOG_PROCESS
+# echo "Install Wrappers ..." >> $PKGLOG_ERROR
+
+# cp -v $WRAPRFILESRC1 $WRAPRFILEDST1 \
+#       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+# cp -v $WRAPRFILESRC2 $WRAPRFILEDST2 \
+#       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+# cp -v $WRAPRFILESRC3 $WRAPRFILEDST3 \
+#       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+# cp -v $WRAPRFILESRC4 $WRAPRFILEDST4 \
+#       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
+# chmod -v ${INITMODE}                \
+#       $WRAPRFILEDST1 $WRAPRFILEDST2 \
+#       $WRAPRFILEDST3 $WRAPRFILEDST4 \
+#       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 
 unset OSLOG_PROCESS
