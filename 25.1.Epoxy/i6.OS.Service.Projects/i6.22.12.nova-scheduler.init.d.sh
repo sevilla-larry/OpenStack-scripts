@@ -7,51 +7,73 @@
 . /lib/lsb/init-functions
 
 NAME="nova-scheduler"
-DAEMON="/usr/bin/nova-scheduler"
-CONFIG="/etc/nova/nova.conf"
-LOG="/var/log/nova/nova-scheduler.log"
-PIDFILE="/run/nova-scheduler.pid"
+DAEMON="/usr/local/bin/nova-scheduler-wrapper"
+PIDFILE="/var/run/nova/nova-scheduler.pid"
 USER="nova"
-
-# Ensure directories exist
-[ -d /run ] || mkdir -p /run
-[ -d "$(dirname "$LOG")" ] || mkdir -p "$(dirname "$LOG")"
 
 start() {
     log_info_msg "Starting $NAME ..."
 
-    # Build command: run as nova user, redirect logs, write PID
-    CMD="su -s /bin/sh $USER -c 'exec $DAEMON --config-file $CONFIG >>$LOG 2>&1'"
+    # Clean old PID
+    rm -f "$PIDFILE"
 
-    # Use start_daemon WITHOUT -u (not supported)
-    start_daemon -p "$PIDFILE" /bin/sh -c "$CMD"
-    retval=$?
-    evaluate_retval
-    return $retval
+    # Manual fork: start in background
+    setsid "$DAEMON" >/dev/null 2>&1 &
+    PID=$!
+
+    # Write PID file
+    echo "$PID" > "$PIDFILE"
+    chown "$USER:$USER" "$PIDFILE"
+
+    # Wait up to 5s for process to be alive
+    local i=0
+    while [ $i -lt 50 ]; do
+        if kill -0 "$PID" 2>/dev/null; then
+            log_success_msg2
+            return 0
+        fi
+        sleep 0.1
+        i=$((i+1))
+    done
+
+    log_failure_msg2
+    rm -f "$PIDFILE"
+    return 1
 }
 
 stop() {
     log_info_msg "Stopping $NAME ..."
-    killproc -p "$PIDFILE" "$DAEMON"
-    retval=$?
-    evaluate_retval
-    # Clean up stale PID if needed
-    [ $retval -ne 0 ] && rm -f "$PIDFILE" 2>/dev/null
-    return $retval
+    if [ -f "$PIDFILE" ]; then
+        PID=$(cat "$PIDFILE")
+        kill "$PID" 2>/dev/null
+        # Wait up to 10s
+        local i=0
+        while [ $i -lt 100 ] && kill -0 "$PID" 2>/dev/null; do
+            sleep 0.1
+            i=$((i+1))
+        done
+        kill -9 "$PID" 2>/dev/null
+    fi
+    rm -f "$PIDFILE"
+    log_success_msg2
 }
 
 status() {
-    statusproc -p "$PIDFILE" "$DAEMON"
+    if [ -f "$PIDFILE" ]; then
+        PID=$(cat "$PIDFILE")
+        if kill -0 "$PID" 2>/dev/null; then
+            echo "$NAME is running with PID $PID"
+            return 0
+        fi
+    fi
+    echo "$NAME is not running"
+    return 1
 }
 
 case "$1" in
     start)  start ;;
     stop)   stop  ;;
-    restart)
-        $0 stop
-        sleep 1
-        $0 start
-        ;;
+    restart) $0 stop; sleep 2; $0 start ;;
     status) status ;;
     *) echo "Usage: $0 {start|stop|restart|status}"; exit 1 ;;
 esac

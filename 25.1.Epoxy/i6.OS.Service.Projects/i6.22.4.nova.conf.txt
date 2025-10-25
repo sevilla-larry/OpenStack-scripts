@@ -20,7 +20,7 @@ my_ip = 10.0.0.11
 # Suggestions by Grok 2025/Oct/20
 use_neutron = true
 firewall_driver = nova.virt.firewall.NoopFirewallDriver
-log_dir = /var/log/nova
+# log_dir = /var/log/nova
 # Explicitly set if needed
 #
 
