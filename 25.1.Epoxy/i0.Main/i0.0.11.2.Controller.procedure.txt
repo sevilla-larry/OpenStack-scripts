@@ -1127,8 +1127,8 @@ K.  Placement - Placement Service
         export CXXFLAGS=$CFLAGS
         export LDFLAGS="-Wl,--as-needed -Wl,-O1 -Wl,--strip-all"
 
-        pathprepend /usr/local/bin  PATH
-        pathprepend /usr/local/sbin PATH
+        # pathprepend /usr/local/bin  PATH
+        # pathprepend /usr/local/sbin PATH
 
         echo $OSLOG           # /var/log/os
         echo $LFSLOG          # /var/log/blfs
@@ -1136,7 +1136,7 @@ K.  Placement - Placement Service
         echo $NPROC           # $(nproc)
         echo $LANG            # en_US.UTF-8
         echo $LC_ALL          # C.utf8
-        echo $PATH            # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+        echo $PATH            # /usr/sbin:/usr/bin:/usr/scripts ???/usr/local/sbin:/usr/local/bin:
 
         echo $CFLAGS
         echo $CXXFLAGS

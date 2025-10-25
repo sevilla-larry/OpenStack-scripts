@@ -22,7 +22,7 @@ PLACEMENTETCDIR=${ETCDIR}/placement
 PLACEMENTETCDIRSAMPLE=${PLACEMENTETCDIR}/sample
 CURRDIR=`pwd`
 MODE=755
-CNFFILESRC1=${CURRDIR}/i6.24.4.placement.conf.txt
+CNFFILESRC1=${CURRDIR}/i6.24.3.placement.conf.txt
 CNFFILEDST1=${PLACEMENTETCDIR}/placement.conf
 
 echo "1. Install Placement Configuration ..."
