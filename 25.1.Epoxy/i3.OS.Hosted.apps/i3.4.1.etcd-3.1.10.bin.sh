@@ -45,11 +45,11 @@ install -v -dm775 /var/lib/etcd         \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 install -v -dm777 /var/log/etcd         \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-install -v -dm775 /run/etcd             \
+install -v -dm775 /var/run/etcd         \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR etcd:etcd     /var/{lib,log}/etcd     \
-                        /run/etcd               \
+                        /var/run/etcd           \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 

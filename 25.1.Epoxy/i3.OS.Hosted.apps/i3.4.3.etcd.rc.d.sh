@@ -46,6 +46,15 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S78etcd  \
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K22etcd  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
+cat >> /etc/rc.d/rc3.d/15runowner << "EOF"    2>> $PKGLOG_ERROR
+
+install -d -m 2755 -o etcd -g etcd /var/run/etcd
+
+EOF
+
+chmod -v 777 /etc/rc.d/rc3.d/15runowner   \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
 
 unset OSLOG_PROCESS
 unset PKGLOG_INITD

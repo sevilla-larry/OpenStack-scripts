@@ -209,7 +209,13 @@ C.  Support Applications - Major
         cd /sources
 
         # Python OpenStack Client
-        # MariaDB, Apache, RabbitMQ, MemCacheD, EtcD
+        # MariaDB, Apache, RabbitMQ, MemCacheD
+        # libwebsockets, libcap-ng, Open vSwitch
+        # EtcD
+
+        # Important for RabbitMQ & OpenVSwitch
+        mkdir -v /usr/scripts
+
         bash i0.4.11.sh
 
         ###
@@ -364,7 +370,7 @@ E.  RabbitMQ
 
         rabbitmqctl list_permissions
 
-            ###
+        ###
 
 
 F.  OpenVSwitch - Configuration
@@ -394,7 +400,7 @@ F.  OpenVSwitch - Configuration
         /lib/services/bridge test-br up
 
         # Check logs, should have no errors
-        cat /var/log/openvswitch/ovs-vswitchd.log
+        tail 20 /var/log/openvswitch/ovs-vswitchd.log
 
         # This should shows it up, no issue.
         ip link show test-br

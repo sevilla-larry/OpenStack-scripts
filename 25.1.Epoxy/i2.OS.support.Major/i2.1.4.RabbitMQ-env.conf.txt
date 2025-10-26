@@ -11,3 +11,8 @@ HOME=/var/lib/rabbitmq
 
 # Optionally, set a specific cookie value (recommended for consistency)
 RABBITMQ_ERLANG_COOKIE="OPENSTACK"
+
+# Set PID file to match statusproc expectation
+# RABBITMQ_PID_FILE=/var/run/rabbitmq-server.pid
+# NEW: PID file in user-writable directory
+RABBITMQ_PID_FILE=/var/run/rabbitmq/rabbitmq-server.pid

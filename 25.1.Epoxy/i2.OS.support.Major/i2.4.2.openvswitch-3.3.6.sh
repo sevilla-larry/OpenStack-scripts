@@ -73,8 +73,9 @@ ovsdb-tool create /etc/openvswitch/conf.db              \
         /usr/share/openvswitch/vswitch.ovsschema        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-mkdir -v /usr/scripts     \
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# created in procedure C
+# mkdir -v /usr/scripts     \
+#         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 #link the scripts at /usr/share/openvswitch/scripts
 # to /usr/scripts
