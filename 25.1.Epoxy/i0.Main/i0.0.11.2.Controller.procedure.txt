@@ -202,28 +202,32 @@ B.  Support Applications - minor
         make install-unbound
 
 
-C.  Support Applications - Major
+C.  Support Applications - Major - Part 1
+
+    C.01 Installation
 
         ###
 
         cd /sources
 
         # Python OpenStack Client
-        # MariaDB, Apache, RabbitMQ, MemCacheD
-        # libwebsockets, libcap-ng, Open vSwitch
-        # EtcD
+        # MariaDB, Apache
 
-        # Important for RabbitMQ & OpenVSwitch
-        mkdir -v /usr/scripts
+        bash i0.4.11.1.sh
 
-        bash i0.4.11.sh
+        #??? RabbitMQ, MemCacheD
+        #??? libwebsockets, libcap-ng, Open vSwitch
+        #??? EtcD
+
+        #??? Important for RabbitMQ & OpenVSwitch
+        #???mkdir -v /usr/scripts
 
         ###
 
 
-D.  Support Apps - Major - Configuration
+    Support Apps - Major - Configuration
 
-    D.01. MariaDB configuration
+    C.02. MariaDB configuration
         # now part of i1.4.1.x
 
         ##### as root
@@ -250,7 +254,7 @@ D.  Support Apps - Major - Configuration
 
         ###
 
-    D.02. Activate some modules & add mod_wsgi to Apache HTTPD
+    C.03. Activate some modules & add mod_wsgi to Apache HTTPD
 
         ###
 
@@ -281,7 +285,7 @@ D.  Support Apps - Major - Configuration
 
         ###
 
-    D.03. BLfS bootscripts
+    C.04. BLfS bootscripts
 
         ###
 
@@ -298,7 +302,7 @@ D.  Support Apps - Major - Configuration
 
         ###
 
-    D.04. MariaDB
+    C.05. MariaDB
 
         ###
 
@@ -315,7 +319,7 @@ D.  Support Apps - Major - Configuration
 
         ###
 
-    D.05. Check if mod_wsgi is included in Apache
+    C.06. Check if mod_wsgi is included in Apache
 
         ###
 
@@ -323,7 +327,29 @@ D.  Support Apps - Major - Configuration
 
         ###
 
-    D.06. check MemCacheD
+
+D.  Support Applications - Major - Part 2
+
+    D.01 Installation
+
+        cd /sources
+
+        # RabbitMQ, MemCacheD
+        # EtcD
+        # libwebsockets
+        # libcap-ng, Open vSwitch
+
+        # Important for RabbitMQ & OpenVSwitch
+        mkdir -v /usr/scripts
+
+        bash i0.4.11.2.sh
+
+
+    D.02 REBOOT
+
+        reboot
+
+    D.03. check MemCacheD
 
         ###
 
