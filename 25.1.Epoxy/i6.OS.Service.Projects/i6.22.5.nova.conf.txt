@@ -118,6 +118,8 @@ username = placement
 # password = PLACEMENT_PASS
 password = openstack
 
+# configures oslo_cache backend required for the
+# mc servicegroup driver
 # Suggestion by Grok 2025/Oct/26
 [cache]
 enabled = true
