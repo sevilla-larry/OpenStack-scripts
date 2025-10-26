@@ -66,17 +66,25 @@ echo "5. Make Install ..." >> $OSLOG_PROCESS
 echo "5. Make Install ..." >> $PKGLOG_ERROR
 make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-cat > /etc/memcached.conf << "EOF"    2>> $PKGLOG_ERROR
-# Begin /etc/memcached.conf
+# cat > /etc/memcached.conf << "EOF"    2>> $PKGLOG_ERROR
+# # Begin /etc/memcached.conf
 
-# Specify which IP address to listen on.
-# The default is to listen on all IP addresses
-# This parameter is one of the only security measures that memcached has,
-# so make sure # it's listening on a firewalled interface.
--l 10.0.0.11
+# # Specify which IP address to listen on.
+# # The default is to listen on all IP addresses
+# # This parameter is one of the only security measures that memcached has,
+# # so make sure # it's listening on a firewalled interface.
+# #-l 10.0.0.11
 
-# End /etc/memcached.conf
-EOF
+# # memcached.conf - 3-node OpenStack
+# # Suggestion by Grok 2025/Oct/26
+# -l 10.0.0.11
+# -u memcached
+# -m 64
+# -c 1024
+# -P /var/run/memcached/memcached.pid
+
+# # End /etc/memcached.conf
+# EOF
 
 mkdir   -pv /var/{lib,run,log}/memcached                        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR

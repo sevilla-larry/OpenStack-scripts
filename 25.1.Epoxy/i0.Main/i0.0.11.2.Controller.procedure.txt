@@ -1544,6 +1544,7 @@ L.  Nova - Compute Service
         iptables-save > /etc/iptables.rules
 
         echo "iptables-restore < /etc/iptables.rules" >> /etc/rc.d/rc3.d/S89iptables-restore-rules
+        chmod -v +x /etc/rc.d/rc3.d/S89iptables-restore-rules
 
         ###
 
@@ -1576,13 +1577,13 @@ L.  Nova - Compute Service
         lsof -i:8774
 
             COMMAND   PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            nova-api xxxx root xxu  IPv4   nnnn      0t0  TCP *:8774 (LISTEN)
+            nova-api xxxx nova xxu  IPv4   nnnn      0t0  TCP *:8774 (LISTEN)
             ...      .... .... ...  ....   ....      ...  ... ...... ........
 
         lsof -i:6080
 
             COMMAND    PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            nova-novn 1249 root 7u  IPv4   4469      0t0  TCP *:6080 (LISTEN)
+            nova-novn 1249 nova 7u  IPv4   4469      0t0  TCP *:6080 (LISTEN)
 
         curl -i http://controller:8774
 
@@ -1639,7 +1640,12 @@ L.  Nova - Compute Service
 
         $$$ from remote machine
 
-        nc -zv 10.0.0.11 8774
+    L.08 Verify
+
+        $$$
+        . admin-openrc
+        openstack compute service list
+        $$$ should display a table with 2 entries for scheduler & conductor
 
 
 M.  Neutron - Networking Service
