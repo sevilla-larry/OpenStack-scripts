@@ -48,7 +48,7 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K22etcd  \
 
 cat >> /etc/rc.d/rc3.d/15runowner << "EOF"    2>> $PKGLOG_ERROR
 
-install -d -m 2755 -o etcd -g etcd /var/run/etcd
+install -v -d -m 2755 -o etcd -g etcd /var/run/etcd
 
 EOF
 

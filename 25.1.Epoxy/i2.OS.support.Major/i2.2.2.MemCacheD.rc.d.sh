@@ -39,7 +39,7 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K23memcached  \
 
 cat >> /etc/rc.d/rc3.d/15runowner << "EOF"    2>> $PKGLOG_ERROR
 
-install -d -m 2755 -o memcached -g memcached /var/run/memcached
+install -v -d -m 2755 -o memcached -g memcached /var/run/memcached
 
 EOF
 

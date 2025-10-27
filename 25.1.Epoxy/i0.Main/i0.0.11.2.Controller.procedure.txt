@@ -353,6 +353,10 @@ D.  Support Applications - Major - Part 2
 
         ###
 
+        /etc/init.d/rabbitmq status
+        /etc/init.d/memcached status
+        /etc/init.d/etcd status
+
         echo "stats settings" | ncat 10.0.0.11 11211
 
         ###

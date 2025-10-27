@@ -64,7 +64,7 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K24rabbitmq  \
 
 cat >> /etc/rc.d/rc3.d/15runowner << "EOF"    2>> $PKGLOG_ERROR
 
-install -d -m 2755 -o rabbitmq -g rabbitmq /var/run/rabbitmq
+install -v -d -m 2755 -o rabbitmq -g rabbitmq /var/run/rabbitmq
 
 EOF
 
