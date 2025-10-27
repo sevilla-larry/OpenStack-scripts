@@ -46,8 +46,8 @@ case "$1" in
 
    stop)
       log_info_msg "Stopping RabbitMQ server..."
-    #  $RABBITMQ_SBIN/rabbitmqctl shutdown
-      $RABBITMQ_SBIN/rabbitmqctl stop $PIDFILE
+      $RABBITMQ_SBIN/rabbitmqctl shutdown
+    #  $RABBITMQ_SBIN/rabbitmqctl stop $PIDFILE
       evaluate_retval
       [ -f "$PIDFILE" ] && rm -f "$PIDFILE"
       ;;
