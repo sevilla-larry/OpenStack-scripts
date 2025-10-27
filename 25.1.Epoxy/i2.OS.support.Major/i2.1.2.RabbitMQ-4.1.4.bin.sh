@@ -53,15 +53,18 @@ tar xvf $PKG.tar.xz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 #          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 install -v -dm2777 /var/log/rabbitmq            \
          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-# install -v -dm775 /var/lib/rabbitmq             \
-#          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+### needed
+install -v -dm775 /var/lib/rabbitmq             \
+         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
 # install -v -dm2775 /var/lib/rabbitmq/mnesia      \
 #          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 install -v -dm2755 -o rabbitmq -g rabbitmq      \
         /var/run/rabbitmq                       \
          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chown -vR rabbitmq:rabbitmq /var/{log,run}/rabbitmq \
+chown -vR rabbitmq:rabbitmq /var/{lib,log,run}/rabbitmq \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 # chown -vR rabbitmq:rabbitmq /{etc,var/{lib,log,run}}/rabbitmq    \

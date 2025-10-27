@@ -61,10 +61,10 @@ echo "."
 
 ###
 
-echo "i2.1.2.RabbitMQ-4.1.4"
-echo "i2.1.2.RabbitMQ-4.1.4" >> $OSLOG_PROCESS
+echo "i2.1.2.RabbitMQ-4.1.4 binary"
+echo "i2.1.2.RabbitMQ-4.1.4 binary" >> $OSLOG_PROCESS
 
-time { bash i2.1.2.RabbitMQ-4.1.4.sh ; }
+time { bash i2.1.2.RabbitMQ-4.1.4.bin.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
