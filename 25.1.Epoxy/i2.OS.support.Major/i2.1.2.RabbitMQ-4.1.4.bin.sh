@@ -55,11 +55,11 @@ install -v -dm2777 /var/log/rabbitmq            \
          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 ### needed
-install -v -dm775 /var/lib/rabbitmq             \
+# install -v -dm775 /var/lib/rabbitmq             \
+#          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+install -v -dm2775 /var/lib/rabbitmq/mnesia      \
          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-# install -v -dm2775 /var/lib/rabbitmq/mnesia      \
-#          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 install -v -dm2755 -o rabbitmq -g rabbitmq      \
         /var/run/rabbitmq                       \
          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
