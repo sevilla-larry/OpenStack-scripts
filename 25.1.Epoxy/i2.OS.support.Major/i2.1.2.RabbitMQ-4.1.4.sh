@@ -51,25 +51,24 @@ tar xvf $PKG.tar.xz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 ### or else many errors
 # install -v -dm2755 /etc/rabbitmq                 \
 #          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-# install -v -dm2777 /var/log/rabbitmq             \
-#          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+install -v -dm2777 /var/log/rabbitmq            \
+         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 # install -v -dm775 /var/lib/rabbitmq             \
 #          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 # install -v -dm2775 /var/lib/rabbitmq/mnesia      \
 #          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
 install -v -dm2755 -o rabbitmq -g rabbitmq      \
         /var/run/rabbitmq                       \
          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME      \
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
-chown -vR rabbitmq:rabbitmq /{etc,var/run}/rabbitmq    \
+chown -vR rabbitmq:rabbitmq /var/{log,run}/rabbitmq \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 # chown -vR rabbitmq:rabbitmq /{etc,var/{lib,log,run}}/rabbitmq    \
 #         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME      \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 ln -vsf $RABBITMQ_HOME/sbin/* /usr/sbin         \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
@@ -77,10 +76,10 @@ ln -vsf $RABBITMQ_HOME/escript/* /usr/scripts   \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 ln -vsf $RABBITMQ_HOME/etc/rabbitmq /etc/rabbitmq               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-ln -vsf $RABBITMQ_HOME/var/lib/rabbitmq /var/lib/rabbitmq       \
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-ln -vsf $RABBITMQ_HOME/var/log/rabbitmq /var/log/rabbitmq       \
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# ln -vsf $RABBITMQ_HOME/var/lib/rabbitmq /var/lib/rabbitmq       \
+#         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# ln -vsf $RABBITMQ_HOME/var/log/rabbitmq /var/log/rabbitmq       \
+#         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
 unset OSLOG_PROCESS

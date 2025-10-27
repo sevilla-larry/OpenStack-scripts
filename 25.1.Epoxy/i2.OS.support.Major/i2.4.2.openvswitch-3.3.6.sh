@@ -65,7 +65,7 @@ make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 #update library path (with existing /usr/local/lib)
 #ldconfig >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-mkdir -pv /{etc,var/{run,log}}/openvswitch              \
+mkdir -pv /{etc,var/{log,run}}/openvswitch              \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 #chown -Rv root:root /var/{run,log}/openvswitch         \
 #        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR

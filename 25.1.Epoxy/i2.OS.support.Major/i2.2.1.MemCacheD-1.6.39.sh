@@ -92,8 +92,10 @@ install -v -dm2777 /var/log/memcached           \
          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 # install -v -dm775 /var/lib/memcached            \
 #          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-install -v -dm2775 /var/lib/memcached/mnesia    \
-         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+### ???
+# install -v -dm2775 /var/lib/memcached/mnesia    \
+#          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+###
 install -v -dm2755 -o memcached -g memcached    \
         /var/run/memcached                      \
          >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
@@ -101,7 +103,7 @@ install -v -dm2755 -o memcached -g memcached    \
 # mkdir   -pv /var/{lib,run,log}/memcached                        \
 #         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chown   -vR memcached:memcached /var/{lib,run,log}/memcached    \
+chown   -vR memcached:memcached /var/{log,run}/memcached    \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
