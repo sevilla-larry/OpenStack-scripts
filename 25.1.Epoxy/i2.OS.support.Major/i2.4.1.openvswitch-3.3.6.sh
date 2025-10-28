@@ -12,7 +12,7 @@
 #
 
 export PKG="openvswitch-3.3.6"
-export PKGLOG_DIR=$OSLOG/2.4.2
+export PKGLOG_DIR=$OSLOG/2.4.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

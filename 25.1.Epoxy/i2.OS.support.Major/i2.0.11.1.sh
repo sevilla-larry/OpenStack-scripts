@@ -2,9 +2,7 @@
 #
 # Build OpenStack support Major
 #
-# RabbitMQ
-#
-# https://docs.openstack.org/install-guide/environment-messaging.html
+# Support Packages
 #
 
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -31,10 +29,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 ###
 
-echo "i2.1.1.Erlang-27.3.4.3"
-echo "i2.1.1.Erlang-27.3.4.3" >> $OSLOG_PROCESS
+echo "i2.1.2.Erlang-27.3.4.3"
+echo "i2.1.2.Erlang-27.3.4.3" >> $OSLOG_PROCESS
 
-time { bash i2.1.1.Erlang-27.3.4.3.sh ; }
+time { bash i2.1.2.Erlang-27.3.4.3.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -61,10 +59,10 @@ echo "."
 
 ###
 
-echo "i2.1.2.RabbitMQ-4.1.4 binary"
-echo "i2.1.2.RabbitMQ-4.1.4 binary" >> $OSLOG_PROCESS
+echo "i2.1.3.libwebsockets-4.4.1"
+echo "i2.1.3.libwebsockets-4.4.1" >> $OSLOG_PROCESS
 
-time { bash i2.1.2.RabbitMQ-4.1.4.bin.sh ; }
+time { bash i2.1.3.libwebsockets-4.4.1.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -75,10 +73,10 @@ echo "."
 
 ###
 
-echo "i2.1.3.RabbitMQ.rc.d"
-echo "i2.1.3.RabbitMQ.rc.d" >> $OSLOG_PROCESS
+echo "i2.1.4.libcap-ng-0.8.5"
+echo "i2.1.4.libcap-ng-0.8.5" >> $OSLOG_PROCESS
 
-time { bash i2.1.3.RabbitMQ.rc.d.sh ; }
+time { bash i2.1.4.libcap-ng-0.8.5.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

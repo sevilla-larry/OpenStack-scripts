@@ -1,6 +1,6 @@
-# i2.4.3.openvswitch.rc.d.sh
+# i2.2.2.MemCacheD.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/2.4.3
+export PKGLOG_DIR=$OSLOG/2.3.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,33 +16,39 @@ INITMODE=755
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i2.4.4.openvswitch.init.d.sh
-INITDFILEDST=${EXTDIR}/init.d/openvswitch
-INITDFILEREL=../init.d/openvswitch
+INITDFILESRC1=$CURRDIR/i2.2.3.MemCacheD.init.d.sh
+INITDFILEDST1=${EXTDIR}/init.d/memcached
+INITDFILESRC2=$CURRDIR/i2.2.4.MemCacheD.sysconfig.txt
+INITDFILEDST2=${EXTDIR}/sysconfig/memcached
+INITDFILEREL=../init.d/memcached
 
 
 echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
-cp -v $INITDFILESRC $INITDFILEDST      \
+cp -v $INITDFILESRC1 $INITDFILEDST1      \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${INITMODE} $INITDFILEDST     \
+cp -v $INITDFILESRC2 $INITDFILEDST2      \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K91openvswitch \
+chmod -v ${INITMODE} $INITDFILEDST1     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K91openvswitch \
+
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K23memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S09openvswitch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S77memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S09openvswitch  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K23memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S09openvswitch  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S09openvswitch  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K91openvswitch  \
+
+cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
+
+install -v -d -m 2755 -o memcached -g memcached /var/run/memcached
+
+EOF
+
+chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

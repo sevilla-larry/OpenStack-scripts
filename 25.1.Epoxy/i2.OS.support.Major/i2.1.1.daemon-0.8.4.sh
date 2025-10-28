@@ -1,18 +1,16 @@
-# i2.4.1.libcap-ng-0.8.5.sh
+# i2.1.1.daemon-0.8.4.sh
 #
-# https://people.redhat.com/sgrubb/libcap-ng/
-#
-# https://github.com/stevegrubb/libcap-ng
+# Recommended Package by Grok 2025/Oct/28
 #
 
 #
 # Required by:
 #
-#               OpenVSwitch
+#               Memcached
 #
 
-export PKG="libcap-ng-0.8.5"
-export PKGLOG_DIR=$OSLOG/2.4.1
+export PKG="daemon-0.8.4"
+export PKGLOG_DIR=$OSLOG/2.1.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -37,7 +35,6 @@ echo "2. Configure ..."
 echo "2. Configure ..." >> $OSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR
 ./configure --prefix=/usr   \
-            --with-python3  \
              > $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
 
 echo "3. Make Build ..."

@@ -1,6 +1,6 @@
-# i2.2.2.MemCacheD.rc.d.sh
+# i2.4.3.openvswitch.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/2.2.2
+export PKGLOG_DIR=$OSLOG/2.4.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,39 +16,33 @@ INITMODE=755
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC1=$CURRDIR/i2.2.3.MemCacheD.init.d.sh
-INITDFILEDST1=${EXTDIR}/init.d/memcached
-INITDFILESRC2=$CURRDIR/i2.2.4.MemCacheD.sysconfig.txt
-INITDFILEDST2=${EXTDIR}/sysconfig/memcached
-INITDFILEREL=../init.d/memcached
+INITDFILESRC=$CURRDIR/i2.4.3.openvswitch.init.d.sh
+INITDFILEDST=${EXTDIR}/init.d/openvswitch
+INITDFILEREL=../init.d/openvswitch
 
 
 echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
-cp -v $INITDFILESRC1 $INITDFILEDST1      \
+cp -v $INITDFILESRC $INITDFILEDST      \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-cp -v $INITDFILESRC2 $INITDFILEDST2      \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-
-chmod -v ${INITMODE} $INITDFILEDST1     \
+chmod -v ${INITMODE} $INITDFILEDST     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K23memcached  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K91openvswitch \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S77memcached  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K91openvswitch \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K23memcached  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S09openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-
-cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
-
-install -v -d -m 2755 -o memcached -g memcached /var/run/memcached
-
-EOF
-
-chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S09openvswitch  \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S09openvswitch  \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S09openvswitch  \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K91openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

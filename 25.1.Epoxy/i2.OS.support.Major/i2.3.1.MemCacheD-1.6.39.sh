@@ -12,7 +12,7 @@
 #
 
 export PKG="memcached-1.6.39"
-export PKGLOG_DIR=$OSLOG/2.2.1
+export PKGLOG_DIR=$OSLOG/2.3.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log

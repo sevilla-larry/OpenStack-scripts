@@ -14,24 +14,10 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
 
-echo "i2.4.1.libcap-ng-0.8.5"
-echo "i2.4.1.libcap-ng-0.8.5" >> $OSLOG_PROCESS
+echo "i2.4.1.openvswitch-3.3.6"
+echo "i2.4.1.openvswitch-3.3.6" >> $OSLOG_PROCESS
 
-time { bash i2.4.1.libcap-ng-0.8.5.sh ; }
-
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
-
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
-
-###
-
-echo "i2.4.2.openvswitch-3.3.6"
-echo "i2.4.2.openvswitch-3.3.6" >> $OSLOG_PROCESS
-
-time { bash i2.4.2.openvswitch-3.3.6.sh ; }
+time { bash i2.4.1.openvswitch-3.3.6.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -42,10 +28,10 @@ echo "."
 
 ###
 
-echo "i2.4.3.openvswitch.rc.d"
-echo "i2.4.3.openvswitch.rc.d" >> $OSLOG_PROCESS
+echo "i2.4.2.openvswitch.rc.d"
+echo "i2.4.2.openvswitch.rc.d" >> $OSLOG_PROCESS
 
-time { bash i2.4.3.openvswitch.rc.d.sh ; }
+time { bash i2.4.2.openvswitch.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

@@ -15,7 +15,7 @@
 
 export PKG="rabbitmq-server-generic-unix-4.1.4"
 export PKGDEST="/usr/local"
-export PKGLOG_DIR=$OSLOG/2.1.2
+export PKGLOG_DIR=$OSLOG/2.2.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log

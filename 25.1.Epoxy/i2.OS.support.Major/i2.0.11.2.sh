@@ -1,10 +1,10 @@
-# i2.0.11.2.sh
+# i2.0.11.1.sh
 #
 # Build OpenStack support Major
 #
-# MemCached
+# RabbitMQ
 #
-# https://docs.openstack.org/install-guide/environment-memcached.html
+# https://docs.openstack.org/install-guide/environment-messaging.html
 #
 
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -13,11 +13,11 @@ date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
+ 
+echo "i2.2.1.RabbitMQ-4.1.4 binary"
+echo "i2.2.1.RabbitMQ-4.1.4 binary" >> $OSLOG_PROCESS
 
-echo "i2.2.1.MemCacheD-1.6.39"
-echo "i2.2.1.MemCacheD-1.6.39" >> $OSLOG_PROCESS
-
-time { bash i2.2.1.MemCacheD-1.6.39.sh ; }
+time { bash i2.2.1.RabbitMQ-4.1.4.bin.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
@@ -28,10 +28,10 @@ echo "."
 
 ###
 
-echo "i2.2.2.MemCacheD.rc.d"
-echo "i2.2.2.MemCacheD.rc.d" >> $OSLOG_PROCESS
+echo "i2.2.2.RabbitMQ.rc.d"
+echo "i2.2.2.RabbitMQ.rc.d" >> $OSLOG_PROCESS
 
-time { bash i2.2.2.MemCacheD.rc.d.sh ; }
+time { bash i2.2.2.RabbitMQ.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
