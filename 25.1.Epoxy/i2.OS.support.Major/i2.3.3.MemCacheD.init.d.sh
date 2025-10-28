@@ -31,7 +31,10 @@ CACHESIZE="64"
 
 OPTIONS="-l 10.0.0.11"
 [ -f /etc/memcached/conf ] && OPTIONS="$OPTIONS $(cat /etc/memcached/conf)"
-OPTIONS="$OPTIONS -vv"
+# less verbose
+OPTIONS="$OPTIONS -v"
+# more verbose
+#OPTIONS="$OPTIONS -vv"
 
 # ----------------------------------------------------------------------
 prepare_dirs() {
