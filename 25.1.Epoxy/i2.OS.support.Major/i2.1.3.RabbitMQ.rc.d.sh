@@ -39,17 +39,18 @@ cp -v $ENVFILESRC $ENVFILEDST          \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 cp -v $COOKIESRC $COOKIEDST1           \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-
-ln -vsf $COOKIEDST1 $COOKIEDST2        \
+cp -v $COOKIESRC $COOKIEDST2           \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
+# permission problem
+# ln -vsf $COOKIEDST1 $COOKIEDST2        \
+#    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 chmod -v ${INITMODE} $INITDFILEDST     \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 chmod -v ${CONFMODE} $ENVFILEDST       \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${COOKIEMODE} $COOKIEDST1     \
-   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${COOKIEMODE} $COOKIEDST2     \
+chmod -v ${COOKIEMODE} $COOKIEDST1 $COOKIEDST2  \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME   \

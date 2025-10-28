@@ -1,7 +1,6 @@
 RABBITMQ_NODENAME=rabbit@localhost
 #RABBITMQ_CONFIG_FILE=/etc/rabbitmq/rabbitmq.conf
 RABBITMQ_LOG_BASE=/var/log/rabbitmq
-#RABBITMQ_MNESIA_BASE=/var/lib/rabbitmq/mnesia
 
 # Set the base directory for RabbitMQ data
 RABBITMQ_MNESIA_BASE=/var/lib/rabbitmq/mnesia

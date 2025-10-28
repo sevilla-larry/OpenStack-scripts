@@ -5,7 +5,7 @@
 # Description : RabbitMQ Server Control Script
 #
 #
-# Author      : Grok 2025/Oct/28
+# Author      : Grok 2025/Oct/26
 # Version     : RabbitMQ 4.1.4 (was based on RabbitMQ 4.0.3)
 #
 ########################################################################
@@ -25,30 +25,33 @@
 
 . /lib/lsb/init-functions
 
-# Set UTF-8 locale to avoid Elixir encoding warning (applies to ctl commands run as root)
+# Set UTF-8 locale to avoid Elixir encoding warning
 export LANG=C.UTF-8
 
 RABBITMQ_SBIN=/usr/sbin
 PIDFILE=/var/run/rabbitmq/rabbitmq-server.pid
-USER=rabbitmq
-SYMLINK_PID=/var/run/rabbitmq-server.pid
+export HOME=/var/lib/rabbitmq  # Enforce cookie location
+export RABBITMQ_ERLANG_COOKIE="OPENSTACK"  # Optional: enforce specific cookie
 
 case "$1" in
    start)
       log_info_msg "Starting RabbitMQ server..."
-      su -s /bin/sh $USER -c "$RABBITMQ_SBIN/rabbitmq-server -detached"
-      su -s /bin/sh $USER -c "$RABBITMQ_SBIN/rabbitmqctl wait $PIDFILE"
-      # Create symlink for statusproc compatibility
-      ln -sf $PIDFILE $SYMLINK_PID
+      start_daemon $RABBITMQ_SBIN/rabbitmq-server -detached
+      $RABBITMQ_SBIN/rabbitmqctl wait $PIDFILE
+    #   sleep 5
+    #   $RABBITMQ_SBIN/rabbitmqctl start_app
+    #   sleep 5
       evaluate_retval
       ;;
 
    stop)
       log_info_msg "Stopping RabbitMQ server..."
       $RABBITMQ_SBIN/rabbitmqctl shutdown
+    # below instruction hangs on reboot/poweroff
+    # during initial install
+    # $RABBITMQ_SBIN/rabbitmqctl stop $PIDFILE
       evaluate_retval
       [ -f "$PIDFILE" ] && rm -f "$PIDFILE"
-      [ -f "$SYMLINK_PID" ] && rm -f "$SYMLINK_PID"
       ;;
 
    restart)
