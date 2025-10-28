@@ -1,4 +1,4 @@
-# i2.1.1.Erlang-27.3.4.3.sh
+# i2.1.2.Erlang-27.3.4.3.sh
 #
 # Notes: https://www.erlang.org/doc/system/install.html
 #

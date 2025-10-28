@@ -12,7 +12,20 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
  
-#
+echo "i2.1.1.daemon-0.8.4"
+echo "i2.1.1.daemon-0.8.4" >> $OSLOG_PROCESS
+
+time { bash i2.1.1.daemon-0.8.4.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+
+echo "." >> $OSLOG_PROCESS
+echo "."
+echo "."
+
+### 
+
 # RabbitMQ is Binary Installed, simplejson is for Source building
 
 # echo "i045.9.1.simplejson-3.19.3"

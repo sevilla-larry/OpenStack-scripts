@@ -1,6 +1,6 @@
-# i3.4.3.etcd.rc.d.sh
+# i3.4.2.etcd.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/3.4.3
+export PKGLOG_DIR=$OSLOG/3.4.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
@@ -16,6 +16,8 @@ INITMODE=755
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
+CONFYMLFILE1=$CURRDIR/i3.4.3.etcd.conf.yml
+CONFYMLFILE2=/etc/etcd.conf.yml
 INITDFILESRC=$CURRDIR/i3.4.4.etcd.init.d.sh
 INITDFILEDST=${EXTDIR}/init.d/etcd
 INITDFILEREL=../init.d/etcd
@@ -25,9 +27,13 @@ echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
+cp -v $CONFYMLFILE1 $CONFYMLFILE2       \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 cp -v $INITDFILESRC $INITDFILEDST      \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
+chmod -v ${CONFMODE} $CONFYMLFILE2     \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 chmod -v ${INITMODE} $INITDFILEDST     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
@@ -44,6 +50,9 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S78etcd  \
 #ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S78etcd  \
 #      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K22etcd  \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
+chown -vR etcd:etcd $CONFYMLFILE2           \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR

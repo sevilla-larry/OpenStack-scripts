@@ -31,10 +31,10 @@ echo "."
 
 ###
 
-echo "i3.4.3.etcd.rc.d"
-echo "i3.4.3.etcd.rc.d" >> $OSLOG_PROCESS
+echo "i3.4.2.etcd.rc.d"
+echo "i3.4.2.etcd.rc.d" >> $OSLOG_PROCESS
 
-time { bash i3.4.3.etcd.rc.d.sh ; }
+time { bash i3.4.2.etcd.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS

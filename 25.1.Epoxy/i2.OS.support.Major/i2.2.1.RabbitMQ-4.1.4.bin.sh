@@ -1,4 +1,4 @@
-# i2.1.2.RabbitMQ-4.1.4.sh (binary Install)
+# i2.2.1.RabbitMQ-4.1.4.sh (binary Install)
 #
 # https://docs.openstack.org/install-guide/environment-messaging.html
 #

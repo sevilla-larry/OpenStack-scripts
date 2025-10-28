@@ -1,4 +1,4 @@
-# i2.2.2.MemCacheD.rc.d.sh
+# i2.3.2.MemCacheD.rc.d.sh
 
 export PKGLOG_DIR=$OSLOG/2.3.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
@@ -16,9 +16,9 @@ INITMODE=755
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC1=$CURRDIR/i2.2.3.MemCacheD.init.d.sh
+INITDFILESRC1=$CURRDIR/i2.3.3.MemCacheD.init.d.sh
 INITDFILEDST1=${EXTDIR}/init.d/memcached
-INITDFILESRC2=$CURRDIR/i2.2.4.MemCacheD.sysconfig.txt
+INITDFILESRC2=$CURRDIR/i2.3.4.MemCacheD.sysconfig.txt
 INITDFILEDST2=${EXTDIR}/sysconfig/memcached
 INITDFILEREL=../init.d/memcached
 

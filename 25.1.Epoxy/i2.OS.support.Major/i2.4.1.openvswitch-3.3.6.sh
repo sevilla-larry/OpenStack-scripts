@@ -1,4 +1,4 @@
-# i2.4.2.openvswitch-3.3.6.sh
+# i2.4.1.openvswitch-3.3.6.sh
 #
 # https://docs.openvswitch.org/en/latest/intro/install/general/
 #

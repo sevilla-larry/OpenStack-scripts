@@ -1,4 +1,4 @@
-# i2.2.1.MemCacheD-1.6.39.sh
+# i2.3.1.MemCacheD-1.6.39.sh
 #
 # https://docs.openstack.org/install-guide/environment-memcached.html
 #

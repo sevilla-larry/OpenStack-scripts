@@ -1,4 +1,4 @@
-# i2.4.1.libcap-ng-0.8.5.sh
+# i2.1.4.libcap-ng-0.8.5.sh
 #
 # https://people.redhat.com/sgrubb/libcap-ng/
 #

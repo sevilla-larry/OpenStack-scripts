@@ -1,4 +1,4 @@
-# i2.4.3.openvswitch.rc.d.sh
+# i2.4.2.openvswitch.rc.d.sh
 
 export PKGLOG_DIR=$OSLOG/2.4.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log

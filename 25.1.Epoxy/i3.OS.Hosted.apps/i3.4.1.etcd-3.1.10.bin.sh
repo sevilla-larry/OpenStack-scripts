@@ -13,8 +13,6 @@ export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export PKGLOG_INSTALL=$PKGLOG_DIR/install.log
 export PKGLOG_OTHERS=$PKGLOG_DIR/others.log
 export OSLOG_PROCESS=$OSLOG/process.log
-export CONFYMLFILE1=`pwd`/i3.4.2.etcd.conf.yml
-export CONFYMLFILE2=/etc/etcd.conf.yml
 
 rm -r $PKGLOG_DIR 2> /dev/null
 mkdir $PKGLOG_DIR
@@ -40,9 +38,6 @@ tar xvf $PKG.tar.gz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 ln -sv $ETCD_HOME/etcd* /usr/bin     \
         > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-cp -v $CONFYMLFILE1 $CONFYMLFILE2       \
-        > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-
 ### needed
 install -v -dm2775 /var/lib/etcd         \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
@@ -55,12 +50,8 @@ install -v -dm2755 -o etcd -g etcd  \
 # install -v -dm2775 /var/run/etcd    \
 #         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chown -vR etcd:etcd $CONFYMLFILE2           \
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
 chown -vR etcd:etcd $ETCD_HOME              \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
 chown -vR etcd:etcd /var/{lib,log,run}/etcd \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
