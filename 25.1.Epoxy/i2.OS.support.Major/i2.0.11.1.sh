@@ -12,17 +12,19 @@ date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
 #####
  
-echo "i2.1.1.daemon-0.8.4"
-echo "i2.1.1.daemon-0.8.4" >> $OSLOG_PROCESS
+# Not needed anymore by MemCacheD 
+#
+# echo "i2.1.1.daemon-0.8.4"
+# echo "i2.1.1.daemon-0.8.4" >> $OSLOG_PROCESS
 
-time { bash i2.1.1.daemon-0.8.4.sh ; }
+# time { bash i2.1.1.daemon-0.8.4.sh ; }
 
-date +"%Y/%b/%d %H:%M"
-date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
+# date +"%Y/%b/%d %H:%M"
+# date +"%Y/%b/%d %H:%M" >> $OSLOG_PROCESS
 
-echo "." >> $OSLOG_PROCESS
-echo "."
-echo "."
+# echo "." >> $OSLOG_PROCESS
+# echo "."
+# echo "."
 
 ### 
 
