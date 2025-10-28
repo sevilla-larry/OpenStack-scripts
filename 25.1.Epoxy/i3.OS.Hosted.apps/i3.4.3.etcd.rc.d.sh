@@ -52,7 +52,7 @@ install -v -d -m 2755 -o etcd -g etcd /var/run/etcd
 
 EOF
 
-chmod -v 777 /etc/rc.d/rc3.d/15runowner   \
+chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

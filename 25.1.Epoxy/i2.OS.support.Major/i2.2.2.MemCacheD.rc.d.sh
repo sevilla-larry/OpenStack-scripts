@@ -48,7 +48,7 @@ install -v -d -m 2755 -o memcached -g memcached /var/run/memcached
 
 EOF
 
-chmod -v 777 /etc/rc.d/rc3.d/15runowner   \
+chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 

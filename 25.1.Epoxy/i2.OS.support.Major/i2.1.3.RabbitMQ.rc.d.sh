@@ -15,7 +15,7 @@ EXTDIR=${DESTDIR}${ETCDIR}
 INITMODE=755
 DIRMODE=755
 CONFMODE=644
-COOKIEMODE=444
+COOKIEMODE=400
 CURRDIR=`pwd`
 ENVFILESRC=$CURRDIR/i2.1.4.RabbitMQ-env.conf.txt
 ENVFILEDST=${ETCDIR}/rabbitmq/rabbitmq-env.conf
@@ -71,7 +71,7 @@ install -v -d -m 2755 -o rabbitmq -g rabbitmq /var/run/rabbitmq
 
 EOF
 
-chmod -v 777 /etc/rc.d/rc3.d/15runowner   \
+chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 
