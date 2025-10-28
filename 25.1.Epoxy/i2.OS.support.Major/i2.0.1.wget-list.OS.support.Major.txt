@@ -2,7 +2,7 @@
 
 
 # i2.1.1 daemon-0.8.4
-http://libslack.org/daemon/download/daemon-0.8.4.tar.gz
+#http://libslack.org/daemon/download/daemon-0.8.4.tar.gz
 
 # i2.1.2 Erlang 27.3.4.3
 https://github.com/erlang/otp/releases/download/OTP-27.3.4.3/otp_src_27.3.4.3.tar.gz
