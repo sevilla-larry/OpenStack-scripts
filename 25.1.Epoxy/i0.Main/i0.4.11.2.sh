@@ -3,7 +3,7 @@
 
 # Support pkgs
 # Daemon, Erlang, libwebsockets, libcap-ng
-bash i2.0.11.1
+bash i2.0.11.1.sh
 
 # RabbitMQ
 bash i2.0.11.2.sh			    # RabbitMQ
