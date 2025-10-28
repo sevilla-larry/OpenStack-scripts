@@ -13,50 +13,92 @@
 #                    object caching system
 ### END INIT INFO
 
-# Source LSB init functions
 . /lib/lsb/init-functions
 
-# Pull in sysconfig settings if available, otherwise set defaults
+# ----------------------------------------------------------------------
+# Configuration
+# ----------------------------------------------------------------------
 [ -f /etc/sysconfig/memcached ] && . /etc/sysconfig/memcached
 
-MEMCACHED_BIN="${MEMCACHED_BIN:-/usr/bin/memcached}"
-PIDFILE="${PIDFILE:-/var/run/memcached/memcached.pid}"
-LOGFILE="${LOGFILE:-/var/log/memcached/memcached.log}"
-USER="${USER:-memcached}"
-PORT="${PORT:-11211}"
-MAXCONN="${MAXCONN:-1024}"
-CACHESIZE="${CACHESIZE:-64}"
-OPTIONS="${OPTIONS:--l 10.0.0.11}"  # Default listen address
+MEMCACHED_BIN="/usr/bin/memcached"
+PIDFILE="/var/run/memcached/memcached.pid"
+LOGFILE="/var/log/memcached/memcached.log"
+USER="memcached"
+GROUP="memcached"
+PORT="11211"
+MAXCONN="1024"
+CACHESIZE="64"
 
-# If /etc/memcached.conf exists, append its content to OPTIONS
-if [ -f /etc/memcached.conf ]; then
-    CONF_OPTS="$(cat /etc/memcached.conf)"
-    OPTIONS="${OPTIONS} ${CONF_OPTS}"
-fi
+OPTIONS="-l 10.0.0.11"
+[ -f /etc/memcached/conf ] && OPTIONS="$OPTIONS $(cat /etc/memcached/conf)"
+OPTIONS="$OPTIONS -vv"
 
-# Add verbose logging and log file redirection
-OPTIONS="${OPTIONS} -v"
-START_OPTS="-d -p ${PORT} -u ${USER} -m ${CACHESIZE} -c ${MAXCONN} -P ${PIDFILE} ${OPTIONS} >> ${LOGFILE} 2>&1"
+# ----------------------------------------------------------------------
+prepare_dirs() {
+    mkdir -p /var/run/memcached /var/log/memcached
+    touch "$LOGFILE"
+    chown -R "$USER:$GROUP" /var/run/memcached /var/log/memcached
+}
 
 start() {
     log_info_msg "Starting memcached..."
-    
-    # Ensure directories exist
-    mkdir -p /var/run/memcached /var/log/memcached
-    chown ${USER}:${USER} /var/run/memcached /var/log/memcached
-    
-    # Start the daemon with output redirection
-    start_daemon ${MEMCACHED_BIN} ${START_OPTS}
-    evaluate_retval
+    prepare_dirs
+
+    # Run as memcached user, daemonize, write PID, redirect output
+    su -s /bin/sh "$USER" -c \
+        "$MEMCACHED_BIN -d -p $PORT -u $USER -m $CACHESIZE -c $MAXCONN \
+         -P \"$PIDFILE\" $OPTIONS >> \"$LOGFILE\" 2>&1"
+
+    # Wait a moment and check if PID file exists
+    sleep 1
+    if [ -f "$PIDFILE" ] && kill -0 $(cat "$PIDFILE") 2>/dev/null; then
+        log_success_msg
+    else
+        log_failure_msg
+    fi
 }
 
 stop() {
     log_info_msg "Stopping memcached..."
-    killproc -p ${PIDFILE} ${MEMCACHED_BIN} -TERM
-    evaluate_retval
+    if [ -f "$PIDFILE" ]; then
+        PID=$(cat "$PIDFILE")
+        if kill -0 "$PID" 2>/dev/null; then
+            kill "$PID"
+            # Wait up to 5 seconds
+            count=0
+            while kill -0 "$PID" 2>/dev/null && [ $count -lt 50 ]; do
+                sleep 0.1
+                count=$((count + 1))
+            done
+            rm -f "$PIDFILE"
+            log_success_msg
+        else
+            rm -f "$PIDFILE"
+            log_failure_msg "PID file exists but process not running"
+        fi
+    else
+        log_failure_msg "No PID file"
+    fi
 }
 
-case "${1}" in
+status() {
+    if [ -f "$PIDFILE" ]; then
+        PID=$(cat "$PIDFILE")
+        if kill -0 "$PID" 2>/dev/null; then
+            echo "memcached is running (PID: $PID)"
+            return 0
+        else
+            echo "memcached is not running (stale PID file)"
+            return 1
+        fi
+    else
+        echo "memcached is not running"
+        return 3
+    fi
+}
+
+# ----------------------------------------------------------------------
+case "$1" in
     start)
         start
         ;;
@@ -64,15 +106,15 @@ case "${1}" in
         stop
         ;;
     restart|force-reload)
-        ${0} stop
+        stop
         sleep 1
-        ${0} start
+        start
         ;;
     status)
-        statusproc -p ${PIDFILE} ${MEMCACHED_BIN}
+        status
         ;;
     *)
-        echo "Usage: ${0} {start|stop|restart|force-reload|status}"
+        echo "Usage: $0 {start|stop|restart|force-reload|status}"
         exit 1
         ;;
 esac

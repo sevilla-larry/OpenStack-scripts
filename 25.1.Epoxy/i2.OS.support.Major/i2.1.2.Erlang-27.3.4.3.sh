@@ -66,9 +66,9 @@ cp -v   $ERL_TOP/release/tests/test_server/index.html   \
 
 cd $ERL_TOP
 
-echo "5. Make Install ..."
-echo "5. Make Install ..." >> $OSLOG_PROCESS
-echo "5. Make Install ..." >> $PKGLOG_ERROR
+echo "6. Make Install ..."
+echo "6. Make Install ..." >> $OSLOG_PROCESS
+echo "6. Make Install ..." >> $PKGLOG_ERROR
 make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 unset ERL_TOP
