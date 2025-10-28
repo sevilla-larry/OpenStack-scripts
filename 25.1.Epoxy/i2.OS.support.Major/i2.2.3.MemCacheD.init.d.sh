@@ -19,7 +19,7 @@
 # Pull in sysconfig settings if available, otherwise set defaults
 [ -f /etc/sysconfig/memcached ] && . /etc/sysconfig/memcached
 
-MEMCACHED_BIN="${MEMCACHED_BIN:-/usr/local/bin/memcached}"
+MEMCACHED_BIN="${MEMCACHED_BIN:-/usr/bin/memcached}"
 PIDFILE="${PIDFILE:-/var/run/memcached/memcached.pid}"
 LOGFILE="${LOGFILE:-/var/log/memcached/memcached.log}"
 USER="${USER:-memcached}"
@@ -28,9 +28,9 @@ MAXCONN="${MAXCONN:-1024}"
 CACHESIZE="${CACHESIZE:-64}"
 OPTIONS="${OPTIONS:--l 10.0.0.11}"  # Default listen address
 
-# If /etc/memcached/conf exists, append its content to OPTIONS
-if [ -f /etc/memcached/conf ]; then
-    CONF_OPTS="$(cat /etc/memcached/conf)"
+# If /etc/memcached.conf exists, append its content to OPTIONS
+if [ -f /etc/memcached.conf ]; then
+    CONF_OPTS="$(cat /etc/memcached.conf)"
     OPTIONS="${OPTIONS} ${CONF_OPTS}"
 fi
 
