@@ -17,7 +17,7 @@ DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
 INITDFILESRC=$CURRDIR/i3.4.4.etcd.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/etcd
+INITDFILEDST=${EXTDIR}/init.d/etcd
 INITDFILEREL=../init.d/etcd
 
 
@@ -46,7 +46,7 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S78etcd  \
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K22etcd  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-cat >> /etc/rc.d/rc3.d/15runowner << "EOF"    2>> $PKGLOG_ERROR
+cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
 
 install -v -d -m 2755 -o etcd -g etcd /var/run/etcd
 

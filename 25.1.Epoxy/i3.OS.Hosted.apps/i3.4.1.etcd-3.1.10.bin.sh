@@ -30,12 +30,14 @@ useradd -c "etcd"               \
         etcd                    \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
+export ETCD_HOME=$PKGDEST/$PKG
+
 echo "Extract/Install tar..."
 echo "Extract/Install tar..." >> $OSLOG_PROCESS
 echo "Extract/Install tar..." >> $PKGLOG_ERROR
 tar xvf $PKG.tar.gz -C $PKGDEST > $PKGLOG_TAR 2>> $PKGLOG_ERROR
 
-ln -sv $PKGDEST/$PKG/etcd* /usr/bin     \
+ln -sv $ETCD_HOME/etcd* /usr/bin     \
         > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 cp -v $CONFYMLFILE1 $CONFYMLFILE2       \
@@ -52,6 +54,12 @@ install -v -dm2755 -o etcd -g etcd  \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 # install -v -dm2775 /var/run/etcd    \
 #         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chown -vR etcd:etcd $CONFYMLFILE2           \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+chown -vR etcd:etcd $ETCD_HOME              \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR etcd:etcd /var/{lib,log,run}/etcd \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR

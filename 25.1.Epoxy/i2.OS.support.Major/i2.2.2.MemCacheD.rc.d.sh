@@ -16,8 +16,10 @@ INITMODE=755
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i2.2.3.MemCacheD.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/memcached
+INITDFILESRC1=$CURRDIR/i2.2.3.MemCacheD.init.d.sh
+INITDFILEDST1=${EXTDIR}/init.d/memcached
+INITDFILESRC2=$CURRDIR/i2.2.4.MemCacheD.sysconfig.txt
+INITDFILEDST2=${EXTDIR}/sysconfig/memcached
 INITDFILEREL=../init.d/memcached
 
 
@@ -25,9 +27,12 @@ echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
-cp -v $INITDFILESRC $INITDFILEDST      \
+cp -v $INITDFILESRC1 $INITDFILEDST1      \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${INITMODE} $INITDFILEDST     \
+cp -v $INITDFILESRC2 $INITDFILEDST2      \
+      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
+chmod -v ${INITMODE} $INITDFILEDST1     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K23memcached  \
@@ -37,7 +42,7 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S77memcached  \
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K23memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-cat >> /etc/rc.d/rc3.d/15runowner << "EOF"    2>> $PKGLOG_ERROR
+cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
 
 install -v -d -m 2755 -o memcached -g memcached /var/run/memcached
 

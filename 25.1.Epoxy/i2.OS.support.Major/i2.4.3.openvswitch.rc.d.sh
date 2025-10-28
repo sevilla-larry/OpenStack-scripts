@@ -17,7 +17,7 @@ DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
 INITDFILESRC=$CURRDIR/i2.4.4.openvswitch.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/openvswitch
+INITDFILEDST=${EXTDIR}/init.d/openvswitch
 INITDFILEREL=../init.d/openvswitch
 
 

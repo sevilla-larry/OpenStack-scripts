@@ -15,12 +15,12 @@ EXTDIR=${DESTDIR}${ETCDIR}
 INITMODE=755
 DIRMODE=755
 CONFMODE=644
-COOKIEMODE=400
+COOKIEMODE=444
 CURRDIR=`pwd`
 ENVFILESRC=$CURRDIR/i2.1.4.RabbitMQ-env.conf.txt
 ENVFILEDST=${ETCDIR}/rabbitmq/rabbitmq-env.conf
 INITDFILESRC=$CURRDIR/i2.1.5.RabbitMQ.init.d.sh
-INITDFILEDST=${EXTDIR}/rc.d/init.d/rabbitmq
+INITDFILEDST=${EXTDIR}/init.d/rabbitmq
 INITDFILEREL=../init.d/rabbitmq
 COOKIEFILE=.erlang.cookie
 COOKIESRC=$CURRDIR/i2.1.6.RabbitMQ${COOKIEFILE}.txt
@@ -33,26 +33,29 @@ echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
-cp -v $INITDFILESRC $INITDFILEDST         \
+cp -v $INITDFILESRC $INITDFILEDST      \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-cp -v $ENVFILESRC $ENVFILEDST             \
+cp -v $ENVFILESRC $ENVFILEDST          \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-cp -v $COOKIESRC $COOKIEDST1              \
-   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-
-ln -vsf $COOKIEDST1 $COOKIEDST2           \
+cp -v $COOKIESRC $COOKIEDST1           \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-chmod -v ${INITMODE} $INITDFILEDST        \
-   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${CONFMODE} $ENVFILEDST          \
-   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${COOKIEMODE} $COOKIEDST1        \
-   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${COOKIEMODE} $COOKIEDST2        \
+ln -vsf $COOKIEDST1 $COOKIEDST2        \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME      \
+chmod -v ${INITMODE} $INITDFILEDST     \
+   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+chmod -v ${CONFMODE} $ENVFILEDST       \
+   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+chmod -v ${COOKIEMODE} $COOKIEDST1     \
+   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+chmod -v ${COOKIEMODE} $COOKIEDST2     \
+   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
+chown -vR rabbitmq:rabbitmq $RABBITMQ_HOME   \
+   >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
+chown -vR rabbitmq:rabbitmq $COOKIEDST1      \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K24rabbitmq  \
@@ -62,7 +65,7 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S76rabbitmq  \
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K24rabbitmq  \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-cat >> /etc/rc.d/rc3.d/15runowner << "EOF"    2>> $PKGLOG_ERROR
+cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
 
 install -v -d -m 2755 -o rabbitmq -g rabbitmq /var/run/rabbitmq
 

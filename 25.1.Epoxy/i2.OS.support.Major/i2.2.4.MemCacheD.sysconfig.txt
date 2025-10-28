@@ -1,0 +1,8 @@
+# /etc/sysconfig/memcached
+
+### to OverRide defaults
+
+# PORT=11211
+# CACHESIZE=128
+# MAXCONN=1024
+# OPTIONS="-l 10.0.0.11 -t 4 -v"
