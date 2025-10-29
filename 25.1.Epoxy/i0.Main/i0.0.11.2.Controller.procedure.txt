@@ -349,14 +349,16 @@ D.  Support Applications - Major - Part 2
 
         reboot
 
-    D.03. check MemCacheD
+    D.03. check Status
 
         ###
 
         /etc/init.d/rabbitmq status
         /etc/init.d/memcached status
         /etc/init.d/etcd status
+        /etc/init.d/openvswitch status
 
+        # check MemCacheD
         echo "stats settings" | ncat 10.0.0.11 11211
 
         ###
@@ -382,10 +384,10 @@ E.  RabbitMQ
         export RABBITMQ_ERLANG_COOKIE="OPENSTACK"
 
         cp -v /var/lib/rabbitmq/.erlang.cookie /home/user
-      # cp -v /var/lib/rabbitmq/.erlang.cookie /root        symbolic link
+      # cp -v /var/lib/rabbitmq/.erlang.cookie /root      # already copied
 
-        chmod -v 600 /home/user/.erlang.cookie
-        chmod -v 600 /root/.erlang.cookie
+        chmod -v 400 /home/user/.erlang.cookie
+      # chmod -v 400 /root/.erlang.cookie
 
         chown -v user:user /home/user/.erlang.cookie
 
@@ -408,20 +410,20 @@ F.  OpenVSwitch - Configuration
         # pathappend /usr/local/scripts PATH
 
         ovs-vsctl show
-            xxxxxxxx-xxxx-....
-                ovs_version: "3.3.6"
+          # xxxxxxxx-xxxx-....
+          #     ovs_version: "3.3.6"
 
         ovs-vsctl add-br br0
 
         # check
 
         ovs-vsctl show
-            xxxxxxxx-xxxx-....
-                Bridge br0
-                        Port br0
-                            Interface br0
-                                type: internal
-                ovs_version: "3.3.6"
+          # xxxxxxxx-xxxx-....
+          #     Bridge br0
+          #             Port br0
+          #                 Interface br0
+          #                     type: internal
+          #    ovs_version: "3.3.6"
 
         # Create a test OVS bridge
         ovs-vsctl add-br test-br
@@ -430,7 +432,7 @@ F.  OpenVSwitch - Configuration
         /lib/services/bridge test-br up
 
         # Check logs, should have no errors
-        tail 20 /var/log/openvswitch/ovs-vswitchd.log
+        tail -n 20 /var/log/openvswitch/ovs-vswitchd.log
 
         # This should shows it up, no issue.
         ip link show test-br
@@ -585,41 +587,41 @@ G.  KeyStone - Identity service
 
         iptables -S
 
-            -P INPUT ACCEPT
-            -P FORWARD ACCEPT
-            -P OUTPUT ACCEPT
+        #   -P INPUT ACCEPT
+        #   -P FORWARD ACCEPT
+        #   -P OUTPUT ACCEPT
 
         nc -w5 -z -v controller 5000
         #ncat -w5 -z -v 10.0.0.11 5000
 
-            Ncat: Version 7.98 ( https://nmap.org/ncat )
-            Ncat: Connected to 10.0.0.11:5000.
-            Ncat: 0 bytes sent, 0 bytes received in 0.0x seconds.
+        #   Ncat: Version 7.98 ( https://nmap.org/ncat )
+        #   Ncat: Connected to 10.0.0.11:5000.
+        #   Ncat: 0 bytes sent, 0 bytes received in 0.0x seconds.
 
         lsof -i:5000
 
-            COMMAND  PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            httpd    ppp   root Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
-            httpd    ppp apache Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
-            httpd    ppp apache Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
-            httpd    ppp apache Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
+        #   COMMAND  PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+        #   httpd    ppp   root Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
+        #   httpd    ppp apache Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
+        #   httpd    ppp apache Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
+        #   httpd    ppp apache Nu  IPv6   nnnn      0t0  TCP *:commplex-main (LISTEN)
 
         curl -i http://controller:5000/v3
         #curl -i http://10.0.0.11:5000/v3
 
-            HTTP/1.1 200 OK
-            Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
-            Server: Apache/2.4.65 (Unix) mod_wsgi/5.0.2 Python/3.12
-            Content-Length: 250
-            Vary: X-Auth-Token
-            x-openstack-request-id: req-........-....-....-....-............
-            Content-Type: application/json
+        #   HTTP/1.1 200 OK
+        #   Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
+        #   Server: Apache/2.4.65 (Unix) mod_wsgi/5.0.2 Python/3.12
+        #   Content-Length: 250
+        #   Vary: X-Auth-Token
+        #   x-openstack-request-id: req-........-....-....-....-............
+        #   Content-Type: application/json
 
-            {"version":
-             {"id": "v3.14", "status": "stable", "updated": "2020-04-07T00:00:00Z",
-              "links": [{"rel": "self", "href": "http://controller:5000/v3/"}],
-              "media-types": [{"base": "application/json",
-                               "type": "application/vnd.openstack.identity-v3+json"}]}}
+        #   {"version":
+        #    {"id": "v3.14", "status": "stable", "updated": "2020-04-07T00:00:00Z",
+        #     "links": [{"rel": "self", "href": "http://controller:5000/v3/"}],
+        #     "media-types": [{"base": "application/json",
+        #                      "type": "application/vnd.openstack.identity-v3+json"}]}}
 
     G.07. Bootstrap the Identity service
 
@@ -954,6 +956,7 @@ J.  Glance - Image Service
     J.05. Endpoint list and reader access
 
         $$$ Note: To list endpoints
+        . admin-openrc
         openstack endpoint list --service glance --region RegionOne
 
         $$$    
@@ -972,69 +975,62 @@ J.  Glance - Image Service
 
         iptables -S
 
-            -P INPUT ACCEPT
-            -P FORWARD ACCEPT
-            -P OUTPUT ACCEPT
+        #   -P INPUT ACCEPT
+        #   -P FORWARD ACCEPT
+        #   -P OUTPUT ACCEPT
 
         nc -w5 -z -v controller 9292
 
-            Ncat: Version 7.95 ( https://nmap.org/ncat )
-            Ncat: Connected to 10.0.0.11:9292.
-            Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
+        #   Ncat: Version 7.95 ( https://nmap.org/ncat )
+        #   Ncat: Connected to 10.0.0.11:9292.
+        #   Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
 
         lsof -i:9292
 
-            COMMAND    PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
-            glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+        #   COMMAND    PID   USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+        #   glance-ap pppp glance Nu  IPv4   nnnn      0t0  TCP *:armtechdaemon (LISTEN)
+        #   9x
 
         curl -i http://controller:9292
 
-            HTTP/1.1 300 Multiple Choices
-            Content-Type: application/json
-            Content-Length: 1698
-            Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
+        #   HTTP/1.1 300 Multiple Choices
+        #   Content-Type: application/json
+        #   Content-Length: 1698
+        #   Date: Ddd, dd Mmm YYYY HH:MM:SS GMT
 
-            {"versions":
-             [{"id": "v2.15", "status": "SUPPORTED",
-              "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-               {"id": "v2.13", "status": "SUPPORTED",
-                "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                 {"id": "v2.12", "status": "SUPPORTED",
-                  "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                   {"id": "v2.11", "status": "SUPPORTED",
-                    "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                     {"id": "v2.10", "status": "SUPPORTED",
-                      "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                       {"id": "v2.9", "status": "SUPPORTED",
-                        "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                         {"id": "v2.8", "status": "SUPPORTED",
-                          "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                           {"id": "v2.17", "status": "CURRENT",
-                            "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                             {"id": "v2.7", "status": "SUPPORTED",
-                              "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                               {"id": "v2.6", "status": "SUPPORTED",
-                                "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                 {"id": "v2.5", "status": "SUPPORTED",
-                                  "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                   {"id": "v2.4", "status": "SUPPORTED",
-                                    "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                     {"id": "v2.3", "status": "SUPPORTED",
-                                      "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                       {"id": "v2.2", "status": "SUPPORTED",
-                                        "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                         {"id": "v2.1", "status": "SUPPORTED",
-                                          "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
-                                           {"id": "v2.0", "status": "SUPPORTED",
-                                            "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]}]}
+        #   {"versions":
+        #    [{"id": "v2.15", "status": "SUPPORTED",
+        #     "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #      {"id": "v2.13", "status": "SUPPORTED",
+        #       "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #        {"id": "v2.12", "status": "SUPPORTED",
+        #         "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #          {"id": "v2.11", "status": "SUPPORTED",
+        #           "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #            {"id": "v2.10", "status": "SUPPORTED",
+        #             "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #              {"id": "v2.9", "status": "SUPPORTED",
+        #               "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                {"id": "v2.8", "status": "SUPPORTED",
+        #                 "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                  {"id": "v2.17", "status": "CURRENT",
+        #                   "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                    {"id": "v2.7", "status": "SUPPORTED",
+        #                     "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                      {"id": "v2.6", "status": "SUPPORTED",
+        #                       "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                        {"id": "v2.5", "status": "SUPPORTED",
+        #                         "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                          {"id": "v2.4", "status": "SUPPORTED",
+        #                           "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                            {"id": "v2.3", "status": "SUPPORTED",
+        #                             "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                              {"id": "v2.2", "status": "SUPPORTED",
+        #                               "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                                {"id": "v2.1", "status": "SUPPORTED",
+        #                                 "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]},
+        #                                  {"id": "v2.0", "status": "SUPPORTED",
+        #                                   "links": [{"rel": "self", "href": "http://controller:9292/v2/"}]}]}
 
     J.08. Populate the Image service database:
 

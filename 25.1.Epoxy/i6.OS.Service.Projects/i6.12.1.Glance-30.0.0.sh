@@ -74,7 +74,7 @@ groupadd -g 443 glance          \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 useradd -c "glance"             \
         -g glance               \
-        -s /bin/false           \
+        -s /bin/sh              \
         -d /var/lib/glance      \
         -u 443                  \
         glance                  \
