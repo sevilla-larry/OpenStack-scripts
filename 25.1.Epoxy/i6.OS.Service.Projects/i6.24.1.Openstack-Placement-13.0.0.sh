@@ -91,11 +91,11 @@ pytest >  $PKGLOG_CHECK 2>> $PKGLOG_ERROR
 
 # install -v -d -m755 /etc/placement              \
 #         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m755 /etc/placement/sample       \
+install -v -d -m2755 /etc/placement/sample       \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/placement          \
+install -v -d -m2777 /var/lib/placement          \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/log/placement          \
+install -v -d -m2777 /var/log/placement          \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 chown -vR placement:placement /{etc,var/{lib,log}}/placement    \

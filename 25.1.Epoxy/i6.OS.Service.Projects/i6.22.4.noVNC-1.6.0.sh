@@ -27,9 +27,9 @@ mkdir -vp /usr/share/novnc                                        \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 cp -vr *.html app/ core/ utils/ vendor/ /usr/share/novnc/    \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-chown -vR nova:nova /usr/share/novnc                              \
-         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 chmod -vR 755 /usr/share/novnc                                    \
+         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+chown -vR nova:nova /usr/share/novnc                              \
          >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 

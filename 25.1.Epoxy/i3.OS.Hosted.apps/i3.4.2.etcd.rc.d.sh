@@ -13,8 +13,8 @@ ETCDIR=/etc
 LIBDIR=${DESTDIR}/lib/services
 EXTDIR=${DESTDIR}${ETCDIR}
 INITMODE=755
-DIRMODE=755
-CONFMODE=644
+#DIRMODE=755
+CNFMODE=644
 CURRDIR=`pwd`
 CONFYMLFILE1=$CURRDIR/i3.4.3.etcd.conf.yml
 CONFYMLFILE2=/etc/etcd.conf.yml
@@ -27,14 +27,14 @@ echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
-cp -v $CONFYMLFILE1 $CONFYMLFILE2       \
+cp -v $CONFYMLFILE1 $CONFYMLFILE2     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-cp -v $INITDFILESRC $INITDFILEDST      \
+cp -v $INITDFILESRC $INITDFILEDST     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-chmod -v ${CONFMODE} $CONFYMLFILE2     \
+chmod -v ${CNFMODE} $CONFYMLFILE2     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${INITMODE} $INITDFILEDST     \
+chmod -v ${INITMODE} $INITDFILEDST    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K22etcd  \

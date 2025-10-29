@@ -101,7 +101,7 @@ pip3 install    --no-index              \
                 glance                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/glance/{sample,metadefs}       \
+install -v -d -m2755 /etc/glance/{sample,metadefs}       \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 # install -v -d -m755 /etc/glance/sample          \
 #         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
@@ -109,11 +109,11 @@ install -v -d -m755 /etc/glance/{sample,metadefs}       \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 # install -v -d -m777 /var/lib/glance             \
 #         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/glance/images      \
+install -v -d -m2777 /var/lib/glance/images      \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/log/glance             \
+install -v -d -m2777 /var/log/glance             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m755 /var/run/glance             \
+install -v -d -m2755 /var/run/glance             \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # copy the configuration samples
@@ -121,7 +121,7 @@ install -v -d -m755 /var/run/glance             \
 # since the whole Glance source directory
 # will be removed
 
-MODE=755
+CNFMODE=644
 GLANCEETCSAMPLE=/etc/glance/sample
 
 cd etc
@@ -168,7 +168,9 @@ cp -v   schema-image.json                                               \
 cp -v   metadefs/* /etc/glance/metadefs                                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -vR ${MODE} /etc/glance                        \
+# chmod -v ${DIRMODE} /etc/glance                         \
+#         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+chmod -vR ${CNFMODE} /etc/glance/*                      \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR glance:glance /{etc,var/{lib,log,run}}/glance \

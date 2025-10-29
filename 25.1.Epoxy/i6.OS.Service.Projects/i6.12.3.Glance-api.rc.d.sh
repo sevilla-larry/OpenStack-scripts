@@ -25,6 +25,7 @@ echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
 cp -v $INITDFILESRC $INITDFILEDST      \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
 chmod -v ${INITMODE} $INITDFILEDST     \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 

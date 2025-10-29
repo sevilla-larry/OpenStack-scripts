@@ -94,11 +94,11 @@ pip3 install    --no-index              \
 
 # install -v -d -m755 /etc/keystone               \
 #         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m755 /etc/keystone/sample        \
+install -v -d -m2755 /etc/keystone/sample       \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/keystone           \
+install -v -d -m2777 /var/lib/keystone          \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/log/keystone           \
+install -v -d -m2777 /var/log/keystone          \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # copy the logging.conf.sample
@@ -106,19 +106,20 @@ install -v -d -m777 /var/log/keystone           \
 # since the whole KeyStone source directory
 # will be removed
 
-MODE=755
+CNFMODE=644
+KEYSTONEETCSAMPLE=/etc/keystone/sample
 
 cp -v   etc/logging.conf.sample                 \
         /etc/keystone/logging.conf              \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 cp -v   etc/logging.conf.sample                 \
-        /etc/keystone/sample                    \
+        $KEYSTONEETCSAMPLE                      \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 cp -v   httpd/wsgi-keystone.conf                                \
-        /etc/keystone/sample/httpd_wsgi-keystone.conf.sample    \
+        $KEYSTONEETCSAMPLE/httpd_wsgi-keystone.conf.sample      \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v ${MODE} /etc/keystone/logging.conf \
+chmod -v ${CNFMODE} /etc/keystone/logging.conf  \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR keystone:keystone /{etc,var/{lib,log}}/keystone       \

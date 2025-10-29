@@ -21,8 +21,7 @@ ETCDIR=/etc
 PLACEMENTETCDIR=${ETCDIR}/placement
 PLACEMENTETCDIRSAMPLE=${PLACEMENTETCDIR}/sample
 CURRDIR=`pwd`
-MODE=755
-CONFMODE=644
+CNFMODE=644
 CNFFILESRC1=${CURRDIR}/i6.24.3.placement.conf.txt
 CNFFILEDST1=${PLACEMENTETCDIR}/placement.conf
 
@@ -38,7 +37,7 @@ cp -v   placement.conf.sample                   \
 cp -v   ${CNFFILESRC1} ${CNFFILEDST1}           \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v ${MODE} ${CNFFILEDST1}                 \
+chmod -v ${CNFMODE} ${CNFFILEDST1}                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR placement:placement ${PLACEMENTETCDIR}        \
@@ -57,7 +56,7 @@ echo "2. Install Placement's Apache Configuration ..." >> $PKGLOG_ERROR
 cp -v   ${CNFFILESRC2} ${CNFFILEDST2}           \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -v ${CONFMODE} ${CNFFILEDST2}                 \
+chmod -v ${CNFMODE} ${CNFFILEDST2}                 \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -v apache:apache ${CNFFILEDST2}           \

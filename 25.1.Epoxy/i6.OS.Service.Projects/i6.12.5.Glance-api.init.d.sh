@@ -13,15 +13,15 @@ logfile="/var/log/glance/api.log"
 user="glance"
 
 # === SECURITY & DIRS ===
-chmod 750 /etc/glance
-chown root:glance /etc/glance
-chmod 640 "$config"
-chown $user:$user "$config"
+#chmod 755 /etc/glance
+#chown glance:glance /etc/glance
+#chmod 644 "$config"
+#chown $user:$user "$config"
 
-mkdir -p /var/run/glance /var/log/glance
-chown $user:$user /var/run/glance /var/log/glance
-touch "$logfile"
-chown $user:$user "$logfile"
+#mkdir -p /var/run/glance /var/log/glance
+#chown $user:$user /var/run/glance /var/log/glance
+#?touch "$logfile"
+#?chown $user:$user "$logfile"
 
 start() {
     log_info_msg "Starting Glance API..."

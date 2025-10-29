@@ -22,7 +22,7 @@ start() {
     fi
     
     # Create pid directory if it doesn't exist
-    install -d -m 755 -o etcd -g etcd /run/etcd
+    # install -d -m 755 -o etcd -g etcd /run/etcd
     
     # Start as etcd user and capture PID
     su -s /bin/sh etcd -c "cd /var/lib/etcd && $program $args >> $logfile 2>&1 & echo \$! > $pidfile"
