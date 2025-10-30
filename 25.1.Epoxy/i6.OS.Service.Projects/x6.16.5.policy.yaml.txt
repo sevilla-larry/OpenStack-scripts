@@ -24,5 +24,5 @@
 # Only non-default, non-redundant, or custom rules remain.
 # This file is now minimal and future-proof.
 
-"cloud_admin": "role:admin and domain_id:%(domain_id)s"
-"default": ""
+# "cloud_admin": "role:admin and domain_id:%(domain_id)s"
+# "default": ""

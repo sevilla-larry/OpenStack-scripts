@@ -41,6 +41,8 @@ provider = fernet
 
 [oslo_policy]
 policy_file = /etc/keystone/policy.yaml
+enforce_new_defaults = True
+enforce_scope = True
 
 
 [identity]
