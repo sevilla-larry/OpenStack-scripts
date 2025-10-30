@@ -35,8 +35,10 @@ connect_timeout = 5
 [token]
 provider = fernet
 
+
 [oslo_policy]
 policy_file = /etc/keystone/policy.yaml
+
 
 [identity]
 password_hash_algorithm = scrypt
