@@ -254,9 +254,11 @@ C.  Support Applications - Major - Part 1
         # character-set-server = utf8
 
         [mysqld]
-        wait_timeout     = 31536000   # 1 year
+        # 1 year
+        wait_timeout     = 31536000
         interactive_timeout = 31536000
-        net_read_timeout = 120           # For query reads
+        # For query reads
+        net_read_timeout = 120
         net_write_timeout = 120
 
         ###
@@ -304,6 +306,16 @@ C.  Support Applications - Major - Part 1
         make install-mariadb    # MariaDB
         make install-httpd      # Apache
     #   make install-iptables   # iptables
+
+        # Fix boot (rc3.d): Start MariaDB first (S32), HTTPD later (S34)
+        mv -v /etc/rc.d/rc3.d/S32httpd /etc/rc.d/rc3.d/S34httpd
+        mv -v /etc/rc.d/rc3.d/S34mariadb /etc/rc.d/rc3.d/S32mariadb
+
+        # Fix shutdown (rc0.d & rc6.d): Stop HTTPD first (K26), MariaDB later (K28)
+        mv -v /etc/rc.d/rc0.d/K26mariadb /etc/rc.d/rc0.d/K28mariadb
+        mv -v /etc/rc.d/rc0.d/K28httpd /etc/rc.d/rc0.d/K26httpd
+        mv -v /etc/rc.d/rc6.d/K26mariadb /etc/rc.d/rc6.d/K28mariadb
+        mv -v /etc/rc.d/rc6.d/K28httpd /etc/rc.d/rc6.d/K26httpd
 
         reboot
 
