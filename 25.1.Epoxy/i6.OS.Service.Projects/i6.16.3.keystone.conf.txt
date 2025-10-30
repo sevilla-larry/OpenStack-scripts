@@ -16,12 +16,14 @@ log_dir = /var/log/keystone
 # connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
 connection = mysql+pymysql://keystone:openstack@controller/keystone
 
+# Recommended by Grok
+
 # 1. Keep connections alive
 max_pool_size = 20
 pool_timeout = 30
 connection_recycle_time = 600
 # seconds – recycle every 10 min
-
+# 2. Retry on lost connection
 retry_on_disconnect = True
 max_retries = 3
 retry_interval = 2
@@ -32,3 +34,9 @@ connect_timeout = 5
 
 [token]
 provider = fernet
+
+[oslo_policy]
+policy_file = /etc/keystone/policy.yaml
+
+[identity]
+password_hash_algorithm = scrypt

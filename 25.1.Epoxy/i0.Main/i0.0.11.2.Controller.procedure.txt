@@ -242,7 +242,7 @@ C.  Support Applications - Major - Part 1
         # mkdir -v /etc/mariadb/mariadb.conf.d
 
         ### add/create file:
-        # nano /etc/mariadb/mariadb.conf.d/
+        # nano /etc/mariadb/mariadb.conf.d/99-openstack.cnf
 
         # [mysqld]
         # bind-address = 10.0.0.11
