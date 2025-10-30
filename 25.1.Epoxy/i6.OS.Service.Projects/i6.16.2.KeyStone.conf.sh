@@ -50,8 +50,8 @@ chmod -v ${CNFMODE}     ${CNFFILEDST1}          \
 chown -vR keystone:keystone ${KEYSTONEETCDIR}   \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chown -vR apache:apache ${KEYSTONEETCDIR}/policy.yaml   \
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# chown -vR apache:apache ${KEYSTONEETCDIR}/policy.yaml   \
+#         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 APACHEETCDIR=${ETCDIR}/httpd
 APACHECNFFILE=${APACHEETCDIR}/httpd.conf
