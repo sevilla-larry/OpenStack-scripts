@@ -253,13 +253,14 @@ C.  Support Applications - Major - Part 1
         # collation-server = utf8_general_ci
         # character-set-server = utf8
 
+        ### deferred error only during reboot and poweroff
         [mysqld]
         # 1 year
-        wait_timeout     = 31536000
-        interactive_timeout = 31536000
+        # wait_timeout     = 31536000
+        # interactive_timeout = 31536000
         # For query reads
-        net_read_timeout = 120
-        net_write_timeout = 120
+        # net_read_timeout = 120
+        # net_write_timeout = 120
 
         ###
 
@@ -306,6 +307,9 @@ C.  Support Applications - Major - Part 1
         make install-mariadb    # MariaDB
         make install-httpd      # Apache
     #   make install-iptables   # iptables
+
+        ###
+        
 
         # Fix boot (rc3.d): Start MariaDB first (S32), HTTPD later (S34)
         mv -v /etc/rc.d/rc2.d/S32httpd   /etc/rc.d/rc2.d/S34httpd
