@@ -1,0 +1,12 @@
+# Recommended by Grok 2025/Oct/29
+
+# Generated using:
+#
+# oslopolicy-policy-upgrade ... complex process
+# chown apache:apache /etc/keystone/policy.yaml
+#
+
+admin_required: role:admin or is_admin:1
+cloud_admin: role:admin and domain_id:%(domain_id)s
+default: ''
+service_role: role:service

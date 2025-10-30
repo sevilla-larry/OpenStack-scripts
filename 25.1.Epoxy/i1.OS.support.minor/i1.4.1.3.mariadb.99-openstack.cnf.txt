@@ -12,3 +12,9 @@ innodb_file_per_table = on
 max_connections = 4096
 collation-server = utf8_general_ci
 character-set-server = utf8
+
+# Recommended by Grok 2025/Oct/29
+wait_timeout     = 31536000   # 1 year
+interactive_timeout = 31536000
+net_read_timeout = 120           # For query reads
+net_write_timeout = 120
