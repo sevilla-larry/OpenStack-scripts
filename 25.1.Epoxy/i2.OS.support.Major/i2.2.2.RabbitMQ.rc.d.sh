@@ -66,14 +66,14 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S76rabbitmq  \
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K24rabbitmq  \
    >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
+# cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
 
-install -v -d -m 2755 -o rabbitmq -g rabbitmq /var/run/rabbitmq
+# install -v -d -m 2755 -o rabbitmq -g rabbitmq /var/run/rabbitmq
 
-EOF
+# EOF
 
-chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+# chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
+#       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 
 unset OSLOG_PROCESS

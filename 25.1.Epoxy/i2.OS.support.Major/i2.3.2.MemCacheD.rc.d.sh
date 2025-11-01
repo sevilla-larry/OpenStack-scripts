@@ -42,14 +42,14 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S77memcached  \
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K23memcached  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
+# cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
 
-install -v -d -m 2755 -o memcached -g memcached /var/run/memcached
+# install -v -d -m 2755 -o memcached -g memcached /var/run/memcached
 
-EOF
+# EOF
 
-chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+# chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
+#       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 
 unset OSLOG_PROCESS

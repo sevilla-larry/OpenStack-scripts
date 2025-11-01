@@ -5,8 +5,8 @@
 CONFIG="/etc/nova/nova.conf"
 LOG="/var/log/nova/nova-api.log"
 
-mkdir -p /var/log/nova /var/run/nova
-chown nova:nova /var/log/nova /var/run/nova
+# mkdir -p /var/log/nova /var/run/nova
+# chown nova:nova /var/log/nova /var/run/nova
 
 # Run in foreground as nova
 exec su -s /bin/sh nova -c "/usr/bin/nova-api --config-file $CONFIG" >>"$LOG" 2>&1

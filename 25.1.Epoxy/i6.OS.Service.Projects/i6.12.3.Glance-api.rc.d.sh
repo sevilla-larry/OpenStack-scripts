@@ -36,6 +36,15 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S82glance-api \
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K18glance-api \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
+# cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
+
+# install -v -d -m 2755 -o glance -g glance /var/run/glance
+
+# EOF
+
+# chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
+#       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
 
 unset OSLOG_PROCESS
 unset PKGLOG_INITD

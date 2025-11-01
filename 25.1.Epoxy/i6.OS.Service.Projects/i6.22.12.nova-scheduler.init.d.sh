@@ -13,13 +13,14 @@ PIDFILE="/var/run/nova/nova-scheduler.pid"
 start() {
     log_info_msg "Starting $NAME ..."
 
-    mkdir -p /var/run/nova /var/log/nova
-    chown nova:nova /var/run/nova /var/log/nova
+    # mkdir -p /var/run/nova /var/log/nova
+    # chown nova:nova /var/run/nova /var/log/nova
+    install -v -d -m 2755 -o nova -g nova /var/run/nova
 
     LOGFILE="/var/log/nova/nova-scheduler.log"
-    touch "$LOGFILE"
-    chown nova:nova "$LOGFILE"
-    chmod 644 "$LOGFILE"
+    # touch "$LOGFILE"
+    # chown nova:nova "$LOGFILE"
+    # chmod 644 "$LOGFILE"
 
     rm -f "$PIDFILE"
 

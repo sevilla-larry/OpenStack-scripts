@@ -25,6 +25,8 @@ user="glance"
 
 start() {
     log_info_msg "Starting Glance API..."
+    install -v -d -m 2755 -o glance -g glance /var/run/glance
+
     rm -f "$pidfile"
 
     # Run as glance, capture PID, write PID file as glance

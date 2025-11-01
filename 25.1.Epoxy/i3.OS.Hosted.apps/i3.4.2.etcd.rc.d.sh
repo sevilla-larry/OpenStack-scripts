@@ -55,14 +55,14 @@ ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K22etcd  \
 chown -vR etcd:etcd $CONFYMLFILE2           \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
+# cat >> /etc/rc.d/rc3.d/S15runowner << "EOF"    2>> $PKGLOG_ERROR
 
-install -v -d -m 2755 -o etcd -g etcd /var/run/etcd
+# install -v -d -m 2755 -o etcd -g etcd /var/run/etcd
 
-EOF
+# EOF
 
-chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+# chmod -v 777 /etc/rc.d/rc3.d/S15runowner  \
+#       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 
 unset OSLOG_PROCESS
