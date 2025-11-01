@@ -15,8 +15,8 @@ character-set-server = utf8
 
 # Recommended by Grok 2025/Oct/29
 # 1 year
-wait_timeout     = 31536000
-interactive_timeout = 31536000
+#wait_timeout     = 31536000
+#interactive_timeout = 31536000
 # For query reads
-net_read_timeout = 120
-net_write_timeout = 120
+#net_read_timeout = 120
+#net_write_timeout = 120
