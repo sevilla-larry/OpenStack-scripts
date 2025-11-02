@@ -1,6 +1,6 @@
-# i2.4.1.2.ovn.rc.d.sh
+# i2.4.2.2.ovn.rc.d.sh
 
-export PKGLOG_DIR=$OSLOG/2.4.1.2
+export PKGLOG_DIR=$OSLOG/2.4.2.2
 export PKGLOG_INITD=$PKGLOG_DIR/initd.log
 export PKGLOG_ERROR=$PKGLOG_DIR/error.log
 export OSLOG_PROCESS=$OSLOG/process.log
