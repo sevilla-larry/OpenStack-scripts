@@ -121,8 +121,8 @@ pip3 install    --no-index              \
                 nova                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m2755 /etc/nova                  \
-        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+# install -v -d -m2755 /etc/nova                  \
+#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m2755 /etc/nova/sample           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 install -v -d -m2777 /var/lib/nova              \

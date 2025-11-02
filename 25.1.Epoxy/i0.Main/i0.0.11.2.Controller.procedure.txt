@@ -1697,7 +1697,7 @@ L.  Nova - Compute Service
         lsof -i:6080
 
         #   COMMAND    PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-        #   nova-novn 1249 nova 7u  IPv4   4469      0t0  TCP *:6080 (LISTEN)
+        #   nova-novn xxxx nova 7u  IPv4   nnnn      0t0  TCP *:6080 (LISTEN)
 
         curl -i http://controller:8774
 

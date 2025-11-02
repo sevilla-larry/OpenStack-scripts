@@ -16,7 +16,7 @@ enabled_backends=fs:file
 # use_keystone_limits = True
 use_keystone_limits = False
 
-log_file = /var/log/glance/api.log
+log_file = /var/log/glance/glance-api.log
 
 
 [database]

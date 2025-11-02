@@ -113,15 +113,17 @@ pip3 install    --no-index              \
                 neutron                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m755 /etc/neutron/{sample,plugins/mls}   \
+install -v -d -m2755 /etc/neutron/{sample,plugins/mls}   \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 # install -v -d -m755 /etc/neutron/sample         \
 #         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 # install -v -d -m755 /etc/neutron/plugins/ml2    \
 #         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/lib/neutron            \
+install -v -d -m2777 /var/lib/neutron           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m777 /var/log/neutron            \
+install -v -d -m2777 /var/log/neutron           \
+        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+install -v -d -m2755 /var/run/neutron           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # copy the configuration samples
@@ -129,7 +131,7 @@ install -v -d -m777 /var/log/neutron            \
 # since the whole Neutron source directory
 # will be removed
 
-MODE=755
+CNFMODE=644
 NEUTRONETCSAMPLE=/etc/neutron/sample
 
 cd etc
@@ -144,10 +146,10 @@ cp -v   rootwrap.conf                                   \
         ${NEUTRONETCSAMPLE}/rootwrap.conf.sample        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -vR ${MODE} /etc/neutron                          \
+chmod -vR ${CNFMODE} /etc/neutron/*                     \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chown -vR neutron:neutron /{etc,var/{lib,log}}/neutron  \
+chown -vR neutron:neutron /{etc,var/{lib,log,run}}/neutron      \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
