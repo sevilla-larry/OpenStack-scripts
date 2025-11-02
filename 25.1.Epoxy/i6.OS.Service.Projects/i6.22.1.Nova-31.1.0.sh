@@ -121,15 +121,15 @@ pip3 install    --no-index              \
                 nova                  \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-# install -v -d -m755 /etc/nova                   \
-#         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m2755 /etc/nova/sample            \
+install -v -d -m2755 /etc/nova                  \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m2777 /var/lib/nova               \
+install -v -d -m2755 /etc/nova/sample           \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m2777 /var/log/nova               \
+install -v -d -m2777 /var/lib/nova              \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
-install -v -d -m2755 /var/run/nova               \
+install -v -d -m2777 /var/log/nova              \
+        >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
+install -v -d -m2755 /var/run/nova              \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
 # copy the configuration samples
@@ -159,7 +159,7 @@ cp -v   rootwrap.conf                           \
         ${NOVAETCSAMPLE}/rootwrap.conf.sample   \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -vR ${CNFMODE} /etc/nova                  \
+chmod -vR ${CNFMODE} /etc/nova/*                \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR nova:nova /{etc,var/{lib,log,run}}/nova   \

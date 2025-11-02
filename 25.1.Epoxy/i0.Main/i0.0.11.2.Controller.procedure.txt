@@ -1670,87 +1670,87 @@ L.  Nova - Compute Service
 
         iptables -S
 
-            -P INPUT ACCEPT
-            -P FORWARD ACCEPT
-            -P OUTPUT ACCEPT
-            -A INPUT -p tcp -m tcp --dport 8774 -j ACCEPT
-            -A INPUT -p tcp -m tcp --dport 6080 -j ACCEPT
+        #   -P INPUT ACCEPT
+        #   -P FORWARD ACCEPT
+        #   -P OUTPUT ACCEPT
+        #   -A INPUT -p tcp -m tcp --dport 8774 -j ACCEPT
+        #   -A INPUT -p tcp -m tcp --dport 6080 -j ACCEPT
 
         nc -w5 -z -v controller 8774
 
-            Ncat: Version 7.95 ( https://nmap.org/ncat )
-            Ncat: Connected to 10.0.0.11:8774.
-            Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
+        #   Ncat: Version 7.95 ( https://nmap.org/ncat )
+        #   Ncat: Connected to 10.0.0.11:8774.
+        #   Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
 
         nc -w5 -z -v controller 6080
 
-            Ncat: Version 7.98 ( https://nmap.org/ncat )
-            Ncat: Connected to 10.0.0.11:6080.
-            Ncat: 0 bytes sent, 0 bytes received in 0.01 seconds.
+        #   Ncat: Version 7.98 ( https://nmap.org/ncat )
+        #   Ncat: Connected to 10.0.0.11:6080.
+        #   Ncat: 0 bytes sent, 0 bytes received in 0.01 seconds.
 
         lsof -i:8774
 
-            COMMAND   PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            nova-api xxxx nova xxu  IPv4   nnnn      0t0  TCP *:8774 (LISTEN)
-            ...      .... .... ...  ....   ....      ...  ... ...... ........
+        #   COMMAND   PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+        #   nova-api xxxx nova xxu  IPv4   nnnn      0t0  TCP *:8774 (LISTEN)
+        #   ...      .... .... ...  ....   ....      ...  ... ...... ........
 
         lsof -i:6080
 
-            COMMAND    PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
-            nova-novn 1249 nova 7u  IPv4   4469      0t0  TCP *:6080 (LISTEN)
+        #   COMMAND    PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+        #   nova-novn 1249 nova 7u  IPv4   4469      0t0  TCP *:6080 (LISTEN)
 
         curl -i http://controller:8774
 
-            HTTP/1.1 200 OK
-            Content-Length: 369
-            Content-Type: application/json
-            Date: Tue, DD Mmm YYYY HH:MM:SS GMT
+        #   HTTP/1.1 200 OK
+        #   Content-Length: 369
+        #   Content-Type: application/json
+        #   Date: Tue, DD Mmm YYYY HH:MM:SS GMT
 
-            {"versions":
-             [{"id": "v2.0",
-              "status": "SUPPORTED",
-               "version": "",
-                "min_version": "",
-                 "updated": "2011-01-21T11:33:21Z",
-                  "links":
-                   [{"rel": "self",
-                    "href": "http://controller:8774/v2/"}]},
-                     {"id": "v2.1",
-                      "status": "CURRENT",
-                       "version": "2.96",
-                        "min_version": "2.1",
-                         "updated": "2013-07-23T11:33:21Z",
-                          "links":
-                           [{"rel": "self",
-                            "href": "http://controller:8774/v2.1/"}]}]}
+        #   {"versions":
+        #    [{"id": "v2.0",
+        #     "status": "SUPPORTED",
+        #      "version": "",
+        #       "min_version": "",
+        #        "updated": "2011-01-21T11:33:21Z",
+        #         "links":
+        #          [{"rel": "self",
+        #           "href": "http://controller:8774/v2/"}]},
+        #            {"id": "v2.1",
+        #             "status": "CURRENT",
+        #              "version": "2.96",
+        #               "min_version": "2.1",
+        #                "updated": "2013-07-23T11:33:21Z",
+        #                 "links":
+        #                  [{"rel": "self",
+        #                   "href": "http://controller:8774/v2.1/"}]}]}
 
         ps aux | grep nova
 
         netstat -tuln | grep -E '8774|6080'
 
-            tcp        0      0 0.0.0.0:6080            0.0.0.0:*               LISTEN     
-            tcp        0      0 0.0.0.0:8774            0.0.0.0:*               LISTEN     
+        #   tcp        0      0 0.0.0.0:6080            0.0.0.0:*               LISTEN     
+        #   tcp        0      0 0.0.0.0:8774            0.0.0.0:*               LISTEN     
 
         ss -tuln | grep -E '8774|6080'
 
-            tcp   LISTEN 0      0            0.0.0.0:6080       0.0.0.0:*   
-            tcp   LISTEN 0      0            0.0.0.0:8774       0.0.0.0:*   
+        #   tcp   LISTEN 0      0            0.0.0.0:6080       0.0.0.0:*   
+        #   tcp   LISTEN 0      0            0.0.0.0:8774       0.0.0.0:*   
 
         iptables -L INPUT -v -n --line-numbers
 
-            Chain INPUT (policy ACCEPT 10196 packets, 1841K bytes)
-            num   pkts bytes target     prot opt in     out     source               destination         
-            1        0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:8774
-            2        0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:6080
+        #   Chain INPUT (policy ACCEPT 10196 packets, 1841K bytes)
+        #   num   pkts bytes target     prot opt in     out     source               destination         
+        #   1        0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:8774
+        #   2        0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:6080
 
         telnet controller 8774
 
-            Trying 10.0.0.11...
-            Connected to controller.
-            Escape character is '^]'.
+        #   Trying 10.0.0.11...
+        #   Connected to controller.
+        #   Escape character is '^]'.
 
-                Ctrl-]
-                quit
+        #       Ctrl-]
+        #       quit
 
         $$$ from remote machine
 
