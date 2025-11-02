@@ -8,30 +8,123 @@
 # Required-Stop:     $local_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: OVN Databases
+# Short-Description: OVN Northbound and Southbound Databases
+# Description:       Starts ovsdb-server for OVN NB and SB databases
 ### END INIT INFO
 
+# --- Load LSB functions ---
+. /lib/lsb/init-functions
+
+# --- Configuration ---
+DB_DIR=/var/lib/ovn
+RUN_DIR=/var/run/ovn
+LOG_DIR=/var/log/ovn
+
+NB_DB="$DB_DIR/ovnnb_db.db"
+SB_DB="$DB_DIR/ovnsb_db.db"
+NB_SOCK="$RUN_DIR/ovnnb_db.sock"
+SB_SOCK="$RUN_DIR/ovnsb_db.sock"
+NB_PID="$RUN_DIR/ovnnb_db.pid"
+SB_PID="$RUN_DIR/ovnsb_db.pid"
+NB_LOG="$LOG_DIR/ovnnb_db.log"
+SB_LOG="$LOG_DIR/ovnsb_db.log"
+
+# --- Ensure directories exist ---
+mkdir -p "$DB_DIR" "$RUN_DIR" "$LOG_DIR"
+chmod 750 "$RUN_DIR" "$LOG_DIR"
+
+# --- Start OVN Databases ---
+start_ovn_dbs() {
+    log_info_msg "Starting OVN databases..."
+
+    # Start Northbound DB
+    if pidofproc -p "$NB_PID" ovsdb-server > /dev/null; then
+        log_success_msg "OVN Northbound DB already running"
+    else
+        log_info_msg "Starting OVN Northbound DB..."
+        start_daemon -p "$NB_PID" \
+            ovsdb-server \
+            --remote=punix:"$NB_SOCK" \
+            --remote=ptcp:6641:127.0.0.1 \
+            --pidfile="$NB_PID" \
+            --detach \
+            --log-file="$NB_LOG" \
+            --verbose \
+            "$NB_DB"
+
+        evaluate_retval
+    fi
+
+    # Start Southbound DB
+    if pidofproc -p "$SB_PID" ovsdb-server > /dev/null; then
+        log_success_msg "OVN Southbound DB already running"
+    else
+        log_info_msg "Starting OVN Southbound DB..."
+        start_daemon -p "$SB_PID" \
+            ovsdb-server \
+            --remote=punix:"$SB_SOCK" \
+            --remote=ptcp:6642:127.0.0.1 \
+            --pidfile="$SB_PID" \
+            --detach \
+            --log-file="$SB_LOG" \
+            --verbose \
+            "$SB_DB"
+
+        evaluate_retval
+    fi
+}
+
+# --- Stop OVN Databases ---
+stop_ovn_dbs() {
+    log_info_msg "Stopping OVN databases..."
+
+    # Stop Northbound
+    if pidofproc -p "$NB_PID" ovsdb-server > /dev/null; then
+        log_info_msg "Stopping OVN Northbound DB..."
+        killproc -p "$NB_PID" ovsdb-server
+        evaluate_retval
+    else
+        log_success_msg "OVN Northbound DB not running"
+    fi
+
+    # Stop Southbound
+    if pidofproc -p "$SB_PID" ovsdb-server > /dev/null; then
+        log_info_msg "Stopping OVN Southbound DB..."
+        killproc -p "$SB_PID" ovsdb-server
+        evaluate_retval
+    else
+        log_success_msg "OVN Southbound DB not running"
+    fi
+}
+
+# --- Status ---
+status_ovn_dbs() {
+    echo "=== OVN Database Status ==="
+
+    statusproc -p "$NB_PID" ovsdb-server || true
+    statusproc -p "$SB_PID" ovsdb-server || true
+}
+
+# --- Main ---
 case "$1" in
-  start)
-    echo "Starting OVN DBs..."
-    ovsdb-server --pidfile=/var/run/ovn/ovnnb_db.pid \
-        --remote=punix:/var/run/ovn/ovnnb_db.sock \
-        --remote=ptcp:6641:127.0.0.1 \
-        /var/lib/ovn/ovnnb_db.db &
-
-    ovsdb-server --pidfile=/var/run/ovn/ovnsb_db.pid \
-        --remote=punix:/var/run/ovn/ovnsb_db.sock \
-        --remote=ptcp:6642:127.0.0.1 \
-        /var/lib/ovn/ovnsb_db.db &
-    ;;
-
-  stop)
-    kill $(cat /var/run/ovn/ovnnb_db.pid)
-    kill $(cat /var/run/ovn/ovnsb_db.pid)
-    ;;
-    
-  *)
-    echo "Usage: $0 {start|stop}"
-    exit 1
-    ;;
+    start)
+        start_ovn_dbs
+        ;;
+    stop)
+        stop_ovn_dbs
+        ;;
+    restart)
+        stop_ovn_dbs
+        sleep 2
+        start_ovn_dbs
+        ;;
+    status)
+        status_ovn_dbs
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+        ;;
 esac
+
+exit 0
