@@ -24,3 +24,6 @@ e2f935b83bde497c28299d3464a16fe5 memcached-1.6.39.tar.gz
 
 # i2.4.1 openvswitch-3.3.6
 d75a2c9b3719365259816706f340658e openvswitch-3.3.6.tar.gz
+
+# i2.4.4 ovn-24.03.6 - vers 24.03.x compatible with openvswitch-3.3.6
+e2e46f8e183f42ac51f1d8f9526641d7 ovn-24.03.6.tar.gz

@@ -22,5 +22,8 @@ https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.1.4/rabbitmq-se
 http://www.memcached.org/files/memcached-1.6.39.tar.gz
 
 
-# i2.4.1 openvswitch-3.3.6
+# i2.4.1.1 openvswitch-3.3.6
 https://www.openvswitch.org/releases/openvswitch-3.3.6.tar.gz
+
+# i2.4.2 ovn-24.03.6 - vers 24.03.x compatible with openvswitch-3.3.6
+--content-disposition https://github.com/ovn-org/ovn/archive/refs/tags/v24.03.6.tar.gz

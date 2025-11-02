@@ -10,7 +10,7 @@
 
 [ovs]
 # bridge_mappings = provider:PROVIDER_BRIDGE_NAME
-bridge_mappings = provider:br-provider
+bridge_mappings = provider:br0
 
 [securitygroup]
 enable_security_group = true

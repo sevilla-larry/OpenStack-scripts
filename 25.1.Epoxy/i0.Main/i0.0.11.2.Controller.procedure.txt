@@ -487,7 +487,7 @@ E.  RabbitMQ
         ###
 
 
-F.  OpenVSwitch - Configuration
+F.  OpenVSwitch - Configuration & OVN
 
         # pathappend /usr/local/scripts PATH
 
@@ -527,6 +527,8 @@ F.  OpenVSwitch - Configuration
 
         ovs-vsctl show
             # back to one bridge
+
+        ###
 
 
 G.  KeyStone - Identity service
@@ -1937,4 +1939,52 @@ M.  Neutron - Networking Service
         ### Modular Layer 2 (ML2) plug-in Configuration
         ### edit
         nano /etc/neutron/plugins/ml2/ml2_conf.ini
+
+    M.05. Create the provider network
+
+        $$$ as user
+        . admin-openrc
+
+        $$$ Create the network
+        openstack network create  --share --external \
+        --provider-physical-network provider \
+        --provider-network-type flat provider
+
+        $$$ Create a subnet on the network
+    $   openstack subnet create --network provider \
+    $   --allocation-pool start=START_IP_ADDRESS,end=END_IP_ADDRESS \
+    $   --dns-nameserver DNS_RESOLVER --gateway PROVIDER_NETWORK_GATEWAY \
+    $   --subnet-range PROVIDER_NETWORK_CIDR provider
+    $   openstack subnet create --network provider \
+    $   --allocation-pool start=203.0.113.101,end=203.0.113.250 \
+    $   --dns-nameserver 8.8.4.4 --gateway 203.0.113.1 \
+    $   --subnet-range 203.0.113.0/24 provider
+        openstack subnet create --network provider \
+        --allocation-pool start=192.168.1.201,end=192.168.1.250 \
+        --dns-nameserver 8.8.8.8 --gateway 192.168.1.1 \
+        --subnet-range 192.168.1.0/24 provider
+
+    M.06 Populate the database
+
+        ###
+
+        su -s /bin/sh -c "neutron-db-manage --config-file /etc/neutron/neutron.conf \
+        --config-file /etc/neutron/plugins/ml2/ml2_conf.ini upgrade head" neutron
+
+        ###
+
+    M.07 REBOOT
+
+        reboot
+
+    M.08 Verify
+
+        ### Confirm bridge "br0"
+
+        ovs-vsctl show
+
+        $$$
+        . admin-openrc
+        openstack network agent list
+        $$$ compute nodes still NOT included
 

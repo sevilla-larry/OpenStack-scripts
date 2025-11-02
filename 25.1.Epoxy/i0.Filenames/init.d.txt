@@ -14,6 +14,7 @@ K10gpm
     K28httpd
 K30sshd
 K46ntpd
+        K74ovn-dbs
         K75openvswitch
         K79unbound
 K80network
@@ -56,6 +57,7 @@ S10sysklogd
 S20network
         S21unbound
         S25openvswitch
+        S26ovn
 S30sshd
     S32httpd
     S34mariadb

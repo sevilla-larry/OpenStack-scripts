@@ -24,10 +24,24 @@ echo "."
 
 ###
 
-echo "i6.21.2.Neutron.rc.d.sh"
-echo "i6.21.2.Neutron.rc.d.sh" >> $LFSLOG_PROCESS
+echo "i6.21.2.Neutron.conf"
+echo "i6.21.2.Neutron.conf" >> $LFSLOG_PROCESS
 
-time { bash i6.21.2.Neutron.rc.d.sh ; }
+time { bash i6.21.2.Neutron.conf.sh ; }
+
+date +"%Y/%b/%d %H:%M"
+date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS
+
+echo "." >> $LFSLOG_PROCESS
+echo "."
+echo "."
+
+###
+
+echo "i6.21.3.Neutron.rc.d"
+echo "i6.21.3.Neutron.rc.d" >> $LFSLOG_PROCESS
+
+time { bash i6.21.3.Neutron.rc.d.sh ; }
 
 date +"%Y/%b/%d %H:%M"
 date +"%Y/%b/%d %H:%M" >> $LFSLOG_PROCESS

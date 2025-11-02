@@ -15,21 +15,20 @@
 
 # Suggestions by Grok
 [ml2]
-#type_drivers = flat,vlan
-type_drivers = flat,vlan,vxlan
-#tenant_network_types =
-tenant_network_types = vxlan
+type_drivers = flat,vlan
+#type_drivers = flat,vlan,vxlan
+tenant_network_types =
+#tenant_network_types = vxlan
 mechanism_drivers = openvswitch
 extension_drivers = port_security
 
 [ml2_type_flat]
 flat_networks = provider
 
-# suggestion by Grok
 [ovs]
-bridge_mappings = provider:br-ex
+bridge_mappings = provider:br0
 
 # suggestion by Grok
-[securitygroup]
-enable_security_group = true
-enable_ipset = true
+#[securitygroup]
+#enable_security_group = true
+#enable_ipset = true

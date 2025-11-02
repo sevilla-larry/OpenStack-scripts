@@ -1,8 +1,7 @@
-# i2.4.1.openvswitch-3.3.6.sh
+# i2.4.2.1.ovn-24.03.6.sh
 #
-# https://docs.openvswitch.org/en/latest/intro/install/general/
-#
-# Notes: https://docs.openvswitch.org/en/latest/
+# https://docs.openstack.org/neutron/2025.1/install/ovn/manual_install.html
+# https://docs.ovn.org/en/latest/intro/install/general.html
 #
 
 #
@@ -11,8 +10,8 @@
 #               Neutron
 #
 
-export PKG="openvswitch-3.3.6"
-export PKGLOG_DIR=$OSLOG/2.4.1
+export PKG="ovn-24.03.6"
+export PKGLOG_DIR=$OSLOG/2.4.2.1
 export PKGLOG_TAR=$PKGLOG_DIR/tar.log
 export PKGLOG_CONFIG=$PKGLOG_DIR/config.log
 export PKGLOG_BUILD=$PKGLOG_DIR/build.log
@@ -36,13 +35,14 @@ cd $PKG
 echo "2. Configure ..."
 echo "2. Configure ..." >> $OSLOG_PROCESS
 echo "2. Configure ..." >> $PKGLOG_ERROR
+./boot.sh    > $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
+
 ./configure --prefix=/usr           \
             --sysconfdir=/etc       \
             --localstatedir=/var    \
             --enable-shared         \
-            > $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
-# Suggestion of Grok but unrecognized
-#            --with-libcap-ng        \
+            --with-ovs-source=/sources/openvswitch-3.3.6    \
+            >> $PKGLOG_CONFIG 2>> $PKGLOG_ERROR
 
 echo "3. Make Build ..."
 echo "3. Make Build ..." >> $OSLOG_PROCESS
@@ -62,26 +62,21 @@ echo "4. Make Install ..." >> $OSLOG_PROCESS
 echo "4. Make Install ..." >> $PKGLOG_ERROR
 make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-#update library path (with existing /usr/local/lib)
-#ldconfig >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-
-# note /var/lib/openvswitch/pki is created by app
-mkdir -pv /{etc,var/{log,run}}/openvswitch              \
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-#chown -Rv root:root /var/{run,log}/openvswitch         \
-#        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
-ovsdb-tool create /etc/openvswitch/conf.db              \
-        /usr/share/openvswitch/vswitch.ovsschema        \
+mkdir -pv /var/{lib,log,run}/ovn            \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-# created in procedure C
-# mkdir -v /usr/scripts     \
-#         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+ovsdb-tool create /var/lib/ovn/ovnnb_db.db  \
+        /usr/share/ovn/ovn-nb.ovsschema     \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-#link the scripts at /usr/share/openvswitch/scripts
+ovsdb-tool create /var/lib/ovn/ovnsb_db.db  \
+        /usr/share/ovn/ovn-sb.ovsschema     \
+        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+#link the scripts at /usr/share/ovn/scripts
 # to /usr/scripts
-ln -sv  /usr/share/openvswitch/scripts/*  \
-        /usr/scripts/                     \
+ln -sv  /usr/share/ovn/scripts/*    \
+        /usr/scripts/               \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 
