@@ -32,15 +32,7 @@ chmod -v ${INITMODE} $INITDFILEDST     \
 
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K75openvswitch \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K75openvswitch \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S25openvswitch  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S25openvswitch  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S25openvswitch  \
-      >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S25openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K75openvswitch  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR

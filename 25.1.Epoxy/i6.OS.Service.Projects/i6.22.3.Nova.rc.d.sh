@@ -55,18 +55,21 @@ ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc3.d/S85nova-api          \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc6.d/K15nova-api          \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
 ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc0.d/K14nova-scheduler    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc3.d/S86nova-scheduler    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc6.d/K14nova-scheduler    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
 ln -vsf  $INITDFILEREL3 ${EXTDIR}/rc.d/rc0.d/K13nova-conductor    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL3 ${EXTDIR}/rc.d/rc3.d/S87nova-conductor    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL3 ${EXTDIR}/rc.d/rc6.d/K13nova-conductor    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
+
 ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc0.d/K12nova-novncproxy   \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 ln -vsf  $INITDFILEREL4 ${EXTDIR}/rc.d/rc3.d/S88nova-novncproxy   \

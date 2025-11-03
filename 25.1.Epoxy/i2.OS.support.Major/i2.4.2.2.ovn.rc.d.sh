@@ -16,33 +16,39 @@ INITMODE=755
 DIRMODE=755
 CONFMODE=644
 CURRDIR=`pwd`
-INITDFILESRC=$CURRDIR/i2.4.2.3.ovn-dbs.init.d.sh
-INITDFILEDST=${EXTDIR}/init.d/ovn-dbs
-INITDFILEREL=../init.d/ovn-dbs
+INITDFILESRC1=$CURRDIR/i2.4.2.3.ovn-dbs.init.d.sh
+INITDFILEDST1=${EXTDIR}/init.d/ovn-dbs
+INITDFILEREL1=../init.d/ovn-dbs
+INITDFILESRC2=$CURRDIR/i2.4.2.4.ovn-northd.init.d.sh
+INITDFILEDST2=${EXTDIR}/init.d/ovn-northd
+INITDFILEREL2=../init.d/ovn-northd
 
 
 echo "Install Init.d/rc.d ..."
 echo "Install Init.d/rc.d ..." >> $OSLOG_PROCESS
 echo "Install Init.d/rc.d ..." >> $PKGLOG_ERROR
 
-cp -v $INITDFILESRC $INITDFILEDST      \
+cp -v $INITDFILESRC1 $INITDFILEDST1       \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-chmod -v ${INITMODE} $INITDFILEDST     \
+cp -v $INITDFILESRC2 $INITDFILEDST2       \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc0.d/K74ovn-dbs  \
+chmod -v ${INITMODE}                      \
+      $INITDFILEDST1    $INITDFILEDST2    \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc1.d/K74ovn-dbs  \
+
+ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc0.d/K74ovn-dbs \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc2.d/S26ovn-dbs  \
+ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc3.d/S26ovn-dbs  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc3.d/S26ovn-dbs  \
+ln -vsf  $INITDFILEREL1 ${EXTDIR}/rc.d/rc6.d/K74ovn-dbs  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc4.d/S26ovn-dbs  \
+
+ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc0.d/K73ovn-northd  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc5.d/S26ovn-dbs  \
+ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc3.d/S27ovn-northd  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
-ln -vsf  $INITDFILEREL ${EXTDIR}/rc.d/rc6.d/K74ovn-dbs  \
+ln -vsf  $INITDFILEREL2 ${EXTDIR}/rc.d/rc6.d/K73ovn-northd  \
       >> $PKGLOG_INITD 2>> $PKGLOG_ERROR
 
 
