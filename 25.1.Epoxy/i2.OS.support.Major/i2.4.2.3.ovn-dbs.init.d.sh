@@ -30,12 +30,13 @@ NB_LOG="$LOG_DIR/ovnnb_db.log"
 SB_LOG="$LOG_DIR/ovnsb_db.log"
 
 # --- Ensure directories exist ---
-mkdir -p "$DB_DIR" "$RUN_DIR" "$LOG_DIR"
-chmod 750 "$RUN_DIR" "$LOG_DIR"
+#mkdir -p "$DB_DIR" "$RUN_DIR" "$LOG_DIR"
+#chmod 750 "$RUN_DIR" "$LOG_DIR"
 
 # --- Start OVN Databases ---
 start_ovn_dbs() {
     log_info_msg "Starting OVN databases..."
+    install -v -d -m 2755 $RUN_DIR
 
     # Start Northbound DB
     if pidofproc -p "$NB_PID" ovsdb-server > /dev/null; then
