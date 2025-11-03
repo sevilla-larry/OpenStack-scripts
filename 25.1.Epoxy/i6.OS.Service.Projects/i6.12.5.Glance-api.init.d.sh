@@ -9,7 +9,7 @@
 program="/usr/bin/glance-api"
 config="/etc/glance/glance-api.conf"
 pidfile="/var/run/glance/glance-api.pid"
-logfile="/var/log/glance/api.log"
+logfile="/var/log/glance/glance-api.log"
 user="glance"
 
 # === SECURITY & DIRS ===

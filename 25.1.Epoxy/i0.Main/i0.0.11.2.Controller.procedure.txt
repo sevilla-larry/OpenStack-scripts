@@ -442,6 +442,7 @@ D.  Support Applications - Major - Part 2
         /etc/init.d/etcd status
         /etc/init.d/openvswitch status
         /etc/init.d/ovn-dbs status
+        /etc/init.d/ovn-northd status
 
         # check MemCacheD
         echo "stats settings" | ncat 10.0.0.11 11211
@@ -530,6 +531,40 @@ F.  OpenVSwitch - Configuration & OVN
 
         ovs-vsctl show
             # back to one bridge
+
+        ###
+
+        # Set manager (optional for local)
+        ovn-nbctl set-connection ptcp:6641:127.0.0.1
+        ovn-sbctl set-connection ptcp:6642:127.0.0.1
+
+        # Now test
+        ovn-nbctl show
+        # → (empty is OK)
+
+        # 1. Add a switch
+        ovn-nbctl ls-add sw0
+        ovn-nbctl show
+        # switch xxxxxxxx....xx
+
+        # 2. Add a port to it
+        ovn-nbctl lsp-add sw0 vm1
+
+        # 3. Set port type (VM)
+        ovn-nbctl lsp-set-type vm1 localnet
+        # or for VM: ovn-nbctl lsp-set-type vm1 ""
+
+        # 4. Optional: Set addresses
+        ovn-nbctl lsp-set-addresses vm1 "40:44:00:00:00:01 192.168.1.10"
+
+        # 5. View
+        ovn-nbctl show
+
+        # Delete switch sw0
+        ovn-nbctl ls-del sw0
+
+        ovn-nbctl show
+        # now empty
 
         ###
 
@@ -646,9 +681,9 @@ G.  KeyStone - Identity service
         # https://docs.openstack.org/keystone/2025.1/configuration/samples/index.html
 
 
-        ### REBOOT
+        ### ???REBOOT
 
-        reboot
+        #? reboot
 
         ###
 
@@ -670,7 +705,30 @@ G.  KeyStone - Identity service
 
         ###
 
-    G.06. Check some things
+    G.06. Bootstrap the Identity service
+
+        ###
+
+      # keystone-manage bootstrap --bootstrap-password ADMIN_PASS \
+      #     --bootstrap-admin-url http://controller:5000/v3/ \
+      #     --bootstrap-internal-url http://controller:5000/v3/ \
+      #     --bootstrap-public-url http://controller:5000/v3/ \
+      #     --bootstrap-region-id RegionOne
+        keystone-manage bootstrap --bootstrap-password openstack \
+            --bootstrap-admin-url http://controller:5000/v3/ \
+            --bootstrap-internal-url http://controller:5000/v3/ \
+            --bootstrap-public-url http://controller:5000/v3/ \
+            --bootstrap-region-id RegionOne
+        ###
+
+        reboot
+
+        ### or restart Apache
+        # apachectl -k restart
+
+        ###
+
+    G.07. Check some things
 
         iptables -S
 
@@ -709,29 +767,6 @@ G.  KeyStone - Identity service
         #     "links": [{"rel": "self", "href": "http://controller:5000/v3/"}],
         #     "media-types": [{"base": "application/json",
         #                      "type": "application/vnd.openstack.identity-v3+json"}]}}
-
-    G.07. Bootstrap the Identity service
-
-        ###
-
-      # keystone-manage bootstrap --bootstrap-password ADMIN_PASS \
-      #     --bootstrap-admin-url http://controller:5000/v3/ \
-      #     --bootstrap-internal-url http://controller:5000/v3/ \
-      #     --bootstrap-public-url http://controller:5000/v3/ \
-      #     --bootstrap-region-id RegionOne
-        keystone-manage bootstrap --bootstrap-password openstack \
-            --bootstrap-admin-url http://controller:5000/v3/ \
-            --bootstrap-internal-url http://controller:5000/v3/ \
-            --bootstrap-public-url http://controller:5000/v3/ \
-            --bootstrap-region-id RegionOne
-        ###
-
-        reboot
-
-        ### or restart Apache
-        # apachectl -k restart
-
-        ###
 
 
 H.  Create a domain, projects, users, roles
