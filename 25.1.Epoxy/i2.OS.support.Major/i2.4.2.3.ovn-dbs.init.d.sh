@@ -33,8 +33,8 @@ prepare_dirs() {
     install -v -d -m 2755 "$RUN_DIR"
 #    install -v -d -m 2755 "$LOG_DIR"
 #    install -v -d -m 0755 "$DB_DIR"
-    touch "$NB_LOG" "$SB_LOG" 
-    chmod 644 "$NB_LOG" "$SB_LOG" 
+    touch "$NB_LOG" "$SB_LOG"
+    chmod 644 "$NB_LOG" "$SB_LOG"
 }
 
 # --- Start OVN Databases ---

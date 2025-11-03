@@ -32,6 +32,19 @@
 
 PATH=$PATH:/usr/share/openvswitch/scripts
 
+LOG_DIR=/var/log/openvswitch
+OVSDBS_LOG="$LOG_DIR/ovsdb-server.log"
+OVSVSD_LOG="$LOG_DIR/ovs-vswitchd.log"
+
+# --- Ensure directories ---
+prepare_dirs() {
+#    install -v -d -m 2755 "$RUN_DIR"
+#    install -v -d -m 2755 "$LOG_DIR"
+#    install -v -d -m 0755 "$DB_DIR"
+    touch "$OVSDBS_LOG" "$OVSVSD_LOG"
+    chmod 644 "$OVSDBS_LOG" "$OVSVSD_LOG"
+}
+
 case "$1" in
    start)
       log_info_msg "Starting Open vSwitch..."
