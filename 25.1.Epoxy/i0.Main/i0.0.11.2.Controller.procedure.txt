@@ -418,10 +418,12 @@ D.  Support Applications - Major - Part 2
 
         # RabbitMQ, MemCacheD
         # EtcD
-        # libwebsockets
-        # libcap-ng, Open vSwitch
+        # libwebsockets, libcap-ng
+        # Open vSwitch (ovs), ovn (Open vNetwork)
 
-        # Important for RabbitMQ & OpenVSwitch
+        # Important for
+        # RabbitMQ,
+        # Open vSwitch (ovs), ovn (Open vNetwork)
         mkdir -v /usr/scripts
 
         bash i0.4.11.2.sh
