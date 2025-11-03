@@ -11,6 +11,10 @@ pidfile="/run/etcd/etcd.pid"
 logfile="/var/log/etcd/etcd.log"
 args="--config-file /etc/etcd.conf.yml"
 
+prepare_dirs() {
+    install -v -d -m 2755 -o etcd -g etcd /var/run/etcd
+}
+
 start() {
     log_info_msg "Starting $name..."
 
@@ -21,9 +25,7 @@ start() {
         return 0
     fi
     
-    # Create pid directory if it doesn't exist
-    # install -d -m 755 -o etcd -g etcd /run/etcd
-    install -v -d -m 2755 -o etcd -g etcd /var/run/etcd
+    prepare_dirs
     
     # Start as etcd user and capture PID
     su -s /bin/sh etcd -c "cd /var/lib/etcd && $program $args >> $logfile 2>&1 & echo \$! > $pidfile"

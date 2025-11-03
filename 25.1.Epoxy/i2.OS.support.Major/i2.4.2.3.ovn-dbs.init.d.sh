@@ -29,7 +29,7 @@ NB_LOG="$LOG_DIR/ovnnb_db.log"
 SB_LOG="$LOG_DIR/ovnsb_db.log"
 
 # --- Ensure directories ---
-prepare_dirs() {
+prepare_logs() {
     install -v -d -m 2755 "$RUN_DIR"
 #    install -v -d -m 2755 "$LOG_DIR"
 #    install -v -d -m 0755 "$DB_DIR"
@@ -40,7 +40,7 @@ prepare_dirs() {
 # --- Start OVN Databases ---
 start_ovn_dbs() {
     log_info_msg "Starting OVN databases..."
-    prepare_dirs
+    prepare_logs
 
     # Start Northbound DB
     if [ -f "$NB_PID" ] && kill -0 $(cat "$NB_PID") 2>/dev/null; then

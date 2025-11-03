@@ -23,9 +23,13 @@ user="glance"
 #?touch "$logfile"
 #?chown $user:$user "$logfile"
 
+prepare_dirs() {
+    install -v -d -m 2755 -o glance -g glance /var/run/glance
+}
+
 start() {
     log_info_msg "Starting Glance API..."
-    install -v -d -m 2755 -o glance -g glance /var/run/glance
+    prepare_dirs
 
     rm -f "$pidfile"
 

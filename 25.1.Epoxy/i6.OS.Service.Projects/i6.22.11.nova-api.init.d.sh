@@ -9,18 +9,18 @@
 NAME="nova-api"
 DAEMON="/usr/local/bin/nova-api-wrapper"
 PIDFILE="/var/run/nova/nova-api.pid"
+LOGFILE="/var/log/nova/nova-api.log"
 
-start() {
-    log_info_msg "Starting $NAME ..."
-
-    # mkdir -p /var/run/nova /var/log/nova
-    # chown nova:nova /var/run/nova /var/log/nova
+prepare_dirs() {
     install -v -d -m 2755 -o nova -g nova /var/run/nova
-
-    LOGFILE="/var/log/nova/nova-api.log"
     touch "$LOGFILE"
     chown nova:nova "$LOGFILE"
     chmod 644 "$LOGFILE"
+}
+
+start() {
+    log_info_msg "Starting $NAME ..."
+    prepare_dirs
 
     rm -f "$PIDFILE"
 

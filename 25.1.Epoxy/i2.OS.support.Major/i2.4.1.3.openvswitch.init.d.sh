@@ -37,7 +37,7 @@ OVSDBS_LOG="$LOG_DIR/ovsdb-server.log"
 OVSVSD_LOG="$LOG_DIR/ovs-vswitchd.log"
 
 # --- Ensure directories ---
-prepare_dirs() {
+prepare_logs() {
 #    install -v -d -m 2755 "$RUN_DIR"
 #    install -v -d -m 2755 "$LOG_DIR"
 #    install -v -d -m 0755 "$DB_DIR"
@@ -48,6 +48,7 @@ prepare_dirs() {
 case "$1" in
    start)
       log_info_msg "Starting Open vSwitch..."
+      prepare_logs
       ovs-ctl start --system-id=random --system-version="12.4" --system-type="linux"
       evaluate_retval
       ;;
