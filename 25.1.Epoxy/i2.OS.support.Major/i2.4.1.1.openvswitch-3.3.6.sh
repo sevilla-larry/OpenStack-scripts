@@ -66,10 +66,19 @@ make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 #ldconfig >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 # note /var/lib/openvswitch/pki is created by app
-mkdir -pv /{etc,var/{log,run}}/openvswitch              \
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# mkdir -pv /{etc,var/{log,run}}/openvswitch              \
+#         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 #chown -Rv root:root /var/{run,log}/openvswitch         \
 #        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+install -v -dm2777 /var/log/openvswitch \
+         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+install -v -dm2775 /var/lib/openvswitch \
+         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+install -v -dm2755 /var/run/openvswitch \
+         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 ovsdb-tool create /etc/openvswitch/conf.db              \
         /usr/share/openvswitch/vswitch.ovsschema        \

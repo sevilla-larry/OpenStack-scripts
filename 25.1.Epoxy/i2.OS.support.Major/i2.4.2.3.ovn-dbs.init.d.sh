@@ -29,16 +29,18 @@ NB_LOG="$LOG_DIR/ovnnb_db.log"
 SB_LOG="$LOG_DIR/ovnsb_db.log"
 
 # --- Ensure directories ---
-#setup_dirs() {
+prepare_dirs() {
+    install -v -d -m 2755 "$RUN_DIR"
 #    install -v -d -m 2755 "$LOG_DIR"
 #    install -v -d -m 0755 "$DB_DIR"
-#}
+    touch "$NB_LOG" "$SB_LOG" 
+    chmod 644 "$NB_LOG" "$SB_LOG" 
+}
 
 # --- Start OVN Databases ---
 start_ovn_dbs() {
     log_info_msg "Starting OVN databases..."
-#    setup_dirs
-    install -v -d -m 2755 "$RUN_DIR"
+    prepare_dirs
 
     # Start Northbound DB
     if [ -f "$NB_PID" ] && kill -0 $(cat "$NB_PID") 2>/dev/null; then

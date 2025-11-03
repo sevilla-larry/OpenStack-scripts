@@ -33,11 +33,15 @@ PIDFILE=/var/run/rabbitmq/rabbitmq-server.pid
 USER=rabbitmq
 SYMLINK_PID=/var/run/rabbitmq-server.pid
 
+prepare_dirs() {
+      install -v -d -m 2755 -o rabbitmq -g rabbitmq /var/run/rabbitmq
+}
 
 case "$1" in
    start)
       log_info_msg "Starting RabbitMQ server..."
-      install -v -d -m 2755 -o rabbitmq -g rabbitmq /var/run/rabbitmq
+      prepare_dirs
+      
       su -s /bin/sh $USER -c "$RABBITMQ_SBIN/rabbitmq-server -detached"
       su -s /bin/sh $USER -c "$RABBITMQ_SBIN/rabbitmqctl wait $PIDFILE"
       # Create symlink for statusproc compatibility

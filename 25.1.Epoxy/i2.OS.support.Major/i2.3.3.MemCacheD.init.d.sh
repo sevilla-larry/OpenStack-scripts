@@ -37,17 +37,17 @@ OPTIONS="$OPTIONS -v"
 #OPTIONS="$OPTIONS -vv"
 
 # ----------------------------------------------------------------------
-# prepare_dirs() {
+prepare_dirs() {
+    install -v -d -m 2755 -o memcached -g memcached /var/run/memcached
 #     mkdir -p /var/run/memcached /var/log/memcached
 #     touch "$LOGFILE"
 #     chown -R "$USER:$GROUP" /var/run/memcached /var/log/memcached
-# }
+}
 
 
 start() {
     log_info_msg "Starting memcached..."
-    # prepare_dirs
-    install -v -d -m 2755 -o memcached -g memcached /var/run/memcached
+    prepare_dirs
 
     # Run as memcached user, daemonize, write PID, redirect output
     su -s /bin/sh "$USER" -c \
