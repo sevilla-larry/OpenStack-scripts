@@ -439,6 +439,7 @@ D.  Support Applications - Major - Part 2
         /etc/init.d/memcached status
         /etc/init.d/etcd status
         /etc/init.d/openvswitch status
+        /etc/init.d/ovn-dbs status
 
         # check MemCacheD
         echo "stats settings" | ncat 10.0.0.11 11211

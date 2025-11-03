@@ -62,8 +62,17 @@ echo "4. Make Install ..." >> $OSLOG_PROCESS
 echo "4. Make Install ..." >> $PKGLOG_ERROR
 make install > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-mkdir -pv /var/{lib,log,run}/ovn            \
-        >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+# mkdir -pv /var/{lib,log,run}/ovn            \
+#         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+install -v -dm2777 /var/log/ovn             \
+         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+install -v -dm2775 /var/lib/ovn             \
+         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
+
+install -v -dm2755 /var/run/ovn             \
+         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 ovsdb-tool create /var/lib/ovn/ovnnb_db.db  \
         /usr/share/ovn/ovn-nb.ovsschema     \
