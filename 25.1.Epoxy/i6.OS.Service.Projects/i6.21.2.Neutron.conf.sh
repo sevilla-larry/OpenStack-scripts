@@ -58,8 +58,8 @@ cp -v   ${CNFFILESRC4} ${CNFFILEDST4}           \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chmod -v                ${CNFMODE}              \
-        ${CNFFILEDST1}  ${CNFFILEDST1}          \
-        ${CNFFILEDST1}  ${CNFFILEDST1}          \
+        ${CNFFILEDST1}  ${CNFFILEDST2}          \
+        ${CNFFILEDST3}  ${CNFFILEDST4}          \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR neutron:neutron ${NEUTRONETCDIR}      \

@@ -146,7 +146,7 @@ cp -v   rootwrap.conf                                   \
         ${NEUTRONETCSAMPLE}/rootwrap.conf.sample        \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
-chmod -vR ${CNFMODE} /etc/neutron/*                     \
+chmod -v ${CNFMODE} /etc/neutron/{,plugins/ml2/}*       \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 chown -vR neutron:neutron /{etc,var/{lib,log,run}}/neutron      \
