@@ -113,7 +113,7 @@ pip3 install    --no-index              \
                 neutron                 \
                 > $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 
-install -v -d -m2755 /etc/neutron/{sample,plugins/mls}   \
+install -v -d -m2755 /etc/neutron/{sample,plugins/ml2}   \
         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR
 # install -v -d -m755 /etc/neutron/sample         \
 #         >> $PKGLOG_INSTALL 2>> $PKGLOG_ERROR

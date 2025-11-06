@@ -500,6 +500,7 @@ F.  OpenVSwitch - Configuration & OVN
           #     ovs_version: "3.3.6"
 
         ovs-vsctl add-br br0
+        ovs-vsctl add-port br0 eth1
 
         # check
 

@@ -28,24 +28,24 @@ CNFFILESRC2=${CURRDIR}/i6.21.5.ml2_conf.ini.txt
 CNFFILEDST2=${NEUTRONETCDIRPLUGINSML2}/ml2_conf.ini
 CNFFILESRC3=${CURRDIR}/i6.21.6.openvswitch_agent.ini.txt
 CNFFILEDST3=${NEUTRONETCDIRPLUGINSML2}/openvswitch_agent.ini
-CNFFILESRC1=${CURRDIR}/i6.21.7.dhcp_agent.ini.txt
-CNFFILEDST1=${NEUTRONETCDIR}/dhcp_agent.ini
+CNFFILESRC4=${CURRDIR}/i6.21.7.dhcp_agent.ini.txt
+CNFFILEDST4=${NEUTRONETCDIR}/dhcp_agent.ini
 
 echo "1. Install Neutron Configuration ..."
 echo "1. Install Neutron Configuration ..." >> $OSLOG_PROCESS
 echo "1. Install Neutron Configuration ..." >> $PKGLOG_ERROR
 
-cp -v   ../neutron.conf.sample                  \
-        ../ml2_conf.conf.sample                 \
-        ../macvtap_agent.conf.sample            \
-        ../openvswitch_agent.conf.sample        \
-        ../sriov_agent.conf.sample              \
-        ../dhcp_agent.conf.sample               \
-        ../l3_agent.conf.sample                 \
-        ../metadata_agent.conf.sample           \
-        ../metering_agent.conf.sample           \
-        ../neutron.policy.yaml.sample           \
-        ${NEUTRONETCDIRSAMPLE}                  \
+cp -v   neutron.conf.sample             \
+        ml2_conf.conf.sample            \
+        macvtap_agent.conf.sample       \
+        openvswitch_agent.conf.sample   \
+        sriov_agent.conf.sample         \
+        dhcp_agent.conf.sample          \
+        l3_agent.conf.sample            \
+        metadata_agent.conf.sample      \
+        metering_agent.conf.sample      \
+        neutron.policy.yaml.sample      \
+        ${NEUTRONETCDIRSAMPLE}          \
         >> $PKGLOG_OTHERS 2>> $PKGLOG_ERROR
 
 cp -v   ${CNFFILESRC1} ${CNFFILEDST1}           \
