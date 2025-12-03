@@ -380,6 +380,9 @@ C.  Support Applications - Major - Part 1
 
         ###
 
+        /etc/init.d/httpd   restart
+        /etc/init.d/mariadb restart
+
         reboot
 
         ###
@@ -668,9 +671,15 @@ G.  KeyStone - Identity service
         # [default]
         #log_dir = /var/log/keystone
 
+        #server-world.info
+        #[cache]
+        #memcache_servers = 10.0.0.11:11211
+
         # [database]
       # connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
         # connection = mysql+pymysql://keystone:openstack@controller/keystone
+        #server-world.info
+        # connection = mysql+pymysql://keystone:openstack@controller:3306/keystone
 
         # [token]
         # provider = fernet
@@ -693,7 +702,9 @@ G.  KeyStone - Identity service
         ###
 
         su -s /bin/sh -c "keystone-manage db_sync" keystone
-    
+        #server-world.info
+        #su -s /bin/bash keystone -c "keystone-manage db_sync"
+
         ###
 
     G.05. Initialize Fernet key repositories
@@ -722,10 +733,12 @@ G.  KeyStone - Identity service
             --bootstrap-region-id RegionOne
         ###
 
-        reboot
+        # reboot
 
         ### or restart Apache
         # apachectl -k restart
+
+        /etc/init.d/httpd restart
 
         ###
 
@@ -783,8 +796,8 @@ H.  Create a domain, projects, users, roles
         # export OS_PASSWORD=ADMIN_PASS
         export OS_PASSWORD=openstack
         export OS_PROJECT_NAME=admin
-        export OS_USER_DOMAIN_NAME=default
-        export OS_PROJECT_DOMAIN_NAME=default
+        export OS_USER_DOMAIN_NAME=Default
+        export OS_PROJECT_DOMAIN_NAME=Default
         export OS_AUTH_URL=http://controller:5000/v3
         export OS_IDENTITY_API_VERSION=3
 
@@ -792,15 +805,15 @@ H.  Create a domain, projects, users, roles
         $openstack domain create --description "An Example Domain" example
 
         $$$ Create the "service" project on "default" domain
-        openstack project create --domain default \
+        openstack project create --domain Default \
             --description "Service Project" service
 
         $$$ Create "demo" project on "default" domain
-        openstack project create --domain default \
+        openstack project create --domain Default \
             --description "Demo Project" demo
 
         $$$ Create "demo" user on "default" domain
-        openstack user create --domain default \
+        openstack user create --domain Default \
             --password openstack demo
 
         $$$ Create "demo" role
@@ -821,12 +834,12 @@ H.  Create a domain, projects, users, roles
 
         $$$ request an authentication token for admin user in admin project
         openstack --os-auth-url http://controller:5000/v3 \
-            --os-project-domain-name default --os-user-domain-name Default \
+            --os-project-domain-name Default --os-user-domain-name Default \
             --os-project-name admin --os-username admin token issue
 
         $$$ request an authentication token for myuser in myproject
         openstack --os-auth-url http://controller:5000/v3 \
-            --os-project-domain-name default --os-user-domain-name Default \
+            --os-project-domain-name Default --os-user-domain-name Default \
             --os-project-name demo --os-username demo token issue
 
 
@@ -994,6 +1007,12 @@ J.  Glance - Image Service
         ### edit
         nano /etc/glance/glance-api.conf
 
+        # server-world.info
+        [DEFAULT]
+        bind_host = 127.0.0.1
+        # RabbitMQ connection info
+        transport_url = rabbit://openstack:openstack@controller:5672
+
         # update ENDPOINT_ID
         [oslo_limit]
         endpoint_id = ENDPOINT_ID
@@ -1001,6 +1020,8 @@ J.  Glance - Image Service
         # [database]
       # connection = mysql+pymysql://glance:GLANCE_DBPASS@controller/glance
         # connection = mysql+pymysql://glance:openstack@controller/glance
+        # server-world.info
+        # connection = mysql+pymysql://glance:openstack@controller:3306/glance
 
         #
         # configure Identity service access
@@ -1014,8 +1035,8 @@ J.  Glance - Image Service
         #     auth_url = http://controller:5000
         # memcached_servers = controller:11211
         # auth_type = password
-        #     project_domain_name = default
-        #     user_domain_name = default
+        #     project_domain_name = Default
+        #     user_domain_name = Default
         #     project_name = service
         #     username = glance
         #   # password = GLANCE_PASS
@@ -1024,6 +1045,10 @@ J.  Glance - Image Service
         # [paste_deploy]
       # ...
         # flavor = keystone
+
+        # server-world.info
+        #[oslo_policy]
+        #enforce_new_defaults = true
 
         #
         # Note: For deployment, use OpenStack Object Storage - Swift
@@ -1039,6 +1064,7 @@ J.  Glance - Image Service
         # ...
         # default_backend = fs
 
+        # server-world.info
         # OpenStack - Ubuntu installation documentation
         # [fs]
         # filesystem_store_datadir = /var/lib/glance/images/
@@ -1565,8 +1591,8 @@ L.  Nova - Compute Service
             auth_url = http://controller:5000
         memcached_servers = controller:11211
         auth_type = password
-            project_domain_name = default
-            user_domain_name = default
+            project_domain_name = Default
+            user_domain_name = Default
             project_name = service
             username = nova
           # password = NOVA_PASS

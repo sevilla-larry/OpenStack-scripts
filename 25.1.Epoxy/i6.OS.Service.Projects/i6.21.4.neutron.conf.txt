@@ -40,6 +40,7 @@ project_name = service
 username = neutron
 # password = NEUTRON_PASS
 password = openstack
+region_name = RegionOne
 
 [nova]
 auth_url = http://controller:5000

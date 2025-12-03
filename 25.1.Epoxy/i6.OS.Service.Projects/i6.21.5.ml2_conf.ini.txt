@@ -31,4 +31,5 @@ bridge_mappings = provider:br0
 # suggestion by Grok
 [securitygroup]
 enable_security_group = true
-enable_ipset = true
+firewall_driver = openvswitch
+#?enable_ipset = true
